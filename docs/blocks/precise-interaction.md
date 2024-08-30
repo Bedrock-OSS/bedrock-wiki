@@ -122,19 +122,23 @@ export default class FaceSelectionPlains {
 
     <Spoiler title="Parameters">
 
-    -   **plains**: `Object[]`<br>
-        Array defining the 2D areas on a block's face which may be selected.<br><br>
+    -   **plains**: `Object[]`
 
-        -   **origin**: `[number, number]`<br>
-            [U, V] array defining the offset of the plain from the top left of the block face.<br><br>
+        Array defining the 2D areas on a block's face which may be selected.
 
-        -   **size**: `[number, number]`<br>
-            [U, V] array defining the size of the plain, extending from the top left.<br><br>
+        -   **origin**: `[number, number]`
 
-        -   **name**?: `string`<br>
+            [U, V] array defining the offset of the plain from the top left of the block face.
+
+        -   **size**: `[number, number]`
+
+            [U, V] array defining the size of the plain, extending from the top left.
+
+        -   **name**?: `string`
+
             Custom name to easily identify this plain when it is selected.
 
-    </Spoiler><br>
+    </Spoiler>
 
 -   #### getSelected
 
@@ -146,21 +150,28 @@ export default class FaceSelectionPlains {
 
     <Spoiler title="Parameters">
 
-    -   **selection**: `Object`<br>
-        Object containing details about the selection.<br><br>
+    -   **selection**: `Object`
 
-        -   **face**: [`Direction`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/direction)<br>
-            The selected face of the block.<br><br>
+        Object containing details about the selection.
 
-        -   **faceLocation**: [`Vector3`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/vector3)<br>
-            Selection location relative to the bottom north-west corner of the block.<br><br>
+        -   **face**: [`Direction`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/direction)
 
-    -   **options**?: `Object`<br>
-        Optionally configure how the selected plain is calculated.<br><br>
+            The selected face of the block.
 
-        -   **invertU**?: `boolean`<br>
-            Horizontal axis goes `right -> left` rather than `left -> right` if true.<br><br>
-        -   **invertV**?: `boolean`<br>
+        -   **faceLocation**: [`Vector3`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/vector3)
+
+            Selection location relative to the bottom north-west corner of the block.
+
+    -   **options**?: `Object`
+
+        Optionally configure how the selected plain is calculated.
+
+        -   **invertU**?: `boolean`
+
+            Horizontal axis goes `right -> left` rather than `left -> right` if true.
+
+        -   **invertV**?: `boolean`
+
             Vertical axis goes `bottom -> top` rather than `top -> bottom` if true.
 
     </Spoiler>
@@ -183,8 +194,6 @@ const quadrants = new FaceSelectionPlains(
 );
 ```
 
-<br>
-
 Additionally, names can be provided to easily identify each plain:
 
 ```js
@@ -195,8 +204,6 @@ const quadrants = new FaceSelectionPlains(
     { origin: [8, 8], size: [8, 8], name: "bottom_right" }
 );
 ```
-
-<br>
 
 This could be used in a [custom component](/blocks/block-events) to get the selected quadrant:
 
@@ -312,21 +319,23 @@ export default class SelectionBoxes {
 
     <Spoiler title="Parameters">
 
-    -   **boxes**: `Object[]`<br>
-        Array defining the 3D areas within a block which may be selected.<br><br>
+    -   **boxes**: `Object[]`
 
-        -   **origin**: `[number, number, number]`<br>
-            [X, Y, Z] array defining the offset of the box from the block's horizontal middle and vertical bottom in pixels, extending from the north-east.<br><br>
+        Array defining the 3D areas within a block which may be selected.
 
-        -   **size**: `[number, number, number]`<br>
-            [X, Y, Z] array defining the size of the box in pixels, extending from the north-east.<br><br>
+        -   **origin**: `[number, number, number]`
 
-        -   **name**?: `string`<br>
+            [X, Y, Z] array defining the offset of the box from the block's horizontal middle and vertical bottom in pixels, extending from the north-east.
+
+        -   **size**: `[number, number, number]`
+
+            [X, Y, Z] array defining the size of the box in pixels, extending from the north-east.br>
+
+        -   **name**?: `string`
+
             Custom name to easily identify this box when it is selected.
 
-    </Spoiler><br>
-
--   #### getSelected
+    </Spoiler>
 
 -   #### getSelected
 
@@ -340,18 +349,24 @@ export default class SelectionBoxes {
 
     <Spoiler title="Parameters">
 
-    -   **faceLocation**: [`Vector3`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/vector3)<br>
-        Selection location relative to the bottom north-west corner of the block.<br><br>
+    -   **faceLocation**: [`Vector3`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/vector3)
 
-    -   **options**?: `Object`<br>
-        Optionally configure how the selected box is calculated.<br><br>
+        Selection location relative to the bottom north-west corner of the block.
 
-        -   **invertX**?: `boolean`<br>
-            X axis extends `west -> east` rather than `east -> west` if true, following [Blockbench](https://blockbench.net)'s displayed positions.<br><br>
-        -   **invertY**?: `boolean`<br>
-            Y axis extends `up -> down` rather than `down -> up` if true.<br><br>
+    -   **options**?: `Object`
 
-        -   **invertZ**?: `boolean`<br>
+        Optionally configure how the selected box is calculated.
+
+        -   **invertX**?: `boolean`
+
+            X axis extends `west -> east` rather than `east -> west` if true, following [Blockbench](https://blockbench.net)'s displayed positions.
+
+        -   **invertY**?: `boolean`
+
+            Y axis extends `up -> down` rather than `down -> up` if true.
+
+        -   **invertZ**?: `boolean`
+
             Z axis extends `south -> north` rather than `north -> south` if true.
 
     </Spoiler>
@@ -371,8 +386,6 @@ const verticalHalves = new SelectionBoxes(
     { origin: [-8, 0, -8], size: [16, 8, 16], name: "bottom" }
 );
 ```
-
-<br>
 
 This could be used with an [`itemUseOn` after event](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/itemuseonafterevent) to get the selected box:
 

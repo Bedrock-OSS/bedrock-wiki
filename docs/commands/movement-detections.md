@@ -37,18 +37,18 @@ This technique allows you to detect when your target is/isn't moving, accounting
 
 ```yaml
 #moving
-/execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
-/execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
+execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
+execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
 #update point
-/execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
-/execute at @a positioned ~~10000~ run summon leash_knot ~~~
+execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
+execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_moving=0}] run say I'm not moving
-/execute as @a [scores={is_moving=1}] run say I started moving
-/execute as @a [scores={is_moving=1..}] run say I'm still moving
+execute as @a [scores={is_moving=0}] run say I'm not moving
+execute as @a [scores={is_moving=1}] run say I started moving
+execute as @a [scores={is_moving=1..}] run say I'm still moving
 ```
 ![commandBlockChain7](/assets/images/commands/commandBlockChain/7.png)
 
@@ -83,25 +83,25 @@ Walk/Sprint Detection may not work as intended with effects & enchantments.
 
 ```yaml
 #moving
-/execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
-/execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
+execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
+execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
 #walking
-/scoreboard players set @a is_walking 0
-/execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.21585, r=0.2805] run scoreboard players set @s is_walking 1
+scoreboard players set @a is_walking 0
+execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.21585, r=0.2805] run scoreboard players set @s is_walking 1
 
 #sprinting
-/scoreboard players set @a is_sprinting 0
-/execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2806, r=0.9] run scoreboard players set @s is_sprinting 1
+scoreboard players set @a is_sprinting 0
+execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2806, r=0.9] run scoreboard players set @s is_sprinting 1
 
 #update point
-/execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
-/execute at @a positioned ~~10000~ run summon leash_knot ~~~
+execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
+execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_walking=0}] run say I'm not walking
-/execute as @a [scores={is_walking=1}] run say I'm walking
+execute as @a [scores={is_walking=0}] run say I'm not walking
+execute as @a [scores={is_walking=1}] run say I'm walking
 ```
 ![commandBlockChain10](/assets/images/commands/commandBlockChain/10.png)
 
@@ -141,14 +141,14 @@ Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 <CodeHeader>BP/functions/states/is_sleeping.mcfunction</CodeHeader>
 
 ```yaml
-/execute as @a at @s if entity @s [y=~0.3, dy=0] scoreboard players set @s is_sleeping 0
-/execute as @a at @s unless entity @s [y=~0.3, dy=0] run scoreboard players add @s is_sleeping 1
+execute as @a at @s if entity @s [y=~0.3, dy=0] scoreboard players set @s is_sleeping 0
+execute as @a at @s unless entity @s [y=~0.3, dy=0] run scoreboard players add @s is_sleeping 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_sleeping=0}] run say I'm not sleeping
-/execute as @a [scores={is_sleeping=1}] run say I started sleeping
-/execute as @a [scores={is_sleeping=1..}] run say I'm still sleeping
+execute as @a [scores={is_sleeping=0}] run say I'm not sleeping
+execute as @a [scores={is_sleeping=1}] run say I started sleeping
+execute as @a [scores={is_sleeping=1..}] run say I'm still sleeping
 ```
 ![commandBlockChain5](/assets/images/commands/commandBlockChain/5.png)
 
@@ -183,14 +183,14 @@ Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the
 <CodeHeader>BP/functions/states/is_sneaking.mcfunction</CodeHeader>
 
 ```yaml
-/execute as @a at @s if entity @s [y=~1.5, dy=0] run scoreboard players set @s is_sneaking 0
-/execute as @a at @s unless entity @s [y=~1.5, dy=0] if entity @s [y=~0.7, dy=0] run scoreboard players add @s is_sneaking 1
+execute as @a at @s if entity @s [y=~1.5, dy=0] run scoreboard players set @s is_sneaking 0
+execute as @a at @s unless entity @s [y=~1.5, dy=0] if entity @s [y=~0.7, dy=0] run scoreboard players add @s is_sneaking 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_sneaking=0}] run say I'm not sneaking
-/execute as @a [scores={is_sneaking=1}] run say I started sneaking
-/execute as @a [scores={is_sneaking=1..}] run say I'm still sneaking
+execute as @a [scores={is_sneaking=0}] run say I'm not sneaking
+execute as @a [scores={is_sneaking=1}] run say I started sneaking
+execute as @a [scores={is_sneaking=1..}] run say I'm still sneaking
 ```
 ![commandBlockChain5](/assets/images/commands/commandBlockChain/5.png)
 
@@ -230,14 +230,14 @@ Swimming in water or gliding with Elytra will be detected as crawling.
 <CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
-/execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
-/execute as @a at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_crawling 1
+execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
+execute as @a at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_crawling 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_crawling=0}] run say I'm not crawling
-/execute as @a [scores={is_crawling=1}] run say I started crawling
-/execute as @a [scores={is_sneaking=1..}] run say I'm still crawling
+execute as @a [scores={is_crawling=0}] run say I'm not crawling
+execute as @a [scores={is_crawling=1}] run say I started crawling
+execute as @a [scores={is_sneaking=1..}] run say I'm still crawling
 ```
 ![commandBlockChain5](/assets/images/commands/commandBlockChain/5.png)
 
@@ -272,19 +272,19 @@ If you desperately need to detect all three states separately **solely using com
 <CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
-/execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_gliding 0
-/execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
-/execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_swimming 0
+execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_gliding 0
+execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
+execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_swimming 0
 
-/execute as @a [hasitem={item=elytra,location=slot.armor.chest}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] if block ~~1.01~ air if block ~~-0.01~ air rotated ~ 0 if block ^^1.01^-1 air if block ^^-0.01^-1 air if block ^^1.01^1 air if block ^^-0.01^1 air run scoreboard players add @s is_gliding 1
-/execute as @a [scores={is_gliding=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] unless block ~~~ water unless block ~~1.01~ water run scoreboard players add @s is_crawling 1
-/execute as @a [scores={is_gliding=0,is_crawling=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_swimming 1
+execute as @a [hasitem={item=elytra,location=slot.armor.chest}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] if block ~~1.01~ air if block ~~-0.01~ air rotated ~ 0 if block ^^1.01^-1 air if block ^^-0.01^-1 air if block ^^1.01^1 air if block ^^-0.01^1 air run scoreboard players add @s is_gliding 1
+execute as @a [scores={is_gliding=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] unless block ~~~ water unless block ~~1.01~ water run scoreboard players add @s is_crawling 1
+execute as @a [scores={is_gliding=0,is_crawling=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_swimming 1
 
 
 #Your Commands Here (example)
-/execute as @a [scores={is_swimming=0}] run say I'm not swimming
-/execute as @a [scores={is_crawling=1}] run say I started crawling
-/execute as @a [scores={is_gliding=1..}] run say I'm still gliding
+execute as @a [scores={is_swimming=0}] run say I'm not swimming
+execute as @a [scores={is_crawling=1}] run say I started crawling
+execute as @a [scores={is_gliding=1..}] run say I'm still gliding
 ```
 ![commandBlockChain9](/assets/images/commands/commandBlockChain/9.png)
 

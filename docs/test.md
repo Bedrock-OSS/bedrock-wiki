@@ -57,9 +57,61 @@ Indentation works like `code`:
 }
 ```
 
+<CodeHeader>
+    func
+</CodeHeader>
+
+```mcfunction
+scoreboard players add @a joined 0
+
+
+#Your Commands Here (example)
+tp @a[scores={joined=0}] 0 65 0
+
+
+scoreboard players reset * joined
+scoreboard players set @a joined 1
+
+scoreboard objectives add world dummy
+scoreboard players add initialised world 0
+
+
+#Your Commands Here (example)
+execute if score initialised world matches 0 run say New world created!
+
+
+scoreboard players set initialised world 1
+```
+
+<CodeHeader>
+    func
+</CodeHeader>
+
+```yaml
+scoreboard players add @a joined 0
+
+
+#Your Commands Here (example)
+tp @a[scores={joined=0}] 0 65 0
+
+
+scoreboard players reset * joined
+scoreboard players set @a joined 1
+
+scoreboard objectives add world dummy
+scoreboard players add initialised world 0
+
+
+#Your Commands Here (example)
+execute if score initialised world matches 0 run say New world created!
+
+
+scoreboard players set initialised world 1
+```
+
 ### No Line Numbers
 
-```json :no-line-numbers
+```json
 {
     "var": "a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
 }

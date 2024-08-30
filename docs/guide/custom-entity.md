@@ -19,16 +19,14 @@ mentions:
     - BaHuu
     - Sprunkles317
     - ThomasOrs
+    - QuazChick
 ---
 
 Similarly to custom items, we can also make custom entities with many similar mechanics to the vanilla entities in the game. These entities can be incredibly powerful allowing you to make your own animals which can be bred and tamed or an aggressive mob that attacks anything it sees.
 
 Here we will make a ghost entity which will float, attack the player and drop our ectoplasm item on death.
 
-<br>
-<img src="/assets/images/guide/custom_entity/ghost_view.png" width=150>
-<br>
-<br>
+<WikiImage src="/assets/images/guide/custom_entity/ghost_view.png" width="150" />
 
 Just like items, entities are made up of two parts:
 

@@ -9,7 +9,6 @@ mentions:
     - Hatchibombotar
     - TheItsNameless
     - SmokeyStack
-    - zheaEvyline
 description: Learn new /execute command.
 ---
 
@@ -112,6 +111,13 @@ Aligns the current position of the command to the block grid.
 
 Aligning a position will floor it. This subcommand accepts any non-repeating combination of the letters "x", "y", and "z", and will floor the position along each axis specified.
 
+To align a target to the center of a block, run:
+
+```
+/execute as <target> at @s align xyz run tp @s ~0.5 ~0.5 ~0.5
+```
+
+
 ### `/execute anchored`
 
 Sets the anchor of the command to the executor's feet or eyes. Changing the anchor will affect the position where local coordinates will start at.
@@ -125,6 +131,8 @@ The default anchor when executing at a target is their feet.
 When the anchor is set to `eyes`, the command's local position is offset by some amount corresponding to the "eye height" of the current executor.
 
 This offset should only apply to local coordinates, but it currently affects relative coordinates due to a bug: [MCPE-162681](https://bugs.mojang.com/browse/MCPE-162681).
+
+Also, the `anchored` subcommand can only be instructed once within the same `/execute` command. A second `anchored` instruction will have no effect. This is due to another bug: [MCPE-165051](https://bugs.mojang.com/browse/MCPE-165051)
 
 ### `/execute rotated`
 
@@ -218,32 +226,36 @@ Since subcommands can be chained limitlessly, there really is a nearly infinite 
 
 The old functionality of `/execute` can be replicated with `as <target> at @s`. If you need a positional offset relative to the entity, add `positioned`. If you want to detect if a block is present, add `if block`. Here are some equivalents:
 
-```
-# Teleport with an offset
-/execute @p ~ ~1.62 ~ teleport @s ^ ^ ^3
+1. Teleport with an offset.
 
+```yaml
+#Old syntax
+/execute @p ~ ~1.62 ~ teleport @s ^ ^ ^3
+#New Syntax
 /execute as @p at @s positioned ~ ~1.62 ~ run teleport @s ^ ^ ^3
 ```
 
-```
-# Chaining multiple '/execute's
-/execute @e[type=sheep] ~ ~ ~ execute @e[type=item,r=5] ~ ~ ~ detect ~ ~-1 ~ stone 0 kill @s
+2. Chaining multiple executes.
 
-/execute at @e[type=sheep] as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone 0 run kill @s
+```yaml
+#Old syntax
+/execute @e[type=sheep] ~ ~ ~ execute @e[type=item,r=5] ~ ~ ~ detect ~ ~-1 ~ stone kill @s
+#New syntax
+/execute at @e[type=sheep] as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone run kill @s
 ```
 
-(Note that we do not use `as @e[type=sheep] at @s` because we do not need to execute as the sheep; only the position here is required.)
+(Note that we do not use `as @e[type=sheep] at @s` because we do not need to execute as the sheep; only the position is required in this context.)
 
 Now for some examples of things that were not possible to do in one command, or were more difficult to perform before the new syntax was introduced.
 
-```
-# Testing a fake player's score
+```yaml
+#Testing a fake player's score
 /execute if score game_settings var matches 3.. run say [Game] Difficulty set to Hard.
 
-# Comparing if two scores are equal
+#Comparing if two scores are equal
 /execute as @a if score @s x = @s y run say My X is equal to my Y.
 
-# Test for an entity without targeting it
+#Test for an entity without targeting it
 /execute as @a at @s if entity @e[type=armor_stand,r=10] run gamemode survival @s
 ```
 

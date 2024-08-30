@@ -21,6 +21,7 @@ mentions:
     - TheItsNameless
     - SmokeyStack
     - Gotemba912
+    - QuazChick
 description: Documentation for JSON UI.
 ---
 
@@ -182,8 +183,6 @@ Data Binding allows to bind hardcoded values/variables to an element property.
 | ------------- | :-----: | :-----------: | ----------------------------------------------------------------- |
 | wrap          | boolean |    `false`    | Break text into lines if text is bigger than width of the element |
 | clip          | boolean |    `false`    |                                                                   |
-
-<br>
 
 Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 
@@ -682,8 +681,6 @@ Basically `anchor_to` is the anchor point in the element that will be attached t
 | Name       |  Type  | Description |
 | ---------- | :----: | ----------- |
 | `requires` | string | condition   |
-
-<br>
 
 If you only have one variable to use, you should just use `"variables": {}`
 

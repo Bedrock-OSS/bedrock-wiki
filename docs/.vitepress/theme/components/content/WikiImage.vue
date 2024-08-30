@@ -1,31 +1,42 @@
 <script setup lang="ts">
-import useData from "../../composables/data";
+import { computed } from "vue";
 import { withBase } from "vitepress";
+import useData from "../../composables/data";
 
 const { isDark } = useData();
 
 const props = defineProps<{
   alt?: string;
-  src?: string | { light: string; dark: string };
+  src?: string | { dark: string; light: string };
   pixelated?: boolean;
   width?: string;
   height?: string;
 }>();
 
-const relativeSrc =
-  typeof props.src === "object" ? (isDark ? props.src.dark : props.src.light) : props.src;
+const src = computed(() => {
+  let source = props.src;
+  if (source === undefined) return;
 
-const source = relativeSrc !== undefined ? withBase(relativeSrc) : undefined;
+  if (typeof source === "object") {
+    if (isDark.value) source = source.dark;
+    else source = source.light;
+  }
+
+  return withBase(source);
+});
 
 const { alt, width, height } = props;
 </script>
 
 <template>
   <img
-    :src="source"
+    :src
     :alt
     :width
     :height
-    :style="{ imageRendering: pixelated ? 'pixelated' : undefined, objectFit: 'contain' }"
+    :style="{
+      imageRendering: pixelated ? 'pixelated' : undefined,
+      objectFit: 'contain',
+    }"
   />
 </template>

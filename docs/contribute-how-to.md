@@ -3,6 +3,7 @@ title: How to contribute to our wiki
 hidden: true
 mentions:
     - TheItsNameless
+    - QuazChick
 description: Make your first contribution!
 ---
 
@@ -54,21 +55,21 @@ After the installation has finished, just click `Finish`. VSCode should now star
 
 Now you can customize the look of your VSCode. If you are done or don't want to customize it, click "Next Section".
 
-<img src="/assets/images/contribute/setting_up_software/vscode/vsc_look.png" width=210>
-<br>
-<br>
+<WikiImage src="/assets/images/contribute/setting_up_software/vscode/vsc_look.png" width="210" />
 
 Now you can learn some fundamentals for VSCode. As before, if you are done, just click "Next Section".
 
-<img src="/assets/images/contribute/setting_up_software/vscode/vsc_fundamentals.png" width=210>
-<br>
-<br>
+<WikiImage
+    src="/assets/images/contribute/setting_up_software/vscode/vsc_fundamentals.png"
+    width="210"
+/>
 
 On the last page, as before, click "Mark Done" if you are ready.
 
-<img src="/assets/images/contribute/setting_up_software/vscode/vsc_productivity.png" width=210>
-<br>
-<br>
+<WikiImage
+    src="/assets/images/contribute/setting_up_software/vscode/vsc_productivity.png"
+    width="210"
+/>
 
 We are finished with the installation of VSCode. You can close it for now.
 
@@ -82,9 +83,10 @@ We are finished with the installation of VSCode. You can close it for now.
 
 As before, go to your folder where you saved the .exe and double-click it. The Setup will open and automatically install GitHub Desktop. When its done, GitHub Desktop will automatically start.
 
-<img src="/assets/images/contribute/setting_up_software/ghdesktop/ghd_install.png" width=210>
-<br>
-<br>
+<WikiImage
+    src="/assets/images/contribute/setting_up_software/ghdesktop/ghd_install.png"
+    width="210"
+/>
 
 Next it asks you to sign in. If you already have a GitHub Account, just click `Sign in to GitHub.com`. In the browser tab, just sign in to your account. If you don't have a GitHub Account, click on `Create your free account` and create an account. Then continue normally.
 
@@ -188,15 +190,14 @@ Update your fork like we did in the previous step. After that, you can't just pu
 
 Now click on `Choose a branch to merge into ...`.
 
-<img src="/assets/images/contribute/troubleshooting/merge/merge_choose_branch.png" width=250>
-<br>
-<br>
+<WikiImage
+    src="/assets/images/contribute/troubleshooting/merge/merge_choose_branch.png"
+    width="250"
+/>
 
 Select the default branch (it should already be selected) and click on `Create a merge commit`.
 
-<img src="/assets/images/contribute/troubleshooting/merge/merge_commit.png" width=260>
-<br>
-<br>
+<WikiImage src="/assets/images/contribute/troubleshooting/merge/merge_commit.png" width="260" />
 
 Now open in VSCode.
 

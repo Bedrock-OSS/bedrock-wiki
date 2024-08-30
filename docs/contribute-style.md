@@ -171,6 +171,10 @@ A warning here
 :::danger
 A dangerous place
 :::
+
+:::details
+Some necessary details here
+:::
 ```
 
 :::info
@@ -188,6 +192,13 @@ A warning here
 :::danger
 A dangerous place
 :::
+
+:::details
+Some necessary details here
+:::
+
+IT IS NOT RECOMMENDED TO USE `details` CONTAINER.
+This container is not styled properly and not really needed.
 
 You also can add headers for containers:
 
@@ -217,7 +228,7 @@ Or show some other text instead of the link:
 
 To link to another source, just copy the whole link url (including the https part in front of it) and paste it between the round brackets:
 
-```md :no-line-numbers
+```md
 [Official Creator Docs](https://learn.microsoft.com/minecraft/creator/)
 ```
 
@@ -229,7 +240,7 @@ To link to another source, just copy the whole link url (including the https par
 
 You can create links that redirect you to other pages in the wiki. These are called "relative" links.
 
-```md :no-line-numbers
+```md
 [Redirect to the contribute page](/contribute)
 ```
 
@@ -237,7 +248,7 @@ You can create links that redirect you to other pages in the wiki. These are cal
 
 ---
 
-```md :no-line-numbers
+```md
 [JSON Arrays](/guide/understanding-json#arrays)
 ```
 
@@ -245,7 +256,7 @@ You can create links that redirect you to other pages in the wiki. These are cal
 
 ---
 
-```md :no-line-numbers
+```md
 [Go to Working with Markdown heading](#working-with-markdown)
 ```
 
@@ -376,14 +387,14 @@ With cards you can make fancy boxes with an image and text which contains a link
 Cards may also have content which is defined between two `Card` tags.
 
 ```md
-<Card image="assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
 
 This is some _content_.
 
 </Card>
 ```
 
-<Card image="assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
 
 This is some _content_.
 
@@ -403,17 +414,17 @@ Used to display multiple cards in a grid layout.
 
 ```md
 <CardGrid>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
 
 This is some _content_.
 
@@ -422,17 +433,17 @@ This is some _content_.
 ```
 
 <CardGrid>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
+<Card image="/assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
 
 This is some _content_.
 
@@ -577,7 +588,10 @@ If you'd like to manually include a tag at a certain point in your page, using t
 
 ### WikiImage
 
-An alternative way to add an image in your article, providing more parameters than a regular markdown image, including pixelated rendering.
+Default method to add an image is as following:
+`![](/assets/images/...)`
+WikiImage is a alternative way to add an image in your article, providing more parameters than a regular markdown image, including pixelated rendering.
+Note that images go to `docs/public/assets/images/` folder, but their path in components defined without `docs/public`.
 
 ```md
 <WikiImage
@@ -607,7 +621,7 @@ An alternative way to add an image in your article, providing more parameters th
 
 Embeds a YouTube video into thepage based on a video ID.
 
-```md :no-line-numbers
+```md
 <YouTubeEmbed id="dQw4w9WgXcQ" />
 ```
 
@@ -778,17 +792,17 @@ The above steps will be done automatically if you install the [Prettier](https:/
 
 ✔️
 
-```md :no-line-numbers
+```md
 ![Alternate text](/my/image.png)
 ```
 
-```md :no-line-numbers
+```md
 <WikiImage src="/my/image.png" alt="Alternate text" />
 ```
 
 ❌
 
-```md :no-line-numbers
+```md
 <img src="/my/image.png" alt="Alternate text" />
 ```
 
@@ -796,19 +810,19 @@ The above steps will be done automatically if you install the [Prettier](https:/
 
 ✔️
 
-```md :no-line-numbers
+```md
 `code`
 ```
 
 ❌
 
-```md :no-line-numbers
+```md
     code
 ```
 
 You can do space before text this way:
 
-```md :no-line-numbers
+```md
 > text
 ```
 
@@ -818,7 +832,7 @@ You can do space before text this way:
 
 Sometimes you need to comment something in your markdown for other contributors to see.
 
-```md :no-line-numbers
+```md
 <!-- Comment! 👀 --> ‹- It is here!
 ```
 

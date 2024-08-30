@@ -33,8 +33,6 @@ Culling rules are added in your resource pack's "block_culling" folder and appea
 }
 ```
 
-<br />
-
 They are then applied to block models in your block's [`minecraft:geometry`](/blocks/block-components#geometry) component:
 
 <CodeHeader>minecraft:block > components</CodeHeader>

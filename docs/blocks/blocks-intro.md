@@ -165,32 +165,49 @@ Now, we need to link the texture shortname to an image file path in `RP/textures
 
 Textures can also be applied per face. For example, a custom "compass block" could use the following ✨stunning✨ textures:
 
-`textures/blocks/compass_block_down.png`
+-   `textures/blocks/compass_block_down.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_down.png" pixelated width="64" />
+    <WikiImage
+        src="/assets/images/blocks/blocks-intro/compass_block_down.png"
+        pixelated
+        width="64"
+    />
 
-`textures/blocks/compass_block_up.png`
+-   `textures/blocks/compass_block_up.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_up.png" pixelated width="64" />
+    <WikiImage src="/assets/images/blocks/blocks-intro/compass_block_up.png" pixelated width="64" />
 
-`textures/blocks/compass_block_north.png`
+-   `textures/blocks/compass_block_north.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_north.png" pixelated width="64" />
+    <WikiImage
+        src="/assets/images/blocks/blocks-intro/compass_block_north.png"
+        pixelated
+        width="64"
+    />
 
-`textures/blocks/compass_block_east.png`
+-   `textures/blocks/compass_block_east.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_east.png" pixelated width="64" />
+    <WikiImage
+        src="/assets/images/blocks/blocks-intro/compass_block_east.png"
+        pixelated
+        width="64"
+    />
 
-`textures/blocks/compass_block_south.png`
+-   `textures/blocks/compass_block_south.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_south.png" pixelated width="64" />
+    <WikiImage
+        src="/assets/images/blocks/blocks-intro/compass_block_south.png"
+        pixelated
+        width="64"
+    />
 
-`textures/blocks/compass_block_west.png`
+-   `textures/blocks/compass_block_west.png`
 
-<WikiImage src="/assets/images/blocks/blocks-intro/compass_block_west.png" pixelated width="64" />
-
-<br>
-<br>
+    <WikiImage
+        src="/assets/images/blocks/blocks-intro/compass_block_west.png"
+        pixelated
+        width="64"
+    />
 
 The `blocks.json` entry would look like this:
 
@@ -211,8 +228,6 @@ The `blocks.json` entry would look like this:
     }
 }
 ```
-
-<br>
 
 Or, if you're using [material instances](/blocks/block-components#material-instances), they should look like this:
 
