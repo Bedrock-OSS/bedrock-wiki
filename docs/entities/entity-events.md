@@ -56,10 +56,10 @@ Queues commands to be executed by a target at the end of the tick.
 
 ```json
 "wiki:execute_event": {
-  "queue_command": {
-    "target": "self", // Optional - 'self' is default (targets entity)
-    "command": "summon pig"
-  }
+    "queue_command": {
+        "target": "self", // Optional - 'self' is default (targets entity)
+        "command": "summon pig"
+    }
 }
 ```
 
@@ -69,13 +69,13 @@ An array can be used to queue multiple commands:
 
 ```json
 "wiki:execute_event": {
-  "queue_command": {
-    "target": "self", // Optional - 'self' is default (targets entity)
-    "command": [
-      "summon pig",
-      "say Everybody welcome the pig!"
-    ]
-  }
+    "queue_command": {
+        "target": "self", // Optional - 'self' is default (targets entity)
+        "command": [
+            "summon pig",
+            "say Everybody welcome the pig!"
+        ]
+    }
 }
 ```
 
@@ -379,11 +379,11 @@ String values are evaluated as Molang. This means, to set a string property, you
 
 ```json
 "wiki:change_properties": {
-  "set_property": {
-    "wiki:boolean_property_example": false,
-    "wiki:integer_property_example": "q.property('wiki:integer_property_example') + 1",
-    "wiki:string_property_example": "'red'"
-  }
+    "set_property": {
+        "wiki:boolean_property_example": false,
+        "wiki:integer_property_example": "q.property('wiki:integer_property_example') + 1",
+        "wiki:string_property_example": "'red'"
+    }
 }
 ```
 
@@ -516,7 +516,7 @@ This event inside the piglin calls the event `spawn_baby` from the event `minecr
 
 ```json
 "minecraft:entity_born": {
-  "trigger": "spawn_baby"
+    "trigger": "spawn_baby"
 }
 ```
 
