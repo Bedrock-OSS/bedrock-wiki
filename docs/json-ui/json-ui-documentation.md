@@ -22,6 +22,7 @@ mentions:
     - SmokeyStack
     - Gotemba912
     - QuazChick
+    - 1cce
 description: Documentation for JSON UI.
 ---
 
@@ -680,7 +681,7 @@ Basically `anchor_to` is the anchor point in the element that will be attached t
 
 | Name       |  Type  | Description |
 | ---------- | :----: | ----------- |
-| `requires` | string | condition   |
+| `requires` | string | Condition which determines whether the following variable values are applied. Accepts `$variables` but not `#bindings`.  |
 
 If you only have one variable to use, you should just use `"variables": {}`
 
