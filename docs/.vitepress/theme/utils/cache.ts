@@ -12,6 +12,7 @@ export async function getGitHubAuthor(login: string): Promise<GitHubAuthor | nul
   if (author !== undefined) return author;
 
   const headers = {
+    "Cache-Control": "max-age=3600",
     ...(!!import.meta.env.GITHUB_TOKEN && {
       Authorization: "Bearer " + import.meta.env.GITHUB_TOKEN,
     }),
