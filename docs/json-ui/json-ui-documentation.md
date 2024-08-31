@@ -679,9 +679,9 @@ Basically `anchor_to` is the anchor point in the element that will be attached t
 
 ### Variables Property
 
-| Name       |  Type  | Description |
-| ---------- | :----: | ----------- |
-| `requires` | string | Condition which determines whether the following variable values are applied. Accepts `$variables` but not `#bindings`.  |
+| Name       |  Type  | Description                                                                                                             |
+| ---------- | :----: | ----------------------------------------------------------------------------------------------------------------------- |
+| `requires` | string | Condition which determines whether the following variable values are applied. Accepts `$variables` but not `#bindings`. |
 
 If you only have one variable to use, you should just use `"variables": {}`
 
