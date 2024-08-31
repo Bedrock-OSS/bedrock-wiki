@@ -48,6 +48,37 @@ The most essential and common use of events is directly adding and/or removing c
 When you add a component group, if a currently active component group has the same component inside it, it will be overwritten by the group most recently added.
 :::
 
+### Queue Command
+
+Queues commands to be executed by a target at the end of the tick.
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"wiki:execute_event": {
+  "queue_command": {
+    "target": "self", // Optional - 'self' is default (targets entity)
+    "command": "summon pig"
+  }
+}
+```
+
+An array can be used to queue multiple commands:
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"wiki:execute_event": {
+  "queue_command": {
+    "target": "self", // Optional - 'self' is default (targets entity)
+    "command": [
+      "summon pig",
+      "say Everybody welcome the pig!"
+    ]
+  }
+}
+```
+
 ### Randomize
 
 Randomize is a parameter which can be used inside of an entity event to add or remove component groups based off weighted randomization. This is a very useful tool when different component groups should be added based on random chance.
@@ -335,6 +366,26 @@ This event is run when the entity is hit by a player or projectile. There is a 6
 ```
 
 </Spoiler>
+
+### Set Property
+
+Sets entity property values (each value can be set to the returned value of a Molang expression string).
+
+:::warning
+String values are evaluated as Molang. This means, to set a string property, you must wrap the value in `'`s (example below).
+:::
+
+<CodeHeader>minecraft:block > events</CodeHeader>
+
+```json
+"wiki:change_properties": {
+  "set_property": {
+    "wiki:boolean_property_example": false,
+    "wiki:integer_property_example": "q.property('wiki:integer_property_example') + 1",
+    "wiki:string_property_example": "'red'"
+  }
+}
+```
 
 ### Trigger
 
