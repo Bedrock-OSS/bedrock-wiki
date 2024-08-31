@@ -4,8 +4,7 @@ category: Commands
 mentions:
     - BedrockCommands
     - cda94581
-    - jordanparki7
-    - zheaEvyline
+description: /damage command explained.
 ---
 
 ## Introduction
@@ -33,7 +32,7 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 - **` Amount `** This is a whole number, which specifies the amount of damage to deal to the targets. The minimum value is  `0`  and the maximum value is `2147483647`, or the signed 32-bit integer limit.
 
-- **` Cause `** This specifies the "reason" the damage was dealt. This cause will appear in death messages (`X hit the ground too hard for cause: fall`) be used in damage calculation with armor (`the value dealt in Amount may be different depending on the worn armor`), and used in a large variety of other things, such as in Behavior Pack/Add-ons. A full list of all the damage causes can be found [below](/commands/damage#damage-cause-list)
+- **` Cause `** This specifies the "reason" the damage was dealt. This cause will appear in death messages (`X hit the ground too hard for cause: fall`) be used in damage calculation with armor (`the value dealt in Amount may be different depending on the worn armor`), and used in a large variety of other things, such as in Behavior Pack/Add-ons. A full list of all the damage causes can be found [below](#damage-cause-list).
 
 - **` Damager `** If Cause was something to do with entities `(such as entity_attack)`, this specifies where the damage came from `(the entity that dealt the attack)`. This is limited to only 1 target. An error will be thrown if multiple targets are found from the selector.
 
@@ -41,7 +40,8 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 
 ## Examples
 
-<CodeHeader>mcfunction</CodeHeader>
+<CodeHeader></CodeHeader>
+
 ```yaml
 #Deal 4 damage to all players
 /damage @a 4
@@ -56,10 +56,14 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 ## Damage Cause List
 
 Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
+
+<CodeHeader></CodeHeader>
+
 ```
+all
 anvil
-attack
 block_explosion
+campfire
 charging
 contact
 drowning
@@ -67,7 +71,6 @@ entity_attack
 entity_explosion
 fall
 falling_block
-fatal
 fire
 fire_tick
 fireworks
@@ -81,14 +84,18 @@ none
 override
 piston
 projectile
+self_destruct
+ram_attack
 sonic_boom
+soul_campfire
 stalactite
 stalagmite
 starve
 suffocation
-suicide
 temperature
 thorns
 void
 wither
 ```
+
+For an up-to-date list, visit the official add-on documentation page **[here](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonentities?view=minecraft-bedrock-stable#entity-damage-source)**.

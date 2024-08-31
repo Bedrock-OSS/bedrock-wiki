@@ -8,6 +8,7 @@ mentions:
     - SmokeyStack
 tags:
     - expert
+description: This tutorial will show you how to make your first VR model.
 ---
 
 This tutorial will show you how to make your first VR model.
@@ -129,17 +130,12 @@ Load the pack into minecraft and try it out if it looks like this you succeeded 
 
 ![](/assets/images/vr/tutorial-hand-right/export-done.png)
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/vr_edit_model.mcpack"
-    color=blue
->Get guide end results!</BButton>
+<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/vr_edit_model.mcpack">
+    Get guide end results!
+</Button>
 
 ## Your progress so far
-
-<Checklist>
 
 -   [x] Setup Minecraft VR
 -   [x] Setup the pack
 -   [x] Edit the models
-
-</Checklist>

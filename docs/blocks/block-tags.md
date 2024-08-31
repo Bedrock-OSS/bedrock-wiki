@@ -14,11 +14,9 @@ mentions:
     - TheItsNameless
     - QuazChick
     - Kaioga5
+description: Block tags can be used to ensure that a block meets certain conditions.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
 Block tags can be used to ensure that a block meets certain conditions.
 
 ## Applying Tags
@@ -29,20 +27,20 @@ Block tags can be applied in the same way as items - in the block's `components`
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:tree_stump",
-      "menu_category": {
-        "category": "nature"
-      }
-    },
-    "components": {
-      "tag:wood": {},
-      "tag:my_lovely_tag": {},
-      "tag:wiki:very_useless": {}
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:tree_stump",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "tag:wood": {},
+            "tag:my_lovely_tag": {},
+            "tag:wiki:very_useless": {}
+        }
     }
-  }
 }
 ```
 
@@ -52,11 +50,6 @@ Tags can be queried with:
 
 -   `q.all_tags`
 -   `q.any_tag`
-
-:::warning EXPERIMENTAL
-The following query functions require experimental Molang features to be enabled.
-:::
-
 -   `q.block_has_all_tags`
 -   `q.block_has_any_tag`
 -   `q.block_neighbor_has_all_tags`
@@ -70,29 +63,29 @@ Example of an item querying a block's tags:
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:item": {
-    "description": {
-      "identifier": "wiki:custom_pickaxe",
-      "menu_category": {
-        "category": "equipment",
-        "group": "itemGroup.name.pickaxe"
-      }
-    },
-    "components": {
-      "minecraft:digger": {
-        "use_efficiency": true,
-        "destroy_speeds": [
-          {
-            "speed": 5,
-            "block": {
-              "tags": "q.any_tag('custom_ore', 'stone', 'metal')"
+    "format_version": "1.21.20",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:custom_pickaxe",
+            "menu_category": {
+                "category": "equipment",
+                "group": "itemGroup.name.pickaxe"
             }
-          }
-        ]
-      }
+        },
+        "components": {
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "speed": 5,
+                        "block": {
+                            "tags": "q.any_tag('custom_ore', 'stone', 'metal')"
+                        }
+                    }
+                ]
+            }
+        }
     }
-  }
 }
 ```
 

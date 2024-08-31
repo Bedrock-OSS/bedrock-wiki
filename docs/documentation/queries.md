@@ -1,6 +1,7 @@
 ---
 title: Molang Queries
-toc_max_level: 2
+description: Some of the MoLang queries explained.
+outline_depth: 2
 mentions:
     - SirLich
     - solvedDev
@@ -54,12 +55,12 @@ Where `x` and `y` are both integer arguments, from the following table:
 
 ### Y for horses
 
-| Argument | Type                  |
-| -------- | --------------------- |
-| 1        | Leather armor piece   |
-| 2        | Iron armor piece      |
-| 3        | Gold armor piece      |
-| 4        | Diamond armor piece   |
+| Argument | Type                |
+| -------- | ------------------- |
+| 1        | Leather armor piece |
+| 2        | Iron armor piece    |
+| 3        | Gold armor piece    |
+| 4        | Diamond armor piece |
 
 ### Example
 
@@ -238,6 +239,7 @@ Formatted like: `query.is_item_name_any('slot.weapon.mainhand', 0, 'namespace:it
 Takes the equipment slot name first, followed by the slot index value, and then the list of item names with namespaces after it.
 
 Possible equipment slot are as follows:
+
 | Slot Name              | Slot Counts | Description                                                                         |
 | ---------------------- | ----------- | ----------------------------------------------------------------------------------- |
 | `slot.weapon.mainhand` | 0           | Usually any held items are in here                                                  |
@@ -268,9 +270,7 @@ _Currently, can be only used in materials._
 
 ## query.is_eating
 
-This query tracks when certain entities are 'eating'. It's not used for the player. To trigger, use one of the following components:
-    - `minecraft:behavior.eat_carried_item`
-    - `minecraft:behavior.snacking`
+This query tracks when certain entities are 'eating'. It's not used for the player. To trigger, use one of the following components: - `minecraft:behavior.eat_carried_item` - `minecraft:behavior.snacking`
 
 ## query.is_ghost
 
@@ -559,8 +559,9 @@ Requires `Experimental Molang Features` to use. From the docs `Takes a relative 
 The syntax for it is `q.block_neighbor_has_any_tag(x,y,z,'tag_name')` and `q.relative_block_has_any_tag(x,y,z,'tag_name')`.
 
 Example:
-- `q.relative_block_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the entity.
-- `q.block_neighbor_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the block.
+
+-   `q.relative_block_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the entity.
+-   `q.block_neighbor_has_any_tag(0,-1,0,'grass')` would try to detect a block with the grass tag one block under the block.
 
 To do multiple tags you would use `q.correct_query(0,-1,0,'grass', 'plant')` with `correct_query` being replaced by the right query.
 

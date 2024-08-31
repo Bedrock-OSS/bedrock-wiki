@@ -6,6 +6,7 @@ mentions:
     - JaylyDev
     - SmokeyStack
     - ThomasOrs
+description: JS troubleshooting.
 ---
 
 This article teaches you the basic workflow for debugging any JavaScript issue.

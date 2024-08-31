@@ -2,8 +2,8 @@
 title: Material Creations
 tags:
     - expert
-category:
-    - General
+category: General
+description: Useful material creations by community. 
 ---
 
 :::warning

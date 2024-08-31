@@ -1,147 +1,218 @@
 ---
 title: Wiki Developer's Test Page
+description: A page with a description just for being a page with a description.
+outline_depth: 6
 hidden: true
-tags:
-    - Dev page
-mentioned:
+mentions:
     - TheItsNameless
     - MedicalJewel105
     - SirLich
     - SmokeyStack
-description: A page with a description just for being a page with a description.
+    - QuazChick
 ---
 
-## What?
-
-Hey, what are you doing there? How did you get here?
-
+:::danger SECRET
 This is the special place thats used by the developers to develop new features and find bugs. Don't worry if this place is really messy, it doesn't need to look good!
-P.s: Go and contribute to wiki instead of reading this all!
+:::
 
-## Panels
+Hey, what are you doing here? How did you get here? Get back to editing the wiki!
+
+## Blockquotes
+
+You can make a space using `>`:
+
+> Moved?
+>
+> > Double
+
+Not actually moved
+
+Indentation works like `code`:
+
+    Not actually moved
+
+## Buttons
+
+### Default
+
+<Button link="#buttons">Some Text</Button>
+
+### Colored
+
+<Button link="#buttons" color="red">
+    Some Text
+</Button>
+
+## Code Blocks
+
+### Code Header
+
+<CodeHeader>
+    loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong.json
+</CodeHeader>
+
+```json
+{
+    "var": "a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
+}
+```
+
+<CodeHeader>
+    func
+</CodeHeader>
+
+```mcfunction
+scoreboard players add @a joined 0
+
+
+#Your Commands Here (example)
+tp @a[scores={joined=0}] 0 65 0
+
+
+scoreboard players reset * joined
+scoreboard players set @a joined 1
+
+scoreboard objectives add world dummy
+scoreboard players add initialised world 0
+
+
+#Your Commands Here (example)
+execute if score initialised world matches 0 run say New world created!
+
+
+scoreboard players set initialised world 1
+```
+
+<CodeHeader>
+    func
+</CodeHeader>
+
+```yaml
+scoreboard players add @a joined 0
+
+
+#Your Commands Here (example)
+tp @a[scores={joined=0}] 0 65 0
+
+
+scoreboard players reset * joined
+scoreboard players set @a joined 1
+
+scoreboard objectives add world dummy
+scoreboard players add initialised world 0
+
+
+#Your Commands Here (example)
+execute if score initialised world matches 0 run say New world created!
+
+
+scoreboard players set initialised world 1
+```
+
+### No Line Numbers
+
+```json
+{
+    "var": "a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
+}
+```
+
+## Comments
+
+Can you see the text (no)?
+
+<!-- Comment! 👀 -->
+
+## Containers
+
+:::info Header?!
+You can make info containers like this
+:::
 
 :::tip Header?!
-You can make info panels like this
+You can make tip containers like this
 :::
 
 :::warning Header?!
-You can make warning panels like this
+You can make warning containers like this
 :::
 
-:::danger STOP
-Danger zone, do not proceed
+:::danger Header?!
+You can make danger containers like this
 :::
 
-## Checklists
+## Folder Views
 
-<Checklist>
+<FolderView :paths="[
+    'path/to/folder/with/file.mcfunction',
+    'path/to/file.json',
+    'get/out/of/my/swamp.mcstructure'
+]" />
 
--   [x] My first task Lorem *ipsum* dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
--   [x] More tasks ...
--   [ ] and more
+## Heading 2
 
-</Checklist>
+Text
 
-<Checklist>
+### Heading 3
 
-- [x] some `formatting` and *more* **moore** ***MORE*** formatting
+Text
 
-</Checklist>
+#### Heading 4
 
-## List Bug
+Text
+
+##### Heading 5
+
+Text
+
+###### Heading 6
+
+Text
+
+## Horizontal Rule
+
+Some text...
+
+---
+
+...and some more!
+
+## Lists
+
+### Checked
+
+-   [x] a
+-   [x] b
+-   [ ] c
+
+### Ordered
 
 1. a
 2. b
 3. c
 
-comment
-4. d
+### Unordered
 
-## Spoiler Test
+-   a
+-   b
+-   c
 
-<Spoiler title="Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Hs">
-
-## Really Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong h1
-
-### Really Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong h2
-
-#### Really Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong h3
-
-`some long single code line: rjseut;lwkporiv;jr;oiU;OIRJB;OUBSOIU;LJ ;OIJLj;oijselv jlisue;vltjv;zi`
-
-</Spoiler>
-
-<CodeHeader>kjeshvtkheskthlkrzieuoirjuesoirjtejtoiewtpiapojlkjgklgagafglwalgöafglöahfadklgwjhglsaglfglwaösfgäaüöäüöäüößagfagajxhlkhretjekvhtiewjtlkgjxekttwelt.json</CodeHeader>
-
-```json
-{"var": "value"}
-```
-
-## MD Tricks
-
-You can make a space using `>`:
-
-> Moved?
-
-    Not actually moved
-
-> Moved?
-
-Not actually moved
-
-    трсуыешцугщшксодлпыоудловралоурлоаоцдлаодлыоадлцодлцодлкодлодлуокд
-
-Tab works like `code`
-
-Actually there is a text:
-
-<!-- Comment! 👀 -->
-
-## Downloadable Images
-
-<a href="/assets/images/discord/oss.png" download>
-  <img src="/assets/images/misc/dead_bush.png" alt="OSS Image">
-</a>
-
-<BButton
-    link="/favicon.ico" download
-    color=red
->Download Wiki Logo</BButton>
-
-<a href="/assets/images/misc/dead_bush.png" download>Download</a>
-
-## Code panel edit
-
-a`koooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooood`a
-
-<CodeHeader>silver_dagger.json</CodeHeader>
-
-```json
-{
-    "repair_amount": "context.other->query.remaining_durability + 0.05 * context.other->query.max_durability",
-    "value": 123456,
-    "valid": true //comment
-}
-hello
-```
-
-<BButton
-    link="https://www.google.com/"
-    color=default
->Download Wiki Logo</BButton>
-
-## MD Snippets
+## Snippets
 
 `Ctrl + Space`
 
 ![](/assets/images/contribute/snippets/snippets.png)
 
-## After h4 space
+## Spoilers
 
-#### h4
+<Spoiler title="Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Title">
 
-normal usage
+## Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
 
-#### h4-2
----
-edited
+### Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
+
+#### Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong
+
+`somelongsinglecodeline:rjseut;lwkporiv;jr;oiU;OIRJB;OUBSOIU;LJ;OIJLj;fgdhokfdxhlpjklfjoijselvjlisue;vltjvzsa\dfhgz\dfgiuszehgiushezdgiuhsdghiksdaghkdsgaghkjsdhksdauhugkysdiuhiui`
+
+</Spoiler>

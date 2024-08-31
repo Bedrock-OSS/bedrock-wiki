@@ -1,17 +1,18 @@
 ---
 title: Text and Localization
 mentions:
-    - ThijsHankelMC
-    - SirLich
-    - aexer0e
-    - MedicalJewel105
-    - Luthorius
-    - Fabrimat
-    - TheDoctor15
-    - Hatchibombotar
-    - ChibiMango
-    - SmokeyStack
-    - Sprunkles
+  - ThijsHankelMC
+  - SirLich
+  - aexer0e
+  - MedicalJewel105
+  - Luthorius
+  - Fabrimat
+  - TheDoctor15
+  - Hatchibombotar
+  - ChibiMango
+  - SmokeyStack
+  - Sprunkles
+description: Minecraft is a game with fully localized text in languages all over the world.
 ---
 
 Minecraft is a game with fully localized text in languages all over the world. To achieve this, Minecraft employs a system where internal **translation keys** are assigned values on a per-language basis. Minecraft will generate translation keys for custom entities, items, and blocks, and it is up to us to assign them a localized name in our resource pack.
@@ -51,7 +52,7 @@ Trailing spaces are not trimmed for in-line comments. If you want to indent a co
 item.flint_and_steel.name=Flint and Steve	##[sic]
 ```
 
-A translation can contain substitutions in place of text. Substitutions can either be ordered (`%1`, `%2`, etc.) or not ordered (`%s`). Vanilla translations have their values filled in by the game, while players can manually set the substitutions' values with commands that use the raw JSON text format, like with [`/tellraw`](/commands/tellraw).
+A translation can contain substitutions in place of text. Substitutions can either be ordered (`%1`, `%2`, etc.) or not ordered (`%s`). Vanilla translations have their values filled in by the game, while players can manually set the substitutions' values with commands that use the raw JSON text format, like with [`/tellraw`](/concepts/rawtext).
 
 ```toml
 commands.op.success=Opped: %s
@@ -133,34 +134,34 @@ You can use the free browser-based [LangUtil tool](https://langutil.bedrockexplo
 
 The following is a table of the 29 languages Minecraft supports by default.
 
-| File ID    | Language              | Country        |
-| ---------- | --------------------- | -------------- |
-| id_ID      | Indonesian            | Indonesia      |
-| da_DK      | Danish                | Denmark        |
-| de_DE      | German                | Germany        |
-| en_GB      | English               | Great Britain  |
-| en_US      | English               | North America  |
-| es_ES      | Spanish               | Spain          |
-| es_MX      | Mexican Spanish       | Mexico         |
-| fr_CA      | Canadian French       | Canada         |
-| fr_FR      | French                | France         |
-| it_IT      | Italian               | Italy          |
-| hu_HU      | Hungarian             | Hungary        |
-| nl_NL      | Dutch                 | Netherlands    |
-| nb_NO      | Bokmål                | Norway         |
-| pl_PL      | Polish                | Poland         |
-| pt_BR      | Brazilian Portuguese  | Brazil         |
-| pt_PT      | Portuguese            | Portugal       |
-| sk_SK      | Slovak                | Slovakia       |
-| fi_FI      | Finnish               | Finland        |
-| sv_SE      | Swedish               | Sweden         |
-| tr_TR      | Turkish               | Turkey         |
-| cs_CZ      | Czech                 | Czech Republic |
-| el_GR      | Greek                 | Greece         |
-| bg_BG      | Bulgarian             | Bulgaria       |
-| ru_RU      | Russian               | Russia         |
-| uk_UA      | Ukrainian             | Ukraine        |
-| ja_JP      | Japanese              | Japan          |
-| zh_CN      | Chinese (Simplified)  | China          |
-| zh_TW      | Chinese (Traditional) | Taiwan         |
-| ko_KR      | Korean                | Korea          |
+| File ID | Language              | Country        |
+|---------|-----------------------|----------------|
+| id_ID   | Indonesian            | Indonesia      |
+| da_DK   | Danish                | Denmark        |
+| de_DE   | German                | Germany        |
+| en_GB   | English               | Great Britain  |
+| en_US   | English               | North America  |
+| es_ES   | Spanish               | Spain          |
+| es_MX   | Mexican Spanish       | Mexico         |
+| fr_CA   | Canadian French       | Canada         |
+| fr_FR   | French                | France         |
+| it_IT   | Italian               | Italy          |
+| hu_HU   | Hungarian             | Hungary        |
+| nl_NL   | Dutch                 | Netherlands    |
+| nb_NO   | Bokmål                | Norway         |
+| pl_PL   | Polish                | Poland         |
+| pt_BR   | Brazilian Portuguese  | Brazil         |
+| pt_PT   | Portuguese            | Portugal       |
+| sk_SK   | Slovak                | Slovakia       |
+| fi_FI   | Finnish               | Finland        |
+| sv_SE   | Swedish               | Sweden         |
+| tr_TR   | Turkish               | Turkey         |
+| cs_CZ   | Czech                 | Czech Republic |
+| el_GR   | Greek                 | Greece         |
+| bg_BG   | Bulgarian             | Bulgaria       |
+| ru_RU   | Russian               | Russia         |
+| uk_UA   | Ukrainian             | Ukraine        |
+| ja_JP   | Japanese              | Japan          |
+| zh_CN   | Chinese (Simplified)  | China          |
+| zh_TW   | Chinese (Traditional) | Taiwan         |
+| ko_KR   | Korean                | Korea          |

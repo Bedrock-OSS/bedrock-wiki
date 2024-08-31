@@ -1,6 +1,7 @@
 ---
 title: Vanilla Materials
-show_toc: false
+description: Materials documentation.
+show_outline: false
 tags:
     - expert
 mentions:
@@ -15,7 +16,7 @@ mentions:
 Materials are not for the faint of heart. Be prepared for potential crashes, content log errors, and long loading times.
 :::
 
-Materials are extremely useful for making entities more unique. You can make new ones for your addons, or use pre-existing vanilla materials.
+Materials are extremely useful for making entities more unique. You can make new ones for your add-ons, or use pre-existing vanilla materials.
 
 You can learn more about creating materials [here](/visuals/materials).
 
@@ -412,8 +413,6 @@ Inconsistently renders objects with transparency behind.
 -   Completely Opaque
 -   Backface-Culling
 
-
 :::warning
 Please note, that these have also only been tested using a RenderDragon platform. Non-RenderDragon visuals may differ.
 :::
-

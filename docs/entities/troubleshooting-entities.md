@@ -12,6 +12,7 @@ mentions:
     - aexer0e
     - ChibiMango
     - RonarsCorruption
+description: Troubleshooting guide for entities.
 ---
 
 :::tip
@@ -26,14 +27,13 @@ Always remember to check content log!
 
 Accept that something, somewhere, is wrong. _Nobody_ at _any_ level is immune to these mistakes, so don't get offended and think, "Of course I did that!" and skip a step!
 
-<BButton color="blue" link="#_1-0-0-are-both-packs-active">Continue</BButton>
-
+<Button link="#_1-0-0-are-both-packs-active">Continue</Button>
 
 ## 1.0.0 - Are both packs active?
 
 Make sure both the resource pack and behavior pack are active for the world (an excellent way to avoid accidentally having this issue is to set each pack as a dependency of the other in both packs' manifest.json files so that adding or removing one of the packs automatically adds/removes the other)
 
-<BButton color="blue" link="#_2-0-0-determine-whether-the-issue-is-in-the-rp-or-the-bp">Continue</BButton>
+<Button link="#_2-0-0-determine-whether-the-issue-is-in-the-rp-or-the-bp">Continue</Button>
 
 ## 2.0.0 - Determine whether the issue is in the RP or the BP
 
@@ -71,11 +71,11 @@ Make sure `is_spawnable` and `is_summonable` are set to true, and that `is_exper
 
 ### Results
 
-I don't see a spawn egg at all: <BButton color="blue" link="#_3-1-0-bp">Go</BButton>
+I don't see a spawn egg at all: <Button link="#_3-1-0-bp">Go</Button>
 
-I see a spawn egg for my entity, but it's just black, and the entity doesn't appear when I spawn or summon it: <BButton color="blue" link="#step-3-2-0-rp-entity">Go</BButton>
+I see a spawn egg for my entity, but it's just black, and the entity doesn't appear when I spawn or summon it: <Button link="#step-3-2-0-rp-entity">Go</Button>
 
-I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <BButton color="blue" link="#step-3-3-0-rp-resources-still-writing-because-this-is-going-to-be-extensive">Go</BButton>
+I see a spawn egg for my entity, and it has the colors I chose, but the entity still doesn't appear when I spawn or summon it: <Button link="#step-3-3-0-rp-resources-still-writing-because-this-is-going-to-be-extensive">Go</Button>
 
 ## 3.0.0 - Locating the specific issue
 
@@ -131,10 +131,10 @@ This means you have a working `.behavior` and `.entity` file, but something in t
 
 To start with:
 
--   invisible, no shadow -> bad RP reference: <BButton link="#_3-3-1-invisible-no-shadow" color=blue >Go</BButton>
--   invisible, shadow exists -> geometry issue: <BButton link="#_3-3-2-invisible-shadow-exists" color=blue >Go</BButton>
--   visible, weird texture -> texture issue: <BButton link="#_3-3-3-visible-weird-texture" color=blue >Go</BButton>
--   visible, weird visibility stuff -> material issue: <BButton link="#_3-3-4-visible-weird-visibility-stuff" color=blue >Go</BButton>
+-   invisible, no shadow -> bad RP reference: <Button link="#_3-3-1-invisible-no-shadow">Go</Button>
+-   invisible, shadow exists -> geometry issue: <Button link="#_3-3-2-invisible-shadow-exists">Go</Button>
+-   visible, weird texture -> texture issue: <Button link="#_3-3-3-visible-weird-texture">Go</Button>
+-   visible, weird visibility stuff -> material issue: <Button link="#_3-3-4-visible-weird-visibility-stuff">Go</Button>
 
 ### 3.3.1 - Invisible, no shadow
 

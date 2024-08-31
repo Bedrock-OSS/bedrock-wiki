@@ -9,6 +9,7 @@ mentions:
     - rebrainertv
 tags:
     - easy
+description: Setup loot table for containers in structure.
 ---
 
 Adding loot tables to containers in structure is easy, you need to have a PC and your choice of either [NBT Studio](https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe) (executable) or [Loot Tabler](https://mcbe-essentials.github.io/structure-editor/loot-tabler) (browser application).
@@ -18,7 +19,7 @@ Adding loot tables to containers in structure is easy, you need to have a PC and
 
 To start, create the directory `BP/loot_tables/chests` and create your loot table file here.
 
-You can learn how to make loot tables in [Beginners Guide](/guide/loot-table)
+You can learn how to make loot tables in [Beginner's Guide](/guide/loot-table)
 
 <CodeHeader>BP/loot_tables/chests/my_structure_loot.json</CodeHeader>
 

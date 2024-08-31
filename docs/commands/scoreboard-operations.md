@@ -6,6 +6,7 @@ mentions:
     - Luthorius
     - MedicalJewel105
     - Hatchibombotar
+description: Scoreboards can be used to perform complex operations, similar to MoLang. Operations come in two flavors - mathematical, and logical.
 ---
 
 Scoreboards can be used to perform complex operations, similar to [Molang](/concepts/molang). Operations come in two flavors: mathematical, and logical.
@@ -126,7 +127,7 @@ If you want to check in scoreboard, whether one value equals another value, you 
 scoreboard objectives add temp dummy
 scoreboard players operation @e temp = @s A
 scoreboard players operation @e temp -= @s B
-execute @e[scores={temp=0}] ~~~ say A equals B
+execute as @e[scores={temp=0}] run say A equals B
 scoreboard objectives remove temp
 ```
 

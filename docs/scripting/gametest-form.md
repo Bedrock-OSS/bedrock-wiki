@@ -16,6 +16,7 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - kumja1
+description: Create form UIs without the need for JSON UI-wrangling.
 ---
 
 ::: warning

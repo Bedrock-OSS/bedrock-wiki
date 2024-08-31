@@ -1,6 +1,7 @@
 ---
 title: Pack Folder Structure
-show_toc: false
+description: Pack folder structure example.
+show_outline: false
 mentions:
     - SirLich
     - ThijsHankelMC

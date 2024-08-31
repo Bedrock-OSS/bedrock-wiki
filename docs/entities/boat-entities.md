@@ -2,7 +2,6 @@
 title: Creating Boats
 category: Tutorials
 tags:
-    - recipe
     - intermediate
 mentions:
     - SirLich
@@ -10,6 +9,7 @@ mentions:
     - MedicalJewel105
     - StealthyExpertX
     - TheItsNameless
+description: Learn how to make boat behavior.
 ---
 :::warning Requires Format Version 1.16.100 or Lower
 
@@ -34,7 +34,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 	"minecraft:entity": {
 		"format_version": "1.14.0",
 		"description": {
-			"identifier": "foo:bar",
+			"identifier": "wiki:boat",
 			"is_summonable": true,
 			"is_spawnable": true,
 			"is_experimental": false
@@ -99,7 +99,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 	"minecraft:entity": {
 		"format_version": "1.14.0",
 		"description": {
-			"identifier": "foo:bar",
+			"identifier": "wiki:boat",
 			"is_summonable": true,
 			"is_spawnable": true,
 			"is_experimental": false
@@ -163,3 +163,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 ## What method to use?
 
 Both methods are suitable but have their pros and cons. If you want to disable the bouncing effect, use the first method. If you want more control over it, use the second method. I use the second method for static objects, such as buoys, and the first method for movable entities, such as boats, emulating the vanilla behavior.
+
+## Custom hurt animations
+
+You might also be interested in [Custom hurt animations](/visuals/custom-hurt-animations).

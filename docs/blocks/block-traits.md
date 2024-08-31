@@ -8,10 +8,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-:::tip FORMAT & MIN ENGINE VERSION `1.20.60`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.20`
 Before you learn about block traits, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
@@ -25,7 +22,7 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
 
 ```json
 {
-  "format_version": "1.20.60",
+  "format_version": "1.21.20",
   "minecraft:block": {
     "description": {
       "identifier": "wiki:custom_slab",
@@ -53,22 +50,22 @@ _This example will set the `minecraft:vertical_half` block state when placed to 
 q.block_state('minecraft:vertical_half')
 ```
 
-## Placement Direction
+## List of Traits
+
+### Placement Direction
 
 Contains information about the player's rotation when the block was placed.
 
-_Released from experiment `Upcoming Creator Features` for format versions 1.20.60 and higher._
+_Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
 
-**May enable the following states:**
+#### Provided States
 
 | State                          | Values                                                                           | Description                                      |
 | ------------------------------ | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | `minecraft:cardinal_direction` | `"south"` _(default)_<br>`"north"`<br>`"west"`<br>`"east"`                       | Cardinal facing direction of player when placed. |
 | `minecraft:facing_direction`   | `"down"` _(default)_<br>`"up"`<br>`"south"`<br>`"north"`<br>`"west"`<br>`"east"` | Overall direction of player when placed.         |
 
-<br>
-
-**Additional parameters:**
+#### Additional Parameters
 
 -   `y_rotation_offset` - This rotation offset only applies to the horizontal state values (north, south, east, west) . Only axis-aligned angles may be specified (e.g. 90, 180, -90).
 
@@ -81,22 +78,18 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.20.6
 }
 ```
 
-## Placement Position
+### Placement Position
 
 Contains information about where the player placed the block.
 
-_Released from experiment `Upcoming Creator Features` for format versions 1.20.60 and higher._
+_Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
 
-**May enable the following states:**
+#### Provided States
 
 | State                     | Values                                                                           | Description                                   |
 | ------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------- |
 | `minecraft:block_face`    | `"down"` _(default)_<br>`"up"`<br>`"south"`<br>`"north"`<br>`"west"`<br>`"east"` | Face on which the block was placed.           |
 | `minecraft:vertical_half` | `"top"`<br>`"bottom"` _(default)_                                                | The vertical half where the block was placed. |
-
-<br>
-
-**_This trait has no additional parameters._**
 
 <CodeHeader>minecraft:block > description > traits</CodeHeader>
 

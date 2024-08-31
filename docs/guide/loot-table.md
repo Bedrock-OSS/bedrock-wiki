@@ -1,9 +1,9 @@
 ---
-title: 'Adding a Loot Table, a Spawn rule and a crafting recipe'
+title: "Adding a Loot Table, a Spawn rule and a crafting recipe"
 category: Guide
 description: How to add your first Loot Table, Spawn Rule and Crafting Recipe
 nav_order: 8
-prefix: '8. '
+prefix: "8. "
 mentions:
     - KaiFireborn
     - SirLich
@@ -27,27 +27,27 @@ First, we'll make the ghost drop Ectoplasm upon death: create the following file
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "wiki:ectoplasm",
-					"weight": 1,
-					"functions": [
-						{
-							"function": "set_count",
-							"count": {
-								"min": 1,
-								"max": 3
-							}
-						}
-					]
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:ectoplasm",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -69,39 +69,39 @@ Next, we'll make the ghost spawn in deserts at night:
 
 ```json
 {
-	"format_version": "1.8.0",
-	"minecraft:spawn_rules": {
-		"description": {
-			"identifier": "wiki:ghost",
-			"population_control": "monster"
-		},
-		"conditions": [
-			{
-				"minecraft:spawns_on_surface": {},
-				"minecraft:brightness_filter": {
-					"min": 0,
-					"max": 7,
-					"adjust_for_weather": true
-				},
-				"minecraft:difficulty_filter": {
-					"min": "easy",
-					"max": "hard"
-				},
-				"minecraft:weight": {
-					"default": 80
-				},
-				"minecraft:herd": {
-					"min_size": 1,
-					"max_size": 3
-				},
-				"minecraft:biome_filter": {
-					"test": "has_biome_tag",
-					"operator": "==",
-					"value": "desert"
-				}
-			}
-		]
-	}
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "population_control": "monster"
+        },
+        "conditions": [
+            {
+                "minecraft:spawns_on_surface": {},
+                "minecraft:brightness_filter": {
+                    "min": 0,
+                    "max": 7,
+                    "adjust_for_weather": true
+                },
+                "minecraft:difficulty_filter": {
+                    "min": "easy",
+                    "max": "hard"
+                },
+                "minecraft:weight": {
+                    "default": 80
+                },
+                "minecraft:herd": {
+                    "min_size": 1,
+                    "max_size": 3
+                },
+                "minecraft:biome_filter": {
+                    "test": "has_biome_tag",
+                    "operator": "==",
+                    "value": "desert"
+                }
+            }
+        ]
+    }
 }
 ```
 
@@ -126,29 +126,29 @@ And finally, as an introduction to recipes, we'll make the Ectoplasm craftable i
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:recipe_shaped": {
-		"description": {
-			"identifier": "wiki:ectoplasm_slime_block"
-		},
-		"tags": ["crafting_table"],
-		"pattern": ["###", "###", "###"],
-		"key": {
-			"#": {
-				"item": "wiki:ectoplasm"
-			}
-		},
-		"result": {
-			"item": "minecraft:slime"
-		}
-	}
+    "format_version": "1.12.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "wiki:ectoplasm_slime_block"
+        },
+        "tags": ["crafting_table"],
+        "pattern": ["###", "###", "###"],
+        "key": {
+            "#": {
+                "item": "wiki:ectoplasm"
+            }
+        },
+        "result": {
+            "item": "minecraft:slime"
+        }
+    }
 }
 ```
 
 -   `"format_version"` is already known.
 -   With `"recipe_shaped"` we define, that each ingredient has a set place in the crafting grid. There are some other types that can be used, you can find more information [here](/loot/recipes).
 -   Inside `"description"` we define the `"identifier"` of this recipe, which is the name of the recipe.
--   `"tags"` is a list of benches (crafting table, furnace, etc) that are able to use this recipe. After version b1.16.100 it was possible to use custom benches, created by an addon.
+-   `"tags"` is a list of benches (crafting table, furnace, etc) that are able to use this recipe. After version b1.16.100 it was possible to use custom benches, created by an add-on.
 -   `"pattern"` defines the arrangement of the items inside the crafting grid. Each `#` represents the item that is set under `"key"`. In this case, the whole 3x3 grid has to be filled with `"wiki:ectoplasm"`, our own item. It is possible to define more items, just add an entry to `"key"` and set the key to a character, that you can use inside `"pattern"`.
 -   `"result"` contains an `"item"`, which is set to the item that will be the output of this recipe.
 
@@ -158,22 +158,18 @@ For more information on this topic, visit our page about [recipes](/loot/recipes
 
 :::tip What you have learned:
 
--	How to create a loot table and define which items a mob is able to drop
--	How to set the rules for a mob to spawn
--	How to create new crafting recipes
-:::
+-   How to create a loot table and define which items a mob is able to drop
+-   How to set the rules for a mob to spawn
+-   How to create new crafting recipes
+    :::
 
 ## Your progress so far
 
 **What you've done:**
 
-<Checklist>
-
 -   [x] Setup your pack
 -   [x] Create a custom item
 -   [x] Create a custom entity
 -   [x] Create the entity's loot, spawn rules, and a custom recipe
-
-</Checklist>
 
 Congratulations! you have finished the Guide and created your first Add-on. 🎉

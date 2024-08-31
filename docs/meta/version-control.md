@@ -3,9 +3,10 @@ title: Version Control
 mentions:
     - SirLich
     - sermah
+description: Control changes in add-on files.
 ---
 
-Version control is the concept of backing up your code iteratively, so you can roll back to specific versions as needed. Version control could be achieved at the most basic level by taking a `.zip` of your addon every day and uploading it to google drive. This isn't unreasonable, but it has three significant difficulties that proper VCS (version control systems) fix:
+Version control is the concept of backing up your code iteratively, so you can roll back to specific versions as needed. Version control could be achieved at the most basic level by taking a `.zip` of your add-on every day (or every version) and uploading it to google drive (or saving locally). This isn't unreasonable, but it has three significant difficulties that proper VCS (version control systems) fix:
 
 -   It isn't easy to compare versions
 -   It isn't easy to _actually_ roll-back to a previous version
@@ -25,7 +26,7 @@ For a complete walkthrough of `git`, you should follow the following [git tutori
 
 ## GitHub
 
-GitHub is a version of your git project (`repository`) that is hosted online. This allows multiple people to work on the same project at the same time and collaborate. This is very helpful for map-making. By hosting on Github, you can also (optionally) make your code public, making it easier than ever to share your addons with the world.
+GitHub is a version of your git project (`repository`) that is hosted online. This allows multiple people to work on the same project at the same time and collaborate. This is very helpful for map-making. By hosting on Github, you can also (optionally) make your code public, making it easier than ever to share your add-ons with the world.
 
 For a complete walkthrough of using `Github`, you should follow this [github tutorial](https://guides.github.com/activities/hello-world/).
 
@@ -39,13 +40,13 @@ If you've gotten this far, hopefully, you have a GitHub account and are familiar
 -   github
 -   git
 
-# Setting up Git
+## Setting up Git
 
 This assumes you are adding an _existing_ project to git. The steps are similar if you are starting from scratch.
 
-## Structure
+### Structure
 
-The big issue with using `git` for addons is that `git` generally works by encapsulating a _single_ folder and managing it. Of course, in Bedrock Addons, assets are spread across two folders: The `BP`, and `RP`. To get around this issue, we will place our repository outside of the `com.mojang` folder entirely and then use window `junctions` to "copy" the folders in.
+The big issue with using `git` for add-ons is that `git` generally works by encapsulating a _single_ folder and managing it. Of course, in Bedrock Add-Ons, assets are spread across two folders: The `BP`, and `RP`. To get around this issue, we will place our repository outside of the `com.mojang` folder entirely and then use window `junctions` to "copy" the folders in.
 
 There are many advantages of placing our project in a separate location:
 
@@ -53,7 +54,7 @@ There are many advantages of placing our project in a separate location:
 -   We can combine the RP and the BP into one repository
 -   All of our projects can be easily viewed in a simple location, instead of nested deep within com.mojang
 
-## Creating a Git Repository
+### Creating a Git Repository
 
 Pick a convenient location for your projects. I placed mine at `C:/sirlich/projects`. Make a new folder with the name of your map. We will be using `wiki` as the name of our mock project.
 
@@ -61,7 +62,7 @@ Right-click the folder, and click `"Open git Bash"`. If this option doesn't appe
 
 Type: `git init`. This will create a blank repository in your project.
 
-## Linking your existing RP and BP
+### Linking your existing RP and BP
 
 The next step is to make the repository aware of your RP and BP folders. We will be using window symlink "junctions". When we create a junction, we essentially create a wormhole in our file system that will make it appear like your files are in two places at once. Deleting/editing/adding files is perfectly copied over.
 
@@ -72,13 +73,13 @@ When you are finished, you should see `wiki_RP` and `wiki_BP` in your project fo
 
 You can now push this repository to `github`, following the tutorial above.
 
-## Extra Files
+### Extra Files
 
 Because we created our repository based on symlinks, we can add anything we like into the project folder without worrying about breaking the com.mojang folder. I like to track `.bb` files, cover-art files (`.kra` etc.).
 
 You can also add notes, video files, or anything else you want to track.
 
-## Working with your VCS
+### Working with your VCS
 
 The main things to remember about working with VCS:
 

@@ -18,6 +18,7 @@ mentions:
     - TheItsNameless
     - ThomasOrs
     - SmokeyStack
+description: Biomes guide.
 ---
 
 _Last updated for 1.16.210_
@@ -111,7 +112,7 @@ Like all constructed assets in a behavior pack, biome definitions are written in
 }
 ```
 
-> Invalid JSON — like with all aspects of addons — causes a biome definition to fail; that biome will not generate in the world. Unfortunately, no error will be thrown. A JSON validator and/or syntax highlighter easily makes this a non-problem.
+> Invalid JSON — like with all aspects of add-ons — causes a biome definition to fail; that biome will not generate in the world. Unfortunately, no error will be thrown. A JSON validator and/or syntax highlighter easily makes this a non-problem.
 
 #### Format Version
 
@@ -151,7 +152,7 @@ The other top-level property is `"minecraft:biome"`, which establishes the schem
 
 The `"description"` property of the `"minecraft:biome"` property is used as the metadata for the biome. It currently contains only one property, `"identifier"`, which is used to uniquely identify a biome. The value here must match the file name, sans the `.json` or `.biome.json` extensions. For example, if the identifier is `prairie`, the filename must be either `prairie.json` or `prairie.biome.json`. This identifier is used for referencing from a number of biome definition properties.
 
-> Unlike other aspects of addons, biomes do not accept a filename-ignored namespace prefix (such as `elysium:`) in their identifier. Such a prefix may be provided, but the file would have to contain the prefix, including the colon; such a filename is invalid on many Minecraft-supporting file systems, so this traditional namespace system should not be used. Consider a [reverse domain name system](#biome-definitions) instead.
+> Unlike other aspects of add-ons, biomes do not accept a filename-ignored namespace prefix (such as `elysium:`) in their identifier. Such a prefix may be provided, but the file would have to contain the prefix, including the colon; such a filename is invalid on many Minecraft-supporting file systems, so this traditional namespace system should not be used. Consider a [reverse domain name system](#biome-definitions) instead.
 
 ##### Components
 
@@ -238,7 +239,7 @@ The rules for how a biome is selected for placement in a world depend on 3 thing
 
 > A **slot** may represent an entire dimension or a subset of its surface area. The concept of slots does not exist in the actual documentation or schemas. This term is used here to represent a dedicated region for which a biome can be selected from a pool or where a collection of biomes are independently connected for a singular purpose.
 
-_Biome layout is not randomized per world, only per seed._ This means that if the same addons containing the same custom biome definitions are applied to two new worlds with the same seed, each dimension in both worlds will contain the exact same biome layout. This is obvious for vanilla generation, as the same seed will always generate the same vanilla biomes in the same places.
+_Biome layout is not randomized per world, only per seed._ This means that if the same add-ons containing the same custom biome definitions are applied to two new worlds with the same seed, each dimension in both worlds will contain the exact same biome layout. This is obvious for vanilla generation, as the same seed will always generate the same vanilla biomes in the same places.
 
 Minecraft currently has no way of creating new dimensions. The End does not allow for either adding new biomes or removing the default one, leaving only Overworld and Nether customization possible.
 
@@ -287,7 +288,7 @@ Biomes must be aligned with temperature categories to generate as base biomes. T
 The 5 climates are, by increasing temperature:
 
 | Climate  | Property value |
-| :------- | :------------- |
+|:---------|:---------------|
 | Frozen   | `"frozen"`     |
 | Cold     | `"cold"`       |
 | Medium   | `"medium"`     |
@@ -573,7 +574,7 @@ Only the `"tall_hills"` and `"short_hills"` sub-biomes will generate as hills tr
 Base biomes may declare their own sub-biomes of these categories:
 
 | Transformation | Property value            |
-| :------------- | :------------------------ |
+|:---------------|:--------------------------|
 | Hills          | `"hills_transformation"`  |
 | Mutated        | `"mutate_transformation"` |
 | River          | `"river_transformation"`  |
@@ -736,7 +737,7 @@ Unlike the Overworld, which defines fixed overlapping slot maps for placing biom
 In the Nether’s multi-noise system, 4 independent values are assigned to every _x_-_z_ location in the Nether based on the world seed using [Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise) curves, which generate values on the closed interval [-1, 1]. These values remain constant across worlds of the same seed if the Nether-declaring biomes across all applied behavior packs remain constant — they will not change per world otherwise. For convenience, these independent values will be described here as **aspects**; the documentation does not use this vocabulary. These four aspects are assigned arbitrary names for usage in behavior packs and “targeted” by a biome definition with the following properties:
 
 | Aspect      | Targeting property     |
-| :---------- | :--------------------- |
+|:------------|:-----------------------|
 | Temperature | `"target_temperature"` |
 | Humidity    | `"target_humidity"`    |
 | Altitude    | `"target_altitude"`    |
@@ -758,7 +759,7 @@ Because Perlin noise is an interpolated process, each aspect will be smoothly ge
 As an example of these properties, consider a scenario where only the 5 vanilla Nether biomes generate. [Isolating a single aspect](#ignoring-aspects) for the example, temperature, all other aspect targets will be set to `0`. The vanilla biomes will be mapped to temperatures as such:
 
 | Biome           | Temperature |
-| :-------------- | ----------: |
+|:----------------|------------:|
 | Soulsand Valley |        `-1` |
 | Warped Forest   |      `-0.5` |
 | Nether Wastes   |         `0` |
@@ -782,7 +783,7 @@ Again [considering a single aspect](#ignoring-aspects) (Aspect 1) for the sake o
 As one specific example, imagine targeting the most extreme values on the range:
 
 | Biome   | Aspect 1 target | Success interval |
-| :------ | --------------: | ---------------: |
+|:--------|----------------:|-----------------:|
 | Biome A |            `-1` |       [-1, -0.5] |
 | Biome B |             `0` |      [-0.5, 0.5] |
 | Biome C |             `1` |         [0.5, 1] |
@@ -792,7 +793,7 @@ In this case, even though the targeted values are evenly spread along the range,
 Attempting to evenly distribute the intervals by approaching the problem in reverse reveals that the full noise range can be divided into thirds via [-1, -1/3], [-1/3, 1/3], [1/3, 1]. The targets must then be evenly spaced around the breakpoints, resulting in:
 
 | Biome   | Targeted Value | Success Interval |
-| :------ | -------------: | ---------------: |
+|:--------|---------------:|-----------------:|
 | Biome A |       `-0.667` |     [-1, -0.333] |
 | Biome B |            `0` |  [-0.333, 0.333] |
 | Biome C |        `0.667` |       [0.333, 1] |
@@ -841,7 +842,7 @@ In a vague mathematical system of unseeable values, it can be difficult to decid
 Because the aspects are completely independent and their given names are meaningless, the aspects can be reinterpreted as any system of independent properties. In a grimmer Nether, these aspects could be something like:
 
 | Actual targeting property | Reinterpretation  |
-| :------------------------ | :---------------- |
+|:--------------------------|:------------------|
 | `"target_temperature"`    | Corruption        |
 | `"target_humidity"`       | Living/dead ratio |
 | `"target_altitude"`       | Soul affinity     |
@@ -850,7 +851,7 @@ Because the aspects are completely independent and their given names are meaning
 In a Nether reinterpreted as an extension of the bottom of the Overworld, the aspects could be:
 
 | Actual targeting property | Reinterpretation   |
-| :------------------------ | :----------------- |
+|:--------------------------|:-------------------|
 | `"target_temperature"`    | Temperature (same) |
 | `"target_humidity"`       | Darkness           |
 | `"target_altitude"`       | Richness           |
@@ -901,7 +902,7 @@ Tiering can be used to assign descriptive, qualified meaning to quantifiable val
 Using the Overworld climates as an example, one could assign numbers to temperature meanings, like the following:
 
 | Climate  | Temperature |
-| :------- | ----------: |
+|:---------|------------:|
 | Frozen   |      `-0.6` |
 | Cold     |     `-0.25` |
 | Normal   |         `0` |
@@ -963,7 +964,7 @@ Tiering transitions can be used in a [tiering system](#tiering) to separate othe
 If a tiered aspect had the following schema:
 
 | Life force | Value |
-| :--------- | ----: |
+|:-----------|------:|
 | Undead     |  -0.8 |
 | Virile     |   0.8 |
 
@@ -1094,7 +1095,7 @@ Noise presets provide a convenient way to emulate vanilla biome generation. It i
 The built-in noise presets include:
 
 | Preset          | Value               |
-| :-------------- | :------------------ |
+|:----------------|:--------------------|
 | Default         | `"default"`         |
 | Mutated default | `"default_mutated"` |
 | Lowlands        | `"lowlands"`        |
@@ -1232,7 +1233,7 @@ Height restrictions can be provided to limit the valid transformation region. Th
 Using integers directly will create boring layers of adjustments. However, unlike the properties establishing checks against the noise curve, the `"height_range"` property accepts Molang expressions for its elements. Using math functions, intervals can be created that are randomly spread for higher quality adjustments. Additionally, a `sea_level` variable is available that returns the sea level of the dimension for that individual instance of generation:
 
 | Dimension  | Sea level |
-| :--------- | --------: |
+|:-----------|----------:|
 | Overworld  |        63 |
 | The Nether |        32 |
 | The End    |        63 |
@@ -1358,7 +1359,7 @@ _t_(_y_) = 0.15 + ((_y_ - _s_) / 600)
 The value of the sea level, _s_, depends on the dimension:
 
 | Dimension  | Sea level |
-| :--------- | :-------- |
+|:-----------|:----------|
 | Overworld  | 63        |
 | The Nether | 32        |
 | The End    | 63        |
@@ -1424,7 +1425,7 @@ The second value of the array, _b_, is intended to adjust snow distribution, but
 **Particle decorations** are storms of ambient particles visible within a biome. These properties are solely decorative; unlike other aspects of a biome’s climate, particle decorations have no effect on gameplay. If not provided, no particle effects will be present in a biome. Custom particles currently may not be used. 4 different particle decorations from vanilla biomes are available to use anywhere:
 
 | Decoration type | Property name   |
-| :-------------- | :-------------- |
+|:----------------|:----------------|
 | Ash             | `"ash"`         |
 | White ash       | `"white_ash"`   |
 | Red spores      | `"red_spores"`  |
@@ -1447,8 +1448,8 @@ Biomes are the starting point of much of the configurable gameplay in Minecraft.
 ```json
 "minecraft:forced_features": {
 	"surface_pass": {
-		"identifier": "pioneercraft:grasslands_caravan_feature",
-		"places_feature": "pioneercraft:caravan_feature",
+		"identifier": "wiki:grasslands_caravan_feature",
+		"places_feature": "wiki:caravan_feature",
 
 		"scatter_chance": "100 * math.pow(2, -4)",
 
@@ -1667,7 +1668,7 @@ Authoring spawning and generating conditions can be made much easier by shifting
 Imagining bird mobs that could spawn in any area with trees, a tagging system could be developed dependent on how wooded a biome is. From another perspective, these biomes could also be tagged as `"forested"` and even go so far as to provide tags relating the density of trees:
 
 | Forest cover | Feature-focused tag | Biome taxonomy-focused tag |
-| :----------- | :------------------ | :------------------------- |
+|:-------------|:--------------------|:---------------------------|
 | Light        | `"few_birds"`       | `"lightly_forested"`       |
 | Medium       | `"default_birds"`   | `"moderately_forested"`    |
 | Heavy        | `"many_birds"`      | `"heavily_forested"`       |
@@ -1703,7 +1704,7 @@ Most tags used in vanilla biomes are used to help organize biomes by location an
 4 tags exists supporting the game’s dimensions:
 
 | Dimension            | Tag                      |
-| :------------------- | :----------------------- |
+|:---------------------|:-------------------------|
 | Overworld            | `"overworld"`            |
 | Overworld generation | `"overworld_generation"` |
 | The Nether           | `"nether"`               |
@@ -1732,7 +1733,7 @@ A number of vanilla biome tags exist to support the specific nature of those bio
 For the Overworld:
 
 | Biome           | Tag                  |
-| :-------------- | :------------------- |
+|:----------------|:---------------------|
 | Plains          | `"plains"`           |
 | Forest          | `"forest"`           |
 | Mountains       | `"extreme_hills"`    |
@@ -1750,7 +1751,7 @@ For the Overworld:
 For the Nether:
 
 | Biome           | Tag                 |
-| :-------------- | :------------------ |
+|:----------------|:--------------------|
 | Nether Wastes   | `"nether_wastes"`   |
 | Soulsand Valley | `"soulsand_valley"` |
 | Basalt Deltas   | `"basalt_deltas"`   |
@@ -1760,14 +1761,14 @@ For the Nether:
 Two tags exists strictly to group related biomes:
 
 | Group                          | Tag                   |
-| :----------------------------- | :-------------------- |
+|:-------------------------------|:----------------------|
 | Snowy Tundra & Snowy Mountains | `"ice"`               |
 | Crimson Forest & Warped Forest | `"netherwart_forest"` |
 
 A few tags are used to single out unique variants:
 
 | Variant                             | Tag         |
-| :---------------------------------- | :---------- |
+|:------------------------------------|:------------|
 | Giant Tree Taiga variant            | `"mega"`    |
 | Stone Shore variant                 | `"stone"`   |
 | Birch Forest variant                | `"birch"`   |
@@ -1795,7 +1796,7 @@ Groups of tags exist for slotting and matching climates and transformations in t
 Three tags are used for the slotting of biomes in the Overworld. These slotting tags are:
 
 | Slot                                                         | Tag       |
-| :----------------------------------------------------------- | :-------- |
+|:-------------------------------------------------------------|:----------|
 | Ocean                                                        | `"ocean"` |
 | Deep ocean (when used in combination with the `"ocean"` tag) | `"deep"`  |
 | Rare land                                                    | `"rare"`  |
@@ -1805,7 +1806,7 @@ Three tags are used for the slotting of biomes in the Overworld. These slotting 
 4 tags exist for [Overworld temperature variations](#climates):
 
 | Climate  | Tag          |
-| :------- | :----------- |
+|:---------|:-------------|
 | Frozen   | `"frozen"`   |
 | Cold     | `"cold"`     |
 | Lukewarm | `"lukewarm"` |
@@ -1814,7 +1815,7 @@ Three tags are used for the slotting of biomes in the Overworld. These slotting 
 A tag exists for [each type of Overworld sub-biome](#hierarchy):
 
 | Sub-Biome type | Tag         |
-| :------------- | :---------- |
+|:---------------|:------------|
 | Hills          | `"hills"`   |
 | Mutated        | `"mutated"` |
 | River          | `"river"`   |
@@ -1861,7 +1862,7 @@ The `"monster"` tag allows Zombies, Skeletons, Spiders, Creepers, Slime, Enderme
 Beginning with Minecraft 1.16, a [new tagging strategy](#spawning-generating-perspective) was employed by Mojang in the new Nether biomes to separate biome type and location from functionality. A number of tags now exist for mob spawning in the Nether.
 
 | Mob spawning rule                                                | Tag                             |
-| :--------------------------------------------------------------- | :------------------------------ |
+|:-----------------------------------------------------------------|:--------------------------------|
 | Piglins                                                          | `"spawn_piglin"`                |
 | Few Piglins                                                      | `"spawn_few_piglins"`           |
 | Zombified Piglins                                                | `"spawn_zombified_piglin"`      |

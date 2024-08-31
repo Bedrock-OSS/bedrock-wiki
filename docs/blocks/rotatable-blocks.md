@@ -8,12 +8,10 @@ mentions:
     - MedicalJewel105
     - MajestikButter
     - QuazChick
+description: Create rotatable blocks.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -261,142 +259,54 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 Block rotation identical to how vanilla logs rotate.
 
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events.
-:::
+### Trait
 
-### Block State
+To set the state which determines the block's attachment, we will use the `minecraft:placement_position` block trait with the `minecraft:block_face` state enabled.
 
-<CodeHeader>minecraft:block > description</CodeHeader>
+The state contains more values than we need for log rotation, so some permutations will look identical.
 
-```json
-"states": {
-  "wiki:axis": [0, 1, 2]
-}
-```
-
-### Block Event & Trigger
-
-In order to make the block rotate the way a vanilla log would, we need to use a molang expression that uses a query to get what face of a block we're placing our block on and convert it to 0, 1, or 2.
-
-<CodeHeader>minecraft:block > events</CodeHeader>
+<CodeHeader>minecraft:block</CodeHeader>
 
 ```json
-"wiki:set_axis": {
-  "set_block_state": {
-    "wiki:axis": "Math.floor(q.block_face / 2)"
+"description": {
+  "identifier": "wiki:log_rotation_example",
+  // Block traits are defined here
+  "traits": {
+    "minecraft:placement_position": {
+      "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+    }
   }
-}
-```
-
-This event is called upon by using the `minecraft:on_player_placing` trigger component.
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:on_player_placing": {
-  "event": "wiki:set_axis"
 }
 ```
 
 ### Permutations
 
+Rotation makes use of block permutations. Each permutation contains the `minecraft:transformation` component, which allows for cardinal rotation by checking the `minecraft:block_face` state and applying an appropriate rotation.
+
 <CodeHeader>minecraft:block</CodeHeader>
 
 ```json
 "permutations": [
+  // X axis
   {
-    "condition": "q.block_state('wiki:axis') == 0",
+    "condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
+    "components": {
+      "minecraft:transformation": { "rotation": [0, 0, 90] }
+    }
+  },
+  // Y axis
+  {
+    "condition": "q.block_state('minecraft:block_face') == 'down' || q.block_state('minecraft:block_face') == 'up'",
     "components": {
       "minecraft:transformation": { "rotation": [0, 0, 0] }
     }
   },
+  // Z axis
   {
-    "condition": "q.block_state('wiki:axis') == 1",
+    "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
     "components": {
       "minecraft:transformation": { "rotation": [90, 0, 0] }
-    }
-  },
-  {
-    "condition": "q.block_state('wiki:axis') == 2",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 0, 90] }
     }
   }
 ]
 ```
-
-### Log Rotation Example
-
-::: warning EXPERIMENTAL
-This example also requires `Holiday Creator Features` to use `minecraft:unit_cube`.
-:::
-
-<Spoiler title="Basic Custom Log JSON">
-
-<CodeHeader>BP/blocks/custom_log.json</CodeHeader>
-
-```json
-{
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_log",
-      "states": {
-        "wiki:axis": [0, 1, 2]
-      }
-    },
-    "components": {
-      "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 1.5
-      },
-      "minecraft:destructible_by_explosion": {
-        "explosion_resistance": 15
-      },
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "log_side"
-        },
-        "end": {
-          "texture": "log_top"
-        },
-        "up": "end",
-        "down": "end"
-      },
-      "minecraft:unit_cube": {},
-      "minecraft:on_player_placing": {
-        "event": "wiki:set_axis"
-      }
-    },
-    "events": {
-      "wiki:set_axis": {
-        "set_block_state": {
-          "wiki:axis": "Math.floor(q.block_face / 2)"
-        }
-      }
-    },
-    "permutations": [
-      {
-        "condition": "q.block_state('wiki:axis') == 0",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, 0, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:axis') == 1",
-        "components": {
-          "minecraft:transformation": { "rotation": [90, 0, 0] }
-        }
-      },
-      {
-        "condition": "q.block_state('wiki:axis') == 2",
-        "components": {
-          "minecraft:transformation": { "rotation": [0, 0, 90] }
-        }
-      }
-    ]
-  }
-}
-```
-
-</Spoiler>

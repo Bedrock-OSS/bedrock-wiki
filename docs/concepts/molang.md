@@ -9,14 +9,17 @@ mentions:
     - DoubleShotgun
     - Luthorius
     - TheItsNameless
+description: What is MoLang?
 ---
 
 ## Introduction
+
 Pretty much everything evaluates to a number; if something doesn't evaluate to a number, you can use an `operator` to make it into one. You can basically just think of Molang as one big math equation.
 
 An equation evaluates to `true` when any number except `0` is returned. When I reference `returning`, I'm talking about the output of an equation. There is also a `return` statement, but I don't usually use it, and will therefore not be talking about it.
 
 ## Accessing Values
+
 There are three main ways to access and use values in Molang (queries, variables and temp variables)
 
 - **Queries** are read only values returned by the game. You cannot set these values, only read them. (`query.example_query` | `q.example_query`)

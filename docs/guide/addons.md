@@ -1,9 +1,9 @@
 ---
-title: Addons Explained
+title: Add-Ons Explained
 category: Guide
-description: The basics of Addons
+description: The basics of Add-Ons
 nav_order: 2
-prefix: '2. '
+prefix: "2. "
 mentions:
     - SirLich
     - Dreamedc2015
@@ -16,21 +16,26 @@ mentions:
     - profeplaysminecraft
     - retr0cube
     - SmokeyStack
+    - QuazChick
 ---
 
-## What are addons?
+## What are add-ons?
 
-Addons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Addons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
+Add-ons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Add-ons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
 
-Addons are primarily written in [json](/guide/understanding-json), which is a structured data-format. An addon is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
+Add-ons are primarily written in [json](/guide/understanding-json), which is a structured data-format. An add-on is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
+
+:::tip Javascripting
+Since this guide was written, the definition of 'Add-On' has expanded to include the Javascript scripting API. You can learn more about this API elsewhere on this site.
+:::
 
 ## What's the difference between a Behavior Pack & a Resource Pack?
 
-Addons are split into two pack types: Resource Packs, and Behavior Packs. Both can function independently, but they are most commonly used together. When you have both a Resource Pack and Behavior Pack, this is referred to as an _addon_.
+Add-ons are split into two pack types: Resource Packs, and Behavior Packs. Both can function independently, but they are most commonly used together. When you have both a Resource Pack and Behavior Pack, this is referred to as an _add-on_.
 
 ### Resource Pack
 
-The Resource Pack, also known as the _client_, or RP, is responsible for the _visuals_ and _sounds_ in your addon. This includes things like:
+The Resource Pack, also known as the _client_, or RP, is responsible for the _visuals_ and _sounds_ in your add-on. This includes things like:
 
 -   Textures
 -   Sounds
@@ -40,7 +45,7 @@ The Resource Pack, also known as the _client_, or RP, is responsible for the _vi
 
 ### Behavior Pack
 
-The Behavior Pack, also known as the _server_, or BP, is responsible for the _logic_ of your addon. This can include things like:
+The Behavior Pack, also known as the _server_, or BP, is responsible for the _logic_ of your add-on. This can include things like:
 
 -   How your entity acts
 -   Crafting recipes
@@ -54,19 +59,14 @@ In most cases, you will have both a RP and a BP together. These packs can commun
 -   An RP entity definition, which describes how your entity will _look_
 -   A BP entity definition, which describes how your entity will _act_
 
-## What you have learned
+## Next
 
-:::tip
+:::tip What you have learned
 
--   Addons modify Minecraft content or add their own
--   Addons are written in json
--   An addon is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
+-   [x] Add-ons modify Minecraft content or add their own
+-   [x] Add-ons are written in json
+-   [x] An add-on is split into the **Resource Pack** and the **Behavior Pack**: - Resource Packs contain Textures, Sounds, ... and control how the game looks - Behavior Packs contain entity-files, crafting recipes, ... and control the logic of your game
+
 :::
 
-## What to do now?
-
-<BButton
-    link="/guide/software-preparation"
-    color=blue
->Check out software and preparation page!</BButton>
-
+<Button link="/guide/software-preparation">Next: Software and preparation</Button>

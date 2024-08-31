@@ -11,4 +11,4 @@ categories:
 
 Welcome to the Entity Visuals section!
 
-<BButton color="blue" link="introduction">Get Started!</BButton>
+<Button link="introduction">Get Started!</Button>

@@ -11,6 +11,7 @@ mentions:
     - Luthorius
     - TheItsNameless
     - SmokeyStack
+description: Spawn rules define how entities will spawn into the world.
 ---
 
 Spawn rules define how entities will spawn into the world. You should use spawn rules when you want your custom entity to spawn naturally, just like vanilla entities. The different components allow you to define when, where, and how the entity will spawn in.

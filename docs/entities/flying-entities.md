@@ -2,7 +2,6 @@
 title: Flying Entities
 category: Tutorials
 tags:
-    - recipe
     - intermediate
 mentions:
     - SirLich
@@ -15,6 +14,7 @@ mentions:
     - Luthorius
     - TheItsNameless
     - Halo333X
+description: Learn how to make a flying behavior for your entity.
 ---
 
 Whether making a plane or a dragon, adding controllability to flying entities will probably challenge most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.

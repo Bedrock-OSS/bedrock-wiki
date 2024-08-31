@@ -7,6 +7,7 @@ mentions:
     - TheItsNameless
     - LeGend077
     - stirante
+description: Using Aseprite Animations in JSON-UI.
 ---
 
 ## Introduction to Aseprite

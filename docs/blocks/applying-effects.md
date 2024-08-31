@@ -2,31 +2,27 @@
 title: Applying Constant Effects
 category: Tutorials
 tags:
-    - experimental
     - easy
+    - scripting
 mentions:
     - MysticChair
     - SirLich
     - MedicalJewel105
     - QuazChick
     - SmokeyStack
+description: This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
 ---
 
-:::danger PLEASE READ
-This page will be part of a rewrite to accomodate for the removal of the Holiday Creator Feature experimental toggle. Expect this page to be rewritten or removed when this happens.
-:::
-::: tip FORMAT & MIN ENGINE VERSION `1.20.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-::: warning EXPERIMENTAL
-Requires `Holiday Creator Features` to trigger events.
-:::
-
 This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
 
-## Setup
+## Detecting Treaders
+
+### Block JSON
 
 We will need to add a couple things to our code, first let's start with a state that will hold `true` when stood on, and `false` otherwise:
 
@@ -34,75 +30,106 @@ We will need to add a couple things to our code, first let's start with a state 
 
 ```json
 "states": {
-  "wiki:stood_on": [false, true]
+    "wiki:stood_on": [false, true]
 }
 ```
 
-Now we need the `minecraft:queued_ticking` component that will check if our property is set to `true` and if so, trigger the event causing the effect to apply:
+Now we need to register our custom components to hook onto the [`stepOn`](/blocks/block-events#step-on) and [`stepOff`](/blocks/block-events#step-off) events:
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:queued_ticking": {
-  "looping": true,
-  "interval_range": [1, 1],
-  "on_tick": {
-    "event": "wiki:add_effect",
-    "target": "self",
-    "condition": "q.block_state('wiki:stood_on')"
-  }
-}
+"minecraft:custom_components": [
+    "wiki:detect_treaders"
+]
 ```
 
-We will use the `minecraft:on_step_on` event trigger component to fire the event that will set our `wiki:stood_on` property to `true`...
+### Custom Component Script
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader>BP/scripts/detect_treaders.js</CodeHeader>
 
-```json
-"minecraft:on_step_on": {
-  "event": "wiki:step_on"
-}
+```js
+import { BlockPermutation, GameMode, Player, world } from "@minecraft/server";
+
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const DetectTreadersBlockComponent = {
+    onStepOn({ entity, block }) {
+        if (entity instanceof Player && entity.getGameMode() === GameMode.creative) return;
+
+        block.setPermutation(
+            BlockPermutation.resolve(block.typeId, {
+                "wiki:stood_on": true,
+            })
+        );
+    },
+    onStepOff({ entity, block }) {
+        if (entity instanceof Player && entity.getGameMode() === GameMode.creative) return;
+
+        block.setPermutation(
+            BlockPermutation.resolve(block.typeId, {
+                "wiki:stood_on": false,
+            })
+        );
+    },
+};
+
+world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:detect_treaders",
+        DetectTreadersBlockComponent
+    );
+});
 ```
 
-...and the `minecraft:on_step_off` component to fire the event that will set our `wiki:stood_on` to `false`:
+## Applying Effects to Treaders
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+### Block JSON
 
-```json
-"minecraft:on_step_off": {
-  "event": "wiki:step_off"
-}
-```
-
-Time to setup our `events`. First, let's define the `wiki:step_on` and `wiki:step_off` events:
+We also need the block to tick in order to apply the desired effect every tick. For this, we'll use the [permutations](/blocks/block-permutations) array so a custom component is only applied if the block is being stepped on:
 
 <CodeHeader>minecraft:block</CodeHeader>
 
 ```json
-"events": {
-  "wiki:step_on": {
-    "set_block_state": {
-      "wiki:stood_on": true
+"permutations": [
+    {
+        "condition": "q.block_state('wiki:stood_on')",
+        "components": {
+            "minecraft:custom_components": ["wiki:detect_treaders", "wiki:wither_treaders"],
+            "minecraft:tick": {
+                "interval_range": [1, 1],
+                "looping": true
+            }
+        }
     }
-  },
-  "wiki:step_off": {
-    "set_block_state": {
-      "wiki:stood_on": false
-    }
-  }
-}
+]
 ```
 
-The last thing to add is an event that will trigger the effect:
+### Custom Component Script
 
-<CodeHeader>minecraft:block > events</CodeHeader>
+Now, let's add our event that will give the entity the wither effect:
 
-```json
-"wiki:add_effect": {
-  "run_command": {
-    "command": "effect @e[r=1] wither 2 2"
-  }
-}
+<CodeHeader>BP/scripts/wither_treaders.js</CodeHeader>
+
+```js
+import { Entity, GameMode, Player, world } from "@minecraft/server";
+
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const WitherTreadersBlockComponent = {
+    onTick(event) {
+        const entities = event.dimension.getEntitiesAtBlockLocation(event.block.above().location);
+
+        entities.forEach((entity) => {
+            entity.addEffect("minecraft:wither", 2, { amplifier: 2 });
+        });
+    },
+};
+
+world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:wither_treaders",
+        WitherTreadersBlockComponent
+    );
+});
 ```
 
 And done! The code above will trigger the desired status effect as long as the entity is standing on a block.
@@ -115,71 +142,39 @@ And done! The code above will trigger the desired status effect as long as the e
 
 ```json
 {
-  "format_version": "1.20.60",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:wither_block",
-      "menu_category": {
-        "category": "nature"
-      },
-      "states": {
-        "wiki:stood_on": [false, true]
-      }
-    },
-    "components": {
-      "minecraft:geometry": "geometry.wither_block",
-      "minecraft:material_instances": {
-        "*": {
-          "texture": "wither_block"
-        }
-      },
-      "minecraft:loot": "loot_tables/empty.json",
-      "minecraft:on_step_on": {
-        "event": "wiki:step_on"
-      },
-      "minecraft:on_step_off": {
-        "event": "wiki:step_off"
-      },
-      "minecraft:queued_ticking": {
-        "looping": true,
-        "interval_range": [1, 1],
-        "on_tick": {
-          "event": "wiki:add_effect",
-          "condition": "q.block_state('wiki:stood_on')"
-        }
-      },
-      "minecraft:map_color": "#181818"
-    },
-    "events": {
-      "wiki:step_on": {
-        "set_block_state": {
-          "wiki:stood_on": true
-        }
-      },
-      "wiki:step_off": {
-        "set_block_state": {
-          "wiki:stood_on": false
-        }
-      },
-      "wiki:add_effect": {
-        "run_command": {
-          "command": "effect @e[r=1] wither 2 2"
-        }
-      }
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:wither_block",
+            "states": {
+                "wiki:stood_on": [false, true]
+            }
+        },
+        "components": {
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:map_color": "#181818",
+            "minecraft:geometry": "geometry.wither_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "wither_block"
+                }
+            },
+            "minecraft:custom_components": ["wiki:detect_treaders"]
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('wiki:stood_on')",
+                "components": {
+                    "minecraft:custom_components": ["wiki:detect_treaders", "wiki:wither_treaders"],
+                    "minecraft:tick": {
+                        "interval_range": [1, 1],
+                        "looping": true
+                    }
+                }
+            }
+        ]
     }
-  }
 }
 ```
 
 </Spoiler>
-
-## Additional Notes
-
-Some context for the last part of the code:
-
--   **Q**: Why is the effect triggered via the `run_command` event response if there's already an `add_mob_effect` event response that does that?
-
--   **A**: `add_mob_effect` does not have a target when triggered from `minecraft:queued_ticking`, so `/effect`'s target selection must be used instead.
-
-Depending on the desired outcome, there is a potential issue if effect duration is set to less than 2 seconds. If the effect is causing damage to an entity (for example via poison), that damage will be applied as soon as the effect is triggered. This results in the situation where entity receives damage faster than in vanilla Minecraft, since applying effect is quicker than damage that occurs from effects applied for more than 2 seconds (considering the entity is moving). To better understand this, simply set the effect duration in `command` to 1 second and compare the results.
-Having a 2 second duration allows the game to apply the damage in correct pace.

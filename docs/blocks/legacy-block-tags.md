@@ -2,13 +2,14 @@
 hidden: true
 title: Legacy Block Tags
 mentions:
-  - ThijsHankelMC
-  - yanasakana
-  - aexer0e
-  - SirLich
-  - SmokeyStack
-  - MedicalJewel105
-  - Luthorius
+    - ThijsHankelMC
+    - yanasakana
+    - aexer0e
+    - SirLich
+    - SmokeyStack
+    - MedicalJewel105
+    - Luthorius
+description: Legacy block tags.
 ---
 
 These are block tags that where present in older versions of the game, but are not in current versions, so have no uses.

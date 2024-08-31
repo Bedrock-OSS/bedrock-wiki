@@ -3,13 +3,14 @@ title: Namespaces
 mentions:
     - SirLich
     - MedicalJewel105
+description: Namespaces are identifiers that mark content ownership and are helpful because they keep naming conflicts from happening.
 ---
 
 Namespaces are identifiers that mark content ownership. You can think of them as folders. Namespaces are helpful because they keep naming conflicts from happening.
 
-Namespaces in addon creation can essentially be thought of as "the part to the left of the colon". For example, `minecraft` is the namespace of `minecraft:zombie`. The general form is `namespace:name`.
+Namespaces in add-on creation can essentially be thought of as "the part to the left of the colon". For example, `minecraft` is the namespace of `minecraft:zombie`. The general form is `namespace:name`.
 
-As a concrete example of why namespaces are helpful, let's imagine you create a new Mob. You name it `minecraft:shark`, not aware that you should create your own namespace for custom content. Next year, Mojang decides to add sharks into the game! Now there is a naming conflict since there are two definitions of `minecraft:shark`. Your addon will break.
+As a concrete example of why namespaces are helpful, let's imagine you create a new Mob. You name it `minecraft:shark`, not aware that you should create your own namespace for custom content. Next year, Mojang decides to add sharks into the game! Now there is a naming conflict since there are two definitions of `minecraft:shark`. Your add-on will break.
 
 If you had instead used `your_namespace:shark`, the naming conflict wouldn't have happened.
 

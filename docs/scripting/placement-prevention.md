@@ -3,8 +3,7 @@ title: "Block Placement Prevention (Stable)"
 mentions:
   - JWForever5504
 category: Tutorials
-tags:
-  - stable
+description: Prevent block placement via scripts.
 ---
 
 

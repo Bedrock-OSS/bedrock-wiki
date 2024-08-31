@@ -6,6 +6,7 @@ mentions:
     - yanasakana
     - MedicalJewel
     - SIsilicon
+description: Shaders for MCBE.
 ---
 
 :::warning
@@ -30,7 +31,7 @@ material after a colon. For example: `entity_alpha:entity_base`
 ### Common material definition fields
 
 | **Field name**   | **Description**                                                       | **Example value**                                        | **Notes**                                                                                                                                         |
-| ---------------- | --------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|-----------------------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | `vertexShader`   | Path to the shader relative to hlsl/glsl folder                       |                                                          | For HLSL shader, `.hlsl` suffix is added.                                                                                                         |
 | `fragmentShader` | Path to the shader relative to hlsl/glsl folder                       |                                                          | For HLSL shader, `.hlsl` suffix is added.                                                                                                         |
 | `vertexFields`   | An array of fields passed to vertex shader                            |                                                          | It's better to copy this field from vanilla material.                                                                                             |

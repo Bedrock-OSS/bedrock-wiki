@@ -16,6 +16,7 @@ mentions:
     - ThomasOrs
     - Goatfu
     - MRBBATES1
+description: runtime_identifier is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 ---
 
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.

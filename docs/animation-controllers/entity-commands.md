@@ -13,10 +13,12 @@ mentions:
     - aexer0e
     - cda94581
     - ThijsHankelMC
+    - QuazChick
+description: Trigger slash commands from entities.
 ---
 
-:::warning
-A much easier method of running entity commands is through the `run_command` event response. However, this is currently experimental.
+:::tip EVENT RESPONSE
+A much easier method of running entity commands is through the `queue_command` entity event response.
 :::
 
 ## Animation Controllers
@@ -35,23 +37,23 @@ Here is an example animation controller:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.sirlich_entity_commands": {
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"on_summon": "1" //1 evaluates as true
-						}
-					]
-				},
-				"on_summon": {
-					"on_entry": ["/say I have been summoned"]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sirlich_entity_commands": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "on_summon": "1" //1 evaluates as true
+                        }
+                    ]
+                },
+                "on_summon": {
+                    "on_entry": ["/say I have been summoned"]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -99,46 +101,46 @@ We can update our animation controller to trigger based on `skin_id`:
 
 ```json
 {
-	"format_version": "1.10.0",
-	"animation_controllers": {
-		"controller.animation.sirlich_entity_commands": {
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"command_example": "q.skin_id == 1"
-						},
-						{
-							"zombies": "q.skin_id == 2"
-						}
-					]
-				},
-				"command_example": {
-					"transitions": [
-						{
-							"default": "q.skin_id != 1"
-						}
-					],
-					"on_entry": ["/say Command One!", "@s execute_no_commands"]
-				},
-				"zombies": {
-					"transitions": [
-						{
-							"default": "q.skin_id != 2"
-						}
-					],
-					"on_entry": [
-						"/say AHH! Zombies everywhere!",
-						"/summon minecraft:zombie",
-						"/summon minecraft:zombie",
-						"/summon minecraft:zombie",
-						"/summon minecraft:zombie",
-						"@s execute_no_commands"
-					]
-				}
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sirlich_entity_commands": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "command_example": "q.skin_id == 1"
+                        },
+                        {
+                            "zombies": "q.skin_id == 2"
+                        }
+                    ]
+                },
+                "command_example": {
+                    "transitions": [
+                        {
+                            "default": "q.skin_id != 1"
+                        }
+                    ],
+                    "on_entry": ["/say Command One!", "@s execute_no_commands"]
+                },
+                "zombies": {
+                    "transitions": [
+                        {
+                            "default": "q.skin_id != 2"
+                        }
+                    ],
+                    "on_entry": [
+                        "/say AHH! Zombies everywhere!",
+                        "/summon minecraft:zombie",
+                        "/summon minecraft:zombie",
+                        "/summon minecraft:zombie",
+                        "/summon minecraft:zombie",
+                        "@s execute_no_commands"
+                    ]
+                }
+            }
+        }
+    }
 }
 ```
 

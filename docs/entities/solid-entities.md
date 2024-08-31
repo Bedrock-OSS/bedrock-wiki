@@ -2,7 +2,6 @@
 title: Solid Entities
 category: Tutorials
 tags:
-    - recipe
     - intermediate
 mentions:
     - SirLich
@@ -11,6 +10,7 @@ mentions:
     - Luthorius
     - MedicalJewel105
     - ThomasOrs
+description: Solid entities are entities that the player can bump into, step on, or otherwise physically interact with without passing through.
 ---
 
 Solid entities are entities that the player can bump into, step on, or otherwise physically interact with without passing through. Entities like this have many uses, such as emulating blocks.
@@ -88,3 +88,9 @@ Places barriers in a 1x1x2 area.
 Removes barriers within a 3x3x3 area.
 
 These [commands](/animation-controllers/entity-commands) will have to be triggering at a constant rate, for consistency. They can either be triggered through entity components, or animation controllers.
+
+## Commands Method
+
+This method, developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armour stands and some sequential `/playanimation` commands.
+
+<Button link="/commands/block-entities">Block Entities</Button>

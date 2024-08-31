@@ -8,6 +8,7 @@ mentions:
     - ConsoleTerm
     - SmokeyStack
     - ThomasOrs
+description: API of script requests for Bedrock Dedicated Server.
 ---
 
 ::: warning

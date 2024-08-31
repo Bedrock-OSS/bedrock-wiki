@@ -2,13 +2,13 @@
 title: Materials
 tags:
     - expert
-category:
-    - General
+category: General
 mentions:
     - SirLich
     - Joelant05
     - MedicalJewel105
     - Luthorius
+description: Learn about materials in Minecraft Bedrock.
 ---
 
 :::warning

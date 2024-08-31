@@ -7,6 +7,7 @@ mentions:
     - MedicalJewel105
 tags:
     - guide
+description: Turn on VR in Minecraft.
 ---
 
 Minecraft VR was formerly available for download via the Oculus store, but that version hasn't been updated in a long time. This article will show you how to enable VR in the most recent version of Minecraft on your Windows PC.
@@ -39,11 +40,7 @@ When your headset is all setup it is time to open the shortcut.
 
 ## Your progress so far
 
-<Checklist>
-
 -   [x] Setup Minecraft VR
 -   [ ] Setup your VR resource pack
 -   [ ] Create custom hands
 -   [ ] Create a custom living room
-
-</Checklist>

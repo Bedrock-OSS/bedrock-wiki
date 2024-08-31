@@ -1,13 +1,12 @@
 ---
 title: Engine Environment
 category: Documentation
-tags:
-    - stable
 mentions:
     - ConsoleTerm
     - JaylyDev
     - ThomasOrs
     - MuhammadRestu999
+description: Minecraft Bedrock scripting engine environment.
 ---
 
 Minecraft: Bedrock Edition uses their own version of JavaScript based on QuickJS. It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.

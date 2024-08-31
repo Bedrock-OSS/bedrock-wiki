@@ -2,9 +2,10 @@
 title: Add Custom Buttons
 category: Tutorials
 tags:
-    - beginner
+  - beginner
 mentions:
-    - TheoristMC
+  - TheoristMC
+description: In this tutorial, you will learn how toggles/buttons works, how will you add them and their differences.
 ---
 
 In this tutorial, you will learn how toggles/buttons works, how will you add them and their differences.

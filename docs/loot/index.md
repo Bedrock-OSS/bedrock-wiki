@@ -1,5 +1,5 @@
 ---
-title: Loot, Recipes, and Trading
+title: Loot, Recipes & Trading
 categories:
 - title: General
   color: blue
