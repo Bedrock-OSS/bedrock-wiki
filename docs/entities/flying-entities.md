@@ -14,6 +14,7 @@ mentions:
     - nebulacrab
     - Luthorius
     - TheItsNameless
+    - Halo333X
 ---
 
 Whether making a plane or a dragon, adding controllability to flying entities will probably challenge most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.
@@ -374,10 +375,10 @@ This fourth method allows us to adjust the falling speed, movement speed and it 
     },
     "minecraft:damage_sensor": {
         "triggers": [
-        {
-            "cause": "fall",
-            "deals_damage": false
-        }
+            {
+                "cause": "fall",
+                "deals_damage": false
+            }
         ]
     },
     "minecraft:rideable": {
@@ -385,7 +386,7 @@ This fourth method allows us to adjust the falling speed, movement speed and it 
         "interact_text": "action.interact.mount",
         "family_types": ["player"],
         "seats": {
-        "position": [0.0, 0.63, 0.0]
+            "position": [0.0, 0.63, 0.0]
         }
     },
     "minecraft:type_family": {
@@ -401,49 +402,47 @@ After adjusting our entity with the previous configurations, we are going to add
 ```js
 import { Entity } from "@minecraft/server";
 class Utils {
-  /**
-   * @param {Entity} entity
-   */
-  constructor(entity) {
-    this.entity = entity;
-    this.rideable = entity?.getComponent("rideable");
-    this.player = this.rideable?.getRiders()[0];
-    this.riding = this.player?.getComponent("riding");
-  }
+    /**
+     * @param {Entity} entity
+     */
+    constructor(entity) {
+        this.entity = entity;
+        this.rideable = entity?.getComponent("rideable");
+        this.player = this.rideable?.getRiders()[0];
+        this.riding = this.player?.getComponent("riding");
+    }
 
-  /**
-   * @param {number} flySpeed
-   * @param {number} fallSpeed
-   * @param {number} XZspeed
-   */
-  flySystem(flySpeed, fallSpeed, XZspeed) {
-    if (!this.riding) return;
-    const direction = {
-      x: 0,
-      y: this.player.isJumping ? flySpeed : fallSpeed,
-      z: 0,
-    };
-    this.entity.addEffect("speed", 5, {
-      showParticles: false,
-      amplifier: XZspeed,
-    });
-    this.entity.applyImpulse(direction);
-  }
+    /**
+     * @param {number} flySpeed
+     * @param {number} fallSpeed
+     * @param {number} XZspeed
+     */
+    flySystem(flySpeed, fallSpeed, XZspeed) {
+        if (!this.riding) return;
+        const direction = {
+            x: 0,
+            y: this.player.isJumping ? flySpeed : fallSpeed,
+            z: 0,
+        };
+        this.entity.addEffect("speed", 5, {
+            showParticles: false,
+            amplifier: XZspeed,
+        });
+        this.entity.applyImpulse(direction);
+    }
 }
 
 export default Utils;
 ```
 
-The Utils.js file creates a function to make the entity able to fly.
+The utils.js file creates a function to make the entity able to fly.
 Now we need to apply it to our entity for this to work.
 
-**index.js**
-
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/scripts/index.js</CodeHeader>
 
 ```js
 import { system, world } from "@minecraft/server";
-import Utils from "./Utils";
+import Utils from "./utils";
 
 system.runInterval(() => {
     const dim = world.getDimension('overworld');
@@ -458,11 +457,16 @@ system.runInterval(() => {
 
 You can adjust the speed from index.js.
 
-Speed ​​on Y axis (UP)
-**flySpeed: 0.09**
-Speed ​​on Y axis (DOWN)
-**fallSpeed: 0.07**
-Speed on X axis (Horizontal)
-**XZspeed: 5**
+-   Speed ​​on Y axis (UP)
 
-These are just recommended values, your free to change the velocity.
+    **flySpeed: 0.09**
+
+-   Speed ​​on Y axis (DOWN)
+
+    **fallSpeed: 0.07**
+
+-   Speed on X axis (Horizontal)
+
+    **XZspeed: 5**
+
+These are just recommended values, you're free to change the velocity.
