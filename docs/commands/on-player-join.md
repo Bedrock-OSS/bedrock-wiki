@@ -24,13 +24,13 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/events/on_player_join.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/player/on_join.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard players add @a joined 0
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 tp @a[scores={joined=0}] 0 65 0
 
 
@@ -62,7 +62,7 @@ If you are using functions instead of command blocks, the ` on_player_join ` fun
 ```json
 {
   "values": [
-    "on_player_join"
+    "events/player/on_join"
   ]
 }
 ```
@@ -76,7 +76,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/events',
-    'BP/functions/events/on_player_join.mcfunction',
+    'BP/functions/events/player',
+    'BP/functions/events/player/on_join.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
@@ -85,6 +86,6 @@ If using functions, your pack folder structure will be as follows:
 
 The scoreboard names (in this case: 'joined') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 - ` joined_0fe678 `
-- ` on_player_join_0fe678.mcfunction `
+- ` on_join_0fe678.mcfunction `
 
 :::
