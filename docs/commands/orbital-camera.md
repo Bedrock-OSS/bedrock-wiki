@@ -66,7 +66,7 @@ execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s se
 <CodeHeader>BP/functions/orbital_camera.mcfunction</CodeHeader>
 
 ```yaml
-#To orbit camera around entity tagged with 'orbit_center'
+# To orbit camera around entity tagged with 'orbit_center'
 execute as @p at @e [tag=orbit_center] anchored eyes rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @e [tag=orbit_center]
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
@@ -74,7 +74,7 @@ execute as @p at @e [tag=orbit_center] anchored eyes rotated as @s rotated ~ 0 p
 <CodeHeader>BP/functions/orbital_camera.mcfunction</CodeHeader>
 
 ```yaml
-#To orbit camera around position 6 7 8
+# To orbit camera around position 6 7 8
 execute as @p positioned 6 7 8 rotated as @s rotated ~ 0 positioned ^^1^-5 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing 6 7 8
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
