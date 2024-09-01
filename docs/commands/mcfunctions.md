@@ -43,7 +43,7 @@ effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments. The space after it is only a format preference.
+- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments (the space after it is only a format preference).
 
 :::info NOTE:
 
