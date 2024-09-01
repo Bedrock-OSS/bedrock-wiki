@@ -55,7 +55,12 @@ effect @a [tag=atSpawn] weakness 12 255 true
 
 ## Comments Style Guide
 
-When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels. To further distinguish these levels, you can apply different styles: **UPPERCASE** for level 1 headers, **Title Case** for level 2 headers, and **lowercase** for level 3 headers. However, avoid using more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
+- When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
+- *Optionally*, to further distinguish these levels, you can apply different styles:
+    - **UPPERCASE** for level 1 headers,
+    - **Title Case** for level 2 headers,
+    - **lowercase** for level 3 headers.
+- Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
 
 
 <CodeHeader>BP/functions/abilities/fire_trail.mcfunction</CodeHeader>
