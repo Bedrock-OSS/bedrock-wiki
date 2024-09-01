@@ -40,7 +40,7 @@ This technique allows you to detect when your target is/isn't moving, accounting
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-# Update point
+# Update Point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
@@ -94,7 +94,7 @@ execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2158
 scoreboard players set @a is_sprinting 0
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2806, r=0.9] run scoreboard players set @s is_sprinting 1
 
-# Update point
+# Update Point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
