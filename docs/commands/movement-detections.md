@@ -36,16 +36,16 @@ This technique allows you to detect when your target is/isn't moving, accounting
 <CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
 
 ```yaml
-#moving
+# Moving
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-#update point
+# Update point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_moving=0}] run say I'm not moving
 execute as @a [scores={is_moving=1}] run say I started moving
 execute as @a [scores={is_moving=1..}] run say I'm still moving
@@ -82,24 +82,24 @@ Walk/Sprint Detection may not work as intended with effects & enchantments.
 <CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
 
 ```yaml
-#moving
+# Moving
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-#walking
+# Walking
 scoreboard players set @a is_walking 0
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.21585, r=0.2805] run scoreboard players set @s is_walking 1
 
-#sprinting
+# Sprinting
 scoreboard players set @a is_sprinting 0
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2806, r=0.9] run scoreboard players set @s is_sprinting 1
 
-#update point
+# Update point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_walking=0}] run say I'm not walking
 execute as @a [scores={is_walking=1}] run say I'm walking
 ```
@@ -145,7 +145,7 @@ execute as @a at @s if entity @s [y=~0.3, dy=0] scoreboard players set @s is_sle
 execute as @a at @s unless entity @s [y=~0.3, dy=0] run scoreboard players add @s is_sleeping 1
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_sleeping=0}] run say I'm not sleeping
 execute as @a [scores={is_sleeping=1}] run say I started sleeping
 execute as @a [scores={is_sleeping=1..}] run say I'm still sleeping
@@ -187,7 +187,7 @@ execute as @a at @s if entity @s [y=~1.5, dy=0] run scoreboard players set @s is
 execute as @a at @s unless entity @s [y=~1.5, dy=0] if entity @s [y=~0.7, dy=0] run scoreboard players add @s is_sneaking 1
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_sneaking=0}] run say I'm not sneaking
 execute as @a [scores={is_sneaking=1}] run say I started sneaking
 execute as @a [scores={is_sneaking=1..}] run say I'm still sneaking
@@ -234,7 +234,7 @@ execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is
 execute as @a at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_crawling 1
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_crawling=0}] run say I'm not crawling
 execute as @a [scores={is_crawling=1}] run say I started crawling
 execute as @a [scores={is_sneaking=1..}] run say I'm still crawling
@@ -281,7 +281,7 @@ execute as @a [scores={is_gliding=0}] at @s unless entity @s [y=~0.7, dy=0] if e
 execute as @a [scores={is_gliding=0,is_crawling=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_swimming 1
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_swimming=0}] run say I'm not swimming
 execute as @a [scores={is_crawling=1}] run say I started crawling
 execute as @a [scores={is_gliding=1..}] run say I'm still gliding
