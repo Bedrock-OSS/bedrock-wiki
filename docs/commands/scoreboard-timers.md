@@ -28,6 +28,8 @@ It is recommended to use this system while working with command blocks, as well 
 *To be typed in chat:*
 <CodeHeader></CodeHeader>
 
+<CodeHeader></CodeHeader>
+
 ```yaml
 /scoreboard objectives add ticks dummy
 /scoreboard objectives add events dummy
