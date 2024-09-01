@@ -547,7 +547,7 @@ Holding a crop block in your hand wouldn't look right, so we place the crop with
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID.
@@ -574,7 +574,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food", // Make sure this is different from your crop and seeds' ID.
