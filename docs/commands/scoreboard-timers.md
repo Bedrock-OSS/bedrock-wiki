@@ -184,10 +184,10 @@ Let's say we want to perform the following actions:
 <CodeHeader>BP/functions/entity_timer.mcfunction</CodeHeader>
 
 ```yaml
-# Clock
+# Running the timer
 scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
 
-# Executing Commands while timer is running
+# Executing commands while timer is running
 execute as @e [name=station, scores={ticks=0..}] at @s run particle minecraft:shulker_bullet ~~~
 
 # Executing commands within a timeframe
