@@ -22,9 +22,9 @@ In Bedrock Edition, we used Aux values (also known as Metadata) to define a bloc
 <CodeHeader>example</CodeHeader>
 
 ```yaml
-#Aux Value Example:
+# Aux Value Example:
 /setblock ~ ~ ~ wool 1
-#It's Block State equivalent:
+# It's Block State equivalent:
 /setblock ~ ~ ~ wool ["color"="orange"]
 ```
 
@@ -87,10 +87,10 @@ For example, the following commands will work:
 <CodeHeader></CodeHeader>
 
 ```yaml
-#Testing for a Stone Button. (aux value 0)
+# Testing for a Stone Button. (aux value 0)
 /execute if block ~~~ stone_button run say success
 
-#Testing for a non-pressed Stone Button facing west. (aux value 1)
+# Testing for a non-pressed Stone Button facing west. (aux value 1)
 /execute if block ~~~ stone_button [“button_pressed_bit”=false,”facing_direction”=1] run say success
 ```
 
