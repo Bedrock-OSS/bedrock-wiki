@@ -236,9 +236,11 @@ Are there any vanilla geos you think would be particularly useful to focus on?
 
     The render_method that <@905553488510079026> called out will also get added to the existing learning portal page with the other methods (probably in one documentation update). For Block culling, you can totally replicate the vanilla glass functionality with the faces on a full block.
 
-    Replicating Glass requires two things, you need to use the render_method: alpha_test_single_side
+    Replicating Glass requires two things, you need to use the render_method: alpha_test_single_side\*
 
     This will do the visual appearance that you are expecting when you look through the block and will cull the backfaces of the block. The culling rules will literally remove the face when next to a full face (like dirt), but the visual you want should be achievable just by changing the render_method
+
+\*Editor's Note: This is a typo on Mojang's behalf, it was meant to say `alpha_test_single_sided`
 
 -   **Q**: I decided to fork this into its own question. Related to https://discord.com/channels/523663022053392405/1277725678539640852/1277725678539640852:
 
