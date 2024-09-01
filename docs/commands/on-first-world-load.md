@@ -37,7 +37,7 @@ scoreboard objectives add world dummy
 scoreboard players add initialised world 0
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute if score initialised world matches 0 run say New world created!
 
 
