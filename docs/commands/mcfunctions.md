@@ -87,7 +87,7 @@ scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_
 
 Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
 
-This practice is a recommendation that helps create a consistent format, making it easier for everyone to follow and maintain uniformity across your functions.
+This practice is only a recommendation which helps create a consistent format, making it easier for everyone to follow and maintain uniformity across your functions.
 
 ## Creating A Function
 
