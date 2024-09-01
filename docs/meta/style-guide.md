@@ -125,7 +125,8 @@ You can put functions in folders to achieve this.
     - `inLobby`
     - `abilityFireTrail`
     - `abilityWallClimb`
-    - *Only alphanumeric characters.*
+
+*Only alphanumeric characters.*
 
 - **Example Fake Player Names:**
     - `alivePlayer`
@@ -133,7 +134,8 @@ You can put functions in folders to achieve this.
     - `oresEmerald`
     - `oresDiamond`
     - `oresDeepslateDiamond`
-    - *Only alphanumeric characters.*
+
+*Only alphanumeric characters.*
 
 - **Example Objective Names:**
     - `world_timer`
@@ -141,8 +143,10 @@ You can put functions in folders to achieve this.
     - `abilities.fire_trail`
     - `abilities.wall_climb`
     - `abilities.ice_blast`
-    - *Only alphanumeric characters, (` _ `) and (` . `).*
-    - Dot notation (`dot.notation`) may be used to represent groups or categories. However, avoid over use to prevent cluttering and impacting readability.
+
+*Only alphanumeric characters, (` _ `) and (` . `).*
+
+Dot notation (`dot.notation`) may be used to represent groups or categories. However, avoid over use to prevent cluttering and impacting readability.
 
 ## Group animations files when possible
 
