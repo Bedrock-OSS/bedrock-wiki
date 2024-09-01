@@ -1,7 +1,7 @@
 ---
 title: Style Guide
 mentions:
-    - wiki
+    - SirLich
     - solvedDev
     - MedicalJewel105
     - ChibiMango
