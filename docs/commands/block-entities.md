@@ -77,7 +77,7 @@ execute as @e [type= armor_stand, name=Grumm] at @s run tp ~~~
 
 > Note: These rotation commands (when item placed in main-hand) are to be triggered once through a command block.
 
-<Spoiler title="Full MBE">
+<Spoiler title="Full Block">
 
 <CodeHeader></CodeHeader>
 
@@ -98,7 +98,7 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~-0.097 ~0.2260 ~1.1245 350
 </Spoiler>
 
 
-<Spoiler title="Mini MBE">
+<Spoiler title="Mini Block">
 
 <CodeHeader></CodeHeader>
 
@@ -118,7 +118,7 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~-0.035 ~-0.5 ~0.417 350
 
 </Spoiler>
 
-<Spoiler title="Stair MBE">
+<Spoiler title="Stairs">
 
 <CodeHeader></CodeHeader>
 
@@ -138,7 +138,7 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
 
 </Spoiler>
 
-<Spoiler title="Bottom Slab MBE">
+<Spoiler title="Bottom Slab">
 
 <CodeHeader></CodeHeader>
 
@@ -158,7 +158,7 @@ tp @e [type=armor_stand, name=Grumm, c=1] ~1.1245 ~0.2325 ~0.097 260
 
 </Spoiler>
 
-<Spoiler title="Top Slab MBE">
+<Spoiler title="Top Slab">
 
 <CodeHeader></CodeHeader>
 
