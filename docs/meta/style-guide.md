@@ -119,30 +119,33 @@ You can put functions in folders to achieve this.
 - Scoreboard objectives should be named using `snake_case`, while scoreboard fake-player-names should use `camelCase`. This distinction helps in easily differentiating between the two when typing out scoreboard commands.
 - Like scoreboard fake-player-names, tags should also use `camelCase` as they have limited interaction with each other and don't really need further distinction.
 
-- **Example Tag Names:**
-    - `admin`
-    - `inHub`
-    - `inLobby`
-    - `abilityFireTrail`
-    - `abilityWallClimb`
+**Example Tag Names:**
+
+- `admin`
+- `inHub`
+- `inLobby`
+- `abilityFireTrail`
+- `abilityWallClimb`
 
 *Only alphanumeric characters.*
 
-- **Example Fake Player Names:**
-    - `alivePlayer`
-    - `zombieHorse`
-    - `oresEmerald`
-    - `oresDiamond`
-    - `oresDeepslateDiamond`
+**Example Fake Player Names:**
+
+- `alivePlayer`
+- `zombieHorse`
+- `oresEmerald`
+- `oresDiamond`
+- `oresDeepslateDiamond`
 
 *Only alphanumeric characters.*
 
-- **Example Objective Names:**
-    - `world_timer`
-    - `entity_timer`
-    - `abilities.fire_trail`
-    - `abilities.wall_climb`
-    - `abilities.ice_blast`
+**Example Objective Names:**
+
+- `world_timer`
+- `entity_timer`
+- `abilities.fire_trail`
+- `abilities.wall_climb`
+- `abilities.ice_blast`
 
 *Only alphanumeric characters, (` _ `) and (` . `).*
 
