@@ -114,7 +114,7 @@ You can put functions in folders to achieve this.
 
 ❌ `function teleport_hellzone`
 
-## Scoreboards And Tags
+## Scoreboards and Tags
 
 - Scoreboard objectives should be named using `snake_case`, while scoreboard fake-player-names should use `camelCase`. This distinction helps in easily differentiating between the two when typing out scoreboard commands.
 - Like scoreboard fake-player-names, tags should also use `camelCase` as they have limited interaction with each other and don't really need further distinction.
