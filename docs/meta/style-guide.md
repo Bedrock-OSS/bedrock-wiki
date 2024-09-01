@@ -193,7 +193,8 @@ Own-line comments can be used for organizational purposes but should not store l
 | Acronym | Concept                            |
 | ------- | ---------------------------------- |
 | BP      | Behavior Pack                      |
-| RP      | Resource pack                      |
+| RP      | Resource Pack                      |
+| FP      | Function Pack                      |
 | VRP     | Vanilla Resource Pack              |
 | VBP     | Vanilla Behavior Pack              |
 | AC      | Animation Controller               |
