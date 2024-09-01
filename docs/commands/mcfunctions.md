@@ -154,7 +154,7 @@ Functions can be executed in-game by typing `/function name_of_function`. This w
 
 Nested functions, for example `BP/functions/lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function lobby/items/1`
 
-## tick.json
+## Tick JSON
 
 The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block). It is located in the `BP/functions` folder. By default, functions running in this file execute at origin `0, 0, 0` in the overworld.
 
