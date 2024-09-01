@@ -24,14 +24,14 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/events/on_player_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/player/on_death.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard players set @a [scores={is_alive=!2}] is_alive 0
 scoreboard players set @e [type=player] is_alive 1
 
 
-#Your Commands Here (example)
+# Your Commands Here (example)
 execute as @a [scores={is_alive=0}] run say I died
 
 
@@ -68,7 +68,7 @@ If you are using functions instead of command blocks, the ` on_player_death ` fu
 ```json
 {
   "values": [
-    "on_player_death"
+    "events/player/on_death"
   ]
 }
 ```
@@ -82,7 +82,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/events',
-    'BP/functions/events/on_player_death.mcfunction',
+    'BP/functions/events/player',
+    'BP/functions/events/player/on_death.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
@@ -91,7 +92,7 @@ If using functions, your pack folder structure will be as follows:
 
 The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 - ` is_alive_0fe678 `
-- ` on_player_death_0fe678.mcfunction `
+- ` on_death_0fe678.mcfunction `
 
 :::
 
