@@ -1,7 +1,7 @@
 ---
 title: Style Guide
 mentions:
-    - SirLich
+    - wiki
     - solvedDev
     - MedicalJewel105
     - ChibiMango
@@ -28,7 +28,7 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 ## File and Folder names
 
 | Concept              | Example Identifier         |
-|----------------------|----------------------------|
+| -------------------- | -------------------------- |
 | Behavior Pack        | dragons_BP                 |
 | Resource Pack        | dragons_RP                 |
 | Geometry             | dragon.geo.json            |
@@ -56,9 +56,9 @@ A suitable namespace should be unique to you or your team. Something like `mob` 
 
 For personal projects, use a convenient version of your player name, and for team projects, use a suitable version of your team name.
 
-When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `minetite.sirlich:dragon`
+When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `minetite.wiki:dragon`
 
-Where to use name-spaces:
+Where to use namespaces:
 
 -   entities
 -   particles
@@ -84,16 +84,16 @@ When using sub-indexing, use `_` as space, not another `.`.
 ❌ `animation.controller.dragon.flying.taking.off`
 
 You can use sub-indexing in your entities:
-`sirlich:dragon.drake`
+`wiki:dragon.drake`
 
 ## Groups and Events should complement each other
 
-| Group        | Event                  |
-|--------------|------------------------|
-| sirlich:wild | ✔️ sirlich:become_wild |
-| sirlich:wild | ❌ sirlich:wild         |
-| sirlich:tame | ✔️ sirlich:on_tame     |
-| sirlich:tame | ❌ sirlich:tame         |
+| Group     | Event               |
+| --------- | ------------------- |
+| wiki:wild | ✔️ wiki:become_wild |
+| wiki:wild | ❌ wiki:wild        |
+| wiki:tame | ✔️ wiki:on_tame     |
+| wiki:tame | ❌ wiki:tame        |
 
 ## Short-Names should be Generic
 
@@ -153,7 +153,7 @@ Own-line comments can be used for organizational purposes but should not store l
 ## Acronyms when discussing
 
 | Acronym | Concept                            |
-|---------|------------------------------------|
+| ------- | ---------------------------------- |
 | BP      | Behavior Pack                      |
 | RP      | Resource pack                      |
 | VRP     | Vanilla Resource Pack              |
@@ -167,3 +167,34 @@ Own-line comments can be used for organizational purposes but should not store l
 | RD      | Render Dragon                      |
 | VSCode  | Visual Studio Code                 |
 | SP      | Skin Pack                          |
+
+## Blocks/Items Format Order
+
+Blocks and Items should follow the format order below. This would particularly help with understanding that components that appear later in the file are what will be applied in regards to block permutations.
+
+### Blocks
+
+-   format_version
+-   minecraft:block
+    -   description
+        -   identifier
+        -   menu_category
+        -   states
+        -   traits
+    -   components
+    -   permutations
+        -   condition
+        -   components
+
+### Items
+
+-   format_version
+-   minecraft:item
+    -   description
+        -   identifier
+        -   menu_category
+    -   components
+
+## Custom Components Variable Name
+
+PascalCase should be used with BlockComponent or ItemComponent as a suffix. As an example, `MeltableBlockComponent` rather than `meltable`. This would help to differentiate what we're using in `registerCustomComponent` and what we're using as values elsewhere.
