@@ -24,7 +24,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 ```json
 "magma": {
-  "textures": "textures/blocks/magma"
+    "textures": "textures/blocks/magma"
 }
 ```
 
@@ -41,7 +41,7 @@ You can simply apply animated magma's texture to your block by changing `texture
             }
         },
         "components": {
-            "minecraft:unit_cube": {},
+            "minecraft:geometry": "minecraft:geometry.full_block",
             "minecraft:material_instances": {
                 "*": {
                     "texture": "magma" // Add it here.
@@ -119,10 +119,10 @@ A component where you'll define the block texture index to animate.
 
 ```json
 "dirt": {
-  "textures": [
-    "textures/blocks/dirt",
-    "textures/blocks/coarse_dirt" // Imagine that this is the path you want to animate
-  ]
+    "textures": [
+        "textures/blocks/dirt",
+        "textures/blocks/coarse_dirt" // Imagine that this is the path you want to animate
+    ]
 }
 ```
 
@@ -136,15 +136,15 @@ A component where you'll define the block variant (which is registered to the `v
 
 ```json
 "dirt": {
-  "textures": [
-    {
-      "variations": [
-        { "path": "textures/blocks/dirt_va" }, // Imagine that this is the block variation you want to animate
-        { "path": "textures/blocks/dirt0" },
-        { "path": "textures/blocks/dirt1" }
-      ]
-    }
-  ]
+    "textures": [
+        {
+            "variations": [
+                { "path": "textures/blocks/dirt_va" }, // Imagine that this is the block variation you want to animate
+                { "path": "textures/blocks/dirt0" },
+                { "path": "textures/blocks/dirt1" }
+            ]
+        }
+    ]
 }
 ```
 
