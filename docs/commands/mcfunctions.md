@@ -43,7 +43,7 @@ effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments (the space after it is only a format preference). For the recommended comments style guide for functions, see the section **[below](/commands/functions#comments-style-guide)**.
+- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments (the space after it is only a format preference). For the recommended comments style guide for functions, see the section **[below](#comments-style-guide)**.
 
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
