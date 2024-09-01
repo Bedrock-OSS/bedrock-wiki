@@ -43,9 +43,17 @@ effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments (the space after it is only a format preference).
+- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments (the space after it is only a format preference). For the recommended comments style guide for functions, see the section **[below](/functions#comments-style-guide)**.
 
-:::info Comments Style Guide
+- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
+
+- In Minecraft Bedrock, functions cannot run more than 10,000 commands in a function file. This includes any other function files that are executed inside of the original file.
+
+- It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
+
+- Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
+
+## Comments Style Guide
 
 When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels. To further distinguish these levels, you can apply different styles: **UPPERCASE** for level 1 headers, **Title Case** for level 2 headers, and **lowercase** for level 3 headers. However, avoid using more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
 
@@ -77,15 +85,9 @@ execute at @a [scores={abilities.fire_trail=1..}] run particle minecraft:basic_f
 scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_trail 1
 ```
 
-:::
+Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
 
-- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
-
-- In Minecraft Bedrock, functions cannot run more than 10,000 commands in a function file. This includes any other function files that are executed inside of the original file.
-
-- It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
-
-- Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
+This practice is a recommendation that helps create a consistent format, making it easier for everyone to follow and maintain uniformity across your functions.
 
 ## Creating A Function
 
