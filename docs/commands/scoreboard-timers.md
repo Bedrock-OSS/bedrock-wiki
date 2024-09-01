@@ -203,7 +203,7 @@ execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run
 execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
 
 # End
-/kill @e [name=station, scores={ticks=6000}]
+kill @e [name=station, scores={ticks=6000}]
 ```
 ![Chain Of 7 Command Blocks](/assets/images/commands/commandBlockChain/7.png)
 
