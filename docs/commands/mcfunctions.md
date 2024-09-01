@@ -38,12 +38,45 @@ Functions are useful in many ways to reduce the time spent going from command bl
 <CodeHeader>BP/functions/effects.mcfunction</CodeHeader>
 
 ```yaml
-#Spawn Effects
+# Spawn Effects
 effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with `#` to add comments.
+- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments. The space after it is only a format preference.
+
+:::tip
+
+When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels. To further distinguish these levels, you can apply different styles: UPPERCASE for level 1 headers, Title Case for level 2 headers, and lowercase for level 3 headers. However, avoid using more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
+
+<CodeHeader>BP/functions/abilities/fire_trail.mcfunction</CodeHeader>
+
+```yaml
+# ON PLAYER ITEM DROP
+
+## Give Effects
+### fire resistance
+execute at @e [type=item, name="Ability: Fire Trail"] run effect @p [r=3] fire_resistance 10 255
+### speed
+execute at @e [type=item, name="Ability: Fire Trail"] run effect @p [r=3] speed 10 1 true
+
+## Add Particle Time (10s)
+execute at @e [type=item, name="Ability: Fire Trail"] run scoreboard players set @p [r=3] abilities.fire_trail 200
+
+## Delete Item
+kill @e [type=item, name="Ability: Fire Trail"]
+
+
+# ENTITY TIMER
+
+## Emit Particle Trail
+execute at @a [scores={abilities.fire_trail=1..}] run particle minecraft:basic_flame_particle ~~~
+
+## Countdown Timer
+scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_trail 1
+```
+
+:::
 
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
