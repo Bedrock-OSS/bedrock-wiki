@@ -47,7 +47,8 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
   - sets the execution rotation facing an entity or coordinate. Example:
       - `facing 0 0 0` facing coordinate: 0,0,0.
       - `facing entity @e [type=pig, c=1] eyes` (facing eyes of nearest pig)
-      - `facing entity @e [type=zombie, c=1] feet` (facing feet of nearest zombie)
+      - `facing entity @e [type=cow] feet` (facing eyes of cows)
+      - `facing entity @e [type=zombie] feet` (facing feet of zombies)
 - `positioned ^^^1`
   - from previous point, pushes the execution position 1 block forward in the direction of the entity/coordinate.
 - `positioned ~~-1.62~`
@@ -65,12 +66,12 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 **Examples:**
 
-1. Run a `/say` command when looking at the eyes of the nearest cow tagged 'target':
+1. Run a `/say` command when looking at the eyes of cows tagged 'target':
 
 <CodeHeader>BP/functions/look_detector.mcfunction</CodeHeader>
 
 ```yaml
-execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target, c=1] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
+execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
