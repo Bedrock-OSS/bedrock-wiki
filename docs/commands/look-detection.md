@@ -47,7 +47,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
   - sets the execution rotation facing an entity or coordinate. Example:
       - `facing 0 0 0` facing coordinate: 0,0,0.
       - `facing entity @e [type=pig, c=1] eyes` (facing eyes of nearest pig)
-      - `facing entity @e [type=cow] feet` (facing eyes of cows)
+      - `facing entity @e [type=cow, r=30] feet` (facing eyes of cows in a 30 block radius)
       - `facing entity @e [type=zombie] feet` (facing feet of zombies)
 - `positioned ^^^1`
   - from previous point, pushes the execution position 1 block forward in the direction of the entity/coordinate.
