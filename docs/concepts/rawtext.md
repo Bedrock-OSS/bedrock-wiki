@@ -131,7 +131,7 @@ Allows creators to display localized text to users. The list of the strings to t
 **Example:**
 
 ```json
-/tellraw @a {"rawtext":[{"translate""multiplayer.player.joined"}]}
+/tellraw @a {"rawtext":[{"translate":"multiplayer.player.joined"}]}
 #Output in chat:
 #    %s joined the game
 ```
