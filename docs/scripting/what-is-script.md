@@ -1,8 +1,7 @@
 ---
 title: What is Script API?
 category: General
-tags:
-    - experimental
+nav_order: 2
 mentions:
     - ConsoleTerm
     - Herobrine643928
@@ -14,7 +13,7 @@ description: What the heck are scripts!?
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.20
 :::
 
 ## API
