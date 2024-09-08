@@ -1,9 +1,10 @@
 ---
 title: API Modules
 category: General
+nav_order: 3
 mentions:
-	- cda94581
-	- ConsoleTerm
+    - cda94581
+    - ConsoleTerm
 ---
 
 ## Overview
@@ -25,31 +26,31 @@ Script API has modules for developers to interact with Minecraft. Additionally, 
 
 ### `@minecraft/common`
 
-Has few stable releases, this module can be imported without being mentioned in dependencies, it is a module with basic sources such as error classes or interfaces.
+Has few stable releases, this module can be imported without being mentioned in dependencies. It is a module with basic sources such as error classes or interfaces.
 
 ### `@minecraft/debug-utilities`
 
-It's experimental module. This module provides debugging tools but should not be used in the public release of the addon.
+An experimental module. This module provides debugging tools but should not be used in the public release of the addon.
 
 ### `@minecraft/server`
 
-Has a lot of stable releases, but its still be-ing actively developed. The cornerstone for addons scripting on the server side, it is intended for interaction between the script engine and your world, such as blocks, entities, items, players, and other world resources.
+Has a lot of stable releases, but is still being actively developed. The cornerstone for addons scripting on the server side, it is intended for interaction between the script engine and your world, such as blocks, entities, items, players, and other world resources.
 
 ### `@minecraft/server-ui`
 
-A somewhat smaller module, but very useful for the interaction between the server and the end user of your package, it is a module that provides the possibility of sending data to the player in the form of forms.
+A somewhat smaller module, but very useful for the interaction between the server and the end user of your package. This is a module that provides the possibility of sending data to the player through customizable forms.
 
 ### `@minecraft/server-gametest`
 
-It is among the oldest modules that we know, yet there is not a single stable version of this module, it is a module that is used to test vanilla experiments, this module is not intended for content creators and therefore there is no need to guarantee backward compatibility with stable versions.
+This is the oldest module that currently exists, yet there is not a single stable version of this module. This module is used to test vanilla experiments, for compatibility with other custom content, catching edge cases, or making sure repeatability is possible. This module is not intended for content creators and there is no need to guarantee backward compatibility with stable versions.
 
 ### `@minecraft/server-net`
 
-This is a module that is only allowed for [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) because it could threaten the safety of the user of common addon packages, this is a module that has access to the Internet ether and can send web requests such as GET, SET, POST and others, it exists only in experimental form.
+This is a module that is only allowed on [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) because it could threaten the safety of the user of common addon packages. This is a module has access to the internet through web requests such as GET, SET, POST and others. This module exists only in experimental form.
 
 ### `@minecraft/server-admin`
 
-This module is also only allowed for [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) users, this module is responsible for processing basic data stored in JSON admin files, this data is intended for setting the behavior of pack without interfering with the original pack, it exists only in experimental form.
+This module is also only allowed on [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock). this module is responsible for processing basic data stored in JSON admin files, which is intended for setting the behavior of a pack without interfering with the original pack. This module exists only in experimental form.
 
 ### `@minecraft/server-editor-bindings`
 

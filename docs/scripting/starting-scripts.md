@@ -1,6 +1,7 @@
 ---
 title: Starting Scripting
 category: General
+nav_order: 1
 mentions:
     - cda94581
     - Herobrine643928
