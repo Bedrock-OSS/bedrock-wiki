@@ -182,7 +182,7 @@ import { world } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const CustomTrapdoorBlockComponent = {
-    onInteract({ block, dimension }) {
+    onPlayerInteract({ block, dimension }) {
         const isOpen = block.permutation.getState("wiki:open");
         const sound = isOpen ? "close.wooden_trapdoor" : "open.wooden_trapdoor";
 
