@@ -21,6 +21,10 @@ Check out the [blocks guide](/blocks/blocks-intro) before starting.
 
 Making custom slabs is a simple task, but if you find any drawbacks during recreating slabs, this tutorial will help you with it, and you'll be provided with a template for you to use.
 
+Issues:
+
+-   This slab does not stack into a block
+
 ## Custom Slab
 
 This will create a vanilla-like custom slab.
