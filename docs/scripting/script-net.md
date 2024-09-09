@@ -12,14 +12,14 @@ description: API of script requests for Bedrock Dedicated Server.
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.19.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.20
 :::
 
 ::: warning
-This module can only be used on Bedrock Dedicated Server.
+This module can only be used on Bedrock Dedicated Servers.
 :::
 
-In Scripting API, you can send and receive HTTP-based requests to interact with the internet. For more detailed information please visit [Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-net/minecraft-server-net).
+In Script API, you can send and receive HTTP-based requests to interact with the internet. For more detailed information please visit the[Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-net/minecraft-server-net).
 
 ## Setup
 
@@ -40,11 +40,11 @@ Like other modules, you will need to add the dependency into your `manifest.json
 
 ## Enable module in Bedrock Dedicated Server
 
-1. Download the Bedrock Server from the [Minecraft website](https://www.minecraft.net/en-us/download/server/bedrock)
+1. Download the Bedrock Dedicated Server package from the [Minecraft website](https://www.minecraft.net/en-us/download/server/bedrock)
 
 2. Extract the zip file on a folder.
 
-This is the tree for default Bedrock Dedicated Server:
+This is the tree for a default Bedrock Dedicated Server:
 
 <FolderView :paths="[
 	'BedrockServer/behavior_packs',
@@ -61,10 +61,10 @@ This is the tree for default Bedrock Dedicated Server:
         'BedrockServer/world_templates',
 ]"></FolderView>
 
-3. In the `permissions.json` file located in `config/<pack_id>/permissions.json` or `config/default/permissions.json`, enable `@minecraft/server-net` module by adding `"@minecraft/server-net"` in the `allowed_modules` key.
+3. In the `permissions.json` file located in `config/<pack_id>/permissions.json` or `config/default/permissions.json`, enable `@minecraft/server-net` module by adding `"@minecraft/server-net"` in the `allowed_modules` key. This module is not enabled by default in the server.
 
--   Modify files in default folder allows every add-ons with server-net module enabled in dependencies have access to @minecraft/server-net module.
--   It is recommended to assign appropriate permissions for each script behavior pack.
+-   Modifying the files in the default config folder allows every add-on with the server-net module to have access to the `@minecraft/server-net` module.
+-   It is recommended to assign individual permissions for each script behavior pack.
 
 <CodeHeader>BedrockServer/config/default/permissions.json</CodeHeader>
 
@@ -83,7 +83,7 @@ This is the tree for default Bedrock Dedicated Server:
 
 ## Http Request Methods
 
-Minecraft API supports the following HTTP request methods:
+Script API supports the following HTTP request methods:
 
 - [`DELETE`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/DELETE)
 - [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
@@ -130,9 +130,9 @@ Here are the following ways to send a request to a web server, includes each ava
 **Create a HttpRequest object**
 
 ```js
-import { http } from "@minecraft/server-net";
+import { HttpRequest } from "@minecraft/server-net";
 
-const request = new HttpRequest("http://localhost:8000/"); // You must put a url in parameter
+const request = new HttpRequest("http://localhost:8000/"); // You must put a url as the parameter
 ```
 
 **Set HTTP method**
@@ -143,35 +143,35 @@ More information on HTTP request methods: https://developer.mozilla.org/en-US/do
 
 ```js
 import { HttpRequestMethod } from '@minecraft/server-net';
-request.method = HttpRequestMethod.GET;
+request.method = HttpRequestMethod.Get;
 ```
 
 **HEAD**
 
 ```js
 import { HttpRequestMethod } from '@minecraft/server-net';
-request.method = HttpRequestMethod.HEAD;
+request.method = HttpRequestMethod.Head;
 ```
 
 **POST**
 
 ```js
 import { HttpRequestMethod } from '@minecraft/server-net';
-request.method = HttpRequestMethod.POST;
+request.method = HttpRequestMethod.Post;
 ```
 
 **PUT**
 
 ```js
 import { HttpRequestMethod } from '@minecraft/server-net';
-request.method = HttpRequestMethod.PUT;
+request.method = HttpRequestMethod.Put;
 ```
 
 **DELETE**
 
 ```js
 import { HttpRequestMethod } from '@minecraft/server-net';
-request.method = HttpRequestMethod.DELETE;
+request.method = HttpRequestMethod.Delete;
 ```
 
 **Set HTTP headers**
@@ -231,21 +231,39 @@ http.request(request).then((response) => {
 
 **Example**:
 
+A simple script to post sent chat messages messages to a discord webhook.
+
 ```js
-import { http } from "@minecraft/server-net";
+import { world } from "@minecraft/server";
+import { http, HttpRequest, HttpRequestMethod, HttpHeader } from "@minecraft/server-net";
 
-const request = new HttpRequest("http://example.com/");
-request.method = HttpRequestMethod.POST;
-request.body = 'body';
-request.headers = [
-  new HttpHeader("Content-Type", "application/json"),
-  new HttpHeader("auth", "my-auth-token"),
-];
+// Note that this event requires server module version 1.14.0-beta.
+world.afterEvents.chatSend.subscribe((data) => {
+	// The message a player sent.
+	const chatMsg = data.message;
 
-http.request(request).then((response) => {
-  // Body content of the HTTP response.
-  // Type: string
-  response.body;
+	// Create a new request to a discord webhook URL.
+	const request = new HttpRequest("https://discord.com/api/webhooks/your-webhook-here");
+
+	// Set the method to a post type (sending only)
+	request.method = HttpRequestMethod.Post;
+
+	// Set the body of the request to the format discord requires.
+	// More on this topic can be found here: https://discord.com/developers/docs/resources/webhook
+	request.body = JSON.stringify({
+		content: chatMsg,
+	});
+
+	// Set the headers of the request.
+	request.headers = [
+		new HttpHeader("Content-Type", "application/json")
+	];
+
+	// Perform the request.
+	http.request(request).then((response) => {
+		// Body of the HTTP request response.
+		response.body;
+	});
 });
 
 ```
