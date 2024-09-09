@@ -12,7 +12,7 @@ hidden: true
 description: Re-creation of vanilla slabs.
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.20.20`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -82,7 +82,7 @@ This will be the geometry used for your custom slabs.
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.12.0",
     "minecraft:geometry": [
         {
             "description": {
