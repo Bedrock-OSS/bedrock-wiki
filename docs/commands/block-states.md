@@ -19,10 +19,10 @@ This is used in a multitude of commands. Such as `/clone`, `/execute`, `/fill`, 
 
 In Bedrock Edition, we used Aux values (also known as Metadata) to define a block. However, as of 1.19.70 and beyond, this is no longer supported and have been fully replaced with Block States instead.
 
-<CodeHeader>example</CodeHeader>
+<CodeHeader></CodeHeader>
 
 ```yaml
-# Aux Value Example:
+# Aux Value example:
 /setblock ~ ~ ~ wool 1
 # It's Block State equivalent:
 /setblock ~ ~ ~ wool ["color"="orange"]
@@ -87,10 +87,10 @@ For example, the following commands will work:
 <CodeHeader></CodeHeader>
 
 ```yaml
-# Testing for a Stone Button. (aux value 0)
+# Testing for a Stone Button (Aux Value 0)
 /execute if block ~~~ stone_button run say success
 
-# Testing for a non-pressed Stone Button facing west. (aux value 1)
+# Testing for a non-pressed Stone Button facing west (Aux Value 1)
 /execute if block ~~~ stone_button [“button_pressed_bit”=false,”facing_direction”=1] run say success
 ```
 
