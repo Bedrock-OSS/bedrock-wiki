@@ -64,7 +64,7 @@ You can use the `/playsound` command to play sound effects to players present an
 ## Examples
 
 ```yaml
-# Play a random explosion sound effect to closest player.
+# Play a random explosion sound effect to closest player
 /playsound random.explode @p
 
 # Play a random orb sound effect to all players at their position with a volume of 10000
@@ -75,5 +75,4 @@ Note: Since the `/playsound` command is positonal, it is helpful to play the sou
 
 
 **(Recommended) Read Next: [Sounds](/concepts/sounds)**
-
 
