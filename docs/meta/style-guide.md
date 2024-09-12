@@ -26,7 +26,7 @@ The style guide is a living, breathing document, which will evolve as add-on cre
 
 Do not use identifiers that begin with a number, and especially don't use an identifier that is _only_ a number. This applies to entities, component_groups, events, and anything else that takes a `namespace:name` pair.
 
-## File and Folder names
+## File and Folder Names
 
 | Concept              | Example Identifier         |
 | -------------------- | -------------------------- |
@@ -70,7 +70,7 @@ When not to use namespaces:
 
 -   do not include your namespace in any folder path or file-name
 
-## Sub-indexing
+## Sub-Indexing
 
 Sub indexing is the use of `.` to separate chained concepts. Sub-indexing should go in descending order from big to small:
 
@@ -87,7 +87,7 @@ When using sub-indexing, use `_` as space, not another `.`.
 You can use sub-indexing in your entities:
 `wiki:dragon.drake`
 
-## Groups and Events should complement each other
+## Groups and Events Should Complement Each Other
 
 | Group     | Event               |
 | --------- | ------------------- |
@@ -96,7 +96,7 @@ You can use sub-indexing in your entities:
 | wiki:tame | ✔️ wiki:on_tame     |
 | wiki:tame | ❌ wiki:tame        |
 
-## Short-Names should be Generic
+## Short-Names Should Be Generic
 
 Short-names are file-specific identifiers, which are used to map between an identifier and a pretty name. They are handy because they allow us to re-use animation controllers and render controllers. For this reason, your short-names should be generic.
 
@@ -106,7 +106,7 @@ Short-names are file-specific identifiers, which are used to map between an iden
 
 When we make short-names of this form, we can use a generic "sit" animation controller for all of them since we can use the `sit` short-name to play the sit animation.
 
-## Functions should be nested
+## Functions Should Be Nested
 
 You can put functions in folders to achieve this.
 
@@ -114,16 +114,57 @@ You can put functions in folders to achieve this.
 
 ❌ `function teleport_hellzone`
 
+## Comments in Functions
+
+- When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
+- *Optionally*, to further distinguish these levels, you can apply different styles:
+    - level 1 headers - **# UPPERCASE**
+    - level 2 headers - **## Title Case**
+    - level 3 headers - **### lowercase**
+- Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
+
+
+<CodeHeader>BP/functions/abilities/fire_trail.mcfunction</CodeHeader>
+
+```yaml
+# ON PLAYER ITEM DROP
+
+## Give Effects
+### fire resistance
+execute at @e [type=item, name="Fire Trail Ability"] run effect @p [r=3] fire_resistance 10 255
+### speed
+execute at @e [type=item, name="Fire Trail Ability"] run effect @p [r=3] speed 10 1 true
+
+## Add Particle Time (10s)
+execute at @e [type=item, name="Fire Trail Ability"] run scoreboard players set @p [r=3] abilities.fire_trail 200
+
+## Delete Item
+kill @e [type=item, name="Fire Trail Ability"]
+
+
+# ENTITY TIMER
+
+## Emit Particle Trail
+execute at @a [scores={abilities.fire_trail=1..}] run particle minecraft:basic_flame_particle ~~~
+
+## Countdown Timer
+scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_trail 1
+```
+
+Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
+
+This practice helps create a consistent format, making it easier for everyone to follow, and maintain uniformity across your functions.
+
 ## Scoreboards and Tags
 
-- Scoreboard objectives should be named using `snake_case`, while scoreboard fake-player-names should use `camelCase`. This distinction helps in easily differentiating between the two when typing out scoreboard commands.
-- Like scoreboard fake-player-names, tags should also use `camelCase` as they have limited interaction with each other and don't really need further distinction.
+- Scoreboard objectives should be named using `snake_case`, while scoreboard fake-player-names should use **PascalCase**. This distinction makes it easier to differentiate between the two when typing scoreboard commands.
+- Tags should use `camelCase`, as they usually represent states or conditions and align with common conventions for variable names.
 
 **Example Tag Names:**
 
 - `admin`
-- `inHub`
-- `inLobby`
+- `inNether`
+- `isFlying`
 - `abilityFireTrail`
 - `abilityWallClimb`
 
@@ -131,25 +172,25 @@ You can put functions in folders to achieve this.
 
 **Example Fake Player Names:**
 
-- `alivePlayer`
-- `zombieHorse`
-- `oresEmerald`
-- `oresDiamond`
-- `oresDeepslateDiamond`
+- `AlivePlayer`
+- `ZombieHorse`
+- `OresEmerald`
+- `OresDiamond`
+- `OresDeepslateDiamond`
 
 *Only alphanumeric characters.*
 
 **Example Objective Names:**
 
-- `world_timer`
+- `ticks`
 - `entity_timer`
 - `abilities.fire_trail`
 - `abilities.wall_climb`
 - `abilities.ice_blast`
 
-*Only alphanumeric characters, (` _ `) and (` . `).*
+*Only alphanumeric characters, underscores (`_`), and dots (`.`).*
 
-Dot notation (`dot.notation`) may be used to represent groups or categories. However, avoid over use to prevent cluttering and impacting readability.
+For objectives, dot notation (`dot.notation`) may be used to represent groups or categories. However, use it sparingly to avoid clutter and maintain readability.
 
 ## Group animations files when possible
 
@@ -237,3 +278,5 @@ Blocks and Items should follow the format order below. This would particularly h
 ## Custom Components Variable Name
 
 PascalCase should be used with BlockComponent or ItemComponent as a suffix. As an example, `MeltableBlockComponent` rather than `meltable`. This would help to differentiate what we're using in `registerCustomComponent` and what we're using as values elsewhere.
+
+
