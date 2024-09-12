@@ -9,7 +9,7 @@ mentions:
     - Hatchibombotar
     - TheItsNameless
     - SmokeyStack
-description: Learn new /execute command.
+description: /execute command explained.
 ---
 
 ## Introduction
@@ -229,18 +229,18 @@ The old functionality of `/execute` can be replicated with `as <target> at @s`. 
 1. Teleport with an offset.
 
 ```yaml
-# Old Syntax
+# Old syntax:
 /execute @p ~ ~1.62 ~ teleport @s ^ ^ ^3
-# New Syntax
+# New syntax:
 /execute as @p at @s positioned ~ ~1.62 ~ run teleport @s ^ ^ ^3
 ```
 
 2. Chaining multiple executes.
 
 ```yaml
-# Old Syntax
+# Old syntax:
 /execute @e[type=sheep] ~ ~ ~ execute @e[type=item,r=5] ~ ~ ~ detect ~ ~-1 ~ stone kill @s
-# New Syntax
+# New syntax:
 /execute at @e[type=sheep] as @e[type=item,r=5] at @s if block ~ ~-1 ~ stone run kill @s
 ```
 
@@ -249,13 +249,13 @@ The old functionality of `/execute` can be replicated with `as <target> at @s`. 
 Now for some examples of things that were not possible to do in one command, or were more difficult to perform before the new syntax was introduced.
 
 ```yaml
-# Testing a fake-player-name's score
+# Testing a fake-player-name's score:
 /execute if score game_settings var matches 3.. run say [Game] Difficulty set to Hard.
 
-# Comparing if two scores are equal
+# Comparing if two scores are equal:
 /execute as @a if score @s x = @s y run say My X is equal to my Y.
 
-# Test for an entity without targeting it
+# Test for an entity without targeting it:
 /execute as @a at @s if entity @e[type=armor_stand,r=10] run gamemode survival @s
 ```
 
