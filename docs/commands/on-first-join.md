@@ -19,11 +19,13 @@ This system will run your desired commands on the event that a player joins the 
 <CodeHeader>BP/functions/events/player/on_first_join.mcfunction</CodeHeader>
 
 ```yaml
-# Your Commands Here (examples)
+## Your Commands Here (examples)
+### give stone pickaxe ×1
 give @a [tag=!joined] stone_pickaxe
-give @a [tag=!joined] bread 16 1
+### give bread ×16
+give @a [tag=!joined] bread 16
 
-
+## Mark As Joined
 tag @a [tag=!joined] add joined
 ```
 
