@@ -33,14 +33,16 @@ This system will run your desired commands on the event that the world is loaded
 
 <CodeHeader>BP/functions/events/world/on_initialise.mcfunction</CodeHeader>
 ```yaml
+## Initialisation
+### add objective
 scoreboard objectives add world dummy
+### register to objective
 scoreboard players add initialised world 0
 
-
-# Your Commands Here (example)
+## Your Commands Here (example)
 execute if score initialised world matches 0 run say New world created!
 
-
+## Mark As Initialised
 scoreboard players set initialised world 1
 ```
 
@@ -50,14 +52,14 @@ Just make sure to follow the given order and properly apply the `/execute if sco
 
 ## Explanation
 
-- **` initialised=0 `** world has just initialised and we are yet to run the initlisation commands we want.
+- **` initialised=0 `** world has just initialised and we are yet to run the initialisation commands we need.
 - **` initialised=1 `** world has been initialised and we have executed the initialisation commands.
 
 An objective of the name `world` is added for us to save scores to it so that we can track whether the world has been initialised or not. This also allows us to structure our commands to only execute at world initialisation.
 
-Following the creation of the objective, a score of `0` is added to the fake-player-name 'initialised'. This will add it to the objective and enable us to use the `/execute if score` condition to run our desired commands.
+Following the creation of the objective, a score of `0` is added to the fake-player-name 'initialised'. This will register it to the objective and enable us to use the `/execute if score` condition to run our desired commands.
 
-Finally, the score for fake-player-name 'initialised' is set to `1` after all the commands are executed. This is to prevent it from executing more than once.
+Finally, the score for fake-player-name 'initialised' is set to `1` after all the commands are executed. This is to prevent it from entering a loop and executing more than once.
 
 ## Folder Structure
 
