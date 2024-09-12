@@ -27,11 +27,13 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/player/on_respawn.mcfunction</CodeHeader>
 
 ```yaml
-# Your Commands Here (example)
+## Your Commands Here (example)
 execute as @e [scores={respawn=1}] run say I died and respawned.
 
-
+## Set Player States
+### currently respawning
 scoreboard players set @a respawn 1
+### currently not respawning
 scoreboard players set @e [type=player] respawn 0
 ```
 ![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
@@ -43,12 +45,12 @@ Just make sure to follow the given order and properly apply the ` @e [scores={re
 
 ## Explanation
 
-- **` respawn=0 `** player is alive / had already respawned.
-- **` respawn=1 `** player is dead / just respawned in the current game-tick.
+- **` respawn=0 `** player is alive or had already respawned.
+- **` respawn=1 `** player is dead or has just respawned (in the current game-tick).
 - **` @a `** selector will target all players alive/dead. Hence, we will use it to mark players as `1` 'respawning'
 - **` @e `** selector on the other hand will only target players who are alive, so we can use this to mark all alive players 0 'respawned'
 
-Now that *respawning* players are `1` and *respawned* players are `0`, we can use this knowledge to run our desired commands when the players with score `1` respawn from death state (can be targeted with `@e` selector).
+Now that *respawning* players are `1` and *respawned* players are `0`, we can use this knowledge to run our desired commands when the players with score `1` respawn from death state. They are targeted with `@e` selector.
 
 In the system, your desired commands must come before the other 2 commands because players change from death state to alive state along the start of the game-tick, before commands are run.
 
@@ -56,7 +58,7 @@ Hence, if we were to put them at the end, the other 2 commands would set respawn
 
 ## Tick JSON
 
-If you are using functions instead of command blocks, the ` on_player_respawn ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the ` on_respawn ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
