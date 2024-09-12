@@ -36,16 +36,19 @@ This technique allows you to detect when your target is/isn't moving, accounting
 <CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
 
 ```yaml
-# Moving
+## Movement Detection
+### mark as not moving
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
+### mark as moving
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-# Update Point
+## Update Point
+### delete previous point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
+### mark current point
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
-
-# Your Commands Here (example)
+## Your Commands Here (examples)
 execute as @a [scores={is_moving=0}] run say I'm not moving
 execute as @a [scores={is_moving=1}] run say I started moving
 execute as @a [scores={is_moving=1..}] run say I'm still moving
@@ -82,24 +85,31 @@ Walk/Sprint Detection may not work as intended with effects & enchantments.
 <CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
 
 ```yaml
-# Moving
+## Movement Detection
+### mark as not moving
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
+### mark as moving
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-# Walking
+## Walk Detection
+### mark as not walking
 scoreboard players set @a is_walking 0
+### mark as walking
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.21585, r=0.2805] run scoreboard players set @s is_walking 1
 
-# Sprinting
+## Sprint Detection
+### mark as not sprinting
 scoreboard players set @a is_sprinting 0
+### mark as sprinting
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2806, r=0.9] run scoreboard players set @s is_sprinting 1
 
-# Update Point
+## Update Point
+### delete previous point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
+### mark current point
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
-
-# Your Commands Here (example)
+## Your Commands Here (examples)
 execute as @a [scores={is_walking=0}] run say I'm not walking
 execute as @a [scores={is_walking=1}] run say I'm walking
 ```
@@ -141,11 +151,13 @@ Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 <CodeHeader>BP/functions/states/is_sleeping.mcfunction</CodeHeader>
 
 ```yaml
+## Sleep Detection
+### mark as not sleeping
 execute as @a at @s if entity @s [y=~0.3, dy=0] scoreboard players set @s is_sleeping 0
+### mark as sleeping
 execute as @a at @s unless entity @s [y=~0.3, dy=0] run scoreboard players add @s is_sleeping 1
 
-
-# Your Commands Here (example)
+## Your Commands Here (examples)
 execute as @a [scores={is_sleeping=0}] run say I'm not sleeping
 execute as @a [scores={is_sleeping=1}] run say I started sleeping
 execute as @a [scores={is_sleeping=1..}] run say I'm still sleeping
@@ -183,11 +195,13 @@ Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the
 <CodeHeader>BP/functions/states/is_sneaking.mcfunction</CodeHeader>
 
 ```yaml
+## Sneak Detection
+### mark as not sneaking
 execute as @a at @s if entity @s [y=~1.5, dy=0] run scoreboard players set @s is_sneaking 0
+### mark as sneaking
 execute as @a at @s unless entity @s [y=~1.5, dy=0] if entity @s [y=~0.7, dy=0] run scoreboard players add @s is_sneaking 1
 
-
-# Your Commands Here (example)
+## Your Commands Here (examples)
 execute as @a [scores={is_sneaking=0}] run say I'm not sneaking
 execute as @a [scores={is_sneaking=1}] run say I started sneaking
 execute as @a [scores={is_sneaking=1..}] run say I'm still sneaking
@@ -230,11 +244,13 @@ Swimming in water or gliding with Elytra will be detected as crawling.
 <CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
+## Crawl Detection
+### mark as not crawling
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
+### mark as crawling
 execute as @a at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_crawling 1
 
-
-# Your Commands Here (example)
+## Your Commands Here (examples)
 execute as @a [scores={is_crawling=0}] run say I'm not crawling
 execute as @a [scores={is_crawling=1}] run say I started crawling
 execute as @a [scores={is_sneaking=1..}] run say I'm still crawling
@@ -272,16 +288,23 @@ If you desperately need to detect all three states separately **solely using com
 <CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
+## Set Player States
+### not gliding
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_gliding 0
+### not crawling
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
+### not swimming
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_swimming 0
 
+## Detect Player States
+### gliding
 execute as @a [hasitem={item=elytra,location=slot.armor.chest}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] if block ~~1.01~ air if block ~~-0.01~ air rotated ~ 0 if block ^^1.01^-1 air if block ^^-0.01^-1 air if block ^^1.01^1 air if block ^^-0.01^1 air run scoreboard players add @s is_gliding 1
+### crawling
 execute as @a [scores={is_gliding=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] unless block ~~~ water unless block ~~1.01~ water run scoreboard players add @s is_crawling 1
+### swimming
 execute as @a [scores={is_gliding=0,is_crawling=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_swimming 1
 
-
-# Your Commands Here (example)
+## Your Commands Here (examples)
 execute as @a [scores={is_swimming=0}] run say I'm not swimming
 execute as @a [scores={is_crawling=1}] run say I started crawling
 execute as @a [scores={is_gliding=1..}] run say I'm still gliding
@@ -297,5 +320,4 @@ execute as @a [scores={is_gliding=1..}] run say I'm still gliding
 - **Command 5:** If the player's hitbox is *not* higher than 0.6 blocks, is not gliding, and has no water above/below them, we mark them as crawling (1) by adding a score.
 - **Command 6:** If the player's hitbox is *not* higher than 0.6 blocks, is not gliding or crawling, we mark them as swimming (1) by adding a score.
 - **Command 7, 8, 9:** These are example commands (for each state) which can be modified / expanded.
-
 
