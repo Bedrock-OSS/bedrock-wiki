@@ -110,4 +110,3 @@ or, the inverse to calculate what viewing angle a certain radius / distance (`r`
 
 With the above calculation, the example value of `r=0.2` leaves us with roughly a 12° angle by which we can miss the exact target in either direction and still have it considered "close enough."
 
-
