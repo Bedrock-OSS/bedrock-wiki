@@ -27,19 +27,20 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/player/on_join.mcfunction</CodeHeader>
 
 ```yaml
+## Register Players to 'joined' Objective (who joined for first time or were cleared from it previously)
 scoreboard players add @a joined 0
 
+## Your Commands Here (example)
+tp @a [scores={joined=0}] 0 65 0
 
-# Your Commands Here (example)
-tp @a[scores={joined=0}] 0 65 0
-
-
+### Mark Players as Joined
+### clear 'joined' score of online and offline players
 scoreboard players reset * joined
+### set online players score to 1
 scoreboard players set @a joined 1
 ```
 
 ![Chain Of 4 Command Blocks](/assets/images/commands/commandBlockChain/4.png)
-
 
 Here, we have used a `/tp` command as an example, but you can use any command you prefer and as many as you need.
 
@@ -54,9 +55,11 @@ Immediately after the commands are run, we reset all the scores on the objective
 This way, since our commands only target players with a score of `0`, the commands won't repeat for the players who stayed, unless they leave and rejoin or if we run:
 <br>`/scoreboard players set <player> joined 0`
 
+This is because *adding* a score of 0 to a score of 1 will have no change. But adding a score of 0 to players with no score will set their score to 0.
+
 ## Tick JSON
 
-If you are using functions instead of command blocks, the ` on_player_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the ` on_join ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
