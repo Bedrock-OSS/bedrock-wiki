@@ -38,12 +38,15 @@ Functions are useful in many ways to reduce the time spent going from command bl
 <CodeHeader>BP/functions/effects.mcfunction</CodeHeader>
 
 ```yaml
-# Spawn Effects
+# These effects are for the spawn
 effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
+
+# These effects are for the nether
+effect @a [tag=inNether] fire_resistance 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with a hashtag `#` to add comments (the space after it is only a format preference). For the recommended comments style guide for functions, see the section **[below](#comments-style-guide)**.
+- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command (ignored if left blank). You may start a line with a hashtag `#` to add comments (the space after it is only a format preference). For the recommended comments style guide for functions, see the section **[below](#comments-style-guide)**.
 
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
@@ -57,9 +60,9 @@ effect @a [tag=atSpawn] weakness 12 255 true
 
 - When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
 - *Optionally*, to further distinguish these levels, you can apply different styles:
-    - **UPPERCASE** for level 1 headers,
-    - **Title Case** for level 2 headers,
-    - **lowercase** for level 3 headers.
+    - level 1 headers - **# UPPERCASE**
+    - level 2 headers - **## Title Case**
+    - level 3 headers - **### lowercase**
 - Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
 
 
@@ -92,7 +95,9 @@ scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_
 
 Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
 
-This practice is only a recommendation which helps create a consistent format, making it easier for everyone to follow and maintain uniformity across your functions.
+This practice helps create a consistent format, making it easier for everyone to follow, and maintain uniformity across your functions.
+
+For Scoreboard and Tags style guide, see **[here](/meta/style-guide#scoreboard-and-tags)**.
 
 ## Creating A Function
 
