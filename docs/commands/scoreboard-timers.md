@@ -136,8 +136,9 @@ To limit how many times an event occurs, you need to create a new objective call
 <CodeHeader></CodeHeader>
 
 ```yaml
-/scoreboard objectives set ChatMessage intervals 5
-/scoreboard objectives set SpeedEffect intervals 10
+/scoreboard objectives add intervals dummy
+/scoreboard players set ChatMessage intervals 5
+/scoreboard players set SpeedEffect intervals 10
 ```
 
 Once you have done that, modify your system as shown below.
