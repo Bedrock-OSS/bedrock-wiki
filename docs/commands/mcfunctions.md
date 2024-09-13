@@ -38,14 +38,17 @@ To help create a consistent format, make it easier for everyone to follow, and t
 1. Folders and files in a pack must be named using `snake_case`
     - This means only **lowercase** alphanumeric characters and underscores (` _ `) are allowed.
     - ✅️ `BP/functions/scoreboard/objectives/add_all.mcfunction`
-    -  ❌️ `BP/functions/SCOREBOARD/Objectives/All Add.mcfunction`
-2. They must follow an `action_object` structure. Meaning verbs should come before subjects.
+    - ❌️ `BP/functions/SCOREBOARD/Objectives/All Add.mcfunction`
+2. They must be properly nested:
+    - ✅️ `function teleport/zone/hell`
+    - ❌ `function teleport_hellzone`
+3. The names must follow an `action_object` structure. Meaning verbs should come before subjects.
     - ✅️ `add_all`
     - ✅️ `shuffle_position`
     - ❌️ `all_add`
     - ❌️ `position_shuffle`
-3. The total character length of any path must not exceed 80 characters (console limitation).
-4. Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
+4. The total character length of any path must not exceed 80 characters (console limitation).
+5. Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
 
 ✅️ Consistent:
 ```
