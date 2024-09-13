@@ -20,7 +20,27 @@ The style guide is a living, breathing document, which will evolve as add-on cre
 -   No spaces in your file paths. `use_underscores`.
 -   No `CAPITALS` in your identifiers, file names, or folder names.
 -   The total character length of any path must not exceed 80 characters (console limitation).
--   Content folders should use consistent pluralization: Don't mix and match.
+-   Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
+
+✅️ Consistent:
+```
+BP/functions/abilities/ice_blast.mcfunction
+BP/functions/events/player/on_death.mcfunction
+BP/functions/events/world/on_initialise.mcfunction
+BP/functions/quests/jungle/1.mcfunction
+```
+- All content folders `abilities`, `events`, and `quests` are consistently pluralized.
+- The content folders in `events` are also consistent, as both `player` and `world` are singular.
+
+❌️ Inconsistent:
+```
+BP/functions/ability/ice_blast.mcfunction
+BP/functions/event/players/on_death.mcfunction
+BP/functions/event/world/on_initialise.mcfunction
+BP/functions/quests/jungle/1.mcfunction
+```
+- Only `quests` content folder is pluralized while `ability`, and `event` are singular.
+- Also, in the `event` folder, the `players` folder is plural while `world` is singular.
 
 ## Identifiers
 
@@ -106,15 +126,21 @@ Short-names are file-specific identifiers, which are used to map between an iden
 
 When we make short-names of this form, we can use a generic "sit" animation controller for all of them since we can use the `sit` short-name to play the sit animation.
 
-## Functions Should Be Nested
+## Functions
 
-You can put functions in folders to achieve this.
+1. **Functions should be nested.** You can put functions in folders to achieve this.
 
-✔️ `function teleport/zone/hell`
+✅️ `function teleport/zone/hell`
 
 ❌ `function teleport_hellzone`
 
-## Comments in Functions
+2. **Function file/folder names must follow an `action_object` structure.** Meaning verbs should always come before the subjects.
+    - ✅️ `add_all`
+    - ✅️ `shuffle_position`
+    - ❌️ `all_add`
+    - ❌️ `position_shuffle`
+
+### Comments in Functions
 
 - When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
 - *Optionally*, to further distinguish these levels, you can apply different styles:
@@ -188,11 +214,11 @@ This practice helps create a consistent format, making it easier for everyone to
 - `abilities.wall_climb`
 - `abilities.ice_blast`
 
-*Only alphanumeric characters, underscores (`_`), and dots (`.`).*
+*Only **lowercase** alphanumeric characters, underscores (`_`), and dots (`.`).*
 
 For objectives, dot notation (`dot.notation`) may be used to represent groups or categories. However, use it sparingly to avoid clutter and maintain readability.
 
-## Group animations files when possible
+## Group Animations Files when Possible
 
 Example:
 
@@ -209,7 +235,7 @@ Example:
 }
 ```
 
-## Split textures by path, not name
+## Split Textures by Path, Not Name
 
 ✔️ `textures/dragon/red`
 
@@ -229,7 +255,7 @@ Comments intended for the localizer should always be in-line, in the following f
 
 Own-line comments can be used for organizational purposes but should not store localization-critical information.
 
-## Acronyms when discussing
+## Acronyms when Discussing
 
 | Acronym | Concept                            |
 | ------- | ---------------------------------- |
