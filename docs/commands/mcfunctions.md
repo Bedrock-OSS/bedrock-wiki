@@ -33,6 +33,40 @@ Functions are useful in many ways to reduce the time spent going from command bl
 ]"
 ></FolderView>
 
+To help create a consistent format, make it easier for everyone to follow, and to maintain uniformity across your functions, it is advised to follow these best-practices for your folder structure:
+
+1. Folders and files in a pack must be named using `snake_case`
+    - This means only **lowercase** alphanumeric characters and underscores (` _ `) are allowed.
+    - ✅️ `BP/functions/scoreboard/objectives/add_all.mcfunction`
+    -  ❌️ `BP/functions/SCOREBOARD/Objectives/All Add.mcfunction`
+2. They must follow an `action_object` structure. Meaning verbs should come before subjects.
+    - ✅️ `add_all`
+    - ✅️ `shuffle_position`
+    - ❌️ `all_add`
+    - ❌️ `position_shuffle`
+3. The total character length of any path must not exceed 80 characters (console limitation).
+4. Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
+
+✅️ Consistent:
+```
+BP/functions/abilities/ice_blast.mcfunction
+BP/functions/events/player/on_death.mcfunction
+BP/functions/events/world/on_initialise.mcfunction
+BP/functions/quests/jungle/1.mcfunction
+```
+- All content folders `abilities`, `events`, and `quests` are consistently pluralized.
+- The content folders in `events` are also consistent, as both `player` and `world` are singular.
+
+❌️ Inconsistent:
+```
+BP/functions/ability/ice_blast.mcfunction
+BP/functions/event/players/on_death.mcfunction
+BP/functions/event/world/on_initialise.mcfunction
+BP/functions/quests/jungle/1.mcfunction
+```
+- Only `quests` content folder is pluralized while `ability`, and `event` are singular.
+- Also, in the `event` folder, the `players` folder is plural while `world` is singular.
+
 ## Notes For Beginners
 
 <CodeHeader>BP/functions/effects.mcfunction</CodeHeader>
@@ -46,7 +80,7 @@ effect @a [tag=atSpawn] weakness 12 255 true
 # These effects are for the nether
 effect @a [tag=inNether] fire_resistance 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command (ignored if left blank). You may start a line with a hashtag `#` to add comments (the space after it is only a format preference). For the recommended comments style guide for functions, see the section **[below](#comments-style-guide)**.
+- Commands in a function may not begin with a slash (` / `). Each new line in a function file represents a new command (ignored if left blank). You may start a line with a hashtag ( ` # `) to add comments — the space after `#` is only a format preference. For comments style guide for functions, see the section **[below](#comments-style-guide)**.
 
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
