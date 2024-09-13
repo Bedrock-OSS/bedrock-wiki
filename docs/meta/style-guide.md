@@ -129,10 +129,8 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 ## Functions
 
 1. **Functions should be nested.** You can put functions in folders to achieve this.
-
-✅️ `function teleport/zone/hell`
-
-❌ `function teleport_hellzone`
+    - ✅️ `function teleport/zone/hell`
+    - ❌ `function teleport_hellzone`
 
 2. **Function file/folder names must follow an `action_object` structure.** Meaning verbs should always come before the subjects.
     - ✅️ `add_all`
