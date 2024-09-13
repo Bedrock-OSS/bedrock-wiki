@@ -88,7 +88,7 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/scoreboard'
+    'BP/functions/scoreboard',
     'BP/functions/scoreboard/entity_counter.mcfunction',
     'BP/functions/tick.json'
 ]"
