@@ -26,7 +26,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/entity_counter.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/scoreboard/entity_counter.mcfunction</CodeHeader>
 
 ```yaml
 ## Reset Previous Count
@@ -75,7 +75,7 @@ If you are using functions instead of command blocks, the ` entity_counter ` fun
 ```json
 {
   "values": [
-    "entity_counter"
+    "scoreboard/entity_counter"
   ]
 }
 ```
@@ -88,7 +88,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions',
     'BP/pack_icon.png',
     'BP/manifest.json',
-    'BP/functions/entity_counter.mcfunction',
+    'BP/functions/scoreboard'
+    'BP/functions/scoreboard/entity_counter.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
