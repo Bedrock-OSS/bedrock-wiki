@@ -55,7 +55,7 @@ With the scoreboard data set, we can now operate our timers based on the interva
 
 ## System
 
-<CodeHeader>BP/functions/scoreboard/world_timer.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/scoreboards/world_timer.mcfunction</CodeHeader>
 
 ```yaml
 ## World Timer/Clock
@@ -143,7 +143,7 @@ To limit how many times an event occurs, you need to create a new objective call
 
 Once you have done that, modify your system as shown below.
 
-<CodeHeader>BP/functions/scoreboard/world_timer.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/scoreboards/world_timer.mcfunction</CodeHeader>
 
 ```yaml
 ## World Timer/Clock
@@ -194,7 +194,7 @@ Let's say we want to perform the following actions:
 5. stop the timer if a passive mob is nearby.
 6. loop the timer if a hostile mob is nearby.
 
-<CodeHeader>BP/functions/scoreboard/entity_timer.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/scoreboards/entity_timer.mcfunction</CodeHeader>
 
 ```yaml
 ## Running the Timer
