@@ -7,14 +7,14 @@ mentions:
     - SmokeyStack
     - cda94581
 nav_order: 6
-description: This system will run your desired commands on the event that the world is loaded for the first time.
+description: This system will run your desired commands on the event that the world is loaded for the first time after applying your pack.
 ---
 
 ## Introduction
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This system will run your desired commands on the event that the world is loaded for the first time.
+This system will run your desired commands on the event that the world is loaded for the first time after applying your pack.
 > Note: A [Function](/commands/mcfunctions) Pack is required to achieve this system, since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
 
 
