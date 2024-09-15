@@ -56,9 +56,7 @@ The number of derangements increases rapidly as the number of elements grows.
 
 **Example Visualization:**
 
-<video width="320" height="240" controls>
-  <source src="/assets/images/commands/derangement-function/MPDVisualRep.mp4" type="video/mp4">
-</video>
+![Alex Looking At A Pig's Head](/assets/images/commands/derangement-function/MPDVisualRep.gif)
 
 ## Functions
 
