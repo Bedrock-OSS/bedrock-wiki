@@ -46,7 +46,7 @@ For reference, here is the number of derangements possible for elements ranging 
 | 9                      | 133,496                      |
 | 10                     | 1,334,961                    |
 
-The number of derangements increases rapidly as the number of elements grows.
+The number of derangement possibilities increases rapidly as the number of elements grows.
 
 ## Steps Involved in This Method
 
@@ -56,7 +56,7 @@ The number of derangements increases rapidly as the number of elements grows.
 
 **Example Visualization:**
 
-![Alex Looking At A Pig's Head](/assets/images/commands/derangement-function/MPDVisualRep.gif)
+![Position of Five Players Being Deranged](/assets/images/commands/derangement-function/MPDVisualRep.gif)
 
 ## Functions
 
@@ -190,7 +190,7 @@ For convenience, you can download the `.mcpack` for the Function Pack here:
 
 </Card>
 
-Simply activate the pack on your world and run the following command in multiplayer:
+Simply activate the pack on your world and run (once) the following command in multiplayer:
 
 ```yaml
 /function events/player/derange_position/initiate
