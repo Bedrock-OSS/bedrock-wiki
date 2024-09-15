@@ -88,7 +88,7 @@ Here is a list of target selector arguments that can be used in the execute logi
 - `/execute unless entity @e [type=!chicken, type=!cow] run <command>`
   - Run the command if the entity is either a chicken or a cow.
 - `/execute unless entity @p [scores={objectiveA=!5, objectiveB=!5}] run <command>`
-  - Run the command if the player has either a score of 5 in scoreboard objectiveA or objectiveB.
+  - Run the command if the player has a score of 5 in either scoreboard objectiveA or objectiveB.
 - `/execute unless entity @p [hasitem=[{item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}]] run <command>`
   - Run the command if the player has either a diamond sword or an iron sword.
 
