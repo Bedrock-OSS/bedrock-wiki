@@ -16,7 +16,10 @@ This function, created by @ZheaEvyline, allows you to randomly relocate all sele
 
 > A derangement is a permutation of 'N' elements where no element appears in its original position.
 
-For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be relocated to `0,0,2` or `0,0,3`. The same rule applies to all other players.
+For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be reloc
+cated to `0,0,2` or `0,0,3`. The same rule applies to all other players.
+
+---
 
 **Key Features of this Function Pack:**
 
@@ -25,11 +28,12 @@ For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,
 
 To derange the positions of 100 targets, this function pack requires only 4-6 iterations, executing a total of 7 commands for the initiation, and 7 per iteration.
 
-> *The number of iterations increases proportionally with the number of elements.*
+---
+
+> The number of iterations increases proportionally with the number of elements.
 
 For reference, here is the number of derangements possible for elements ranging from 1 to 10:
 
----
 | Number of Elements (N) | Number of Derangements Possible (D(N)) |
 |------------------------|------------------------------|
 | 1                      | 0                            |
@@ -42,7 +46,6 @@ For reference, here is the number of derangements possible for elements ranging 
 | 8                      | 14,833                       |
 | 9                      | 133,496                      |
 | 10                     | 1,334,961                    |
----
 
 The number of derangements increases rapidly as the number of elements grows.
 
@@ -74,6 +77,7 @@ execute if entity @e [name="Fake Player", scores={id=0}] run scoreboard players 
 ## Assign the New ID
 scoreboard players operation @r [type=armor_stand, name="Fake Player", scores={id=0}] id = Total id
 ```
+---
 
 This is the function you run (once) each time you need to derange the positions of all targets:
 
@@ -104,6 +108,7 @@ tag @a remove posAllocated
 
 In case a single target is left with no available position except its original, the final 3 commands will resolve the collision. We call it a collision because when this occurs, the target will be at the allocated position of another target.
 
+---
 The actual randomized derangement process will be performed by this function below:
 
 <CodeHeader>BP/functions/events/player/derange_position/process.mcfunction</CodeHeader>
@@ -131,7 +136,7 @@ execute as @a [tag=!posAllocated] run scoreboard players add NonAllocatedPlayers
 ## Loop Function if 2+ Players Are Not Allocated a Position
 execute if score NonAllocatedPlayers count matches 2.. run function events/player/derange_position/process
 ```
-
+---
 Now, for our functions to actually work, we will need to add the following objectives on our world:
 
 <CodeHeader>BP/functions/scoreboards/objective/add_all.mcfunction</CodeHeader>
@@ -140,7 +145,7 @@ Now, for our functions to actually work, we will need to add the following objec
 scoreboard objectives add id dummy
 scoreboard objectives add count dummy
 ```
-
+---
 If you wish to add the objectives automatically as soon as you load the world, you may create the function file below:
 
 <CodeHeader>BP/functions/events/world/on_initialise.mcfunction</CodeHeader>
