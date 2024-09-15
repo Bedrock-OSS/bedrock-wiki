@@ -182,6 +182,28 @@ Finally, create your `tick.json` file:
 }
 ```
 
+## Folder Structure
+
+<FolderView
+	:paths="[
+    'BP',
+    'BP/functions',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+    'BP/functions/scoreboards',
+    'BP/functions/scoreboards/objective',
+    'BP/functions/scoreboards/objective/add_all.mcfunction',
+    'BP/functions/events',
+    'BP/functions/events/world',
+    'BP/functions/events/world/on_initialise.mcfunction',
+    'BP/functions/events/player',
+    'BP/functions/events/player/derange_position',
+    'BP/functions/events/player/derange_position/initiate.mcfunction',
+    'BP/functions/events/player/derange_position/process.mcfunction',
+    'BP/functions/tick.json'
+]"
+></FolderView>
+
 ## Download Function Pack
 
 For convenience, you can download the `.mcpack` for the Function Pack here:
