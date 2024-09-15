@@ -191,6 +191,8 @@ Finally, create your `tick.json` file:
     'BP/manifest.json',
     'BP/pack_icon.png',
     'BP/functions/scoreboards',
+    'BP/functions/scoreboards/player',
+    'BP/functions/scoreboards/player/id.mcfunction',
     'BP/functions/scoreboards/objective',
     'BP/functions/scoreboards/objective/add_all.mcfunction',
     'BP/functions/events',
