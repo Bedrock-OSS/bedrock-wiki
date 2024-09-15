@@ -14,7 +14,7 @@ description: Randomly relocate all selected targets among each other, ensuring n
 
 This function, created by @ZheaEvyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
 
-> A derangement is a permutation of 'N' elements where no element appears in its original position.
+A derangement is a permutation of 'N' elements where no element appears in its original position.
 
 For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be reloc
 cated to `0,0,2` or `0,0,3`. The same rule applies to all other players.
@@ -30,7 +30,7 @@ To derange the positions of 100 targets, this function pack requires only 4-6 it
 
 ---
 
-> The number of iterations increases proportionally with the number of elements.
+The number of iterations increases proportionally with the number of elements.
 
 For reference, here is the number of derangements possible for elements ranging from 1 to 10:
 
