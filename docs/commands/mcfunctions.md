@@ -37,8 +37,8 @@ To help create a consistent format, make it easier for everyone to follow, and t
 
 1. Folders and files in a pack must be named using `snake_case`
     - This means only **lowercase** alphanumeric characters and underscores (` _ `) are allowed.
-    - ✅️ `BP/functions/scoreboard/objectives/add_all.mcfunction`
-    - ❌️ `BP/functions/SCOREBOARD/Objectives/All Add.mcfunction`
+    - ✅️ `BP/functions/scoreboards/objective/add_all.mcfunction`
+    - ❌️ `BP/functions/SCOREBOARDS/Objective/All Add.mcfunction`
 2. They must be properly nested:
     - ✅️ `function teleport/zone/hell`
     - ❌ `function teleport_hellzone`
