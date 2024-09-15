@@ -12,9 +12,9 @@ description: Randomly relocate all selected targets among each other, ensuring n
 
 [Sourced Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This function, created by @Zhea Evyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
+This function, created by @ZheaEvyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
 
-> *A derangement is a permutation of 'N' elements where no element appears in its original position.*
+> A derangement is a permutation of 'N' elements where no element appears in its original position.
 
 For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be relocated to `0,0,2` or `0,0,3`. The same rule applies to all other players.
 
@@ -46,7 +46,7 @@ For reference, here is the number of derangements possible for elements ranging 
 
 The number of derangements increases rapidly as the number of elements grows.
 
-### Steps Involved in This Method
+## Steps Involved in This Method
 
 1. Relocate each target to the position of a random one (other than its original position).
 2. If multiple targets are relocated to the same position, assign it to one of them and repeat the process for the remaining targets.
@@ -54,7 +54,7 @@ The number of derangements increases rapidly as the number of elements grows.
 
 **Example Visualization:**
 
-<video width="746" height="420" controls>
+<video width="1920" height="1080" controls>
   <source src="/assets/images/commands/derangement-function/MPDVisualRep.mp4" type="video/mp4">
 </video>
 
