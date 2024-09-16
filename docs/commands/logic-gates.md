@@ -87,16 +87,16 @@ Here is a list of target selector arguments that can be used in the execute logi
 
 - `/execute unless entity @e [type=!chicken, type=!cow] run <command>`
   - Run the command if the entity is either a chicken or a cow.
-- `/execute unless entity @p [scores={objectiveA=!5, objectiveB=!5}] run <command>`
-  - Run the command if the player has a score of 5 in either scoreboard objectiveA or objectiveB.
+- `/execute unless entity @p [scores={objective.a=!5, objective.b=!5}] run <command>`
+  - Run the command if the player has a score of 5 in either scoreboard `objective.a` or `objective.b`.
 - `/execute unless entity @p [hasitem=[{item=diamond_sword,quantity=0},{item=iron_sword,quantity=0}]] run <command>`
   - Run the command if the player has either a diamond sword or an iron sword.
 
 > Note: You may use more than two inputs (selector arguments) for the OR gate, and the command will execute if it meets any one or more of the inputs.
 
 Combining any of the different argument selectors will also work. Examples:
-- `/execute unless entity @p[tag=!red, scores={score1=!1..5}] run <command>`
-- `/execute unless entity @p[name=!player, hasitem=[{item=iron_sword, quantity=0}]] run <command>`
-- `/execute unless entity @e[type=!chicken, tag=!green, scores={score1=!5}, family=!mob}] run <command>`
+- `/execute unless entity @p [tag=!red, scores={objective.a=!1..5}] run <command>`
+- `/execute unless entity @p [name=!player, hasitem=[{item=iron_sword, quantity=0}]] run <command>`
+- `/execute unless entity @e [type=!chicken, tag=!green, scores={objective.b=!5}, family=!mob}] run <command>`
 
 For any doubts or queries, you may join our Discord linked above and any of our community experts will be glad to assist you.
