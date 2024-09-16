@@ -64,7 +64,7 @@ Since `PlayerCount` is only updated at the end of the command loop, it can be us
 
 The count is obtained using the [Entity Counter](/commands/entity-counter) system. It may be beneficial to refer to that page to better understand this one. When referring to that page, you will notice that we have used the objective name `total` instead of `count`. This is to prevent collision between the two systems.
 
-By subtracting 'playerCount' total from 'newPlayerCount' total, we will be able to identify if the player count has:
+By subtracting 'PlayerCount' total from 'NewPlayerCount' total, we will be able to identify if the player count has:
 - decreased ` ..-1 `
 - increased ` 1.. `
 - or if it's unchanged ` 0 `
