@@ -183,11 +183,11 @@ Limits the selection of targets by their rotation. There are two types of rotati
 
 _x-rotation diagram shared by @SpacebarNinja:_
 
-![x-rotation](/assets/images/commands/selectors/x-rotation.png)
+<img src="/assets/images/commands/selectors/x-rotation.png" width="200">
 
 _y-rotation diagram shared by @SpacebarNinja:_
 
-![y-rotation](/assets/images/commands/selectors/y-rotation.png)
+<img src="/assets/images/commands/selectors/y-rotation.png" width="200">
 
 Examples:
 
