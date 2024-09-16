@@ -81,10 +81,10 @@ Sets the dimension in which the command should run.
 
 Currently accepted values are `overworld`, `nether`, and `the_end`.
 
-For example, to detect if a target is in The End, run:
+For example, to execute as a target if in The End, run:
 
 ```
-/execute as @p in the_end if entity @s [rm=0.01] run say I'm in the End dimension
+/execute in the_end positioned 0 -100 0 as @a [rm=1] run say I'm in the End dimension
 ```
 
 Note: Change in dimension will respect that dimension's scale; going from the Overworld to The Nether will apply a scale of x0.125 to the position, and vice versa will apply a x8 scale to the position.
