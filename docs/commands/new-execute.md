@@ -43,9 +43,9 @@ Back in the Summer of 2017 during the Update Aquatic's development, the develope
 
 This allows for much greater control for what `/execute` can do to a command, and allows splitting up the executor and the command's position.
 
-## New Syntax
+## Syntax
 
-Now, let us review the new `/execute` syntax. They are as follows:
+Now, let us review the `/execute` syntax. They are as follows:
 
 ### `/execute as`
 
@@ -81,7 +81,13 @@ Sets the dimension in which the command should run.
 
 Currently accepted values are `overworld`, `nether`, and `the_end`.
 
-This change in dimension will respect that dimension's scale; going from the Overworld to The Nether will apply a scale of x0.125 to the position, and vice versa will apply a x8 scale to the position.
+For example, to detect if a target is in The End, run:
+
+```
+/execute as @p in the_end if entity @s [rm=0.01] run say I'm in the End dimension
+```
+
+Note: Change in dimension will respect that dimension's scale; going from the Overworld to The Nether will apply a scale of x0.125 to the position, and vice versa will apply a x8 scale to the position.
 
 ### `/execute positioned`
 
