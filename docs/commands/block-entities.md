@@ -49,7 +49,7 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ## System
 
-<CodeHeader>BP/functions/MBE/render.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/mbe/render.mcfunction</CodeHeader>
 
 ```yaml
 ## Align Arms
@@ -194,9 +194,9 @@ Using the same controller names above is not required. However, it can help avoi
 ## Saving & Loading MBE
 
 1. To save, run:
-    - `/execute at @e [type=armor_stand, name=Grumm, c=1] run structure save MBE ~~~ ~~~ true disk false`
+    - `/execute at @e [type=armor_stand, name=Grumm, c=1] run structure save mbe ~~~ ~~~ true disk false`
 
 2. To load, run:
-    - `/structure load MBE <to: x y z>`
+    - `/structure load mbe <to: x y z>`
 
-> Note: Structure name `MBE` can be changed to your preference.
+> Note: Structure name `mbe` can be changed to your preference.
