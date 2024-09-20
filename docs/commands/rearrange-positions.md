@@ -1,5 +1,5 @@
 ---
-title: Multiplayer Position Derangement
+title: Multiplayer Position Rearrangement
 category: Functions
 mention:
     - BedrockCommands
@@ -12,11 +12,11 @@ description: Randomly relocate all selected targets among each other, ensuring n
 
 [Sourced Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-This function, created by @ZheaEvyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
+Multiplayer Position Rearrangement function, or more accurately Multiplayer Position Derangement function, created by @ZheaEvyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
 
 A derangement is a permutation of 'N' elements where no element appears in its original position.
 
-For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be relocated to `0,0,2` or `0,0,3`. The same rule applies to all other players.
+For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be relocated to `0,0,2`, or `0,0,3`. The same rule applies to all other players.
 
 <br>
 
@@ -56,7 +56,7 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 **Example Visualization:**
 
-![Position of Five Players Being Deranged](/assets/images/commands/derangement-function/MPDVisualRep.gif)
+![Position of Five Players Being Deranged](/assets/images/commands/rearrange-positions/MPDVisualRep.gif)
 
 ## Functions
 
