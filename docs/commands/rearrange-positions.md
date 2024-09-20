@@ -16,7 +16,7 @@ Multiplayer Position Rearrangement function, or more accurately Multiplayer Posi
 
 A derangement is a permutation of 'N' elements where no element appears in its original position.
 
-For example, if Player1 was at `0,0,1`, Player2 at `0,0,2`, and Player3 at `0,0,3`, Player1 can only be relocated to `0,0,2`, or `0,0,3`. The same rule applies to all other players.
+For example, if Player1 was at `(0, 0, 1)`, Player2 at `(0, 0, 2)`, and Player3 at `(0, 0, 3)`, Player1 can only be relocated to `(0, 0, 2)`, or `(0, 0, 3)`. The same rule applies to all other players.
 
 <br>
 
