@@ -53,16 +53,16 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ```yaml
 ## Align Arms
-playanimation @e [type=armor_stand, name=Grumm] animation.armor_stand.entertain_pose null 0 "0" mbe:align.arms
+playanimation @e [type=armor_stand, name=Grumm] animation.armor_stand.entertain_pose null 0 "0" wiki:align.arms
 
 ## Mini Block Size
-playanimation @e [type=armor_stand, name=Grumm] animation.player.move.arms.zombie null 0 "0" mbe:size.mini_block
+playanimation @e [type=armor_stand, name=Grumm] animation.player.move.arms.zombie null 0 "0" wiki:size.mini_block
 
 ## Full Block (optional)
 ### size
-playanimation @e [type=armor_stand, name=Grumm] animation.ghast.scale null 0 "0" mbe:size.full_block
+playanimation @e [type=armor_stand, name=Grumm] animation.ghast.scale null 0 "0" wiki:size.full_block
 ### align
-playanimation @e [type=armor_stand, name=Grumm] animation.fireworks_rocket.move null 0 "0" mbe:align.full_block
+playanimation @e [type=armor_stand, name=Grumm] animation.fireworks_rocket.move null 0 "0" wiki:align.full_block
 
 ## Freeze Armor Stand
 execute as @e [type=armor_stand, name=Grumm] at @s run tp ~~~
@@ -82,7 +82,7 @@ effect @e [type=armor_stand, name=Grumm] invisibility 999999 1 true
 6. Hides the armor stand body.
 
 Note: Providing a controller name allows us to stack animations without overwriting the previous one. Example:
-- `mbe:align.full_block` (where `mbe` is a namespace).
+- `wiki:align.full_block` (where wiki is a namespace).
 
 Using the same controller names above is not required. However, it can help avoid collisions with other playanimation commands.
 
@@ -194,9 +194,9 @@ Using the same controller names above is not required. However, it can help avoi
 ## Saving & Loading MBE
 
 1. To save, run:
-    - `/execute at @e [type=armor_stand, name=Grumm, c=1] run structure save mbe ~~~ ~~~ true disk false`
+    - `/execute at @e [type=armor_stand, name=Grumm, c=1] run structure save wiki ~~~ ~~~ true disk false`
 
 2. To load, run:
-    - `/structure load mbe <to: x y z>`
+    - `/structure load wiki <to: x y z>`
 
-> Note: Structure name `mbe` can be changed to your preference.
+> Note: Structure name `wiki` can be changed to your preference.
