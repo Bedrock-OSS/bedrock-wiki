@@ -82,7 +82,7 @@ effect @e [type=armor_stand, name=Grumm] invisibility 999999 1 true
 6. Hides the armor stand body.
 
 Note: Providing a controller name allows us to stack animations without overwriting the previous one. Example:
-- `wiki:align.full_block` (where wiki is a namespace).
+- `wiki:align.full_block` (where `wiki` is a namespace).
 
 Using the same controller names above is not required. However, it can help avoid collisions with other playanimation commands.
 
