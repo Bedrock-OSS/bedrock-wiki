@@ -18,7 +18,7 @@ The style guide is a living, breathing document, which will evolve as add-on cre
 ## Folder Structure
 
 -   No spaces in your file paths. `use_underscores`.
--   No `CAPITALS` in your identifiers, file names, or folder names.
+-   No `CAPITALS` in your identifiers, file names, or folder names. 'BP' and 'RP' folder names may use capitals.
 -   The total character length of any path must not exceed 80 characters (console limitation).
 -   Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
 
