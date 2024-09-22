@@ -55,8 +55,8 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 | Geometry             | dragon.geo.json            |
 | Animation            | dragon.animation.json      |
 | Animation Controller | dragon.ac.json             |
-| RP Entity            | dragon.ce.json             |
-| BP Entity            | dragon.se.json             |
+| RP Entity            | dragon.ce.json<br>*(ce: client entity)*|
+| BP Entity            | dragon.se.json<br>*(se: server entity)*|
 | Item 1.16.100+       | dragon_tooth.item.json     |
 | BP Item              | dragon_tooth.item.bp.json  |
 | RP Item              | dragon_tooth.item.rp.json  |
