@@ -27,16 +27,16 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/player/on_join.mcfunction</CodeHeader>
 
 ```yaml
-## Register Players to 'joined' Objective (who joined for first time or were cleared from it previously)
+## Register Players to 'joined' Objective Who Joined For First Time or Were Cleared From 'joined' Previously
 scoreboard players add @a joined 0
 
-## Your Commands Here (example)
+## Your Commands Here (Example)
 tp @a [scores={joined=0}] 0 65 0
 
 ### Mark Players as Joined
-### clear 'joined' score of online and offline players
+### Clear 'joined' score of online and offline players
 scoreboard players reset * joined
-### set online players score to 1
+### Set online players score to 1
 scoreboard players set @a joined 1
 ```
 
