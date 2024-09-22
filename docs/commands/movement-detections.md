@@ -157,7 +157,7 @@ execute as @a at @s if entity @s [y=~0.3, dy=0] scoreboard players set @s is_sle
 ### Mark as sleeping
 execute as @a at @s unless entity @s [y=~0.3, dy=0] run scoreboard players add @s is_sleeping 1
 
-## Your Commands Here (examples)
+## Your Commands Here (Examples)
 execute as @a [scores={is_sleeping=0}] run say I'm not sleeping
 execute as @a [scores={is_sleeping=1}] run say I started sleeping
 execute as @a [scores={is_sleeping=1..}] run say I'm still sleeping
