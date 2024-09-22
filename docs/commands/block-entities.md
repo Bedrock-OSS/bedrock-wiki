@@ -59,9 +59,9 @@ playanimation @e [type=armor_stand, name=Grumm] animation.armor_stand.entertain_
 playanimation @e [type=armor_stand, name=Grumm] animation.player.move.arms.zombie null 0 "0" wiki:size.mini_block
 
 ## Full Block (optional)
-### size
+### Size
 playanimation @e [type=armor_stand, name=Grumm] animation.ghast.scale null 0 "0" wiki:size.full_block
-### align
+### Align
 playanimation @e [type=armor_stand, name=Grumm] animation.fireworks_rocket.move null 0 "0" wiki:align.full_block
 
 ## Freeze Armor Stand
