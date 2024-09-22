@@ -27,13 +27,13 @@ If you are working with functions and prefer to have the objective added automat
 <CodeHeader>BP/functions/events/player/on_respawn.mcfunction</CodeHeader>
 
 ```yaml
-## Your Commands Here (example)
+## Your Commands Here (Example)
 execute as @e [scores={respawn=1}] run say I died and respawned.
 
 ## Set Player States
-### currently respawning
+### Currently respawning
 scoreboard players set @a respawn 1
-### currently not respawning
+### Currently not respawning
 scoreboard players set @e [type=player] respawn 0
 ```
 ![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
