@@ -28,12 +28,12 @@ If you are working with functions and prefer to have the objective added automat
 
 ```yaml
 ## Set Player States
-### not alive
+### Not alive
 scoreboard players set @a [scores={is_alive=!2}] is_alive 0
-### alive
+### Alive
 scoreboard players set @e [type=player] is_alive 1
 
-## Your Commands Here (example)
+## Your Commands Here (Example)
 execute as @a [scores={is_alive=0}] run say I died
 
 ## Mark that Commands for Dead Players Have Been Executed
@@ -113,15 +113,15 @@ If two or more players are teleported to the same point and one of them dies but
 
 ```yaml
 ## Set Player States
-### not dead
+### Not dead
 scoreboard players set @e [type=player] is_dead 0
-### dead
+### Dead
 execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard players add @s is_dead 1
 
 ## Your Commands Here (examples)
-### summon armor stand at death position
+### Summon armor stand at death position
 execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
-### death message in chat
+### Death message in chat
 execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
 ```
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
