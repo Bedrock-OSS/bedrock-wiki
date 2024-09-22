@@ -59,9 +59,9 @@ With the scoreboard data set, we can now operate our timers based on the interva
 
 ```yaml
 ## World Timer/Clock
-### increment +1 tick
+### Increment +1 tick
 scoreboard players add Timer ticks 1
-### apply current ticks passed to all events
+### Apply current ticks passed to all events
 scoreboard players operation * events = Timer ticks
 
 ## Chat Message (every 2h)
@@ -147,9 +147,9 @@ Once you have done that, modify your system as shown below.
 
 ```yaml
 ## World Timer/Clock
-### increment +1 tick
+### Increment +1 tick
 scoreboard players add Timer ticks 1
-### apply current time to all events
+### Apply current time to all events
 scoreboard players operation * events = Timer ticks
 
 ## Chat Message (every 10m)
@@ -197,7 +197,7 @@ Let's say we want to perform the following actions:
 <CodeHeader>BP/functions/scoreboards/entity_timer.mcfunction</CodeHeader>
 
 ```yaml
-## Running the Timer
+## Running The Timer
 scoreboard players add @e [name=station, scores={ticks=0..}] ticks 1
 
 # Executing Commands While Timer is Running
@@ -209,10 +209,10 @@ execute as @e [name=station, scores={ticks=0..200}] at @s run particle minecraft
 # Executing Commands at Precise Intervals
 execute as @e [name=station, scores={ticks=3600}] at @s run playsound note.pling @a [r=10]
 
-# Stopping the Timer
+# Stopping The Timer
 execute as @e [name=station] at @s if entity @e [family=pacified, r=10, c=1] run scoreboard players set @s ticks -1
 
-# Looping the Timer
+# Looping The Timer
 execute as @e [name=station, scores={ticks=6000}] at @s if entity @e [family=monster, r=10, c=1] run scoreboard players set @s ticks 0
 
 # End of Timer
