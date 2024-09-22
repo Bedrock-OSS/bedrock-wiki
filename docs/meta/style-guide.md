@@ -144,9 +144,10 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 - *Optionally*, to further distinguish these levels, you can apply different styles:
     - level 1 headers - **# UPPERCASE**
     - level 2 headers - **## Title Case**
-    - level 3 headers - **### lowercase**
+    - level 3 headers - **### Sentence case**
 - Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
 
+<Spoiler title="Example Function File">
 
 <CodeHeader>BP/functions/abilities/fire_trail.mcfunction</CodeHeader>
 
@@ -154,9 +155,9 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 # ON PLAYER ITEM DROP
 
 ## Give Effects
-### fire resistance
+### Fire resistance
 execute at @e [type=item, name="Fire Trail Ability"] run effect @p [r=3] fire_resistance 10 255
-### speed
+### Speed
 execute at @e [type=item, name="Fire Trail Ability"] run effect @p [r=3] speed 10 1 true
 
 ## Add Particle Time (10s)
@@ -174,6 +175,8 @@ execute at @a [scores={abilities.fire_trail=1..}] run particle minecraft:basic_f
 ## Countdown Timer
 scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_trail 1
 ```
+
+</Spoiler>
 
 Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
 
