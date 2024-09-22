@@ -34,15 +34,15 @@ This system will run your desired commands on the event that the world is loaded
 <CodeHeader>BP/functions/events/world/on_initialise.mcfunction</CodeHeader>
 ```yaml
 ## Initialisation
-### add objective
+### Add objective
 scoreboard objectives add world dummy
-### register to objective
+### Register to objective
 scoreboard players add initialised world 0
 
-## Your Commands Here (example)
+## Your Commands Here (Example)
 execute if score initialised world matches 0 run say New world created!
 
-## Mark As Initialised
+## Mark as Initialised
 scoreboard players set initialised world 1
 ```
 
