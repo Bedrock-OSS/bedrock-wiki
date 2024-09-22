@@ -63,13 +63,13 @@ Here is an example file to compare against:
 }
 ```
 
-Next, navigate to your items RP file. Ensure that it is in the correct folder. Example of incorrect path:
+Next, navigate to your items BP file. Ensure that it is in the correct folder. Example of incorrect path:
 
 -   ⚠️ `item/gem.json`
 
 An example file, to compare against:
 
-<CodeHeader>RP/items/gem.json</CodeHeader>
+<CodeHeader>BP/items/gem.json</CodeHeader>
 
 ```json
 {
