@@ -32,16 +32,16 @@ If you are working with functions and prefer to have the objective added automat
 ## Reset Previous Count
 scoreboard players set * count 0
 
-## Get Current Count (examples)
-### alive players
+## Get Current Count (Examples)
+### Alive players
 execute as @e [type=player] run scoreboard players add AlivePlayers count 1
-### creepers
+### Creepers
 execute as @e [type=creeper] run scoreboard players add Creepers count 1
 
-## Your Commands Here (examples)
-### message if 4+ alive players
+## Your Commands Here (Examples)
+### Message if 4+ alive players
 execute if score AlivePlayers count matches 4.. run title @a actionbar There are more than 4 players on the world.
-### message if 3 or less creepers
+### Message if 3 or less creepers
 execute if score Creepers count matches ..3 run title @a actionbar There are less than 3 creepers on the world.
 ```
 ![Chain Of 5 Command Blocks](/assets/images/commands/commandBlockChain/5.png)
