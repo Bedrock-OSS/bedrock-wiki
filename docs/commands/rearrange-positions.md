@@ -10,7 +10,7 @@ description: Randomly relocate all selected targets among each other, ensuring n
 
 ## Introduction
 
-[Sourced Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
+[Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
 Multiplayer Position Rearrangement function, or more accurately Multiplayer Position Derangement function, created by @ZheaEvyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
 
@@ -97,9 +97,9 @@ function events/player/derange_position/process
 execute if score NonAllocatedPlayers count matches 1 unless score @a [tag=!posAllocated, c=1] id = @e [type=armor_stand, name="Position Marker", c=1] id run function events/player/derange_position/process
 
 ## Resolve Collision if Final Player Has No Valid Position Available
-### relocate the allocated player to their colliding player's original position to free their position for the colliding player
+### Relocate the allocated player to their colliding player's original position to free their position for the colliding player
 execute as @a [tag=!posAllocated] at @s run tp @r [tag=posAllocated, r=0.01] @e [type=armor_stand, name="Position Marker", c=1]
-### remove colliding player's position marker and tag
+### Remove colliding player's position marker and tag
 kill @e [type=armor_stand, name="Position Marker"]
 tag @a remove posAllocated
 ```
@@ -155,15 +155,15 @@ If you wish to add the objectives automatically as soon as you load the world, y
 
 ```yaml
 ## Initialisation
-### add objective
+### Add objective
 scoreboard objectives add world dummy
-### register to objective
+### Register to objective
 scoreboard players add initialised world 0
 
 ## Commands to Execute
 execute if score initialised world matches 0 run function scoreboards/objective/add_all
 
-## Mark As Initialised
+## Mark as Initialised
 scoreboard players set initialised world 1
 ```
 
