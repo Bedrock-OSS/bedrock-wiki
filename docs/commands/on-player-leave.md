@@ -30,22 +30,22 @@ If you are working with functions and prefer to have the objective added automat
 
 ```yaml
 ## Entity Counter
-### reset current player count
+### Reset current player count
 scoreboard players reset NewPlayerCount total
-### get current player count 
+### Get current player count 
 execute as @a run scoreboard players add NewPlayerCount total 1
 
-## Get Difference ( current - previous )
+## Get Difference ( Current - Previous )
 scoreboard players operation newPlayerCount total -= playerCount total
 
-## Your Commands Here (example)
-### message if there is a difference of -1 or less
+## Your Commands Here (Example)
+### Message if there is a difference of -1 or less
 execute if score newPlayerCount total matches ..-1 run say a player has left the world
 
 ## Entity Counter
-### reset current player count
+### Reset current player count
 scoreboard players reset playerCount total
-### get current player count (to check difference next game tick)
+### Get current player count (to check difference next game tick)
 execute as @a run scoreboard players add playerCount total 1
 ```
 
