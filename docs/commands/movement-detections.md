@@ -33,7 +33,7 @@ This technique allows you to detect when your target is/isn't moving, accounting
 - Make sure you add the `is_moving` scoreboard objective:
     - `/scoreboard objectives add is_moving dummy`
 
-<CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_moving.mcfunction</CodeHeader>
 
 ```yaml
 ## Movement Detection
@@ -82,7 +82,7 @@ If you desperately need to detect walking and sprinting separately **solely usin
 Walk/Sprint Detection may not work as intended with effects & enchantments.
 :::
     
-<CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_moving.mcfunction</CodeHeader>
 
 ```yaml
 ## Movement Detection
@@ -148,7 +148,7 @@ Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 - Make sure you add the `is_sleeping` scoreboard objective:
     - `/scoreboard objectives add is_sleeping dummy`
 
-<CodeHeader>BP/functions/states/is_sleeping.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_sleeping.mcfunction</CodeHeader>
 
 ```yaml
 ## Sleep Detection
@@ -192,7 +192,7 @@ Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the
 - Make sure you add the `is_sneaking` scoreboard objective:
     - `/scoreboard objectives add is_sneaking dummy`
 
-<CodeHeader>BP/functions/states/is_sneaking.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_sneaking.mcfunction</CodeHeader>
 
 ```yaml
 ## Sneak Detection
@@ -241,7 +241,7 @@ Swimming in water or gliding with Elytra will be detected as crawling.
 - Make sure you add the `is_crawling` scoreboard objective:
     - `/scoreboard objectives add is_crawling dummy`
 
-<CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
 ## Crawl Detection
@@ -285,7 +285,7 @@ If you desperately need to detect all three states separately **solely using com
    - ![issue3](/assets/images/commands/movement-detections/issue3.png)
 :::
     
-<CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
 ## Set Player States
@@ -321,3 +321,21 @@ execute as @a [scores={is_gliding=1..}] run say I'm still gliding
 - **Command 6:** If the player's hitbox is *not* higher than 0.6 blocks, is not gliding or crawling, we mark them as swimming (1) by adding a score.
 - **Command 7, 8, 9:** These are example commands (for each state) which can be modified / expanded.
 
+## Folder Structure
+
+If you are working with functions, your folder structure may look something like this:
+
+<FolderView
+	:paths="[
+    'BP',
+    'BP/functions',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+    'BP/functions/states',
+    'BP/functions/states/player',
+    'BP/functions/states/player/is_moving.mcfunction',
+    'BP/functions/states/player/is_sleeping.mcfunction',
+    'BP/functions/states/player/is_crawling.mcfunction',
+    'BP/functions/tick.json'
+]"
+></FolderView>
