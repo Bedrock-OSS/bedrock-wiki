@@ -197,6 +197,17 @@ Affect all players looking at or above the horizon with Blindness for one second
 Damage all players facing generally south:
 -   `/damage @a[rym=-45, ry=45] 1`
 
+**All Facing Directions:**
+
+- North - `[ry=-135, rym=135]`
+- South - `[ry=45, rym=-45]`
+- East - `[ry=-45, rym=-135]`
+- West - `[ry=135, rym=45]`
+- North West - `[ry=180, rym=90]`
+- North East - `[ry=-90, rym=-180]`
+- South West - `[ry=90, rym=0]`
+- South East - `[ry=0, rym=-90]`
+
 ### Level
 
 Limits the selection of targets by experience levels. Only players can have EXP, so this filters out non-player targets.
