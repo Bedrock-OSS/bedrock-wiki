@@ -214,7 +214,7 @@ For convenience, you can download the `.mcpack` for the Function Pack here:
 
 </Card>
 
-Simply activate the pack on your world and run (once) the following command in multiplayer:
+Simply activate the pack on your world and run once (each time you need) the following command in multiplayer:
 
 ```yaml
 /function events/player/derange_position/initiate
