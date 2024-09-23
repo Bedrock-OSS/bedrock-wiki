@@ -118,7 +118,7 @@ In this visual representation, we can see that the horse with a larger hitbox is
 
 Additional Example:
 
-To detect players at a certain Y level fully and not partly, you will use a command like this:
+Considering the above note, if we want to detect players at a certain Y level fully and not partly, we will use a command like this:
 
 ```yaml
 ### Detect players at Y=10
