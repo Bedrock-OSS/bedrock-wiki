@@ -116,6 +116,15 @@ In this visual representation, we can see that the horse with a larger hitbox is
 
 :::
 
+Additional Example:
+
+To detect players at a certain Y level fully and not partly, you will use a command like this:
+
+```yaml
+### Detect players at Y=10
+execute as @a at @s if entity @s [y=10, r=1] unless entity @s [y=9, r=1] run say found player
+```
+
 ### Scores
 
 Limits the selection of targets by their score value. This argument is represented as an object, with key-value pairs for a scoreboard objective and a value. The value can represent a range of numbers, using the range syntax. The value of a score can be negated to test if the entity does not have a score value within that range.
