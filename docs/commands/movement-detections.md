@@ -11,7 +11,7 @@ description: These command-techniques allow you to detect certain player/entity 
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-[Image Credits: Official Minecraft Wiki  -  ](https://minecraft.wiki/)__[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)__
+[Image Credits: Unofficial Minecraft Wiki  -  ](https://minecraft.wiki/)__[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)__
 
 These command-techniques allow you to detect certain player/entity 'states' and subsequently execute your desired commands.
 
