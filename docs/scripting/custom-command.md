@@ -17,11 +17,12 @@ mentions:
     - ConsoleTerm
     - kumja1
     - modmaker101
+    - AmethystDevbyFK
 description: Custom commands using scripts.
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.20.60
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.30
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
@@ -64,9 +65,8 @@ Assuming you have understood the basics of scripting, let's start creating the p
 	],
 	"dependencies": [
 		{
-			// Minecraft native module - needed to use the "@minecraft/server" module
 			"module_name": "@minecraft/server",
-			"version": "1.9.0-beta"
+			"version": "1.15.0-beta" // needs to be the latest or it will break ( latest as of 1.21.30 )
 		}
   ]
 }
