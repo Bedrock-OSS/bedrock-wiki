@@ -32,6 +32,8 @@ export default defineConfigWithTheme<ThemeConfig>({
   head,
   transformHead,
 
+  ignoreDeadLinks: true,
+
   srcExclude: isFastBuild ? largePages : undefined,
 
   themeConfig: {
