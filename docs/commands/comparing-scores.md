@@ -116,7 +116,7 @@ Note: In the `<command>` (where `/say` is used as an example), `@s` refers to th
 
 **Visualisation:**
 
-![](/assets/images/commands/GetMatchingScores.gif)
+![](/assets/images/commands/comparing-scores/GetMatchingScores.gif)
 
 **Example 1,** teleport pet to owner if farther than 6 blocks:
 
