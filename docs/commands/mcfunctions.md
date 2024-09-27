@@ -72,6 +72,8 @@ BP/functions/quests/jungle/1.mcfunction
 
 ## Notes For Beginners
 
+*Below is an example function file for beginners reference:*
+
 <CodeHeader>BP/functions/effects.mcfunction</CodeHeader>
 
 ```yaml
