@@ -36,6 +36,8 @@ execute as <target> if score @s <objective> = Highest <objective> run <command>
 |  2 |    Kai     |         5           |    `Highest > Kai`            |      `Highest = 10`         |
 |  3 |   Steve    |         20          |    `Highest > Alex`           |      `Highest = 20`         |
 
+*No change when `Highest` score is compared to player 2 after player 1 (since 10 is already greater than 5).* 
+
 :::info NOTE:
 
 Wildcard (` * `) compares with all tracked scores — that includes offline players. To compare with only online players or entities, use `@a` or `@e`.
@@ -81,6 +83,8 @@ execute as <target> if score @s <objective> = Lowest <objective> run <command>
 |  1 |    Alex    |         100          |    `Lowest < Alex`           |      `Lowest = 100`        |
 |  2 |    Kai     |         50           |    `Lowest < Kai`            |      `Lowest = 50`         |
 |  3 |   Steve    |         200          |    `Lowest < Alex`           |      `Lowest = 50`         |
+
+*No change when `Lowest` score is compared to player 3 after player 2 (since 50 is already less than 200).*
 
 :::info NOTE:
 
