@@ -74,8 +74,6 @@ execute as <target> if score @s <objective> = Lowest <objective> run <command>
 ```
 ![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
 
-**Purpose of Each Command:**
-
 **Command 1:** This command compares the `Lowest` score with every other tracked score in the specified objective, and if the `Lowest` score is greater than the one being compared to, then the `Lowest` score will be assigned the value of that score. To illustrate:
 
 | #  |   Player   | Objective: `blocks_travelled` |   Comparison with `Lowest`  | `Lowest` after comparison |
