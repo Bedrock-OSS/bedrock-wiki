@@ -28,7 +28,7 @@ execute as <target> if score @s <objective> = Highest <objective> run <command>
 ```
 ![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
 
-1. **Command 1:** This command compares the `Highest` score with every other tracked score in the specified objective, and if the `Highest` score is lesser than the one being compared to, then the `Highest` score will be assigned the value of that score. To illustrate:
+**Command 1:** This command compares the `Highest` score with every other tracked score in the specified objective, and if the `Highest` score is lesser than the one being compared to, then the `Highest` score will be assigned the value of that score. To illustrate:
 
 | #  |   Player   | Objective: `kills` |   Comparison with `Highest`  | `Highest` after comparison |
 |:--:|:----------:|:------------------:|:---------------------------:|:-------------------------:|
@@ -36,10 +36,14 @@ execute as <target> if score @s <objective> = Highest <objective> run <command>
 |  2 |    Kai     |         5           |    `Highest > Kai`            |      `Highest = 10`         |
 |  3 |   Steve    |         20          |    `Highest > Alex`           |      `Highest = 20`         |
 
-> Note: Wildcard (` * `) compares with all tracked scores — that includes offline players. To compare with only online players or entities, use `@a` or `@e`.
+:::info NOTE:
 
-2. **Command 2:** This command can be modified or expanded. It allows you to run your desired command if the `<target>` score is equal to `Highest` score. 
-    - Note: Use `@p` or `@e [c=1]` in place of `<target>` if you want to limit your selection to only one.
+Wildcard (` * `) compares with all tracked scores — that includes offline players. To compare with only online players or entities, use `@a` or `@e`.
+
+:::
+
+**Command 2:** This command can be modified or expanded. It allows you to run your desired command if the `<target>` score is equal to `Highest` score. 
+-   Note: Use `@p` or `@e [c=1]` in place of `<target>` if you want to limit your selection to only one.
 
 **Example:**
 
@@ -72,7 +76,7 @@ execute as <target> if score @s <objective> = Lowest <objective> run <command>
 
 **Purpose of Each Command:**
 
-1. **Command 1:** This command compares the `Lowest` score with every other tracked score in the specified objective, and if the `Lowest` score is greater than the one being compared to, then the `Lowest` score will be assigned the value of that score. To illustrate:
+**Command 1:** This command compares the `Lowest` score with every other tracked score in the specified objective, and if the `Lowest` score is greater than the one being compared to, then the `Lowest` score will be assigned the value of that score. To illustrate:
 
 | #  |   Player   | Objective: `blocks_travelled` |   Comparison with `Lowest`  | `Lowest` after comparison |
 |:--:|:----------:|:------------------:|:---------------------------:|:-------------------------:|
@@ -80,10 +84,14 @@ execute as <target> if score @s <objective> = Lowest <objective> run <command>
 |  2 |    Kai     |         50           |    `Lowest < Kai`            |      `Lowest = 50`         |
 |  3 |   Steve    |         200          |    `Lowest < Alex`           |      `Lowest = 50`         |
 
-> Note: Wildcard (` * `) compares with all tracked scores — that includes offline players. To compare with only online players or entities, use `@a` or `@e`.
+:::info NOTE:
 
-2. This command can be modified or expanded. It allows you to run your desired command if the `<target>` score is equal to `Lowest` score. 
-    - Note: Use `@p` or `@e [c=1]` in place of `<target>` if you want to limit your selection to only one.
+Wildcard (` * `) compares with all tracked scores — that includes offline players. To compare with only online players or entities, use `@a` or `@e`.
+
+:::
+
+**Command 2:** This command can be modified or expanded. It allows you to run your desired command if the `<target>` score is equal to `Lowest` score. 
+-   Note: Use `@p` or `@e [c=1]` in place of `<target>` if you want to limit your selection to only one.
 
 **Example:**
 
@@ -101,9 +109,9 @@ execute as @a if score @s distance_travelled = Lowest distance_travelled run tag
 
 ## Get Matching Scores ( = )
 
-**Commands:**
-
 This command compares the executing target's score with other selected targets. It runs the specified command for each target with a matching score.
+
+**Command:**
 
 <CodeHeader>BP/functions/scoreboards/player/get_matching_score.mcfunction</CodeHeader>
 
@@ -112,13 +120,16 @@ execute as @a at @a [rm=0.01] if score @s <objective> = @p <objective> run say @
 ```
 ![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
-Note: In the `<command>` (where `/say` is used as an example), `@s` refers to the executing entity or player (the target), and `@p` or `@e [c=1]` refers to the entity or player being compared with.
+:::info NOTE:
+
+In the `<command>` (where `/say` is used as an example), `@s` refers to the executing entity or player (the target), and `@p` or `@e [c=1]` refers to the entity or player being compared with.
+:::
 
 **Visualisation:**
 
 ![](/assets/images/commands/comparing-scores/GetMatchingScores.gif)
 
-**Example 1,** teleport pet to owner if farther than 6 blocks:
+**Example 1:** Teleport pet to owner if farther than 6 blocks:
 
 <CodeHeader>BP/functions/scoreboards/player/get_matching_score/pet.mcfunction</CodeHeader>
 
@@ -128,7 +139,7 @@ execute as @e [tag=pet] at @a [rm=7] if score @s id = @p id run tp @s @p
 ```
 ![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
-**Example 2,** set plot owner to Creative mode and others to Adventure mode:
+**Example 2:** Set plot owner to Creative mode and others to Adventure mode:
 
 <CodeHeader>BP/functions/scoreboards/player/get_matching_score/plot.mcfunction</CodeHeader>
 
