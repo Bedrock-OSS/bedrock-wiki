@@ -114,7 +114,7 @@ This command compares the executing target's score with other selected targets. 
 <CodeHeader>BP/functions/scoreboards/player/get_matching_score.mcfunction</CodeHeader>
 
 ```yaml
-execute as @a at @a [rm=0.01] if score @s <objective> = @p <objective> run say @s and @p have matching scores!
+execute as @a at @s at @a [rm=0.01] if score @s <objective> = @p <objective> run say @s and @p have matching scores!
 ```
 ![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
@@ -133,7 +133,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 
 ```yaml
 ## Teleport to Owner
-execute as @e [tag=pet] at @a [rm=7] if score @s id = @p id run tp @s @p
+execute as @e [tag=pet] at @s at @a [rm=7] if score @s id = @p id run tp @s @p
 ```
 ![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
 
@@ -143,10 +143,10 @@ execute as @e [tag=pet] at @a [rm=7] if score @s id = @p id run tp @s @p
 
 ```yaml
 ## Set Owners to Creative Mode
-execute as @e [tag=plot] at @a [r=16] if score @s id = @p id run gamemode c @p [m=!c]
+execute as @e [tag=plot] at @s at @a [r=16] if score @s id = @p id run gamemode c @p [m=!c]
 
 ## Set Non-Owners to Adventure Mode
-execute as @e [tag=plot] at @a [r=16] unless score @s id = @p id run gamemode a @p [m=!a]
+execute as @e [tag=plot] at @s at @a [r=16] unless score @s id = @p id run gamemode a @p [m=!a]
 ```
 ![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
 
