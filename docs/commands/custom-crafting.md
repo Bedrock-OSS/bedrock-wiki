@@ -9,7 +9,7 @@ tags: [easy, guide]
 
 This is a guide on how to make a custom crafting systom with jest two command blocks. Some use cases could be a way to "craft" tools or weapons with a custom name and enchantments for a server or for a adventure map.
 
-*__This systom was originally created by CrunchyCookie. All credit for this systom goes to him. You can find his video [here](https://www.youtube.com/watch?v=pzQzldaSORs).__*
+_**This systom was originally created by CrunchyCookie. All credit for this systom goes to him. You can find his video [here](https://www.youtube.com/watch?v=pzQzldaSORs).**_
 
 :::warning
 This is not an actual way to make custom crafting recipes. This is a creative and roundabout way to make custom crafting using the clone command and droppers. For custom crafting recipes that use the crafting table, [see this wiki page](../loot/recipes).

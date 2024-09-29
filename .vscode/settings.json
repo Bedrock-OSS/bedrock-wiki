@@ -4,8 +4,5 @@
   "eslint.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   }
 }
