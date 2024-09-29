@@ -87,7 +87,7 @@ mentions:
 -   Removed `run_command` response
 -   Removed `set_block` response
 -   Removed `set_block_at_pos` response
--   Removed `set_block_property` response
+-   Removed `set_block_state` response
 -   Removed `spawn_loot` response
 -   Removed `swing` response
 -   Removed `teleport` response
@@ -130,6 +130,13 @@ mentions:
 
 -   Updated `minecraft:geometry`
     -   Added Molang permutation condition support to `bone_visibility` entries.
+
+### Events
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Renamed `set_block_property` response to `set_block_state`
 
 ## 1.20.0
 
