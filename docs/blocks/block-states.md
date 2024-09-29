@@ -22,9 +22,6 @@ Valid state values can be defined as a boolean, integer or string array - or as 
 
 **Each state may have up to 16 valid values defined. The amount of possible state value combinations ([permutations](/blocks/block-permutations)) should not exceed 65,536.**
 
-To calculate how many permutations your block has, multiply the amount of valid state values each state has together.
-For instance, the calculation for the example below would be 3 &times; 2 &times; 3 &times; 6, meaning this block has 108 possible permutations.
-
 _Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
 
 <CodeHeader>BP/blocks/custom_block.json</CodeHeader>
