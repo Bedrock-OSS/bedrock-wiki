@@ -55,9 +55,8 @@ mentions:
     -   Lists all the custom components that should be applied to this block.
 -   Added `minecraft:entity_fall_on`
     -   Contains `min_fall_distance` which determines the minimum distance an entity must fall to trigger the entity fall on event.
--   Added `minecraft:tick`
-    -   Contains `interval_range`
-    -   Contains `looping`
+-   Renamed `minecraft:queued_ticking` to `minecraft:tick`
+    -   Removed `on_tick` parameter
 
 <Tag name="experimental" />
 <Label color="red">Holiday Creator Features</Label>
@@ -70,6 +69,7 @@ mentions:
 -   Removed `minecraft:on_player_placing` trigger
 -   Removed `minecraft:on_step_off` trigger
 -   Removed `minecraft:on_step_on` trigger
+-   Removed `minecraft:random_ticking` trigger
 
 ### Events
 
@@ -274,6 +274,8 @@ mentions:
 -   Renamed `minecraft:block_collision` to `minecraft:collision_box`
 -   Updated `minecraft:crafting_table`
     -   Renamed `custom_description` parameter to `table_name`
+-   Renamed `minecraft:ticking` to `minecraft:queued_ticking`
+    -   Replaced `range` parameter with `interval_range` which is now measured in ticks rather than seconds.
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
@@ -404,8 +406,14 @@ mentions:
     -   Each condition may contain `allowed_faces` and/or `block_filter`.
 -   Added `minecraft:preventsjumping`
     -   Determines whether entities have limited jumping abilities when on this block.
+-   Added `minecraft:random_ticking` trigger
 -   Added `minecraft:rotation`
     -   Rotates this block's collision boxes and model by axis-aligned angles.
+-   Added `minecraft:ticking`
+    -   Determines the interval at which this block will tick, with pending tick data saved.
+    -   Contains `looping` which determines whether ticking will continue indefinitely.
+    -   Contains `range` which determines the random delay of the interval.
+    -   Contains `on_tick` which can trigger an event when this block ticks.
 -   Added `minecraft:unit_cube`
     -   Causes this block to display as a full block unit in size.
 -   Added `minecraft:unwalkable`
