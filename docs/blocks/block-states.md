@@ -18,9 +18,7 @@ Block states allow your blocks to have variants, each with its own functionality
 
 Valid state values can be defined as a boolean, integer or string array - or as an integer range by using an object. The first item in the values array is used as the default.
 
-### Permutation Limit
-
-**Each state may have up to 16 valid values defined. The amount of possible state value combinations ([permutations](/blocks/block-permutations)) should not exceed 65,536.**
+Each state may have up to 16 valid values defined. For integer range states, this means that the `max` value cannot be more than 15 higher than the `min` value.
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
 
