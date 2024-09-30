@@ -43,14 +43,14 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 <CodeHeader></CodeHeader>
 
 ```yaml
-#Deal 4 damage to all players
+# Deal 4 damage to all players
 /damage @a 4
 
-#Deal 3 'fire' damage to all entities of type 'sheep'
+# Deal 3 'fire' damage to all entities of type 'sheep'
 /damage @e [type=sheep] 3 fire
 
-#Deal 40 'entity attack' damage from a random player to all entities of type 'sheep'
-/damage @a 40 entity_attack entity @r [type=sheep]
+# Deal 40 'entity attack' damage from a random player to all entities of type 'sheep'
+/damage @e [type=sheep] 40 entity_attack entity @r
 ```
 
 ## Damage Cause List

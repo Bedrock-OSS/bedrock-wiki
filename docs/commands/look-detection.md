@@ -19,7 +19,7 @@ This command-technique allows you to detect when a target looks at a player/enti
 
 ## Command
 
-<CodeHeader>BP/functions/look_detector.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_looking_at.mcfunction</CodeHeader>
 
 ```yaml
 execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s [r=0.2] run <command>
@@ -47,7 +47,8 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
   - sets the execution rotation facing an entity or coordinate. Example:
       - `facing 0 0 0` facing coordinate: 0,0,0.
       - `facing entity @e [type=pig, c=1] eyes` (facing eyes of nearest pig)
-      - `facing entity @e [type=zombie, c=1] feet` (facing feet of nearest zombie)
+      - `facing entity @e [type=cow, r=30] feet` (facing eyes of cows in a 30 block radius)
+      - `facing entity @e [type=zombie] feet` (facing feet of zombies)
 - `positioned ^^^1`
   - from previous point, pushes the execution position 1 block forward in the direction of the entity/coordinate.
 - `positioned ~~-1.62~`
@@ -65,34 +66,36 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 **Examples:**
 
-1. Run a `/say` command when looking at the eyes of the nearest cow tagged 'target':
+1. Run a `/say` command when looking at the eyes of cows or sheeps tagged 'target':
 
-<CodeHeader>BP/functions/look_detector.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_looking_at/target.mcfunction</CodeHeader>
 
 ```yaml
-execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target, c=1] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
+execute as @a at @s anchored eyes facing entity @e [type=cow, tag=target] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello cow!
+execute as @a at @s anchored eyes facing entity @e [type=sheep, tag=target] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello sheep!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
-2. Run a `/say` command when looking at the position 10,20,30:
+2. Run a `/say` command when looking at the position `(10, 20, 30)` or `(6, 7, 8)`:
 
-<CodeHeader>BP/functions/look_detector.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_looking_at/position.mcfunction</CodeHeader>
 
 ```yaml
 execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello block!
+execute as @a at @s anchored eyes facing 6 7 8 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s [r=0.2] run say hello block!
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
 **Alternative Structure:**
 
-<CodeHeader>BP/functions/look_detector.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_looking_at.mcfunction</CodeHeader>
 
 ```yaml
 execute as <target> at <coordinate | entity> facing entity @s eyes positioned as @s positioned ^^^1 rotated as @s positioned ^^^1 if entity @s[r=0.02] run <command>
 ```
 ![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
-If you don't need to detect the target looking at the *eyes* of an entity but their feet or a coordinate, you may use this structure which negates the need for the `anchored eyes` condition as the execution position begins from the entity/coordinate rather than the target.
+If you don't need to detect the target looking at the *eyes* of an entity but their feet or a coordinate, you may use this structure which negates the need for the `anchored eyes` instruction as the execution position begins from the entity/coordinate rather than the target.
 
 ## Calculate Viewing Angle
 
@@ -108,5 +111,4 @@ or, the inverse to calculate what viewing angle a certain radius / distance (`r`
 > Note: Depending on your calculator, you'll need to convert from radians to degrees.
 
 With the above calculation, the example value of `r=0.2` leaves us with roughly a 12° angle by which we can miss the exact target in either direction and still have it considered "close enough."
-
 

@@ -11,7 +11,7 @@ description: These command-techniques allow you to detect certain player/entity 
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
 
-[Image Credits: Official Minecraft Wiki  -  ](https://minecraft.wiki/)__[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)__
+[Image Credits: Unofficial Minecraft Wiki  -  ](https://minecraft.wiki/)__[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)__
 
 These command-techniques allow you to detect certain player/entity 'states' and subsequently execute your desired commands.
 
@@ -33,19 +33,22 @@ This technique allows you to detect when your target is/isn't moving, accounting
 - Make sure you add the `is_moving` scoreboard objective:
     - `/scoreboard objectives add is_moving dummy`
 
-<CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_moving.mcfunction</CodeHeader>
 
 ```yaml
-#moving
+## Movement Detection
+### Mark as not moving
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
+### Mark as moving
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-#update point
+## Update Point
+### Delete previous point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
+### Mark current point
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
-
-#Your Commands Here (example)
+## Your Commands Here (Examples)
 execute as @a [scores={is_moving=0}] run say I'm not moving
 execute as @a [scores={is_moving=1}] run say I started moving
 execute as @a [scores={is_moving=1..}] run say I'm still moving
@@ -79,27 +82,34 @@ If you desperately need to detect walking and sprinting separately **solely usin
 Walk/Sprint Detection may not work as intended with effects & enchantments.
 :::
     
-<CodeHeader>BP/functions/states/is_moving.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_moving.mcfunction</CodeHeader>
 
 ```yaml
-#moving
+## Movement Detection
+### Mark as not moving
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, r=0.1252] run scoreboard players set @s is_moving 0
+### Mark as moving
 execute as @a at @s positioned ~~10000~ unless entity @e [type=leash_knot, r=0.1252] run scoreboard players add @s is_moving 1
 
-#walking
+## Walk Detection
+### Mark as not walking
 scoreboard players set @a is_walking 0
+### Mark as walking
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.21585, r=0.2805] run scoreboard players set @s is_walking 1
 
-#sprinting
+## Sprint Detection
+### Mark as not sprinting
 scoreboard players set @a is_sprinting 0
+### Mark as sprinting
 execute as @a at @s positioned ~~10000~ if entity @e [type=leash_knot, rm=0.2806, r=0.9] run scoreboard players set @s is_sprinting 1
 
-#update point
+## Update Point
+### Delete previous point
 execute as @e [type=leash_knot] at @s unless entity @s [y=-80, dy=9974] run kill @s
+### Mark current point
 execute at @a positioned ~~10000~ run summon leash_knot ~~~
 
-
-#Your Commands Here (example)
+## Your Commands Here (Examples)
 execute as @a [scores={is_walking=0}] run say I'm not walking
 execute as @a [scores={is_walking=1}] run say I'm walking
 ```
@@ -138,14 +148,16 @@ Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 - Make sure you add the `is_sleeping` scoreboard objective:
     - `/scoreboard objectives add is_sleeping dummy`
 
-<CodeHeader>BP/functions/states/is_sleeping.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_sleeping.mcfunction</CodeHeader>
 
 ```yaml
+## Sleep Detection
+### Mark as not sleeping
 execute as @a at @s if entity @s [y=~0.3, dy=0] scoreboard players set @s is_sleeping 0
+### Mark as sleeping
 execute as @a at @s unless entity @s [y=~0.3, dy=0] run scoreboard players add @s is_sleeping 1
 
-
-#Your Commands Here (example)
+## Your Commands Here (Examples)
 execute as @a [scores={is_sleeping=0}] run say I'm not sleeping
 execute as @a [scores={is_sleeping=1}] run say I started sleeping
 execute as @a [scores={is_sleeping=1..}] run say I'm still sleeping
@@ -180,14 +192,16 @@ Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the
 - Make sure you add the `is_sneaking` scoreboard objective:
     - `/scoreboard objectives add is_sneaking dummy`
 
-<CodeHeader>BP/functions/states/is_sneaking.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_sneaking.mcfunction</CodeHeader>
 
 ```yaml
+## Sneak Detection
+### Mark as not sneaking
 execute as @a at @s if entity @s [y=~1.5, dy=0] run scoreboard players set @s is_sneaking 0
+### Mark as sneaking
 execute as @a at @s unless entity @s [y=~1.5, dy=0] if entity @s [y=~0.7, dy=0] run scoreboard players add @s is_sneaking 1
 
-
-#Your Commands Here (example)
+## Your Commands Here (Examples)
 execute as @a [scores={is_sneaking=0}] run say I'm not sneaking
 execute as @a [scores={is_sneaking=1}] run say I started sneaking
 execute as @a [scores={is_sneaking=1..}] run say I'm still sneaking
@@ -227,14 +241,16 @@ Swimming in water or gliding with Elytra will be detected as crawling.
 - Make sure you add the `is_crawling` scoreboard objective:
     - `/scoreboard objectives add is_crawling dummy`
 
-<CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
+## Crawl Detection
+### Mark as not crawling
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
+### Mark as crawling
 execute as @a at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_crawling 1
 
-
-#Your Commands Here (example)
+## Your Commands Here (Examples)
 execute as @a [scores={is_crawling=0}] run say I'm not crawling
 execute as @a [scores={is_crawling=1}] run say I started crawling
 execute as @a [scores={is_sneaking=1..}] run say I'm still crawling
@@ -269,19 +285,26 @@ If you desperately need to detect all three states separately **solely using com
    - ![issue3](/assets/images/commands/movement-detections/issue3.png)
 :::
     
-<CodeHeader>BP/functions/states/is_crawling.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/states/player/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
+## Set Player States
+### Not gliding
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_gliding 0
+### Not crawling
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_crawling 0
+### Not swimming
 execute as @a at @s if entity @s [y=~0.7, dy=0] run scoreboard players set @s is_swimming 0
 
+## Detect Player States
+### Gliding
 execute as @a [hasitem={item=elytra,location=slot.armor.chest}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] if block ~~1.01~ air if block ~~-0.01~ air rotated ~ 0 if block ^^1.01^-1 air if block ^^-0.01^-1 air if block ^^1.01^1 air if block ^^-0.01^1 air run scoreboard players add @s is_gliding 1
+### Crawling
 execute as @a [scores={is_gliding=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] unless block ~~~ water unless block ~~1.01~ water run scoreboard players add @s is_crawling 1
+### Swimming
 execute as @a [scores={is_gliding=0,is_crawling=0}] at @s unless entity @s [y=~0.7, dy=0] if entity @s [y=~0.3, dy=0] run scoreboard players add @s is_swimming 1
 
-
-#Your Commands Here (example)
+## Your Commands Here (Examples)
 execute as @a [scores={is_swimming=0}] run say I'm not swimming
 execute as @a [scores={is_crawling=1}] run say I started crawling
 execute as @a [scores={is_gliding=1..}] run say I'm still gliding
@@ -298,4 +321,21 @@ execute as @a [scores={is_gliding=1..}] run say I'm still gliding
 - **Command 6:** If the player's hitbox is *not* higher than 0.6 blocks, is not gliding or crawling, we mark them as swimming (1) by adding a score.
 - **Command 7, 8, 9:** These are example commands (for each state) which can be modified / expanded.
 
+## Folder Structure
 
+If you are working with functions, your folder structure may look something like this:
+
+<FolderView
+	:paths="[
+    'BP',
+    'BP/functions',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+    'BP/functions/states',
+    'BP/functions/states/player',
+    'BP/functions/states/player/is_moving.mcfunction',
+    'BP/functions/states/player/is_sleeping.mcfunction',
+    'BP/functions/states/player/is_crawling.mcfunction',
+    'BP/functions/tick.json'
+]"
+></FolderView>

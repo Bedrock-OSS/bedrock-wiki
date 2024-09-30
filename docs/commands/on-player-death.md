@@ -24,17 +24,19 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/events/on_player_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/events/player/on_death.mcfunction</CodeHeader>
 
 ```yaml
+## Set Player States
+### Not alive
 scoreboard players set @a [scores={is_alive=!2}] is_alive 0
+### Alive
 scoreboard players set @e [type=player] is_alive 1
 
-
-#Your Commands Here (example)
+## Your Commands Here (Example)
 execute as @a [scores={is_alive=0}] run say I died
 
-
+## Mark that Commands for Dead Players Have Been Executed
 scoreboard players set @a [scores={is_alive=0}] is_alive 2
 ```
 
@@ -62,13 +64,13 @@ Just make sure to follow the given order and properly apply the ` scores={alive=
 
 ## Tick JSON
 
-If you are using functions instead of command blocks, the ` on_player_death ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the ` on_death ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
 {
   "values": [
-    "on_player_death"
+    "events/player/on_death"
   ]
 }
 ```
@@ -82,7 +84,8 @@ If using functions, your pack folder structure will be as follows:
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/events',
-    'BP/functions/events/on_player_death.mcfunction',
+    'BP/functions/events/player',
+    'BP/functions/events/player/on_death.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
@@ -91,7 +94,7 @@ If using functions, your pack folder structure will be as follows:
 
 The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
 - ` is_alive_0fe678 `
-- ` on_player_death_0fe678.mcfunction `
+- ` on_death_0fe678.mcfunction `
 
 :::
 
@@ -109,12 +112,16 @@ If two or more players are teleported to the same point and one of them dies but
 <CodeHeader>BP/functions/states/is_dead.mcfunction</CodeHeader>
 
 ```yaml
+## Set Player States
+### Not dead
 scoreboard players set @e [type=player] is_dead 0
+### Dead
 execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard players add @s is_dead 1
 
-
-#Your Commands Here (example)
+## Your Commands Here (examples)
+### Summon armor stand at death position
 execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
+### Death message in chat
 execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
 ```
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)

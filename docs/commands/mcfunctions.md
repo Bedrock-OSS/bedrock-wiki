@@ -33,17 +33,59 @@ Functions are useful in many ways to reduce the time spent going from command bl
 ]"
 ></FolderView>
 
+To help create a consistent format, make it easier for everyone to follow, and to maintain uniformity across your functions, it is advised to follow these best-practices for your folder structure:
+
+1. Folders and files in a pack must be named using `snake_case`
+    - This means only **lowercase** alphanumeric characters and underscores (` _ `) are allowed.
+    - ✅️ `BP/functions/scoreboards/objective/add_all.mcfunction`
+    - ❌️ `BP/functions/SCOREBOARDS/Objective/Add-all.mcfunction`
+2. They must be properly nested:
+    - ✅️ `function teleport/zone/hell`
+    - ❌ `function teleport_hellzone`
+3. The names must follow an `action_object` structure. Meaning verbs should come before subjects.
+    - ✅️ `add_all`
+    - ✅️ `shuffle_position`
+    - ❌️ `all_add`
+    - ❌️ `position_shuffle`
+4. The total character length of any path must not exceed 80 characters (console limitation).
+5. Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
+
+✅️ Consistent:
+```
+BP/functions/abilities/ice_blast.mcfunction
+BP/functions/events/player/on_death.mcfunction
+BP/functions/events/world/on_initialise.mcfunction
+BP/functions/quests/jungle/1.mcfunction
+```
+- All content folders `abilities`, `events`, and `quests` are consistently pluralized.
+- The content folders in `events` are also consistent, as both `player` and `world` are singular.
+
+❌️ Inconsistent:
+```
+BP/functions/ability/ice_blast.mcfunction
+BP/functions/event/players/on_death.mcfunction
+BP/functions/event/world/on_initialise.mcfunction
+BP/functions/quests/jungle/1.mcfunction
+```
+- Only `quests` content folder is pluralized while `ability`, and `event` are singular.
+- Also, in the `event` folder, the `players` folder is plural while `world` is singular.
+
 ## Notes For Beginners
+
+*Below is an example function file for beginners reference:*
 
 <CodeHeader>BP/functions/effects.mcfunction</CodeHeader>
 
 ```yaml
-#Spawn Effects
+# These effects are for the spawn
 effect @a [tag=atSpawn] regeneration 12 255 true
 effect @a [tag=atSpawn] saturation 12 255 true
 effect @a [tag=atSpawn] weakness 12 255 true
+
+# These effects are for the nether
+effect @a [tag=inNether] fire_resistance 12 255 true
 ```
-- Commands in a function may not begin with a slash `/`. Each new line in a function file represents a new command. You may start a line with `#` to add comments.
+- Commands in a function may not begin with a slash (` / `). Each new line in a function file represents a new command (ignored if left blank). You may start a line with a hashtag ( ` # `) to add comments — the space after `#` is only a format preference. For comments style guide for functions, see the section **[below](#comments-style-guide)**.
 
 - All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
@@ -52,6 +94,55 @@ effect @a [tag=atSpawn] weakness 12 255 true
 - It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
 
 - Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
+
+## Comments Style Guide
+
+- When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
+- *Optionally*, to further distinguish these levels, you can apply different styles:
+    - level 1 headers - **# UPPERCASE**
+    - level 2 headers - **## Title Case**
+    - level 3 headers - **### Sentence Case**
+- Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
+
+
+<Spoiler title="Example Function File">
+
+
+<CodeHeader>BP/functions/abilities/fire_trail.mcfunction</CodeHeader>
+
+```yaml
+# ON PLAYER ITEM DROP
+
+## Give Effects
+### Fire resistance
+execute at @e [type=item, name="Fire Trail Ability"] run effect @p [r=3] fire_resistance 10 255
+### Speed
+execute at @e [type=item, name="Fire Trail Ability"] run effect @p [r=3] speed 10 1 true
+
+## Add Particle Time (10s)
+execute at @e [type=item, name="Fire Trail Ability"] run scoreboard players set @p [r=3] abilities.fire_trail 200
+
+## Delete Item
+kill @e [type=item, name="Fire Trail Ability"]
+
+
+# ENTITY TIMER
+
+## Emit Particle Trail
+execute at @a [scores={abilities.fire_trail=1..}] run particle minecraft:basic_flame_particle ~~~
+
+## Countdown Timer
+scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_trail 1
+```
+
+
+</Spoiler>
+
+Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
+
+This practice helps create a consistent format, making it easier for everyone to follow, and maintain uniformity across your functions.
+
+For Scoreboard and Tags style guide, see **[here](/meta/style-guide#scoreboard-and-tags)**.
 
 ## Creating A Function
 
@@ -120,7 +211,7 @@ Functions can be executed in-game by typing `/function name_of_function`. This w
 
 Nested functions, for example `BP/functions/lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function lobby/items/1`
 
-## tick.json
+## Tick JSON
 
 The final file within a function is the **tick.json** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block). It is located in the `BP/functions` folder. By default, functions running in this file execute at origin `0, 0, 0` in the overworld.
 
