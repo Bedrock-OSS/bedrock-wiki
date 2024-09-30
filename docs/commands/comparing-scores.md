@@ -26,7 +26,7 @@ scoreboard players operation Highest <objective> > * <objective>
 ## Your Commands Here (Example)
 execute as <target> if score @s <objective> = Highest <objective> run <command>
 ```
-![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
+![Chain of 2 Command Blocks](/assets/images/commands/commandBlockChain/2.png)
 
 **Command 1:** This command compares the `Highest` score with every other tracked score in the specified objective, and if the `Highest` score is lesser than the one being compared to, then the `Highest` score will be assigned the value of that score. To illustrate:
 
@@ -59,7 +59,7 @@ scoreboard players operation Highest kills > * kills
 tag @a remove topKills
 execute as @a if score @s kills = Highest kills run tag @s add topKills
 ```
-![commandBlockChain3](/assets/images/commands/commandBlockChain/3.png)
+![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
 
 ## Get Lowest Score ( < )
 
@@ -74,7 +74,7 @@ scoreboard players operation Lowest <objective> < * <objective>
 ## Your Commands Here
 execute as <target> if score @s <objective> = Lowest <objective> run <command>
 ```
-![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
+![Chain of 2 Command Blocks](/assets/images/commands/commandBlockChain/2.png)
 
 **Command 1:** This command compares the `Lowest` score with every other tracked score in the specified objective, and if the `Lowest` score is greater than the one being compared to, then the `Lowest` score will be assigned the value of that score. To illustrate:
 
@@ -107,7 +107,7 @@ scoreboard players operation Lowest distance_travelled < * distance_travelled
 tag @a remove eliminate
 execute as @a if score @s distance_travelled = Lowest distance_travelled run tag @s add eliminate
 ```
-![commandBlockChain3](/assets/images/commands/commandBlockChain/3.png)
+![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
 
 ## Get Matching Scores ( = )
 
@@ -120,7 +120,7 @@ This command compares the executing target's score with other selected targets. 
 ```yaml
 execute as @a at @s at @a [rm=0.01] if score @s <objective> = @p <objective> run say @s and @p have matching scores!
 ```
-![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
+![One Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
 :::info NOTE:
 
@@ -139,7 +139,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 ## Teleport to Owner
 execute as @e [tag=pet] at @s at @a [rm=7] if score @s id = @p id run tp @s @p
 ```
-![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
+![One Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
 
 **Example 2:** Set plot owner to Creative mode and others to Adventure mode:
 
@@ -152,6 +152,6 @@ execute as @e [tag=plot] at @s at @a [r=16] if score @s id = @p id run gamemode 
 ## Set Non-Owners to Adventure Mode
 execute as @e [tag=plot] at @s at @a [r=16] unless score @s id = @p id run gamemode a @p [m=!a]
 ```
-![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
+![Chain of 2 Command Blocks](/assets/images/commands/commandBlockChain/2.png)
 
 
