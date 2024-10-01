@@ -48,7 +48,8 @@ Check the Microsoft docs to see what world events are available within Minecraft
 -   Before events fire before an event happens and are read-only but can be canceled. [Before Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/worldbeforeevents).
 -   After events fire after an event has run and cannot be canceled. [After Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/worldafterevents)
 -   After events should always be used unless the event needs to be canceled.
-    :::
+
+:::
 
 In order to subscribe to an event, get the `afterEvents` property from the world object. In this example we will subscribe to the block break event.
 
@@ -77,7 +78,8 @@ Check the Microsoft docs to see what system events are available within Minecraf
 -   Before events fire before an event happens and are read-only but can be canceled. [Before Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systembeforeevents).
 -   After events fire after an event has run and cannot be canceled. [After Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systemafterevents)
 -   Both types of events are used for different purposes.
-    :::
+
+:::
 
 Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceedes a performance boundary, depending on the configuration of the script environment.
 
