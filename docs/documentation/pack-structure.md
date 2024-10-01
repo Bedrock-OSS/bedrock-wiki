@@ -11,6 +11,7 @@ mentions:
     - TheItsNameless
     - JaylyDev
     - SmokeyStack
+    - QuazChick
 ---
 
 <FolderView :paths="[
@@ -110,5 +111,7 @@ mentions:
     'RP/textures/entity/example.png',
     'RP/textures/items/example.png',
     'RP/textures/particle/example.png',
+    'RP/ui/_global_variables.json',
+    'RP/ui/_ui_defs.json',
     'RP/ui/\*.json'
-]"></FolderView>
+]" />
