@@ -84,19 +84,19 @@ An array of objects specifying the buttons to show in the dialogue. Optional.
 
 ```json
 "buttons": [
-  {
-    "name": "Button One",
-    "commands": [
-      "/say Button One Pressed!"
-    ]
-  },
-  {
-    "name": "Button Two",
-    "commands": [
-      "/say Button Two Pressed!",
-      "/say Secondary Command for Button Two"
-    ]
-  }
+    {
+        "name": "Button One",
+        "commands": [
+            "/say Button One Pressed!"
+        ]
+    },
+    {
+        "name": "Button Two",
+        "commands": [
+            "/say Button Two Pressed!",
+            "/say Secondary Command for Button Two"
+        ]
+    }
 ]
 ```
 
@@ -108,12 +108,12 @@ In `on_open_commands`, `on_close_commands`, and the `commands` property of each 
 
 ```json
 "buttons": [
-  {
-    "name": "Levitation Please",
-    "commands": [
-      "/effect @initiator levitation"
-    ]
-  }
+    {
+        "name": "Levitation Please",
+        "commands": [
+            "/effect @initiator levitation"
+        ]
+    }
 ]
 ```
 
@@ -127,11 +127,11 @@ All of the dialogue properties that will be displayed to the user can also be tr
 
 ```json
 "npc_name": {
-  "rawtext": [
-    {
-      "translate": "entity.endermite.name"
-    }
-  ]
+    "rawtext": [
+        {
+            "translate": "entity.endermite.name"
+        }
+    ]
 }
 ```
 
@@ -209,21 +209,21 @@ To avoid this add the `minecraft:interaction` to the entity which will replace t
 
 ```json
 "minecraft:interact": {
-  "interactions": [
-    {
-      "on_interact": {
-        "filters": {
-          "all_of": [
-            {
-              "test": "is_family",
-              "subject": "other",
-              "value": "player"
+    "interactions": [
+        {
+            "on_interact": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "other",
+                            "value": "player"
+                        }
+                    ]
+                }
             }
-          ]
         }
-      }
-    }
-  ]
+    ]
 }
 ```
 
@@ -289,49 +289,56 @@ This dialogue file features two dialogues, each with two teleport buttons, and a
 
 Lastly, create an item that will open the dialogue when right-clicked/interacted with. This item uses the Ender Pearl texture, but you could give it custom texture.
 
-<CodeHeader>items/teleport_menu.json</CodeHeader>
+#### Item JSON
+
+<CodeHeader>BP/items/teleport_menu.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.16.100",
+    "format_version": "1.21.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:teleport_menu",
-            "category": "items"
+            "menu_category": {
+                "category": "items"
+            }
         },
         "components": {
-            "minecraft:on_use": {
-                "on_use": {
-                    "event": "open_menu",
-                    "target": "self"
-                }
-            },
-            "minecraft:foil": true,
-            "minecraft:icon": {
-                "texture": "ender_pearl"
-            },
+            "minecraft:icon": "ender_pearl",
+            "minecraft:glint": true,
             "minecraft:display_name": {
                 "value": "Teleport Menu"
-            }
-        },
-        "events": {
-            "open_menu": {
-                "run_command": {
-                    "command": ["dialogue open @e[type=npc,c=1] @s main_teleport_menu"],
-                    "target": "player"
-                }
-            }
+            },
+            "minecraft:custom_components": ["wiki:teleport_menu"]
         }
     }
 }
+```
+
+#### Custom Component Script
+
+<CodeHeader>BP/scripts/teleportMenu.js</CodeHeader>
+
+```js
+import { world } from "@minecraft/server";
+
+const TeleportMenuItemComponent = {
+    onUse({ source }) {
+        source.runCommand("dialogue open @e[type=npc, c=1] @s main_teleport_menu");
+    },
+};
+
+world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
+    itemComponentRegistry.registerCustomComponent("wiki:teleport_menu", TeleportMenuItemComponent);
+});
 ```
 
 ### Testing
 
 When you are done, package these files along with the manifest, and import it into Minecraft. Start a new flat world, and make sure to enable cheats and experiments.
 
-Once you are in the world, use `/function setup` to create the ticking area and NPC entity. Then use `/give @s dialogue:teleport_menu` to give yourself the teleportation item. Switch to survival mode (NPC dialogues do not work in Creative), hold the item, and right-click. You should see your dialogue appear.
+Once you are in the world, use `/function setup` to create the ticking area and NPC entity. Then use `/give @s wiki:teleport_menu` to give yourself the teleportation item. Switch to survival mode (NPC dialogues do not work in Creative), hold the item, and right-click. You should see your dialogue appear.
 
 ## Credits
 
-This tutorial is based off of [this page](https://docs.microsoft.com/en-us/minecraft/creator/documents/npcdialogue) in the Minecraft Creator documentation.
+This tutorial is based off of [this page](https://learn.microsoft.com/minecraft/creator/documents/npcdialogue) in the Minecraft Creator documentation.
