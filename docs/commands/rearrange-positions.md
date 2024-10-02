@@ -66,13 +66,13 @@ An ID system is required to index the position of all targets from 1 to N, allow
 
 ```yaml
 ## Register New Players to the ID Objective
-scoreboard players add @e [name="Fake Player"] id 0
+scoreboard players add @a id 0
 
 ## Create New ID
-execute if entity @e [name="Fake Player", scores={id=0}] run scoreboard players add Total id 1
+execute if entity @a [scores={id=0}] run scoreboard players add Total id 1
 
 ## Assign the New ID
-scoreboard players operation @r [type=armor_stand, name="Fake Player", scores={id=0}] id = Total id
+scoreboard players operation @r [scores={id=0}] id = Total id
 ```
 
 <br>
@@ -129,7 +129,7 @@ execute as @a [tag=posAllocated] at @s run kill @e [type=armor_stand, name="Posi
 # ENTITY COUNTER
 
 ## Get Player Count of Players Without a Position Allocated
-scoreboard players set * count 0
+scoreboard players set NonAllocatedPlayers count 0
 execute as @a [tag=!posAllocated] run scoreboard players add NonAllocatedPlayers count 1
 
 ## Loop Function if 2+ Players Are Not Allocated a Position
@@ -158,13 +158,13 @@ If you wish to add the objectives automatically as soon as you load the world, y
 ### Add objective
 scoreboard objectives add world dummy
 ### Register to objective
-scoreboard players add initialised world 0
+scoreboard players add Initialised world 0
 
 ## Commands to Execute
-execute if score initialised world matches 0 run function scoreboards/objective/add_all
+execute if score Initialised world matches 0 run function scoreboards/objective/add_all
 
 ## Mark as Initialised
-scoreboard players set initialised world 1
+scoreboard players set Initialised world 1
 ```
 
 ## Tick JSON
