@@ -22,7 +22,7 @@ export default {
   "/documentation/block-model-materials": "/blocks/block-components#render-methods",
   "/documentation/block-shapes": "/blocks/block-shapes",
   "/documentation/block-tags": "/blocks/block-tags",
-  "/documentation/dummy-components": "/entity/dummy-components",
+  "/documentation/dummy-components": "/entities/dummy-components",
   "/documentation/emojis": "/concepts/emojis",
   "/documentation/item-groups": "/items/item-groups",
   "/documentation/json-ui": "/json-ui/json-ui-documentation",
@@ -32,6 +32,7 @@ export default {
   "/documentation/tellraw": "/commands/tellraw",
 
   "/entities/entities-intro": "/entities/entity-intro-bp",
+  "/entities/npc-dialogs": "/entities/npc-dialogues",
 
   "/items/3d-items": "/items/attachables",
   "/items/item-categories": "/items/creative-categories",
@@ -46,7 +47,9 @@ export default {
   "/knowledge/using-schemas": "/meta/using-schemas",
   "/knowledge/version-control": "/meta/version-control",
 
+  "/scripting/gametest-qna": "/meta/gametest-qna",
   "/scripting/saving_loading": "/scripting/saving-loading",
+  "/scripting/scripting-editor-qna": "/meta/scripting-editor-qna",
 
   "/troubleshooting/entities": "/entities/troubleshooting-entities",
   "/troubleshooting/items": "/items/troubleshooting-items",
@@ -67,7 +70,7 @@ export default {
   "/tutorials/fake_blocks": "/blocks/fake-blocks",
   "/tutorials/invulnerable-entities": "/entities/invulnerable-entities",
   "/tutorials/item-models": "/items/attachables",
-  "/tutorials/npc-dialogs": "/entities/npc-dialogs",
+  "/tutorials/npc-dialogs": "/entities/npc-dialogues",
   "/tutorials/pathfinding-entities": "/entities/pathfinding-entities",
   "/tutorials/player-geometry": "/visuals/player-geometry",
   "/tutorials/remove-shadows": "/visuals/remove-shadows",
@@ -82,12 +85,9 @@ export default {
   "/vanilla-usage/components": "/entities/vanilla-usage-components",
   "/vanilla-usage/spawn-rules": "/entities/vanilla-usage-spawn-rules",
 
+  "/visuals/deferred-qna": "/meta/deferred-qna",
   "/visuals/entity-visuals-intro": "/entities/render-controllers",
   "/visuals/render-controllers": "/entities/render-controllers",
 
   "/world-generation/randomized-structure-loot": "/loot/randomized-structure-loot",
-
-  "/visuals/deferred-qna": "/meta/deferred-qna",
-  "/scripting/gametest-qna": "/meta/gametest-qna",
-  "/scripting/scripting-editor-qna": "/meta/scripting-editor-qna",
 } satisfies Redirects;

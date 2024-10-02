@@ -1,5 +1,5 @@
 ---
-title: NPC Dialogs
+title: NPC Dialogues
 category: General
 tags:
     - intermediate
@@ -17,9 +17,9 @@ mentions:
 
 Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons. They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal add-on.
 
-## Dialog Files
+## Dialogue Files
 
-NPC dialogue data is stored in dialogue files, which are stored in the `dialogue` folder in the root of the behavior pack. Here is a basic NPC dialog file:
+NPC dialogue data is stored in dialogue files, which are stored in the `dialogue` folder in the root of the behavior pack. Here is a basic NPC dialogue file:
 
 <CodeHeader>dialogue/example.diag.json</CodeHeader>
 
@@ -141,7 +141,7 @@ The translation key used should then be specified in the resource pack's languag
 
 The `/dialogue` command is used to open and control dialogues. The command looks like this: `/dialogue open <npc: target> <player: target> [sceneName:string]`
 
--   `<npc: target>`: A selector pointing to any entity with the `minecraft:npc` component, such as the vanilla NPC. This determines where dialog commands are executed from, as well as the appearance of the NPC in the dialogue.
+-   `<npc: target>`: A selector pointing to any entity with the `minecraft:npc` component, such as the vanilla NPC. This determines where dialogue commands are executed from, as well as the appearance of the NPC in the dialogue.
 -   `<player: target>`: A selector pointing to the player who will see the dialogue.
 -   `[sceneName:string]`: A string matching the `scene_tag` of the dialogue to be shown. Optional, if not present, the last dialogue shown by the NPC will be shown.
 
