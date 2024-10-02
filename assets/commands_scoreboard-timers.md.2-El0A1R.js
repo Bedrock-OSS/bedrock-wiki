@@ -32,8 +32,8 @@ import{_ as l}from"./chunks/7.58FQPVLC.js";import{_ as r,e as p,t as a,C as n,Q 
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">## Chat Message (every 10m)</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">scoreboard players operation ChatMessage events %= 2h ticks</span></span>
-<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">execute if score chatMessage events matches 0 if score ChatMessage intervals matches 1.. run say Technoblade never dies!</span></span>
-<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">execute if score chatMessage events matches 0 if score ChatMessage intervals matches 1.. run scoreboard players remove ChatMessage intervals 1</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">execute if score ChatMessage events matches 0 if score ChatMessage intervals matches 1.. run say Technoblade never dies!</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">execute if score ChatMessage events matches 0 if score ChatMessage intervals matches 1.. run scoreboard players remove ChatMessage intervals 1</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">## Speed Effect (every 30s)</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">scoreboard players operation SpeedEffect events %= 30s ticks</span></span>
