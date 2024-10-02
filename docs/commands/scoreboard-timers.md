@@ -154,8 +154,8 @@ scoreboard players operation * events = Timer ticks
 
 ## Chat Message (every 10m)
 scoreboard players operation ChatMessage events %= 2h ticks
-execute if score chatMessage events matches 0 if score ChatMessage intervals matches 1.. run say Technoblade never dies!
-execute if score chatMessage events matches 0 if score ChatMessage intervals matches 1.. run scoreboard players remove ChatMessage intervals 1
+execute if score ChatMessage events matches 0 if score ChatMessage intervals matches 1.. run say Technoblade never dies!
+execute if score ChatMessage events matches 0 if score ChatMessage intervals matches 1.. run scoreboard players remove ChatMessage intervals 1
 
 ## Speed Effect (every 30s)
 scoreboard players operation SpeedEffect events %= 30s ticks
