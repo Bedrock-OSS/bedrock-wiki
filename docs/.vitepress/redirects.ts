@@ -22,6 +22,7 @@ export default {
   "/documentation/block-model-materials": "/blocks/block-components#render-methods",
   "/documentation/block-shapes": "/blocks/block-shapes",
   "/documentation/block-tags": "/blocks/block-tags",
+  "/documentation/creative-categories": "/documentation/menu-categories",
   "/documentation/dummy-components": "/entities/dummy-components",
   "/documentation/emojis": "/concepts/emojis",
   "/documentation/item-groups": "/items/item-groups",
