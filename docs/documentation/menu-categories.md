@@ -1,26 +1,26 @@
 ---
 title: Menu Categories
 mentions:
-  - Warhead51707
-  - yanasakana
-  - SirLich
-  - SmokeyStack
-  - MedicalJewel105
-  - Chikorita-Lover
-  - MiemieMethod
-  - retr0cube
-  - TheItsNameless
-  - QuazChick
+    - Warhead51707
+    - yanasakana
+    - SirLich
+    - SmokeyStack
+    - MedicalJewel105
+    - Chikorita-Lover
+    - MiemieMethod
+    - retr0cube
+    - TheItsNameless
+    - QuazChick
 description: Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
 ---
 
 Menu categories determine where items and blocks appear inside of the creative inventory and recipe book.
 
-- A `category` can be defined to place the item under a tab (such as construction). Click [here](#list-of-categories) for a list of valid categories.
+-   A `category` can be defined to place the item under a tab (such as construction). Click [here](#list-of-categories) for a list of valid categories.
 
-- A `group` specifies which expandable group the item is placed into. If you use a custom value, a new expandable group won't be created, however items with the group will be placed next to each other in the creative inventory. Click [here](#list-of-groups) for a list of expandable groups.
+-   A `group` specifies which expandable group the item is placed into. If you use a custom value, a new expandable group won't be created, however items with the group will be placed next to each other in the creative inventory. Click [here](#list-of-groups) for a list of expandable groups.
 
-- You can also set `is_hidden_in_commands` to true to remove this block/item from commands, such as `/give` and `/setblock`.
+-   You can also set `is_hidden_in_commands` to true to remove this block/item from commands, such as `/give` and `/setblock`.
 
 If `menu_category` is omitted, the item will only be accessible through commands and won't appear in the creative inventory or recipe book.
 
@@ -30,9 +30,9 @@ If `menu_category` is omitted, the item will only be accessible through commands
 
 ```json
 "menu_category": {
-  "category": "construction", // Tab the item is placed under
-  "group": "itemGroup.name.door", // Optional - Group the item is placed into
-  "is_hidden_in_commands": false // Optional - default is false (item is usable in commands)
+    "category": "construction", // Tab the item is placed under
+    "group": "itemGroup.name.door", // Optional - Group the item is placed into
+    "is_hidden_in_commands": false // Optional - default is false (item is usable in commands)
 }
 ```
 
@@ -46,16 +46,16 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 
 ```json
 {
-  "format_version": "1.20.50",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:balsa_wood",
-      "menu_category": {
-        "category": "nature",
-        "group": "itemGroup.name.wood" // Placed into an expandable group
-      }
+    "format_version": "1.21.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:balsa_wood",
+            "menu_category": {
+                "category": "nature",
+                "group": "itemGroup.name.wood" // Placed into an expandable group
+            }
+        }
     }
-  }
 }
 ```
 
@@ -65,16 +65,16 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 
 ```json
 {
-  "format_version": "1.20.50",
-  "minecraft:item": {
-    "description": {
-      "identifier": "wiki:dagger",
-      "menu_category": {
-        "category": "equipment",
-        "is_hidden_in_commands": true // Item cannot be used in commands
-      }
+    "format_version": "1.21.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:dagger",
+            "menu_category": {
+                "category": "equipment",
+                "is_hidden_in_commands": true // Item cannot be used in commands
+            }
+        }
     }
-  }
 }
 ```
 
@@ -83,7 +83,7 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 _For use with `menu_category` parameter, `category`._
 
 | Category     | Description                                              |
-|--------------|----------------------------------------------------------|
+| ------------ | -------------------------------------------------------- |
 | construction | Added to the "Contruction" tab.                          |
 | equipment    | Added to the "Equipment" tab.                            |
 | items        | Added to the "Items" tab.                                |
@@ -95,6 +95,7 @@ _For use with `menu_category` parameter, `category`._
 _For use with the `menu_category` parameter, `group`._
 
 <!-- page_dumper_start -->
+
 | Creative Categories:              |
 | --------------------------------- |
 | itemGroup.name.anvil              |
@@ -179,5 +180,6 @@ _For use with the `menu_category` parameter, `group`._
 | itemGroup.name.wool               |
 | itemGroup.name.woolCarpet         |
 
-*Last updated for 1.21.0*
+_Last updated for 1.21.0_
+
 <!-- page_dumper_end -->
