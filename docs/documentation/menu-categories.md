@@ -84,7 +84,7 @@ _For use with `menu_category` parameter, `category`._
 
 | Category     | Description                                              |
 | ------------ | -------------------------------------------------------- |
-| construction | Added to the "Contruction" tab.                          |
+| construction | Added to the "Construction" tab.                         |
 | equipment    | Added to the "Equipment" tab.                            |
 | items        | Added to the "Items" tab.                                |
 | nature       | Added to the "Nature" tab.                               |
