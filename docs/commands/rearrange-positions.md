@@ -26,7 +26,9 @@ For example, if Player1 was at `(0, 0, 1)`, Player2 at `(0, 0, 2)`, and Player3 
 2. Minimal number of iterations (repetitions/loops).
 3. Cross Dimensional Compatibility.
 
-To derange the positions of 100 targets, this function pack requires only 4-6 iterations, executing a total of 7 commands for the initiation, and 9 per iteration.
+This function pack is designed to support an unlimited number of targets. However, due to Bedrock limitations, it will halt once the `10,000` function execution limit is reached.
+
+For instance, deranging the positions of 100 targets requires only 4-6 iterations, with 7 commands executed during initialization and 9 per iteration. This totals approximately 60 commands, significantly below the function limit.
 
 <br>
 
