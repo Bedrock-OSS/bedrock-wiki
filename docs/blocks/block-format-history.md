@@ -7,6 +7,15 @@ mentions:
     - QuazChick
 ---
 
+## 1.21.50
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:destructible_by_mining`
+    -   Released `item_specific_speeds` parameter from experimental
+
 ## 1.21.40
 
 ### Components
