@@ -5,7 +5,7 @@ mentions:
 - theaddonn
 tags:
 - expert
-description: NBT in depth.
+description: NBT Libraries.
 ---
 
 There are plenty of existing NBT libraries, as not everyone has the time or motivation to create their own.
