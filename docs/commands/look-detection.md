@@ -53,7 +53,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
   - from previous point, pushes the execution position 1 block forward in the direction of the entity/coordinate.
 - `positioned ~~-1.62~`
   - lowers the execution position back to that of the player's feet on the y axis. Which is 1.62 blocks below eye level.
-  - Note: Due to the [MCPE-165051](https://bugs.mojang.com/browse/MCPE-165051) bug, you cannot use `anchored eyes` in place of this.
+  - Note: Due to the [MCPE-165051](https://bugs.mojang.com/browse/MCPE-165051) bug, you cannot use `anchored feet` in place of this.
 - `rotated as @s`
   - Reverts the execution rotation to that of the target.
 - `positioned ^^^-1`

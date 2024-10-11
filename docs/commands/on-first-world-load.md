@@ -37,13 +37,13 @@ This system will run your desired commands on the event that the world is loaded
 ### Add objective
 scoreboard objectives add world dummy
 ### Register to objective
-scoreboard players add initialised world 0
+scoreboard players add Initialised world 0
 
 ## Your Commands Here (Example)
-execute if score initialised world matches 0 run say New world created!
+execute if score Initialised world matches 0 run say New world created!
 
 ## Mark as Initialised
-scoreboard players set initialised world 1
+scoreboard players set Initialised world 1
 ```
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
@@ -52,8 +52,8 @@ Just make sure to follow the given order and properly apply the `/execute if sco
 
 ## Explanation
 
-- **` initialised=0 `** world has just initialised and we are yet to run the initialisation commands we need.
-- **` initialised=1 `** world has been initialised and we have executed the initialisation commands.
+- **` Initialised=0 `** world has just initialised and we are yet to run the initialisation commands we need.
+- **` Initialised=1 `** world has been initialised and we have executed the initialisation commands.
 
 An objective of the name `world` is added for us to save scores to it so that we can track whether the world has been initialised or not. This also allows us to structure our commands to only execute at world initialisation.
 

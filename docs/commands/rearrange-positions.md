@@ -24,8 +24,11 @@ For example, if Player1 was at `(0, 0, 1)`, Player2 at `(0, 0, 2)`, and Player3 
 
 1. Guaranteed derangement in a single game-tick.
 2. Minimal number of iterations (repetitions/loops).
+3. Cross Dimensional Compatibility.
 
-To derange the positions of 100 targets, this function pack requires only 4-6 iterations, executing a total of 7 commands for the initiation, and 7 per iteration.
+This function pack is designed to support an unlimited number of targets. However, due to Bedrock limitations, it will halt once the `10,000` function execution limit is reached.
+
+For instance, deranging the positions of 100 targets requires only 4-6 iterations, with 7 commands executed during initialization and 9 per iteration. This totals approximately 60 commands, significantly below the function limit.
 
 <br>
 
@@ -114,10 +117,10 @@ The actual randomized derangement process will be performed by this function bel
 
 ```yaml
 ## Move to a Different Position
-execute as @a [tag=!posAllocated] at @s run tp @s @r [type=armor_stand, name="Position Marker", rm=0.01]
+execute as @a [tag=!posAllocated] at @s run function events/player/derange_position/teleport
 
 ## Move Again if Returned to Original Position
-execute as @a [tag=!posAllocated] at @s if score @s id = @e [type=armor_stand, name="Position Marker", r=0.01, c=1] id run tp @s @r [type=armor_stand, name="Position Marker", rm=0.01]
+execute as @a [tag=!posAllocated] at @s if score @s id = @e [type=armor_stand, name="Position Marker", r=0.01, c=1] id run function events/player/derange_position/teleport
 
 ## Add Tag to Ignore Players with a Position Allocated
 execute as @e [type=armor_stand, name="Position Marker"] at @s run tag @a [tag=!posAllocated, r=0.01, c=1] add posAllocated
@@ -134,6 +137,20 @@ execute as @a [tag=!posAllocated] run scoreboard players add NonAllocatedPlayers
 
 ## Loop Function if 2+ Players Are Not Allocated a Position
 execute if score NonAllocatedPlayers count matches 2.. run function events/player/derange_position/process
+```
+
+<br>
+
+-   ❌️ `tp @s @r [type=armor_stand, name="Position Marker", rm=0.01]`
+
+Directly using this command to teleport to a new position only works within the current dimension. Therefore, instead of that, we use the following three-command function for cross-dimensional compatibility:
+
+<CodeHeader>BP/functions/events/player/derange_position/teleport.mcfunction</CodeHeader>
+
+```yaml
+tag @e [type=armor_stand, name="Position Marker", r=0.01, c=1] add ignoredPos
+tp @s @r [type=armor_stand, name="Position Marker", tag=!ignoredPos]
+tag @e remove ignoredPos
 ```
 
 <br>
@@ -202,6 +219,7 @@ Finally, create your `tick.json` file:
     'BP/functions/events/player/derange_position',
     'BP/functions/events/player/derange_position/initiate.mcfunction',
     'BP/functions/events/player/derange_position/process.mcfunction',
+    'BP/functions/events/player/derange_position/teleport.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
