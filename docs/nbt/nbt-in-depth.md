@@ -5,6 +5,7 @@ mentions:
     - ConsoleTerm
     - SmokeyStack
     - ThomasOrs
+    - theaddonn
 tags:
     - expert
 description: NBT in depth.
@@ -87,3 +88,21 @@ It's not a science and it's easy to understand. So if Int16 `(short)` of value `
 - Reverse `0xDD 0xCC 0xBB 0xAA 0x44 0x33 0x22 0x11`
 - Write `dd cc bb aa   44 33 22 11`
 - Done (when reading the number just go backwards this example.)
+
+## Network-Little-Endian
+Network-Little-Endian is a bit more uncommon and only used in the Bedrock protocol to serialize NBTs.
+It uses variable integers (also called varints) instead of fixed size integers.
+
+VarInt encodes integers in blocks of seven bits; the MSB is set for every byte but the last, in which it is cleared.
+Signed values are first converted to an unsigned representation using ZigZag encoding
+(also described on the page linked below), and then encoded as every other unsigned number.
+More information on VarInts is available at [Google's proto buf documentation](https://protobuf.dev/programming-guides/encoding/).
+
+All following data types in NBTs are represented by VarInts: `Int32` and `Int64`.
+(Warning! This excludes both `Byte` and `Int16`, as well as `Float` and `Double` which use the Little-Endian encoding,
+hence the name Network-Little-Endian).
+
+Further changes:
+
+- Strings are prefixed by an Int32 storing their length using VarInt encoding.
+- Lists are also prefixed by an Int32 storing their length using VarInt encoding.
