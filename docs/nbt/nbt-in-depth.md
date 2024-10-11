@@ -35,21 +35,21 @@ And individual types can contain multiple bytes, but they can never be 1/2 byte 
 We also cannot say how the tags should be named, because everyone can call NBT tags differently,
 but they must always have the same binary base (`id`), id is represented by one byte.
 
-|      Name       | Binary ID | Binary  Size      | Description                                                                                                                                                            |
-|:---------------:|----------:|:------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      Byte       |      0x01 | 1 byte (8-bits)   | One byte integer                                                                                                                                                       |
-|  Int16 (short)  |      0x02 | 2 bytes (16-bits) | A two-byte integer                                                                                                                                                     |
-| Int32 (integer) |      0x03 | 4 bytes (32-bits) | A four-byte integer                                                                                                                                                    |
-|  Int64 (long)   |      0x04 | 8 bytes (64-bits) | An eight-byte integer                                                                                                                                                  |
-|      Float      |      0x05 | 4 bytes (32-bits) | A four-byte type with regular decimal precision                                                                                                                        |
-|     Double      |      0x06 | 8 bytes (64-bits) | An eight-byte type with higher decimal precision                                                                                                                       |
-|     String      |      0x08 | Predefined        | A String type that has a predefined size. Text uses UTF-8 encoding                                                                                                     |
-|      List       |      0x09 | Predefined        | A List type with a predefined size and defining type for the elements in the List                                                                                      |
-|    Compound     | 0x0A (10) | Undefined         | Type compound, the compound does not have a predefined size, so it is necessary to read the keys and values until we do not encounter the tag for ending the compound. |
-| End of Compound |      0x00 | 1 byte            | This tag is not a type but only a tag and can only be used depending on the compound. It marks the end of a compound                                                   |
-|    Byte List    |      0x07 | Predefined        | List type of Byte and predefined size, not commonly used by Minecraft Bedrock Edition                                                                                  |
-|    Int List     | 0x0B (11) | Predefined        | List type of Int and predefined size, not commonly used by Minecraft Bedrock Edition                                                                                   |
-|    Long List    | 0x0C (12) | Predefined        | List type of Long and predefined size, not commonly used by Minecraft Bedrock Edition                                                                                  |
+|      Name       | Binary ID | Binary  Size      | Description                                                                                                                                                     |
+|:---------------:|----------:|:------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Byte       |      0x01 | 1 byte (8-bits)   | One byte integer                                                                                                                                                |
+|  Int16 (short)  |      0x02 | 2 bytes (16-bits) | A two-byte integer                                                                                                                                              |
+| Int32 (integer) |      0x03 | 4 bytes (32-bits) | A four-byte integer                                                                                                                                             |
+|  Int64 (long)   |      0x04 | 8 bytes (64-bits) | An eight-byte integer                                                                                                                                           |
+|      Float      |      0x05 | 4 bytes (32-bits) | A four-byte (single precision) floating point integer with regular decimal precision, after IEEE 754                                                            |
+|     Double      |      0x06 | 8 bytes (64-bits) | An eight-byte (double precision) floating point integer with higher decimal precision, after IEEE 754                                                           |
+|     String      |      0x08 | Predefined        | A String type that has a predefined size. Text uses UTF-8 encoding                                                                                              |
+|      List       |      0x09 | Predefined        | A List type with a predefined size and defining type for the elements in the List                                                                               |
+|    Compound     | 0x0A (10) | Undefined         | Type Compound, the Compound does not have a predefined size, so it is necessary to read the keys and values until we encounter the tag for ending the compound. |
+| End of Compound |      0x00 | 1 byte            | This tag is not a type but only a tag and can only be used depending on the compound. It marks the end of a compound                                            |
+|    Byte List    |      0x07 | Predefined        | List type of Byte and predefined size, not commonly used by Minecraft Bedrock Edition                                                                           |
+|    Int List     | 0x0B (11) | Predefined        | List type of Int and predefined size, not commonly used by Minecraft Bedrock Edition                                                                            |
+|    Long List    | 0x0C (12) | Predefined        | List type of Long and predefined size, not commonly used by Minecraft Bedrock Edition                                                                           |
 
 You may notice that there is no boolean value like in JSON
 and that means we will express true/false values as 1 and 0 using a Byte.
