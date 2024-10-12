@@ -5,10 +5,11 @@ tags:
     - easy
 mentions:
     - Kaioga5
+    - QuazChick
 description: Re-creation of vanilla glazed terracotta.
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.20.70`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -25,7 +26,7 @@ This will create a vanilla-like custom glazed terracotta.
 
 ```json
 {
-    "format_version": "1.20.70",
+    "format_version": "1.21.20",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:glazed_terracotta_template",
@@ -126,16 +127,13 @@ Vanilla glazed terracotta rotates certain faces of the block with some specific 
 
 ```json
 {
-    "format_version": "1.12.0",
+    "format_version": "1.21.20",
     "minecraft:geometry": [
         {
             "description": {
                 "identifier": "geometry.glazed_terracotta",
                 "texture_width": 16,
-                "texture_height": 16,
-                "visible_bounds_width": 4,
-                "visible_bounds_height": 3.5,
-                "visible_bounds_offset": [0, 1.25, 0]
+                "texture_height": 16
             },
             "bones": [
                 {
