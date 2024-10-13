@@ -67,7 +67,7 @@ Reading the size of a List is different from reading the size of a String! Shoul
 ### Reading Compounds
 Compound has all properties named, so when reading a property, it is always necessary to read its name as well. The procedure for reading Compound is rather simple.
 First, we read the type, the type can be anything, but if it is equal to an empty byte, then it is the end of the compound and then we jut stop reading, but if the type is not equal to the Compound Ending tag,
-then the significant type of the property that we will read. The read property is always followed by the name (key), which needs to be read as a [String](#reading-Strings), and after the String is read, then we can read value.
+then the significant type of the property that we will read. The read property is always followed by the name (key), which needs to be read as a [String](#reading-strings), and after the String is read, then we can read value.
 
 ## Minecraft BE NBT files
 When reading Minecraft NBT files, it is always important to be careful if there is no Bedrock Header at the beginning of the file, see [Bedrock NBT Header](#bedrock-nbt-file-header), but not all MCBE NBT files contain this header,
