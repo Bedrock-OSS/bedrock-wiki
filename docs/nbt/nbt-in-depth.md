@@ -96,7 +96,7 @@ E.g.
     - `08 00 00 00` - `bf 00 00 00`
     - < always 8 > < always the size of the NBT structure - exclude headers 8 bytes>
 
-## Little-Endian
+## Little Endian
 Little-Endian is the common method of writing numbers in bytes to streams or files.
 It's not a science, and it's easy to understand. So if Int16 `(short)` of value `0x5a72` then we convert it to bytes [`0x5a`, `0x72`] and then reverse their order that means [`0x72`, `0x5a`] and write d file: `72 5a`.
 It may seem illogical, but little-endian is almost always used when writing and reading from files. A single `byte` is the same in both methods because it is one byte in size.
@@ -107,7 +107,7 @@ For example:
 - Write `dd cc bb aa   44 33 22 11`
 - Done (when reading the number just goes backwards this example.)
 
-## Network-Little-Endian
+## Network Little Endian
 Network-Little-Endian is a bit more uncommon and only used in the Bedrock protocol to serialize NBTs. It uses Variable Length Integers (also called VarInts) instead of fixed size integers.
 
 VarInt encodes integers in blocks of seven bits; the MSB is set for every byte but the last, in which it is cleared.
