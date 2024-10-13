@@ -44,7 +44,7 @@ We also cannot say how the tags should be named, because everyone can call NBT t
 You may notice that there is no boolean value like in JSON and that means we will express true/false values as 1 and 0 using a Byte.
 
 ## How to read/write NBT tags
-The same reading method applies to all numbers, read as many bytes as the number tag type is large, such as: Int16 (short) is 2 bytes in size, so I will read 2 bytes, but you need to know that Minecraft BE uses the [little-endian](#little-endian), unlike Java, it uses big-endian.
+The same reading method applies to all numbers, read as many bytes as the number tag type is large, such as: Int16 (short) is 2 bytes in size, so I will read 2 bytes, but you need to know that Minecraft Bedrock uses the [little-endian](#little-endian), unlike Java, it uses big-endian.
 [Little-endian](#little-endian) is a way to write or read bytes of numbers.
 
 ### Reading Types
@@ -53,7 +53,7 @@ Type is always one byte in size, so we read the type and find out what to read n
 ### Reading Numbers
 When reading a number, it is necessary to know what type of number we are reading, we can find out by reading the type *([Reading types](#reading-types))*.
 Then, when we know what type of number we have to read, we read it, for example, if we know that we want type `3`, then we look in the table, and we know that type 3 is a number of 4-bytes size, so we read 4 bytes.
-All numbers ***BE*** reads/writes with [little-endian](#little-endian) method.
+All numbers ***Bedrock*** reads/writes with [little-endian](#little-endian) method.
 
 ### Reading Strings
 When reading a String, you need to know its length in bytes, this String length is always written with Int16 (short) `2 bytes` ([how to read numbers](#reading-numbers)) before the String,
@@ -69,8 +69,8 @@ Compound has all properties named, so when reading a property, it is always nece
 First, we read the type, the type can be anything, but if it is equal to an empty byte, then it is the end of the compound and then we jut stop reading, but if the type is not equal to the Compound Ending tag,
 then the significant type of the property that we will read. The read property is always followed by the name (key), which needs to be read as a [String](#reading-strings), and after the String is read, then we can read value.
 
-## Minecraft BE NBT files
-When reading Minecraft NBT files, it is always important to be careful if there is no Bedrock Header at the beginning of the file, see [Bedrock NBT Header](#bedrock-nbt-file-header), but not all MCBE NBT files contain this header,
+## Minecraft Bedrock NBT files
+When reading Minecraft NBT files, it is always important to be careful if there is no Bedrock Header at the beginning of the file, see [Bedrock NBT Header](#bedrock-nbt-file-header), but not all Bedrock NBT files contain this header,
 for example `.mcstructure` also does not contain a Bedrock NBT header, unlike `level.dat`.
 You also need to pay attention to the root element in the file, i.e. the List or compound, the root element also looks like a property, so you need to read the name of this root property, although Bedrock does not use these names, so these names are empty, but they are there.
 Here is how `.mcstructure` looks like where JSON represents NBT.
