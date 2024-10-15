@@ -60,6 +60,7 @@ Important links have a ⭐.
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [ResourcePack Converter (App)](https://converter.bedrockhub.io)
+-   [SuitcaseJS (MCPack Compressor)](https://github.com/TBroz15/SuitcaseJS)
 -   [World Converter (Paid)](https://www.universalminecraftconverter.com/download)
 
 ## Bedrock Tools Websites
