@@ -1,4 +1,5 @@
 import { defineConfigWithTheme } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 import taskListsPlugin from "markdown-it-task-lists";
 
 import { ThemeConfig } from "./theme";
@@ -25,60 +26,62 @@ if (isFastBuild) {
   );
 }
 
-export default defineConfigWithTheme<ThemeConfig>({
-  title: "Bedrock Wiki",
-  description: "A knowledge-sharing website for technical features of Minecraft Bedrock.",
+export default withMermaid(
+  defineConfigWithTheme<ThemeConfig>({
+    title: "Bedrock Wiki",
+    description: "A knowledge-sharing website for technical features of Minecraft Bedrock.",
 
-  head,
-  transformHead,
+    head,
+    transformHead,
 
-  srcExclude: isFastBuild ? largePages : undefined,
+    srcExclude: isFastBuild ? largePages : undefined,
 
-  themeConfig: {
-    url: "https://wiki.bedrock.dev",
-    repository: "https://github.com/Bedrock-OSS/bedrock-wiki",
+    themeConfig: {
+      url: "https://wiki.bedrock.dev",
+      repository: "https://github.com/Bedrock-OSS/bedrock-wiki",
 
-    algolia: {
-      appId: "N9ZHAYJQII",
-      apiKey: "a664f5a5da631810a08e1a48554fe523",
-      indexName: "wiki-bedrock",
-      placeholder: "Search Bedrock Wiki...",
+      algolia: {
+        appId: "N9ZHAYJQII",
+        apiKey: "a664f5a5da631810a08e1a48554fe523",
+        indexName: "wiki-bedrock",
+        placeholder: "Search Bedrock Wiki...",
+      },
+
+      navigation: [
+        {
+          text: "Discord",
+          link: "/discord",
+        },
+        {
+          text: "Contribute",
+          link: "/contribute",
+        },
+        {
+          text: "bedrock.dev",
+          link: "https://bedrock.dev",
+        },
+        {
+          text: "MS Learn",
+          link: "https://learn.microsoft.com/minecraft/creator/",
+        },
+      ],
+
+      redirects,
+      sidebar,
+      tags,
     },
 
-    navigation: [
-      {
-        text: "Discord",
-        link: "/discord",
+    markdown: {
+      anchor: {
+        level: [2, 3, 4, 5, 6],
       },
-      {
-        text: "Contribute",
-        link: "/contribute",
+      headers: {
+        level: [2, 3, 4, 5, 6],
       },
-      {
-        text: "bedrock.dev",
-        link: "https://bedrock.dev",
+      lineNumbers: true,
+      config(md) {
+        md.use(taskListsPlugin, { label: true });
       },
-      {
-        text: "MS Learn",
-        link: "https://learn.microsoft.com/minecraft/creator/",
-      },
-    ],
-
-    redirects,
-    sidebar,
-    tags,
-  },
-
-  markdown: {
-    anchor: {
-      level: [2, 3, 4, 5, 6],
     },
-    headers: {
-      level: [2, 3, 4, 5, 6],
-    },
-    lineNumbers: true,
-    config(md) {
-      md.use(taskListsPlugin, { label: true });
-    },
-  },
-});
+  })
+);
