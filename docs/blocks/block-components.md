@@ -440,7 +440,7 @@ Render methods essentially control how a block appears in the world, much like e
 #### Custom Instance Names
 
 :::tip
-Custom material instance names can be defined on the faces of cubes within Blockbench by right-clicking ona cube and opening its `Material Instances`.
+Custom material instance names can be defined on the faces of cubes within Blockbench by right-clicking on a cube and opening its `Material Instances`.
 :::
 
 Custom instance names can be defined within material instances, and can be referenced by built-in instance names, or within the block model.
