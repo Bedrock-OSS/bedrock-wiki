@@ -16,7 +16,7 @@ The Script API is currently in active development, and breaking changes are freq
 :::
 
 ::: warning
-This module can only be used on Bedrock Dedicated Servers and in [Editor Extensions](https://learn.microsoft.com/minecraft/creator/documents/bedrockeditor/editorextensionsintroduction).
+This module can only be used on Bedrock Dedicated Servers.
 :::
 
 In Script API, you can send and receive HTTP-based requests to interact with the internet. For more detailed information please visit the[Microsoft docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-net/minecraft-server-net).
