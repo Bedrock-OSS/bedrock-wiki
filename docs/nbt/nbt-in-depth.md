@@ -6,6 +6,7 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - theaddonn
+    - killcerr
 tags:
     - expert
 description: NBT in depth.
@@ -91,7 +92,7 @@ There is no certain procedure for writing, because it is the same methods as whe
 That's why we recommend first understanding NBT and learning to read it correctly, then it won't be difficult to write NBT.
 
 ## Bedrock NBT File header
-The NBT bedrock Header is indicated by two 4-byte numbers, the first is always 8(Except in level.dat, where it indicates the storage version), and the second indicates the size of the nbt structure in bytes.
+The NBT bedrock Header is indicated by two 4-byte numbers, the first is always 8 (except in `level.dat`, where it indicates the storage version) and the second indicates the size of the nbt structure in bytes.
 E.g.
     - `08 00 00 00` - `bf 00 00 00`
     - < always 8 > < always the size of the NBT structure - exclude headers 8 bytes>
