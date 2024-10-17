@@ -28,14 +28,19 @@ description: Software for Bedrock servers.
 ---
 
 Minecraft servers allow players to play online or via a local area network with other people.
-This is widespread within Java Edition Minecraft but is also possible on Bedrock.
 [You can download the official Mojang BDS software here](https://www.minecraft.net/en-us/download/server/bedrock).
 
 Alongside the Vanilla BDS offering, many community projects exist, in a variety of languages.
 These other projects get seperated into Custom Server Software (Custom) and BDS-Based.
 
-Custom Server Software = Server Software that is build from completely scratch.
-BDS-Based = Server Software that uses BDS as a base and mods it.
+Types of Server Software:
+- Custom Server Software = Server Software that is build from completely scratch.
+- BDS-Based = Server Software that uses BDS as a base and modifies it.
+
+You might notice that there is a lot of Custom Server Software, compared to BDS-Based ones.
+This has plenty of reasons, the biggest being:
+- We did not have an official Server Software for a long time, the first Release of BDS was on August 28, 2018... about 7 years after the first release for Bedrock Edition in 2011
+- The Symbols (also referred to as Mappings) have first been stripped to reduce the amount of information contained and finally been removed from the game in 1.21.10, due to which a lot of BDS-Based software died
 
 ## Active Software
 
@@ -147,6 +152,7 @@ BDS-Based = Server Software that uses BDS as a base and mods it.
 | [WolfMC](https://github.com/Wolf-MC/WolfMC)                                            |                                                                                                                                   | PHP        | Custom    |
 | [Symply](https://github.com/SymplyX/Symply)                                            | A new server software for Minecraft Bedrock Edition in Java                                                                       | PHP        | Custom    |
 
-::: Info
-Since 
+::: tip
+Since new software gets created all the time, and old software becomes unmaintained it is always important to update this list.
+So if you know a server software that is missing here or know that a server software is no longer maintained, then please update this list and create a PR. 
 :::
