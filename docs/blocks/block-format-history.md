@@ -290,6 +290,7 @@ mentions:
 -   Renamed `minecraft:block_collision` to `minecraft:collision_box`
 -   Updated `minecraft:crafting_table`
     -   Renamed `custom_description` parameter to `table_name`
+    -   Removed `grid_size` parameter
 -   Renamed `minecraft:ticking` to `minecraft:queued_ticking`
     -   Replaced `range` parameter with `interval_range` which is now measured in ticks rather than seconds.
 
@@ -335,6 +336,7 @@ mentions:
 -   Added `minecraft:crafting_table`
     -   Contains `crafting_tags` which determines which recipes are supported by tag.
     -   Contains `custom_description` which will be displayed in the UI instead of "Crafting Table".
+    -   Contains `grid_size` which determines how many slots across and down the crafting grid is. The only supported value is `3`.
 
 ## 1.17.30
 
