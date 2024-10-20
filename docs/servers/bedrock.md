@@ -1,5 +1,5 @@
 ---
-title: Bedrock
+title: Bedrock Protocol
 category: Protocols
 mentions:
     - theaddonn
