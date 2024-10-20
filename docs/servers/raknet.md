@@ -54,7 +54,6 @@ Bedrock uses the port `19132` (Ipv4, use `19133` for ipv6) as its default RakNet
 -   [Connection Request Accepted](#connection-request-accepted)
 -   [New Incoming Connection](#new-incoming-connection)
 
-<br/>
 
 ### Unconnected Pings
 
@@ -63,7 +62,6 @@ These messages are known as unconnected pings and are structured in this format:
 
 `0x01 | client alive time in ms (unsigned long long) | magic | client GUID`
 
-<br/>
 
 ### Unconnected Pongs
 
@@ -79,7 +77,6 @@ Example:
 
 The client doesn't seem to use the gamemode or the numeric value for the gamemode.
 
-<br/>
 
 ### Open Connection Request 1
 (Client -> Server)
@@ -93,7 +90,6 @@ The null padding seems to be used to discover the maximum packet size the networ
 The client will send this to the server with decreasing null padding,
 until the server responds with a [Open Connection Reply 1](#open-connection-reply-1)
 
-<br/>
 
 ### Open Connection Reply 1
 (Server -> Client)
@@ -104,7 +100,6 @@ The server responds with this once the client attempts to join
 
 This is the first half of the handshake between the client and the server.
 
-<br/>
 
 ### Open Connection Request 2
 (Client -> Server)
@@ -113,7 +108,6 @@ The client responds with this after they receive the open connection reply 1 pac
 
 `0x07 | magic | Cookie (uint32, if server has security) | Client supports security (Boolean(false), always false for the vanilla client, if server has security) | server Address | MTU Size (Unsigned short) | client GUID (Long)`
 
-<br/>
 
 ### Open Connection Reply 2
 (Server -> Client)
@@ -124,7 +118,6 @@ This is the last part of the handshake between the client and the server.
 
 **From here on, all RakNet messages are contained in a [Frame Set Packet](https://wiki.vg/Raknet_Protocol#Frame_Set_Packet).**
 
-<br/>
 
 ### Connection Request
 (Client -> Server)
@@ -133,7 +126,6 @@ This is the part where the client sends the connection request.
 
 `0x09 | client GUID (Long) | Request timestamp (Long) | Secure (Boolean)`
 
-<br/>
 
 ### Connection Request Accepted
 (Server -> Client)
@@ -142,7 +134,6 @@ The server sends this packet in response to the incoming connection request.
 
 `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value (Minecraft client sends 47)) | System adresses ([]Address) | Ping time (Long) | Pong Time (Long)`
 
-<br/>
 
 ### New Incoming Connection
 (Client -> Server)
@@ -158,7 +149,6 @@ The RakNetProtocol allows for them to be sent separately too, however, servers w
 
 :::
 
-<br/>
 
 ### New Incoming Connection
 
@@ -175,7 +165,6 @@ After having sent this packet,
 you must periodically send a Connected Ping to keep the connection alive.
 The server also sometimes sends a Connected Ping, respond with a Connected Pong.
 
-<br/>
 
 ### Connected Ping
 
@@ -185,7 +174,6 @@ The client/server will respond to this with a Connected Pong.
 
 `0x00 | Time since start (uint64)`
 
-<br/>
 
 ### Connected Pong
 
@@ -194,7 +182,6 @@ This packet should be sent as unreliable.
 
 `0x00 | Time since start client (uint64) | Time since start server (uint64)`
 
-<br/>
 
 
 ## Implementations
