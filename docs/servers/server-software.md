@@ -156,3 +156,7 @@ This has plenty of reasons, the biggest being:
 Since new software gets created all the time, and old software becomes unmaintained it is always important to update this list.
 So if you know a server software that is missing here or know that a server software is no longer maintained, then please update this list and create a PR. 
 :::
+
+## Further Information
+
+If you want to create your own server software/understand how they work, take a look into the [MCBE Protocol](./bedrock) and [RakNet](./raknet) documentation.
