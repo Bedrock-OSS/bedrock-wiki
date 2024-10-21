@@ -613,6 +613,27 @@ Type: Object
 }
 ```
 
+### Rarity
+
+Represents how difficult the item is to obtain by changing the color of its name text.
+This component will be overridden and have no effect if the `minecraft:hover_text_color` is also applied.
+
+An item's rarity value will be upgraded to `rare` if enchanted, or `epic` if its base rarity is already `rare`.
+An `epic` rarity item will remain unchanged when enchanted.
+
+Type: String
+
+-   `common` results in a white name.
+-   `uncommon` results in a yellow name.
+-   `rare` results in an aqua name.
+-   `epic` results in a light purple name.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:rarity": "rare"
+```
+
 ### Record
 
 The record item component allows the item to play a sound when used in a jukebox.
