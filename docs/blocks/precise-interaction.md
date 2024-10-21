@@ -849,7 +849,7 @@ Don't forget to import your scripts into your pack's entry file!
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.12.0"
+            "version": "1.15.0"
         }
     ]
 }
