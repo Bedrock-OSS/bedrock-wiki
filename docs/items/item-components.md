@@ -81,6 +81,27 @@ Type: Object
 }
 ```
 
+### Bundle Interaction
+
+Enables the bundle interface and functionality on the item.
+The item must have the `minecraft:storage_item` component for this component to function.
+
+_Released from experiment `Bundles` for format versions 1.21.40 and higher._
+
+Type: Object
+
+-   `num_viewable_slots`: Integer (1-64)
+    -   Defines the maximum number of item stacks accessible from the top of the bundle.
+    -   Slots are accessed in rows filling from the bottom of the tooltip from right to left.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:bundle_interaction": {
+    "num_viewable_slots": 12
+}
+```
+
 ### Can Destroy In Creative
 
 Determines if the item will break blocks in Creative Mode while swinging.
