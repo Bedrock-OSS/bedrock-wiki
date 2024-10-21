@@ -175,7 +175,7 @@ It contains information about the player such as:
   - PieceId
   - IsDefault
   - PieceType
-  - ProuctId
+  - ProductId
 - PieceTintColors = Array of:
   - PieceType
   - Colors = Array of color hexstrings
