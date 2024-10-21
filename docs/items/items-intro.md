@@ -38,7 +38,7 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
 
 ```json
 {
-    "format_version": "1.21.10",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -67,7 +67,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.21.10",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -112,7 +112,7 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 
 ```json
 {
-    "format_version": "1.21.10",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",

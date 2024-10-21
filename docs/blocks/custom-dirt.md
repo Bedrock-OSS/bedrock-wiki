@@ -13,7 +13,7 @@ mentions:
 hidden: true
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.20`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.40`
 This tutorial assumes a good understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block permutations](/blocks/block-permutations) before starting.
 :::
@@ -36,7 +36,7 @@ Add the `minecraft:is_hoe` or `minecraft:is_shovel` item tags to any custom tool
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_dirt",
@@ -247,7 +247,7 @@ Here is the full `wiki:custom_farmland` json for reference.
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_farmland",
