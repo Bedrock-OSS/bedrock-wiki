@@ -338,7 +338,7 @@ We have snippets for our components. To see them, start typing `wiki.` in Markdo
 
 ### Accent Colors
 
-Some components support a `color` attribute which can be used to add more visual flare!
+Some components support a `color` attribute which can be used to add more visual flair!
 Here are the values that the wiki currently supports:
 
 -   <Label color="red">red</Label>
