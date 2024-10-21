@@ -262,6 +262,45 @@ Max cannot be greater than min
 }
 ```
 
+### Durability Sensor
+
+Enables an item to emit effects when it receives damage.
+
+Type: Object
+
+-   `durability_thresholds`: Array
+    -   Items define both the durability thresholds, and the effects emitted when each threshold is met.
+    -   When multiple thresholds are met, only the threshold with the lowest durability after applying the damage is considered.
+
+#### Durability Threshold
+
+Type: Object
+
+-   `durability`: Integer
+    -   The effects are emitted when the item durability value is less than or equal to this value.
+-   `particle_type`: String
+    -   Particle effect to emit when the threshold is met.
+-   `sound_event`: String
+    -   Sound effect to emit when the threshold is met.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:durability_sensor": {
+    "durability_thresholds": [
+        {
+            "durability": 100,
+            "particle_type": "minecraft:explosion_manual",
+            "sound_event": "blast"
+        },
+        {
+            "durability": 5,
+            "sound_event": "raid.horn"
+        }
+    ]
+}
+```
+
 ### Enchantable
 
 Determines what enchantments can be applied to the item. Not all enchantments will have an effect on all item components.
