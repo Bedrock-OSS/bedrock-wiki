@@ -793,6 +793,47 @@ Determines if the same item with different aux values can stack. Additionally, d
 }
 ```
 
+### Storage Item
+
+Allows the item to act as a container and store other items.
+The item must have a max stack size of 1 for this component to function.
+
+_Released from experiment `Bundles` for format versions 1.21.40 and higher._
+
+Type: Object
+
+-   `allow_nesed_storage_items`: Boolean
+    -   Determines whether other storage items can be placed into the container.
+-   `allowed_items`: Array
+    -   Defines the items that are exclusively allowed in the container.
+    -   If empty all items are allowed in the container.
+-   `banned_items`: Array
+    -   Defines the items that are not allowed in the container.
+-   `max_slots`: Integer (1-64)
+    -   Defines the number of slots in the container.
+-   `max_weight_limit`: Integer
+    -   Defines the maximum allowed total weight of all items in the container.
+        -   To calculate the weight of an item, divide 64 by its max stack size.
+        -   Items that stack to 64 weigh 1 each, those that stack to 16 weigh 4 each and unstackable items weigh 64.
+-   `weight_in_storage_item`: Integer (0-64)
+    -   Defines the additional weight the item adds when inside another storage item.
+        -   A value of 0 means that this item is not allowed inside another storage item.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:storage_item": {
+    "max_slots": 64,
+    "max_weight_limit": 64,
+    "weight_in_storage_item": 4,
+    "allow_nested_storage_items": true,
+    "banned_items": [
+        "minecraft:shulker_box",
+        "minecraft:undyed_shulker_box"
+    ]
+}
+```
+
 ### Tags
 
 The `tags` component determines which tags are attached to an item.
