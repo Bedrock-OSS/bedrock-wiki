@@ -846,7 +846,7 @@ Type: Object
     "max_launch_power": 1.0,
     "min_draw_duration": 0.0,
     "scale_power_by_draw_duration": false
-    }
+}
 ```
 
 ### Use Animation
