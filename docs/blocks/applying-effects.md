@@ -13,7 +13,7 @@ mentions:
 description: This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.40`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -142,7 +142,7 @@ And done! The code above will trigger the desired status effect as long as the e
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:wither_block",

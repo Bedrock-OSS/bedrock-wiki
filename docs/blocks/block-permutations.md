@@ -8,7 +8,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.20`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.40`
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
@@ -61,7 +61,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",

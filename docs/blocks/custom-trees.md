@@ -12,7 +12,7 @@ hidden: true
 description: Re-creation of vanilla trees.
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.40`
 This tutorial assumes an advanced understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -49,7 +49,7 @@ Let's get started. We'll start with the JSON code for the leaf block.
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_leaves"
@@ -159,7 +159,7 @@ Let's add our permutation code that will help shape our block's behaviour.
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_leaves",
@@ -305,7 +305,7 @@ Let's add our permutation code that will help shape our block's behaviour.
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_log",
@@ -421,7 +421,7 @@ Here all components are the same
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_stripped_log",
@@ -499,7 +499,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_sapling",
@@ -594,7 +594,7 @@ For the sapling we will need structures of our tree to make the sapling semi-rea
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_sapling_placer",
@@ -1032,7 +1032,7 @@ Add sounds to blocks
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "wiki:custom_leaves": {
         "sound": "grass"
     },

@@ -146,7 +146,7 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 ```json
 {
-  "format_version": "1.21.10",
+  "format_version": "1.21.40",
   "minecraft:item": {
       "description": {
           "identifier": "namespace:your_item",
