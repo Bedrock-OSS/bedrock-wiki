@@ -519,6 +519,28 @@ A BlockDescriptor is an object that allows you to reference a block (or multiple
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.
 
+### Redstone Conductivity
+
+Defines a block's ability to conduct redstone power.
+
+_Released from experiment `Upcoming Creator Features` for format versions 1.21.40 and higher._
+
+Type: Object
+
+-   `redstone_conductor`: Boolean
+    -   Determines whether this block conducts direct redstone power.
+-   `allows_wire_to_step_down`: Boolean
+    -   Determines whether redstone wire can travel down the side of this block.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_conductivity": {
+    "redstone_conductor": true,
+    "allows_wire_to_step_down": false
+}
+```
+
 ### Selection Box
 
 Defines the area of the block that is selected by the player's cursor. If set to true, default values are used. If set to false, this block is not selectable by the player's cursor. If this component is omitted, default values are used.
