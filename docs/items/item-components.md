@@ -318,6 +318,23 @@ Type: Object
 }
 ```
 
+### Dyeable
+
+Allows the item to be dyed by cauldron water. Once dyed, the item will display the `dyed` texture defined in the `minecraft:icon` component rather than `default`.
+
+Type: Object
+
+-   `default_color`: String
+    -   Optional color to use by default before the player has dyed the item.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:dyeable": {
+	"default_color": "#ffffff"
+}
+```
+
 ### Enchantable
 
 Determines what enchantments can be applied to the item. Not all enchantments will have an effect on all item components.
