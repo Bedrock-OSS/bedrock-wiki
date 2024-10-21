@@ -155,6 +155,23 @@ Type: Int
 }
 ```
 
+### Damage Absorption
+
+Causes the item to absorb damage that would otherwise be dealt to its wearer. For this to happen, the item needs to have the durability component and be equipped in an armor slot.
+
+Type: Object
+
+-   `absorbable_causes`: Array
+    -   List of damage causes (such as `entity_attack` and `magma`) that can be absorbed by the item.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:damage_absorption": {
+	"absorbable_causes": ["all"]
+}
+```
+
 ### Digger
 
 Determine how quickly an item can dig specific blocks.
