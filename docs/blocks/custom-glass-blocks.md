@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION `1.21.20`
+::: tip FORMAT VERSION `1.21.40`
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -28,7 +28,7 @@ By the end you should be able to create something like this!
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glass",
@@ -58,7 +58,7 @@ For the correct face culling to apply to your glass block, textures must be defi
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "wiki:custom_glass": {
         "textures": "custom_glass", // Shortname defined in `RP/textures/terrain_texture.json`
         "sound": "glass"

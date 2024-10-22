@@ -14,7 +14,7 @@ description: Re-creation of vanilla fluids.
 hidden: true
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.40`
 This tutorial assumes an advanced understanding of blocks and the execute command.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -59,7 +59,7 @@ Below is the code for a custom fluid. Copy and quick replace `custom_fluid` with
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_fluid",
@@ -257,7 +257,7 @@ To place your custom fluid you need a custom bucket item. Below is the JSON for 
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_fluid_bucket",

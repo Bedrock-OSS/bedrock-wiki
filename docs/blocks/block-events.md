@@ -21,8 +21,8 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION `1.21.20`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.20`.
+:::tip FORMAT VERSION `1.21.40`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.40`.
 :::
 
 ## Registering Custom Components

@@ -23,7 +23,7 @@ Culling rules are added in your resource pack's "block_culling" folder and appea
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block_culling_rules": {
         "description": {
             "identifier": "wiki:lamp_culling" // Identifier to be referenced in block JSON geometry component.

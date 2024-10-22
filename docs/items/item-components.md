@@ -8,8 +8,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.10`
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.10`.
+:::tip FORMAT & MIN ENGINE VERSION `1.21.40`
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.40`.
 :::
 
 ## Applying Components
@@ -20,7 +20,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.21.10",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -78,6 +78,27 @@ Type: Object
         "minecraft:dirt",
         "wiki:custom_dirt"
     ]
+}
+```
+
+### Bundle Interaction
+
+Enables the bundle interface and functionality on the item.
+The item must have the `minecraft:storage_item` component for this component to function.
+
+_Released from experiment `Bundles` for format versions 1.21.40 and higher._
+
+Type: Object
+
+-   `num_viewable_slots`: Integer (1-64)
+    -   Defines the maximum number of item stacks accessible from the top of the bundle.
+    -   Slots are accessed in rows filling from the bottom of the tooltip from right to left.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:bundle_interaction": {
+    "num_viewable_slots": 12
 }
 ```
 
@@ -152,6 +173,23 @@ Type: Int
 ```json
 "minecraft:damage": {
     "value": 10
+}
+```
+
+### Damage Absorption
+
+Causes the item to absorb damage that would otherwise be dealt to its wearer. For this to happen, the item needs to have the durability component and be equipped in an armor slot.
+
+Type: Object
+
+-   `absorbable_causes`: Array
+    -   List of damage causes (such as `entity_attack` and `magma`) that can be absorbed by the item.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:damage_absorption": {
+	"absorbable_causes": ["all"]
 }
 ```
 
@@ -259,6 +297,62 @@ Max cannot be greater than min
         "max": 100
     },
     "max_durability": 100
+}
+```
+
+### Durability Sensor
+
+Enables an item to emit effects when it receives damage.
+
+Type: Object
+
+-   `durability_thresholds`: Array
+    -   Items define both the durability thresholds, and the effects emitted when each threshold is met.
+    -   When multiple thresholds are met, only the threshold with the lowest durability after applying the damage is considered.
+
+#### Durability Threshold
+
+Type: Object
+
+-   `durability`: Integer
+    -   The effects are emitted when the item durability value is less than or equal to this value.
+-   `particle_type`: String
+    -   Particle effect to emit when the threshold is met.
+-   `sound_event`: String
+    -   Sound effect to emit when the threshold is met.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:durability_sensor": {
+    "durability_thresholds": [
+        {
+            "durability": 100,
+            "particle_type": "minecraft:explosion_manual",
+            "sound_event": "blast"
+        },
+        {
+            "durability": 5,
+            "sound_event": "raid.horn"
+        }
+    ]
+}
+```
+
+### Dyeable
+
+Allows the item to be dyed by cauldron water. Once dyed, the item will display the `dyed` texture defined in the `minecraft:icon` component rather than `default`.
+
+Type: Object
+
+-   `default_color`: String
+    -   Optional color to use by default before the player has dyed the item.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:dyeable": {
+	"default_color": "#ffffff"
 }
 ```
 
@@ -453,9 +547,12 @@ Determines the icon to represent the item in the UI and elsewhere. Released from
 
 Type: Object
 
--   `textures`: Object - This map contains the different textures that can be used for the item's icon. `Default` will contain the actual icon texture. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
+-   `textures`: Object - This map contains the different textures that can be used for the item's icon. `default` will contain the actual icon texture. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
     -   `default`: String
         -   The actual icon used for items
+    -   `dyed`: String
+        -   The icon used after the item is dyed in a cauldron.
+        -   This can only be displayed if the item has the `minecraft:dyeable` component.
     -   `icon_trim`: String
         -   The icon overlay for when your item has a trim on it.
         -   `icon_trim` implicitly falls back to the type of slot in the `minecraft:wearable` component. Currently, the icon will only overlay if the shortname matches the item’s identifier. Whether this is a bug or feature is unknown yet.
@@ -538,6 +635,27 @@ Type: Object
     "minimum_critical_power": 1.25,
     "projectile_entity": "arrow"
 }
+```
+
+### Rarity
+
+Represents how difficult the item is to obtain by changing the color of its name text.
+This component will be overridden and have no effect if the `minecraft:hover_text_color` is also applied.
+
+An item's rarity value will be upgraded to `rare` if enchanted, or `epic` if its base rarity is already `rare`.
+An `epic` rarity item will remain unchanged when enchanted.
+
+Type: String
+
+-   `common` results in a white name.
+-   `uncommon` results in a yellow name.
+-   `rare` results in an aqua name.
+-   `epic` results in a light purple name.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:rarity": "rare"
 ```
 
 ### Record
@@ -699,6 +817,47 @@ Determines if the same item with different aux values can stack. Additionally, d
 }
 ```
 
+### Storage Item
+
+Allows the item to act as a container and store other items.
+The item must have a max stack size of 1 for this component to function.
+
+_Released from experiment `Bundles` for format versions 1.21.40 and higher._
+
+Type: Object
+
+-   `allow_nesed_storage_items`: Boolean
+    -   Determines whether other storage items can be placed into the container.
+-   `allowed_items`: Array
+    -   Defines the items that are exclusively allowed in the container.
+    -   If empty all items are allowed in the container.
+-   `banned_items`: Array
+    -   Defines the items that are not allowed in the container.
+-   `max_slots`: Integer (1-64)
+    -   Defines the number of slots in the container.
+-   `max_weight_limit`: Integer
+    -   Defines the maximum allowed total weight of all items in the container.
+        -   To calculate the weight of an item, divide 64 by its max stack size.
+        -   Items that stack to 64 weigh 1 each, those that stack to 16 weigh 4 each and unstackable items weigh 64.
+-   `weight_in_storage_item`: Integer (0-64)
+    -   Defines the additional weight the item adds when inside another storage item.
+        -   A value of 0 means that this item is not allowed inside another storage item.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:storage_item": {
+    "max_slots": 64,
+    "max_weight_limit": 64,
+    "weight_in_storage_item": 4,
+    "allow_nested_storage_items": true,
+    "banned_items": [
+        "minecraft:shulker_box",
+        "minecraft:undyed_shulker_box"
+    ]
+}
+```
+
 ### Tags
 
 The `tags` component determines which tags are attached to an item.
@@ -752,7 +911,7 @@ Type: Object
     "max_launch_power": 1.0,
     "min_draw_duration": 0.0,
     "scale_power_by_draw_duration": false
-    }
+}
 ```
 
 ### Use Animation

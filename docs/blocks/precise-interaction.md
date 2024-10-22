@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.20`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.40`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/starting-scripts) guides before starting.
 :::
@@ -419,7 +419,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -633,7 +633,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.21.20",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",
@@ -849,7 +849,7 @@ Don't forget to import your scripts into your pack's entry file!
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.12.0"
+            "version": "1.15.0"
         }
     ]
 }
