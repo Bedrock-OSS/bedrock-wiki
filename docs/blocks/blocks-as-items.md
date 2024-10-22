@@ -1,6 +1,6 @@
 ---
-title: Block Items
-description: Learn about the items that represent blocks in places like your inventory.
+title: Blocks As Items
+description: Learn about items that represent blocks in the UI.
 category: General
 tags:
     - experimental
