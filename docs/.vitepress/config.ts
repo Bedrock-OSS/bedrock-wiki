@@ -33,6 +33,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   transformHead,
 
   srcExclude: isFastBuild ? largePages : undefined,
+  ignoreDeadLinks: isFastBuild,
 
   themeConfig: {
     url: "https://wiki.bedrock.dev",
