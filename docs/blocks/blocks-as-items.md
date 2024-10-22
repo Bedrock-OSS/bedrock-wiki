@@ -1,6 +1,6 @@
 ---
 title: Blocks As Items
-description: Learn about items that represent blocks in the UI.
+description: Learn about items that represent blocks in the UI, in containers and when dropped on the ground.
 category: General
 tags:
     - experimental
