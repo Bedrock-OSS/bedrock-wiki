@@ -30,7 +30,7 @@ This page will guide you through the steps required to create your first "workin
 
 <Button link="./project-setup-android">Android guide</Button>
 
-## The com.mojang folder
+## The com.mojang Folder
 
 The `com.mojang` folder is a special folder where Minecraft stores data (Add-ons, Worlds, Player info...). Minecraft understands this location, and all files we access or create will be placed somewhere in this folder!
 
@@ -217,7 +217,7 @@ pack.description=A Ghostly Guide
 ["en_US"]
 ```
 
-## Checking your Work
+## Checking Your Work
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide](/guide/troubleshooting).
 
@@ -235,7 +235,7 @@ Content Log is an extremely important debugging tool, which you should always ha
 
 Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can open the content log GUI in-game by pressing `ctrl+h` or by pressing `Content Log History` in the creator settings panel. Learn more about the content log [here](/guide/troubleshooting).
 
-## Creating your testing world
+## Creating Your Testing World
 
 Now we create a world to test your new add-on!
 
@@ -252,7 +252,7 @@ Now we create a world to test your new add-on!
 
 ---
 
-## Your progress so far
+## Overview
 
 **Here is how your project should look, after completing this page:**
 
@@ -269,7 +269,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
 ]"></FolderView>
 
-## What you have learned
+## What You Have Learned
 
 :::tip What you have learned:
 
@@ -282,7 +282,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 
 :::
 
-## Your progress so far
+## Your Progress So Far
 
 :::tip What you have learned
 

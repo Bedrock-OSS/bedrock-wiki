@@ -531,7 +531,7 @@ As you can see from the comments, there is a lot there but really all we are doi
 				},
 				{
 					"queue_command": {
-						"command": "tellraw @s{\"rawtext\":[{\"text\":\"§aYour Armor Glows And The Enemy Vanishes\"}]}"
+						"command": "tellraw @s{\"rawtext\":[{\"text\":\"§aYour Armor Glows and the Enemy Vanishes\"}]}"
 					}
 				}
 			]

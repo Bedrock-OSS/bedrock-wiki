@@ -324,7 +324,7 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 
 ---
 
-## Your progress so far
+## Your Progress So Far
 
 **What you've done:**
 

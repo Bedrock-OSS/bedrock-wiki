@@ -19,33 +19,32 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 1. This method uses 1 armor stand per block entity. Therefore, too many armor stands (like any entity) can contribute to server lag.
 2. Players will still be able to pass through them as well as interact with them (if not restricted).
-4. While the block entity may render in one spot, it's actual hitbox will have a slight offset.
+3. While the block entity may render in one spot, it's actual hitbox will have a slight offset.
 
 ## Video Demonstration
 
-<YouTubeEmbed
-    id="kb8rz9ItE_M"
-/>
+<YouTubeEmbed id="kb8rz9ItE_M" />
 
 ## Setup
 
-*To be typed in chat:*
+_To be typed in chat:_
+
 1. `/summon armor_stand ~~~ 81 ~ default "Grumm"`
     - We will set the Y (horizontal) rotation to `81` to align with the normal Minecraft block grid.
     - It is necessary to name it 'Grumm' to avoid inverted block textures.
 
 :::tip
-- Crouch & right-click (on mcpe: long press) the armor stand 6 times to place it in 'Entertain' pose.
-    - Doing this negates the need to use the 1st command in the system below.
-    - **Only use this if you wish to reduce one command from the system.**
-:::
+
+-   Crouch & right-click (on mcpe: long press) the armor stand 6 times to place it in 'Entertain' pose. - Doing this negates the need to use the 1st command in the system below. - **Only use this if you wish to reduce one command from the system.**
+    :::
 
 2. Lastly, place the desired block item in the armor stand's main-hand.
 
 :::tip
-- `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
-  - Instead of manually placing the desired block item in the armor stand's main-hand, use this command to place it in it's off-hand to prevent players from taking the item.
-:::
+
+-   `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
+    -   Instead of manually placing the desired block item in the armor stand's main-hand, use this command to place it in it's off-hand to prevent players from taking the item.
+        :::
 
 ## System
 
@@ -70,19 +69,22 @@ execute as @e [type=armor_stand, name=Grumm] at @s run tp ~~~
 ## Hide Armor Stand Body
 effect @e [type=armor_stand, name=Grumm] invisibility 999999 1 true
 ```
+
 ![commandBlockChain6](/assets/images/commands/commandBlockChain/6.png)
 
-### Purpose Of Each Command
+### Purpose of Each Command
+
 1. Automatically sets the armor stand pose to 'Entertain' for arms alignment. Skip this command if you prefer to do it manually.
-2. __Required command__. Increases size to present as mini-block.
-3. *Optional command.* Increases size to present as full-block.
-4. *Optional command.* Aligns the full-block size MBE properly.
+2. **Required command**. Increases size to present as mini-block.
+3. _Optional command._ Increases size to present as full-block.
+4. _Optional command._ Aligns the full-block size MBE properly.
     - Skip 3 & 4 if you do not need full-block size MBE.
 5. Locks the armor stand in place to prevent fall in case block beneath is removed.
 6. Hides the armor stand body.
 
 Note: Providing a controller name allows us to stack animations without overwriting the previous one. Example:
-- `wiki:align.full_block` (where `wiki` is a namespace).
+
+-   `wiki:align.full_block` (where `wiki` is a namespace).
 
 Using the same controller names above is not required. However, it can help avoid collisions with other playanimation commands.
 
@@ -109,7 +111,6 @@ Using the same controller names above is not required. However, it can help avoi
 ```
 
 </Spoiler>
-
 
 <Spoiler title="Mini Block">
 
@@ -194,6 +195,7 @@ Using the same controller names above is not required. However, it can help avoi
 ## Saving & Loading MBE
 
 1. To save, run:
+
     - `/execute at @e [type=armor_stand, name=Grumm, c=1] run structure save wiki ~~~ ~~~ true disk false`
 
 2. To load, run:

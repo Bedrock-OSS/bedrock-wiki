@@ -102,7 +102,7 @@ Type: Object
 }
 ```
 
-### Can Destroy In Creative
+### Can Destroy in Creative
 
 Determines if the item will break blocks in Creative Mode while swinging.
 

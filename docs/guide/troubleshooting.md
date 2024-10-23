@@ -61,7 +61,7 @@ You should download the vanilla resource and behavior pack. You can find the van
 
 JSON-Schemas are a valuable tool for file validation. You can learn more about JSON-Schemas [here](/meta/using-schemas).
 
-## Troubleshooting your add-on!
+## Troubleshooting Your Add-On
 
 ### Entities
 

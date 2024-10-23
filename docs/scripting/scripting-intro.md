@@ -35,9 +35,9 @@ This tutorial will teach you how to get up and running as a Minecraft Bedrock Ed
 2. a code editor like [Visual Studio Code](https://code.visualstudio.com/) (although Notepad will technically be sufficient, I will be assuming the usage of VSCode going forward)
 3. basic knowledge of Javascript (this tutorial will not be teaching you how to code in Javascript and presumes a baseline knowledge of it)
 
-## Setting up your environment
+## Setting Up Your environment
 
-### Find Minecraft installation folder
+### Find the Minecraft Installation Folder
 
 You will need access to the Minecraft installation folder - this is where we will be doing most of our work. You can find it here (replace `<USERNAME>` with your Windows 10 username):
 
@@ -62,7 +62,7 @@ You might have noticed that some other folders are named something very similar:
 These folders are where completed Minecraft Bedrock Edition packs go.
 For this tutorial, we will only focus on creating a behavior pack (not a resource or skin pack).
 
-### Set up Visual Studio Code (VSCode)
+### Set Up Visual Studio Code (VSCode)
 
 Let's get your code editor set up:
 
@@ -112,7 +112,7 @@ Here is what each file does:
 -   `clientScript`
     -   This Javascript file will be where you write all the code that should be running on the client-side.
 
-### What's the difference between 'server-side' and 'client-side'?
+### What's the Difference Between 'Server-Side' and 'Client-Side'?
 
 When we say “client” or “server”, it usually follows with a relatively intuitive understanding of what part of the game we’re talking about.
 After all, a client is what the user interacts with, and a server is where the user connects for a multiplayer game.
@@ -147,34 +147,34 @@ Copy/paste this into your `manifest.json`:
 
 ```json
 {
-	"format_version": 2,
-	"metadata": {
-		"authors": ["<your-name>"],
-		"url": "<your-github-repo-url>",
-		"license": "TBD"
-	},
-	"header": {
-		"name": "Hello World",
-		"description": "Hello World scripting tutorial add-on!",
-		"uuid": "<uuid-1>",
-		"version": [0, 0, 1],
-		"min_engine_version": [1, 14, 0]
-	},
-	"modules": [
-		{
-			"description": "Hello World behavior pack module",
-			"type": "data",
-			"uuid": "<uuid-2>",
-			"version": [0, 0, 1]
-		},
-		{
-			"description": "Hello World client scripts module",
-			"type": "client_data",
-			"uuid": "<uuid-3>",
-			"version": [0, 0, 1]
-		}
-	],
-	"dependencies": []
+    "format_version": 2,
+    "metadata": {
+        "authors": ["<your-name>"],
+        "url": "<your-github-repo-url>",
+        "license": "TBD"
+    },
+    "header": {
+        "name": "Hello World",
+        "description": "Hello World scripting tutorial add-on!",
+        "uuid": "<uuid-1>",
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 14, 0]
+    },
+    "modules": [
+        {
+            "description": "Hello World behavior pack module",
+            "type": "data",
+            "uuid": "<uuid-2>",
+            "version": [0, 0, 1]
+        },
+        {
+            "description": "Hello World client scripts module",
+            "type": "client_data",
+            "uuid": "<uuid-3>",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": []
 }
 ```
 
@@ -193,21 +193,21 @@ You can generate UUIDs via an online tool like this, https://www.uuidgenerator.n
 You can either choose UUID version 1 or version 4; it's up to you.
 Generate 3 UUIDs and replace `<uuid-1>`, `<uuid-2>`, and `<uuid-3>` with them.
 
-### the "metadata" section
+### The "metadata" Section
 
 The section labeled `"metadata"` provides information about you and your repository of code.
 You can provide it your name via the array of `"authors"`, the `"url"` of your GitHub/GitLab/etc. repository where you're pushing your add-on's code, and also a `"license"` to protect your code from copyright. 😈
 
-### the "header" section
+### The "header" Section
 
 The section labelled `"header"` provides information about your add-on like the add-on's `"name"`, `"description"`, `"version"` (e.g. `[0,0,1]` which means `version 0.0.1`), and `"min_engine_version"` (which is the minimum Minecraft version your add-on is aiming for - e.g. `Minecraft v1.14.9`).
 
-### the "modules" section
+### The "modules" Section
 
 The section labeled `"modules"` provides information about the code that will be running on the server (`"data"`) and the client (`"client_data"`).
 Nothing too special is happening here - remember to generate distinct UUIDs for both of them, and when you increase the version of your add-on, increase the version numbers here as well.
 
-### the "dependencies" section
+### The "dependencies" Section
 
 The section labeled `"dependencies"` provides information about other behavior/resource/skin packs that this behavior pack depends on.
 When a user selects your add-on in Minecraft when creating a new world, the game will automatically load up every other pack defined in this section into your new world (as long as those packs have also been installed alongside yours).
@@ -230,7 +230,7 @@ You specify the UUID of your resource pack and the version.
 This is, so Minecraft knows exactly which pack and what version to load.
 You don't have to worry about this for this tutorial.
 
-## Testing your behavior pack
+## Testing Your Behavior Pack
 
 Now that you have a valid `manifest.json` and a `pack_icon.png`, you now have the bare-minimum behavior pack contents that Minecraft will be able to recognize and load!
 Let's open Minecraft Bedrock Edition and see what happens.
@@ -298,72 +298,68 @@ Copy and paste this into your `serverScript.js` file.
 
 ```js
 // this signs-up this script to run on the server-side of the Minecraft Bedrock Edition engine
-const systemServer = server.registerSystem(0, 0)
+const systemServer = server.registerSystem(0, 0);
 
 // the server runs this as soon as the scripts are all fully loaded
 systemServer.initialize = function () {
-	// turn on logging of information, warnings, and errors
-	const scriptLoggerConfig = this.createEventData(
-		'minecraft:script_logger_config'
-	)
-	scriptLoggerConfig.data.log_errors = true
-	scriptLoggerConfig.data.log_information = true
-	scriptLoggerConfig.data.log_warnings = true
-	this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
+    // turn on logging of information, warnings, and errors
+    const scriptLoggerConfig = this.createEventData("minecraft:script_logger_config");
+    scriptLoggerConfig.data.log_errors = true;
+    scriptLoggerConfig.data.log_information = true;
+    scriptLoggerConfig.data.log_warnings = true;
+    this.broadcastEvent("minecraft:script_logger_config", scriptLoggerConfig);
 
-	// register event data, register components, register queries, listen for events, . . .
+    // register event data, register components, register queries, listen for events, . . .
 
-	this.counter = 0
-}
+    this.counter = 0;
+};
 
 // the server runs this update function 20 times per second
 systemServer.update = function () {
-	// print hello world to the world's chat once per second
-	this.counter++
-	if (this.counter === 20) {
-		this.log('Server!')
-		this.counter = 0
-	}
+    // print hello world to the world's chat once per second
+    this.counter++;
+    if (this.counter === 20) {
+        this.log("Server!");
+        this.counter = 0;
+    }
 
-	// update other stuff . . .
-}
+    // update other stuff . . .
+};
 
 // the server only runs this when the world is shutting down
 systemServer.shutdown = function () {
-	// clean up stuff . . .
-}
+    // clean up stuff . . .
+};
 
 // This is just a helper function that simplifies logging data to the console.
 systemServer.log = function (...items) {
-	// Convert every parameter into a legible string and collect them into an array.
-	const toString = (item) => {
-		switch (Object.prototype.toString.call(item)) {
-			case '[object Undefined]':
-				return 'undefined'
-			case '[object Null]':
-				return 'null'
-			case '[object String]':
-				return `"${item}"`
-			case '[object Array]':
-				const array = item.map(toString)
-				return `[${array.join(', ')}]`
-			case '[object Object]':
-				const object = Object.keys(item).map(
-					(key) => `${key}: ${toString(item[key])}`
-				)
-				return `{${object.join(', ')}}`
-			case '[object Function]':
-				return item.toString()
-			default:
-				return item
-		}
-	}
+    // Convert every parameter into a legible string and collect them into an array.
+    const toString = (item) => {
+        switch (Object.prototype.toString.call(item)) {
+            case "[object Undefined]":
+                return "undefined";
+            case "[object Null]":
+                return "null";
+            case "[object String]":
+                return `"${item}"`;
+            case "[object Array]":
+                const array = item.map(toString);
+                return `[${array.join(", ")}]`;
+            case "[object Object]":
+                const object = Object.keys(item).map((key) => `${key}: ${toString(item[key])}`);
+                return `{${object.join(", ")}}`;
+            case "[object Function]":
+                return item.toString();
+            default:
+                return item;
+        }
+    };
 
-	// Join the string array items into a single string and print it to the world's chat.
-	const chatEvent = this.createEventData('minecraft:display_chat_event')
-	chatEvent.data.message = items.map(toString).join(' ')
-	this.broadcastEvent('minecraft:display_chat_event', chatEvent)
-}
+    // Join the string array items into a single string and print it to the world's chat.
+    const chatEvent = this.createEventData("minecraft:display_chat_event");
+    chatEvent.data.message = items.map(toString).join(" ");
+    this.broadcastEvent("minecraft:display_chat_event", chatEvent);
+};
 ```
 
 I heavily commented on every section of this server script, but I will delve deeper into the different areas.
@@ -427,72 +423,68 @@ Copy and paste this into your `clientScript.js` file. I will delve into its cont
 
 ```js
 // this signs-up this script to run on the client-side of the Minecraft Bedrock Edition engine
-const systemClient = client.registerSystem(0, 0)
+const systemClient = client.registerSystem(0, 0);
 
 // the client runs this as soon as the scripts are all fully loaded
 systemClient.initialize = function () {
-	// turn on logging of information, warnings, and errors
-	const scriptLoggerConfig = this.createEventData(
-		'minecraft:script_logger_config'
-	)
-	scriptLoggerConfig.data.log_errors = true
-	scriptLoggerConfig.data.log_information = true
-	scriptLoggerConfig.data.log_warnings = true
-	this.broadcastEvent('minecraft:script_logger_config', scriptLoggerConfig)
+    // turn on logging of information, warnings, and errors
+    const scriptLoggerConfig = this.createEventData("minecraft:script_logger_config");
+    scriptLoggerConfig.data.log_errors = true;
+    scriptLoggerConfig.data.log_information = true;
+    scriptLoggerConfig.data.log_warnings = true;
+    this.broadcastEvent("minecraft:script_logger_config", scriptLoggerConfig);
 
-	// register event data, register components, register queries, listen for events, . . .
+    // register event data, register components, register queries, listen for events, . . .
 
-	this.counter = 0
-}
+    this.counter = 0;
+};
 
 // the client runs this update function 20 times per second
 systemClient.update = function () {
-	// print hello world to the world's chat once per second
-	this.counter++
-	if (this.counter === 20) {
-		this.log('Client!')
-		this.counter = 0
-	}
+    // print hello world to the world's chat once per second
+    this.counter++;
+    if (this.counter === 20) {
+        this.log("Client!");
+        this.counter = 0;
+    }
 
-	// update other stuff . . .
-}
+    // update other stuff . . .
+};
 
 // the client only runs this when the world is shutting down
 systemClient.shutdown = function () {
-	// clean up stuff . . .
-}
+    // clean up stuff . . .
+};
 
 // This is just a helper function that simplifies logging data to the console.
 systemClient.log = function (...items) {
-	// Convert every parameter into a legible string and collect them into an array.
-	const toString = (item) => {
-		switch (Object.prototype.toString.call(item)) {
-			case '[object Undefined]':
-				return 'undefined'
-			case '[object Null]':
-				return 'null'
-			case '[object String]':
-				return `"${item}"`
-			case '[object Array]':
-				const array = item.map(toString)
-				return `[${array.join(', ')}]`
-			case '[object Object]':
-				const object = Object.keys(item).map(
-					(key) => `${key}: ${toString(item[key])}`
-				)
-				return `{${object.join(', ')}}`
-			case '[object Function]':
-				return item.toString()
-			default:
-				return item
-		}
-	}
+    // Convert every parameter into a legible string and collect them into an array.
+    const toString = (item) => {
+        switch (Object.prototype.toString.call(item)) {
+            case "[object Undefined]":
+                return "undefined";
+            case "[object Null]":
+                return "null";
+            case "[object String]":
+                return `"${item}"`;
+            case "[object Array]":
+                const array = item.map(toString);
+                return `[${array.join(", ")}]`;
+            case "[object Object]":
+                const object = Object.keys(item).map((key) => `${key}: ${toString(item[key])}`);
+                return `{${object.join(", ")}}`;
+            case "[object Function]":
+                return item.toString();
+            default:
+                return item;
+        }
+    };
 
-	// Join the string array items into a single string and print it to the world's chat.
-	const chatEvent = this.createEventData('minecraft:display_chat_event')
-	chatEvent.data.message = items.map(toString).join(' ')
-	this.broadcastEvent('minecraft:display_chat_event', chatEvent)
-}
+    // Join the string array items into a single string and print it to the world's chat.
+    const chatEvent = this.createEventData("minecraft:display_chat_event");
+    chatEvent.data.message = items.map(toString).join(" ");
+    this.broadcastEvent("minecraft:display_chat_event", chatEvent);
+};
 ```
 
 You should see many similarities between the `clientScript.js` and the `serverScript.js`.
@@ -510,7 +502,7 @@ You should see something like this!
 
 The game should print "Server!" and "Client!" to the chat once per second.
 
-## Bundling your behavior pack into an Add-on
+## Bundling Your Behavior Pack into an Add-On
 
 So how can other people play your brand new, never before seen Minecraft Bedrock Edition add-on?
 Microsoft created a super simple way to bundle up your behavior pack into a single file.

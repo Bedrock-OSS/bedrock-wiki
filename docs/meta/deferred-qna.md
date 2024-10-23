@@ -156,7 +156,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
     Since shader packs are too heavy for some devices, I thought it would be wonderful if there were such option for each packs.
 -   **A**: Deferred graphics resource packs will stack like any other resource pack with the pack being higher on the stack overriding the properties of the pack below it. Your description of pack overriding behavior sounds right!
 
-## Are There Any Plans To Fix Volumetric Fogs That Use Height Rather Than Uniformity From Blinding You?
+## Are There Any Plans to Fix Volumetric Fogs That Use Height Rather Than Uniformity from Blinding You?
 
 -   **Q**: To add more context. When you set up a fog and it uses the height parameters rather than being uniform, their thickness goes to the maximum upon entering the biome then fades into the proper height the further in you go. Is this intentional or a bug?
 -   **A**: Interpolation at biome transitions aren't the most polished right now (what you're describing is likely a bug). We'll be working on more polished transitions closer to final release!
@@ -167,7 +167,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
     (I just imagine a lethal company style flashlight through fog in minecraft and get excited lol)
 -   **A**: No, we do not have plans to include spot lights or attachable lights to entities at this point in time. Thank you for your suggestion!
 
-## How Customizable Will Deferred Be On Release?
+## How Customizable Will Deferred Be on Release?
 
 -   **Q**: Seeing that there are **a lot** of configs for deferred inside the game’s files, will we be able to edit those fully through resource packs in the future?
     Something else I was wondering is if we will get more customizations in the future (for example: More lighting Config, Renderer Config, etc).

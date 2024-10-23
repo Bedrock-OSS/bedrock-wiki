@@ -206,7 +206,7 @@ onStepOn({ block }) {
 }
 ```
 
-## Set Block At Pos
+## Set Block at Pos
 
 <CodeHeader>Custom Component</CodeHeader>
 

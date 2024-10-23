@@ -1,5 +1,5 @@
 ---
-title: How to contribute to our wiki
+title: How to Contribute
 hidden: true
 mentions:
     - TheItsNameless
@@ -7,7 +7,7 @@ mentions:
 description: Make your first contribution!
 ---
 
-## About this Guide
+## About This Guide
 
 This guide will walk you through how to get started editing the wiki. While it is possible to edit the wiki "in-place" on the github website, this guide will instead teach you the proper technique. This is a valuable and transferable skill, and will set you up for additional knowledge beyond just editing the wiki.
 
@@ -17,7 +17,7 @@ If you already know some of the steps we cover in this guide, feel free to use t
 
 And if you want to learn more about our fancy styling-features, continue with our [Contribute-Style-Guide](/contribute-style)!
 
-## Steps to edit the wiki
+## Steps to Edit the Wiki
 
 To edit the wiki, there are 5 major steps that you need to follow (downloading and setting up the software is just done the first time):
 
@@ -29,7 +29,7 @@ To edit the wiki, there are 5 major steps that you need to follow (downloading a
 
 If you see this the first time, it might look a little overwhelming, but don't worry! Its very easy and we guide you through this step by step.
 
-## Setting up the Software
+## Setting Up the Software
 
 To edit our wiki, you need to download and install the following software:
 
@@ -108,7 +108,7 @@ With [NodeJS](https://www.nodejs.org) we can view the wiki locally, as it would 
 
 Now, again, just go to your download folder and double-click the nodejs setup file. For our setup, you don't need to change anything. Just make sure you don't add `Tools for native modules`, as we don't need them. On the last page, just click `Install`. Wait for the installation to finish and click `Finish`.
 
-## Setup your local environment
+## Set Up Your Local Environment
 
 Now as we have installed all of our necessary programs, we can start to contribute to the wiki. Well, at first we have to setup our local working environment. Don't worry, its very easy. Just follow the steps below:
 
@@ -130,7 +130,7 @@ After that, you will see an overview over your clone. To work on it, just click 
 
 Now you have successfully cloned the wiki to your local device and you can edit all files!
 
-## Committing your changes
+## Committing Your Changes
 
 Once you finished working on the wiki, you can now commit and push your changes directly to our repository!
 
@@ -160,7 +160,7 @@ GitHub Desktop will open your PR in your browser. You can edit your PR, but you 
 
 You are done! Now its our turn to merge your changes in our wiki!
 
-## Updating local environment
+## Updating Local Environment
 
 Since you are not the only person who works on the wiki, there might be some changes that you currently don't have in your local clone. To update your local clone, you need to update your fork. Don't worry, its really easy!
 
@@ -182,7 +182,7 @@ This process has to be done every time someone else updates our wiki. If you for
 
 If this happens, don't worry. You can easily fix this problem.
 
-#### Fixing it
+#### Fixing It
 
 Update your fork like we did in the previous step. After that, you can't just pull the changes to your local clone in GitHub Desktop, because this would cause problems. Instead, click on `Current branch`.
 

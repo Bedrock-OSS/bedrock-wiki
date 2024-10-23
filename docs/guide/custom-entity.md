@@ -1416,7 +1416,7 @@ Your folder structure should look like this:
 
 </Spoiler>
 
-## Your progress so far
+## Your Progress So Far
 
 -   [x] Setup your pack
 -   [x] Create a custom item

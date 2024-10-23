@@ -305,7 +305,7 @@ Your folder structure should look like this:
 
 If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
 
-## Your progress so far
+## Your Progress So Far
 
 -   [x] Setup your pack
 -   [x] Create a custom item

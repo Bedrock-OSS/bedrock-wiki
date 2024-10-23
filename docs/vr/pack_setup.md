@@ -41,12 +41,12 @@ This folder stores all textures for the models.
 
 ![](/assets/images/vr/setup/vr-template-textures.png)
 
-## Merging the VR template with your own pack
+## Merging the VR Template with Your Own Pack
 
 This pack depends on the `contents.json` and `textures_list.json` to work. All assets from your pack, that the game will use, need to be defined in there.
 If you have 2 of the same files you are ought to combine them.
 
-## Your progress so far
+## Your Progress So Far
 
 -   [x] Setup Minecraft VR
 -   [x] Setup the pack

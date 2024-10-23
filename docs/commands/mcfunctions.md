@@ -9,6 +9,7 @@ mentions:
 nav_order: 3
 description: Learn about functions in MCBE.
 ---
+
 ## Introduction
 
 [Sourced By Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
@@ -36,7 +37,7 @@ Functions are useful in many ways to reduce the time spent going from command bl
 To help create a consistent format, make it easier for everyone to follow, and to maintain uniformity across your functions, it is advised to follow these best-practices for your folder structure:
 
 1. Folders and files in a pack must be named using `snake_case`
-    - This means only **lowercase** alphanumeric characters and underscores (` _ `) are allowed.
+    - This means only **lowercase** alphanumeric characters and underscores (`_`) are allowed.
     - ✅️ `BP/functions/scoreboards/objective/add_all.mcfunction`
     - ❌️ `BP/functions/SCOREBOARDS/Objective/Add-all.mcfunction`
 2. They must be properly nested:
@@ -51,28 +52,32 @@ To help create a consistent format, make it easier for everyone to follow, and t
 5. Content folders should use consistent pluralization: Stick with names that are either all plural or all singular, don't mix and match. Example:
 
 ✅️ Consistent:
+
 ```
 BP/functions/abilities/ice_blast.mcfunction
 BP/functions/events/player/on_death.mcfunction
 BP/functions/events/world/on_initialise.mcfunction
 BP/functions/quests/jungle/1.mcfunction
 ```
-- All content folders `abilities`, `events`, and `quests` are consistently pluralized.
-- The content folders in `events` are also consistent, as both `player` and `world` are singular.
+
+-   All content folders `abilities`, `events`, and `quests` are consistently pluralized.
+-   The content folders in `events` are also consistent, as both `player` and `world` are singular.
 
 ❌️ Inconsistent:
+
 ```
 BP/functions/ability/ice_blast.mcfunction
 BP/functions/event/players/on_death.mcfunction
 BP/functions/event/world/on_initialise.mcfunction
 BP/functions/quests/jungle/1.mcfunction
 ```
-- Only `quests` content folder is pluralized while `ability`, and `event` are singular.
-- Also, in the `event` folder, the `players` folder is plural while `world` is singular.
+
+-   Only `quests` content folder is pluralized while `ability`, and `event` are singular.
+-   Also, in the `event` folder, the `players` folder is plural while `world` is singular.
 
 ## Notes For Beginners
 
-*Below is an example function file for beginners reference:*
+_Below is an example function file for beginners reference:_
 
 <CodeHeader>BP/functions/effects.mcfunction</CodeHeader>
 
@@ -85,28 +90,27 @@ effect @a [tag=atSpawn] weakness 12 255 true
 # These effects are for the nether
 effect @a [tag=inNether] fire_resistance 12 255 true
 ```
-- Commands in a function may not begin with a slash (` / `). Each new line in a function file represents a new command (ignored if left blank). You may start a line with a hashtag ( ` # `) to add comments — the space after `#` is only a format preference. For comments style guide for functions, see the section **[below](#comments-style-guide)**.
 
-- All commands in a function are run in the *same tick*. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
+-   Commands in a function may not begin with a slash (`/`). Each new line in a function file represents a new command (ignored if left blank). You may start a line with a hashtag ( `#`) to add comments — the space after `#` is only a format preference. For comments style guide for functions, see the section **[below](#comments-style-guide)**.
 
-- In Minecraft Bedrock, functions cannot run more than 10,000 commands in a function file. This includes any other function files that are executed inside of the original file.
+-   All commands in a function are run in the _same tick_. Because of this, a function which causes large changes may cause a sudden lag spike and it is helpful to delegate some commands across multiple ticks, if possible. Commands in a function are still run in the same sequence, however.
 
-- It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
+-   In Minecraft Bedrock, functions cannot run more than 10,000 commands in a function file. This includes any other function files that are executed inside of the original file.
 
-- Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
+-   It is not possible to run conditional commands. Those will still need to utilize command blocks in some way, or could utilize the 1.19.50 execute syntax.
+
+-   Running commands with a specified delay in a function involves using scoreboard timers to incrementally count up each tick until a certain point, and executing commands at specific scores within the file. See [Scoreboard Timers](/commands/scoreboard-timers) page to learn it's setup.
 
 ## Comments Style Guide
 
-- When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
-- *Optionally*, to further distinguish these levels, you can apply different styles:
-    - level 1 headers - **# UPPERCASE**
-    - level 2 headers - **## Title Case**
-    - level 3 headers - **### Sentence Case**
-- Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
-
+-   When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
+-   _Optionally_, to further distinguish these levels, you can apply different styles:
+    -   level 1 headers - **# UPPERCASE**
+    -   level 2 headers - **## Title Case**
+    -   level 3 headers - **### Sentence Case**
+-   Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
 
 <Spoiler title="Example Function File">
-
 
 <CodeHeader>BP/functions/abilities/fire_trail.mcfunction</CodeHeader>
 
@@ -135,7 +139,6 @@ execute at @a [scores={abilities.fire_trail=1..}] run particle minecraft:basic_f
 scoreboard players remove @a [scores={abilities.fire_trail=1..}] abilities.fire_trail 1
 ```
 
-
 </Spoiler>
 
 Note the use of two lines of spacing before level 1 headers and one line of spacing before level 2 headers for improved readability.
@@ -144,9 +147,10 @@ This practice helps create a consistent format, making it easier for everyone to
 
 For Scoreboard and Tags style guide, see **[here](/meta/style-guide#scoreboard-and-tags)**.
 
-## Creating A Function
+## Creating a Function
 
 1. Locate the `📁 com.mojang` folder and navigate to `📁 development_behavior_packs`
+
     - The development folders are used for quick reloading of packs, as the packs aren't cached to the world files.
 
 2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
@@ -165,15 +169,15 @@ For Scoreboard and Tags style guide, see **[here](/meta/style-guide#scoreboard-a
         "description": "Write Your Pack Description Here",
         "name": "Write Your Pack Name Here",
         "uuid": "00000000-0000-0000-0000-000000000000",
-        "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 19, 73 ]
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 19, 73]
     },
     "modules": [
         {
             "description": "§r",
             "type": "data",
             "uuid": "00000000-0000-0000-0000-000000000000",
-            "version": [1, 0, 0 ]
+            "version": [1, 0, 0]
         }
     ]
 }
@@ -185,7 +189,6 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 <Spoiler title="Sample 🖼 pack_icon.png">
 
 Sample A:
-	
 ![pack_icon.png](/assets/images/commands/pack_icon.png)
 
 Sample B:
@@ -195,19 +198,21 @@ Sample B:
 </Spoiler>
 
 4. Create a `📁 functions` folder. Any file within this folder that ends with **.mcfunction** will be registered as a function in-game, which can be run with `/function <function_name>`.
+
     - Nested functions are allowed, simply list the file path in relation to the functions folder as shown in the function pack folder structure.
 
 5. Apply the behavior pack in-game and try out the functions. Function file changes can be reflected in the world by running `/reload` or by simply relogging.
 
 :::tip NOTE:
 Functions are versioned; therefore, they will run in the version listed in the `📄 manifest.json`, such as:
-- `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
-- `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
-:::
+
+-   `min_engine_version` 1.19.50 or above will adopt the new execute syntax.
+-   `min_engine_version` 1.19.70 or above will require aux values be replaced with block states.
+    :::
 
 ## Execution
 
-Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. 
+Functions can be executed in-game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick.
 
 Nested functions, for example `BP/functions/lobby/items/1.mcfunction` can be run using the nested folder path, in this case `/function lobby/items/1`
 

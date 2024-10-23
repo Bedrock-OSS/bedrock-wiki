@@ -1,5 +1,5 @@
 ---
-title: 'Intro to Particles'
+title: "Intro to Particles"
 category: General
 tags:
     - guide
@@ -32,7 +32,7 @@ An 'emitter' or 'particle emitter' is a system that can spawn many particles, ei
 -   A rainstorm (creates raindrops)
 -   A smokey chimney (creates smoke wisps)
 
-## Creating your First Particle
+## Creating Your First Particle
 
 To create a particle, you need a resource pack, a texture, and a particle definition file:
 

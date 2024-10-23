@@ -18,7 +18,7 @@ This system allows you to track the total number of players/entities on your wor
 
 ## Setup
 
-*To be typed in Chat:*
+_To be typed in Chat:_
 
 `/scoreboard objectives add count dummy`
 
@@ -44,14 +44,15 @@ execute if score AlivePlayers count matches 4.. run title @a actionbar There are
 ### Message if 3 or less creepers
 execute if score Creepers count matches ..3 run title @a actionbar There are less than 3 creepers on the world.
 ```
-![Chain Of 5 Command Blocks](/assets/images/commands/commandBlockChain/5.png)
 
+![Chain of 5 Command Blocks](/assets/images/commands/commandBlockChain/5.png)
 
 Here, we are tracking alive players and creepers as examples, but you can track any entity you like and as many as you need. You may also alter the fake-player-names to your preference. Example: 'AlivePlayers' to just 'Players'.
 
 Similarly, we're running `/title` commands as examples:
-- a) when there are 4 or more players `4..`
-- b) when there are 3 creepers or less `..3`
+
+-   a) when there are 4 or more players `4..`
+-   b) when there are 3 creepers or less `..3`
 
 You can modify/expand these as well. Example: a `/kill` command instead of a `/title` command.
 
@@ -62,14 +63,14 @@ You can modify/expand these as well. Example: a `/kill` command instead of a `/t
     - Example: Creeper mobs to 'Creepers' fake-player-name.
 3. **Command 4, 5:** These are example commands which can be modified / expanded.
     - Based on the total count obtained, we can use the `/execute if score` condition to run our desired commands when certain values are met.
-        - **` n `** any number *n*
-        - **` n.. `** any number *n* and above
-        - **` ..n `** any number *n* and below
-        - **` n..n1 `** any number *n* to any number *n1*. (smaller number first)
+        - **`n`** any number _n_
+        - **`n..`** any number _n_ and above
+        - **`..n`** any number _n_ and below
+        - **`n..n1`** any number _n_ to any number _n1_. (smaller number first)
 
 ## Tick JSON
 
-If you are using functions instead of command blocks, the ` entity_counter ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the `entity_counter` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
@@ -96,8 +97,9 @@ If using functions, your pack folder structure will be as follows:
 
 :::info NOTE:
 
-The scoreboard names (in this case: 'count') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-- ` count_0fe678 `
-- ` entity_counter_0fe678.mcfunction `
+The scoreboard names (in this case: 'count') may end up being used by other people. Appending `_` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the `.mcfunction` filenames. Ex:
+
+-   `count_0fe678`
+-   `entity_counter_0fe678.mcfunction`
 
 :::

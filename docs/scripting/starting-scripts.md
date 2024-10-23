@@ -25,7 +25,7 @@ The Script API (formerly GameTests, and not to be confused with the [Legacy Scri
 
 This page will give you an introduction to the 80% of Minecraft's Creator API concepts that you will use on a daily basis.
 
-## Create your first project
+## Create Your First Project
 
 Currently, scripts can only be used in behavior packs.
 

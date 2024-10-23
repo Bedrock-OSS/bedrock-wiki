@@ -1634,7 +1634,7 @@ Some of them only work in specific screens.
 -   `#save_button_enabled`
 -   `#save_button_disabled`
 
-#### Adhoc In Progress (`ui/adhoc_in_progress_screen.json`)
+#### Adhoc in Progress (`ui/adhoc_in_progress_screen.json`)
 
 -   `#adhoc_title`
 
@@ -1971,7 +1971,7 @@ Some of them only work in specific screens.
 | Brightness (VR)           | `vr_gamma`                      | `#vr_gamma`                      | `#vr_gamma_text_value`          | `#vr_gamma_slider_label`                      | `#vr_gamma_enabled`                      |
 | HUD Opacity               | `interface_opacity`             | `#interface_opacity`             | `#interface_opacity_text_value` | `#interface_opacity_slider_label`             | `#interface_opacity_enabled`             |
 | HUD Opacity (Splitscreen) | `splitscreen_interface_opacity` | `#splitscreen_interface_opacity` | `#interface_opacity_text_value` | `#splitscreen_interface_opacity_slider_label` | `#splitscreen_interface_opacity_enabled` |
-| Field Of View             | `field_of_view`                 | `#field_of_view`                 | `#field_of_view_text_value`     | `#field_of_view_slider_label`                 | `#field_of_view_enabled`                 |
+| Field of View             | `field_of_view`                 | `#field_of_view`                 | `#field_of_view_text_value`     | `#field_of_view_slider_label`                 | `#field_of_view_enabled`                 |
 
 ### Toggles
 

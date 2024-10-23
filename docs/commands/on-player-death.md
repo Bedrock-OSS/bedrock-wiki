@@ -16,7 +16,7 @@ This system will run your desired commands on the event that a player dies.
 
 ## Setup
 
-*To be typed in Chat:*
+_To be typed in Chat:_
 
 `/scoreboard objectives add is_alive dummy`
 
@@ -44,17 +44,17 @@ scoreboard players set @a [scores={is_alive=0}] is_alive 2
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
 
-Just make sure to follow the given order and properly apply the ` scores={alive=0} ` selector argument as shown for your desired commands.
+Just make sure to follow the given order and properly apply the `scores={alive=0}` selector argument as shown for your desired commands.
 
 ## Explanation
 
-- **` is_alive=0 `** player is *not* alive (dead).
-- **` is_alive=1 `** player is alive.
-- **` is_alive=2 `** player is dead and we have executed our desired commands on/from them.
+-   **`is_alive=0`** player is _not_ alive (dead).
+-   **`is_alive=1`** player is alive.
+-   **`is_alive=2`** player is dead and we have executed our desired commands on/from them.
 
-**Purpose Of Each Command:**
+**Purpose of Each Command:**
 
-1. **Command 1:** All players will be marked as *not* alive (0) by default.
+1. **Command 1:** All players will be marked as _not_ alive (0) by default.
     - We will ignore score `2`, else the commands that we want to run when the player dies will trigger more than once.
 2. **Command 2:** All alive players will be marked as 'alive' (1).
     - `@e` selector allows us to exclusively target players who are alive.
@@ -64,7 +64,7 @@ Just make sure to follow the given order and properly apply the ` scores={alive=
 
 ## Tick JSON
 
-If you are using functions instead of command blocks, the ` on_death ` function must be added to the ` tick.json ` in order to loop and run it continuously. Multiple files can be added to the ` tick.json ` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
+If you are using functions instead of command blocks, the `on_death` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
 <CodeHeader>BP/functions/tick.json</CodeHeader>
 ```json
@@ -92,9 +92,10 @@ If using functions, your pack folder structure will be as follows:
 
 :::info NOTE:
 
-The scoreboard names (in this case: 'is_alive') may end up being used by other people. Appending ` _ ` and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the ` .mcfunction ` filenames. Ex:
-- ` is_alive_0fe678 `
-- ` on_death_0fe678.mcfunction `
+The scoreboard names (in this case: 'is*alive') may end up being used by other people. Appending ` * `and a set of randomly generated characters after would be a choice that reduces the probability of collisions. Similar technique can be employed for the` .mcfunction ` filenames. Ex:
+
+-   `is_alive_0fe678`
+-   `on_death_0fe678.mcfunction`
 
 :::
 
@@ -106,8 +107,8 @@ This method was possible after the introduction of the new `/execute` syntax in 
 If two or more players are teleported to the same point and one of them dies but the remaining players do not move, the system will fail to execute the commands.
 :::
 
-- Make sure you add the `is_dead` scoreboard objective:
-    - `/scoreboard objectives add is_dead dummy`
+-   Make sure you add the `is_dead` scoreboard objective:
+    -   `/scoreboard objectives add is_dead dummy`
 
 <CodeHeader>BP/functions/states/is_dead.mcfunction</CodeHeader>
 
@@ -122,19 +123,20 @@ execute as @a at @s unless entity @e [type=player, r=0.01] run scoreboard player
 ### Summon armor stand at death position
 execute as @a [scores={is_dead=1}] at @s run summon armor_stand "Dead Player" ~~~
 ### Death message in chat
-execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet.. 
+execute as @a [scores={is_dead=1..}] run say I died and haven't respawned yet..
 ```
+
 ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
 **States:**
 
-- **` is_dead=0 `** player is *not* dead (alive).
-- **` is_dead=1 `** player just died. (used for 'trigger' actions)
-- **` is_dead=1.. `** player is still dead. (used for repeating actions)
+-   **`is_dead=0`** player is _not_ dead (alive).
+-   **`is_dead=1`** player just died. (used for 'trigger' actions)
+-   **`is_dead=1..`** player is still dead. (used for repeating actions)
 
-**Purpose Of Each Command:**
+**Purpose of Each Command:**
 
-1. **Command 1:** All alive players are marked as *not* dead (0)
+1. **Command 1:** All alive players are marked as _not_ dead (0)
 2. **Command 2:** If there is no alive player within a 0.01 block radius of a player, they will be marked as dead (1)
     - The logic is that only the player themself can be present within such a small radius from them. The probability of two or more players to precisely stand at the same point by themselves (without `/tp` command) is close to zero.
 3. **Command 3, 4:** These are example commands (for each state) which can be modified / expanded.

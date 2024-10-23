@@ -72,7 +72,7 @@ World_To_Entity * Entity_To_Root * Root_To_Pelvis * Pelvis_To_Spine0 .. Spine(N-
 
 We'll be less confused about what "space" we're in. The above is described as "local space". Each joint is relative to the parent joint. But if we multiply everything from `Root` to `RHand`, the resulting transform is still an `RHand` transform, it's just in "Character or Entity space". To get it into world space we'd have to multiply `World_To_Entity * Entity_To_RHand = World_To_RHand`
 
-Technically, this "To" naming is a little confusing because the Entity transform applied to a point really transforms `EntityToWorld`, but it's applied right to left, so `World_To_Entity` read right to left is `Entity To World`. I've also seen: `WorldFromEntity * EntityFromRoot`. Regardless of "From vs To", what's nice about using this relative rather than absolute naming is that you can also validate your math is right when you see it written:
+Technically, this "To" naming is a little confusing because the Entity transform applied to a point really transforms `EntityToWorld`, but it's applied right to left, so `World_To_Entity` read right to left is `Entity_To_World`. I've also seen: `WorldFromEntity * EntityFromRoot`. Regardless of "From vs To", what's nice about using this relative rather than absolute naming is that you can also validate your math is right when you see it written:
 
 ```
 A_To_B = A_To_Something * Something_To_B

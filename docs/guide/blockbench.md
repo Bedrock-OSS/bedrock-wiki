@@ -20,6 +20,8 @@ mentions:
 
 Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net](https://blockbench.net/).
 
+## Modeling
+
 Let's get started.
 
 1.  Open Blockbench.
@@ -38,7 +40,7 @@ Let's get started.
     ![](/assets/images/guide/create_entity_workspace.png)
 
     -   You can see many tools here: move, resize, rotate, etc.
-    -       You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
+    -             You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
 
 5.  Now, you are ready to create your model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Studio below.
 
@@ -73,7 +75,7 @@ You might want to adjust one of the toolbars by adding "Export Animations" and "
 1. Right-click the animation and tick "Loop" for the animation to loop.
    ![](/assets/images/guide/create_entity_animation_4.png)
 
-## Saving your work
+## Saving Your Work
 
 Now that our model, texture, and walk animation are complete, you can save your work.
 
@@ -272,7 +274,7 @@ _Meanwhile, why not upgrade the visuals of your own unique entities' or create a
 
 </Spoiler>
 
-## What you have learned
+## What You Have Learned
 
 -   [x] How to create an entity in Blockbench
 -   [x] How to use Blockbench to model, texture, and animate your entity

@@ -38,7 +38,7 @@ First make sure you connected your headset properly:
 
 When your headset is all setup it is time to open the shortcut.
 
-## Your progress so far
+## Your Progress So Far
 
 -   [x] Setup Minecraft VR
 -   [ ] Setup your VR resource pack

@@ -5,7 +5,7 @@ description: Introduction to our "Getting Started" Guide
 tags:
     - guide
 nav_order: 1
-prefix: '1. '
+prefix: "1. "
 mentions:
     - KaiFireborn
     - SirLich
@@ -19,7 +19,7 @@ mentions:
     - retr0cube
 ---
 
-## What are Add-Ons?
+## What Are Add-Ons?
 
 An "[Add-On](https://learn.microsoft.com/en-us/minecraft/creator/?view=minecraft-bedrock-stable)" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. In contrast to Java however, the Bedrock Edition API is officially maintained by Mojang instead of the community.
 
@@ -29,13 +29,13 @@ In general, you can think of _mods_ as _modifying_ the game, and _add-ons_ as _a
 Although we're very pleased with this guide, it's not the only option for getting started. Mojang maintains their own [getting started guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted?view=minecraft-bedrock-stable&tabs=Windows10) on the Creator Platform, which you can consider following instead.
 :::
 
-## What is this guide?
+## What Is This guide?
 
 This guide is a beginner tutorial, intended to walk you through the first stages of add-on creation. You will create your very own fully-functional Ghost entity, as well as an Ectoplasm item, and some other associated files.
 
 By the end of this guide, you will have created an entire add-on all by yourself, which you can play with and modify!
 
-## Is the guide up to date?
+## Is the Guide Up-to-Date?
 
 This guide is written for the most recent _stable_ release of Minecraft Bedrock Edition. Many things won't work in previous versions, and some will be changed in later ones. We will keep the guide as up-to-date as possible, so no need to worry.
 
@@ -47,7 +47,7 @@ Alongside the step-by-step guide, we have a few other pages here in this section
 -   [Downloading Example Packs](/guide/download-packs)
 -   [Troubleshooting](/guide/troubleshooting)
 
-## What to do after finishing the Guide
+## What to Do After Finishing the Guide
 
 At the end of the guide section, your first add-on will be done! To further expand your knowledge, consider doing these:
 

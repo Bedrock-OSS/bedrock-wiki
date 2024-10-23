@@ -29,7 +29,7 @@ They can only be placed or destroyed by a player with the Operator permission in
 
 ## Command Block Types
 
-![impulseCommandBlock](/assets/images/commands/impulseCommandBlock.png) **Impulse** runs the command __once__ each time it is powered.
+![impulseCommandBlock](/assets/images/commands/impulseCommandBlock.png) **Impulse** runs the command **once** each time it is powered.
 
 ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **Chain** runs the command in a sequence, ie., only after the previous command block it is connecting from was run.
 
@@ -38,12 +38,14 @@ They can only be placed or destroyed by a player with the Operator permission in
 ## Command Block Conditions
 
 **Conditional** command blocks will run the command only if the previous command block it was connecting from had an output that was successful. (`true`)
-> Conditional command block states are shown by a small indent into the command block's arrow texture, as shown below:
-> - ![pasteCommandButton](/assets/images/commands/impulseConditionalCommandBlock.png) Impulse Conditional Command Block
-> - ![chainConditionalCommandBlock](/assets/images/commands/chainConditionalCommandBlock.png) Chain Conditional Command Block
-> - ![repeatingConditionalCommandBlock](/assets/images/commands/repeatingConditionalCommandBlock.png) Repeating Conditional Command Block
 
-**Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was succesful (`true`) or failed (`false`) the command block will still run the command. 
+> Conditional command block states are shown by a small indent into the command block's arrow texture, as shown below:
+>
+> -   ![pasteCommandButton](/assets/images/commands/impulseConditionalCommandBlock.png) Impulse Conditional Command Block
+> -   ![chainConditionalCommandBlock](/assets/images/commands/chainConditionalCommandBlock.png) Chain Conditional Command Block
+> -   ![repeatingConditionalCommandBlock](/assets/images/commands/repeatingConditionalCommandBlock.png) Repeating Conditional Command Block
+
+**Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was succesful (`true`) or failed (`false`) the command block will still run the command.
 
 ## Command Block Redstone States
 
@@ -76,21 +78,22 @@ The paste button allows you to paste commands from your clipboard to the 'Comman
 
 ## Command Block Output
 
-- Toggle the 'Previous Output' button in the command block UI to see command output and block details.
+-   Toggle the 'Previous Output' button in the command block UI to see command output and block details.
 
-- The ` / ` you type before the whole command is not required in a command block, but doing so will not cause any errors.
+-   The `/` you type before the whole command is not required in a command block, but doing so will not cause any errors.
 
-- A redstone comparator can read command block outputs. If output is successful, it will return anywhere from 1 to 15 redstone signals depending on the output strength.
+-   A redstone comparator can read command block outputs. If output is successful, it will return anywhere from 1 to 15 redstone signals depending on the output strength.
 
-- You can check if a command block output is `true`/`false` by running it in chat. An output in red text or an output of `0` indicate a syntax error or failed (`false`) output. And output in white text indicate that the command was run successfully.
+-   You can check if a command block output is `true`/`false` by running it in chat. An output in red text or an output of `0` indicate a syntax error or failed (`false`) output. And output in white text indicate that the command was run successfully.
 
-- You can also tell if a command was `true`/`false` by checking whether the action was performed or not.
+-   You can also tell if a command was `true`/`false` by checking whether the action was performed or not.
 
-### Disabling Command Messages In Chat
+### Disabling Command Messages in Chat
 
 Run in Chat:
-- `/gamerule commandblockoutput false` to disable command block messages in chat.
-- `/gamerule sendcommandfeedback false` to disable feedback from commands entered in chat.
+
+-   `/gamerule commandblockoutput false` to disable command block messages in chat.
+-   `/gamerule sendcommandfeedback false` to disable feedback from commands entered in chat.
 
 ## Command Block Placement
 
@@ -106,35 +109,36 @@ The arrow/facing direction can be observed from the command block texture on the
 
 ## Troubleshooting Command Blocks
 
-- In world settings, under **Cheats**, make sure command blocks have not been disabled.
+-   In world settings, under **Cheats**, make sure command blocks have not been disabled.
 
-- Make sure gamerule `maxcommandchainlength` is not set to 0
+-   Make sure gamerule `maxcommandchainlength` is not set to 0
 
-- Make sure there are no unwanted redstone power that is interfering with the command block. It can be from redstone dust, lever, redstone torch, etc.
+-   Make sure there are no unwanted redstone power that is interfering with the command block. It can be from redstone dust, lever, redstone torch, etc.
 
-- Try switching between 'Always Active' & 'Needs Redstone'.
+-   Try switching between 'Always Active' & 'Needs Redstone'.
 
-- Double check the block type, condition, and the command syntax. After powering it, check the 'Previous Output' again.
+-   Double check the block type, condition, and the command syntax. After powering it, check the 'Previous Output' again.
 
-- Just like redstone, command blocks must also be within loaded chunks for them to work. You can use a tickingarea to keep them loaded when players are not nearby. Refer to [/tickingarea](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand) command documentation for more info.
+-   Just like redstone, command blocks must also be within loaded chunks for them to work. You can use a tickingarea to keep them loaded when players are not nearby. Refer to [/tickingarea](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand) command documentation for more info.
 
 If nothing seems to work, simply break and replace that command block.
 
 ## What You Have Learned
 
 :::tip What you have learned:
-- How to obtain a command block in game.
-- How the different types of command blocks behave and what they look like.
-- What the different command block options are (including conditional, state and delay.)
-- How command blocks output data by redstone and chat messages.
-- How to properly place command block chains.
-- How to resolve 'command block not working' 
-:::
+
+-   How to obtain a command block in game.
+-   How the different types of command blocks behave and what they look like.
+-   What the different command block options are (including conditional, state and delay.)
+-   How command blocks output data by redstone and chat messages.
+-   How to properly place command block chains.
+-   How to resolve 'command block not working'
+    :::
 
 To put what you have learned into practice, try making this simple [Entity Counter](/commands/entity-counter) system.
 
 > When setting up command block systems following codeblock/mcfunction, always keep in mind that the first command block will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
-> 
+>
 > ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
 
 **(Recommended) Read Next: [Understanding Selectors](/commands/selectors)**

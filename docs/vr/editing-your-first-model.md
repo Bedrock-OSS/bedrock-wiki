@@ -134,7 +134,7 @@ Load the pack into minecraft and try it out if it looks like this you succeeded 
     Get guide end results!
 </Button>
 
-## Your progress so far
+## Your Progress So Far
 
 -   [x] Setup Minecraft VR
 -   [x] Setup the pack

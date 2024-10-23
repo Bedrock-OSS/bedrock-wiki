@@ -40,7 +40,7 @@ If you've gotten this far, hopefully, you have a GitHub account and are familiar
 -   github
 -   git
 
-## Setting up Git
+## Setting Up Git
 
 This assumes you are adding an _existing_ project to git. The steps are similar if you are starting from scratch.
 
@@ -62,7 +62,7 @@ Right-click the folder, and click `"Open git Bash"`. If this option doesn't appe
 
 Type: `git init`. This will create a blank repository in your project.
 
-### Linking your existing RP and BP
+### Linking Your Existing RP and BP
 
 The next step is to make the repository aware of your RP and BP folders. We will be using window symlink "junctions". When we create a junction, we essentially create a wormhole in our file system that will make it appear like your files are in two places at once. Deleting/editing/adding files is perfectly copied over.
 
@@ -79,7 +79,7 @@ Because we created our repository based on symlinks, we can add anything we like
 
 You can also add notes, video files, or anything else you want to track.
 
-### Working with your VCS
+### Working With Your VCS
 
 The main things to remember about working with VCS:
 

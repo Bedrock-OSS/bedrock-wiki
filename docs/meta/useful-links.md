@@ -97,14 +97,14 @@ Important links have a ⭐.
 -   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 -   [Mcbehub](https://mcbehub.com/category/realmdocs)
 
-### Getting Started With Your First Add-On
+### Getting Started with Your First Add-On
 
-- [Getting Started with Add-On Development for Bedrock Edition](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted): These guides show you exactly how to build your first resource pack and your first behavior pack from start to finish.
-- [Molang: a Beginner's Guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/molangbeginnersguide): Molang is a Minecraft programming language that can be useful for writing some advanced add-ons.
-- [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted): This is the best way to test games, and it uses JavaScript, the most popular programming language in the world!
-- [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript. Writing add-ons in TypeScript allows you to add any functionality you can imagine!
-- [@minecraft/server Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
-- [List and summary of commands (Unofficial Minecraft wiki)](https://minecraft.wiki/w/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
+-   [Getting Started with Add-On Development for Bedrock Edition](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted): These guides show you exactly how to build your first resource pack and your first behavior pack from start to finish.
+-   [Molang: a Beginner's Guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/molangbeginnersguide): Molang is a Minecraft programming language that can be useful for writing some advanced add-ons.
+-   [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted): This is the best way to test games, and it uses JavaScript, the most popular programming language in the world!
+-   [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript. Writing add-ons in TypeScript allows you to add any functionality you can imagine!
+-   [@minecraft/server Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
+-   [List and summary of commands (Unofficial Minecraft wiki)](https://minecraft.wiki/w/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
 
 ## Sample Behavior & Resource Packs
 
@@ -129,12 +129,13 @@ These packs are published by the open-source community
 -   [Useful for Block Tags](https://mcpedl.com/debug-stick/)
 
 ## Raytracing Resources
--  ⭐ [Ray Tracing and PBR Texturing guide](https://docs.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)
--  ⭐ [Minecraft with Ray Tracing and Advanced Graphics FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
-- [`.texture_set.json` Adobe Substance 3D Painter plugin](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
-- [r/minecraftRTX Getting Started Guide](https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/)
-- [RenderBender](https://github.com/SpeedyCodes/RenderBender)
-- [RTX Presets](https://discord.com/channels/691547840463241267/919021996271108108)
+
+-   ⭐ [Ray Tracing and PBR Texturing guide](https://docs.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)
+-   ⭐ [Minecraft with Ray Tracing and Advanced Graphics FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
+-   [`.texture_set.json` Adobe Substance 3D Painter plugin](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
+-   [r/minecraftRTX Getting Started Guide](https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/)
+-   [RenderBender](https://github.com/SpeedyCodes/RenderBender)
+-   [RTX Presets](https://discord.com/channels/691547840463241267/919021996271108108)
 
 ## Add-On Marketplaces & Links
 

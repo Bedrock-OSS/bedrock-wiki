@@ -1,5 +1,5 @@
 ---
-title: "Adding a Loot Table, a Spawn rule and a crafting recipe"
+title: Adding a Loot Table, Spawn Rule & Crafting Recipe
 category: Guide
 description: How to add your first Loot Table, Spawn Rule and Crafting Recipe
 nav_order: 8
@@ -19,7 +19,7 @@ mentions:
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:
 
-## Loot tables
+## Loot Tables
 
 First, we'll make the ghost drop Ectoplasm upon death: create the following file:
 
@@ -61,7 +61,7 @@ First, we'll make the ghost drop Ectoplasm upon death: create the following file
 
 For more information on loot tables, see our extended guide: [Loot Tables](/loot/loot-tables)!
 
-## Spawn rules
+## Spawn Rules
 
 Next, we'll make the ghost spawn in deserts at night:
 
@@ -118,7 +118,7 @@ Next, we'll make the ghost spawn in deserts at night:
 
 To learn more about spawn rules, take a look on our guide on [Vanilla spawn rules](/entities/vanilla-usage-spawn-rules).
 
-## Crafting recipes
+## Crafting Recipes
 
 And finally, as an introduction to recipes, we'll make the Ectoplasm craftable into Slime Blocks:
 
@@ -154,7 +154,7 @@ And finally, as an introduction to recipes, we'll make the Ectoplasm craftable i
 
 For more information on this topic, visit our page about [recipes](/loot/recipes)!
 
-## What you have learned
+## What You Have Learned
 
 :::tip What you have learned:
 
@@ -163,7 +163,7 @@ For more information on this topic, visit our page about [recipes](/loot/recipes
 -   How to create new crafting recipes
     :::
 
-## Your progress so far
+## Your Progress So Far
 
 **What you've done:**
 
