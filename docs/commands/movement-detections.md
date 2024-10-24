@@ -290,7 +290,8 @@ If you desperately need to detect all three states separately **solely using com
     - ![issue2](/assets/images/commands/movement-detections/issue2.png)
 3. Swimming in a waterlogged block under another waterlogged block will be detected as crawling.
     - ![issue3](/assets/images/commands/movement-detections/issue3.png)
-      :::
+
+:::
 
 <CodeHeader>BP/functions/states/player/is_crawling.mcfunction</CodeHeader>
 

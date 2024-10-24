@@ -133,7 +133,8 @@ If nothing seems to work, simply break and replace that command block.
 -   How command blocks output data by redstone and chat messages.
 -   How to properly place command block chains.
 -   How to resolve 'command block not working'
-    :::
+
+:::
 
 To put what you have learned into practice, try making this simple [Entity Counter](/commands/entity-counter) system.
 

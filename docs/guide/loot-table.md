@@ -161,7 +161,8 @@ For more information on this topic, visit our page about [recipes](/loot/recipes
 -   How to create a loot table and define which items a mob is able to drop
 -   How to set the rules for a mob to spawn
 -   How to create new crafting recipes
-    :::
+
+:::
 
 ## Your Progress So Far
 

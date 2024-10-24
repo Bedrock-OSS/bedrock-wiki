@@ -35,8 +35,11 @@ _To be typed in chat:_
 
 :::tip
 
--   Crouch & right-click (on mcpe: long press) the armor stand 6 times to place it in 'Entertain' pose. - Doing this negates the need to use the 1st command in the system below. - **Only use this if you wish to reduce one command from the system.**
-    :::
+-   Crouch & right-click (on mcpe: long press) the armor stand 6 times to place it in 'Entertain' pose.
+-   Doing this negates the need to use the 1st command in the system below.
+-   **Only use this if you wish to reduce one command from the system.**
+
+:::
 
 2. Lastly, place the desired block item in the armor stand's main-hand.
 
@@ -44,7 +47,8 @@ _To be typed in chat:_
 
 -   `/replaceitem entity @e [name=Grumm] slot.weapon.offhand 0 <itemID>`
     -   Instead of manually placing the desired block item in the armor stand's main-hand, use this command to place it in it's off-hand to prevent players from taking the item.
-        :::
+
+:::
 
 ## System
 
