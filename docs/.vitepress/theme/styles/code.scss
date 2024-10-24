@@ -15,14 +15,14 @@
 
 [class*="language-"] {
   margin-block: 0.5em;
+  padding-top: 1em;
+  min-height: 3.5em;
 
   background-color: var(--light-bg-color);
   position: relative;
 
   border: var(--border);
   border-radius: var(--border-radius);
-  padding-block: 1em;
-
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-areas: "line-numbers code";
@@ -37,12 +37,13 @@
 
   & > .line-numbers-wrapper {
     grid-area: line-numbers;
-    border-right: var(--border);
     padding-inline: 1em;
-    text-align: end;
-    user-select: none;
+    margin-bottom: 1em;
 
+    border-right: var(--border);
+    user-select: none;
     color: #6a737d;
+    text-align: end;
 
     &:has(> .line-number:only-of-type) {
       display: none;
