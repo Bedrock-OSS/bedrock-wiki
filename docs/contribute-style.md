@@ -773,13 +773,13 @@ The above steps will be done automatically if you install the [Prettier](https:/
 
 ✔️
 
-```:no-line-numbers
+```md
 -   list
 ```
 
 ❌
 
-```:no-line-numbers
+```
 - list
 ```
 
