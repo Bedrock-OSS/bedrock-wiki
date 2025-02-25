@@ -30,8 +30,6 @@ Creating customized food:
 			"identifier": "wiki:custom_<thing>"
 		},
 		"components": {
-            //custom component with consume component
-			"minecraft:custom_components": ["wiki:on_consume"],
             //food icon
 			"minecraft:icon": "wiki:custom_<thing>",
             //food components
@@ -111,6 +109,9 @@ Creating customized food:
 	}
 }
 ```
+
+`minecraft:custom_components`: Used to apply a custom component that we define through scripts
+`wiki:on_consume`: Is the name of the custom component.
 
 
 ## Adding script with effects after eating
