@@ -17,6 +17,8 @@ mentions:
     - t3hero
     - QuazChick
     - MaragiDev
+    - DarkGamerYT
+    - zheaEvyline
 ---
 
 :::warning
@@ -247,17 +249,15 @@ Below are the results of default keybindings. All text below, including "Unassig
 
 ## Custom Emojis
 
-::: warning
-This method is not officially supported. Use with caution on the Marketplace!
+::: warning NOTE:
+This method is not officially supported. While many creators use it on the Marketplace, caution is advised.
 :::
 
-To make a custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some _character-slots_ are already used up with the emoji above, but there are blank slots we can use.
+To make a custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some _character-slots_ are already used up with the emojis above, but there are blank slots we can use.
 
-Please note that the following files have been annotated with slot information: If you use them directly, existing Emoji will have numbers added on top of them. If you need the original sprite-sheets, you can get them from the Vanilla Resources on your system (not included in the Vanilla Resource Pack downloads).
+To get started, download the sprite-sheets below, and move them into the fonts folder.
 
-To get started, you should download the sprite-sheets, and move them into the fonts folder.
-
-Two sprite-sheets are provided for each glyph-target: One that accurately reflects vanilla, and a second version which has been annotated with hex information, for easily finding the correct character.
+Two sprite sheets are provided for each glyph target: one annotated with hex information for easily find the correct character, and a second version that accurately reflects Vanilla. To avoid numbers over existing emojis, use the second version. Below, you'll also find an edited sample with some custom emojis for free-use.
 
 ### Glyph E0
 
@@ -281,11 +281,11 @@ Two sprite-sheets are provided for each glyph-target: One that accurately reflec
 
 <WikiImage src="/assets/images/concepts/emojis/custom/glyph_E1.png" width="512" pixelated />
 
-_Edited sample glyph_E1.png for free-use shared by @zheaEvyline:_
+_Edited sample `glyph_E1.png` (CC0), shared by @zheaEvyline for free use:_
 
 ![](/assets/images/concepts/emojis/custom/edited/glyph_E1.png)
 
-If you'd like to add existing Vanilla items to the glyph and use them as emojis in-game, you can easily do so with the **[Items to Glyph Web Tool](https://minato-mba.github.io/content/Items%20to%20Glyph.html)** created by _@Minato_
+If you'd like to add existing Vanilla items to the glyph and use them as emojis in-game, you can easily do so with the **[Items to Glyph Web Tool](https://minato-mba.github.io/content/Items%20to%20Glyph.html)** created by @Minato
 
 Your filepath should look like this:
 
@@ -294,16 +294,24 @@ Your filepath should look like this:
     'RP/font/glyph_E1.png'
 ]" />
 
+:::tip
+`E0` and `E1` aren't the only code points available to achieve custom emojis.  
+
+You can also use `E2`, `E3`, `E4`, `E5`, `E6`, `E7`, `E8`, `E9`, `EA`, `EB`, `EC`, `ED`, `EE`, `EF`, `F0`, `F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, and `F8`, as these aren't being used by Vanilla.  
+
+Using these code points can also help reduce conflicts with other packs to some extent.
+:::
+
 ### Using the Emojis In-Game
 
 Once you have your custom emojis inside the `glyph_E0.png` or `glyph_E1.png`, you need to obtain it's corresponding letter/symbol which you will be able to copy-paste to display the emoji in-game using the converter below.
 
-The first two characters of the input are either `E0` or `E1`, depending on which file you added emojis to.
+The first two characters of the input are `E0`, `E1`, or any other code point, depending on which file you added emojis to.
 
 The next two characters are the position inside the image in the format `<row><column>`, where each character is a number in hexadecimal numeral system.
 You can find this number by referencing the images above. For example, the top-right square in `E0` is `0F`, and the bottom right is `FF`.
 
-So after you are done, it might look like `E102` (`E1` + `02`).
+So, after you are done, it might look like `E102` (`E1` + `02`).
 
 Copy this code into the following field, and press **Convert**. The symbol on the right-hand side can be copy/pasted into Minecraft.
 
@@ -333,9 +341,9 @@ Copy this code into the following field, and press **Convert**. The symbol on th
     </form>
 </div>
 
-_Alternatively, you can obtain the letter/symbol with the help of this [Glyph Web Tool](https://nhanaz.github.io/glyph/) made by @NhanAZ._
+Alternatively, you can obtain the letter/symbol at this website **[here](https://everythingfonts.com/unicode/0xE300)** or with the help of this **[Glyph Web Tool](https://nhanaz.github.io/glyph/)** made by @NhanAZ.
 
-### Emoji Positioning
+### Positioning the Emoji
 
 -   To position an emoji upwards/downwards, simply move it up/down within its own emoji slot.
 -   To position an emoji towards the left or right, simply add any pixel of 5-10% opacity to its side (within its own slot), opposite to the direction you want to move it.
