@@ -143,3 +143,46 @@ In this example, we will reference `ui/ui_template_buttons.json` and `ui/ui_comm
   }
 }
 ```
+
+### Play Animation
+
+If you want to play an animation when you click a button, you have to use `$pressed_button_name` in your animation's `play_event` property.
+
+For example:
+
+<CodeHeader>RP/ui/your_file.json</CodeHeader>
+```json
+{
+    "example_animation": {
+        "anim_type": "offset",
+        "easing": "linear",
+        "duration": 2,
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            -50,
+            0
+        ],
+        "play_event": "button.example_button_id"
+    },
+    "example_button@common_buttons.light_text_button": {
+        "$pressed_button_name": "button.example_button_id", // use this button id in play_event property of your animation
+        "$button_text": "Play Animation",
+        "size": [
+            80,
+            20
+        ]
+    },
+    "example_label": {
+        "type": "label",
+        "text": "Example Text",
+        "anims": [
+            "@namespace.example_animation" // add your animation here
+        ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right"
+    }
+}
+```
