@@ -9,7 +9,7 @@ description: Understanding the playanimation command.
 
 ## Introduction
 
-[Sourced by the Japanese Commands Community Discord](https://discord.gg/xFZH6QJfSB)
+[Sourced by the Japanese Commanders Gathering Discord](https://discord.gg/xFZH6QJfSB)
 
 In Bedrock, the `/playanimation` command allows entities to play animations. You can stack multiple animations or even customize them.
 
