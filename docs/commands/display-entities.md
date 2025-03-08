@@ -16,7 +16,7 @@ In this page, we will learn how to create block display entities in Minecraft Be
 
 The first person to develop such a technique was [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/), who used only Vanilla commands. His technique offers less flexibility but is much simpler, using armor stands. To check out his method, you may refer to the ["MBE - Max's Block Entity"](/commands/block-entities) page.
 
-Inspired by Max's Block Entity (MBE), command experts @pipi_Spamton, @siratama, and their team from the [Japanese Commands Community](https://discord.gg/xFZH6QJfSB), have devised a new technique for creating block display entities in Minecraft Bedrock which offers more flexibility and customization. This method is based on the same principles as MBE, but instead of armor stands, it effectively uses the bone structure of foxes to render the block displays.
+Inspired by Max's Block Entity (MBE), command experts @pipi_Spamton, @siratama, and their team from the [Japanese Commanders Gathering](https://discord.gg/xFZH6QJfSB), have devised a new technique for creating block display entities in Minecraft Bedrock which offers more flexibility and customization. This method is based on the same principles as MBE, but instead of armor stands, it effectively uses the bone structure of foxes to render the block displays.
 
 In a traditional sense, you may refer to them as block display entities or simply "display entities". However, in recognition of [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/), they are more popularly known as "Fox MBE" (FMBE) in the Bedrock communities.
 
