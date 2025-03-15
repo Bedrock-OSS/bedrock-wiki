@@ -18,6 +18,7 @@ Below is a section of the vanilla [item texture atlas](#items) which Minecraft g
 The full atlas contains many more textures, including custom item textures!
 
 <WikiImage
+    alt="A collection of vanilla item textures."
     src="/assets/images/concepts/texture-atlases/item_atlas_sample.png"
     width="496"
     pixelated
@@ -74,10 +75,10 @@ By default, block textures in `atlas.terrain` have 4 mip levels:
 
 ```json
 {
-  "resource_pack_name": "vanilla",
-  "texture_name": "atlas.terrain",
-  "num_mip_levels": 4,
-  ...
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.terrain",
+    "num_mip_levels": 4,
+    ...
 }
 ```
 
