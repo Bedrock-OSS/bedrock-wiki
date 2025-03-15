@@ -77,6 +77,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     headers: {
       level: [2, 3, 4, 5, 6],
     },
+    math: true,
     lineNumbers: true,
     config(md) {
       md.use(taskListsPlugin, { label: true });
