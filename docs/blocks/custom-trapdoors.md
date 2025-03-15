@@ -53,6 +53,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                 "size": [16, 3, 16]
             },
             "tag:one_way_collidable": {}, // Prevents the player from being pushed out by the trapdoor collision, just like vanilla
+            "tag:trapdoors": {},
             "minecraft:selection_box": {
                 "origin": [-8, 0, -8],
                 "size": [16, 3, 16]
