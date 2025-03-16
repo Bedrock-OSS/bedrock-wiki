@@ -6,6 +6,9 @@
     },
     "vanilla_usage": {
       "name": "Vanilla Usage"
+    },
+    "functionality": {
+      "name": "Functionality"
     }
   },
   "rows": [
@@ -42,7 +45,8 @@
         "`minecraft:raw_gold_block`",
         "`minecraft:raw_iron_block`",
         "`minecraft:redstone_ore`"
-      ]
+      ],
+      "functionality": "_**Deprecated** — check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:diamond_tier_destructible` tags instead._"
     },
     {
       "tag": "`dirt`",
@@ -58,7 +62,8 @@
         "`minecraft:mycelium`",
         "`minecraft:pale_moss_block`",
         "`minecraft:podzol`"
-      ]
+      ],
+      "functionality": "Allows trees to be placed on this block during world generation. The block will be replaced with Dirt if a tree does generated above it. Also allows *some* plants to be placed on the block, including Bamboo, Cactus Flower, Dead Bush, Pink Petals, Sugar Cane and Wildflowers."
     },
     {
       "tag": "`fertilize_area`",
@@ -115,7 +120,8 @@
         "`minecraft:raw_gold_block`",
         "`minecraft:raw_iron_block`",
         "`minecraft:redstone_ore`"
-      ]
+      ],
+      "functionality": "_**Deprecated** — check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:iron_tier_destructible` tags instead._"
     },
     {
       "tag": "`jungle`",
@@ -163,7 +169,8 @@
         "`minecraft:netherite_block`",
         "`minecraft:obsidian`",
         "`minecraft:respawn_anchor`"
-      ]
+      ],
+      "functionality": "Indicates that the block must be destroyed by a diamond tier tool in order to drop. This does not automatically prevent drops for custom blocks."
     },
     {
       "tag": "`minecraft:iron_tier_destructible`",
@@ -182,7 +189,8 @@
         "`minecraft:lit_redstone_ore`",
         "`minecraft:raw_gold_block`",
         "`minecraft:redstone_ore`"
-      ]
+      ],
+      "functionality": "Indicates that the block must be destroyed by an iron tier tool in order to drop. This does not automatically prevent drops for custom blocks."
     },
     {
       "tag": "`minecraft:is_axe_item_destructible`",
@@ -435,7 +443,8 @@
         "`minecraft:wooden_button`",
         "`minecraft:wooden_door`",
         "`minecraft:wooden_pressure_plate`"
-      ]
+      ],
+      "functionality": "Instructs axes to mine this block faster. Custom axes should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
       "tag": "`minecraft:is_hoe_item_destructible`",
@@ -469,7 +478,8 @@
         "`minecraft:target`",
         "`minecraft:warped_wart_block`",
         "`minecraft:wet_sponge`"
-      ]
+      ],
+      "functionality": "Instructs hoes to mine this block faster. Custom hoes should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
       "tag": "`minecraft:is_pickaxe_item_destructible`",
@@ -958,11 +968,13 @@
         "`minecraft:yellow_glazed_terracotta`",
         "`minecraft:yellow_shulker_box`",
         "`minecraft:yellow_terracotta`"
-      ]
+      ],
+      "functionality": "Instructs pickaxes to mine this block faster. Custom pickaxes should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
       "tag": "`minecraft:is_shears_item_destructible`",
-      "vanilla_usage": ["`minecraft:web`"]
+      "vanilla_usage": ["`minecraft:web`"],
+      "functionality": "Instructs shears to mine this block faster. Custom shears should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
       "tag": "`minecraft:is_shovel_item_destructible`",
@@ -1003,11 +1015,13 @@
         "`minecraft:suspicious_sand`",
         "`minecraft:white_concrete_powder`",
         "`minecraft:yellow_concrete_powder`"
-      ]
+      ],
+      "functionality": "Instructs shovels to mine this block faster. Custom shovels should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
       "tag": "`minecraft:is_sword_item_destructible`",
-      "vanilla_usage": ["`minecraft:web`"]
+      "vanilla_usage": ["`minecraft:web`"],
+      "functionality": "Instructs swords to mine this block faster. Custom swords should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
       "tag": "`minecraft:stone_tier_destructible`",
@@ -1095,7 +1109,8 @@
         "`minecraft:weathered_cut_copper_slab`",
         "`minecraft:weathered_cut_copper_stairs`",
         "`minecraft:weathered_double_cut_copper_slab`"
-      ]
+      ],
+      "functionality": "Indicates that the block must be destroyed by a stone tier tool in order to drop. This does not automatically prevent drops for custom blocks."
     },
     {
       "tag": "`mob_spawner`",
@@ -1174,7 +1189,8 @@
         "`minecraft:weathered_copper_door`",
         "`minecraft:weathered_copper_trapdoor`",
         "`minecraft:wooden_door`"
-      ]
+      ],
+      "functionality": "Prevents entities inside a block from being automatically pushed out of the block's collision."
     },
     {
       "tag": "`plant`",
@@ -1214,7 +1230,8 @@
     },
     {
       "tag": "`sand`",
-      "vanilla_usage": ["`minecraft:red_sand`", "`minecraft:sand`", "`minecraft:suspicious_sand`"]
+      "vanilla_usage": ["`minecraft:red_sand`", "`minecraft:sand`", "`minecraft:suspicious_sand`"],
+      "functionality": "Allows cacti to be placed on the block."
     },
     {
       "tag": "`snow`",
@@ -1280,7 +1297,8 @@
         "`minecraft:weathered_copper_grate`",
         "`minecraft:weathered_cut_copper`",
         "`minecraft:weathered_cut_copper_stairs`"
-      ]
+      ],
+      "functionality": "_**Deprecated** — check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:stone_tier_destructible` tags instead._"
     },
     {
       "tag": "`stone`",
@@ -1396,7 +1414,8 @@
         "`minecraft:waxed_oxidized_copper_trapdoor`",
         "`minecraft:waxed_weathered_copper_trapdoor`",
         "`minecraft:weathered_copper_trapdoor`"
-      ]
+      ],
+      "functionality": "Trapdoors are avoided by the Breeze."
     },
     {
       "tag": "`water`",
