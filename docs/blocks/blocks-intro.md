@@ -136,7 +136,7 @@ If you'd like to apply a custom model, the [geometry](/blocks/block-components#g
 {
     "format_version": "1.21.40",
     "wiki:custom_block": {
-        "textures": "custom_block", // This texture shortname should be defined in `terrain_texture.json`, as shown below
+        "textures": "wiki:custom_block", // This texture shortname should be defined in `terrain_texture.json`, as shown below
         "sound": "grass"
     }
 }
