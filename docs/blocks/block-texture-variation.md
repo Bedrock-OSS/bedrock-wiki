@@ -1,7 +1,7 @@
 ---
-title: Texture Variation
+title: Block Texture Variation
 description: Block texture variation is when a block type can have multiple textures that are randomly applied to the block based on its position in the world.
-category: Tutorials
+category: Visuals
 tags:
     - intermediate
 mentions:
@@ -21,7 +21,7 @@ Block texture variation is when a block type can have multiple textures that are
 
 **Issues:**
 
-- Variations referencing texture set files do not use the defined heightmap, MER or normal map files ([MCPE-126617](https://bugs.mojang.com/browse/MCPE-126617)).
+-   Variations referencing texture set files do not use the defined heightmap, MER or normal map files ([MCPE-126617](https://bugs.mojang.com/browse/MCPE-126617)).
 
 ## Applying Texture Variation
 
@@ -31,9 +31,9 @@ This file contains a list of block textures. Variated block textures have a `var
 
 This is an example of how to create 3 texture variations for the vanilla dirt block:
 
-- Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`.
-- Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in the path variable. This could contain additional folders if you want to be orderly.
-- Add the following to dirt's texture entry:
+-   Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`.
+-   Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in the path variable. This could contain additional folders if you want to be orderly.
+-   Add the following to dirt's texture entry:
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 

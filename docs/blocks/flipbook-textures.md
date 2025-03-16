@@ -1,6 +1,7 @@
 ---
-title: Texture Animation
-category: Tutorials
+title: Block Texture Animation
+description: Learn how to create flipbook (animated) textures for blocks.
+category: Visuals
 tags:
     - intermediate
 mentions:
@@ -8,7 +9,6 @@ mentions:
     - SquisSloim
     - SmokeyStack
     - QuazChick
-description: Flipbook (animated) textures for blocks.
 ---
 
 From this page you will learn:

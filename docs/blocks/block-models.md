@@ -1,7 +1,7 @@
 ---
-title: Creating Block Models
+title: Block Models
 description: Learn how to set up a custom model for your block.
-category: Tutorials
+category: Visuals
 tags:
     - beginner
     - easy
