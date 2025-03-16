@@ -28,6 +28,11 @@
   --dark-accent-color: #2849a3;
 }
 
+[data-accent-color="purple"] {
+  --light-accent-color: #e1b3ff;
+  --dark-accent-color: #74129b;
+}
+
 * {
   --accent-color: var(--light-accent-color);
 }

@@ -347,6 +347,7 @@ Here are the values that the wiki currently supports:
 -   <Label color="yellow">yellow</Label>
 -   <Label color="green">green</Label>
 -   <Label color="blue">blue</Label>
+-   <Label color="purple">purple</Label>
 
 ### Button
 

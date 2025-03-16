@@ -9,7 +9,7 @@ export interface ThemeConfig {
   tags: Tags;
 }
 
-export type AccentColor = "red" | "orange" | "yellow" | "green" | "blue";
+export type AccentColor = "red" | "orange" | "yellow" | "green" | "blue" | "purple";
 
 export interface NavigationItem {
   text: string;
