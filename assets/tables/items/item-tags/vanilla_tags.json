@@ -6,6 +6,9 @@
     },
     "vanilla_usage": {
       "name": "Vanilla Usage"
+    },
+    "functionality": {
+      "name": "Functionality"
     }
   },
   "rows": [
@@ -73,7 +76,8 @@
         "`minecraft:book`",
         "`minecraft:enchanted_book`",
         "`minecraft:writable_book`"
-      ]
+      ],
+      "functionality": "Items that can be stored in a Chiseled Bookshelf."
     },
     {
       "tag": "`minecraft:chainmail_tier`",
@@ -124,7 +128,8 @@
         "`minecraft:shelter_pottery_sherd`",
         "`minecraft:skull_pottery_sherd`",
         "`minecraft:snort_pottery_sherd`"
-      ]
+      ],
+      "functionality": "Items that can be used to craft a Decorated Pot. Learn how to create custom pottery sherds [here](/items/custom-pottery-sherd)."
     },
     {
       "tag": "`minecraft:diamond_tier`",
@@ -638,7 +643,8 @@
         "`minecraft:pale_oak_planks`",
         "`minecraft:spruce_planks`",
         "`minecraft:warped_planks`"
-      ]
+      ],
+      "functionality": "Allows the item to be used as planks in crafting recipes."
     },
     {
       "tag": "`minecraft:sand`",
@@ -778,7 +784,8 @@
         "`minecraft:blackstone`",
         "`minecraft:cobbled_deepslate`",
         "`minecraft:cobblestone`"
-      ]
+      ],
+      "functionality": "Items that can be used like cobblestone when crafting blocks such as the Furnace and Brewing Stand."
     },
     {
       "tag": "`minecraft:stone_tier`",
@@ -796,7 +803,8 @@
         "`minecraft:blackstone`",
         "`minecraft:cobbled_deepslate`",
         "`minecraft:cobblestone`"
-      ]
+      ],
+      "functionality": "Items that can be used like cobblestone to craft stone tools."
     },
     {
       "tag": "`minecraft:transform_materials`",
@@ -888,7 +896,8 @@
         "`minecraft:netherite_helmet`",
         "`minecraft:netherite_leggings`",
         "`minecraft:turtle_helmet`"
-      ]
+      ],
+      "functionality": "Items that can be trimmed in a Smithing Table."
     },
     {
       "tag": "`minecraft:vibration_damper`",
@@ -925,7 +934,8 @@
         "`minecraft:white_wool`",
         "`minecraft:yellow_carpet`",
         "`minecraft:yellow_wool`"
-      ]
+      ],
+      "functionality": "Prevents the item from emitting vibrations when dropped onto the ground."
     },
     {
       "tag": "`minecraft:warped_stems`",
@@ -982,7 +992,8 @@
         "`minecraft:red_wool`",
         "`minecraft:white_wool`",
         "`minecraft:yellow_wool`"
-      ]
+      ],
+      "functionality": "Allows the item to be used as wool in crafting recipes."
     }
   ]
 }
