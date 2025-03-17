@@ -150,13 +150,22 @@ Type: Boolean/Object
 
 ### Destructible by Mining
 
-Describes the destructible by mining properties for this block. If set to true, the block will take the default number of seconds to destroy. If set to false, this block is indestructible by mining. If the component is omitted, the block will take the default number of seconds to destroy.
+Describes the destructible by mining properties for this block.
+
+If omitted or set to true, the block will be destroyed instantly.
+If set to false, the block is indestructible by mining.
 
 Type: Boolean/Object
 
 -   `seconds_to_destroy`: Double
-    -   Sets the number of seconds it takes to destroy the block with base equipment. Greater numbers result in greater mining times.
-    -   Note: It actually takes 1.5&times; the amount of seconds defined.
+    -   Sets the hardness of the block. Greater numbers result in greater mining times.
+
+:::danger SECONDS TO DESTROY
+The name of the `seconds_to_destroy` parameter is misleading.
+While the name suggests that this parameter determines how many seconds it takes to destroy the block, in reality the parameter sets the "hardness" value of the block.
+
+By default, the number of seconds it takes to destroy a custom block is 1.5&times; its hardness.
+:::
 
 #### Example using Boolean
 
