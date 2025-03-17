@@ -3,6 +3,7 @@ title: Block Models
 description: Learn how to set up a custom model for your block.
 category: Visuals
 tags:
+    - guide
     - beginner
     - easy
 license: true
