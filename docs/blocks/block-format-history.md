@@ -16,6 +16,17 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.80
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:destruction_particles`
+    -   Updated the `texture` parameter to be optional.
+    -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
+
 ## 1.21.70
 
 ### Components
