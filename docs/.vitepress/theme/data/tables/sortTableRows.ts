@@ -9,6 +9,13 @@ export type SortableTableValue = Exclude<TableValue, string[]>; // Lists cannot 
 
 const typeOrder = ["undefined", "boolean", "number", "string"];
 
+function getTextFromHTML(html: string) {
+  const element = document.createElement("div");
+  element.innerHTML = html;
+
+  return element.textContent!;
+}
+
 /**
  * Sorts an array of rows in place. This method mutates the array and returns a reference to the same array.
  */
@@ -16,8 +23,11 @@ export default function sortTableRows(sorting: TableSorting, rows: TableRow[]) {
   return rows.sort(compareRows);
 
   function compareRows(rowA: TableRow, rowB: TableRow) {
-    const valueA = rowA[sorting.column] as SortableTableValue;
-    const valueB = rowB[sorting.column] as SortableTableValue;
+    let valueA = rowA[sorting.column] as SortableTableValue;
+    let valueB = rowB[sorting.column] as SortableTableValue;
+
+    if (typeof valueA === "string") valueA = getTextFromHTML(valueA);
+    if (typeof valueB === "string") valueB = getTextFromHTML(valueB);
 
     if (valueA === valueB) return 0;
 
