@@ -24,17 +24,17 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 ```json
 {
-	"format_version": "1.21.60",
-	"minecraft:item": {
-		"description": {
-			"identifier": "wiki:custom_food",
+    "format_version": "1.21.60",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:custom_food",
             "menu_category": {
                 "category": "equipment",
                 "group": "minecraft:itemGroup.name.miscFood"
             }
-		},
-		"components": {
-			"minecraft:icon": "wiki:custom_food",
+        },
+        "components": {
+            "minecraft:icon": "wiki:custom_food",
             "minecraft:food": {
                 "nutrition": 4,
                 "saturation_modifier": 0.6
@@ -51,24 +51,25 @@ On this page, you will learn how to create custom foods that, when consumed, gra
                     "minecraft:is_cooked" // Only include if the food is cooked
                 ]
             }
-		}
-	}
+        }
+    }
 }
 ```
 
+If you already know how to place a texture in the correct path, you can skip down, but if you don't, it's not enough to simply place the texture file in the `RP/textures/items` folder.
 
-If you already know how to place a texture in the correct path, you can skip down, but if you don't, it's not enough to simply place the texture file in the `textures/items` folder. We need to create an object named `wiki:custom_<thing>` in the `RP/textures/item_texture.json` file of our resource pack, as in the example below.
+We need to create an object named `wiki:custom_<thing>` in the `RP/textures/item_texture.json` file of our resource pack, as in the example below.
 
 <CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"wiki:custom_food": {
-			"textures": "textures/items/custom_food"
-		}
-	}
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "wiki:custom_food": {
+            "textures": "textures/items/custom_food"
+        }
+    }
 }
 ```
 
@@ -102,10 +103,10 @@ const ItemFoodEffectsComponent = {
             // 100 is the duration of the effect in ticks (1 second is 20 ticks, divide by 20 to get the results in seconds).
             source.addEffect("minecraft:speed", 100, {
                 amplifier: 2, // The effect level, starting at 1 and ending at 256.
-                showParticle: true // A boolean representing whether the particles will appear or not.
+                showParticle: true, // A boolean representing whether the particles will appear or not.
             });
         }
-    }
+    },
 };
 
 world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
