@@ -17,6 +17,7 @@ mentions:
     - smell-of-curry
     - Hatchibombotar
     - retr0cube
+    - QuazChick
 ---
 
 ## What Are Add-Ons?
@@ -53,3 +54,7 @@ At the end of the guide section, your first add-on will be done! To further expa
 
 -   Start your project!
 -   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited just to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
+
+## Next
+
+<Button link="/guide/addons">Next: Add-Ons Explained</Button>

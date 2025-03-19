@@ -1,13 +1,16 @@
 ---
 title: Project Setup Android
+description: Learn how to set up your project on Android devices.
 category: Extra
-description: How to setup your project on Android
+prefix: "f. "
+nav_order: 6
 mentions:
     - Etanarvazac
     - MedicalJewel105
     - TheItsNameless
     - ThomasOrs
     - hhhwi
+    - QuazChick
 ---
 
 ## Tools
@@ -256,7 +259,7 @@ Remember that in future, we will represent `com.mojang/development_behavior_pack
 	'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
 	'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
 	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
-]"></FolderView>
+]" />
 
 ## What You Have Learned
 

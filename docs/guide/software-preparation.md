@@ -1,5 +1,5 @@
 ---
-title: Software and preparation
+title: Software & Preparation
 category: Guide
 description: How to setup your developement environment
 nav_order: 3
