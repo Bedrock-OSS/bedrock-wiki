@@ -8,6 +8,7 @@ mentions:
     - MedicalJewel105
     - Lufurrius
     - TheItsNameless
+    - QuazChick
 description: World generation feature types explained.
 ---
 
@@ -1709,6 +1710,6 @@ Underwater cave carvers won’t function in custom biomes — even if that biome
 }
 ```
 
-Nether-based caves are formed via **Hell cave carver features**. Surprisingly, these carvers may be used in the Overworld in addition to the Nether; [biome filters]() must be applied to the feature rule to limit this occurrence.
+Nether-based caves are formed via **Hell cave carver features**. Surprisingly, these carvers may be used in the Overworld in addition to the Nether; biome filters must be applied to the feature rule to limit this occurrence.
 
 Nether carvers extend from *y*s of 5 to 121, and their fill block defaults to air. Hell carvers strip the same set of blocks as [cave carver features](#cave-carver-features) with a few exceptions: hell carvers won’t strip sand variants or sandstone but will remove Netherrack and water.

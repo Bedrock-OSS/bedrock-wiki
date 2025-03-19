@@ -3,18 +3,19 @@ title: Understanding JSON
 category: Extra
 description: A first peek into JSON
 nav_order: 1
-prefix: 'a. '
+prefix: "a. "
 mentions:
     - SirLich
     - solvedDev
     - Joelant05
     - Dreamedc2015
     - sermah
-    - cda94581
+    - cda945816
+    - QuazChick
 ---
 
 ::: tip
-This is an appendix page. You can start the guide from the beginning [here](/guide/index).
+This is an appendix page. You can start the guide from the beginning [here](/guide/introduction).
 :::
 
 JSON is a simple format for writing text files, in a way that is understandable to both Humans and Computers. Bedrock uses .json files as the "language" of Add-Ons, so you will need a solid understand of how to read and write json! If you have never heard of JSON before, you are encouraged to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
@@ -30,7 +31,7 @@ We can use an online tool called [json lint](https://jsonlint.com/) to tell us w
 In JSON, data can be written in a number of formats. Each format is specialized for the kind of data it wants to represent. Here are the structures we have available:
 
 | Name   | Example  | Explanation                            |
-|--------|----------|----------------------------------------|
+| ------ | -------- | -------------------------------------- |
 | String | "hello!" | Words, or characters. Requires quotes. |
 | Int    | 15       | A number. No quotes.                   |
 | Float  | 1.2      | A fractional number. No quotes.        |
@@ -40,14 +41,14 @@ And now, in .json format:
 
 ```json
 {
-  "my_string": "hello!",
-  "my_int": 15,
-  "my_float": 1.2,
-  "my_bool": true
+    "my_string": "hello!",
+    "my_int": 15,
+    "my_float": 1.2,
+    "my_bool": true
 }
 ```
 
-In addition to these simple structures, we also have access to two special structures. Special structures are used to *nest* other data together.
+In addition to these simple structures, we also have access to two special structures. Special structures are used to _nest_ other data together.
 
 ### Arrays
 
@@ -56,7 +57,7 @@ Arrays are written as two square brackets `[]`. They represent a _list_. We can 
 Some examples:
 
 | Structure       | Comment                               |
-|-----------------|---------------------------------------|
+| --------------- | ------------------------------------- |
 | [1, 2, 3]       | A list of integers.                   |
 | ["Red", "blue"] | A list of strings. Notice the quotes! |
 
@@ -64,14 +65,14 @@ And now, in .json format:
 
 ```json
 {
-   "my_ints": [1, 2, 3],
-   "my_strings": ["Red", "blue"]
+    "my_ints": [1, 2, 3],
+    "my_strings": ["Red", "blue"]
 }
 ```
 
 ### Objects
 
-Objects are written as two curly-brackets `{}`. Objects are a special syntax which contains _named_ data structures. The name is called a `key`, and the structure is called a `value`. The examples earlier in this page was a *dictionary* containing examples of the other data types.
+Objects are written as two curly-brackets `{}`. Objects are a special syntax which contains _named_ data structures. The name is called a `key`, and the structure is called a `value`. The examples earlier in this page was a _dictionary_ containing examples of the other data types.
 
 This key-value syntax looks like this: `"<key>": <any structure>`. Notice the quotes around the key, and the colon.
 
@@ -81,8 +82,8 @@ Here is an example of an object, which contains a few _key-value-pairs_.
 
 ```json
 {
-	"a_list_of_integers": [1, 2, 3],
-	"is_json_cool": true
+    "a_list_of_integers": [1, 2, 3],
+    "is_json_cool": true
 }
 ```
 
@@ -100,21 +101,21 @@ Here is an example of a simple json file, used for Minecraft add-ons:
 
 ```json
 {
-	"format_version": "1.12.0",
-	"animations": {
-		"animation.car.wheel_spin": {
-			"loop": true,
-			"animation_length": 1.0,
-			"bones": {
-				"front_wheels": {
-					"rotation": ["q.modified_distance_moved * -30", 0, 0]
-				},
-				"back_wheels": {
-					"rotation": ["q.modified_distance_moved * -30", 0, 0]
-				}
-			}
-		}
-	}
+    "format_version": "1.12.0",
+    "animations": {
+        "animation.car.wheel_spin": {
+            "loop": true,
+            "animation_length": 1.0,
+            "bones": {
+                "front_wheels": {
+                    "rotation": ["q.modified_distance_moved * -30", 0, 0]
+                },
+                "back_wheels": {
+                    "rotation": ["q.modified_distance_moved * -30", 0, 0]
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -126,7 +127,7 @@ Take a careful look at the format. You will see that the entire structure is bui
 
 ## Troubleshooting Examples
 
-Here are a few examples, to help you understand feedback you might recieve on the discord or online. We tend to use technical jargon when talking about errors in JSON, so hopefully this section helps familiarize you with the terms: 
+Here are a few examples, to help you understand feedback you might recieve on the discord or online. We tend to use technical jargon when talking about errors in JSON, so hopefully this section helps familiarize you with the terms:
 
 ---
 
