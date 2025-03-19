@@ -7,6 +7,10 @@ import head, { transformHead } from "./head";
 import redirects from "./redirects";
 import tags from "./tags";
 
+const excludedPages = [
+  "*/index.md", // Do not include section definition files
+];
+
 const isFastBuild = process.env.FAST_BUILD?.trim() === "true";
 
 const largePages = [
@@ -17,6 +21,8 @@ const largePages = [
 ];
 
 if (isFastBuild) {
+  excludedPages.push(...largePages);
+
   console.log(
     "[FAST_BUILD] Excluding the following large pages from this build:",
     largePages,
@@ -33,7 +39,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   head,
   transformHead,
 
-  srcExclude: isFastBuild ? largePages : undefined,
+  srcExclude: excludedPages,
   ignoreDeadLinks: isFastBuild,
 
   themeConfig: {
