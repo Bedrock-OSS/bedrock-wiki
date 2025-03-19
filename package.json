@@ -26,6 +26,7 @@
 		"eslint-plugin-prettier": "^5.2.3",
 		"eslint-plugin-vue": "^9.32.0",
 		"gray-matter": "^4.0.3",
+		"markdown-it-mathjax3": "^4.3.2",
 		"markdown-it-task-lists": "^2.1.1",
 		"molang": "^2.0.1",
 		"prettier": "~3.3.0",
