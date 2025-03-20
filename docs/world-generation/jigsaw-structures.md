@@ -1,11 +1,77 @@
 ---
 title: Jigsaw Structures
 category: General
+license: true
 mentions:
     - Supernova3695YT
 description: Jigsaw structures explained.
 ---
 Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks. 
+## Jigsaw blocks
+<WikiImage
+    src="/assets/images/world-generation/jigsaw-structures/jigsaw-ui.png"
+    alt="The jigsaw block ui"
+    caption="The jigsaw block UI."
+    width="420"
+    pixelated
+/>
+
+Jigsaw blocks are the blocks that put all the pieces of a structure together. There are two types of them, generating jigsaws and connector jigsaws. While they are visually identical they perform differently in game. 
+- A generating jigsaw has a filled target pool and target name field. They will look through a template pool for a structure with a connecting jigsaw with the name field matching the target name field. 
+<WikiImage
+    src="/assets/images/world-generation/jigsaw-structures/generating-jigsaw-block.png"
+    alt="A generating jigsaw"
+    caption="A generating jigsaw"
+    width="240"
+    pixelated
+/>
+
+- A connecting jigsaw has a filled name field and it the block that generating jigsaws will look for when placing their connector pieces. They cannot generate anything. 
+<WikiImage
+    src="/assets/images/world-generation/jigsaw-structures/connecting-jigsaw-block.png"
+    alt="A generating jigsaw"
+    caption="A generating jigsaw"
+    width="240"
+    pixelated
+/>
+
+### Target Pool
+The target pool is the field that holds the identifier of the template pool for the jigsaw to look for. The jigsaw will look through this entire list of structures looking for jigsaws which it can connect to. This is called a generating jigsaw. It has a target pool and target name which will place a structure with a connector jigsaw which only has a name.
+<WikiImage
+    src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws.png"
+    alt="Jigsaws that can connect"
+    caption="These two jigsaws can connect because they are rotated the same way."
+    width="240"
+    pixelated
+/>
+<WikiImage
+    src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws2.png"
+    alt="Jigsaws that can connect"
+    caption="These two jigsaws can connect because their arrows are facing the same way."
+    width="240"
+    pixelated
+/>
+<WikiImage
+    src="/assets/images/world-generation/jigsaw-structures/unconnectable-jigsaws.png"
+    alt="Jigsaws that cannot connect"
+    caption="These two jigsaws cannnot connect because their arrows are not facing the same direction."
+    width="240"
+    pixelated
+/>
+
+### Name
+The name of the piece of structure the jigsaw is part of. A jigsaw with only this field is called a connecting jigsaw. If you want a bunch of tunnels you would give one of their jigsaws a name which a generating jigsaw can use in their target name field to select. A generating jigsaw will search through their assigned template pool for connecting jigsaws with a name field matching the target name field they have.
+### Target Name
+The target name is the field that is employed by generating jigsaws to find connecting jigsaws with the same name field. If you have a connecting jigsaw in a tunnel with the name tunnel and have a generating jigsaw with that target name the game will look for a list of tunnels and pick one that shares its name.
+### Turns Into
+The turns into field is the field that tells the game what the jigsaws should turn into when done generating. Custom blocks are supported but all blocks in that field need their technically identifier found with /give or /fill.
+### Selection Priority
+If two generating jigsaws are attempting to place a structure in the same spot the jigsaw with the higher selection priority will place their piece first which will then stop the other piece from being placed unless the jigsaw can find a smaller structure in it's template pool which fits.
+### Placement Priority
+If a structure has 2+ connecting jigsaws the game will prioritize the connector jigsaw with the higher placement priority to be connected compared to ones with lower values.
+### Joint Type
+Not valid if the jigsaw is facing outwards, only up or down. If the jigsaw is facing up and rollable is selected the piece will select a random rotation to place the jigsaws. However if the block is set to aligned then the 2 white bars on the side of the block will always be matching each other when placed.
+
 ## Template Pools
 Template pools are lists of structure files and how they will adapt to the terrain and what processors they will use. They are the files whos identifiers are used in the target pool of the jigsaw blocks. When you put a pool into the target pool you are telling the jigsaw block to look for a jigsaw in that template pool which has a name field value matching the value of the parent jigsaw's target name field. However it should be noted that they can only match with jigsaws that are of matching oritentation. A jigsaw that is facing up (the direction the arrows are facing) can only match with one facing down and ones facing to the side can match with any other one facing sideways.
 ### Elements
