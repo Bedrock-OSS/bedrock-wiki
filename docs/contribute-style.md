@@ -20,10 +20,11 @@ Inside the frontmatter you write the most important information about your artic
 
 ```md
 ---
-title: How to contribute to our wiki
+title: A Wonderful Page Title
 description: Make your first contribution!
+license: true
 mentions:
-    - TheItsNameless
+    - username
 ---
 
 Lots and lots of content!
