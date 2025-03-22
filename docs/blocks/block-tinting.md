@@ -13,10 +13,26 @@ mentions:
 
 ### Atlas Tinting
 
-In the `RP/textures/terrain_texture.json` [atlas file](/concepts/texture-atlases), the `tint_color` and `overlay_color` parameters can be used on a texture to tint it by a specified color in two different ways:
+In the [terrain atlas file](/concepts/texture-atlases), the following parameters can be used on a texture to tint it in two different ways:
 
 -   [`tint_color`](/concepts/texture-atlases#tint-color) applies a basic multiply tint to a texture.
 -   [`overlay_color`](/concepts/texture-atlases#overlay-color) applies a tint to a texture, using the alpha channel of the texture to determine tint intensity.
+
+<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+
+```json
+{
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "wiki:tinted_texture": {
+            "textures": {
+                "path": "textures/blocks/untinted_texture",
+                "tint_color": "#ff5522" // Tints the texture orange
+            }
+        }
+    }
+}
+```
 
 ### Using Tint Methods
 
