@@ -73,6 +73,10 @@ Like any normal component, custom components can be added and removed based on t
 
 ### Before Player Place
 
+:::danger
+This event is not triggered on Bedrock Dedicated Servers (including Realms), or when placed by a custom [block item](/blocks/blocks-as-items).
+:::
+
 Runs before a player places the block.
 
 <CodeHeader>Custom Component</CodeHeader>
