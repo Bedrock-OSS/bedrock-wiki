@@ -433,7 +433,7 @@ Type: String
 
 Sets the color of the block when rendered to a map. The color is represented as a hex value in the format `#RRGGBB`. May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map.
 
-Type: String/Vector [a, b, c]
+Type: String/Object/Vector [a, b, c]
 
 #### Example using String
 
@@ -441,6 +441,16 @@ Type: String/Vector [a, b, c]
 
 ```json
 "minecraft:map_color": "#FFFFFF"
+```
+
+#### Example using Object
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:map_color": {
+    "color": "#FFFFFF"
+}
 ```
 
 #### Example using Vector [a, b, c]
