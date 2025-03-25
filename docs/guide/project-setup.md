@@ -119,7 +119,10 @@ First, create a new file in your BP folder by right-clicking on the folder and s
             "uuid": "...",
             "version": [1, 0, 0]
         }
-    ]
+    ],
+    "metadata": {
+        "product_type": "addon"
+    }
 }
 ```
 
@@ -135,7 +138,9 @@ First, create a new file in your BP folder by right-clicking on the folder and s
 
 -   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. The number specified here should match the version number of the game, unless you're planning for backwards compatibility with older versions.
 
--   In "`modules`", the "`type`" is defined to be "`data`". This makes your pack a _Behavior Pack_.
+-   In "`modules`", the `"type"` is defined to be `"data"`. This makes your pack a _Behavior Pack_.
+
+-   In "metadata", the `"product_type"` allows your add-on to enable achievements on your world. It must be a product type of `"addon"`.
 
 ### UUID Explained
 
@@ -171,7 +176,10 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
             "uuid": "...",
             "version": [1, 0, 0]
         }
-    ]
+    ],
+    "metadata": {
+        "product_type": "addon"
+    }
 }
 ```
 
