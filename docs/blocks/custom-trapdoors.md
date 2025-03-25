@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -26,7 +26,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -214,7 +214,7 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:geometry": [
         {
             "description": {

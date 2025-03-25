@@ -143,7 +143,7 @@ If you have textures for your block defined in that file, make sure you migrate 
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:paper_bag",

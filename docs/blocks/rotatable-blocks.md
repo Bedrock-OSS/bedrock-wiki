@@ -12,7 +12,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::

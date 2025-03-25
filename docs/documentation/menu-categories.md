@@ -45,7 +45,7 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:balsa_wood",
@@ -64,7 +64,7 @@ Currently, setting the category to "none" in a custom item (not block) prevents 
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:dagger",
@@ -94,6 +94,7 @@ _For use with `menu_category` parameter, `category`._
 _For use with the `menu_category` parameter, `group`._
 
 <!-- page_dumper_start -->
+
 | Creative Categories:                        |
 | ------------------------------------------- |
 | minecraft:itemGroup.name.anvil              |
@@ -180,5 +181,6 @@ _For use with the `menu_category` parameter, `group`._
 | minecraft:itemGroup.name.wool               |
 | minecraft:itemGroup.name.woolCarpet         |
 
-*Last updated for 1.21.60*
+_Last updated for 1.21.70_
+
 <!-- page_dumper_end -->
