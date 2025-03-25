@@ -591,6 +591,20 @@ Type: Object
 }
 ```
 
+### Replaceable
+
+Allows this block to be replaced by attempting to place another block in its position.
+
+-   Does not allow the block to be replaced by a block of the same permutation.
+
+Type: Object
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:replaceable": {}
+```
+
 ### Selection Box
 
 Defines the area of the block that is selected by the player's cursor. If set to true, default values are used. If set to false, this block is not selectable by the player's cursor. If this component is omitted, default values are used.
