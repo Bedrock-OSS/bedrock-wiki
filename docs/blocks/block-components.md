@@ -20,8 +20,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.60`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.60`.
+:::tip FORMAT & MIN ENGINE VERSION `1.21.70`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.70`.
 :::
 :::danger OVERRIDING COMPONENTS
 Only one instance of each component can be active at once. Duplicate components will be overridden by the latest [permutations](/blocks/block-permutations) entry.
@@ -35,7 +35,7 @@ Block components are used to change how your block appears and functions in the 
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -433,7 +433,7 @@ Type: String
 
 Sets the color of the block when rendered to a map. The color is represented as a hex value in the format `#RRGGBB`. May also be expressed as an array of [R, G, B] from 0 to 255. If this component is omitted, the block will not show up on the map.
 
-Type: String/Vector [a, b, c]
+Type: String/Object/Vector [a, b, c]
 
 #### Example using String
 
@@ -441,6 +441,16 @@ Type: String/Vector [a, b, c]
 
 ```json
 "minecraft:map_color": "#FFFFFF"
+```
+
+#### Example using Object
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:map_color": {
+    "color": "#FFFFFF"
+}
 ```
 
 #### Example using Vector [a, b, c]
@@ -589,6 +599,20 @@ Type: Object
     "redstone_conductor": true,
     "allows_wire_to_step_down": false
 }
+```
+
+### Replaceable
+
+Allows this block to be replaced by attempting to place another block in its position.
+
+-   Does not allow the block to be replaced by a block of the same permutation.
+
+Type: Object
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:replaceable": {}
 ```
 
 ### Selection Box

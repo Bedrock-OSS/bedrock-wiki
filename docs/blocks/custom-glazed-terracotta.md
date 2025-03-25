@@ -9,7 +9,7 @@ mentions:
 description: Re-creation of vanilla glazed terracotta.
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.60`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -26,7 +26,7 @@ This will create a vanilla-like custom glazed terracotta.
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:glazed_terracotta_template",
@@ -127,7 +127,7 @@ Vanilla glazed terracotta rotates certain faces of the block with some specific 
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:geometry": [
         {
             "description": {

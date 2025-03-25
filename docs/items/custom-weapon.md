@@ -27,7 +27,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_sword",
@@ -144,7 +144,7 @@ You should probably make a recipe for it, which is covered in previous chapters,
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:recipe_shaped": {
         "description": {
             "identifier": "wiki:my_sword"

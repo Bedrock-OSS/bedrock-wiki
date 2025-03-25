@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.21.60`
+:::tip FORMAT VERSION `1.21.70`
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) before starting!
 :::
@@ -24,7 +24,7 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food",

@@ -20,7 +20,7 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_item"

@@ -50,7 +50,7 @@ This is a basic overview of the file:
 
 ```json
 {
-	"format_version": "1.21.60",
+	"format_version": "1.21.70",
 	"minecraft:entity": {
 		"description": { ... },
 		"components": { ... }
@@ -250,7 +250,7 @@ In general, important behaviors will have a priority of `0` or `1`.
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:ghost",
@@ -1006,7 +1006,7 @@ Your folder structure should look like this:
 
 ```json
 {
-    "format_version": "1.21.60",
+    "format_version": "1.21.70",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:ghost",
