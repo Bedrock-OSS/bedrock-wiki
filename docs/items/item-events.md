@@ -25,7 +25,7 @@ _This example prevents the item from taking durability damage when hitting an en
 <CodeHeader>BP/scripts/unbreakable_component.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 const ItemUnbreakableComponent = {
     onBeforeDurabilityDamage(event) {
@@ -33,7 +33,7 @@ const ItemUnbreakableComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
     itemComponentRegistry.registerCustomComponent("wiki:unbreakable", ItemUnbreakableComponent);
 });
 ```
