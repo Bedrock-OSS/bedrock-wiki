@@ -20,6 +20,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Updated `minecraft:material_instances`
+    -   Released `isotropic` instance parameter from experimental
+
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 
