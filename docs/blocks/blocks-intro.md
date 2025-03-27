@@ -148,10 +148,8 @@ Now, we need to link the texture shortname to an image file path in `RP/textures
 
 ```json
 {
+    "resource_pack_name": "wiki",
     "texture_name": "atlas.terrain",
-    "resource_pack_name": "wiki", // ID for your resource pack
-    "padding": 8, // Prevent textures from visually overflowing into each other
-    "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
     "texture_data": {
         // Our texture shortname:
         "wiki:custom_block": {
@@ -263,10 +261,8 @@ With the following `terrain_texture.json` data:
 
 ```json
 {
-    "texture_name": "atlas.terrain",
     "resource_pack_name": "wiki",
-    "padding": 8,
-    "num_mip_levels": 4,
+    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:compass_block_down": {
             "textures": "textures/blocks/compass_block_down"

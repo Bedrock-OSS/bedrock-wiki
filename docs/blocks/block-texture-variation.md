@@ -39,10 +39,8 @@ This is an example of how to create 3 texture variations for the vanilla dirt bl
 
 ```json
 {
+    "resource_pack_name": "wiki",
     "texture_name": "atlas.terrain",
-    "resource_pack_name": "wiki", // ID for your resource pack
-    "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
-    "padding": 8, // Prevent textures from visually overflowing into each other
     "texture_data": {
         "dirt": {
             "textures": {
@@ -67,10 +65,8 @@ To calculate how likely a texture variation is, add all of the weights together 
 
 ```json
 {
+    "resource_pack_name": "wiki",
     "texture_name": "atlas.terrain",
-    "resource_pack_name": "wiki", // ID for your resource pack
-    "num_mip_levels": 4, // Quality of texture when viewed from a distance or at an angle
-    "padding": 8, // Prevent textures from visually overflowing into each other
     "texture_data": {
         "dirt": {
             "textures": {

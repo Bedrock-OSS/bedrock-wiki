@@ -37,10 +37,8 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 
 ```json
 {
-    "texture_name": "atlas.terrain",
     "resource_pack_name": "wiki",
-    "padding": 8,
-    "num_mip_levels": 4,
+    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:dirt_like": {
             "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name

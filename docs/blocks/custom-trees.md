@@ -937,8 +937,6 @@ Make terrain_texture.json and textures.
 {
     "resource_pack_name": "custom-trees",
     "texture_name": "atlas.terrain",
-    "num_mip_levels": 4,
-    "padding": 8,
     "texture_data": {
         "custom_leaves": {
             "textures": "textures/blocks/leaves_oak"
