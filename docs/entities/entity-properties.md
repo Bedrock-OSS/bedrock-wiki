@@ -163,7 +163,7 @@ With entity events, you may set the entity property to a value with the `set_pro
 
 ### Script API
 
-The [`Entity.setProperty()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#setproperty) method allows you to set the value of a properties.
+The [`Entity.setProperty()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#setproperty) method allows you to set the value of a property.
 
 <CodeHeader>Script</CodeHeader>
 
