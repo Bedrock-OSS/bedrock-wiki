@@ -12,7 +12,7 @@ description: Using Aseprite Animations in JSON-UI.
 
 ## Introduction to Aseprite
 
-[Aseprite](https://www.aseprite.org/) is a paid pixel art application specifically designed for creating skins and resource packs with ease. It offers a wide array of tools, extensive documentation, and tutorials, catering to artists of all skill levels.
+[Aseprite](https://www.aseprite.org/) is a paid pixel art application (pre-built) specifically designed for creating skins and resource packs with ease. It offers a wide array of tools, extensive documentation, and tutorials, catering to artists of all skill levels. its open source, and free (when you built it your self).
 
 [LibreSprite](https://libresprite.github.io/) is a free and open-source alternative to Aseprite. It is a fork of the last open-source licensed version of Aseprite, and this tutorial can also be followed using LibreSprite.
 
