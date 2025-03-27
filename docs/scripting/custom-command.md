@@ -23,7 +23,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.30
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.70
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
@@ -67,7 +67,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.15.0-beta" // needs to be the latest or it will break ( latest as of 1.21.30 )
+            "version": "2.0.0-beta" // needs to be the latest or it will break ( latest as of 1.21.70 )
         }
     ]
 }
