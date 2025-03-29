@@ -5,6 +5,7 @@ category: Vanilla Re-Creations
 tags:
     - beginner
     - easy
+    - deprecated
 license: true
 mentions:
     - Eko-byte
@@ -12,6 +13,9 @@ mentions:
     - SmokeyStack
 ---
 
+::: danger DEPRECATED
+In `1.21.80`, the ability to use material instances with texture definitions in `RP/blocks.json` will be removed.
+:::
 ::: tip FORMAT VERSION `1.21.70`
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
