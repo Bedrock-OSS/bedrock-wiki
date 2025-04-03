@@ -82,6 +82,10 @@ Check the Microsoft docs to see what system events are available within Minecraf
 
 Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceedes a performance boundary, depending on the configuration of the script environment.
 
+:::warning EXPERIMENTAL
+Requires system.beforeEvents requires Beta Api's
+:::
+
 ```js
 import { system } from "@minecraft/server";
 
