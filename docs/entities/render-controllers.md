@@ -86,11 +86,13 @@ Since render controllers work based on short-names, it is possible to re-use the
 For example, the render controller above is used for the `minecraft:cow` entity. If you want to use this render controller in your own pack, simply define it as: `"render_controllers": [ "controller.render.cow" ]` in your entity file.
 
 :::warning Remember!
+
 Render controllers work based on short-names. If you want to use the cow render controller, you need to provide the short-names it is using. In this case, you will need to provide:
 
 -   `default` geometry
 -   `default` texture
 -   `default` material
+
 :::
 
 ## Creating custom render controllers
