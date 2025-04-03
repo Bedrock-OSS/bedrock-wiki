@@ -39,7 +39,7 @@ In script API, the `@minecraft/server` module uses its own event-driven architec
 
 **World Events**
 
-World event APIs provides many event listeners that fires when a specific type of events happen in a Minecraft world, such as `chatSend`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
+World event APIs provides many event listeners that fires when a specific type of events happen in a Minecraft world, such as `itemUse`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
 
 ::: tip
 Check the Microsoft docs to see what world events are available within Minecraft.
