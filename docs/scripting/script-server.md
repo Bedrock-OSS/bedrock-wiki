@@ -348,10 +348,6 @@ Script API can utilize new execute syntax to run commands with lots of if/unless
 
 -   Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
 
-**weather**
-
--   Script API cannot get/set the world weather.
-
 **difficulty**
 
 -   Script API cannot set the world difficulty.
