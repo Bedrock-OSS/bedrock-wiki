@@ -20,8 +20,12 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Released `minecraft:destruction_particles` from experimental
+-   Updated `minecraft:map_color`
+    -   Released `tint_method` parameter from experimental
 -   Updated `minecraft:material_instances`
     -   Released `isotropic` instance parameter from experimental
+    -   Released `tint_method` instance parameter from experimental
 -   Updated `minecraft:destruction_particles`
     -   Updated the `texture` parameter to be optional.
     -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
