@@ -11,7 +11,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.20
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.70
 :::
 
 In Scripting API, most of the core features are implemented in the `@minecraft/server` module, which contains lots of methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information please visit the [Microsoft documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server) pages.
@@ -27,7 +27,7 @@ You will need to add the script module as a dependency in your `manifest.json`.
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.13.0"
+            "version": "1.18.0"
         }
     ]
 }
