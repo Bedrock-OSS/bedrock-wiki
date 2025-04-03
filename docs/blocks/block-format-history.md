@@ -22,10 +22,6 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:material_instances`
     -   Released `isotropic` instance parameter from experimental
-
-<Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
-
 -   Updated `minecraft:destruction_particles`
     -   Updated the `texture` parameter to be optional.
     -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
