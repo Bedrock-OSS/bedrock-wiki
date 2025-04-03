@@ -24,6 +24,10 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:map_color`
     -   Released `tint_method` parameter from experimental
 -   Updated `minecraft:material_instances`
+    -   Updated `render_method` instance parameter, adding 3 new render methods:
+        -   `alpha_test_to_opaque` renders faces with `alpha_test` when they're within half the render distance, and `opaque` when they're far away.
+        -   `alpha_test_single_sided_to_opaque` renders faces with `alpha_test_single_sided` when they're within half the render distance, and `opaque` when they're far away.
+        -   `blend_to_opaque` renders faces with `blend` when they're within half the render distance, and `opaque` when they're far away.
     -   Released `isotropic` instance parameter from experimental
     -   Released `tint_method` instance parameter from experimental
 -   Updated `minecraft:destruction_particles`
