@@ -91,7 +91,7 @@ Render controllers work based on short-names. If you want to use the cow render 
 -   `default` geometry
 -   `default` texture
 -   `default` material
-    :::
+:::
 
 ## Creating custom render controllers
 
