@@ -34,6 +34,25 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Updated the `texture` parameter to be optional.
     -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
 
+<Tag name="experimental" />
+<Label color="red">Custom Components V2</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:custom_components`
+
+    -   Custom components should now be applied in the same way as vanilla components, as entries in the `components` object:
+
+        <CodeHeader>minecraft:block</CodeHeader>
+
+        ```json
+        "components": {
+            "minecraft:friction": 0.4,
+            "wiki:custom_component": {
+                "parameter": "value"
+            }
+        }
+        ```
+
 ## 1.21.70
 
 ### Components
