@@ -241,6 +241,27 @@
       ]
     },
     {
+      "tag": "`minecraft:harness`",
+      "vanilla_usage": [
+        "`minecraft:black_harness`",
+        "`minecraft:blue_harness`",
+        "`minecraft:brown_harness`",
+        "`minecraft:cyan_harness`",
+        "`minecraft:gray_harness`",
+        "`minecraft:green_harness`",
+        "`minecraft:light_blue_harness`",
+        "`minecraft:light_gray_harness`",
+        "`minecraft:lime_harness`",
+        "`minecraft:magenta_harness`",
+        "`minecraft:orange_harness`",
+        "`minecraft:pink_harness`",
+        "`minecraft:purple_harness`",
+        "`minecraft:red_harness`",
+        "`minecraft:white_harness`",
+        "`minecraft:yellow_harness`"
+      ]
+    },
+    {
       "tag": "`minecraft:horse_armor`",
       "vanilla_usage": [
         "`minecraft:diamond_horse_armor`",
@@ -716,6 +737,7 @@
         "`minecraft:glow_squid_spawn_egg`",
         "`minecraft:goat_spawn_egg`",
         "`minecraft:guardian_spawn_egg`",
+        "`minecraft:happy_ghast_spawn_egg`",
         "`minecraft:hoglin_spawn_egg`",
         "`minecraft:horse_spawn_egg`",
         "`minecraft:husk_spawn_egg`",

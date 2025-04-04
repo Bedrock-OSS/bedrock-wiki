@@ -46,7 +46,7 @@
         "`minecraft:raw_iron_block`",
         "`minecraft:redstone_ore`"
       ],
-      "functionality": "_**Deprecated** — check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:diamond_tier_destructible` tags instead._"
+      "functionality": "**Deprecated** — _check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:diamond_tier_destructible` tags instead._"
     },
     {
       "tag": "`dirt`",
@@ -121,7 +121,7 @@
         "`minecraft:raw_iron_block`",
         "`minecraft:redstone_ore`"
       ],
-      "functionality": "_**Deprecated** — check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:iron_tier_destructible` tags instead._"
+      "functionality": "**Deprecated** — _check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:iron_tier_destructible` tags instead._"
     },
     {
       "tag": "`jungle`",
@@ -1298,7 +1298,7 @@
         "`minecraft:weathered_cut_copper`",
         "`minecraft:weathered_cut_copper_stairs`"
       ],
-      "functionality": "_**Deprecated** — check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:stone_tier_destructible` tags instead._"
+      "functionality": "**Deprecated** — _check for the `minecraft:is_pickaxe_item_destructible` and `minecraft:stone_tier_destructible` tags instead._"
     },
     {
       "tag": "`stone`",
