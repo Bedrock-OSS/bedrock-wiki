@@ -220,6 +220,7 @@ Common events:
 | cast.spell     | For starting summon                                      |
 | prepare.attack | For finishing summon                                     |
 | roar           | For roaring                                              |
+| attack.strong  | For attacking with behaviour.delayed_attack              |
 
 There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
