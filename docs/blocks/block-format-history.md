@@ -21,6 +21,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 ### Components
 
 -   Released `minecraft:destruction_particles` from experimental
+-   Updated `minecraft:destruction_particles`
+    -   Updated the `texture` parameter to be optional.
+    -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
 -   Updated `minecraft:map_color`
     -   Released `tint_method` parameter from experimental
 -   Updated `minecraft:material_instances`
@@ -30,9 +33,14 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   `blend_to_opaque` renders faces with `blend` when they're within half the render distance, and `opaque` when they're far away.
     -   Released `isotropic` instance parameter from experimental
     -   Released `tint_method` instance parameter from experimental
--   Updated `minecraft:destruction_particles`
-    -   Updated the `texture` parameter to be optional.
-    -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:geometry`
+    -   Added `culling_layer` parameter which determines the culling layer identifier to be checked for by the [`same_culling_layer`](/blocks/block-culling#same-culling-layer) culling rule condition.
+        -   Culling layer identifiers should take the form `<namespace>:culling_layer.<name>`.
+        -   When using the `minecraft` namespace, the only allowed culling layer identifiers are `minecraft:culling_layer.undefined` and `minecraft:culling_layer.leaves`.
 
 <Tag name="experimental" />
 <Label color="red">Custom Components V2</Label>

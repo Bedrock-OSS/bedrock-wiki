@@ -76,3 +76,41 @@ This type of rule should be used when you want to hide specific faces of cubes t
     }
 }
 ```
+
+## Culling Conditions
+
+:::warning EXPERIMENTAL
+Block culling rule conditions are experimental and require Upcoming Creator Features to be enabled.
+:::
+
+Culling rules will always cull against for full, opaque faces of adjacent blocks.
+However, they can also cull against other types of blocks based on the rule's `condition` parameter.
+
+<CodeHeader>minecraft:block_culling_rules > rules</CodeHeader>
+
+```json
+{
+    "condition": "same_block", // Cull against a full, opaque block OR a block with the same identifier.
+    "direction": "down",
+    "geometry_part": {
+        "bone": "lamp_bulb" // Name of the bone containing the cube to be culled.
+    }
+}
+```
+
+### Default
+
+When the `default` condition is used, the specified geometry part is only culled if the adjacent block is full and opaque.
+This culling also applies to all of the following conditions.
+
+### Same Block
+
+When the `same_block` condition is used, the specified geometry part is also culled if the adjacent block has the same identifier as the block.
+
+### Same Block Permutation
+
+When the `same_block_permutation` condition is used, the specified geometry part is also culled if the adjacent block has the same identifier and state values as the block.
+
+### Same Culling Layer
+
+When the `same_culling_layer` condition is used, the specified geometry part is also culled if the adjacent block has the same `culling_layer` identifier as the block.
