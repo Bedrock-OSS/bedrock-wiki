@@ -1,5 +1,6 @@
 ---
 title: Sounds
+description: Learn how to add custom sounds without overwriting any vanilla ones.
 tags:
     - intermediate
 mentions:
@@ -12,7 +13,7 @@ mentions:
     - DasEtwas
     - TheItsNameless
     - ThomasOrs
-description: Add custom sounds without overwriting any vanilla ones.
+    - QuazChick
 ---
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
@@ -28,12 +29,12 @@ There are two main files that we edit when we want to add sounds. Note how `soun
 Sound files themselves are added inside of the `sounds` folder, and can be any of the following formats.
 
 <FolderView :paths="[
-	'RP/sounds.json',
-	'RP/sounds/sound_definitions.json',
 	'RP/sounds/example.wav',
 	'RP/sounds/example.ogg',
 	'RP/sounds/example.fsb',
-]"></FolderView>
+	'RP/sounds/sound_definitions.json',
+	'RP/sounds.json',
+]" />
 
 ## sound_definitions.json
 
@@ -89,16 +90,16 @@ Categories are used internally by the engine to decide how each sound is played.
 
 | Category | Note                                            |
 |----------|-------------------------------------------------|
-| weather  |                                                 |
 | block    |                                                 |
-| bucket   |                                                 |
 | bottle   |                                                 |
-| ui       | Sounds in this category will ignore range limit |
-| player   |                                                 |
+| bucket   |                                                 |
 | hostile  |                                                 |
 | music    |                                                 |
-| record   |                                                 |
 | neutral  |                                                 |
+| player   |                                                 |
+| record   |                                                 |
+| ui       | Sounds in this category will ignore range limit |
+| weather  |                                                 |
 
 #### min_distance
 
@@ -195,9 +196,9 @@ Sounds can be added into various categories:
 
 | Category                | Note                                                                             |
 |-------------------------|----------------------------------------------------------------------------------|
-| individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                  |
 | block_sounds            | Contains hit, step, and break sounds for blocks                                  |
 | entity_sounds           | Contains death, ambient, hurt, etc. sounds for entities (Including custom ones!) |
+| individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                  |
 | interactive_sounds      | WIP                                                                              |
 
 ### Adding Entity Sounds
@@ -209,37 +210,38 @@ Common events:
 | Events         | Note                                                     |
 |----------------|----------------------------------------------------------|
 | ambient        | Played randomly, such as grunts, clucks, or ghast noises |
-| hurt           | Played when damaged                                      |
+| attack         | For melee attacking                                      |
+| attack.strong  | For attacking with behavior.delayed_attack               |
+| cast.spell     | For starting summon                                      |
 | death          | Played when it dies                                      |
-| step           | Played when the entity moves along the ground            |
 | fall.big       | For hitting the ground from a high height                |
 | fall.small     | For hitting the ground from a low height                 |
-| splash         | For splashing in the water                               |
-| attack         | For melee attacking                                      |
-| shoot          | For shooting projectiles                                 |
-| cast.spell     | For starting summon                                      |
+| hurt           | Played when damaged                                      |
 | prepare.attack | For finishing summon                                     |
 | roar           | For roaring                                              |
+| shoot          | For shooting projectiles                                 |
+| splash         | For splashing in the water                               |
+| step           | Played when the entity moves along the ground            |
 
 There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
 | Unknown Categories |
 |--------------------|
-| breathe            |
-| splash             |
-| swim               |
 | ambient.in.water   |
+| breathe            |
 | death.in.water     |
-| jump               |
 | eat                |
 | hurt.in.water      |
+| jump               |
 | mad                |
-| stare              |
-| sniff              |
-| sleep              |
-| spit               |
-| warn               |
 | scream             |
+| sleep              |
+| sniff              |
+| spit               |
+| splash             |
+| stare              |
+| swim               |
+| warn               |
 
 ### Example
 
@@ -272,7 +274,7 @@ There are also many sound events, which _most likely_ trigger automatically, but
 
 ## Adding sounds to Animations
 
-Sounds played in animations function based off of `short-name` definitions in the RP entity file.
+Sounds played in animations function based on short-name definitions in the RP entity file.
 
 This example shows playing a wing-flap sound, synced with an animation.
 
