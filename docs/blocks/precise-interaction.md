@@ -28,11 +28,13 @@ This is where precise interaction comes in! The following methods of precise int
 
 ## How it Works
 
-The provided methods of precise interaction use `faceLocation`, a property of the [`player interact event`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockcomponentplayerinteractevent?view=minecraft-bedrock-experimental).
+The provided methods of precise interaction use `faceLocation`, a property of the [player interact event](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockcomponentplayerinteractevent?view=minecraft-bedrock-experimental).
 
 This value tells us where on the block's `minecraft:selection_box` was selected/hit, which is what precise interaction relies on.
 
-**Note:** `faceLocation` is _supposed_ to be relative to the bottom north-west corner of the interacted block, however it is currently relative to the world origin, meaning we will have to perform an additional calculation to make it relative. When this issue is resolved, this calculation will no longer be needed.
+:::danger [MCPE-216825](https://bugs.mojang.com/browse/MCPE-216825)
+The `faceLocation` property is _supposed_ to be relative to the bottom north-west corner of the interacted block, however it is currently relative to the world origin, meaning we will have to perform an additional calculation to make it relative. When this issue is resolved, this calculation will no longer be needed.
+:::
 
 ## FaceSelectionPlains Class
 
