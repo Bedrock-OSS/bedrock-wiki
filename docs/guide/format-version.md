@@ -54,8 +54,7 @@ This simple trick will help you select a valid format version for your file.
 
 This section will list the format versions used in the vanilla game, alongside how many times it appears.
 
--   The '⭐' is the recommended _stable_ version.
--   The '🚀' is the recommended _experimental_ version, where applicable.
+-   The '⭐' marks the recommended version.
 
 _Last Updated for 1.21.50_
 
