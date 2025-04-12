@@ -11,6 +11,7 @@ mentions:
     - SimpleDevMCBE
     - QuazChick
     - jeanmajid
+    - Keyyard
 description: Learn how to modify your world through the use of JavaScript files.
 ---
 
@@ -28,7 +29,7 @@ The Script API (formerly GameTest Framework) is a feature that allows for a new 
 
 This page will give you an introduction to the 80% of Minecraft's Creator API concepts that you will use on a daily basis.
 
-## Create Your First Project
+## Create Your First Project Manually
 
 Currently, scripts can only be used in behavior packs.
 
@@ -176,6 +177,34 @@ system.runInterval(() => {
 }, 1);
 ```
 
+
+## Using `create-mc-bedrock` to Set Up a Workspace Automatically
+`create-mc-bedrock` is a simple interactive CLI tool to help you quickly set up Minecraft Bedrock projects by cloning samples from the [Microsoft Minecraft Scripting Samples](https://github.com/Microsoft/Minecraft-Scripting-Samples) repository.
+
+This tool is recommended for experienced developers to quickly set up a project with a compiler. Generated templates usually come with a compiler and a build system, so you can start coding right away. Works with both JavaScript and TypeScript.
+
+It requires Node.js and npm to be installed on your system.
+
+#### Steps:
+
+1. Open a terminal and run the following command:
+   ```bash
+   npx create-mc-bedrock
+   ```
+2. Follow the prompts to select a template for your project.
+3. Once the setup is complete, navigate into the generated folder:
+   ```bash
+   cd <your-project-folder>
+   ```
+4. Install the dependencies:
+   ```bash
+   npm install
+   ```
+5. Start working with the provided template workspace, which includes Microsoft's official setup for Bedrock scripting.
+- ``npm run local-deploy``: This command will build the project and deploy into your local Minecraft. You should see your package in Minecraft now.
+- ``npm run mcaddon``: This command will build the project into mcaddon files in the `dist` folder.
+- you can discover more commands in the `package.json` file.
+
 ## Reference Documentation
 
 Official documentation are hosted on Microsoft Learn and can be found here:
@@ -215,3 +244,9 @@ Latest stable API modules:
 npm i @minecraft/server
 npm i @minecraft/server-ui
 ```
+
+Official Microsoft Minecraft Scripting Samples:
+- [Minecraft Scripting Samples](https://github.com/Microsoft/Minecraft-Scripting-Samples)
+
+Community-based CLI tools:
+- [`create-mc-bedrock` CLI](https://github.com/Keyyard/create-mc-bedrock-cli).

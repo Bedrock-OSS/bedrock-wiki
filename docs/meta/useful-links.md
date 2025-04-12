@@ -129,6 +129,7 @@ These packs are published by the open-source community.
 -   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
 -   [GameTests Plugin-API-Starter-Pack](https://github.com/MajestikButter/Plugin-API-Starter-Pack)
 -   [Useful for Block Tags](https://mcpedl.com/debug-stick/)
+-   [create-mc-bedrock CLI](https://github.com/Keyyard/create-mc-bedrock-cli)
 
 ## Raytracing Resources
 
