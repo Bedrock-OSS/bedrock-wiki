@@ -16,6 +16,7 @@ mentions:
     - JaylyDev
     - zheaEvyline
     - phoenixr-codes
+    - Keyyard
 description: Useful links for developing add-ons.
 ---
 
