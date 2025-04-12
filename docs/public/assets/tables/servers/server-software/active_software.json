@@ -1,0 +1,111 @@
+{
+  "columns": {
+    "name": {
+      "name": "Name",
+      "sortable": true
+    },
+    "description": {
+      "name": "Description"
+    },
+    "languages": {
+      "name": "Languages",
+      "sortable": true
+    },
+    "type": {
+      "name": "Type",
+      "sortable": true
+    }
+  },
+  "rows": [
+    {
+      "name": "[Allay](https://github.com/AllayMC/Allay)",
+      "description": "The next-generation Minecraft: Bedrock Edition server software.",
+      "languages": "Java, JavaScript",
+      "type": "Custom"
+    },
+    {
+      "name": "[BetterAltay](https://github.com/Benedikt05/BetterAltay)",
+      "description": "A server software for Minecraft: Bedrock Edition in PHP.",
+      "languages": "PHP",
+      "type": "Custom"
+    },
+    {
+      "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
+      "description": "Nuclear-Powered Minecraft: Bedrock Edition Server Software.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[Endstone](https://github.com/EndstoneMC/endstone)",
+      "description": "A High-level Plugin API for Modding Bedrock Dedicated Servers, in both Python and C++.",
+      "languages": "C++, Python",
+      "type": "BDS-based"
+    },
+    {
+      "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
+      "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
+      "languages": "TypeScript",
+      "type": "Custom"
+    },
+    {
+      "name": "[JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)",
+      "description": "A Minecraft Bedrock Edition Server Software.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[LeviLamina](https://github.com/LiteLDev/LeviLamina)",
+      "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
+      "languages": "C++",
+      "type": "BDS-based"
+    },
+    {
+      "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
+      "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
+      "languages": "C++",
+      "type": "Custom"
+    },
+    {
+      "name": "[Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)",
+      "description": "Add support for LevelDB, multiversion & more to Nukkit Minecraft Bedrock Edition server software.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[Nukkit-MOT](https://github.com/MemoriesOfTime/Nukkit-MOT)",
+      "description": "Support for multiple versions of Nukkit Minecraft Bedrock Edition Server Software.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)",
+      "description": "Custom server software for Minecraft: Bedrock, built from scratch in PHP, C and C++.",
+      "languages": "C, C++, PHP",
+      "type": "Custom"
+    },
+    {
+      "name": "[PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)",
+      "description": "Feature-rich, highly customizable third-party server software for Minecraft: Bedrock Edition.",
+      "languages": "Java, JavaScript",
+      "type": "Custom"
+    },
+    {
+      "name": "[RAstra](https://github.com/bedrock-crustaceans/RAstra)",
+      "description": "Modern Minecraft Bedrock Server Software written in Rust.",
+      "languages": "Rust, JavaScript, TypeScript",
+      "type": "Custom"
+    },
+    {
+      "name": "[Sculk](https://github.com/sculkmp/Sculk)",
+      "description": "Sculk-Powered Minecraft: Bedrock Edition Server Software.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[Serenity](https://github.com/SerenityJS/serenity)",
+      "description": "A Minecraft Bedrock Edition Server Software in TypeScript.",
+      "languages": "TypeScript, Rust",
+      "type": "Custom"
+    }
+  ]
+}

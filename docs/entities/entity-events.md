@@ -1,341 +1,661 @@
 ---
 title: Entity Events
+category: General
+mentions:
+    - ChibiMango
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - SmokeyStack
+    - ThomasOrs
+    - QuazChick
+tags:
+    - beginner
+description: Learn one of the most important things for entities - events.
 ---
 
-<Label color="green">Beginner</Label>
+Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This page aims to cover how to call events within the entity and other entities as well as the format of an event.
 
-Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This tutorial aims to cover the basics of events and their more advanced usage.
+## Event Responses
 
-## Basic Usage
+Events allow us to perform actions, such as adding and removing component groups from our entity, allowing us to change the behavior of our entity when certain conditions are met. They are called events because we can activate them when events happen such as a timer running out, a player interacting with the entity or an environmental change occurring. When an event is triggered it will carry out all listed event responses.
 
-This section covers the main feature of events and how to call them inside an entity.
+### Add/Remove
 
-### Adding/Removing Component Groups
+The most essential and common use of events is directly adding and/or removing component groups. These will almost always be used in your event and are used in conjunction with the other keys. The following event named `wiki:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee":
 
-The most essential and common use of events is directly adding and/or removing component groups. The following event named `shanewolf:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee".
-
-```json
-"shanewolf:ranged_attacker": {
-  "add": {
-    "component_groups": [ "attacker", "ranged" ]
-  },
-  "remove": {
-    "component_groups": [ "standby", "melee" ]
-  }
-}
-```
-
-### Calling Events
-
-Following are examples of calling an event on an entity using a component, an animation, an animation controller, and another event. Note that certain components can be used to call events on entities other than the entity within which the component exists, and this will be shown in the Advanced Usage section.
-
-The `minecraft:environment_sensor` component is used in the zombie to call the event `minecraft:start_transforming` when the entity is underwater.
+<CodeHeader>minecraft:entity > events</CodeHeader>
 
 ```json
-"minecraft:environment_sensor": {
-  "triggers": {
-    "filters": {
-      "test": "is_underwater",
-      "operator": "==",
-      "value": true
-    },
-    "event": "minecraft:start_transforming"
-  }
-}
-```
-
-This behavior-based animation is used to call the event `shanewolf:start_pouncing` after 10 seconds.
-
-```json
-"animation.entity.pounce_timer": {
-  "timeline": {
-    "10.0": "@s shanewolf:start_pouncing"
-  },
-  "animation_length": 15.0
-}
-```
-
-This behavior-based animation controller is used to call the event `shanewolf:running` upon transition to the state "run".
-
-```json
-"controller.animation.entity.movement": {
-  "initial_state": "walk",
-  "states": {
-    "walk": {
-      "transitions": [ { "run": "query.is_sheared" } ]
-    },
-    "run": {
-      "on_entry": [ "@s shanewolf:running" ],
-      "transitions": [ { "walk": "!query.is_sheared" } ]
-    }
-  }
-}
-```
-
-This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`. This particular example does not showcase the most practical usage, but there will be better examples shown in the following section.
-
-```json
-"minecraft:entity_born": {
-  "trigger": "spawn_baby"
-}
-```
-
-## Advanced Usage
-
-More complex and powerful usage of entity events consists of the `sequence` and `randomize` paramaters in addition to calling events on other entities.
-
-### Calling Events on Other Entities
-
-Some components, such as the damage sensor, can target entities other than "self" when calling events. One component in particular is specifically designed to call events in other entities: `minecraft:behavior.send_event`. Examples of each are shown below.
-
-The component `minecraft:damage_sensor` inside the pillager calls the event `minecraft:gain_bad_omen` on the player which kills it. Note how the target of the event is set to "other".
-
-```json
-"minecraft:damage_sensor": {
-  "triggers": {
-    "on_damage": {
-      "filters": {
-        "all_of": [
-          {
-          "test": "has_damage",
-          "value": "fatal"
-          },
-          {
-          "test": "is_family",
-          "subject": "other",
-          "value": "player"
-          }
+"wiki:ranged_attacker": {
+    "add": {
+        "component_groups": [
+            "attacker",
+            "ranged"
         ]
-      },
-      "event": "minecraft:gain_bad_omen",
-      "target": "other"
-    }
-  }
-}
-```
-
-The `minecraft:behavior.send_event` component is used inside the evoker to call an event named `wololo` inside any blue sheep within its activation range.
-
-```json
-"minecraft:behavior.send_event": {
-  "priority": 3,
-  "event_choices": [
-    {
-      "min_activation_range": 0.0,
-      "max_activation_range": 16.0,
-      "cooldown_time": 5.0,
-      "cast_duration": 3.0,
-      "particle_color": "#FFB38033",
-      "weight": 3,
-      "filters": {
-        "all_of": [
-          { "test" :  "is_family", "subject" : "other", "value" :  "sheep"},
-          { "test" :  "is_color", "subject" : "other", "value" :  "blue"}
+    },
+    "remove":{
+        "component_groups": [
+            "standby",
+            "melee"
         ]
-      },
-      "start_sound_event": "cast.spell",
-      "sequence": [
-        {
-          "base_delay": 2.0,
-          "event": "wololo",
-          "sound_event": "prepare.wololo"
-        }
-      ]
     }
-  ]
 }
 ```
 
-### Sequence
+:::tip
+When you add a component group, if a currently active component group has the same component inside it, it will be overwritten by the group most recently added.
+:::
 
-Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. This is a very useful tool when different component groups should be dependent on varying conditions.
+### Queue Command
 
-The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
+Queues commands to be executed by a target at the end of the tick.
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
 
 ```json
-"minecraft:convert_to_drowned": {
-  "sequence": [
-    {
-      "filters": { "test": "has_component", "operator": "!=", "value": "minecraft:is_baby" },
-      "add": { "component_groups": [ "minecraft:convert_to_drowned" ] },
-      "remove": { "component_groups": [ "minecraft:start_drowned_transformation" ] }
-    },
-    {
-      "filters": { "test": "has_component", "value": "minecraft:is_baby" },
-      "add": { "component_groups": [ "minecraft:convert_to_baby_drowned" ] },
-      "remove": { "component_groups": [ "minecraft:start_drowned_transformation" ] }
+"wiki:execute_event": {
+    "queue_command": {
+        "target": "self", // Optional - 'self' is default (targets entity)
+        "command": "summon pig"
     }
-  ]
 }
 ```
 
-In this particular case, it may be noted that both entries in the sequence remove the same component group. In practice, a more useful way to write this event may appear as follows:
+An array can be used to queue multiple commands:
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
 
 ```json
-"minecraft:convert_to_drowned": {
-  "sequence": [
-    {
-      "remove": { "component_groups": [ "minecraft:start_drowned_transformation" ] }
-    },
-    {
-      "filters": { "test": "has_component", "operator": "!=", "value": "minecraft:is_baby" },
-      "add": { "component_groups": [ "minecraft:convert_to_drowned" ] }
-    },
-    {
-      "filters": { "test": "has_component", "value": "minecraft:is_baby" },
-      "add": { "component_groups": [ "minecraft:convert_to_baby_drowned" ] }
+"wiki:execute_event": {
+    "queue_command": {
+        "target": "self", // Optional - 'self' is default (targets entity)
+        "command": [
+            "summon pig",
+            "say Everybody welcome the pig!"
+        ]
     }
-  ]
 }
 ```
 
-Note: Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
-
-#### Randomize
+### Randomize
 
 Randomize is a parameter which can be used inside of an entity event to add or remove component groups based off weighted randomization. This is a very useful tool when different component groups should be added based on random chance.
 
-The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95% chance of the cow spawning as an adult and a 5% chance of spawning as a baby (component groups "minecraft:cow_adult" and "minecraft:cow_baby").
+The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95% chance of the cow spawning as an adult and a 5% chance of spawning as a baby (component groups `minecraft:cow_adult` and `minecraft:cow_baby`).
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
 
 ```json
 "minecraft:entity_spawned": {
-  "randomize": [
-    {
-      "weight": 95,
-      "add": { "component_groups": [ "minecraft:cow_adult" ] }
-    },
-    {
-      "weight": 5,
-      "add": { "component_groups": [ "minecraft:cow_baby" ] }
-    }
-  ]
+    "randomize": [
+        {
+            "weight": 95,
+            "add": {
+                "component_groups": [
+                    "minecraft:cow_adult"
+                ]
+            }
+        },
+        {
+            "weight": 5,
+            "add": {
+                "component_groups": [
+                    "minecraft:cow_baby"
+                ]
+            }
+        }
+    ]
 }
 ```
 
-#### Sequence and Randomize Combination
+Note that the `randomize` will only select one option out of the pool of options.
 
-The sequence and randomize parameters can be combined for more complex behavior inside an event. Below is an example which aims to be exhaustive in showing how these parameters can be combined and utilized.
+### Sequence/Filters
+
+Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. Filters allow us to make conditional events which will only add/remove component groups if a condition is met. The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"minecraft:convert_to_drowned": {
+    "sequence": [
+        {
+            "filters": {
+                "test": "has_component",
+                "operator": "!=",
+                "value": "minecraft:is_baby"
+            },
+            "add": {
+                "component_groups": [
+                    "minecraft:convert_to_drowned"
+                ]
+            },
+            "remove": {
+                "component_groups": [
+                    "minecraft:start_drowned_transformation"
+                ]
+            }
+        },
+        {
+            "filters": {
+                "test":"has_component",
+                "value":"minecraft:is_baby"
+            },
+            "add": {
+                "component_groups": [
+                    "minecraft:convert_to_baby_drowned"
+                ]
+            },
+            "remove": {
+                "component_groups": [
+                    "minecraft:start_drowned_transformation"
+                ]
+            }
+        }
+    ]
+}
+```
+
+Additionally, `sequence` allows us to run multiple parameters in sequence. It evaluates each section at a time and if valid, will apply it.
+
+:::tip
+Entries in a sequence are not exclusive; if a filter in one of them passes, it does not prevent the other entries from running. In the case above, there is no filter in the first entry and so it automatically runs. This does not stop the other entries from being checked and subsequently running if valid.
+:::
+
+Below is an extensive example of using the sequence to combine filters, randomizing and add & removing component groups:
+
+<Spoiler title="Sequence Example">
 
 This event is run when the entity is hit by a player or projectile. There is a 60% chance nothing will happen and a 40% chance an attack sequence will activate. This attack sequence chooses a random attack with weights determined both by the entity's current health (stronger attacks are given a higher chance when the entity is below half health) and the distance to the nearest player (ranged attacks have higher priority when the player is further away).
 
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
 ```json
-"shanewolf:on_hit": {
-  "randomize": [
-    //60% chance nothing happens
-    {
-      "weight": 60
-    },
-    //40% chance this entry is run
-    {
-      "weight": 40,
-      "sequence": [
-        //runs separate event required for all attacks
+"wiki:on_hit": {
+    "randomize":[
+        // 60% chance nothing happens
         {
-          "trigger": "attack_event"
+            "weight": 60
         },
-        //runs if entity is not sheared (entity becomes sheared if under half health)
+        // 40% chance this entry is run
         {
-          "filters": { "test": "has_component", "operator": "!=", "value": "minecraft:is_sheared" },
-          "sequence": [
-            //runs if player is within 5 blocks
-            {
-              "filters": { "test": "distance_to_nearest_player", "operator": "<=", "value": 5.0 },
-              "randomize": [
+            "weight": 40,
+            "sequence": [
+                // Runs separate event required for all attacks
                 {
-                  "weight": 10,
-                  "add": { "component_groups": [ "explode" ] }
+                    "trigger": "attack_event"
                 },
+                // Runs if entity is not sheared (entity becomes sheared if under half health)
                 {
-                  "weight": 60
-                  "add": { "component_groups": [ "attack" ] }
+                    "filters": {
+                        "test": "has_component",
+                        "operator": "!=",
+                        "value": "minecraft:is_sheared"
+                    },
+                    "sequence": [
+                        // Runs if player is within 5 blocks
+                        {
+                            "filters": {
+                                "test": "distance_to_nearest_player",
+                                "operator": "<=",
+                                "value": 5.0
+                            },
+                            "randomize": [
+                                {
+                                    "weight": 10,
+                                    "add": {
+                                        "component_groups": [
+                                            "explode"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 60,
+                                    "add": {
+                                        "component_groups": [
+                                            "attack"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 20,
+                                    "add": {
+                                        "component_groups": [
+                                            "range_attack"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 10
+                                }
+                            ]
+                        },
+                        // Runs if player is farther than 5 blocks and entity still has a target
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "distance_to_nearest_player",
+                                        "operator": ">",
+                                        "value": 5.0
+                                    },
+                                    {
+                                        "test": "has_target",
+                                        "operator": "equals",
+                                        "value": true
+                                    }
+                                ]
+                            },
+                            "randomize": [
+                                {
+                                    "weight": 30,
+                                    "add": {
+                                        "component_groups": [
+                                            "attack"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 60,
+                                    "add":{
+                                        "component_groups": [
+                                            "range_attack"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 10
+                                }
+                            ]
+                        }
+                    ]
                 },
+                // Runs if entity is sheared (under half health)
                 {
-                  "weight": 20,
-                  "add": { "component_groups": [ "range_attack" ] }
-                },
-                {
-                  "weight": 10
+                    "filters": {
+                        "test": "has_component",
+                        "value": "minecraft:is_sheared"
+                    },
+                    "sequence": [
+                        // Runs if player is within 5 blocks
+                        {
+                            "filters": {
+                                "test": "distance_to_nearest_player",
+                                "operator": "<=",
+                                "value": 5.0
+                            },
+                            "randomize": [
+                                {
+                                    "weight": 20,
+                                    "add":{
+                                        "component_groups": [
+                                            "explode"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 60,
+                                    "add": {
+                                        "component_groups": [
+                                            "strong_attack"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 20,
+                                    "add": {
+                                        "component_groups": [
+                                            "strong_range_attack"
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        // Runs if player is farther than 5 blocks and entity still has a target
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "distance_to_nearest_player",
+                                        "operator": ">",
+                                        "value": 5.0
+                                    },
+                                    {
+                                        "test": "has_target",
+                                        "operator": "equals",
+                                        "value": true
+                                    }
+                                ]
+                            },
+                            "randomize": [
+                                {
+                                    "weight": 60,
+                                    "add": {
+                                        "component_groups": [
+                                            "strong_range_attack"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "weight": 40,
+                                    "randomize": [
+                                        {
+                                            "weight": 30,
+                                            "trigger": "rapid_fire"
+                                        },
+                                        {
+                                            "weight": 70,
+                                            "add": {
+                                                "component_groups": [
+                                                    "strong_blast"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ]
-            },
-            //runs if player is farther than 5 blocks and entity still has a target
-            {
-              "filters": {
-                "all_of": [
-                  { "test": "distance_to_nearest_player", "operator": ">", "value": 5.0 },
-                  { "test": "has_target", "operator": "equals", "value": true }
-                ]
-              },
-              "randomize": [
-                {
-                  "weight": 30,
-                  "add": { "component_groups": [ "attack" ] }
-                },
-                {
-                  "weight": 60,
-                  "add": { "component_groups": [ "range_attack" ] }
-                },
-                {
-                  "weight": 10
-                }
-              ]
+            ]
+        }
+    ]
+}
+```
+
+</Spoiler>
+
+### Set Property
+
+Sets entity property values (each value can be set to the returned value of a Molang expression string).
+
+:::warning
+String values are evaluated as Molang. This means, to set a string property, you must wrap the value in `'`s (example below).
+:::
+
+<CodeHeader>minecraft:block > events</CodeHeader>
+
+```json
+"wiki:change_properties": {
+    "set_property": {
+        "wiki:boolean_property_example": false,
+        "wiki:integer_property_example": "q.property('wiki:integer_property_example') + 1",
+        "wiki:string_property_example": "'red'"
+    }
+}
+```
+
+### Trigger
+
+Trigger is a parameter which can be used inside of an entity event to run other events based on filters to a chosen target.
+We can use this to trigger another event within the entity, and combining this with `sequence` can allow us to organize our events neatly.
+
+We are also able to specify filters and a target for the event. The target parameter is discussed in depth later. If the following event is called by the `minecraft:interact` component, then if the entity interacted with has the family tag `pig`, it will run the event `wiki:interacted` in the player that interacted with the entity.
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"wiki:on_interact": {
+    "trigger": {
+        "filters": {
+            "test": "is_family",
+            "subject": "self",
+            "value": "pig"
+        },
+        "event": "wiki:interacted",
+        "target": "other"
+    }
+}
+```
+
+:::tip
+Events are able to retain entity context from the component they were called in. For example, the if an event is triggered using a `minecraft:interact` component, we are able to apply the filter to the player who interacted with the entity. However, if the method that called the event does not have this context, using target will not work.
+:::
+
+Combining this with the sequence parameter, this allows us to run an event in multiple entities as long as there is a context for it. We discuss this more in the target section.
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"wiki:on_interact": {
+    "sequence": [
+        {
+            "trigger": {
+                "event": "wiki:interacted",
+                "target": "other"
             }
-	  ]
         },
-        //runs if entity is sheared (under half health)
         {
-          "filters": { "test": "has_component", "value": "minecraft:is_sheared" },
-          "sequence": [
-            //runs if player is within 5 blocks
-            {
-              "filters": { "test": "distance_to_nearest_player", "operator": "<=", "value": 5.0 },
-              "randomize": [
+            "trigger": {
+                "event": "wiki:interacted_with",
+                "target": "self"
+            }
+        }
+    ]
+}
+```
+
+## Calling Events
+
+In order for an event to run we need to know to activate it, this is done by calling the event. There are five main ways to do this:
+
+-   within a component
+-   within an animation
+-   within an animation controller
+-   within another event
+-   using a command
+
+Some components allow the player to call an event based on parameters set. Here we input the event we want to run when the parameters are met. For example, the `minecraft:environment_sensor` component is used in the zombie to call the event `minecraft:start_transforming` when the entity is underwater.
+
+<CodeHeader>minecraft:entity > components</CodeHeader>
+
+```json
+"minecraft:environment_sensor": {
+    "triggers": {
+        "filters": {
+            "test": "is_underwater",
+            "operator": "==",
+            "value": true
+        },
+        "event": "minecraft:start_transforming"
+    }
+}
+```
+
+We are also able to run an event directly on the entity within animations and animation controllers.
+This behavior-based animation is used to call the event `wiki:start_pouncing` after 10 seconds.
+
+<CodeHeader></CodeHeader>
+
+```json
+"animation.entity.pounce_timer": {
+    "timeline": {
+        "10.0": "@s wiki:start_pouncing"
+    },
+    "animation_length": 10.1
+}
+```
+
+This behavior-based animation controller is used to call the event `wiki:running` upon transition to the state "run".
+
+<CodeHeader></CodeHeader>
+
+```json
+"controller.animation.entity.movement":{
+    "initial_state":"walk",
+    "states":{
+        "walk":{
+            "transitions":[
                 {
-                  "weight": 20,
-                  "add": { "component_groups": [ "explode" ] }
-                },
-                {
-                  "weight": 60,
-                  "add": { "component_groups": [ "strong_attack" ] }
-                },
-                {
-                  "weight": 20,
-                  "add": { "component_groups": [ "strong_range_attack" ] }
+                    "run":"q.is_sheared"
                 }
-              ]
-            },
-            //runs if player is farther than 5 blocks and entity still has a target
-            {
-              "filters": {
+            ]
+        },
+        "run":{
+            "on_entry":[
+                "@s wiki:running"
+            ],
+            "transitions":[
+                {
+                    "walk":"!q.is_sheared"
+                }
+            ]
+        }
+    }
+}
+```
+
+Here the `@s` is used to apply the event onto the entities self. Animation controllers are incredibly powerful and can be used to create even more custom behavior, though they are more advanced. Check out our page [here](/animation-controllers/animation-controllers-intro) for more information
+
+Within an event, as well as adding & removing component groups we can also `trigger` other events to occur.
+This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`.
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"minecraft:entity_born": {
+    "trigger": "spawn_baby"
+}
+```
+
+We can also use the command `/event` to activate an event on an entity. The following would add the component group `wiki:example` to all pigs.
+`/event entity @e[type=minecraft:pig] wiki:example`.
+
+### Calling Events in Other Entities
+
+Some components, such as the damage sensor, can target entities other than "self" when calling events. One component in particular is specifically designed to call events in other entities: `minecraft:behavior.send_event`. We will discuss this component first.
+
+The `minecraft:behavior.send_event` component is used inside the evoker to call an event named `wololo` inside any blue sheep within its activation range.
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:behavior.send_event": {
+    "priority": 3,
+    "event_choices": [
+        {
+            "min_activation_range": 0.0,
+            "max_activation_range": 16.0,
+            "cooldown_time": 5.0,
+            "cast_duration": 3.0,
+            "particle_color": "#FFB38033",
+            "weight": 3,
+            "filters": {
                 "all_of": [
-                  { "test": "distance_to_nearest_player", "operator": ">", "value": 5.0 },
-                  { "test": "has_target", "operator": "equals", "value": true }
-                ]
-              },
-              "randomize": [
-                {
-                  "weight": 60,
-                  "add": { "component_groups": [ "strong_range_attack" ] }
-                },
-                {
-                  "weight": 40,
-                  "randomize": [
                     {
-                      "weight": 30,
-                      "trigger": "rapid_fire"
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "sheep"
                     },
                     {
-                      "weight": 70,
-                      "add": { "component_groups": [ "strong_blast" ] }
+                        "test": "is_color",
+                        "subject": "other",
+                        "value": "blue"
                     }
-                  ]
+                ]
+            },
+            "start_sound_event": "cast.spell",
+            "sequence": [
+                {
+                    "base_delay": 2.0,
+                    "event": "wololo",
+                    "sound_event": "prepare.wololo"
                 }
-              ]
-            }
-          ]
+            ]
         }
-      ]
+    ]
+}
+```
+
+You can also call event when spawning entity. To do it, add `<my:event_name>` in the end of string that is in component that can summon entity.
+
+<CodeHeader>BP/entities/zombie.json#component_groups/minecraft:convert_to_drowned</CodeHeader>
+
+```json
+"minecraft:transformation": {
+    "into": "minecraft:drowned<minecraft:as_adult>",
+    "transformation_sound": "convert_to_drowned",
+    "drop_equipment": true,
+    "delay": {
+        "value":15
     }
-  ]
+}
+```
+
+### Targets
+
+The component `minecraft:damage_sensor` inside the pillager calls the event `minecraft:gain_bad_omen` on the player which kills it. Note how the target of the event is set to "other".
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:damage_sensor": {
+    "triggers": {
+        "on_damage": {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "has_damage",
+                        "value": "fatal"
+                    },
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    }
+                ]
+            },
+            "event": "minecraft:gain_bad_omen",
+            "target": "other"
+        }
+    }
+}
+```
+
+Some components have these `targets` and each has certain ones that can be used. For example, `minecraft:interact` can have the target as either `self` or `other` where other is the entity that interacted with the entity. All valid components should have `self` and `target` as options where target is the targeted entity.
+
+### Built-in Events
+
+In general, using the component groups from vanilla mobs will not work. For example, the `minecraft:convert_to_drowned` will not be called in your entity unless you use one of the methods above to call it. However, there are a few events that called automatically when the conditions are met:
+
+-   `minecraft:entity_spawned` : called when the entity is spawned in. Useful for setting up initial component groups.
+-   `minecraft:entity_born` : called when the entity is spawned in through breeding.
+-   `minecraft:entity_transformed` : called when another entity transforms into this one.
+-   `minecraft:on_prime` : called when the entity's fuse is lit and is ready to explode.
+
+A good example of these in use is with the cow. This shows how we can always ensure the cow has either `minecraft:cow_adult` or `minecraft:cow_baby` as soon as it is spawned/transformed.
+
+<CodeHeader>BP/entities/cow.json#events</CodeHeader>
+
+```json
+"events": {
+    "minecraft:entity_spawned": {
+        "randomize": [
+            {
+                "weight": 95,
+                "add": {
+                    "component_groups": ["minecraft:cow_adult"]
+                }
+            },
+            {
+                "weight": 5,
+                "add": {
+                    "component_groups": ["minecraft:cow_baby"]
+                }
+            }
+    ]
+    },
+    "minecraft:entity_born": {
+        "add": {
+            "component_groups": ["minecraft:cow_baby"]
+        }
+    },
+    "minecraft:entity_transformed": {
+        "add": {
+            "component_groups": ["minecraft:cow_adult"]
+        }
+    }
 }
 ```

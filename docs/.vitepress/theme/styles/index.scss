@@ -1,0 +1,111 @@
+@use "reset";
+
+@use "accentColors";
+@use "code";
+@use "container";
+@use "frame";
+@use "home";
+@use "lists";
+@use "table";
+@use "variables";
+
+[href] {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  display: block;
+}
+
+article {
+  padding-inline: 2em;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  ul,
+  ol,
+  .card-grid,
+  .folder-view,
+  .molang-graph,
+  .spoiler,
+  .youtube-embed,
+  .wiki-image {
+    margin-block: 0.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:hover .header-anchor,
+    .header-anchor:focus-visible {
+      &::after {
+        content: "#";
+      }
+    }
+  }
+
+  h1,
+  h2 {
+    border-bottom: var(--border);
+  }
+
+  h1 {
+    width: max-content;
+    border-width: 3px;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    border-width: 2px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  img {
+    display: inline-block;
+  }
+
+  hr {
+    border: var(--border);
+  }
+
+  blockquote {
+    border-left: 3px solid var(--border-color);
+    padding-left: 2em;
+  }
+}
+
+option {
+  background-color: var(--bg-color);
+}
+
+@media not (max-width: 1300px) {
+  .outline-visible {
+    article {
+      margin-right: var(--outline-width);
+    }
+  }
+}

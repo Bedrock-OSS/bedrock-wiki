@@ -1,0 +1,26 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.wiki.skeleton_head",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 13,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+        // Skeleton head model
+				{
+					"name": "skeleton_head",
+					"binding": "query.item_slot_to_bone_name(context.item_slot)",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [-4, 0, -4], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

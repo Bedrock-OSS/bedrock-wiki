@@ -1,159 +1,304 @@
 ---
 title: Project Setup
+category: Guide
+description: How to setup your project
 nav_order: 4
-number: '4.'
+prefix: "4. "
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - Dreamedc2015
+    - BlueFrog130
+    - sermah
+    - cda94581
+    - MedicalJewel105
+    - TheItsNameless
+    - ThijsHankelMC
+    - TheHyperWhale
+    - stirante
+    - ChibiMango
+    - Etanarvazac
+    - retr0cube
+    - ThomasOrs
+    - lescx
 ---
 
-## Preparation
+## Introduction
+
+This page will guide you through the steps required to create your first "working" add-on and view it in game. If you're joining on android, you should follow this alternative guide:
+
+<Button link="./project-setup-android">Android guide</Button>
+
+## The com.mojang Folder
+
+The `com.mojang` folder is a special folder where Minecraft stores data (Add-ons, Worlds, Player info...). Minecraft understands this location, and all files we access or create will be placed somewhere in this folder!
+
+You should create a shortcut to the `com.mojang` folder on your Desktop or on your mobile device, so you can easily access it at any time. The exact location of the `com.mojang` folder will depend on your device OS.
+
+### Windows
+
+On windows, the `com.mojang` folder is located within your app-data folder.
+
+_Tip: You can type `%appdata%` into the searchbar to jump directly into the `C:\Users\<USERNAME>\AppData\` folder._
+
+`C:\Users\<USERNAME>\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
+
+### Android
+
+Android 11 or older: `Phone > games > com.mojang`
+
+Android 12 and newer: `Phone > Android > data > com.mojang.minecraftpe > files > games > com.mojang`
+
+### ChromeOS
+
+Before you can see the `com.mojang` in your files, make sure to change the `File Storage Location` to `External` in your Minecraft Settings:
+
+-   Go to `Minecraft Settings`.
+-   Navigate to `Settings > General > Storage`.
+-   Change the `File Storage Location` to `External`.
+
+After that you can access the `com.mojang` folder in your Android Subsystem:
+
+`My Files > Play Files > Android > data > com.mojang.minecraftpe > files > games > com.mojang`
+
+### iOS
+
+`My iDevice > Minecraft > games > com.mojang`
+
+### Development Packs
+
+We will develop our add-on in `development_behavior_packs` and `development_resource_packs`. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test your add-on without reloading Minecraft.
+
+`resource_packs` and `behavior_packs` on the other hand contain stable add-ons, including those imported via `.mcpack`. We can ignore these folders for now.
+
+## Your Workspace
+
+:::tip
+In this guide, BP refers to the folder you created in `development_behavior_packs` ("the behavior pack"), and RP refers to the folder you created in `development_resource_packs` ("the resource pack")
+:::
 
 First of all, you will need to create the proper folders in suitable locations and set up your workspace.
 _The remainder of this guide assumes you are using VSCode. You may also follow along with other editors._
 
 Let's create your first add-on workspace in Visual Studio Code now.
 
-1. Locate the com.mojang folder. Click [here](https://wiki.bedrock.dev/guide/software-preparation#the-commojang-folder) to find out how to get there.
-2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP` from now on**, following the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide).
-3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP` from now on**.
-4. Open VSCode (_Visual Studio Code, the code editor_)
-5. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-6. Press `File > Save Workspace As...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
+1. Open VSCode (_Visual Studio Code, the code editor_)
+2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**
+3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
+4. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
+5. Press `File > Save Workspace as...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
-## Manifests
+## BP Manifest
 
-A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
-Like all other code files in your pack, it's written in [JSON](https://www.json.org/json-en).
+:::tip Creating Files
+In this guide, you will often be instructed to create files with specific names, placed in specific folders. If the folder doesn't exist yet, please create it!
+:::
 
----
+The manifest is a file that identifies your pack to Minecraft. Every pack has one manifest. A folder with a correctly formatted manifest will show up in Minecraft, and we consider this the "minimal" pack before we can add additional content.
 
-Let's create our Behavior Pack manifest first by creating a new file in VSCode and copying the code below into that.
-First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Then name that file `manifest.json`
+Manifest files are written in `json`. If this isn't familiar to you, you can learn more about json [here](/guide/understanding-json).
+
+First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`. Call the file `manifest.json`. To begin, you can copy paste the following code into the file.
 
 <CodeHeader>BP/manifest.json</CodeHeader>
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Wiki Tutorial",
-		"description": "Time to create your first add-on!",
-		"uuid": "86a98bd8-1859-46b4-a8d8-b242b9a9fcc8",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 14, 0]
-	},
-	"modules": [
-		{
-			"type": "data",
-			"uuid": "5c830391-0937-44d6-9774-406de66b6984",
-			"version": [1, 0, 0]
-		}
-	],
-	"dependencies": [
-		{
-			"uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
-			"version": [1, 0, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "...",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "...",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+        "product_type": "addon"
+    }
 }
 ```
 
-Let's break up the code now.
+### Manifest Explained
 
 -   "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version; use it.
 
--   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game.
+-   "`name`" is the name of your behavior pack. "`description`" will show up under it in-game. We are defining these files in "code form" so we can translate them later into other languages. For more information about localization, look [here](/concepts/text-and-translations).
 
--   The "`UUID`" field is an **essential** one. A UUID (_Universally Unique Identifier_) identifies your pack for other programs (in this case, Minecraft) to read. **NEVER USE THE SAME UUID TWICE.** You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like _Bridge_, _AJG_, and _CoreCoder_ generate UUIDS automatically. Every manifest file uses two different UUIDs.
-
-So, to make sure your add-on will work correctly. Generate three new UUID's which you will paste into the BP manifest.json file.
+-   The "`UUID`" field is **essential**, and will be discussed in more detail below.
 
 -   "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device with an older version installed, the more recent version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
--   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on.
+-   "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. The number specified here should match the version number of the game, unless you're planning for backwards compatibility with older versions.
 
--   In "`modules`", the "`type`" is defined to be "`data`". This makes your pack a _Behavior Pack_.
+-   In "`modules`", the `"type"` is defined to be `"data"`. This makes your pack a _Behavior Pack_.
 
-`Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can stay unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
+-   In "metadata", the `"product_type"` allows your add-on to enable achievements on your world. It must be a product type of `"addon"`.
 
-#
+### UUID Explained
 
-The next step is, naturally, creating your `RP/manifest.json`. It is very much like a Behavior Pack manifest, except the "`type`" is "`resources`".
-Copy the code below into your newly created `manifest.json`.
+A UUID (_Universally Unique Identifier_) identifies your pack for other programs (in this case, Minecraft) to read. It looks something like this: `5c830391-0937-44d6-9774-406de66b6984`
+
+**NEVER USE THE SAME UUID TWICE.** You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSCode, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like _bridge._ generate UUIDS automatically. Every manifest file uses two different UUIDs.
+
+To ensure that your add-on will work correctly you should generate two new UUID's which you will paste into the BP `manifest.json` file, at each `"..."`. When you are finished, it should look something like this:
+
+`"uuid": "5c830391-0937-44d6-9774-406de66b6984"`
+
+## RP Manifest
+
+The next step is to create the `manifest.json` for the RP. The format for a resource-pack manifest is nearly identical to a BP manifests except that the `type` is `resources`, which marks the pack as a _Resource Pack_.
+
+Copy the following code into your newly created `RP/manifest.json` and insert your own UUIDs.
 
 <CodeHeader>RP/manifest.json</CodeHeader>
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Wiki Tutorial",
-		"description": "Time to create your first add-on!",
-		"uuid": "e31629b6-f587-4c78-9d8c-97ce40b29b85",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 16, 0]
-	},
-	"modules": [
-		{
-			"type": "resources",
-			"uuid": "a00c0603-e122-4d00-8ab8-18168bc5ca9a",
-			"version": [1, 0, 0]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "...",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "...",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+        "product_type": "addon"
+    }
 }
 ```
 
-Now, we can add a little trick to creating add-ons. If you look at the UUIDs I put in both the BP and RP; you'll notice the UUID in the `dependencies` of the BP is the same as the UUID from the RP. This makes it so that if both the RP and BP are on your device, you will only need to assign the BP to your world, and the RP will get applied automatically too!
+## Pack Icon
 
-_Now, make sure you replaced all the UUIDs with NEW ones **and** that the UUID from the RP is the exact same as the one in the `dependencies` of the BP._
+The pack icon is an image file which identifies how your add-on will look in-game. If you have a low-resolution square image, you can use it. Otherwise, download and use this example icon:
 
-#
+<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated />
 
-Next, add your `pack_icon.png` file to both the BP and RP folders.
+<Button link="/assets/images/guide/project-setup/pack_icon.png" download>
+    Download Image
+</Button>
 
-I'm going to use this image here for both the BP and RP:
-TODO Add new pack_icon
-<WikiImage src="/assets/images/guide/pack_icon_BP.png" alt="Pack Icon" pixelated/>
+You should place a copy of your desired image into both the RP and the BP. The image needs to be named `pack_icon.png`
 
-The last thing to do is to validate the text in your packs for other languages. For this, create a file called `en_US.lang` in `RP/texts/` and copy these lines into it, defining your packs' name and descriptions for the mentioned language:
+## Language Files
+
+The last thing to do is setup language support for your add-on. You will need to create a language file for both the RP and the BP. You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations).
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
 ```json
-pack.name=Ghostly Guide
-pack.description=Bedrock OSS Organization
+pack.name=Wiki Resource Pack
+pack.description=A Ghostly Guide
 ```
 
-If you have done everything correctly, your packs should show up in Minecraft now!
-TODO Replace this image
-![](/assets/images/guide/behavior_pack_existing.jpg)
+<CodeHeader>BP/texts/en_US.lang</CodeHeader>
 
----
+```json
+pack.name=Wiki Behavior Pack
+pack.description=A Ghostly Guide
+```
 
-## Creating your testing world
+<CodeHeader>RP/texts/languages.json</CodeHeader>
 
-Now to create a testing world to test your new add-on!
+```json
+["en_US"]
+```
+
+<CodeHeader>BP/texts/languages.json</CodeHeader>
+
+```json
+["en_US"]
+```
+
+## Checking Your Work
+
+If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide](/guide/troubleshooting).
+
+![](/assets/images/guide/project-setup/active_pack.png)
+
+## Turn on Content Log
+
+:::warning Content Log
+Content log is the most useful tool you have for debugging your add-ons. Please do not skip this step!
+:::
+
+![](/assets/images/guide/content_log.png)
+
+Content Log is an extremely important debugging tool, which you should always have on.
+
+Turn on both content log settings in `settings > creator`. This will show you any errors in your add-on when you enter a world with it applied. You can open the content log GUI in-game by pressing `ctrl+h` or by pressing `Content Log History` in the creator settings panel. Learn more about the content log [here](/guide/troubleshooting).
+
+## Creating Your Testing World
+
+Now we create a world to test your new add-on!
 
 1. Click "**Create new world**";
 
-2. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
+2. Ensure that the following settings are set.
 
-TODO Replace these images
-![](/assets/images/guide/world_params_1.jpg)
-![](/assets/images/guide/world_params_2.jpg)
-![](/assets/images/guide/world_params_3.jpg)
+    ![](/assets/images/guide/project-setup/settings_1.png)
+    ![](/assets/images/guide/project-setup/settings_2.png)
 
-Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too. Otherwise, it'll be applied automatically). Now click '**Create**'. You might need a separate '_Infinite_' world to test entity spawning too.
-![](/assets/images/guide/behavior_pack_applied.png)
+3. Now activate your behavior pack, and your resource pack. You can do this by selecting the packs, and clicking 'apply'.
+
+4. Now click '**Create**'!
 
 ---
 
-## Your progress so far:
+## Overview
 
-**What you've done:**
+**Here is how your project should look, after completing this page:**
 
--   [x] Setup your pack;
+Remember that in future, we will represent `com.mojang/development_behavior_packs/guide_RP/` as `RP`, and `com.mojang/development_behavior_packs/guide_BP/` as `BP`.
 
-**What are you to do next:**
+<FolderView :paths="[
+	'com.mojang/development_resource_packs/guide_RP/manifest.json',
+	'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
+	'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
+	'com.mojang/development_resource_packs/guide_RP/texts/languages.json',
+	'com.mojang/development_behavior_packs/guide_BP/manifest.json',
+	'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+	'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
+	'com.mojang/development_behavior_packs/guide_BP/texts/languages.json',
+]"></FolderView>
 
--   [ ] Create a custom item;
--   [ ] Create a custom entity;
--   [ ] Create the entity's loot, spawn rules and a custom recipe;
+## What You Have Learned
+
+:::tip What you have learned:
+
+-   What the com.mojang folder is, where it is and what folders it contains
+-   How to setup your workspace
+-   What a `manifest.json` file is
+-   How to use UUIDs
+-   How to create an icon for your add-on
+-   What a `.lang` file is
+
+:::
+
+## Your Progress So Far
+
+:::tip What you have learned
+
+-   [x] Setup your pack
+-   [ ] Create a custom item
+-   [ ] Create a custom entity
+-   [ ] Create the entity's loot, spawn rules and a custom recipe
+
+:::
+
+<Button link="/guide/custom-item">Next: Custom Item</Button>

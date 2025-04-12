@@ -1,0 +1,67 @@
+{
+  "columns": {
+    "tint_method": {
+      "name": "Tint Method",
+      "sortable": true
+    },
+    "default_color": {
+      "name": "Preview",
+      "text_align": "center"
+    },
+    "vanilla_usage": {
+      "name": "Vanilla Usage"
+    }
+  },
+  "rows": [
+    {
+      "tint_method": "`birch_foliage`",
+      "default_color": "<div style='background: #80A755' class='color-preview'>#80A755</div>",
+      "vanilla_usage": ["`minecraft:birch_leaves`"]
+    },
+    {
+      "tint_method": "`default_foliage`",
+      "default_color": "<div style='background: #77AB2F' class='color-preview'>#77AB2F</div>",
+      "vanilla_usage": [
+        "`minecraft:acacia_leaves`",
+        "`minecraft:dark_oak_leaves`",
+        "`minecraft:jungle_leaves`",
+        "`minecraft:mangrove_leaves`",
+        "`minecraft:oak_leaves`",
+        "`minecraft:vines`"
+      ]
+    },
+    {
+      "tint_method": "`dry_foliage`",
+      "default_color": "<div style='background: #A37546' class='color-preview'>#A37546</div>",
+      "vanilla_usage": ["`minecraft:leaf_litter`"]
+    },
+    {
+      "tint_method": "`evergreen_foliage`",
+      "default_color": "<div style='background: #619961' class='color-preview'>#619961</div>",
+      "vanilla_usage": ["`minecraft:spruce_leaves`"]
+    },
+    {
+      "tint_method": "`grass`",
+      "default_color": "<div style='background: #92BC58' class='color-preview'>#92BC58</div>",
+      "vanilla_usage": [
+        "`minecraft:fern`",
+        "`minecraft:grass_block` (top)",
+        "`minecraft:large_fern`",
+        "`minecraft:pink_petals` (stems)",
+        "`minecraft:reeds`",
+        "`minecraft:short_grass`",
+        "`minecraft:tall_grass`",
+        "`minecraft:wildflowers` (stems)"
+      ]
+    },
+    {
+      "tint_method": "`water`",
+      "default_color": "<div style='background: #44AFF5' class='color-preview'>#44AFF5</div>",
+      "vanilla_usage": [
+        "`minecraft:cauldron` (undyed water)",
+        "`minecraft:flowing_water`",
+        "`minecraft:water`"
+      ]
+    }
+  ]
+}

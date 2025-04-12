@@ -1,0 +1,37 @@
+{
+  "columns": {
+    "number_column": {
+      "name": "Number",
+      "sortable": true,
+      "text_align": "right"
+    },
+    "boolean_column": {
+      "name": "Boolean",
+      "text_align": "center"
+    },
+    "my_other_column": {
+      "name": "Another Column"
+    }
+  },
+  "rows": [
+    {
+      "number_column": 1,
+      "my_other_column": "Aute **incididunt proident** incididunt ~~ullamco~~ eiusmod ea dolor ea Lorem commodo. *Veniam nulla cillum officia incididunt deserunt. Dolor consectetur consectetur veniam consectetur Lorem incididunt esse non.* Mollit et do et ad. Commodo nostrud culpa Lorem reprehenderit sunt quis cupidatat id id tempor ullamco. Aliqua ipsum amet ea nisi culpa aliqua dolor aute duis nisi laborum incididunt incididunt Lorem. Anim irure fugiat et qui magna magna ullamco ullamco sint exercitation in commodo aliquip. Ad irure laborum deserunt irure qui proident elit. Incididunt minim magna occaecat proident ut cillum sunt culpa aliquip voluptate reprehenderit dolore. Est veniam sunt labore nulla. Quis pariatur id adipisicing sit magna elit commodo duis cillum voluptate esse nulla aliquip occaecat. Ea deserunt consequat tempor reprehenderit eu officia qui mollit. Officia exercitation nostrud do ipsum fugiat fugiat commodo commodo ipsum exercitation ex Lorem incididunt culpa.",
+      "boolean_column": true
+    },
+    {
+      "boolean_column": false,
+      "number_column": 2,
+      "my_other_column": "Proident amet id ut exercitation. Do esse exercitation eiusmod Lorem incididunt exercitation esse fugiat Lorem et. Magna eu ex excepteur qui est consectetur nostrud dolor ea est. Occaecat aliqua eu reprehenderit excepteur aute qui laborum consectetur incididunt eu anim pariatur."
+    },
+    {
+      "number_column": 3,
+      "boolean_column": false,
+      "my_other_column": [
+        "Proident amet *id* ut exercitation.",
+        "Do esse exercitation eiusmod Lorem incididunt exercitation esse fugiat Lorem et.",
+        "Magna eu ex excepteur qui est consectetur nostrud dolor ea est."
+      ]
+    }
+  ]
+}

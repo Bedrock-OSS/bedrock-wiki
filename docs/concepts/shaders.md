@@ -1,9 +1,16 @@
 ---
 title: Shaders
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - yanasakana
+    - MedicalJewel105
+    - SIsilicon
+description: Shaders for MCBE.
 ---
 
 :::warning
-The shaders on this page are incompatible with [Render Dragon](https://help.minecraft.net/hc/en-us/articles/360052771272-About-the-1-16-200-Update-for-Windows-10-). That means that they will not work on Windows 10 or Console devices!
+The shaders on this page are incompatible with [Render Dragon](https://help.minecraft.net/hc/en-us/articles/360052771272-About-the-1-16-200-Update-for-Windows-10-). That means that they will not work on Windows and Console devices past 1.16.200, nor other devices past 1.18.30!
 :::
 
 ## Overview
@@ -11,7 +18,7 @@ The shaders on this page are incompatible with [Render Dragon](https://help.mine
 Shaders are divided into 2 folders: `glsl` and `hlsl`. For shaders to work on every device,
 you need to code shaders in both languages. For testing on Windows, `hlsl` is enough.
 When rewriting shaders from one language to another, there are few things to change,
-like HLSL `float3` is `vec3` in GLSL. [Mapping between those languages can be found here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
+like HLSL `float3` is `vec3` in GLSL. Mapping between those languages can be found [here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
 
 ## Materials
 
@@ -39,30 +46,28 @@ material after a colon. For example: `entity_alpha:entity_base`
 
 Example:
 
+<CodeHeader></CodeHeader>
+
 ```json
 {
-	"materials": {
-		"version": "1.0.0",
-		"particle_debug": {
-			"vertexShader": "shaders/particle_generic.vertex",
-			"fragmentShader": "shaders/particle_debug.fragment",
+    "materials": {
+        "version": "1.0.0",
+        "particle_debug": {
+            "vertexShader": "shaders/particle_generic.vertex",
+            "fragmentShader": "shaders/particle_debug.fragment",
 
-			"vertexFields": [
-				{ "field": "Position" },
-				{ "field": "Color" },
-				{ "field": "UV0" }
-			],
+            "vertexFields": [{ "field": "Position" }, { "field": "Color" }, { "field": "UV0" }],
 
-			"+samplerStates": [
-				{
-					"samplerIndex": 0,
-					"textureFilter": "Point"
-				}
-			],
+            "+samplerStates": [
+                {
+                    "samplerIndex": 0,
+                    "textureFilter": "Point"
+                }
+            ],
 
-			"msaaSupport": "Both"
-		}
-	}
+            "msaaSupport": "Both"
+        }
+    }
 }
 ```
 
@@ -93,6 +98,8 @@ Input color is clamped to `<0.0, 1.0>`. To pass more significant values, you nee
 
 `TIME` variable is a number of seconds as `float` and is global for all shaders. For time-based on particle lifetime, you need to pass this:
 
+<CodeHeader></CodeHeader>
+
 ```json
 "minecraft:particle_appearance_tinting": {
     "color": ["variable.particle_age/variable.particle_lifetime", 0, 0, 1]
@@ -107,11 +114,15 @@ For entity shaders, you can make the shader dependent on the camera direction to
 
 -   Add to `PS_Input` in vertex and fragment shader new field
 
+<CodeHeader></CodeHeader>
+
 ```
 float3 viewDir: POSITION;
 ```
 
 -   After that, add to vertex shader this line
+
+<CodeHeader></CodeHeader>
 
 ```
 PSInput.viewDir = normalize((mul(WORLD, mul(BONES[VSInput.boneId], float4(VSInput.position, 1)))).xyz);
@@ -123,6 +134,8 @@ PSInput.viewDir = normalize((mul(WORLD, mul(BONES[VSInput.boneId], float4(VSInpu
 
 The easiest way to debug a value is to turn it into color and render it like this.
 
+<CodeHeader></CodeHeader>
+
 ```
 PSOutput.color = float4(PSInput.uv, 0., 1.);
 ```
@@ -131,6 +144,8 @@ This should create a red-green gradient, showing that the values of `uv` are bet
 
 You can use the debug shader I wrote [based on this shader](http://mew.cx/drawtext/drawtext).
 Right now, this shader will display values of the color passed to the shader. To display another value, change line 70 in hlsl shader to
+
+<CodeHeader></CodeHeader>
 
 ```
 int ascii = getFloatCharacter( cellIndex, <float4 vector here> );

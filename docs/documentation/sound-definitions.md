@@ -1,129 +1,91 @@
 ---
 title: Sound Definitions
+mentions:
+    - MedicalJewel105
+description: Automatically generated sounds from sound_definitions.json sorted by categories and subcategories.
 ---
 
-The following sound definitions have been stripped from vanilla files thanks to Cuteness (Katie).
+Sounds from `sound_definitions.json` sorted by categories and subcategories based on their names.
+This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
+_Last updated for 1.21.70_
 
--   [ambient](#ambient)
--   [armor](#armor)
--   [beacon](#beacon)
--   [block](#block)
--   [bottle](#bottle)
--   [bubble](#bubble)
--   [bucket](#bucket)
--   [camera](#camera)
--   [cauldron](#cauldron)
--   [conduit](#conduit)
--   [crossbow](#crossbow)
--   [damage](#damage)
--   [dig](#dig)
--   [elytra](#elytra)
--   [entity](#entity)
--   [fall](#fall)
--   [fire](#fire)
--   [firework](#firework)
--   [game](#game)
--   [hit](#hit)
--   [item](#item)
--   [jump](#jump)
--   [land](#land)
--   [leashknot](#leashknot)
--   [liquid](#liquid)
--   [minecart](#minecart)
--   [mob](#mob)
-    -   [agent](#agent)
-    -   [armor_stand](#armor_stand)
-    -   [bat](#bat)
-    -   [blaze](#blaze)
-    -   [cat](#cat)
-    -   [chicken](#chicken)
-    -   [cow](#cow)
-    -   [creeper](#creeper)
-    -   [dolphin](#dolphin)
-    -   [drowned](#drowned)
-    -   [elderguardian](#elderguardian)
-    -   [enderdragon](#enderdragon)
-    -   [endermen](#endermen)
-    -   [endermite](#endermite)
-    -   [evocation_fangs](#evocation_fangs)
-    -   [evocation_illager](#evocation_illager)
-    -   [fish](#fish)
-    -   [fox](#fox)
-    -   [ghast](#ghast)
-    -   [guardian](#guardian)
-    -   [horse](#horse)
-    -   [husk](#husk)
-    -   [irongolem](#irongolem)
-    -   [llama](#llama)
-    -   [magmacube](#magmacube)
-    -   [mooshroom](#mooshroom)
-    -   [ocelot](#ocelot)
-    -   [panda](#panda)
-    -   [panda_baby](#panda_baby)
-    -   [parrot](#parrot)
-    -   [phantom](#phantom)
-    -   [pig](#pig)
-    -   [pillager](#pillager)
-    -   [polarbear](#polarbear)
-    -   [polarbear_baby](#polarbear_baby)
-    -   [rabbit](#rabbit)
-    -   [ravager](#ravager)
-    -   [sheep](#sheep)
-    -   [shulker](#shulker)
-    -   [silverfish](#silverfish)
-    -   [skeleton](#skeleton)
-    -   [slime](#slime)
-    -   [snowgolem](#snowgolem)
-    -   [spider](#spider)
-    -   [squid](#squid)
-    -   [stray](#stray)
-    -   [turtle](#turtle)
-    -   [turtle_baby](#turtle_baby)
-    -   [vex](#vex)
-    -   [villager](#villager)
-    -   [vindicator](#vindicator)
-    -   [wanderingtrader](#wanderingtrader)
-    -   [witch](#witch)
-    -   [wither](#wither)
-    -   [wolf](#wolf)
-    -   [zombie](#zombie)
-    -   [zombie_villager](#zombie_villager)
-    -   [zombiepig](#zombiepig)
--   [music](#music)
--   [note](#note)
--   [portal](#portal)
--   [raid](#raid)
--   [random](#random)
--   [record](#record)
--   [step](#step)
--   [tile](#tile)
--   [ui](#ui)
--   [use](#use)
--   [vr](#vr)
+## ambient
 
-# ambient
+#### ambient
 
-`ambient.weather.lightning.impact`
+---
 
-`ambient.weather.rain`
+`ambient.basalt_deltas.additions`
 
-`ambient.weather.thunder`
+`ambient.basalt_deltas.loop`
 
-# armor
+`ambient.basalt_deltas.mood`
 
-`armor.equip_chain`
+`ambient.cave`
 
-`armor.equip_diamond`
+`ambient.crimson_forest.additions`
 
-`armor.equip_generic`
+`ambient.crimson_forest.loop`
 
-`armor.equip_gold`
+`ambient.crimson_forest.mood`
 
-`armor.equip_iron`
+`ambient.nether_wastes.additions`
 
-`armor.equip_leather`
+`ambient.nether_wastes.loop`
 
-# beacon
+`ambient.nether_wastes.mood`
+
+`ambient.soulsand_valley.additions`
+
+`ambient.soulsand_valley.loop`
+
+`ambient.soulsand_valley.mood`
+
+`ambient.warped_forest.additions`
+
+`ambient.warped_forest.loop`
+
+`ambient.warped_forest.mood`
+
+#### entity
+
+---
+
+`entity.generic.splash`
+
+#### firework
+
+---
+
+`firework.blast`
+
+`firework.large_blast`
+
+`firework.launch`
+
+`firework.shoot`
+
+`firework.twinkle`
+
+#### portal
+
+---
+
+`portal.travel`
+
+`portal.trigger`
+
+## block
+
+#### ambient
+
+---
+
+`ambient.candle`
+
+#### beacon
+
+---
 
 `beacon.activate`
 
@@ -133,7 +95,9 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `beacon.power`
 
-# block
+#### block
+
+---
 
 `block.bamboo.break`
 
@@ -153,17 +117,33 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `block.barrel.open`
 
+`block.beehive.drip`
+
+`block.beehive.enter`
+
+`block.beehive.exit`
+
+`block.beehive.shear`
+
+`block.beehive.work`
+
 `block.bell.hit`
 
 `block.blastfurnace.fire_crackle`
+
+`block.bowhit`
 
 `block.campfire.crackle`
 
 `block.cartography_table.use`
 
+`block.cave_vines.place`
+
 `block.chorusflower.death`
 
 `block.chorusflower.grow`
+
+`block.click`
 
 `block.composter.empty`
 
@@ -173,9 +153,41 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `block.composter.ready`
 
+`block.copper_bulb.turn_off`
+
+`block.copper_bulb.turn_on`
+
+`block.creaking_heart.ambient`
+
+`block.creaking_heart.break`
+
+`block.creaking_heart.hit`
+
+`block.creaking_heart.place`
+
+`block.creaking_heart.spawn_mob`
+
+`block.creaking_heart.trail`
+
+`block.decorated_pot.insert`
+
+`block.decorated_pot.insert_fail`
+
+`block.enchanting_table.use`
+
 `block.end_portal.spawn`
 
 `block.end_portal_frame.fill`
+
+`block.eyeblossom.ambient`
+
+`block.eyeblossom.close`
+
+`block.eyeblossom.close_long`
+
+`block.eyeblossom.open`
+
+`block.eyeblossom.open_long`
 
 `block.false_permissions`
 
@@ -205,6 +217,74 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `block.loom.use`
 
+`block.mangrove_roots.break`
+
+`block.mangrove_roots.fall`
+
+`block.mangrove_roots.hit`
+
+`block.mangrove_roots.place`
+
+`block.mangrove_roots.step`
+
+`block.mob_spawner.break`
+
+`block.mob_spawner.step`
+
+`block.mud.break`
+
+`block.mud.fall`
+
+`block.mud.hit`
+
+`block.mud.place`
+
+`block.mud.step`
+
+`block.mud_bricks.break`
+
+`block.mud_bricks.fall`
+
+`block.mud_bricks.hit`
+
+`block.mud_bricks.place`
+
+`block.mud_bricks.step`
+
+`block.muddy_mangrove_roots.break`
+
+`block.muddy_mangrove_roots.fall`
+
+`block.muddy_mangrove_roots.hit`
+
+`block.muddy_mangrove_roots.place`
+
+`block.muddy_mangrove_roots.step`
+
+`block.packed_mud.break`
+
+`block.packed_mud.fall`
+
+`block.packed_mud.hit`
+
+`block.packed_mud.place`
+
+`block.packed_mud.step`
+
+`block.pale_hanging_moss.ambient`
+
+`block.resin.break`
+
+`block.resin.hit`
+
+`block.resin.place`
+
+`block.resin_brick.break`
+
+`block.resin_brick.hit`
+
+`block.resin_brick.place`
+
 `block.scaffolding.break`
 
 `block.scaffolding.climb`
@@ -217,7 +297,13 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `block.scaffolding.step`
 
+`block.sign.waxed_interact_fail`
+
 `block.smoker.smoke`
+
+`block.sniffer_egg.crack`
+
+`block.sniffer_egg.hatch`
 
 `block.stonecutter.use`
 
@@ -235,11 +321,109 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `block.turtle_egg.drop`
 
-# bottle
+`block.weeping_vines.break`
 
-`bottle.dragonbreath`
+`block.weeping_vines.hit`
 
-# bubble
+`block.weeping_vines.place`
+
+`block.weeping_vines.use`
+
+#### bloom
+
+---
+
+`bloom.sculk_catalyst`
+
+#### break
+
+---
+
+`break.amethyst_block`
+
+`break.amethyst_cluster`
+
+`break.azalea`
+
+`break.bamboo_wood`
+
+`break.bamboo_wood_hanging_sign`
+
+`break.big_dripleaf`
+
+`break.calcite`
+
+`break.cherry_leaves`
+
+`break.cherry_wood`
+
+`break.cherry_wood_hanging_sign`
+
+`break.chiseled_bookshelf`
+
+`break.copper_bulb`
+
+`break.copper_grate`
+
+`break.decorated_pot`
+
+`break.dirt_with_roots`
+
+`break.dripstone_block`
+
+`break.frog_spawn`
+
+`break.froglight`
+
+`break.hanging_roots`
+
+`break.hanging_sign`
+
+`break.heavy_core`
+
+`break.iron`
+
+`break.large_amethyst_bud`
+
+`break.medium_amethyst_bud`
+
+`break.nether_wood`
+
+`break.nether_wood_hanging_sign`
+
+`break.pink_petals`
+
+`break.pointed_dripstone`
+
+`break.sculk`
+
+`break.sculk_catalyst`
+
+`break.sculk_sensor`
+
+`break.sculk_shrieker`
+
+`break.sculk_vein`
+
+`break.small_amethyst_bud`
+
+`break.sponge`
+
+`break.spore_blossom`
+
+`break.suspicious_gravel`
+
+`break.suspicious_sand`
+
+`break.tuff`
+
+`break.web`
+
+`break.wet_sponge`
+
+#### bubble
+
+---
 
 `bubble.down`
 
@@ -251,11 +435,15 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `bubble.upinside`
 
-# bucket
+#### bucket
+
+---
 
 `bucket.empty_fish`
 
 `bucket.empty_lava`
+
+`bucket.empty_powder_snow`
 
 `bucket.empty_water`
 
@@ -265,11 +453,15 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `bucket.fill_water`
 
-# camera
+#### cake
 
-`camera.take_picture`
+---
 
-# cauldron
+`cake.add_candle`
+
+#### cauldron
+
+---
 
 `cauldron.adddye`
 
@@ -289,7 +481,105 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `cauldron.takewater`
 
-# conduit
+#### cauldron_drip
+
+---
+
+`cauldron_drip.lava.pointed_dripstone`
+
+`cauldron_drip.water.pointed_dripstone`
+
+#### chime
+
+---
+
+`chime.amethyst_block`
+
+#### click_off
+
+---
+
+`click_off.bamboo_wood_button`
+
+`click_off.bamboo_wood_pressure_plate`
+
+`click_off.cherry_wood_button`
+
+`click_off.cherry_wood_pressure_plate`
+
+`click_off.metal_pressure_plate`
+
+`click_off.nether_wood_button`
+
+`click_off.nether_wood_pressure_plate`
+
+`click_off.stone_pressure_plate`
+
+`click_off.wooden_pressure_plate`
+
+#### click_on
+
+---
+
+`click_on.bamboo_wood_button`
+
+`click_on.bamboo_wood_pressure_plate`
+
+`click_on.cherry_wood_button`
+
+`click_on.cherry_wood_pressure_plate`
+
+`click_on.metal_pressure_plate`
+
+`click_on.nether_wood_button`
+
+`click_on.nether_wood_pressure_plate`
+
+`click_on.stone_pressure_plate`
+
+`click_on.wooden_pressure_plate`
+
+#### close
+
+---
+
+`close.bamboo_wood_door`
+
+`close.bamboo_wood_fence_gate`
+
+`close.bamboo_wood_trapdoor`
+
+`close.cherry_wood_door`
+
+`close.cherry_wood_fence_gate`
+
+`close.cherry_wood_trapdoor`
+
+`close.fence_gate`
+
+`close.iron_door`
+
+`close.iron_trapdoor`
+
+`close.nether_wood_door`
+
+`close.nether_wood_fence_gate`
+
+`close.nether_wood_trapdoor`
+
+`close.wooden_door`
+
+`close.wooden_trapdoor`
+
+#### close_door
+
+---
+
+`close_door.copper`
+
+#### conduit
+
+---
 
 `conduit.activate`
 
@@ -301,189 +591,397 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `conduit.short`
 
-# crossbow
+#### crafter
 
-`crossbow.loading.end`
+---
 
-`crossbow.loading.middle`
+`crafter.craft`
 
-`crossbow.loading.start`
+`crafter.disable_slot`
 
-`crossbow.quick_charge.end`
+`crafter.fail`
 
-`crossbow.quick_charge.middle`
+#### dig
 
-`crossbow.quick_charge.start`
+---
 
-`crossbow.shoot`
+`dig.ancient_debris`
 
-# damage
+`dig.azalea_leaves`
 
-`damage.fallbig`
+`dig.basalt`
 
-`damage.fallsmall`
+`dig.bone_block`
 
-# dig
+`dig.candle`
+
+`dig.cave_vines`
+
+`dig.chain`
 
 `dig.cloth`
+
+`dig.copper`
+
+`dig.coral`
+
+`dig.deepslate`
+
+`dig.deepslate_bricks`
+
+`dig.fungus`
 
 `dig.grass`
 
 `dig.gravel`
 
+`dig.honey_block`
+
+`dig.lodestone`
+
+`dig.moss`
+
+`dig.nether_brick`
+
+`dig.nether_gold_ore`
+
+`dig.nether_sprouts`
+
+`dig.nether_wart`
+
+`dig.netherite`
+
+`dig.netherrack`
+
+`dig.nylium`
+
+`dig.powder_snow`
+
+`dig.roots`
+
 `dig.sand`
+
+`dig.shroomlight`
 
 `dig.snow`
 
+`dig.soul_sand`
+
+`dig.soul_soil`
+
+`dig.stem`
+
 `dig.stone`
+
+`dig.vines`
 
 `dig.wood`
 
-# elytra
+#### drip
 
-`elytra.loop`
+---
 
-# entity
+`drip.lava.pointed_dripstone`
 
-`entity.zombie.converted_to_drowned`
+`drip.water.pointed_dripstone`
 
-# fall
+#### extinguish
 
-`fall.cloth`
+---
 
-`fall.egg`
+`extinguish.candle`
 
-`fall.grass`
+#### fall
 
-`fall.gravel`
+---
 
-`fall.ladder`
+`fall.copper_bulb`
 
-`fall.sand`
+#### fire
 
-`fall.slime`
-
-`fall.snow`
-
-`fall.stone`
-
-`fall.wood`
-
-# fire
+---
 
 `fire.fire`
 
 `fire.ignite`
 
-# firework
+#### hatch
 
-`firework.blast`
+---
 
-`firework.large_blast`
+`hatch.frog_spawn`
 
-`firework.launch`
+#### hit
 
-`firework.shoot`
+---
 
-`firework.twinkle`
+`hit.amethyst_block`
 
-# game
+`hit.amethyst_cluster`
 
-`game.player.attack.nodamage`
+`hit.ancient_debris`
 
-`game.player.attack.strong`
+`hit.anvil`
 
-`game.player.die`
+`hit.azalea`
 
-`game.player.hurt`
+`hit.azalea_leaves`
 
-# hit
+`hit.bamboo_wood`
+
+`hit.basalt`
+
+`hit.big_dripleaf`
+
+`hit.bone_block`
+
+`hit.calcite`
+
+`hit.candle`
+
+`hit.cave_vines`
+
+`hit.chain`
+
+`hit.cherry_leaves`
+
+`hit.cherry_wood`
+
+`hit.chiseled_bookshelf`
 
 `hit.cloth`
+
+`hit.copper`
+
+`hit.copper_bulb`
+
+`hit.coral`
+
+`hit.deepslate`
+
+`hit.deepslate_bricks`
+
+`hit.dirt_with_roots`
+
+`hit.dripstone_block`
 
 `hit.grass`
 
 `hit.gravel`
 
+`hit.hanging_roots`
+
+`hit.honey_block`
+
+`hit.iron`
+
 `hit.ladder`
 
+`hit.moss`
+
+`hit.nether_brick`
+
+`hit.nether_gold_ore`
+
+`hit.nether_sprouts`
+
+`hit.nether_wart`
+
+`hit.nether_wood`
+
+`hit.netherite`
+
+`hit.netherrack`
+
+`hit.nylium`
+
+`hit.pink_petals`
+
+`hit.pointed_dripstone`
+
+`hit.powder_snow`
+
+`hit.roots`
+
 `hit.sand`
+
+`hit.sculk`
+
+`hit.sculk_catalyst`
+
+`hit.sculk_sensor`
+
+`hit.sculk_shrieker`
+
+`hit.shroomlight`
 
 `hit.slime`
 
 `hit.snow`
 
+`hit.soul_sand`
+
+`hit.soul_soil`
+
+`hit.sponge`
+
+`hit.spore_blossom`
+
+`hit.stem`
+
 `hit.stone`
+
+`hit.suspicious_gravel`
+
+`hit.suspicious_sand`
+
+`hit.tuff`
+
+`hit.vines`
+
+`hit.wet_sponge`
 
 `hit.wood`
 
-# item
+#### insert
 
-`item.book.page_turn`
+---
+
+`insert.chiseled_bookshelf`
+
+#### insert_enchanted
+
+---
+
+`insert_enchanted.chiseled_bookshelf`
+
+#### item
+
+---
+
+`item.bone_meal.use`
 
 `item.book.put`
 
-`item.shield.block`
+#### jump
 
-`item.trident.hit`
+---
 
-`item.trident.hit_ground`
+`jump.ancient_debris`
 
-`item.trident.return`
+`jump.basalt`
 
-`item.trident.riptide_1`
+`jump.bone_block`
 
-`item.trident.riptide_2`
-
-`item.trident.riptide_3`
-
-`item.trident.throw`
-
-`item.trident.thunder`
-
-# jump
+`jump.chain`
 
 `jump.cloth`
+
+`jump.coral`
 
 `jump.grass`
 
 `jump.gravel`
 
+`jump.honey_block`
+
+`jump.nether_brick`
+
+`jump.nether_gold_ore`
+
+`jump.nether_sprouts`
+
+`jump.nether_wart`
+
+`jump.netherite`
+
+`jump.netherrack`
+
+`jump.nylium`
+
+`jump.roots`
+
 `jump.sand`
+
+`jump.shroomlight`
 
 `jump.slime`
 
 `jump.snow`
 
+`jump.soul_sand`
+
+`jump.soul_soil`
+
+`jump.stem`
+
 `jump.stone`
+
+`jump.vines`
 
 `jump.wood`
 
-# land
+#### land
+
+---
+
+`land.ancient_debris`
+
+`land.basalt`
+
+`land.bone_block`
+
+`land.chain`
 
 `land.cloth`
+
+`land.coral`
 
 `land.grass`
 
 `land.gravel`
 
+`land.honey_block`
+
+`land.nether_brick`
+
+`land.nether_gold_ore`
+
+`land.nether_sprouts`
+
+`land.nether_wart`
+
+`land.netherite`
+
+`land.netherrack`
+
+`land.nylium`
+
+`land.roots`
+
 `land.sand`
+
+`land.shroomlight`
 
 `land.slime`
 
 `land.snow`
 
+`land.soul_sand`
+
+`land.soul_soil`
+
+`land.stem`
+
 `land.stone`
+
+`land.vines`
 
 `land.wood`
 
-# leashknot
+#### liquid
 
-`leashknot.break`
-
-`leashknot.place`
-
-# liquid
+---
 
 `liquid.lava`
 
@@ -491,39 +989,509 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `liquid.water`
 
-# minecart
+#### lodestone_compass
 
-`minecart.base`
+---
 
-`minecart.inside`
+`lodestone_compass.link_compass_to_lodestone`
 
-# mob
+#### ominous_bottle
 
-## agent
+---
 
-`mob.agent.spawn`
+`ominous_bottle.end_use`
 
-## armor_stand
+#### ominous_item_spawner
 
-`mob.armor_stand.break`
+---
 
-`mob.armor_stand.hit`
+`ominous_item_spawner.about_to_spawn_item`
 
-`mob.armor_stand.land`
+`ominous_item_spawner.spawn_item`
 
-`mob.armor_stand.place`
+`ominous_item_spawner.spawn_item_begin`
 
-## bat
+#### open
 
-`mob.bat.death`
+---
 
-`mob.bat.hurt`
+`open.bamboo_wood_door`
 
-`mob.bat.idle`
+`open.bamboo_wood_fence_gate`
 
-`mob.bat.takeoff`
+`open.bamboo_wood_trapdoor`
 
-## blaze
+`open.cherry_wood_door`
+
+`open.cherry_wood_fence_gate`
+
+`open.cherry_wood_trapdoor`
+
+`open.fence_gate`
+
+`open.iron_door`
+
+`open.iron_trapdoor`
+
+`open.nether_wood_door`
+
+`open.nether_wood_fence_gate`
+
+`open.nether_wood_trapdoor`
+
+`open.wooden_door`
+
+`open.wooden_trapdoor`
+
+#### open_door
+
+---
+
+`open_door.copper`
+
+#### open_trapdoor
+
+---
+
+`open_trapdoor.copper`
+
+#### pick_berries
+
+---
+
+`pick_berries.cave_vines`
+
+#### pickup
+
+---
+
+`pickup.chiseled_bookshelf`
+
+#### pickup_enchanted
+
+---
+
+`pickup_enchanted.chiseled_bookshelf`
+
+#### place
+
+---
+
+`place.amethyst_block`
+
+`place.amethyst_cluster`
+
+`place.azalea`
+
+`place.azalea_leaves`
+
+`place.bamboo_wood`
+
+`place.big_dripleaf`
+
+`place.calcite`
+
+`place.cherry_leaves`
+
+`place.cherry_wood`
+
+`place.chiseled_bookshelf`
+
+`place.copper`
+
+`place.copper_bulb`
+
+`place.deepslate`
+
+`place.deepslate_bricks`
+
+`place.dirt_with_roots`
+
+`place.dripstone_block`
+
+`place.hanging_roots`
+
+`place.iron`
+
+`place.large_amethyst_bud`
+
+`place.medium_amethyst_bud`
+
+`place.moss`
+
+`place.nether_wood`
+
+`place.pink_petals`
+
+`place.pointed_dripstone`
+
+`place.powder_snow`
+
+`place.sculk`
+
+`place.sculk_catalyst`
+
+`place.sculk_sensor`
+
+`place.sculk_shrieker`
+
+`place.small_amethyst_bud`
+
+`place.sponge`
+
+`place.spore_blossom`
+
+`place.suspicious_gravel`
+
+`place.suspicious_sand`
+
+`place.tuff`
+
+`place.tuff_bricks`
+
+`place.wet_sponge`
+
+#### portal
+
+---
+
+`portal.portal`
+
+#### power
+
+---
+
+`power.off.sculk_sensor`
+
+`power.on.sculk_sensor`
+
+#### pumpkin
+
+---
+
+`pumpkin.carve`
+
+#### random
+
+---
+
+`random.anvil_break`
+
+`random.anvil_land`
+
+`random.anvil_use`
+
+`random.chestclosed`
+
+`random.chestopen`
+
+`random.door_close`
+
+`random.door_open`
+
+`random.enderchestclosed`
+
+`random.enderchestopen`
+
+`random.explode`
+
+`random.fizz`
+
+`random.fuse`
+
+`random.glass`
+
+`random.lever_click`
+
+`random.potion.brewed`
+
+`random.shulkerboxclosed`
+
+`random.shulkerboxopen`
+
+`random.stone_click`
+
+`random.wood_click`
+
+#### resonate
+
+---
+
+`resonate.amethyst_block`
+
+#### respawn_anchor
+
+---
+
+`respawn_anchor.ambient`
+
+`respawn_anchor.charge`
+
+`respawn_anchor.deplete`
+
+`respawn_anchor.set_spawn`
+
+#### shatter
+
+---
+
+`shatter.decorated_pot`
+
+#### shriek
+
+---
+
+`shriek.sculk_shrieker`
+
+#### smithing_table
+
+---
+
+`smithing_table.use`
+
+#### sponge
+
+---
+
+`sponge.absorb`
+
+#### step
+
+---
+
+`step.candle`
+
+`step.cherry_leaves`
+
+`step.copper_bulb`
+
+`step.copper_grate`
+
+`step.decorated_pot`
+
+`step.frog_spawn`
+
+`step.froglight`
+
+`step.sculk_shrieker`
+
+`step.sculk_vein`
+
+`step.tuff_bricks`
+
+`step.web`
+
+#### tile
+
+---
+
+`tile.piston.in`
+
+`tile.piston.out`
+
+#### tilt_down
+
+---
+
+`tilt_down.big_dripleaf`
+
+#### tilt_up
+
+---
+
+`tilt_up.big_dripleaf`
+
+#### trial_spawner
+
+---
+
+`trial_spawner.ambient`
+
+`trial_spawner.ambient_ominous`
+
+`trial_spawner.break`
+
+`trial_spawner.charge_activate`
+
+`trial_spawner.close_shutter`
+
+`trial_spawner.detect_player`
+
+`trial_spawner.eject_item`
+
+`trial_spawner.hit`
+
+`trial_spawner.open_shutter`
+
+`trial_spawner.place`
+
+`trial_spawner.spawn_mob`
+
+`trial_spawner.step`
+
+#### ui
+
+---
+
+`ui.cartography_table.take_result`
+
+`ui.loom.select_pattern`
+
+`ui.loom.take_result`
+
+`ui.stonecutter.take_result`
+
+#### use
+
+---
+
+`use.ancient_debris`
+
+`use.basalt`
+
+`use.bone_block`
+
+`use.candle`
+
+`use.cave_vines`
+
+`use.chain`
+
+`use.cloth`
+
+`use.copper`
+
+`use.coral`
+
+`use.deepslate`
+
+`use.deepslate_bricks`
+
+`use.dirt_with_roots`
+
+`use.dripstone_block`
+
+`use.grass`
+
+`use.gravel`
+
+`use.hanging_roots`
+
+`use.honey_block`
+
+`use.ladder`
+
+`use.moss`
+
+`use.nether_brick`
+
+`use.nether_gold_ore`
+
+`use.nether_sprouts`
+
+`use.nether_wart`
+
+`use.netherite`
+
+`use.netherrack`
+
+`use.nylium`
+
+`use.pointed_dripstone`
+
+`use.roots`
+
+`use.sand`
+
+`use.sculk_sensor`
+
+`use.shroomlight`
+
+`use.slime`
+
+`use.snow`
+
+`use.soul_sand`
+
+`use.soul_soil`
+
+`use.spore_blossom`
+
+`use.stem`
+
+`use.stone`
+
+`use.vines`
+
+`use.wood`
+
+#### vault
+
+---
+
+`vault.activate`
+
+`vault.ambient`
+
+`vault.break`
+
+`vault.close_shutter`
+
+`vault.deactivate`
+
+`vault.eject_item`
+
+`vault.hit`
+
+`vault.insert_item`
+
+`vault.insert_item_fail`
+
+`vault.open_shutter`
+
+`vault.place`
+
+`vault.reject_rewarded_player`
+
+`vault.step`
+
+## bottle
+
+#### bottle
+
+---
+
+`bottle.dragonbreath`
+
+`bottle.empty`
+
+`bottle.fill`
+
+## hostile
+
+#### breeze_wind_charge
+
+---
+
+`breeze_wind_charge.burst`
+
+#### entity
+
+---
+
+`entity.wither_skeleton.ambient`
+
+`entity.wither_skeleton.death`
+
+`entity.wither_skeleton.hurt`
+
+`entity.wither_skeleton.step`
+
+`entity.zombie.converted_to_drowned`
+
+#### mob
+
+---
 
 `mob.blaze.breathe`
 
@@ -533,9 +1501,753 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.blaze.shoot`
 
-## cat
+`mob.bogged.ambient`
+
+`mob.bogged.death`
+
+`mob.bogged.hurt`
+
+`mob.bogged.step`
+
+`mob.breeze.charge`
+
+`mob.breeze.death`
+
+`mob.breeze.deflect`
+
+`mob.breeze.hurt`
+
+`mob.breeze.idle_air`
+
+`mob.breeze.idle_ground`
+
+`mob.breeze.inhale`
+
+`mob.breeze.jump`
+
+`mob.breeze.land`
+
+`mob.breeze.shoot`
+
+`mob.breeze.slide`
+
+`mob.breeze.whirl`
+
+`mob.creaking.activate`
+
+`mob.creaking.ambient`
+
+`mob.creaking.attack`
+
+`mob.creaking.deactivate`
+
+`mob.creaking.death`
+
+`mob.creaking.freeze`
+
+`mob.creaking.spawn`
+
+`mob.creaking.step`
+
+`mob.creaking.sway`
+
+`mob.creaking.twitch`
+
+`mob.creaking.unfreeze`
+
+`mob.creeper.death`
+
+`mob.creeper.say`
+
+`mob.drowned.death`
+
+`mob.drowned.death_water`
+
+`mob.drowned.hurt`
+
+`mob.drowned.hurt_water`
+
+`mob.drowned.say`
+
+`mob.drowned.say_water`
+
+`mob.drowned.shoot`
+
+`mob.drowned.step`
+
+`mob.drowned.swim`
+
+`mob.elderguardian.curse`
+
+`mob.elderguardian.death`
+
+`mob.elderguardian.hit`
+
+`mob.elderguardian.idle`
+
+`mob.enderdragon.death`
+
+`mob.enderdragon.flap`
+
+`mob.enderdragon.growl`
+
+`mob.enderdragon.hit`
+
+`mob.endermen.death`
+
+`mob.endermen.hit`
+
+`mob.endermen.idle`
+
+`mob.endermen.portal`
+
+`mob.endermen.scream`
+
+`mob.endermen.stare`
+
+`mob.endermite.hit`
+
+`mob.endermite.kill`
+
+`mob.endermite.say`
+
+`mob.endermite.step`
+
+`mob.evocation_fangs.attack`
+
+`mob.evocation_illager.ambient`
+
+`mob.evocation_illager.cast_spell`
+
+`mob.evocation_illager.celebrate`
+
+`mob.evocation_illager.death`
+
+`mob.evocation_illager.hurt`
+
+`mob.evocation_illager.prepare_attack`
+
+`mob.evocation_illager.prepare_summon`
+
+`mob.evocation_illager.prepare_wololo`
+
+`mob.fox.aggro`
+
+`mob.fox.bite`
+
+`mob.frog.lay_spawn`
+
+`mob.frog.tongue`
+
+`mob.ghast.affectionate_scream`
+
+`mob.ghast.charge`
+
+`mob.ghast.death`
+
+`mob.ghast.fireball`
+
+`mob.ghast.moan`
+
+`mob.ghast.scream`
+
+`mob.goat.horn_break`
+
+`mob.goat.prepare_ram`
+
+`mob.goat.prepare_ram.screamer`
+
+`mob.goat.ram_impact`
+
+`mob.goat.ram_impact.screamer`
+
+`mob.guardian.ambient`
+
+`mob.guardian.attack_loop`
+
+`mob.guardian.death`
+
+`mob.guardian.flop`
+
+`mob.guardian.hit`
+
+`mob.guardian.land_death`
+
+`mob.guardian.land_hit`
+
+`mob.guardian.land_idle`
+
+`mob.hoglin.ambient`
+
+`mob.hoglin.angry`
+
+`mob.hoglin.attack`
+
+`mob.hoglin.converted_to_zombified`
+
+`mob.hoglin.death`
+
+`mob.hoglin.howl`
+
+`mob.hoglin.hurt`
+
+`mob.hoglin.retreat`
+
+`mob.hoglin.step`
+
+`mob.husk.ambient`
+
+`mob.husk.convert_to_zombie`
+
+`mob.husk.death`
+
+`mob.husk.hurt`
+
+`mob.husk.step`
+
+`mob.irongolem.death`
+
+`mob.irongolem.hit`
+
+`mob.irongolem.throw`
+
+`mob.irongolem.walk`
+
+`mob.magmacube.big`
+
+`mob.magmacube.jump`
+
+`mob.magmacube.small`
+
+`mob.panda.bite`
+
+`mob.panda.death`
+
+`mob.panda.hurt`
+
+`mob.parrot.imitate_creaking`
+
+`mob.phantom.bite`
+
+`mob.phantom.death`
+
+`mob.phantom.flap`
+
+`mob.phantom.hurt`
+
+`mob.phantom.idle`
+
+`mob.phantom.swoop`
+
+`mob.piglin.admiring_item`
+
+`mob.piglin.ambient`
+
+`mob.piglin.angry`
+
+`mob.piglin.celebrate`
+
+`mob.piglin.converted_to_zombified`
+
+`mob.piglin.death`
+
+`mob.piglin.hurt`
+
+`mob.piglin.jealous`
+
+`mob.piglin.retreat`
+
+`mob.piglin.step`
+
+`mob.piglin_brute.ambient`
+
+`mob.piglin_brute.angry`
+
+`mob.piglin_brute.converted_to_zombified`
+
+`mob.piglin_brute.death`
+
+`mob.piglin_brute.hurt`
+
+`mob.piglin_brute.step`
+
+`mob.pillager.celebrate`
+
+`mob.pillager.death`
+
+`mob.pillager.hurt`
+
+`mob.pillager.idle`
+
+`mob.polarbear.death`
+
+`mob.polarbear.hurt`
+
+`mob.polarbear.warning`
+
+`mob.ravager.ambient`
+
+`mob.ravager.bite`
+
+`mob.ravager.celebrate`
+
+`mob.ravager.death`
+
+`mob.ravager.hurt`
+
+`mob.ravager.roar`
+
+`mob.ravager.step`
+
+`mob.ravager.stun`
+
+`mob.shulker.ambient`
+
+`mob.shulker.bullet.hit`
+
+`mob.shulker.close`
+
+`mob.shulker.close.hurt`
+
+`mob.shulker.death`
+
+`mob.shulker.hurt`
+
+`mob.shulker.open`
+
+`mob.shulker.shoot`
+
+`mob.shulker.teleport`
+
+`mob.silverfish.hit`
+
+`mob.silverfish.kill`
+
+`mob.silverfish.say`
+
+`mob.silverfish.step`
+
+`mob.skeleton.death`
+
+`mob.skeleton.hurt`
+
+`mob.skeleton.say`
+
+`mob.skeleton.step`
+
+`mob.slime.attack`
+
+`mob.slime.big`
+
+`mob.slime.death`
+
+`mob.slime.hurt`
+
+`mob.slime.jump`
+
+`mob.slime.small`
+
+`mob.slime.squish`
+
+`mob.spider.death`
+
+`mob.spider.say`
+
+`mob.spider.step`
+
+`mob.stray.ambient`
+
+`mob.stray.death`
+
+`mob.stray.hurt`
+
+`mob.stray.step`
+
+`mob.vex.ambient`
+
+`mob.vex.charge`
+
+`mob.vex.death`
+
+`mob.vex.hurt`
+
+`mob.vindicator.celebrate`
+
+`mob.vindicator.death`
+
+`mob.vindicator.hurt`
+
+`mob.vindicator.idle`
+
+`mob.warden.agitated`
+
+`mob.warden.angry`
+
+`mob.warden.attack`
+
+`mob.warden.clicking`
+
+`mob.warden.death`
+
+`mob.warden.dig`
+
+`mob.warden.emerge`
+
+`mob.warden.heartbeat`
+
+`mob.warden.hurt`
+
+`mob.warden.idle`
+
+`mob.warden.listening`
+
+`mob.warden.listening_angry`
+
+`mob.warden.nearby_close`
+
+`mob.warden.nearby_closer`
+
+`mob.warden.nearby_closest`
+
+`mob.warden.roar`
+
+`mob.warden.sniff`
+
+`mob.warden.sonic_boom`
+
+`mob.warden.sonic_charge`
+
+`mob.warden.step`
+
+`mob.witch.ambient`
+
+`mob.witch.celebrate`
+
+`mob.witch.death`
+
+`mob.witch.drink`
+
+`mob.witch.hurt`
+
+`mob.witch.throw`
+
+`mob.wither.ambient`
+
+`mob.wither.break_block`
+
+`mob.wither.death`
+
+`mob.wither.hurt`
+
+`mob.wither.shoot`
+
+`mob.wither.spawn`
+
+`mob.zoglin.angry`
+
+`mob.zoglin.attack`
+
+`mob.zoglin.death`
+
+`mob.zoglin.hurt`
+
+`mob.zoglin.idle`
+
+`mob.zoglin.step`
+
+`mob.zombie.death`
+
+`mob.zombie.hurt`
+
+`mob.zombie.remedy`
+
+`mob.zombie.say`
+
+`mob.zombie.step`
+
+`mob.zombie.unfect`
+
+`mob.zombie.wood`
+
+`mob.zombie.woodbreak`
+
+`mob.zombie_villager.death`
+
+`mob.zombie_villager.hurt`
+
+`mob.zombie_villager.say`
+
+`mob.zombiepig.zpig`
+
+`mob.zombiepig.zpigangry`
+
+`mob.zombiepig.zpigdeath`
+
+`mob.zombiepig.zpighurt`
+
+#### raid
+
+---
+
+`raid.horn`
+
+## music
+
+#### music
+
+---
+
+`music.game`
+
+`music.game.basalt_deltas`
+
+`music.game.creative`
+
+`music.game.credits`
+
+`music.game.crimson_forest`
+
+`music.game.deep_dark`
+
+`music.game.dripstone_caves`
+
+`music.game.end`
+
+`music.game.endboss`
+
+`music.game.frozen_peaks`
+
+`music.game.grove`
+
+`music.game.jagged_peaks`
+
+`music.game.lush_caves`
+
+`music.game.meadow`
+
+`music.game.nether`
+
+`music.game.nether_wastes`
+
+`music.game.snowy_slopes`
+
+`music.game.soul_sand_valley`
+
+`music.game.soulsand_valley`
+
+`music.game.stony_peaks`
+
+`music.game.swamp_music`
+
+`music.game.warped_forest`
+
+`music.game.water`
+
+`music.game_and_wild_equal_chance`
+
+`music.game_and_wild_favor_game`
+
+`music.menu`
+
+`music.overworld.bamboo_jungle`
+
+`music.overworld.cherry_grove`
+
+`music.overworld.deep_dark`
+
+`music.overworld.desert`
+
+`music.overworld.dripstone_caves`
+
+`music.overworld.flower_forest`
+
+`music.overworld.grove`
+
+`music.overworld.jagged_peaks`
+
+`music.overworld.jungle`
+
+`music.overworld.jungle_edge`
+
+`music.overworld.lush_caves`
+
+`music.overworld.mesa`
+
+`music.overworld.snowy_slopes`
+
+`music.overworld.stony_peaks`
+
+## neutral
+
+#### armor
+
+---
+
+`armor.break_wolf`
+
+`armor.crack_wolf`
+
+`armor.damage_wolf`
+
+`armor.equip_wolf`
+
+`armor.repair_wolf`
+
+`armor.unequip_wolf`
+
+#### charge
+
+---
+
+`charge.sculk`
+
+#### component
+
+---
+
+`component.jump_to_block`
+
+#### copper
+
+---
+
+`copper.wax.off`
+
+`copper.wax.on`
+
+#### fall
+
+---
+
+`fall.sculk_shrieker`
+
+#### leashknot
+
+---
+
+`leashknot.break`
+
+`leashknot.place`
+
+#### minecart
+
+---
+
+`minecart.base`
+
+`minecart.inside`
+
+#### mob
+
+---
+
+`mob.agent.spawn`
+
+`mob.allay.death`
+
+`mob.allay.hurt`
+
+`mob.allay.idle`
+
+`mob.allay.idle_holding`
+
+`mob.allay.item_given`
+
+`mob.allay.item_taken`
+
+`mob.allay.item_thrown`
+
+`mob.armadillo.ambient`
+
+`mob.armadillo.brush`
+
+`mob.armadillo.death`
+
+`mob.armadillo.eat`
+
+`mob.armadillo.hurt`
+
+`mob.armadillo.hurt_reduced`
+
+`mob.armadillo.land`
+
+`mob.armadillo.peek`
+
+`mob.armadillo.roll`
+
+`mob.armadillo.scute_drop`
+
+`mob.armadillo.step`
+
+`mob.armadillo.unroll_finish`
+
+`mob.armadillo.unroll_start`
+
+`mob.armor_stand.break`
+
+`mob.armor_stand.hit`
+
+`mob.armor_stand.land`
+
+`mob.armor_stand.place`
+
+`mob.axolotl.attack`
+
+`mob.axolotl.death`
+
+`mob.axolotl.hurt`
+
+`mob.axolotl.idle`
+
+`mob.axolotl.idle_water`
+
+`mob.axolotl.splash`
+
+`mob.axolotl.swim`
+
+`mob.bat.death`
+
+`mob.bat.hurt`
+
+`mob.bat.idle`
+
+`mob.bat.takeoff`
+
+`mob.bee.aggressive`
+
+`mob.bee.death`
+
+`mob.bee.hurt`
+
+`mob.bee.loop`
+
+`mob.bee.pollinate`
+
+`mob.bee.sting`
+
+`mob.camel.ambient`
+
+`mob.camel.dash`
+
+`mob.camel.dash_ready`
+
+`mob.camel.death`
+
+`mob.camel.eat`
+
+`mob.camel.hurt`
+
+`mob.camel.sit`
+
+`mob.camel.stand`
+
+`mob.camel.step`
+
+`mob.camel.step_sand`
 
 `mob.cat.beg`
+
+`mob.cat.beg_for_food`
 
 `mob.cat.eat`
 
@@ -551,8 +2263,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.cat.straymeow`
 
-## chicken
-
 `mob.chicken.hurt`
 
 `mob.chicken.plop`
@@ -561,8 +2271,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.chicken.step`
 
-## cow
-
 `mob.cow.hurt`
 
 `mob.cow.milk`
@@ -570,14 +2278,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 `mob.cow.say`
 
 `mob.cow.step`
-
-## creeper
-
-`mob.creeper.death`
-
-`mob.creeper.say`
-
-## dolphin
 
 `mob.dolphin.attack`
 
@@ -601,107 +2301,13 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.dolphin.swim`
 
-## drowned
-
-`mob.drowned.death`
-
-`mob.drowned.death_water`
-
-`mob.drowned.hurt`
-
-`mob.drowned.hurt_water`
-
-`mob.drowned.say`
-
-`mob.drowned.say_water`
-
-`mob.drowned.shoot`
-
-`mob.drowned.step`
-
-`mob.drowned.swim`
-
-## elderguardian
-
-`mob.elderguardian.curse`
-
-`mob.elderguardian.death`
-
-`mob.elderguardian.hit`
-
-`mob.elderguardian.idle`
-
-## enderdragon
-
-`mob.enderdragon.death`
-
-`mob.enderdragon.flap`
-
-`mob.enderdragon.growl`
-
-`mob.enderdragon.hit`
-
-## endermen
-
-`mob.endermen.death`
-
-`mob.endermen.hit`
-
-`mob.endermen.idle`
-
-`mob.endermen.portal`
-
-`mob.endermen.scream`
-
-`mob.endermen.stare`
-
-## endermite
-
-`mob.endermite.hit`
-
-`mob.endermite.kill`
-
-`mob.endermite.say`
-
-`mob.endermite.step`
-
-## evocation_fangs
-
-`mob.evocation_fangs.attack`
-
-## evocation_illager
-
-`mob.evocation_illager.ambient`
-
-`mob.evocation_illager.cast_spell`
-
-`mob.evocation_illager.celebrate`
-
-`mob.evocation_illager.death`
-
-`mob.evocation_illager.hurt`
-
-`mob.evocation_illager.prepare_attack`
-
-`mob.evocation_illager.prepare_summon`
-
-`mob.evocation_illager.prepare_wololo`
-
-## fish
-
 `mob.fish.flop`
 
 `mob.fish.hurt`
 
 `mob.fish.step`
 
-## fox
-
-`mob.fox.aggro`
-
 `mob.fox.ambient`
-
-`mob.fox.bite`
 
 `mob.fox.death`
 
@@ -717,39 +2323,43 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.fox.spit`
 
-## ghast
+`mob.frog.ambient`
 
-`mob.ghast.affectionate_scream`
+`mob.frog.death`
 
-`mob.ghast.charge`
+`mob.frog.eat`
 
-`mob.ghast.death`
+`mob.frog.hurt`
 
-`mob.ghast.fireball`
+`mob.frog.jump_to_block`
 
-`mob.ghast.moan`
+`mob.frog.step`
 
-`mob.ghast.scream`
+`mob.glow_squid.ambient`
 
-## guardian
+`mob.glow_squid.death`
 
-`mob.guardian.ambient`
+`mob.glow_squid.hurt`
 
-`mob.guardian.attack_loop`
+`mob.glow_squid.ink_squirt`
 
-`mob.guardian.death`
+`mob.goat.ambient`
 
-`mob.guardian.flop`
+`mob.goat.ambient.screamer`
 
-`mob.guardian.hit`
+`mob.goat.death`
 
-`mob.guardian.land_death`
+`mob.goat.death.screamer`
 
-`mob.guardian.land_hit`
+`mob.goat.eat`
 
-`mob.guardian.land_idle`
+`mob.goat.hurt`
 
-## horse
+`mob.goat.hurt.screamer`
+
+`mob.goat.milk.screamer`
+
+`mob.goat.step`
 
 `mob.horse.angry`
 
@@ -797,27 +2407,9 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.horse.zombie.idle`
 
-## husk
+`mob.irongolem.crack`
 
-`mob.husk.ambient`
-
-`mob.husk.death`
-
-`mob.husk.hurt`
-
-`mob.husk.step`
-
-## irongolem
-
-`mob.irongolem.death`
-
-`mob.irongolem.hit`
-
-`mob.irongolem.throw`
-
-`mob.irongolem.walk`
-
-## llama
+`mob.irongolem.repair`
 
 `mob.llama.angry`
 
@@ -835,39 +2427,19 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.llama.swag`
 
-## magmacube
-
-`mob.magmacube.big`
-
-`mob.magmacube.jump`
-
-`mob.magmacube.small`
-
-## mooshroom
-
 `mob.mooshroom.convert`
 
 `mob.mooshroom.eat`
 
 `mob.mooshroom.suspicious_milk`
 
-## ocelot
-
 `mob.ocelot.death`
 
 `mob.ocelot.idle`
 
-## panda
-
-`mob.panda.bite`
-
 `mob.panda.cant_breed`
 
-`mob.panda.death`
-
 `mob.panda.eat`
-
-`mob.panda.hurt`
 
 `mob.panda.idle`
 
@@ -881,11 +2453,7 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.panda.step`
 
-## panda_baby
-
 `mob.panda_baby.idle`
-
-## parrot
 
 `mob.parrot.death`
 
@@ -899,20 +2467,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.parrot.step`
 
-## phantom
-
-`mob.phantom.bite`
-
-`mob.phantom.death`
-
-`mob.phantom.hurt`
-
-`mob.phantom.idle`
-
-`mob.phantom.swoop`
-
-## pig
-
 `mob.pig.boost`
 
 `mob.pig.death`
@@ -921,33 +2475,11 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.pig.step`
 
-## pillager
-
-`mob.pillager.celebrate`
-
-`mob.pillager.death`
-
-`mob.pillager.hurt`
-
-`mob.pillager.idle`
-
-## polarbear
-
-`mob.polarbear.death`
-
-`mob.polarbear.hurt`
-
 `mob.polarbear.idle`
 
 `mob.polarbear.step`
 
-`mob.polarbear.warning`
-
-## polarbear_baby
-
 `mob.polarbear_baby.idle`
-
-## rabbit
 
 `mob.rabbit.death`
 
@@ -957,89 +2489,37 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.rabbit.idle`
 
-## ravager
-
-`mob.ravager.ambient`
-
-`mob.ravager.bite`
-
-`mob.ravager.celebrate`
-
-`mob.ravager.death`
-
-`mob.ravager.hurt`
-
-`mob.ravager.roar`
-
-`mob.ravager.step`
-
-`mob.ravager.stun`
-
-## sheep
-
 `mob.sheep.say`
-
-`mob.sheep.shear`
 
 `mob.sheep.step`
 
-## shulker
+`mob.skeleton.convert_to_stray`
 
-`mob.shulker.ambient`
+`mob.sniffer.death`
 
-`mob.shulker.bullet.hit`
+`mob.sniffer.digging`
 
-`mob.shulker.close`
+`mob.sniffer.drop_seed`
 
-`mob.shulker.close.hurt`
+`mob.sniffer.eat`
 
-`mob.shulker.death`
+`mob.sniffer.happy`
 
-`mob.shulker.hurt`
+`mob.sniffer.hurt`
 
-`mob.shulker.open`
+`mob.sniffer.idle`
 
-`mob.shulker.shoot`
+`mob.sniffer.long_sniff`
 
-`mob.shulker.teleport`
+`mob.sniffer.plop`
 
-## silverfish
+`mob.sniffer.searching`
 
-`mob.silverfish.hit`
+`mob.sniffer.sniffsniff`
 
-`mob.silverfish.kill`
+`mob.sniffer.stand_up`
 
-`mob.silverfish.say`
-
-`mob.silverfish.step`
-
-## skeleton
-
-`mob.skeleton.death`
-
-`mob.skeleton.hurt`
-
-`mob.skeleton.say`
-
-`mob.skeleton.step`
-
-## slime
-
-`mob.slime.attack`
-
-`mob.slime.big`
-
-`mob.slime.death`
-
-`mob.slime.hurt`
-
-`mob.slime.jump`
-
-`mob.slime.small`
-
-`mob.slime.squish`
-
-## snowgolem
+`mob.sniffer.step`
 
 `mob.snowgolem.death`
 
@@ -1047,33 +2527,35 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.snowgolem.shoot`
 
-## spider
-
-`mob.spider.death`
-
-`mob.spider.say`
-
-`mob.spider.step`
-
-## squid
-
 `mob.squid.ambient`
 
 `mob.squid.death`
 
 `mob.squid.hurt`
 
-## stray
+`mob.squid.ink_squirt`
 
-`mob.stray.ambient`
+`mob.strider.death`
 
-`mob.stray.death`
+`mob.strider.eat`
 
-`mob.stray.hurt`
+`mob.strider.hurt`
 
-`mob.stray.step`
+`mob.strider.idle`
 
-## turtle
+`mob.strider.panic`
+
+`mob.strider.step`
+
+`mob.strider.step_lava`
+
+`mob.strider.tempt`
+
+`mob.tadpole.convert_to_frog`
+
+`mob.tadpole.death`
+
+`mob.tadpole.hurt`
 
 `mob.turtle.ambient`
 
@@ -1085,8 +2567,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.turtle.swim`
 
-## turtle_baby
-
 `mob.turtle_baby.born`
 
 `mob.turtle_baby.death`
@@ -1094,18 +2574,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 `mob.turtle_baby.hurt`
 
 `mob.turtle_baby.step`
-
-## vex
-
-`mob.vex.ambient`
-
-`mob.vex.charge`
-
-`mob.vex.death`
-
-`mob.vex.hurt`
-
-## villager
 
 `mob.villager.death`
 
@@ -1118,18 +2586,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 `mob.villager.no`
 
 `mob.villager.yes`
-
-## vindicator
-
-`mob.vindicator.celebrate`
-
-`mob.vindicator.death`
-
-`mob.vindicator.hurt`
-
-`mob.vindicator.idle`
-
-## wanderingtrader
 
 `mob.wanderingtrader.death`
 
@@ -1151,36 +2607,6 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.wanderingtrader.yes`
 
-## witch
-
-`mob.witch.ambient`
-
-`mob.witch.celebrate`
-
-`mob.witch.death`
-
-`mob.witch.drink`
-
-`mob.witch.hurt`
-
-`mob.witch.throw`
-
-## wither
-
-`mob.wither.ambient`
-
-`mob.wither.break_block`
-
-`mob.wither.death`
-
-`mob.wither.hurt`
-
-`mob.wither.shoot`
-
-`mob.wither.spawn`
-
-## wolf
-
 `mob.wolf.bark`
 
 `mob.wolf.death`
@@ -1197,59 +2623,591 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `mob.wolf.whine`
 
-## zombie
+`scrape`
 
-`mob.zombie.death`
+#### spread
 
-`mob.zombie.hurt`
+---
 
-`mob.zombie.remedy`
+`spread.sculk`
 
-`mob.zombie.say`
+#### step
 
-`mob.zombie.step`
+---
 
-`mob.zombie.unfect`
+`step.sculk`
 
-`mob.zombie.wood`
+`step.sculk_catalyst`
 
-`mob.zombie.woodbreak`
+## player
 
-## zombie_villager
+#### ambient
 
-`mob.zombie_villager.death`
+---
 
-`mob.zombie_villager.hurt`
+`ambient.underwater.enter`
 
-`mob.zombie_villager.say`
+`ambient.underwater.exit`
 
-## zombiepig
+#### apply_effect
 
-`mob.zombiepig.zpig`
+---
 
-`mob.zombiepig.zpigangry`
+`apply_effect.bad_omen`
 
-`mob.zombiepig.zpigdeath`
+`apply_effect.raid_omen`
 
-`mob.zombiepig.zpighurt`
+`apply_effect.trial_omen`
 
-# music
+#### armor
 
-`music.game`
+---
 
-`music.game.creative`
+`armor.equip_chain`
 
-`music.game.credits`
+`armor.equip_diamond`
 
-`music.game.end`
+`armor.equip_generic`
 
-`music.game.endboss`
+`armor.equip_gold`
 
-`music.game.nether`
+`armor.equip_iron`
 
-`music.menu`
+`armor.equip_leather`
 
-# note
+`armor.equip_netherite`
+
+#### block
+
+---
+
+`block.creaking_heart.fall`
+
+`block.creaking_heart.step`
+
+`block.resin.fall`
+
+`block.resin.step`
+
+`block.resin_brick.fall`
+
+`block.resin_brick.step`
+
+`block.weeping_vines.fall`
+
+`block.weeping_vines.jump`
+
+`block.weeping_vines.land`
+
+`block.weeping_vines.step`
+
+#### brush
+
+---
+
+`brush.generic`
+
+`brush.suspicious_gravel`
+
+`brush.suspicious_sand`
+
+#### brush_completed
+
+---
+
+`brush_completed.suspicious_gravel`
+
+`brush_completed.suspicious_sand`
+
+#### bucket
+
+---
+
+`bucket.fill_powder_snow`
+
+#### bundle
+
+---
+
+`bundle.drop_contents`
+
+`bundle.insert`
+
+`bundle.insert_fail`
+
+`bundle.remove_one`
+
+#### camera
+
+---
+
+`camera.take_picture`
+
+#### crossbow
+
+---
+
+`crossbow.loading.end`
+
+`crossbow.loading.middle`
+
+`crossbow.loading.start`
+
+`crossbow.quick_charge.end`
+
+`crossbow.quick_charge.middle`
+
+`crossbow.quick_charge.start`
+
+`crossbow.shoot`
+
+#### damage
+
+---
+
+`damage.fallbig`
+
+`damage.fallsmall`
+
+`damage.thorns`
+
+#### elytra
+
+---
+
+`elytra.loop`
+
+#### fall
+
+---
+
+`fall.amethyst_block`
+
+`fall.amethyst_cluster`
+
+`fall.ancient_debris`
+
+`fall.azalea`
+
+`fall.azalea_leaves`
+
+`fall.bamboo_wood`
+
+`fall.basalt`
+
+`fall.big_dripleaf`
+
+`fall.bone_block`
+
+`fall.calcite`
+
+`fall.cave_vines`
+
+`fall.chain`
+
+`fall.cherry_leaves`
+
+`fall.cherry_wood`
+
+`fall.cloth`
+
+`fall.copper`
+
+`fall.coral`
+
+`fall.deepslate`
+
+`fall.deepslate_bricks`
+
+`fall.dirt_with_roots`
+
+`fall.dripstone_block`
+
+`fall.egg`
+
+`fall.grass`
+
+`fall.gravel`
+
+`fall.hanging_roots`
+
+`fall.honey_block`
+
+`fall.ladder`
+
+`fall.moss`
+
+`fall.nether_brick`
+
+`fall.nether_gold_ore`
+
+`fall.nether_sprouts`
+
+`fall.nether_wart`
+
+`fall.nether_wood`
+
+`fall.netherite`
+
+`fall.netherrack`
+
+`fall.nylium`
+
+`fall.pink_petals`
+
+`fall.pointed_dripstone`
+
+`fall.powder_snow`
+
+`fall.roots`
+
+`fall.sand`
+
+`fall.sculk_sensor`
+
+`fall.shroomlight`
+
+`fall.slime`
+
+`fall.snow`
+
+`fall.soul_sand`
+
+`fall.soul_soil`
+
+`fall.spore_blossom`
+
+`fall.stem`
+
+`fall.stone`
+
+`fall.tuff`
+
+`fall.vines`
+
+`fall.wood`
+
+#### game
+
+---
+
+`game.player.attack.nodamage`
+
+`game.player.attack.strong`
+
+`game.player.die`
+
+`game.player.hurt`
+
+#### item
+
+---
+
+`item.shield.block`
+
+`item.spyglass.stop_using`
+
+`item.spyglass.use`
+
+`item.trident.hit`
+
+`item.trident.hit_ground`
+
+`item.trident.return`
+
+`item.trident.riptide_1`
+
+`item.trident.riptide_2`
+
+`item.trident.riptide_3`
+
+`item.trident.throw`
+
+`item.trident.thunder`
+
+#### jump
+
+---
+
+`jump.azalea`
+
+`jump.big_dripleaf`
+
+`jump.cave_vines`
+
+`jump.deepslate`
+
+`jump.deepslate_bricks`
+
+`jump.dirt_with_roots`
+
+`jump.dripstone_block`
+
+`jump.hanging_roots`
+
+`jump.moss`
+
+`jump.pointed_dripstone`
+
+`jump.sculk_sensor`
+
+`jump.spore_blossom`
+
+#### land
+
+---
+
+`land.azalea`
+
+`land.big_dripleaf`
+
+`land.cave_vines`
+
+`land.deepslate`
+
+`land.deepslate_bricks`
+
+`land.dirt_with_roots`
+
+`land.dripstone_block`
+
+`land.hanging_roots`
+
+`land.moss`
+
+`land.pointed_dripstone`
+
+`land.sculk_sensor`
+
+`land.spore_blossom`
+
+#### mace
+
+---
+
+`mace.heavy_smash_ground`
+
+`mace.smash_air`
+
+`mace.smash_ground`
+
+#### mob
+
+---
+
+`mob.player.hurt_drown`
+
+`mob.player.hurt_freeze`
+
+`mob.player.hurt_on_fire`
+
+`mob.sheep.shear`
+
+#### particle
+
+---
+
+`particle.soul_escape`
+
+#### random
+
+---
+
+`random.bow`
+
+`random.bowhit`
+
+`random.break`
+
+`random.burp`
+
+`random.drink`
+
+`random.drink_honey`
+
+`random.eat`
+
+`random.hurt`
+
+`random.levelup`
+
+`random.orb`
+
+`random.pop`
+
+`random.pop2`
+
+`random.splash`
+
+`random.swim`
+
+`random.totem`
+
+#### step
+
+---
+
+`step.amethyst_block`
+
+`step.amethyst_cluster`
+
+`step.ancient_debris`
+
+`step.azalea`
+
+`step.azalea_leaves`
+
+`step.bamboo_wood`
+
+`step.bamboo_wood_hanging_sign`
+
+`step.basalt`
+
+`step.big_dripleaf`
+
+`step.bone_block`
+
+`step.calcite`
+
+`step.cave_vines`
+
+`step.chain`
+
+`step.cherry_wood`
+
+`step.cherry_wood_hanging_sign`
+
+`step.chiseled_bookshelf`
+
+`step.cloth`
+
+`step.copper`
+
+`step.coral`
+
+`step.deepslate`
+
+`step.deepslate_bricks`
+
+`step.dirt_with_roots`
+
+`step.dripstone_block`
+
+`step.grass`
+
+`step.gravel`
+
+`step.hanging_roots`
+
+`step.hanging_sign`
+
+`step.heavy_core`
+
+`step.honey_block`
+
+`step.iron`
+
+`step.ladder`
+
+`step.moss`
+
+`step.nether_brick`
+
+`step.nether_gold_ore`
+
+`step.nether_sprouts`
+
+`step.nether_wart`
+
+`step.nether_wood`
+
+`step.nether_wood_hanging_sign`
+
+`step.netherite`
+
+`step.netherrack`
+
+`step.nylium`
+
+`step.pink_petals`
+
+`step.pointed_dripstone`
+
+`step.powder_snow`
+
+`step.roots`
+
+`step.sand`
+
+`step.sculk_sensor`
+
+`step.shroomlight`
+
+`step.slime`
+
+`step.snow`
+
+`step.soul_sand`
+
+`step.soul_soil`
+
+`step.sponge`
+
+`step.spore_blossom`
+
+`step.stem`
+
+`step.stone`
+
+`step.suspicious_gravel`
+
+`step.suspicious_sand`
+
+`step.tuff`
+
+`step.vines`
+
+`step.wet_sponge`
+
+`step.wood`
+
+#### vr
+
+---
+
+`vr.stutterturn`
+
+#### wind_charge
+
+---
+
+`wind_charge.burst`
+
+## record
+
+#### horn
+
+---
+
+`horn.call.0`
+
+`horn.call.1`
+
+`horn.call.2`
+
+`horn.call.3`
+
+`horn.call.4`
+
+`horn.call.5`
+
+`horn.call.6`
+
+`horn.call.7`
+
+#### note
+
+---
 
 `note.banjo`
 
@@ -1267,7 +3225,11 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `note.cow_bell`
 
+`note.creeper`
+
 `note.didgeridoo`
+
+`note.enderdragon`
 
 `note.flute`
 
@@ -1279,97 +3241,29 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `note.iron_xylophone`
 
+`note.piglin`
+
 `note.pling`
+
+`note.skeleton`
 
 `note.snare`
 
+`note.witherskeleton`
+
 `note.xylophone`
 
-# portal
+`note.zombie`
 
-`portal.portal`
+#### record
 
-`portal.travel`
-
-`portal.trigger`
-
-# raid
-
-`raid.horn`
-
-# random
-
-`random.anvil_break`
-
-`random.anvil_land`
-
-`random.anvil_use`
-
-`random.bow`
-
-`random.bowhit`
-
-`random.break`
-
-`random.burp`
-
-`random.chestclosed`
-
-`random.chestopen`
-
-`random.click`
-
-`random.door_close`
-
-`random.door_open`
-
-`random.drink`
-
-`random.eat`
-
-`random.enderchestclosed`
-
-`random.enderchestopen`
-
-`random.explode`
-
-`random.fizz`
-
-`random.fuse`
-
-`random.glass`
-
-`random.hurt`
-
-`random.levelup`
-
-`random.orb`
-
-`random.pop`
-
-`random.pop2`
-
-`random.potion.brewed`
-
-`random.screenshot`
-
-`random.shulkerboxclosed`
-
-`random.shulkerboxopen`
-
-`random.splash`
-
-`random.swim`
-
-`random.toast`
-
-`random.totem`
-
-# record
+---
 
 `record.11`
 
 `record.13`
+
+`record.5`
 
 `record.blocks`
 
@@ -1377,11 +3271,23 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `record.chirp`
 
+`record.creator`
+
+`record.creator_music_box`
+
 `record.far`
 
 `record.mall`
 
 `record.mellohi`
+
+`record.otherside`
+
+`record.pigstep`
+
+`record.precipice`
+
+`record.relic`
 
 `record.stal`
 
@@ -1391,62 +3297,66 @@ The following sound definitions have been stripped from vanilla files thanks to 
 
 `record.ward`
 
-# step
+## ui
 
-`step.cloth`
+#### hud
 
-`step.grass`
+---
 
-`step.gravel`
+`hud.bubble.pop`
 
-`step.ladder`
+#### item
 
-`step.sand`
+---
 
-`step.slime`
+`item.book.page_turn`
 
-`step.snow`
+#### random
 
-`step.stone`
+---
 
-`step.wood`
+`random.click`
 
-# tile
+`random.screenshot`
 
-`tile.piston.in`
+`random.toast`
 
-`tile.piston.out`
+`random.toast_recipe_unlocking_in`
 
-# ui
+`random.toast_recipe_unlocking_out`
 
-`ui.cartography_table.take_result`
+#### ui
 
-`ui.loom.select_pattern`
+---
 
-`ui.loom.take_result`
+`ui.drawer_close`
 
-`ui.stonecutter.take_result`
+`ui.drawer_open`
 
-# use
+`ui.hardcore_disable`
 
-`use.cloth`
+`ui.hardcore_enable`
 
-`use.grass`
+`ui.hardcore_toggle_press`
 
-`use.gravel`
+## weather
 
-`use.ladder`
+#### ambient
 
-`use.sand`
+---
 
-`use.slime`
+`ambient.weather.lightning.impact`
 
-`use.snow`
+`ambient.weather.rain`
 
-`use.stone`
+`ambient.weather.thunder`
 
-`use.wood`
+## No category
 
-# vr
+#### sign
 
-`vr.stutterturn`
+---
+
+`sign.dye.use`
+
+`sign.ink_sac.use`

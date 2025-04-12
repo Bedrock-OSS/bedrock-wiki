@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  max-width: 100%;
+}

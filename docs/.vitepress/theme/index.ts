@@ -1,46 +1,45 @@
-import Layout from './Components/Layout.vue'
-import CodeHeader from './Components/Content/CodeHeader.vue'
-import Spoiler from './Components/Content/Spoiler.vue'
-import Label from './Components/Content/Label.vue'
-import YouTubeEmbed from './Components/Content/YouTubeEmbed.vue'
-import Button from './Components/Content/Button.vue'
-import JQEmbed from './Components/Content/JQEmbed.vue'
-import WikiImage from './Components/Content/WikiImage.vue'
-import Card from './Components/Content/Card.vue'
-import CardLink from './Components/Content/CardLink.vue'
-import Homepage from './Components/Pages/Homepage.vue'
-import NotFound from './Components/Pages/NotFound.vue'
-import Contribute from './Components/Pages/Contribute.vue'
-import { Theme } from 'vitepress'
-import { Component } from 'vue'
-import Component404 from '../../404.md'
-import './Styles/styles'
+// https://vitepress.dev/guide/custom-theme
+import "./styles/index.scss";
+import { Theme } from "vitepress";
+import { Component } from "vue";
 
-// Add global components to this array to register them automatically
-const globalComponents: [string, Component][] = [
-	['CodeHeader', CodeHeader],
-	['Spoiler', Spoiler],
-	['Label', Label],
-	['YouTubeEmbed', YouTubeEmbed],
-	['JQEmbed', JQEmbed],
-	['BButton', Button],
-	['WikiImage', WikiImage],
-	['CardLink', CardLink],
-	['Card', Card],
-	['Homepage', Homepage],
-	['NotFound', NotFound],
-	['Contribute', Contribute],
-]
+import Layout from "./components/Layout.vue";
 
-const theme: Theme = {
-	Layout,
-	// @ts-ignore
-	NotFound: () => Component404, //Custom 404
-	enhanceApp({ app, router, siteData }) {
-		for (const [componentName, globalComponent] of globalComponents) {
-			app.component(componentName, globalComponent)
-		}
-	},
-}
+import Button from "./components/content/Button.vue";
+import Card from "./components/content/Card.vue";
+import CardGrid from "./components/content/CardGrid.vue";
+import CodeHeader from "./components/content/CodeHeader.vue";
+import FolderView from "./components/content/FolderView.vue";
+import Label from "./components/content/Label.vue";
+import MolangGraph from "./components/content/MolangGraph.vue";
+import Spoiler from "./components/content/Spoiler.vue";
+import Table from "./components/content/Table.vue";
+import Tag from "./components/content/Tag.vue";
+import WikiImage from "./components/content/WikiImage.vue";
+import YouTubeEmbed from "./components/content/YouTubeEmbed.vue";
 
-export default theme
+const contentComponents: Record<string, Component> = {
+  Button,
+  Card,
+  CardGrid,
+  CodeHeader,
+  FolderView,
+  Label,
+  MolangGraph,
+  Spoiler,
+  Table,
+  Tag,
+  WikiImage,
+  YouTubeEmbed,
+};
+
+export default {
+  Layout,
+  enhanceApp({ app }) {
+    for (const name in contentComponents) {
+      app.component(name, contentComponents[name]);
+    }
+  },
+} satisfies Theme;
+
+export * from "./types";

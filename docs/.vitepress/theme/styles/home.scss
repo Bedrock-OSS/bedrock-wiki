@@ -1,0 +1,45 @@
+.home {
+  margin-inline: auto;
+  max-width: 1100px;
+
+  & > header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    grid-template-areas:
+      "icon title"
+      "icon description";
+
+    & > .wiki-image {
+      grid-area: icon;
+
+      width: 100px;
+      margin: 0;
+    }
+
+    & > h1 {
+      grid-area: title;
+      margin: 0;
+      line-height: 1;
+    }
+
+    & > p {
+      grid-area: description;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      grid-template-areas:
+        "icon title"
+        "description description";
+
+      & > .wiki-image {
+        width: 60px;
+      }
+    }
+  }
+}

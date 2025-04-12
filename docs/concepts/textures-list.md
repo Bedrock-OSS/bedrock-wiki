@@ -1,10 +1,17 @@
 ---
-title: .textures_list
+title: textures_list.json
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - AFoxyToast
+    - TheItsNameless
+description: The textures_list file is Minecraft's way of caching each texture so that it can retrieve it faster than looking through each image in your textures folder.
 ---
 
 ## General Overview
 
-The textures*list file is Minecraft's way of \_caching* each texture so that it can retrieve it faster than looking through each image in your textures folder. This is especially important when you have an abundance of textures, where Minecraft could potentially mess up and swap textures or even not load them at all. Minecraft tends to throw a content log _warning_ if you don't have the textures listed in the file. You can ignore it if you have a small amount, but it is recommended that you list the textures anyway.
+The `textures_list` file is Minecraft's way of *caching* each texture so that it can retrieve it faster than looking through each image in your textures folder. This is especially important when you have an abundance of textures, where Minecraft could potentially mess up and swap textures or even not load them at all. Minecraft tends to throw a content log _warning_ if you don't have the textures listed in the file. You can ignore it if you have a small amount, but it is recommended that you list the textures anyway.
 
 ## What textures can be used in the file?
 
@@ -34,11 +41,4 @@ The structure is simple. The file itself is in `RP/textures` and is named `textu
 
 ## Automating
 
-If you have a lot of textures, this could obviously be tedious to go and list all the texture paths. In this case, we can use **Python** (or another language if you prefer) to help us with automating these paths. Here is an example code in python:
-
-```python
-def list_textures_v2():
-  for texture in glob.glob("./textures/**/*.png")+glob.glob("./textures/**/*.tga):
-    bn = os.path.splitext(os.path.basename(texture))[1]
-    print(texture.replace(bn,"").replace("./","").replace("\\","/"))
-```
+If you have a lot of textures, this could obviously be tedious to go and list all the texture paths. In this case you can start to use [Regolith](https://bedrock-oss.github.io/regolith/) with its wonderful filters.

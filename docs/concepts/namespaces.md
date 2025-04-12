@@ -1,12 +1,16 @@
 ---
 title: Namespaces
+mentions:
+    - SirLich
+    - MedicalJewel105
+description: Namespaces are identifiers that mark content ownership and are helpful because they keep naming conflicts from happening.
 ---
 
 Namespaces are identifiers that mark content ownership. You can think of them as folders. Namespaces are helpful because they keep naming conflicts from happening.
 
-Namespaces in addon creation can essentially be thought of as "the part to the left of the colon". For example, `minecraft` is the namespace of `minecraft:zombie`. The general form is `namespace:name`.
+Namespaces in add-on creation can essentially be thought of as "the part to the left of the colon". For example, `minecraft` is the namespace of `minecraft:zombie`. The general form is `namespace:name`.
 
-As a concrete example of why namespaces are helpful, let's imagine you create a new Mob. You name it `minecraft:shark`, not aware that you should create your own namespace for custom content. Next year, Mojang decides to add sharks into the game! Now there is a naming conflict since there are two definitions of `minecraft:shark`. Your addon will break.
+As a concrete example of why namespaces are helpful, let's imagine you create a new Mob. You name it `minecraft:shark`, not aware that you should create your own namespace for custom content. Next year, Mojang decides to add sharks into the game! Now there is a naming conflict since there are two definitions of `minecraft:shark`. Your add-on will break.
 
 If you had instead used `your_namespace:shark`, the naming conflict wouldn't have happened.
 
@@ -41,8 +45,12 @@ It would be best if you also used namespaces in animation controllers, render co
 
 For example: `controller.animation.namespace.entity_name.action` is better than `controller.animation.my_action`.
 
-## Where **NOT** to use namespaces.
+## Where NOT to use namespaces.
 
 The actual file structure does not need namespaces.
 
 `animations/namespace/my_entity/animation` is more confusing than `animations/my_entity/animation`.
+
+- **Note:** The following folders are exceptions: `functions`, `structures`, `loot_tables`, `trade_tables`, `sounds`, and `textures`.
+    - Using a **namespace** in these folders is recommended to prevent conflicts with other packs.
+    - **Example:** `BP/functions/namespace/test.mcfunction`

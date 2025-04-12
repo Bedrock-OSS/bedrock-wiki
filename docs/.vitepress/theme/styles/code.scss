@@ -1,0 +1,70 @@
+:not(.shiki) > code,
+[class*="language-"] > :is(.line-numbers-wrapper, .shiki) {
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+:not(.shiki) > code {
+  background-color: var(--light-bg-color);
+
+  border: var(--border);
+  border-radius: 4px;
+
+  padding-inline: 0.2em;
+}
+
+[class*="language-"] {
+  margin-block: 0.5em;
+  padding-top: 1em;
+  min-height: 3.5em;
+
+  background-color: var(--light-bg-color);
+  position: relative;
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas: "line-numbers code";
+
+  & > .lang {
+    display: none;
+  }
+
+  & > .copy {
+    display: none;
+  }
+
+  & > .line-numbers-wrapper {
+    grid-area: line-numbers;
+    padding-inline: 1em;
+    margin-bottom: 1em;
+
+    border-right: var(--border);
+    user-select: none;
+    color: #6a737d;
+    text-align: end;
+
+    &:has(> .line-number:only-of-type) {
+      display: none;
+    }
+  }
+
+  .line-number {
+    white-space: nowrap;
+  }
+
+  & > .shiki {
+    grid-area: code;
+    overflow-x: auto;
+    padding-inline: 1em;
+  }
+}
+
+.shiki span {
+  color: var(--shiki-light);
+}
+
+.dark .shiki span {
+  color: var(--shiki-dark);
+}

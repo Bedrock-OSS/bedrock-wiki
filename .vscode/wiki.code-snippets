@@ -1,0 +1,95 @@
+{
+	"Button": {
+		"prefix": "wiki.button",
+		"body": [
+			"<Button link=\"$1\">",
+      "    $3",
+			"</Button>"
+		]
+	},
+	"Card": {
+		"prefix": "wiki.card",
+		"body": [
+			"<Card",
+			"    image=\"${1:/assets/images/}\"",
+			"    title=\"$2\"",
+			"    link=\"$3\"",
+			"/>"
+		]
+	},
+	"CardGrid": {
+		"prefix": "wiki.cardgrid",
+		"body": [
+			"<CardGrid>",
+			"",
+			"$1",
+			"",
+			"</CardGrid>"
+		]
+	},
+	"CodeHeader": {
+		"prefix": "wiki.codeheader",
+		"body": [
+			"<CodeHeader>$1</CodeHeader>",
+			"",
+			"```${2:json}",
+			"$3",
+			"```"
+		]
+	},
+	"Spoiler": {
+		"prefix": "wiki.spoiler",
+		"body": [
+			"<Spoiler title=\"$1\">",
+			"",
+			"$2",
+			"",
+			"</Spoiler>"
+		]
+	},
+	"FolderView": {
+		"prefix": "wiki.folderview",
+		"body": [
+			"<FolderView :paths=\"[",
+			"    '$1'",
+			"]\" />",
+		]
+	},
+	"Label": {
+		"prefix": "wiki.label",
+		"body": [
+			"<Label color=\"$1\">",
+      "    $1",
+      "</Label>"
+		]
+	},
+	"Page Dumper (only use if you know how)": {
+		"prefix": "wiki.page_dumper",
+		"body": [
+			"<!-- page_dumper_start -->",
+			"<!-- page_dumper_end -->"
+		]
+	},
+	"Tag": {
+		"prefix": "wiki.tag",
+		"body": [
+			"<Tag name=\"${1:beginner}\" />"
+		]
+	},
+	"WikiImage": {
+		"prefix": "wiki.image",
+		"body": [
+			"<WikiImage",
+			"    src=\"${1:/assets/images/}\"",
+			"    alt=\"$2\"",
+			"    ${3:pixelated}",
+			"/>"
+		]
+	},
+	"YouTubeEmbed": {
+		"prefix": "wiki.ytembed",
+		"body": [
+			"<YouTubeEmbed id=\"$1\" />"
+		]
+	},
+}

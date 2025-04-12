@@ -1,155 +1,193 @@
 ---
-title: Software and preparation
+title: Software & Preparation
+category: Guide
+description: How to setup your developement environment
 nav_order: 3
-number: '3.'
+prefix: "3. "
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - Joelant05
+    - MedicalJewel105
+    - TheItsNameless
+    - TheDoctor15
+    - ChibiMango
+    - profeplaysminecraft
+    - solvedDev
+    - retr0cube
+    - SmokeyStack
+    - ThomasOrs
+    - QuazChick
 ---
 
-In order to be able to code addons you'll need a certain set of software installed. While Windows 10 offers the best development environment, and largest variety of tools, alternatives can be found on other platforms, including mobile.
+Before you can start creating add-ons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
 
-## A valid copy of Bedrock Minecraft
+This page will provide you a list of software to install, and configuration tips for setup.
 
--   [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
+## Download Minecraft Bedrock Edition
+
+-   [Windows](https://xbox.com/games/store/minecraft-for-windows/9NBLGGH2JHXJ)
 -   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
 -   [iOS](https://apps.apple.com/us/app/minecraft/id479516143)
+-   [Run MC on Linux](https://discord.gg/VJTZ3KaTx6)
 
 ## Picking an Editor
 
-Bedrock Addons can be created using any text editor (even the Windows-pre-installed Notepad), however it's much more comfortable to work in a dedicated Code Editor.
+Add-ons can be created using any text editor, however it's much more comfortable to work in a dedicated editor. A good editor can give you code-completion, error-detection, and in-editor documentation.
 
-There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting any of the following editors.
+There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting either VSCode, or bridge. If you are mobile, you will need to use a mobile alternative.
 
-Editor recommendations are starred.
+### VSCode
 
-### Plaintext Editors
+VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your add-ons in plain-text, guided along by a powerful array of extensions and add-ons. VSCode is a great option for programmers and advanced users.
 
--   ⭐[_VSCode_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for addon development. (_Warning: Do not install Visual Studio, which is something different_)
--   [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities.
--   [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.
+[⚙️Install VSCode](https://code.visualstudio.com/)
 
-### Dedicated Editors
+<Spoiler title="Configuring VSCode">
 
--   ⭐[_bridge._](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
--   [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for addon creation with JSON linting and autocomplete.
+Many packages exist for VSCode that make editing add-ons easier:
 
-### Mobile Alternatives
-
--   **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
--   **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
-
-### Additional Notes
-
-<Spoiler title="Features to look for in a Code Editor">
--   **Opening Folders:** When editing addons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks.
--   **Json Linting/Prettify:** Linting is the ability to validate code as correct in real-time. Linting for json will mark things like missing commas, misplaced parens, or other formatting issues so that you can fix them. [Linting can also be found online](https://jsonlint.com/), but having real-time linting built directly into your editor is very much preferred.
--   **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
-
-</Spoiler>
-
-<Spoiler title="VSCode Extensions for Addon development">
-
-Many packages exist for VSCode that make editing addons easier:
-
--   [Blockceptions Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
+-   [Blockception's Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
 -   [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
 -   [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
 -   [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
--   [Prettt-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
+-   [Prettify-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
 -   [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 -   [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
--   [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 -   [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
 
 </Spoiler>
 
-<Spoiler title="If you choose to use bridge.">
+### bridge.
 
-You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
+[bridge.](https://bridge-core.app/) is a light-weight, dedicated IDE for Minecraft add-ons. It features [innovative features](https://bridge-core.app/guide/features/) such as [entity and block previews](https://bridge-core.app/guide/features/index.html#file-previews), [rich auto-completions and file validations](https://bridge-core.app/guide/features/index.html#auto-completions-and-validation) and [advanced file creation with presets](https://bridge-core.app/guide/features/index.html#advanced-file-creation).
+bridge. includes a regular text editor for experienced add-on creators and a tree editor to make it easy for beginners to get started with editing JSON files.
 
-1. Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without bridge.
-2. Add files that you want to edit without bridge. to a `.no-cache` file at the root of your behavior pack
+<Spoiler title="Configuring Bridge">
 
-Due to the nature of the file versioning system, most scripts and tools will continue to work as expected.
-
-For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), with announcements, plugin discussion, addon help, and more.
+-   [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge)
+-   [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index)
+-   [Try out bridge. online](https://editor.bridge-core.app/)
 
 </Spoiler>
 
-<br>
+### Mobile Editors
 
-## Additional Add-on-creation Software
+#### Android
 
--   [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile. An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop _(≈$10/m)_](https://www.adobe.com/products/photoshop) or paint.net, is recommended to be used along.
--   You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/addon-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
+-   [ACode Editor](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
+-   [bridge. v2](https://bridge-core.app/)
 
-![](/assets/images/guide/blockbench_workspace.png)
+#### iOS
 
----
+-   [Kodex](https://apps.apple.com/us/app/kodex/id1038574481)
+-   [bridge. v2](https://bridge-core.app/)
 
-Now that you have your tools installed, let's move onto some pre-organisation:
+## Blockbench
 
-## The com.mojang folder
+-   [Blockbench](https://blockbench.net/) is a 'boxy 3D model editor' typically used to create Minecraft models, textures and animations. Also provides a web-browser version which is compatible with mobile.
 
-The com.mojang folder is the folder we're going to be working with throughout the Guide and Addon development in general. All files we access or create will be placed somewhere in this folder:
+## Image Editors
 
-I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
+When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn.
 
-![com.mojang folder](/assets/images/guide/com_mojang_folder.png)
+:::tip
+Choose a program that feels comfortable and easy for you to use. Many Add-on creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you!
+:::
 
-### Windows
+### Krita
 
-`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
+Krita is a powerful open-source art programed with the goal of giving free powerful digital art tools to artists. Krita has more than enough features to cover your Minecraft needs and works on a MAC or PC.
 
-### Android
+-   **+ Pros:** Plenty of features including a pixel brush with an intuitive user interface.
+-   **- Cons:** Requires a little time to become familar with the tools.
 
-`Phone>games>com.mojang`
+[Download Krita](https://krita.org/en/)
 
-### iOS
+### GIMP
 
-`My iDevice>Minecraft>games>com.mojang`
+Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
 
-### Folder concents
+-   **+ Pros:** GIMP has more than enough tools for editing Minecraft art
+-   **- Cons:** The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
 
-We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft.
+[Download Gimp](https://www.gimp.org/)
 
-Thus we'll work with these folders.
+### Paint․net
 
-`resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
+Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use.
 
-## Setting up your workspace
+-   **+ Pros:** Easy to use and learn.
+-   **- Cons:** Only works on Windows.
 
-_The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
+[Download Paint.net](https://www.getpaint.net)
 
-Let's create your first addon workspace in Visual Studio Code now.
+### Pixilart
 
-1. Open VSCode (_Visual Studio Code, the code editor_)
-2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide).
-3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
-4. Go to `File > Add folder to workspace...` and choose `BP`. Do the same with `RP`.
-5. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
+Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixelart details.
 
-## Learning to reference
+-   **+ Pros:** Easy to use and learn. Curated specifically for pixel art.
+-   **- Cons:** Must have internet connection. May be missing tools you want.
 
-## Vanilla Packs
+[Use Pixilart](https://www.pixilart.com/)
 
-Referencing means looking at other addons to find out how certain results are achieved. Minecraft's unmodified files are a good place to start. Download the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) and [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate) and get creative! I recommend adding them to your workspace for easy referencing.
+### Piskel
 
-Once you complete this guide, you can download and reference some open-source addons from, for example, [MCPEDL](https://mcpedl.com/?cookie_check=1). You can also upload your own addons there.
+Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game character animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
 
-## Documentation
+-   **+ Pros:** Easy to use and learn. Perfect for flipbook animations
+-   **- Cons:** Must have internet connection. Only offers the most basic tools.
 
-The best tool you have when learning about addons is the documentation. [bedrock.dev](https://bedrock.dev/) contains the best, and most up to date addon documentation. Make sure you are using the documentation for the current edition (bedrock.dev/docs/stable).
+[Download Piskel](https://www.piskelapp.com/)
 
----
+### Libresprite
 
-## Your progress so far
+LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of aseprite.
 
-**What you've done:**
+-   **+ Pros**: Basic & easy to use, customizable and curated for pixel artists.
+-   **- Cons**: May not work on Mac, maintained only by a small community.
 
--   [x] Installed the necessary software;
--   [x] Downloaded the Vanilla Example files;
--   [x] Located your com.mojang folder and created your addon's workspace.
+## Additional Materials
 
-**What you are to do next:**
+:::tip
+This guide will walk you through the first stages of add-on development, but it is not comprehensive! To learn more about add-ons, you will have to use and reference other sources of information, which we will link to here.
+:::
 
--   [ ] Create your addons manifests, pack icons;
--   [ ] Learn to use `.mcfunction`, `.mcstructure`, `.mcpack` and `.mcaddon`.
+### Join the Discord
+
+The best place to get help with this guide is to join the [discord server](/discord)(s).
+
+### Vanilla Packs
+
+Minecraft's vanilla files are a good source of reference material. You should download these packs, and store them on a convenient location on your computer. When you need an example of an item, or entity, or animation, you can reference these files for inspiration.
+
+-   [Vanilla packs](https://github.com/Mojang/bedrock-samples/releases)
+
+### Documentation
+
+There are many good sources of Add-on documentation. Familiarize yourself with all of them, and consider bookmarking them.
+
+-   [bedrock.dev](https://bedrock.dev/): Reference documentation.
+-   [wiki.bedrock.dev](https://wiki.bedrock.dev/): Tutorials and guides.
+-   [MS Docs](https://docs.microsoft.com/en-us/minecraft/creator/): The official microsoft creator portal for add-ons.
+
+### Troubleshooting and Additional Help
+
+-   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-json).
+-   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
+-   You can explore additional tools [here](/meta/useful-links).
+
+## Next
+
+:::tip What you have learned
+
+-   [x] Installed the necessary software
+-   [x] Downloaded the Vanilla Example files
+-   [ ] Locate your `com.mojang` folder and create your add-on's workspace.
+-   [ ] Create the manifest and pack icon for your first add-on
+
+:::
+
+<Button link="/guide/project-setup">Next: Project Setup</Button>

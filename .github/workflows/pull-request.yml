@@ -1,0 +1,33 @@
+name: Pull Request Check
+
+on:
+    pull_request:
+        branches: [wiki]
+    workflow_dispatch:
+
+env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+    build:
+        name: Build Check
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  cache: npm
+                  cache-dependency-path: package-lock.json
+                  node-version-file: .nvmrc
+
+            - name: Install Project 🔧
+              run: npm install
+
+            - name: Check Linting 🔎
+              run: npm run lint
+
+            - name: Check Build 🔧
+              run: npm run build

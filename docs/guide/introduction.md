@@ -1,56 +1,60 @@
 ---
 title: Introduction
+category: Guide
+description: Introduction to our "Getting Started" Guide
+tags:
+    - guide
 nav_order: 1
-number: '1.'
+prefix: "1. "
+mentions:
+    - KaiFireborn
+    - SirLich
+    - BlueFrog130
+    - sermah
+    - SmokeyStack
+    - TheItsNameless
+    - MedicalJewel105
+    - smell-of-curry
+    - Hatchibombotar
+    - retr0cube
+    - QuazChick
 ---
 
-## What are Addons?
+## What Are Add-Ons?
 
-An "Addon" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang instead of the community.
+An "[Add-On](https://learn.microsoft.com/en-us/minecraft/creator/?view=minecraft-bedrock-stable)" is the Minecraft Bedrock Edition (_Windows 10, iOS, Android, Consoles_) equivalent to Java mods. In contrast to Java however, the Bedrock Edition API is officially maintained by Mojang instead of the community.
 
-In general, you can think of _mods_ as _modifying_ the game, and _ addons_ as _adding-onto_ the game, following the development opportunities provided by Microsoft.
+In general, you can think of _mods_ as _modifying_ the game, and _add-ons_ as _adding onto_ the game, following the development opportunities provided by Microsoft.
 
-## What is this guide?
+:::tip
+Although we're very pleased with this guide, it's not the only option for getting started. Mojang maintains their own [getting started guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted?view=minecraft-bedrock-stable&tabs=Windows10) on the Creator Platform, which you can consider following instead.
+:::
 
-This guide is a beginner tutorial, intended to walk you through the first stages of addon-creation. You will create your very own fully-functional Ghost entity, as well as an Ectoplasm item, and some other associated files.
+## What Is This guide?
 
-By the end of this guide, you will have created an entire addon all by yourself, which you can play with and modify.
+This guide is a beginner tutorial, intended to walk you through the first stages of add-on creation. You will create your very own fully-functional Ghost entity, as well as an Ectoplasm item, and some other associated files.
 
-## What do I need to create Addons?
+By the end of this guide, you will have created an entire add-on all by yourself, which you can play with and modify!
 
-This guide is focused on creating addons on a Windows 10 PC for any Bedrock platform. However, the process is similar when working on Android or iOS, although it is significantly more tedious. If something works differently on a mobile device, a note will state that.
-
-## Is the guide up to date?
+## Is the Guide Up-to-Date?
 
 This guide is written for the most recent _stable_ release of Minecraft Bedrock Edition. Many things won't work in previous versions, and some will be changed in later ones. We will keep the guide as up-to-date as possible, so no need to worry.
 
-## Table of Contents
+## Appendix Pages
 
-### Project Setup
+Alongside the step-by-step guide, we have a few other pages here in this section, which you can browse at your convenience.
 
-Let's start by setting up your tools, which you will use throughout the development of your addons. This section will precisely cover what **software** is needed, where to **set up/initialize** your addons, and create a **workspace** where you can create your addons.
+-   [Understanding JSON](/guide/understanding-json)
+-   [Downloading Example Packs](/guide/download-packs)
+-   [Troubleshooting](/guide/troubleshooting)
 
-<BButton color="green">Project Setup</BButton>
+## What to Do After Finishing the Guide
 
-### Custom Item
+At the end of the guide section, your first add-on will be done! To further expand your knowledge, consider doing these:
 
-Now that your workspace is ready to go, we can start creating a fully custom Item that our entity will drop.
+-   Start your project!
+-   To dive into the other aspects of adding onto MCBE (Minecraft Bedrock Edition), you can use the different sections' sub guides listed in the Appendix. This includes but is not limited just to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
 
-<BButton color="green">Custom Item</BButton>
+## Next
 
-### Custom Entity
-
-Finally, it's time to create the mob that drops our custom item: A hostile Ghost that spawns at night.
-
-<BButton color="green">Custom Entity</BButton>
-
-## What to do after finishing the Guide
-
-Now, your first addon is complete! To further expand your knowledge, consider doing these:
-
--   Start your own project!
--   To dive into the other aspects of adding onto MCBE, you can use the different sections' sub guides listed in the Appendix. This includes but is not limited to custom Blocks, Biomes, advanced Items, Animation Controllers, and even JS scripts. Some sections provide more technical in-depth tutorials and documents for each relevant topic.
-
-<BButton color="green">Appendix: further features</BButton>
-
----
+<Button link="/guide/addons">Next: Add-Ons Explained</Button>

@@ -1,8 +1,15 @@
 ---
 title: Dummy Entities
+category: Tutorials
+tags:
+    - beginner
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+description: Dummy entities are invisible entities which are used behind the scenes for game-play purposes.
 ---
-
-<Label color="green">Beginner</Label>
 
 Dummy entities are invisible entities which are used behind the scenes for game-play purposes. Dummy entities are a very useful tool, and this document will cover some of the ways they are utilized, as well as showing how to set up the resource side of things.
 
@@ -21,7 +28,7 @@ This is a non-exhaustive list of how dummies can be used:
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
-entities/dummy.json
+<CodeHeader>BP/entities/dummy.json</CodeHeader>
 
 ```json
 {
@@ -30,10 +37,17 @@ entities/dummy.json
 		"description": {
 			"identifier": "wiki:dummy",
 			"is_summonable": true,
-			"is_spawnable": true,
+			"is_spawnable": false,
 			"is_experimental": false
 		},
 		"components": {
+			"minecraft:breathable": { //Optional, allows the entity to breath underwater
+				"breathes_water": true
+			},
+			"minecraft:physics": { 
+				"has_gravity": false, //Optional, allows the entity to not be affected by gravity or water
+				"has_collision": false
+			},
 			"minecraft:custom_hit_test": {
 				"hitboxes": [
 					{
@@ -61,16 +75,18 @@ entities/dummy.json
 }
 ```
 
+If you want to disable collision at all (so you can place a block at it's position), you can use arrow runtime identifier, however, there can be some side effects.
+
 ### Resource Entity
 
-entity/dummy.json
+<CodeHeader>RP/entity/dummy.json</CodeHeader>
 
 ```json
 {
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "sirlich:dummy",
+			"identifier": "wiki:dummy",
 			"materials": {
 				"default": "entity_alphatest"
 			},
@@ -88,7 +104,7 @@ entity/dummy.json
 
 ### Geometry
 
-models/entity/dummy.json
+<CodeHeader>RP/models/entity/dummy.json</CodeHeader>
 
 ```json
 {
@@ -107,7 +123,7 @@ models/entity/dummy.json
 
 ### Render Controller (Optional)
 
-render_controllers/dummy.json
+<CodeHeader>RP/render_controllers/dummy.json</CodeHeader>
 
 ```json
 {
@@ -128,4 +144,4 @@ render_controllers/dummy.json
 
 ### Texture (Optional)
 
-You can either leave the texture location blank, or open the model in block-bench and create a blank texture.
+You can either leave the texture location blank, or open the model in blockbench and create a blank texture.

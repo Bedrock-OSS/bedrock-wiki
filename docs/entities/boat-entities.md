@@ -1,27 +1,40 @@
 ---
 title: Creating Boats
+category: Tutorials
 tags:
-    - recipe
+    - intermediate
+mentions:
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - StealthyExpertX
+    - TheItsNameless
+description: Learn how to make boat behavior.
 ---
+:::warning Requires Format Version 1.16.100 or Lower
 
-<Label color="yellow">Intermediate</Label>
+The behavior format version now requires 1.16.100 or lower for the `minecraft:behavior.rise_to_liquid_level` and `minecraft:buoyant` methods to work.
+If you find a new method that works in the newer format versions, you should consider helping to contribute by updating the wiki. 
+:::
 
 ## Using Runtime Identifiers
 
-You can [read more about runtime identifiers here](/documentation/runtime-identifier). Using runtime identifiers, you can implement most of the boat's hard-coded behaviors. However, your boat won't rotate with you, and it will always face North.
+You can read more about runtime identifiers [here](/entities/runtime-identifier). Using runtime identifiers, you can implement most of the boat's hard-coded behaviors. However, your boat won't rotate with you, and it will always face North.
 
 ## Using Components
 
 Currently, the best way to create a boat entity is by using components. 1.16 introduced new components that we can use to our advantage: `minecraft:behavior.rise_to_liquid_level` and `minecraft:buoyant`. Striders use the first one in vanilla to make them float on lava, but we can repurpose it for water as well.
 
-## 1st method: `minecraft:behavior.rise_to_liquid_level`
+## 1st method: minecraft:behavior.rise_to_liquid_level
+
+<CodeHeader>BP/entities/bar</CodeHeader>
 
 ```json
 {
 	"minecraft:entity": {
 		"format_version": "1.14.0",
 		"description": {
-			"identifier": "foo:bar",
+			"identifier": "wiki:boat",
 			"is_summonable": true,
 			"is_spawnable": true,
 			"is_experimental": false
@@ -77,14 +90,16 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 }
 ```
 
-## 2nd method: `minecraft:buoyant`
+## 2nd method: minecraft:buoyant
+
+<CodeHeader></CodeHeader>
 
 ```json
 {
 	"minecraft:entity": {
 		"format_version": "1.14.0",
 		"description": {
-			"identifier": "foo:bar",
+			"identifier": "wiki:boat",
 			"is_summonable": true,
 			"is_spawnable": true,
 			"is_experimental": false
@@ -148,3 +163,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 ## What method to use?
 
 Both methods are suitable but have their pros and cons. If you want to disable the bouncing effect, use the first method. If you want more control over it, use the second method. I use the second method for static objects, such as buoys, and the first method for movable entities, such as boats, emulating the vanilla behavior.
+
+## Custom hurt animations
+
+You might also be interested in [Custom hurt animations](/visuals/custom-hurt-animations).

@@ -1,204 +1,172 @@
 ---
-layout: page
 title: Entity Properties
-parent: Concepts
-tags:
-    - beta
+description: Entity properties allow data to be stored on entities without needing the use of components or attributes in the server-side of the entity, similar to block states.
+category: General
+license: true
+mentions:
+    - SirLich
+    - sermah
+    - MedicalJewel105
+    - Lufurrius
+    - stirante
+    - TheItsNameless
+    - SmokeyStack
+    - QuazChick
 ---
 
-<Label color="orange">Experimental</Label>
+Entity properties (also known as actor properties) allow data to be stored on entities without needing the use of components or attributes (such as `minecraft:variant`) in the server-side of the entity, similar to block states.
 
--   Documentation on the new Entity Properties, also known as Actor Properties, introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
--   Entity Properties were implemented to save data or store values on entities efficiently without needing the use of components or attributes (For example, "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
+## Defining Properties
 
----
+Entity properties are defined in the BP entity's `description` object:
 
-## Entity Properties Definition
-
-### Defining Properties on Entities
-
--   Entity Properties Definition:
+<CodeHeader>BP/entities/properties_example.json</CodeHeader>
 
 ```json
 {
-	"minecraft:entity": {
-		"description": {
-			"identifier": "entity:properties_example",
-			"properties": {
-				"property:number_range_example": {
-					"values": {
-						"min": 0,
-						"max": 100
-					}
-				},
-				"property:number_enum_example": {
-					"values": [1, 2]
-				},
-				"property:string_enum_example": {
-					"values": ["first", "second", "third"]
-				},
-				"property:boolean_enum_example": {
-					"values": [true, false]
-				}
-			}
-		}
-	}
-}
-```
-
----
-
-### Entity Properties Object Fields
-
-#### `values`
-
--   `values` property is required, and omitting this field may cause errors and failure to register the property.
--   `values` field can be evaluated as an array of enum values, or a range of minimum and maximum values (Note that integer, float, and boolean enum values currently supports only two values):
-
-```json
-"property:range_example": {
-    "values": {
-      "min": 0,
-      "max": 5
+    "format_version": "1.21.50",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:properties_example",
+            "properties": {
+                "wiki:bool_property_example": {
+                    "type": "bool",
+                    "default": false
+                },
+                "wiki:enum_property_example": {
+                    "type": "enum",
+                    "values": ["first", "second", "third"],
+                    "default": "first"
+                },
+                "wiki:float_property_example": {
+                    "type": "float",
+                    "range": [0, 3.14],
+                    "default": 2.5
+                },
+                "wiki:int_property_example": {
+                    "type": "int",
+                    "range": [0, 4],
+                    "default": 4
+                }
+            }
+        },
+        "components": { ... },
+        "events": { ... }
     }
 }
 ```
 
-**OR**
+### Default Value
+
+Default values, determined by the `default` parameter, can be defined either as specific values or as Molang expressions.
+
+A string value will be treated as a Molang expression unless it is an enum value.
+Molang expressions are evaluated when the entity is first spawned.
+
+<CodeHeader>minecraft:entity > description > properties</CodeHeader>
 
 ```json
-"property:enum_example": {
-    "values": [1, 2]
+"example:enum_property_example": {
+    "type": "enum",
+    "values": ["first", "second", "third"],
+    "default": "math.random_integer(0, 1) ? 'first' : 'second'"
 }
 ```
 
-#### `default`
+### Client Sync
 
--   You can set the default value of the entity property (By default, the first value of the enum array index), through the <code>default</code> field inside the defined property object:
+To access a property from the resource pack (client-side), the `client_sync` parameter must be `true`.
+By default, this value is `false`.
 
-```json
-"property:default_value_example": {
-    "values": [true, false],
-    "default": false
-}
-```
-
--   As you can observe, the default property is set to `false` instead of `true` when the entity is spawned in the world.
-
-#### `client_sync`
-
--   To sync through the Resource Pack (client-side), <code>client_sync</code> field can be used to allow the Client Entity access the Entity Properties. By default, the value is set to `false`.
+<CodeHeader>minecraft:entity > description > properties</CodeHeader>
 
 ```json
-"property:client_sync_example": {
-    "values": {
-      "min": 0,
-      "max": 20
-    },
+"wiki:is_sad": {
+    "type": "bool",
+    "default": false,
     "client_sync": true
 }
 ```
 
----
+Let's set a variable to the value of this property for use in an animation!
 
-### Manipulating and Accessing Entity Properties
-
--   You can access entity properties through MoLang Entity Queries (Note, these MoLang Entity Queries are a part of Experimental features):
-
-    -   `query.actor_property`
-    -   `query.has_actor_property`
-
--   With entity events, you may set the entity property to a value with the `set_actor_property` event response:
+<CodeHeader>minecraft:client_entity > description</CodeHeader>
 
 ```json
-"events": {
-    "event:set_entity_property": {
-      "set_actor_property": {
-        "property:number_enum_example": 2,
-        "property:string_enum_example": "'second'",
-        "property:boolean_enum_example": "!query.actor_property('property:boolean_enum_example')"
-      }
-    }
+"scripts": {
+    "pre_animation": [
+        "v.is_sad = q.property('wiki:is_sad');"
+    ]
 }
 ```
 
----
+## Getting Property Values
 
-## Entity Aliases
+### Molang Query Function
 
--   You can define aliases for your entity to summon the entity with set entity property values through the `summon` command.
--   Entity can have various aliases with custom entity identifier to use:
+Property values are returned by the `property` query function.
+
+<CodeHeader>Molang Expression</CodeHeader>
+
+```c
+!q.property('wiki:bool_property_example')
+```
+
+### Entity Filter Test
+
+<CodeHeader>Entity Filter</CodeHeader>
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "entity:properties_example",
-			"is_spawnable": true,
-			"is_summonable": true,
-			"is_experimental": false,
-			"properties": {
-				"property:property_index": {
-					"client_sync": true,
-					"values": {
-						"min": 0,
-						"max": 2
-					},
-					"default": 0
-				}
-			},
-			"aliases": {
-				"entity:default_alias": {},
-				"entity:first_alias": {
-					"property:property_index": 1
-				},
-				"entity:second_alias": {
-					"property:property_index": 2
-				}
-			}
-		}
-	}
+    "test": "bool_property",
+    "domain": "wiki:bool_property_example",
+    "operator": "==",
+    "value": true
 }
 ```
 
--   Now, the entity has multiple aliases, and you can use the defined alias identifier through the `summon` command to spawn the entity with the properties set:
-    -   `/summon entity:first_alias` will spawn the entity with the entity property `property:property_index` set to 1.
+### Command Selector Parmeter
 
----
+<CodeHeader>Command</CodeHeader>
 
-## Entity Permutations
-
--   Entity Permutations are implemented to apply a set of components every tick if the condition is met.
--   `permutations` array is inserted in the `minecraft:entity` object, the same level as the `components` object:
-
-```json
-"permutations": [
-    {
-      "condition": "query.actor_property('property:string_enum_example') == 'first'",
-      "components": {
-        "minecraft:scale": {
-          "value": 1.0
-        }
-      }
-    },
-    {
-      "condition": "query.actor_property('property:string_enum_example') == 'second'",
-      "components": {
-        "minecraft:scale": {
-          "value": 2.0
-        }
-      }
-    },
-    {
-      "condition": "query.actor_property('property:string_enum_example') == 'third'",
-      "components": {
-        "minecraft:scale": {
-          "value": 3.0
-        }
-      }
-    }
-]
+```c
+testfor @e[has_property={wiki:enum_property_example="second"}]
 ```
 
--   As we observed, if the entity property "`property:string_enum_example`" value is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied to the entity. Otherwise, if the entity property "`property:string_enum_example`" value is "`second`", the entity's scale is twice as it was. Then, it is similar to how it goes for the `third` value, with three times from the original scale.
+### Script API
+
+The [`Entity.getProperty()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#getproperty) method allows you to get the current value of different properties.
+
+<CodeHeader>Script</CodeHeader>
+
+```js
+customEntity.getProperty("wiki:int_property_example") === 2;
+```
+
+## Setting Property Values
+
+### Entity Event Response
+
+With entity events, you may set the entity property to a value with the `set_property` event response:
+
+<CodeHeader>minecraft:entity > events</CodeHeader>
+
+```json
+"wiki:set_entity_property": {
+    "set_property": {
+        "wiki:integer_property_example": 2,
+        "wiki:enum_property_example": "second",
+        "wiki:boolean_property_example": "!q.property('wiki:bool_property_example')"
+    }
+}
+```
+
+### Script API
+
+The [`Entity.setProperty()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#setproperty) method allows you to set the value of a property.
+
+<CodeHeader>Script</CodeHeader>
+
+```js
+customEntity.setProperty("wiki:int_property_example", 2);
+```

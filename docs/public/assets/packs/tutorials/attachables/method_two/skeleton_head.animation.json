@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.skeleton_head.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"skeleton_head": {
+					"rotation": [27, -39, -159],
+					"position": [0, 14.5, 2.4]
+				}
+			}
+		},
+		"animation.skeleton_head.hold_third_person": {
+			"loop": true,
+			"bones": {
+				"skeleton_head": {
+					"rotation": [-20, -32.5, 0],
+					"position": [0, 19, -4],
+					"scale": 0.65
+				}
+			}
+		}
+	}
+}

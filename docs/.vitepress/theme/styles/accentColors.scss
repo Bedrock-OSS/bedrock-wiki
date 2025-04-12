@@ -1,0 +1,42 @@
+:root {
+  --light-accent-color: #2979c4;
+  --dark-accent-color: #6aaff0;
+}
+
+[data-accent-color="red"] {
+  --light-accent-color: #fdb7b7;
+  --dark-accent-color: #862020;
+}
+
+[data-accent-color="orange"] {
+  --light-accent-color: #fdc890;
+  --dark-accent-color: #993717;
+}
+
+[data-accent-color="yellow"] {
+  --light-accent-color: #ffdf76;
+  --dark-accent-color: #fbbf24;
+}
+
+[data-accent-color="green"] {
+  --light-accent-color: #6ee7b7;
+  --dark-accent-color: #077556;
+}
+
+[data-accent-color="blue"] {
+  --light-accent-color: #93c5fd;
+  --dark-accent-color: #2849a3;
+}
+
+[data-accent-color="purple"] {
+  --light-accent-color: #e1b3ff;
+  --dark-accent-color: #74129b;
+}
+
+* {
+  --accent-color: var(--light-accent-color);
+}
+
+.dark * {
+  --accent-color: var(--dark-accent-color);
+}

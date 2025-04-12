@@ -1,49 +1,122 @@
 ---
-title: Minecraft Symbols & Emojis
+title: Emojis & Symbols
+description: Learn how to add your own emojis and symbols to Minecraft.
+mentions:
+    - SirLich
+    - Joelant05
+    - solvedDev
+    - stirante
+    - Dreamedc2015
+    - MedicalJewel105
+    - JaylyDev
+    - realbashy
+    - ColinTimBarndt
+    - Citicx
+    - TheItsNameless
+    - ThomasOrs
+    - t3hero
+    - QuazChick
+    - MaragiDev
+    - DarkGamerYT
+    - zheaEvyline
 ---
+
+:::warning
+Modifying texture of vanilla emojis and symbols on this page are incompatible with Nintendo Switch platform!
+
+Emojis are not supported by Ore UI screens.
+:::
 
 Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.
 
-Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter colum directly into Minecraft.
+Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter colum directly into Minecraft. You can also use the input key using /titleraw or /tellraw.
 
 There will be instructions for creating custom emoji at the bottom.
 
-### General
+## Vanilla Emojis
 
-| Name             | Letter (Copy/Paste This) | Unicode | Image                                                            |
-| ---------------- | ------------------------ | ------- | ---------------------------------------------------------------- |
-| Armor            |                         | U+E101  | ![](/assets/images/concepts/emojis/general/armor.png)            |
-| Food             |                         | U+E100  | ![](/assets/images/concepts/emojis/general/food.png)             |
-| Minecoin         |                         | U+E102  | ![](/assets/images/concepts/emojis/general/minecoin.png)         |
-| Token            |                         | U+E105  | ![](/assets/images/concepts/emojis/general/token.png)            |
-| Agent            |                         | U+E103  | ![](/assets/images/concepts/emojis/general/agent.png)            |
-| Immersive Reader |                         | U+E104  | ![](/assets/images/concepts/emojis/general/immersive_reader.png) |
-| Craft Toggle On  |                         | U+E0A0  | ![](/assets/images/concepts/emojis/general/craft_toggle_on.png)  |
-| Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/concepts/emojis/general/craft_toggle_off.png) |
+### HUD
 
-### Mobile (iOS/Android/Fire TV)
+| Name  | Letter (Copy/Paste This) | Unicode | Image                                             |
+| ----- | ------------------------ | ------- | ------------------------------------------------- |
+| Food  |                         | U+E100  | ![](/assets/images/concepts/emojis/hud/food.png)  |
+| Armor |                         | U+E101  | ![](/assets/images/concepts/emojis/hud/armor.png) |
+| Heart |                         | U+E10C  | ![](/assets/images/concepts/emojis/hud/heart.png) |
 
-| Name        | Letter (Copy/Paste This) | Unicode | Image                                                      |
-| ----------- | ------------------------ | ------- | ---------------------------------------------------------- |
-| Jump        |                         | U+E084  | ![](/assets/images/concepts/emojis/mobile/jump.png)        |
-| Couch       |                         | U+E085  | ![](/assets/images/concepts/emojis/mobile/crouch.png)      |
-| Fly Up      |                         | U+E086  | ![](/assets/images/concepts/emojis/mobile/fly_up.png)      |
-| Fly Down    |                         | U+E087  | ![](/assets/images/concepts/emojis/mobile/fly_down.png)    |
-| Left Arrow  |                         | U+E081  | ![](/assets/images/concepts/emojis/mobile/left_arrow.png)  |
-| Right Arrow |                         | U+E083  | ![](/assets/images/concepts/emojis/mobile/right_arrow.png) |
-| Up Arrow    |                         | U+E080  | ![](/assets/images/concepts/emojis/mobile/up_arrow.png)    |
-| Down Arrow  |                         | U+E082  | ![](/assets/images/concepts/emojis/mobile/down_arrow.png)  |
+### Items & Blocks
 
-### PC (Windows 10/MacOS/Chrome OS)
+| Name           | Letter (Copy/Paste This) | Unicode | Image                                                        |
+| -------------- | ------------------------ | ------- | ------------------------------------------------------------ |
+| Wooden Pickaxe |                         | U+E108  | ![](/assets/images/concepts/emojis/items/wooden_pickaxe.png) |
+| Wooden Sword   |                         | U+E109  | ![](/assets/images/concepts/emojis/items/wooden_sword.png)   |
+| Crafting Table |                         | U+E10A  | ![](/assets/images/concepts/emojis/items/crafting_table.png) |
+| Furnace        |                         | U+E10B  | ![](/assets/images/concepts/emojis/items/furnace.png)        |
 
-| Name         | Letter (Copy/Paste This) | Unicode | Image                                                   |
-| ------------ | ------------------------ | ------- | ------------------------------------------------------- |
-| Left Click   |                         | U+E060  | ![](/assets/images/concepts/emojis/pc/left_click.png)   |
-| Right Click  |                         | U+E061  | ![](/assets/images/concepts/emojis/pc/right_click.png)  |
-| Middle Click |                         | U+E062  | ![](/assets/images/concepts/emojis/pc/middle_click.png) |
+### Marketplace
 
-### Xbox (One/Series X/Series S)
+| Name     | Letter (Copy/Paste This) | Unicode | Image                                                        |
+| -------- | ------------------------ | ------- | ------------------------------------------------------------ |
+| Minecoin |                         | U+E102  | ![](/assets/images/concepts/emojis/marketplace/minecoin.png) |
+| Token    |                         | U+E105  | ![](/assets/images/concepts/emojis/marketplace/token.png)    |
+
+### Inventory
+
+| Name             | Letter (Copy/Paste This) | Unicode | Image                                                              |
+| ---------------- | ------------------------ | ------- | ------------------------------------------------------------------ |
+| Craft Toggle On  |                         | U+E0A0  | ![](/assets/images/concepts/emojis/inventory/craft_toggle_on.png)  |
+| Craft Toggle Off |                         | U+E0A1  | ![](/assets/images/concepts/emojis/inventory/craft_toggle_off.png) |
+
+### New Touch
+
+| Name      | Letter (Copy/Paste This) | Unicode | Input Key                                     | Image                                                      |
+| --------- | ------------------------ | ------- | --------------------------------------------- | ---------------------------------------------------------- |
+| Jump      |                         | U+E014  | :tip_virtual_button_jump:                     | ![](/assets/images/concepts/emojis/new_touch/jump.png)     |
+| Attack    |                         | U+E015  | :tip_virtual_button_action_attack_or_destroy: | ![](/assets/images/concepts/emojis/new_touch/attack.png)   |
+| Joy Stick |                         | U+E016  | :tip_virtual_joystick:                        | ![](/assets/images/concepts/emojis/new_touch/joystick.png) |
+| Place     |                         | U+E018  | :tip_virtual_button_action_build_or_use:      | ![](/assets/images/concepts/emojis/new_touch/place.png)    |
+| Sneak     |                         | U+E019  | :tip_virtual_button_sneak:                    | ![](/assets/images/concepts/emojis/new_touch/sneak.png)    |
+| Sprint    |                         | U+E01A  | :tip_virtual_button_sprint:                   | ![](/assets/images/concepts/emojis/new_touch/sprint.png)   |
+| Fly Up    |                         | U+E01B  | :tip_virtual_button_fly_up:                   | ![](/assets/images/concepts/emojis/new_touch/fly_up.png)   |
+| Fly Down  |                         | U+E01C  | :tip_virtual_button_fly_down:                 | ![](/assets/images/concepts/emojis/new_touch/fly_down.png) |
+| Dismount  |                         | U+E01D  | :tip_virtual_button_dismount:                 | ![](/assets/images/concepts/emojis/new_touch/dismount.png) |
+
+### Touch
+
+| Name              | Letter (Copy/Paste This) | Unicode | Input Key             | Image                                                         |
+| ----------------- | ------------------------ | ------- | --------------------- | ------------------------------------------------------------- |
+| Jump              |                         | U+E084  | :touch_jump:          | ![](/assets/images/concepts/emojis/touch/jump.png)            |
+| Crouch            |                         | U+E085  | :touch_sneak:         | ![](/assets/images/concepts/emojis/touch/crouch.png)          |
+| Fly Up            |                         | U+E086  | :touch_fly_up:        | ![](/assets/images/concepts/emojis/touch/fly_up.png)          |
+| Fly Down          |                         | U+E087  | :touch_fly_down:      | ![](/assets/images/concepts/emojis/touch/fly_down.png)        |
+| Stop Flying       |                         | U+E088  | :touch_stop_flying:   | ![](/assets/images/concepts/emojis/touch/stop_flying.png)     |
+| Left Arrow        |                         | U+E081  | :touch_left:          | ![](/assets/images/concepts/emojis/touch/left_arrow.png)      |
+| Right Arrow       |                         | U+E083  | :touch_right:         | ![](/assets/images/concepts/emojis/touch/right_arrow.png)     |
+| Up Arrow          |                         | U+E080  | :touch_forward:       | ![](/assets/images/concepts/emojis/touch/up_arrow.png)        |
+| Down Arrow        |                         | U+E082  | :touch_back:          | ![](/assets/images/concepts/emojis/touch/down_arrow.png)      |
+| Small Jump        |                         | U+E059  | :tip_touch_jump:      | ![](/assets/images/concepts/emojis/touch/smalljump.png)       |
+| Small Crouch      |                         | U+E05A  | :tip_touch_sneak:     | ![](/assets/images/concepts/emojis/touch/smallcrouch.png)     |
+| Small Fly Up      |                         | U+E05C  | :tip_touch_fly_up:    | ![](/assets/images/concepts/emojis/touch/smallflyup.png)      |
+| Small Fly Down    |                         | U+E05D  | :tip_touch_fly_down:  | ![](/assets/images/concepts/emojis/touch/smallflydown.png)    |
+| Small Left Arrow  |                         | U+E056  | :tip_touch_left:      | ![](/assets/images/concepts/emojis/touch/smallleftarrow.png)  |
+| Small Right Arrow |                         | U+E058  | :tip_touch_right:     | ![](/assets/images/concepts/emojis/touch/smallrightarrow.png) |
+| Small Up Arrow    |                         | U+E055  | :tip_touch_forward:   | ![](/assets/images/concepts/emojis/touch/smalluparrow.png)    |
+| Small Down Arrow  |                         | U+E057  | :tip_touch_back:      | ![](/assets/images/concepts/emojis/touch/smalldownarrow.png)  |
+| Small Inventory   |                         | U+E05B  | :tip_touch_inventory: | ![](/assets/images/concepts/emojis/touch/smallinventory.png)  |
+
+### Keyboard & Mouse
+
+| Name               | Letter (Copy/Paste This) | Unicode | Input Key                   | Image                                                               |
+| ------------------ | ------------------------ | ------- | --------------------------- | ------------------------------------------------------------------- |
+| Left Click         |                         | U+E060  | :mouse_left_button:         | ![](/assets/images/concepts/emojis/keyboard/left_click.png)         |
+| Right Click        |                         | U+E061  | :mouse_right_button:        | ![](/assets/images/concepts/emojis/keyboard/right_click.png)        |
+| Middle Click       |                         | U+E062  | :mouse_middle_button:       | ![](/assets/images/concepts/emojis/keyboard/middle_click.png)       |
+| Small Left Click   |                         | U+E070  | :light_mouse_left_button:   | ![](/assets/images/concepts/emojis/keyboard/small_left_click.png)   |
+| Small Right Click  |                         | U+E071  | :light_mouse_right_button:  | ![](/assets/images/concepts/emojis/keyboard/small_right_click.png)  |
+| Small Middle Click |                         | U+E072  | :light_mouse_middle_button: | ![](/assets/images/concepts/emojis/keyboard/small_middle_click.png) |
+| Small Mouse        |                         | U+E073  | :light_mouse_button:        | ![](/assets/images/concepts/emojis/keyboard/small_mouse.png)        |
+
+### Xbox
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                      |
 | ------------------ | ------------------------ | ------- | ---------------------------------------------------------- |
@@ -85,7 +158,7 @@ There will be instructions for creating custom emoji at the bottom.
 | D-pad Down         |                         | U+E04E  | ![](/assets/images/concepts/emojis/switch/dpad_down.png)     |
 | D-pad Left         |                         | U+E04D  | ![](/assets/images/concepts/emojis/switch/dpad_left.png)     |
 
-### Playstation (4/5)
+### PlayStation (4/5)
 
 | Name               | Letter (Copy/Paste This) | Unicode | Image                                                             |
 | ------------------ | ------------------------ | ------- | ----------------------------------------------------------------- |
@@ -141,61 +214,149 @@ There will be instructions for creating custom emoji at the bottom.
 | LS (Left Stick)           |                         | U+E0C3  | ![](/assets/images/concepts/emojis/windowsMR/left_stick.png)                |
 | RS (Right Stick)          |                         | U+E0C4  | ![](/assets/images/concepts/emojis/windowsMR/right_stick.png)               |
 
-## Custom Emoji
+### Other
 
-::: warning
-This method is not officially supported. Use with caution on the Marketplace!
+| Name             | Letter (Copy/Paste This) | Unicode | Image                                                          |
+| ---------------- | ------------------------ | ------- | -------------------------------------------------------------- |
+| Crosshair        |                         | U+E017  | ![](/assets/images/concepts/emojis/other/crosshair.png)        |
+| Agent            |                         | U+E103  | ![](/assets/images/concepts/emojis/other/agent.png)            |
+| Immersive Reader |                         | U+E104  | ![](/assets/images/concepts/emojis/other/immersive_reader.png) |
+| Hollow Star      |                         | U+E106  | ![](/assets/images/concepts/emojis/other/hollow_star.png)      |
+| Solid Star       |                         | U+E107  | ![](/assets/images/concepts/emojis/other/solid_star.png)       |
+
+### Additional Input Keys
+
+Input keys can be used to automatically detect the input of the player and be used with /titleraw or /tellraw with the `text` component.
+
+Below are the results of default keybindings. All text below, including "Unassigned", is literal and will display that text to the player.
+
+| Name             | Input Key                    | Keyboard & Mouse                                             | Touch                                                     | Xbox                                                       | Nintendo Switch                                              | Playstation (4/5)                                                 |
+| ---------------- | ---------------------------- | ------------------------------------------------------------ | --------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| Jump             | :\_input_key.jump:           | SPACE                                                        | ![](/assets/images/concepts/emojis/touch/jump.png)        | ![](/assets/images/concepts/emojis/xbox/a_button.png)      | ![](/assets/images/concepts/emojis/switch/a_button.png)      | ![](/assets/images/concepts/emojis/playstation/cross.png)         |
+| Sneak            | :\_input_key.sneak:          | SHIFT                                                        | ![](/assets/images/concepts/emojis/touch/crouch.png)      | ![](/assets/images/concepts/emojis/xbox/b_button.png)      | ![](/assets/images/concepts/emojis/switch/b_button.png)      | ![](/assets/images/concepts/emojis/playstation/circle.png)        |
+| Sprint           | :\_input_key.sprint:         | CONTROL                                                      | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/left_stick.png)    | ![](/assets/images/concepts/emojis/switch/left_stick.png)    | ![](/assets/images/concepts/emojis/playstation/left_stick.png)    |
+| Forward          | :\_input_key.forward:        | W                                                            | ![](/assets/images/concepts/emojis/touch/up_arrow.png)    | Unassigned                                                 | Unassigned                                                   | Unassigned                                                        |
+| Back             | :\_input_key.back:           | S                                                            | ![](/assets/images/concepts/emojis/touch/down_arrow.png)  | Unassigned                                                 | Unassigned                                                   | Unassigned                                                        |
+| Left             | :\_input_key.left:           | A                                                            | ![](/assets/images/concepts/emojis/touch/left_arrow.png)  | Unassigned                                                 | Unassigned                                                   | Unassigned                                                        |
+| Right            | :\_input_key.right:          | D                                                            | ![](/assets/images/concepts/emojis/touch/right_arrow.png) | Unassigned                                                 | Unassigned                                                   | Unassigned                                                        |
+| Attack           | :\_input_key.attack:         | ![](/assets/images/concepts/emojis/keyboard/left_click.png)  | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/right_trigger.png) | ![](/assets/images/concepts/emojis/switch/right_trigger.png) | ![](/assets/images/concepts/emojis/playstation/right_trigger.png) |
+| Inventory        | :\_input_key.inventory:      | E                                                            | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/y_button.png)      | ![](/assets/images/concepts/emojis/switch/x_button.png)      | ![](/assets/images/concepts/emojis/playstation/triangle.png)      |
+| Cycle Item Left  | :\_input_key.cycleItemLeft:  | Unassigned                                                   | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/left_bumper.png)   | ![](/assets/images/concepts/emojis/switch/left_bumper.png)   | ![](/assets/images/concepts/emojis/playstation/left_bumper.png)   |
+| Cycle Item Right | :\_input_key.cycleItemRight: | Unassigned                                                   | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/right_bumper.png)  | ![](/assets/images/concepts/emojis/switch/right_bumper.png)  | ![](/assets/images/concepts/emojis/playstation/right_bumper.png)  |
+| Use              | :\_input_key.use:            | ![](/assets/images/concepts/emojis/keyboard/right_click.png) | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/left_trigger.png)  | ![](/assets/images/concepts/emojis/switch/left_trigger.png)  | ![](/assets/images/concepts/emojis/playstation/left_trigger.png)  |
+| Drop             | :\_input_key.drop:           | Q                                                            | Unassigned                                                | ![](/assets/images/concepts/emojis/xbox/dpad_down.png)     | ![](/assets/images/concepts/emojis/switch/dpad_down.png)     | ![](/assets/images/concepts/emojis/playstation/dpad_down.png)     |
+| Code Builder     | :\_input_key.codeBuilder:    | Unassigned                                                   | Unassigned                                                | Unassigned                                                 | Unassigned                                                   | Unassigned                                                        |
+
+## Custom Emojis
+
+::: warning NOTE:
+This method is not officially supported. While many creators use it on the Marketplace, caution is advised.
 :::
 
-To make a custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some _character-slots_ are already used up with the emoji above, but there are blank slots we can use.
+To make a custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some _character-slots_ are already used up with the emojis above, but there are blank slots we can use.
 
-Please note that the following files have been annotated with slot information: If you use them directly, existing Emoji will have numbers added on top of them. If you need the original sprite-sheets, you can get them from the Vanilla Resources on your system (not included in the Vanilla Resource Pack downloads).
+To get started, download the sprite-sheets below, and move them into the fonts folder.
 
-To get started, you should download the sprite-sheets, and move them into the fonts folder.
+Two sprite sheets are provided for each glyph target: one annotated with hex information for easily find the correct character, and a second version that accurately reflects Vanilla. To avoid numbers over existing emojis, use the second version. Below, you'll also find an edited sample with some custom emojis for free-use.
 
-Two sprite-sheets are provided for each glyph-target: One that accurately reflects vanilla, and a second version which has been annotated with hex information, for easily finding the correct character.
+### Glyph E0
 
-### RP/font/glyph_E0.png
+<WikiImage
+    src="/assets/images/concepts/emojis/custom/annotated/glyph_E0.png"
+    caption="RP/font/glyph_E0.png"
+    width="512"
+    pixelated
+/>
 
-![](/assets/images/concepts/emojis/custom/annotated/glyph_E0.png)
-![](/assets/images/concepts/emojis/custom/glyph_E0.png)
+<WikiImage src="/assets/images/concepts/emojis/custom/glyph_E0.png" width="512" pixelated />
 
-### RP/font/glyph_E1.png
+### Glyph E1
 
-![](/assets/images/concepts/emojis/custom/annotated/glyph_E1.png)
-![](/assets/images/concepts/emojis/custom/glyph_E1.png)
+<WikiImage
+    src="/assets/images/concepts/emojis/custom/annotated/glyph_E1.png"
+    caption="RP/font/glyph_E1.png"
+    width="512"
+    pixelated
+/>
+
+<WikiImage src="/assets/images/concepts/emojis/custom/glyph_E1.png" width="512" pixelated />
+
+_Edited sample `glyph_E1.png` (CC0), shared by @zheaEvyline for free use:_
+
+![](/assets/images/concepts/emojis/custom/edited/glyph_E1.png)
+
+If you'd like to add existing Vanilla items to the glyph and use them as emojis in-game, you can easily do so with the **[Items to Glyph Web Tool](https://minato-mba.github.io/content/Items%20to%20Glyph.html)** created by @Minato
 
 Your filepath should look like this:
 
-<div markdown="0" class="folder-structure">
-    <ul>
-        <li><span class="folder">RP</span>
-            <ul>
-                <li><span class="folder">font</span>
-                    <ul>
-                        <li><span class="image">glyph_E0.png</span></li>
-                        <li><span class="image">glyph_E1.png</span></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<FolderView :paths="[
+    'RP/font/glyph_E0.png',
+    'RP/font/glyph_E1.png'
+]" />
 
-### Finding the correct hex.
+:::tip
+`E0` and `E1` aren't the only code points available to achieve custom emojis.  
 
-Once you have emojis inside the `glyph_E0.png` or `glyph_E1.png` you need to find your character in a hex. First two characters (`F0` or `F1`) depend on which file you added emojis to.
-Next to characters determine the position inside the image like this `<row><column>`, where each character is a number in hexadecimal numeral system.
+You can also use `E2`, `E3`, `E4`, `E5`, `E6`, `E7`, `E8`, `E9`, `EA`, `EB`, `EC`, `ED`, `EE`, `EF`, `F0`, `F1`, `F2`, `F3`, `F4`, `F5`, `F6`, `F7`, and `F8`, as these aren't being used by Vanilla.  
 
-Hexadecimal uses the decimal numbers and six extra symbols. There are no numerical symbols that represent values greater than nine, so letters taken from the English alphabet are used, specifically A, B, C, D, E and F. Hexadecimal A = decimal 10, and hexadecimal F = decimal 15([Source](https://simple.wikipedia.org/wiki/Hexadecimal)).
-Numbers in hexadecimal should be written with `0x` prefix.
+Using these code points can also help reduce conflicts with other packs to some extent.
+:::
 
-So after you are done, it might look like `0xE102` and need to convert the hex into a character. You can copy and paste your hex here to convert:
+### Using the Emojis In-Game
+
+Once you have your custom emojis inside the `glyph_E0.png` or `glyph_E1.png`, you need to obtain it's corresponding letter/symbol which you will be able to copy-paste to display the emoji in-game using the converter below.
+
+The first two characters of the input are `E0`, `E1`, or any other code point, depending on which file you added emojis to.
+
+The next two characters are the position inside the image in the format `<row><column>`, where each character is a number in hexadecimal numeral system.
+You can find this number by referencing the images above. For example, the top-right square in `E0` is `0F`, and the bottom right is `FF`.
+
+So, after you are done, it might look like `E102` (`E1` + `02`).
+
+Copy this code into the following field, and press **Convert**. The symbol on the right-hand side can be copy/pasted into Minecraft.
 
 <div markdown="0">
-<form>
-<input id="hexValue" placeholder="Hex value" style="padding: 1em;margin: 0.5em;border-radius: 0.2rem; border: solid 1px rgb(38, 38, 38); outline: none;"/>
-<input id="result" placeholder="Result" readonly  style="padding: 1em;margin: 0.5em;border-radius: 0.2rem; border: solid 1px rgb(38, 38, 38); outline: none;"/>
-<a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" style="text-decoration: none; color: white; background: rgb(91, 33, 182); padding: 0.5em; border-radius: 0.2em; cursor: pointer;">Convert</a>
-</form>
+    <form>
+        <input
+            id="hexValue"
+            placeholder="Hex value"
+            class="button"
+            style="background: none; outline: none;"
+        />
+        <input
+            id="result"
+            placeholder="Result"
+            readonly
+            class="button"
+            style="background: none; outline: none; margin-inline: 0.5em;"
+        />
+        <button
+            type="button"
+            class="button"
+            style="cursor: pointer;"
+            onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))"
+        >
+            Convert
+        </button>
+    </form>
 </div>
+
+Alternatively, you can obtain the letter/symbol at this website **[here](https://everythingfonts.com/unicode/0xE300)** or with the help of this **[Glyph Web Tool](https://nhanaz.github.io/glyph/)** made by @NhanAZ.
+
+### Positioning the Emoji
+
+-   To position an emoji upwards/downwards, simply move it up/down within its own emoji slot.
+-   To position an emoji towards the left or right, simply add any pixel of 5-10% opacity to its side (within its own slot), opposite to the direction you want to move it.
+    -   Ex: to move an emoji to the right by 2 pixels, add any 5-10% opacity pixel connecting to it, anywhere on its left-most side and add another one to the left of that pixel.
+
+_Note: The following steps apply only to emojis that do not fill their slot width (i.e., are smaller than the slot size)._
+
+### Glyph Separation Space
+
+Sometimes, displaying two glyphs close together in-game may leave a few empty pixels between them. The only way to fix this is by scaling the glyph (PNG file) so that your emoji, which originally spans multiple slots, fits within a single slot.
+
+For example, if you created an emoji in the `glyph_E1` file using two 16×16 slots, you would need to double the resolution of the default file (from **256×256** to **512×512**). Then, simply align your **16×32** emoji into one of the **32×32** slots in the scaled glyph file.
+
+### Resizing the Emoji
+
+To resize the emoji, change the resolution of the glyph (PNG file) to 512×512. The reason for doubling the resolution is that it increases the number of pixels, providing more room for editing. Once you've done this, open an image editor of your choice, select the new emoji, resize it, and center it within the emoji slot. This will give the emoji more space around it when used in the game.
