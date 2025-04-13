@@ -53,7 +53,7 @@ Here is an example of a few components, inside an entity:
 
 Notice how the `components` list _only_ contains components.
 
-## Component groups
+## Component Groups
 
 Component groups are "folders" for components. They group components and can be added or removed using `events` to create custom game-play.
 
@@ -164,7 +164,7 @@ For a more in depth tutorial on what events can do check out our page on entity 
 
 <Button link="/entities/entity-events">Entity Events</Button>
 
-## Uses in vanilla
+## Vanilla Usage
 
 Component groups and events are the primary tools that vanilla entities use to create custom and adaptable behavior. Here are some vanilla features that are created using component groups and events:
 
