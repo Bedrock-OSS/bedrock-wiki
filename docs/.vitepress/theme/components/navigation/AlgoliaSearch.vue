@@ -32,6 +32,7 @@ onMounted(() => {
 const docsearchProps: Partial<Parameters<typeof docsearch>[0]> = {
   container: "#docsearch",
 
+  maxResultsPerGroup: 20,
   navigator: {
     navigate: ({ itemUrl }: { itemUrl: string }) => {
       const url = new URL(window.location.origin + itemUrl);
