@@ -47,7 +47,7 @@ Here is an example of a few components, inside an entity:
         "width": 0.6,
         "height": 1.8
     },
-    "minecraft:can_climb": {},
+    "minecraft:can_climb": {}
 }
 ```
 
