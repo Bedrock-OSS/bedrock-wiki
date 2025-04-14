@@ -10,26 +10,27 @@ mentions:
     - Fabrimat
     - TheItsNameless
     - QuazChick
-description: Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accessible files.
+description: Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files.
 ---
 
 :::warning DEPRECATED
-Block shapes are no longer officially supported and cannot be used with custom blocks, however they can still be used with vanilla ones.
+Block shapes are no longer officially supported and cannot be used with custom blocks, however they can still be used with those of vanilla.
+Support was dropped after **1.19**, meaning blocks introduced in Trails and Tales and forward do not have available block shapes.
 :::
 
-Blockshapes are essentially block geometries or models that are hard-coded into vanilla, meaning that they exist without having accessible files.
+Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files. The geometries themselves cannot be overriden, nor new ones created - but existing ones can be assigned to *most* vanilla blocks through a resource pack.
 
 ## Application
 
-They are added in the resource pack's file, `blocks.json`, using child `"blockshape"` in a block's object. This would look something like this:
+They are assigned using `blocks.json`, under child `"blockshape"` of a block's object as a string.
 
 <CodeHeader>RP/blocks.json</CodeHeader>
 
 ```json
-"wiki:invisible_aluminium_ore": {
-  "blockshape": "invisible",
-  "sound": "stone",
-  "textures": "invisible_aluminium_ore"
+"minecraft:dirt": {
+  "blockshape": "block",
+  "sound": "gravel",
+  "textures": "flattened_dirt"
 }
 ```
 
@@ -124,6 +125,6 @@ They are added in the resource pack's file, `blocks.json`, using child `"blocksh
 | 133 | flowering_azalea          |
 | 134 | glow_frame                |
 | 135 | glow_lichen               |
-| 136 | redstone_wire"            |
+| 136 | redstone_wire             |
 
 [ Original Credit ](https://gist.github.com/toka7290/3bef704d2f57c775bb9ac84443a6df1c)
