@@ -16,6 +16,36 @@ A common concept for add-ons is implementing new armor sets with unique effects,
 Items don't have a component for inflicting mob effects, emitting particles, etc. under certain conditions.
 However, using the `hasitem` command selector or server animations, this can easily be done!
 
+## Command Selector Method
+
+The [`hasitem`](https://minecraft.wiki/w/Target_selectors#Selecting_targets_by_item) selector parameter can be used to target entities based on the items in their equipment slots.
+
+You can view a list of additional slot identifiers at the [Minecraft Wiki](https://minecraft.wiki/w/Slot#Bedrock_Edition).
+
+<CodeHeader>Target Selector</CodeHeader>
+
+```c
+@e[hasitem={item=wiki:custom_helmet,location=slot.armor.head}]
+```
+
+By using a function that is listed in the `tick.json` file, we can run commands using this selector every tick.
+
+For example, to make a custom helmet give its wearer jump boost, the following function could be used:
+
+<CodeHeader>RP/functions/wiki/custom_helmet_effects.mcfunction</CodeHeader>
+
+```c
+effect @e[hasitem={item=wiki:custom_helmet,location=slot.armor.head}] jump_boost 10
+```
+
+<CodeHeader>BP/functions/tick.json</CodeHeader>
+
+```json
+{
+    "values": ["wiki/custom_helmet_effects"]
+}
+```
+
 ## Server Animation Method
 
 Keep in mind that this requires modifying the player behavior, which is a common theme for many add-ons; thus, your add-on may not be compatible with others if you wish to do this.
