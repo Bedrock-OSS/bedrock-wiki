@@ -1,5 +1,5 @@
 ---
-title: Add Hud Elements
+title: Adding HUD Elements
 category: Tutorials
 tags:
     - beginner
