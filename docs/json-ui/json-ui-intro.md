@@ -20,6 +20,7 @@ mentions:
     - TheItsNameless
     - ThomasOrs
     - QuazChick
+    - Cra-ZGuy
 description: Introduction to JSON UI.
 ---
 
@@ -767,15 +768,53 @@ Like before, here's a more complicated example of conditional rendering with bin
 
 ## String Formatting
 
-There are several format specifiers like formats that allows us to access or manipulate strings in JSON UI. They work by multiplying them with a string in bindings and variables.
+String formatting is used in JSON UI to access or manipulate parts of a string using format specifiers. Format specifiers are multiplied with strings in variables or bindings to return a transformed result.
 
-Let's assume we have a variable `"$var": "abcdefghijklmn"`. Here are the known formats:
-- `'%.ns'` can be used to get first n characters of a string. For example: `('%.7s' * $var)` will return `abcdefg`.
-- `'%0ns'` returns the string if there are n or greater than n characters in the string otherwise returns 0 or false. For example: `('%04s' * $var)` will return `abcdefghijklmn` while `('%015s' * $var)` will return `0` or `false`.
-- `'%n.xs'` returns x characters of a string and adds padding of empty space at start till string length becomes n. For example: `('%7.4s' * $var)` will return `   abcd`.
-- `'%-n.xs'` returns x characters of a string and adds padding of empty space at end till string length becomes n. For example: `('%-7.4s' * $var)` will return `abcd   `.
-- `'%ns'` seems to add empty space at the start. For example:  `('%15s' * $var)` will return ` abcdefghijklmn`. If n is smaller or equal to string length, it just returns the string.
-- `'%-ns'` seems to add empty space at the end. For example:  `('%-15s' * $var)` will return `abcdefghijklmn `. If n is smaller or equal to string length, it just returns the string.
+### Unicode Character Width
+
+String length in format specifiers is measured in **display units**, not character count. Each character takes up a number of units depending on its Unicode code point:
+
+- Characters `U+0000`-`U+007F` (e.g. letters, numbers, basic symbols) count as **1 unit**  
+- Characters `U+0080`-`U+07FF` (e.g. `§`, Latin-1 accents) count as **2 units**  
+- Characters above `U+07FF` (e.g. emojis, non-Latin scripts, custom glyphs) count as **3 units**
+
+If a string is read incorrectly, (i.e. cutting off a multi-unit character in the middle) the last character may fail to render. For example, if a glyph (3 units wide) is sliced at 2 units with `%.2s`, it will not display at all.
+
+### Format Specifiers
+
+Assuming the variable **$var** is defined as:
+
+```json
+"$var": "abcdefghijklmn"
+```
+
+The following format specifiers can be used:
+
+- `%.ns`  
+  Truncates the string to the first **n display units**.  
+  Example: `('%.7s' * $var)` returns `abcdefg`.
+
+- `%0ns`  
+  Returns the full string if its length is **n or more units**, otherwise returns `0`.  
+  Example:  
+  `('%04s' * $var)` returns `abcdefghijklmn`  
+  `('%015s' * $var)` returns `0`
+
+- `%n.xs`  
+  Returns **x units** from the start, padded with **leading spaces** to reach **n units** in total.  
+  Example: `('%7.4s' * $var)` returns `   abcd`.
+
+- `%-n.xs`  
+  Returns **x units** from the start, padded with **trailing spaces** to reach **n units** in total.  
+  Example: `('%-7.4s' * $var)` returns `abcd   `.
+
+- `%ns`  
+  Adds **spaces to the start** to make the total length **n units**, if needed.  
+  Example: `('%15s' * $var)` returns ` abcdefghijklmn`.
+
+- `%-ns`  
+  Adds **spaces to the end** to make the total length **n units**, if needed.  
+  Example: `('%-15s' * $var)` returns `abcdefghijklmn `.
 
 Remember that the usage of this format is limited.
 
