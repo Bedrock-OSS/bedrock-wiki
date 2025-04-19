@@ -465,7 +465,7 @@ Type: String/Object/Vector [a, b, c]
 
 Configuration of your block's rendering, including textures and lighting.
 
--   All instances must have the same render method.
+-   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
 -   Block faces will unconditionally darken if intersecting another block.
 -   The texture on the `down` face is used for destruction particles.
 
