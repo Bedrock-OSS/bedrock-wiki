@@ -142,7 +142,7 @@ A `"sides"` property is available as a catch-all to match `"north"`, `"west"`, `
 
 For attachment along the sides (`"north"`, `"south"`, `"east"`, `"west"`), 2 more optional properties are available for fine control.
 
-`"min_sides_must_attach"` sets the minimum number of successes yielded by provided side properties that will result in side attachment being flagged as successful. Therefore, if this property is set to `4`, all four sides must match. If set to `2` and only 1 side matched, block placement would fail.
+`"min_sides_must_attach"` sets the minimum number of successes yielded by provided **side** properties that will result in side attachment being flagged as successful. Therefore, if this property is set to `4`, all four sides must match. If set to `2` and only 1 side matched, block placement would fail. `"top"` and `"bottom"` properties must always be satisfied regardless of `"min_sides_must_attach"`.
 
 `"auto_rotate"` causes side definitions to be interpreted as relative associations instead of strict directions. As an example, if a block should be squeezed laterally in one dimension between two other blocks but the orientation doesn’t matter, enabling auto rotate and specifying opposing sides would allow either orientation to work.
 
