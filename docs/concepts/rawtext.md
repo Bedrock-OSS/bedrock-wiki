@@ -1,11 +1,12 @@
 ---
-title: Rawtext
+title: Raw Text
+description: Understanding raw text JSON components used in the /tellraw and /titleraw commands.
 mentions:
   - BedrockCommands
   - GTB3NW
   - SpacebarNinja
   - zheaEvyline
-description: Understanding Rawtext JSON Components used in the /tellraw  and /titleraw commands.
+  - QuazChick
 ---
 
 ## Introduction
@@ -19,7 +20,7 @@ Rawtexts are used to send and display rich text to players. This can be used in 
 Inside the squared brackets `[]`, this is where you will list multiple text objects of your choice.
 
 ```json
-{"rawtext":[]}
+{ "rawtext": [] }
 ```
 
 You can combine components by adding a comma ` , ` at the end of a component.
@@ -31,7 +32,7 @@ Displays a text. Used inside the quotation marks.
 **Syntax:**
 
 ```json
-{"text" :"<Your Text Here>"}
+{ "text": "<Your Text Here>" }
 ```
 
 **Example:**
@@ -39,7 +40,7 @@ Displays a text. Used inside the quotation marks.
 Send a "Hello everyone!" message to all players in chat:
 
 ```json
-/tellraw @a {"rawtext":[{"text":"Hello everyone!"}]}
+/tellraw @a { "rawtext": [{ "text":"Hello everyone!" }] }
 ```
 
 ### Breaks, Line Breaks, And Unicodes
@@ -47,7 +48,7 @@ Send a "Hello everyone!" message to all players in chat:
 1. Breaks are accessed as ` \ ` and are used in order to use quotation marks ` " ` within components. Example:
 
 ```json
-/tellraw @a {"rawtext":[{"text":"He said, \"I like apples\"..."}]}
+/tellraw @a { "rawtext": [{ "text":"He said, \"I like apples\"..." }] }
 #Output in chat:
 #    He said, "I like apples"...
 ```
@@ -55,7 +56,7 @@ Send a "Hello everyone!" message to all players in chat:
 2. Line breaks are used as ` \n ` to go down a line. Example:
 
 ```json
-/tellraw @a {"rawtext":[{"text":"Hello\nNext line"}]}
+/tellraw @a { "rawtext": [{ "text":"Hello\nNext line" }] }
 #Output in chat:
 #    Hello
 #    Next line
@@ -64,7 +65,7 @@ Send a "Hello everyone!" message to all players in chat:
 3. Unicodes provides a unique number that displays an icon/emoji. Example:
 
 ```json
-/tellraw @a {"rawtext":[{"text":"\ue100"}]}
+/tellraw @a { "rawtext": [{ "text":"\ue100" }] }
 ```
 - Output in chat:
     - ![](/assets/images/concepts/emojis/hud/food.png)
@@ -79,18 +80,18 @@ Displays the name of a target of your choice. Target Selector arguments are allo
 **Syntax:**
 
 ```json
-{"selector":"<target>"}
+{ "selector":"<target>" }
 ```
 
 **Examples:**
 
 1. Send name of all players in chat:
 ```json
-/tellraw @a {"rawtext":[{"selector":"@a"}]}
+/tellraw @a { "rawtext": [{ "selector": "@a" }] }
 ```
 2. Send name of all players tagged 'wiki:winner' in chat:
 ```json
-/tellraw @a {"rawtext":[{"selector":"@a [tag=wiki:winner]"}]}
+/tellraw @a { "rawtext": [{ "selector": "@a[tag=wiki:winner]" }] }
 ```
 
 ## Score Component
@@ -99,7 +100,7 @@ Displays a score from a scoreboard objective.
 
 **Syntax:**
 ```json
-{"score":{"name":"<name>", "objective":"<score>"}}
+{ "score": { "name": "<name>", "objective":"<score>" } }
 ```
 
 - **` name `** - This can be any selector like `@p` or a player's name.
@@ -112,11 +113,11 @@ Both are required when using the score component.
 
 1. Display the `wiki:points` score of the closest player in chat:
 ```json
-/tellraw @a {"rawtext" :[{"score":{"name":"@p","objective":"wiki:points"}}]}
+/tellraw @a { "rawtext": [{ "score": { "name": "@p", "objective": "wiki:points" } }] }
 ```
 2. Display the `wiki:money` score of the reader in chat:
 ```json
-/titleraw @a title {"rawtext":[{"score":{"name":"*","objective":"wiki:money"}}]}
+/titleraw @a title { "rawtext": [{ "score": { "name": "*", "objective": "wiki:money" } }] }
 ```
 
 ## Translate Component
@@ -126,13 +127,13 @@ Allows creators to display localized text to users. The list of the strings to t
 **Syntax:**
 
 ```json
-{"translate":"<string>"}
+{ "translate": "<string>" }
 ```
 
 **Example:**
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"multiplayer.player.joined"}]}
+/tellraw @a { "rawtext": [{ "translate": "multiplayer.player.joined" }] }
 #Output in chat:
 #    %s joined the game
 ```
@@ -140,7 +141,7 @@ Allows creators to display localized text to users. The list of the strings to t
 In the example above, it outputs "`%s joined the game`". For a name to appear instead of `%s`, ` with ` needs to be specified as well. Requires an array ` [] ` instead of curly brackets ` {} `
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"multiplayer.player.joined", "with": ["Steve"]}]}
+/tellraw @a { "rawtext": [{ "translate": "multiplayer.player.joined", "with": ["Steve"] }] }
 #Output in chat:
 #    Steve joined the game
 ```
@@ -152,7 +153,7 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 `translate` and `%s` can be used without a matching string in the localization files. For example:
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"Hello %%s", "with":["Steve"]}]}
+/tellraw @a { "rawtext": [{ "translate": "Hello %%s", "with": ["Steve"] }] }
 #Output in chat:
 #    Hello Steve
 ```
@@ -163,7 +164,7 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 `%%s` can be used multiple times. They are filled in the order as shown.
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"Hello %%s and %%s", "with":["Steve","Alex"]}]}
+/tellraw @a { "rawtext": [{ "translate": "Hello %%s and %%s", "with": ["Steve","Alex"] }] }
 #Output in chat:
 #    Hello Steve and Alex
 ```
@@ -173,7 +174,7 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 The order to fill in ` %s ` can be changed by replacing ` s ` with a number at the end. For example, to swap the position of Steve and Alex in the above example:
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"Hello %%2 and %%1", "with":["Steve","Alex"]}]}
+/tellraw @a { "rawtext": [{ "translate": "Hello %%2 and %%1", "with": ["Steve","Alex"] }] }
 #Output in chat:
 #    Hello Alex and Steve
 ```
@@ -181,7 +182,7 @@ The order to fill in ` %s ` can be changed by replacing ` s ` with a number at t
 And instead of an array, you can use a rawtext component, like so.
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"Hello %%s and %%s","with": {"rawtext":[{"text":"Steve"},{"translate":"item.apple.name"}]}}]}
+/tellraw @a { "rawtext": [{ "translate": "Hello %%s and %%s", "with": { "rawtext": [{ "text":"Steve" }, { "translate": "item.apple.name" }] } }] }
 #Output in chat:
 #    Hello Steve and Apple
 ```
@@ -189,7 +190,7 @@ And instead of an array, you can use a rawtext component, like so.
 *Additional example shared by @CornyFlex:*
 
 ```json
-/tellraw @a {"rawtext":[{"translate":"Role: %%%%s","with":{"rawtext":[{"score":{"name":"*","objective":"wiki:role"}},{"text":"Member"},{"text":"Moderator"},{"text":"Admin"}]}}]}
+/tellraw @a { "rawtext": [{ "translate": "Role: %%%%s", "with": { "rawtext": [{ "score": { "name": "*", "objective": "wiki:role" } }, { "text":"Member" }, { "text": "Moderator" }, { "text": "Admin" }] } }] }
 ```
 This structure allows you to display different text to the selected players based on scores.
 
