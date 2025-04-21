@@ -171,6 +171,81 @@ Some text...
 -   b
 -   c
 
+## Molang
+
+```molang
+false
+true
+
+0
+0.0
+0.0f
+-0
+-0.0
+-0.0f
+
+2.5e2
+2.5e+2
+2.5e-2
+
+'string'
+
+this
+
+break
+continue
+return
+
+!
+=
+<
+>
+!=
+==
+<=
+>=
+? :
+*
+/
++
+-
+&&
+||
+??
+->
+
+loop()
+for_each()
+
+c.my_value
+context.my_value
+
+q.my_value
+query.my_value
+query.my_value()
+
+math.my_value
+math.my_value()
+
+t.my_value
+temp.my_value
+
+v.my_value
+variable.my_value
+
+array.my_value
+array.textures[v.texture_index]
+
+geometry.my_value
+
+material.my_value
+
+texture.my_value
+
+,
+;
+```
+
 ## Snippets
 
 `Ctrl + Space`
