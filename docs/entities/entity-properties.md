@@ -108,7 +108,7 @@ Property values are returned by the `property` query function.
 
 <CodeHeader>Molang Expression</CodeHeader>
 
-```c
+```molang
 !q.property('wiki:bool_property_example')
 ```
 

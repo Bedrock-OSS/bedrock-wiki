@@ -136,19 +136,19 @@ Add `scripts` to `description`, and set a Molang query to run. To check for the 
 
 -   `q.is_item_name_any`, to check for a given item identifier in any slot. This example will check for `wiki:totem_of_retreat` in either hand:
 
-```c
+```molang
 q.is_item_name_any('slot.weapon.mainhand', 'wiki:totem_of_retreat') || q.is_item_name_any('slot.weapon.offhand', 'wiki:totem_of_retreat')
 ```
 
 -   `q.equipped_item_any_tag`, to check for at least one of any given tag in a given slot. This example will allow an emerald- or phantom- tier armor piece to be used:
 
-```c
+```molang
 q.equipped_item_any_tag('slot.armor.head', 'wiki:emerald_tier', 'wiki:phantom_tier')
 ```
 
 -   `q.equipped_item_all_tags`, to check for all given tags in a given slot. This example will only allow an armor piece that's both emerald- and ancient- tier:
 
-```c
+```molang
 q.equipped_item_all_tags('slot.armor.head', 'wiki:ancient_tier', 'wiki:emerald_tier')
 ```
 

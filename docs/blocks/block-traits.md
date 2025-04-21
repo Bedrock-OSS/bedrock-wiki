@@ -47,7 +47,7 @@ _This example will set the `minecraft:vertical_half` block state when placed to 
 
 **Permutations are still required for this state to make a functional difference, with conditions querying**
 
-```c
+```molang
 q.block_state('minecraft:vertical_half')
 ```
 

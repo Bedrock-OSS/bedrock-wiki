@@ -534,7 +534,7 @@ Returns one of the 3 components from the normalized vector of the entity movemen
 
 To get the actual normalized velocity vector of the entity movement you will have to normalize the values. Here is the Molang setup:
 
-```
+```molang
 variable.mag = math.sqrt( math.pow( query.movement_direction(0), 2 ) + math.pow( query.movement_direction(1), 2) + math.pow( query.movement_direction(2), 2));
 variable.xNorm = query.movement_direction(0) / variable.mag;
 variable.yNorm = query.movement_direction(1) / variable.mag;

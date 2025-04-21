@@ -179,7 +179,7 @@ pre_animation runs before the animation, and runs this script. The script is int
 
 For now you can hard-code these to the world location 10,y,10, where y is just at the same height as the entity.
 
-```
+```molang
 v.target.x = 10;
 v.target.y = q.position(1);
 v.target.z = 10;
@@ -219,7 +219,7 @@ Which is happening right to left.
 
 If normally (in forward direction) you're going from ent to world, you'd take your Entity-relative position (like a joint position) and add the entity's. So in reverse, we subtract the entitie's location.
 
-```
+```molang
 v.target_x = v.target_x - q.position(0);
 v.target_y = v.target_y - q.position(1);
 v.target_z = v.target_z - q.position(2);
@@ -233,7 +233,7 @@ currently entities appear to only be able to adjust from the controllers via pit
 
 To query the entity's yaw, there's a query method: q.body_y_rotation. We'll use that but consider that a positive rotation should make the character turn to the left. Rotating a vector by an angle, is a pretty simple formula, using sin and cos, but getting the sign right is important. Just think if you have a vector that starts facing world +z, and then get's rotated to the left, what will the +X axis become initially positive or initially negative? In our case X left is actually world space still so X left is positive. Likewise, if we had a vector facing positive +X (to the left), and we then started rotating to the left, the Z axis would start becoming?... Yes negative. You only negate the sine term. One last note, t.x is a temporary to save the value of the target
 
-```
+```molang
 t.cos_yaw = math.cos(q.body_y_rotation);
 t.sin_yaw = math.sin(q.body_y_rotation);
 t.x = v.target_x;
@@ -252,7 +252,7 @@ Where first and second axis are the two perpendicular axes to the one being rota
 
 In other words, here's another alternative, that will be more consistent with other Euler angles, XY, and YZ.
 
-```
+```molang
 t.cos_yaw = math.cos(q.body_y_rotation);
 t.sin_yaw = math.sin(q.body_y_rotation);
 t.z = v.target.z;
@@ -272,7 +272,7 @@ The last step, is to apply the scale from world to entity. Entities need to be r
 
 And there's a sneaky little last negation included here, as was pointed out technically X is flipped from what it SEEMS like it should be in Blockbench when animating, but that actually lines it up with the world coordinate frame, wheres the Z is still opposite. So we just have to flip the Z in the scale step.
 
-```
+```molang
 v.target.x = v.target.x * 16;
 v.target.y = v.target.y * 16;
 v.target.z = -v.target.z * 16;

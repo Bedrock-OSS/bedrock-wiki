@@ -108,7 +108,7 @@ Permutation conditions are written as Molang expression strings, and have very l
     -   The following math functions may not be used: `math.die_roll`, `math.die_roll_integer`, `math.random`, `math.random_integer`.
     -   Variables (including `temp` variables) cannot be assigned.
 
-```c
+```molang
 q.block_state('wiki:integer_state_example') < 6 && !q.block_state('wiki:boolean_state_example')
 ```
 

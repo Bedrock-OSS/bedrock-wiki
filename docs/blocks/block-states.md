@@ -56,7 +56,7 @@ State values are returned by the `block_state` query function.
 
 <CodeHeader>Molang Expression</CodeHeader>
 
-```c
+```molang
 q.block_state('wiki:string_state_example') == 'blue'
 ```
 
