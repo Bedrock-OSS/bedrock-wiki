@@ -2,6 +2,7 @@ import { defineConfigWithTheme } from "vitepress";
 import taskListsPlugin from "markdown-it-task-lists";
 
 import { ThemeConfig } from "./theme";
+import languages from "./theme/languages";
 
 import head, { transformHead } from "./head";
 import redirects from "./redirects";
@@ -84,6 +85,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       level: [2, 3, 4, 5, 6],
     },
     math: true,
+    languages,
     lineNumbers: true,
     config(md) {
       md.use(taskListsPlugin, { label: true });
