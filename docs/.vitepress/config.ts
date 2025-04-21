@@ -87,6 +87,10 @@ export default defineConfigWithTheme<ThemeConfig>({
     math: true,
     languages,
     lineNumbers: true,
+    theme: {
+      dark: "dark-plus",
+      light: "light-plus",
+    },
     config(md) {
       md.use(taskListsPlugin, { label: true });
     },
