@@ -90,18 +90,14 @@ However, they can also cull against other types of blocks based on the rule's `c
 
 ```json
 {
-    "condition": "same_block", // Cull against a full, opaque block OR a block with the same identifier.
+    "cull_against_full_and_opaque": true, // Cull against a full, opaque block.
+    "condition": "same_block", // Cull against a block with the same identifier.
     "direction": "down",
     "geometry_part": {
         "bone": "lamp_bulb" // Name of the bone containing the cube to be culled.
     }
 }
 ```
-
-### Default
-
-When the `default` condition is used, the specified geometry part is only culled if the adjacent block is full and opaque.
-This culling also applies to all of the following conditions.
 
 ### Same Block
 
