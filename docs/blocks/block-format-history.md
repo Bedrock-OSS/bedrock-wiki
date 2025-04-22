@@ -16,6 +16,27 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.90
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:custom_components`
+
+    -   Custom components should now be applied in the same way as vanilla components, as entries in the `components` object:
+
+        <CodeHeader>minecraft:block</CodeHeader>
+
+        ```json
+        "components": {
+            "minecraft:friction": 0.4,
+            "wiki:custom_component": {
+                "parameter": "value"
+            }
+        }
+        ```
+
 ## 1.21.80
 
 ### Components
@@ -47,19 +68,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 <Label color="green">Versioned</Label>
 
 -   Removed `minecraft:custom_components`
-
-    -   Custom components should now be applied in the same way as vanilla components, as entries in the `components` object:
-
-        <CodeHeader>minecraft:block</CodeHeader>
-
-        ```json
-        "components": {
-            "minecraft:friction": 0.4,
-            "wiki:custom_component": {
-                "parameter": "value"
-            }
-        }
-        ```
+    -   Custom components should now be applied in the same way as vanilla components, as entries in the `components` object.
 
 ## 1.21.70
 
