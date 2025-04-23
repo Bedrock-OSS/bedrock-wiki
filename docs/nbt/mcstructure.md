@@ -35,7 +35,7 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 
 ### File Format
 
-`mcstructure` files are uncompressed [NBT files](https://wiki.vg/NBT#Specification). Like all Bedrock Edition NBT files, they are stored in little-endian format. The tag structure is as follows:
+`mcstructure` files are uncompressed [NBT files](https://minecraft.wiki/w/NBT_format). Like all Bedrock Edition NBT files, they are stored in little-endian format. The tag structure is as follows:
 
 > ![Integer][int] `format_version`: Currently always set to `1`.
 >

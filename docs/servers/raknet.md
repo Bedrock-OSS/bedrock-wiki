@@ -49,7 +49,7 @@ Bedrock uses the port `19132` (Ipv4, use `19133` for ipv6) as its default RakNet
 -   [Open Connection Request 2](#open-connection-request-2)
 -   [Open Connection Reply 2](#open-connection-reply-2)
     (From here on, the RakNet connection is established,
-    and all RakNet messages are contained in a [Frame Set Packet](https://wiki.vg/Raknet_Protocol#Frame_Set_Packet))
+    and all RakNet messages are contained in a [Frame Set Packet](https://minecraft.wiki/w/RakNet#Frame_Set_Packet))
 -   [Connection Request](#connection-request)
 -   [Connection Request Accepted](#connection-request-accepted)
 -   [New Incoming Connection](#new-incoming-connection)
@@ -207,7 +207,7 @@ Here is list of RakNet Protocol implementations
 ::: tip
 If you are interested and want to read more about RakNet here is the documentation for the Bedrock Protocol and RakNet:
 
-[RakNet Protocol Documentation](https://wiki.vg/Raknet_Protocol)
+[RakNet Protocol Documentation](https://minecraft.wiki/w/RakNet)
 [Other RakNet Protocol Documentation](https://github.com/vp817/RakNetProtocolDoc)
 :::
 
