@@ -116,7 +116,7 @@ This is the last part of the handshake between the client and the server.
 
 `0x08 | magic | server GUID (Long) | client Address | MTU Size | security(Boolean)`
 
-**From here on, all RakNet messages are contained in a [Frame Set Packet](https://wiki.vg/Raknet_Protocol#Frame_Set_Packet).**
+**From here on, all RakNet messages are contained in a [Frame Set Packet](https://minecraft.wiki/w/RakNet#Frame_Set_Packet).**
 
 
 ### Connection Request
