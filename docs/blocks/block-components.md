@@ -502,9 +502,10 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
   // Instance names 'up', 'down', 'north', 'east', 'south' and 'west' are built in
   "*": {
     "texture": "wiki:texture_name", // Shortname defined in `RP/textures/terrain_texture.json`
+    "tint_method": "grass", // Tint the texture based on the biome the block is placed in
     "render_method": "blend", // One of the render methods in the above table
-    "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
-    "ambient_occlusion": true // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
+    "ambient_occlusion": true, // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
+    "face_dimming": true // Defaults to true; should faces with this material be dimmed by their direction?
   }
 }
 ```
