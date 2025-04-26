@@ -488,7 +488,7 @@ Configuration of your block's rendering, including textures and lighting.
 
 -   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
 -   Block faces will unconditionally darken if intersecting another block.
--   The texture on the `down` face is used for destruction particles.
+-   By default, the texture of the `down` (or `*` if not specified) instance is used for [destruction particles](#destruction-particles).
 
 Material instances can be combined with `RP/blocks.json` entries to create blocks which exhibit opaque-like properties. This is primarily used to enable face culling on [custom glass blocks](/blocks/custom-glass-blocks).
 
