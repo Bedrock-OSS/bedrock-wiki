@@ -213,7 +213,6 @@ Official documentation are hosted on Microsoft Learn and can be found here:
 -   [`@minecraft/server-ui`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server-ui/minecraft-server-ui)
 -   [`@minecraft/server-admin`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-server-admin/mojang-minecraft-server-admin)
 -   [`@minecraft/server-net`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-net/mojang-net)
--   [`@minecraft/server-net`](https://learn.microsoft.com/minecraft/creator/scriptapi)
 -   [`@minecraft/debug-utilities`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/debug-utilities/minecraft-debug-utilities)
 
 Official typescript declarations for the latest Beta API modules in Minecraft Preview can be found here:
