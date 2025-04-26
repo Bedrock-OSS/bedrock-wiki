@@ -473,26 +473,6 @@ Material instances can be combined with `RP/blocks.json` entries to create block
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.40 and higher._
 
-#### Render Methods
-
-Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
-
-| Render Method           | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples                |
-| ----------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------- |
-| alpha_test              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings.         |
-| alpha_test_single_sided |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors.               |
-| blend                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block.     |
-| double_sided            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains. |
-| opaque _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete.          |
-
--   **_Transparency_** - fully see-through areas.
-
--   **_Translucency_** - semi-transparent areas.
-
--   **_Backface Culling_** - faces become invisible when viewed from behind.
-
--   **_Distant Culling_** - the block becomes invisible before reaching the full render distance.
-
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
@@ -507,6 +487,34 @@ Render methods essentially control how a block appears in the world, much like e
   }
 }
 ```
+
+#### Render Methods
+
+Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
+
+| Render Method             | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples               |
+| ------------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------ |
+| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings         |
+| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors               |
+| `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
+| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains |
+| `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
+
+-   **_Transparency_** - fully see-through areas.
+-   **_Translucency_** - semi-transparent areas.
+-   **_Backface Culling_** - faces become invisible when viewed from behind.
+-   **_Distant Culling_** - faces become invisible after reaching half the render distance.
+
+##### Distance-Based Render Methods
+
+| Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
+| ----------------------------------- | ------------------------- | ---------------- | ---------------- |
+| `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
+| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp             |
+| `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
+
+-   **_Near Appearance_** - the render method used before reaching half the render distance.
+-   **_Far Appearance_** - the render method used after reaching half the render distance.
 
 #### Custom Instance Names
 
