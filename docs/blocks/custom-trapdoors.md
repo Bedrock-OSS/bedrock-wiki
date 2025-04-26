@@ -64,6 +64,14 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                     "texture": "wiki:custom_trapdoor",
                     "render_method": "alpha_test_single_sided"
                 }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "liquid_type": "water",
+                        "can_contain_liquid": true
+                    }
+                ]
             }
         },
         "permutations": [
