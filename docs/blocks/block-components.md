@@ -185,6 +185,27 @@ By default, the number of seconds it takes to destroy a custom block is 1.5&time
 }
 ```
 
+### Destruction Particles
+
+Determines the appearance of the particles created when hitting, destroying, stepping on and falling onto blocks.
+
+Type: Object
+
+-   `texture`: String (optional)
+    -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
+    -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
+-   `tint_method`: String (optional)
+    -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:destruction_particles": {
+    "texture": "wiki:particle_texture",
+    "tint_method": "grass"
+}
+```
+
 ### Display Name
 
 Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.
