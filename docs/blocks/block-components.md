@@ -505,7 +505,8 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
     "tint_method": "grass", // Tint the texture based on the biome the block is placed in
     "render_method": "blend", // One of the render methods in the above table
     "ambient_occlusion": true, // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
-    "face_dimming": true // Defaults to true; should faces with this material be dimmed by their direction?
+    "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
+    "isotropic": true // Causes the texture to randomly be rotated based on the block's position
   }
 }
 ```
