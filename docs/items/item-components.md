@@ -568,15 +568,18 @@ Determines the icon to represent the item in the UI and elsewhere. Released from
 
 Type: Object
 
--   `textures`: Object - This map contains the different textures that can be used for the item's icon. `default` will contain the actual icon texture. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
-    -   `default`: String
+-   `textures`: Object - This map contains the different textures that can be used for the item's icon. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
+    -   `default`
         -   The actual icon used for items
-    -   `dyed`: String
-        -   The icon used after the item is dyed in a cauldron.
-        -   This can only be displayed if the item has the `minecraft:dyeable` component.
-    -   `icon_trim`: String
+    -   `dyed`
+        -   The icon displayed after a [dyeable](#dyeable) item is dyed in a cauldron.
+    -   `icon_trim`
         -   The icon overlay for when your item has a trim on it.
         -   `icon_trim` implicitly falls back to the type of slot in the `minecraft:wearable` component. Currently, the icon will only overlay if the shortname matches the item’s identifier. Whether this is a bug or feature is unknown yet.
+    -   `bundle_open_back`
+        -   The texture displayed behind the preview of the item selected in the [bundle interaction](#bundle-interaction) tooltip.
+    -   `bundle_open_front`
+        -   The texture displayed in front of the preview of the item selected in the [bundle interaction](#bundle-interaction) tooltip.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
