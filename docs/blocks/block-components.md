@@ -456,6 +456,9 @@ Sets the color of the block when rendered to a map. The color is represented as 
 
 Type: String/Object/Vector [a, b, c]
 
+-   `tint_method`: String (optional)
+    -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `color` based on the biome the block is placed in.
+
 #### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
