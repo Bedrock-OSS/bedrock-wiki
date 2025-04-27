@@ -1,5 +1,6 @@
 ---
 title: Recipes
+description: Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
 category: Documentation
 nav_order: 3
 mentions:
@@ -9,7 +10,6 @@ mentions:
     - TheHyperWhale
     - Lufurrius
     - QuazChick
-description: Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
 ---
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
@@ -28,16 +28,14 @@ All recipes are stored in the `recipes` folder in the behavior pack root. The fi
 
 This arbitrary structure is used for the paths in this document:
 
-<FolderView
-	:paths="[
-		'BP/recipes/crafting/weapons/cold_steel_sword.json',
-		'BP/recipes/decorations/knobs/brass.json',
-		'BP/recipes/covered_arch.json',
-		'BP/recipes/magic/magic_ash.json',
-		'BP/recipes/brewing/negative/paralysis.json',
-		'BP/recipes/illumination_potion.json'
-	]"
-/>
+<FolderView :paths="[
+    'BP/recipes/brewing/negative/paralysis.json',
+    'BP/recipes/crafting/weapons/cold_steel_sword.json',
+    'BP/recipes/decorations/knobs/brass.json',
+    'BP/recipes/magic/magic_ash.json',
+    'BP/recipes/covered_arch.json',
+    'BP/recipes/illumination_potion.json'
+]" />
 
 As an example, a "cold steel sword" might be crafted using the following [shaped recipe](#shaped-recipes):
 
@@ -99,7 +97,7 @@ The `"description"` object, required within any recipe type, holds the identifie
 
 ```json
 "description": {
-	"identifier": "wiki:cold_steel_sword"
+    "identifier": "wiki:cold_steel_sword"
 }
 ```
 
@@ -160,18 +158,18 @@ To effectively disable a recipe (useful for [overriding](#overrides) a prior rec
 Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, your `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
 
 ```json
-		"unlock": [
-			{
-				"item": "wiki:cold_steel" //item to unlock recipe
-			},
-			{
-				"item": "minecraft:wool", //item to unlock recipe
-				"data":  3
-			},
-			{
-				"context": "PlayerInWater" //event to unlock recipe
-			}
-          ]
+"unlock": [
+    {
+        "item": "wiki:cold_steel" // Item to unlock recipe
+    },
+    {
+        "item": "minecraft:wool", // Item to unlock recipe
+        "data":  3
+    },
+    {
+        "context": "PlayerInWater" // Event to unlock recipe
+    }
+  ]
 ```
 
 Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. It also accepts data values. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
@@ -333,11 +331,11 @@ The required `"ingredients"` array property lists the items required as inputs f
 
 ```json
 "ingredients": [
-	"wiki:brass",
-	{
-		"item": "wiki:screw",
-		"data": 2
-	}
+    "wiki:brass",
+    {
+        "item": "wiki:screw",
+        "data": 2
+    }
 ]
 ```
 
@@ -351,8 +349,8 @@ Shapeless recipe outputs are expressed using the required `"result"` property an
 
 ```json
 "result": {
-	"item": "wiki:door_knob",
-	"data": 3
+    "item": "wiki:door_knob",
+    "data": 3
 }
 ```
 
@@ -409,9 +407,9 @@ The required `"pattern"` array property establishes the shape used for the recip
 
 ```json
 "pattern": [
-	"SSS",
-	"I I",
-	"I I"
+    "SSS",
+    "I I",
+    "I I"
 ]
 ```
 
@@ -431,9 +429,9 @@ The pattern grid must be at most 3 × 3 but may be smaller. If string lengths ar
 
 ```json
 "pattern": [
-	"MA",
-	"IFI",
-	"M"
+    "MA",
+    "IFI",
+    "M"
 ]
 ```
 
@@ -441,9 +439,9 @@ The pattern grid must be at most 3 × 3 but may be smaller. If string lengths ar
 
 ```json
 "pattern": [
-	"MA ",
-	"IFI",
-	"M  "
+    "MA ",
+    "IFI",
+    "M  "
 ]
 ```
 
@@ -459,8 +457,8 @@ Spaces are not automatically implied to fill in any remaining slots in the 3 × 
 
 ```json
 "pattern": [
-	"O"
-	"OO"
+    "O"
+    "OO"
 ]
 ```
 
@@ -502,9 +500,9 @@ To restrict placements to a particular location, use explicit spaces, which enfo
 
 ```json
 "pattern": [
-	"O  "
-	"OO "
-	"   "
+    "O  "
+    "OO "
+    "   "
 ]
 ```
 
@@ -516,9 +514,9 @@ All shaped recipes are innately horizontally symmetric:
 
 ```json
 "pattern": [
-	"Z  "
-	" Z "
-	"  Z"
+    "Z  "
+    " Z "
+    "  Z"
 ]
 ```
 
@@ -528,9 +526,9 @@ The preceding recipe may also be used by a player as though it were set to:
 
 ```json
 "pattern": [
-	"  Z"
-	" Z "
-	"Z  "
+    "  Z"
+    " Z "
+    "Z  "
 ]
 ```
 
@@ -542,8 +540,8 @@ Keys provide meaning to characters in a [pattern](#patterns), done via the requi
 
 ```json
 "key": {
-	"S": "wiki:cloth",
-	"I": "wiki:support"
+    "S": "wiki:cloth",
+    "I": "wiki:support"
 }
 ```
 
@@ -562,18 +560,18 @@ If a character in the pattern is not present in the key map, it will be treated 
 Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
 
 ```json
-		"unlock": [
-			{
-				"item": "wiki:cold_steel" //item to unlock recipe
-			},
-			{
-				"item": "minecraft:wool", //item to unlock recipe
-				"data":  3
-			},
-			{
-				"context": "PlayerInWater" //event to unlock recipe
-			}
-		]
+"unlock": [
+    {
+        "item": "wiki:cold_steel" //item to unlock recipe
+    },
+    {
+        "item": "minecraft:wool", //item to unlock recipe
+        "data":  3
+    },
+    {
+        "context": "PlayerInWater" //event to unlock recipe
+    }
+]
 ```
 
 Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
@@ -586,11 +584,11 @@ Shaped crafting recipe outputs behave very similarly to their [shapeless counter
 
 ```json
 "result": [
-	{
-		"item": "wiki:covered_arch",
-		"count": 3
-	},
-	"wiki:crafting_scrap"
+    {
+        "item": "wiki:covered_arch",
+        "count": 3
+    },
+    "wiki:crafting_scrap"
 ]
 ```
 
@@ -678,10 +676,10 @@ Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to e
 <CodeHeader>#/minecraft:recipe_furnace/</CodeHeader>
 
 ```json
-"input": "wiki:bone_fragments"
+"input": "wiki:bone_fragments",
 "output": {
-	"item": "wiki:magic_ash",
-	"count": 4
+    "item": "wiki:magic_ash",
+    "count": 4
 }
 ```
 
