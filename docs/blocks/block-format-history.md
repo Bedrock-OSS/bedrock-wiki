@@ -37,6 +37,14 @@ An experiment must be enabled in your world for experimental changes to take eff
         }
         ```
 
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:destruction_particles`
+    -   Added `particle_count` parameter which determines how many particles are created when the block is destroyed (0-255).
+    -   By default, 100 particles are created.
+
 ## 1.21.80
 
 ### Components
