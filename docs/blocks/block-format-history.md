@@ -41,7 +41,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 <Label color="blue">Upcoming Creator Features</Label>
 
 -   Updated `minecraft:geometry`
-    -   Added `uv_lock` parameter which determines whether UVs should be locked to their original rotation when rotation from the [transformation](/blocks/blocks-components#transformation) component is applied.
+    -   Added `uv_lock` parameter which determines whether UVs should be locked to their original rotation when rotation from the [transformation](/blocks/block-components#transformation) component is applied.
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
