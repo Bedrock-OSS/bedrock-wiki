@@ -409,7 +409,7 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.21.6
         {
             "liquid_type": "water",
             "can_contain_liquid": true, // Waterloggable
-            "on_liquid_touches": "no_reaction", // Water flows through the block like air
+            "on_liquid_touches": "no_reaction" // Water flows through the block like air
         }
     ]
 }
