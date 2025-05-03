@@ -119,25 +119,17 @@ _Browse more block components [here](/blocks/block-components)!_
 
 ## Applying Textures
 
-:::warning
-`RP/blocks.json` ignores identifier namespaces. You can put anything there or not include a namespace at all, resulting in no difference. This may cause problems if you create a custom block with the same name (but not namespace) as an existing vanilla block.
-:::
-:::tip <nbsp/>
-[Block sounds](/blocks/block-sounds) can also be defined within `RP/blocks.json`.
-:::
+The [geometry](/blocks/block-components#geometry) and [material instances](/blocks/block-components#material-instances) components should be used to determine how your block looks.
 
-For our basic 16&times;16&times;16 pixel block, textures should be defined in `RP/blocks.json`.
+For our basic 16&times;16&times;16 pixel block, the [vanilla model](/blocks/vanilla-block-models) `minecraft:geometry.full_block` will be used.
 
-If you'd like to apply a custom model, the [geometry](/blocks/block-components#geometry) and [material instances](/blocks/block-components#material-instances) components should be used instead.
-
-<CodeHeader>RP/blocks.json</CodeHeader>
+<CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-{
-    "format_version": "1.21.40",
-    "wiki:custom_block": {
-        "textures": "wiki:custom_block", // This texture shortname should be defined in `terrain_texture.json`, as shown below
-        "sound": "grass"
+"minecraft:geometry": "minecraft:geometry.full_block",
+"minecraft:material_instances": {
+    "*": {
+        "texture": "wiki:custom_block"
     }
 }
 ```
@@ -207,32 +199,11 @@ Textures can also be applied per face. For example, a custom "compass block" cou
         width="64"
     />
 
-The `blocks.json` entry would look like this:
-
-<CodeHeader>RP/blocks.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.21.40",
-    "wiki:compass_block": {
-        "textures": {
-            "down": "wiki:compass_block_down",
-            "up": "wiki:compass_block_up",
-            "north": "wiki:compass_block_north",
-            "east": "wiki:compass_block_east",
-            "south": "wiki:compass_block_south",
-            "west": "wiki:compass_block_west"
-        }
-    }
-}
-```
-
-Or, if you'd like to use [material instances](/blocks/block-components#material-instances) instead, they should look like this:
+The [material instances](/blocks/block-components#material-instances) should look like this:
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:geometry": "minecraft:geometry.full_block",
 "minecraft:material_instances": {
   "*": {
     "texture": "wiki:compass_block_down" // This texture appears in destruction particles
@@ -282,6 +253,23 @@ With the following `terrain_texture.json` data:
         "wiki:compass_block_south": {
             "textures": "textures/blocks/compass_block_south"
         }
+    }
+}
+```
+
+## Applying Sounds
+
+The mining sound, step on sound, breaking sound, and placement sound of custom blocks can be determined by the `sound` parameter in `RP/blocks.json`.
+
+Learn more about block sounds [here](/blocks/block-sounds)!
+
+<CodeHeader>RP/blocks.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.21.40",
+    "wiki:custom_block": {
+        "sound": "grass"
     }
 }
 ```
