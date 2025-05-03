@@ -39,7 +39,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
         },
         "components": {
             "tag:wood": {},
-            "tag:my_lovely_tag": {},
+            "tag:minecraft:is_axe_item_destructible": {},
             "tag:wiki:very_useless": {}
         }
     }
