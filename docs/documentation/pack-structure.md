@@ -33,7 +33,7 @@ mentions:
     'BP/recipes/example.recipe.json',
     'BP/scripts/example.js',
     'BP/spawn_rules/example.spawn.json',
-    'BP/structures/example.mcstructure',
+    'BP/structures/<namespace>/example.mcstructure',
     'BP/texts/languages.json',
     'BP/texts/\*.lang',
     'BP/trading/example.trade.json',
