@@ -43,7 +43,7 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
         "description": {
             "identifier": "wiki:custom_item",
             "menu_category": {
-                "category": "construction"
+                "category": "items"
             }
         },
         "components": {} // Must be here, even if empty!
@@ -129,12 +129,12 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 
 ## Defining Names
 
-Finally, we will give our item a name. Additionally, you can use the [Display Name](/items/item-components#display-name) component.
+Finally, let's define our item's name like this:
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```c
-tile.wiki:custom_item.name=Custom Item
+```properties
+item.wiki:custom_item=Custom Item
 ```
 
 ## Result
