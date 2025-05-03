@@ -9,7 +9,7 @@ import{_ as k,E as p,j as h,k as o,l as i,A as n,a5 as e,J as a,I as t}from"./ch
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">        },</span></span>
 <span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">        &quot;components&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: {</span></span>
 <span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">            &quot;tag:wood&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: {},</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">            &quot;tag:my_lovely_tag&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: {},</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">            &quot;tag:minecraft:is_axe_item_destructible&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: {},</span></span>
 <span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">            &quot;tag:wiki:very_useless&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: {}</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">        }</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">    }</span></span>
