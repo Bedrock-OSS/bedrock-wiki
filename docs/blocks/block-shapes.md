@@ -1,5 +1,6 @@
 ---
 title: Block Shapes
+description: Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files.
 category: Documentation
 mentions:
     - SirLich
@@ -10,7 +11,6 @@ mentions:
     - Fabrimat
     - TheItsNameless
     - QuazChick
-description: Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files.
 ---
 
 :::warning DEPRECATED
@@ -18,7 +18,7 @@ Block shapes are no longer officially supported and cannot be used with custom b
 Support was dropped after **1.19**, meaning blocks introduced in Trails and Tales and forward do not have available block shapes.
 :::
 
-Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files. The geometries themselves cannot be overriden, nor new ones created - but existing ones can be assigned to *most* vanilla blocks through a resource pack.
+Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files. The geometries themselves cannot be overriden, nor new ones created - but existing ones can be assigned to _most_ vanilla blocks through a resource pack.
 
 ## Application
 
@@ -28,9 +28,9 @@ They are assigned using `blocks.json`, under child `"blockshape"` of a block's o
 
 ```json
 "minecraft:dirt": {
-  "blockshape": "block",
-  "sound": "gravel",
-  "textures": "flattened_dirt"
+    "blockshape": "block",
+    "sound": "gravel",
+    "textures": "flattened_dirt"
 }
 ```
 

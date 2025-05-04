@@ -1,5 +1,6 @@
 ---
 title: Attachables
+description: Item attachables documentation.
 category: Documentation
 tags:
     - beginner
@@ -9,7 +10,6 @@ mentions:
     - AdamRaichu
     - Lufurrius
     - TheItsNameless
-description: Item attachables documentation.
 ---
 
 ::: tip
@@ -34,15 +34,13 @@ Attachable definitions are quite similar in design to client entity definitions;
 
 The attachable definition goes within the 'attachables' folder. The file layout is otherwise identical to that of custom entities.
 
-<FolderView
-	:paths="[
+<FolderView :paths="[
     'RP/animations/my_item.animation.json',
     'RP/attachables/my_item.entity.json',
     'RP/models/entity/my_item.geo.json',
     'RP/textures/entity/my_item.png',
     'RP/manifest.json'
-  ]"
-></FolderView>
+]" />
 
 ### Attachable Definition
 

@@ -27,22 +27,22 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-  "format_version": "1.21.70",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_block",
-      "states": {
-        "wiki:string_state_example": ["red", "green", "blue"],
-        "wiki:boolean_state_example": [false, true],
-        "wiki:integer_state_example": [1, 2, 3],
-        "wiki:integer_range_state_example": {
-          "values": { "min": 0, "max": 5 } // The same as [0, 1, 2, 3, 4, 5]
-        }
-      }
-    },
-    "components": { ... },
-    "permutations": [ ... ]
-  }
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_block",
+            "states": {
+                "wiki:string_state_example": ["red", "green", "blue"],
+                "wiki:boolean_state_example": [false, true],
+                "wiki:integer_state_example": [1, 2, 3],
+                "wiki:integer_range_state_example": {
+                    "values": { "min": 0, "max": 5 } // The same as [0, 1, 2, 3, 4, 5]
+                }
+            }
+        },
+        "components": { ... },
+        "permutations": [ ... ]
+    }
 }
 ```
 

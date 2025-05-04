@@ -501,16 +501,16 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.40
 
 ```json
 "minecraft:material_instances": {
-  // '*' instance required - default instance for cube faces
-  // Instance names 'up', 'down', 'north', 'east', 'south' and 'west' are built in
-  "*": {
-    "texture": "wiki:texture_name", // Shortname defined in `RP/textures/terrain_texture.json`
-    "tint_method": "grass", // Tint the texture based on the biome the block is placed in
-    "render_method": "blend", // One of the render methods in the above table
-    "ambient_occlusion": true, // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
-    "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
-    "isotropic": true // Causes the texture to randomly be rotated based on the block's position
-  }
+    // '*' instance required - default instance for cube faces
+    // Instance names 'up', 'down', 'north', 'east', 'south' and 'west' are built in
+    "*": {
+        "texture": "wiki:texture_name", // Shortname defined in `RP/textures/terrain_texture.json`
+        "tint_method": "grass", // Tint the texture based on the biome the block is placed in
+        "render_method": "blend", // One of the render methods in the above table
+        "ambient_occlusion": true, // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
+        "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
+        "isotropic": true // Causes the texture to randomly be rotated based on the block's position
+    }
 }
 ```
 
@@ -554,22 +554,22 @@ Custom instance names can be defined within material instances, and can be refer
 
 ```json
 "minecraft:material_instances": {
-  "*": {
-    "texture": "wiki:texture_name",
-    "render_method": "blend" // Must match other instances
-  },
-  // Custom instance name
-  "end": {
-    "texture": "wiki:texture_name_end",
-    "render_method": "blend" // Must match other instances
-  },
-  "up": "end",
-  "down": "end",
-  // Instance name defined in model:
-  "flower": {
-    "texture": "wiki:texture_name_flower",
-    "render_method": "blend" // Must match other instances
-  }
+    "*": {
+        "texture": "wiki:texture_name",
+        "render_method": "blend" // Must match other instances
+    },
+    // Custom instance name
+    "end": {
+        "texture": "wiki:texture_name_end",
+        "render_method": "blend" // Must match other instances
+    },
+    "up": "end",
+    "down": "end",
+    // Instance name defined in model:
+    "flower": {
+        "texture": "wiki:texture_name_flower",
+        "render_method": "blend" // Must match other instances
+    }
 }
 ```
 

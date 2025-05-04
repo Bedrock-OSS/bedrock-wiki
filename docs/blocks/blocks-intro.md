@@ -205,24 +205,24 @@ The [material instances](/blocks/block-components#material-instances) should loo
 
 ```json
 "minecraft:material_instances": {
-  "*": {
-    "texture": "wiki:compass_block_down" // This texture appears in destruction particles
-  },
-  "up": {
-    "texture": "wiki:compass_block_up"
-  },
-  "north": {
-    "texture": "wiki:compass_block_north"
-  },
-  "east": {
-    "texture": "wiki:compass_block_east"
-  },
-  "south": {
-    "texture": "wiki:compass_block_south"
-  },
-  "west": {
-    "texture": "wiki:compass_block_west"
-  }
+    "*": {
+        "texture": "wiki:compass_block_down" // This texture appears in destruction particles
+    },
+    "up": {
+        "texture": "wiki:compass_block_up"
+    },
+    "north": {
+        "texture": "wiki:compass_block_north"
+    },
+    "east": {
+        "texture": "wiki:compass_block_east"
+    },
+    "south": {
+        "texture": "wiki:compass_block_south"
+    },
+    "west": {
+        "texture": "wiki:compass_block_west"
+    }
 }
 ```
 

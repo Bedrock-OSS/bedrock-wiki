@@ -1,12 +1,12 @@
 ---
 title: Avoiding State Limit
+description: Blocks have a limit of 16 valid values per state that cannot be exceeded. This guide will explain how to avoid reaching the limit.
 category: Tutorials
 tags:
     - expert
 mentions:
     - Kaioga5
     - QuazChick
-description: Blocks have a limit of 16 valid values per state that cannot be exceeded. This guide will explain how to avoid reaching the limit.
 ---
 
 ## Introduction
@@ -51,8 +51,8 @@ Using the example above as reference, your states would look like this:
 
 ```json
 "states": {
-  "wiki:value": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-  "wiki:division": [1, 2]
+    "wiki:value": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    "wiki:division": [1, 2]
 }
 ```
 

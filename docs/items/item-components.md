@@ -210,7 +210,7 @@ Type: Object
 
 ```json
 "minecraft:damage_absorption": {
-	"absorbable_causes": ["all"]
+    "absorbable_causes": ["all"]
 }
 ```
 
@@ -235,15 +235,15 @@ Type: Object
 
 ```json
 "minecraft:digger": {
-	"use_efficiency": true,
-	"destroy_speeds": [
-		{
-			"block": {
-				"tags": "q.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
-			},
-			"speed": 6
-		}
-	]
+    "use_efficiency": true,
+    "destroy_speeds": [
+        {
+            "block": {
+                "tags": "q.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
+            },
+            "speed": 6
+        }
+    ]
 }
 ```
 
@@ -373,7 +373,7 @@ Type: Object
 
 ```json
 "minecraft:dyeable": {
-	"default_color": "#ffffff"
+    "default_color": "#ffffff"
 }
 ```
 

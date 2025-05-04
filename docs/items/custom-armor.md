@@ -1,5 +1,6 @@
 ---
 title: Custom Armor
+description: Learn how to make a custom armor set.
 category: Tutorials
 mentions:
     - SirLich
@@ -14,7 +15,6 @@ mentions:
     - LeGend077
     - SmokeyStack
     - QuazChick
-description: Learn how to make custom armor.
 ---
 
 ::: tip
@@ -457,50 +457,50 @@ So first of all lets put in the damage sensor component (which goes in your comp
 
 ```json
 "minecraft:damage_sensor": {
-	"triggers": {
-		"on_damage": {
-			"filters": {
-				"all_of": [
-					{
-						"test": "has_equipment",
-						"subject": "self",
-						// Domain is the body part in this case
-						"domain": "head",
-						"operator": "==",
-						// The item identifier we want to check
-						"value": "wiki:my_helm"
-					},
-					{
-						"test": "has_equipment",
-						"subject": "self",
-						"domain": "torso",
-						"operator": "==",
-						// Worth noting you can omit prefix for minecraft internal items i.e stick
-						"value": "wiki:my_chest"
-					},
-					{
-						"test": "has_equipment",
-						"subject": "self",
-						"domain": "leg",
-						"operator": "==",
-						"value": "wiki:my_leggings"
-					},
-					{
-						"test": "has_equipment",
-						"subject": "self",
-						"domain": "feet",
-						"operator": "==",
-						"value": "wiki:my_boots"
-					}
-				]
-			},
-			// If all the triggers match in the filter raise the event
-			"event": "wiki:armor_sets.my_custom.taken_damage"
-		},
-		// This means if it matches the check it still applies damage
-		// Can be good to ignore team damage or similar scenarios
-		"deals_damage": true
-	}
+    "triggers": {
+        "on_damage": {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "has_equipment",
+                        "subject": "self",
+                        // Domain is the body part in this case
+                        "domain": "head",
+                        "operator": "==",
+                        // The item identifier we want to check
+                        "value": "wiki:my_helm"
+                    },
+                    {
+                        "test": "has_equipment",
+                        "subject": "self",
+                        "domain": "torso",
+                        "operator": "==",
+                        // Worth noting you can omit prefix for minecraft internal items i.e stick
+                        "value": "wiki:my_chest"
+                    },
+                    {
+                        "test": "has_equipment",
+                        "subject": "self",
+                        "domain": "leg",
+                        "operator": "==",
+                        "value": "wiki:my_leggings"
+                    },
+                    {
+                        "test": "has_equipment",
+                        "subject": "self",
+                        "domain": "feet",
+                        "operator": "==",
+                        "value": "wiki:my_boots"
+                    }
+                ]
+            },
+            // If all the triggers match in the filter raise the event
+            "event": "wiki:armor_sets.my_custom.taken_damage"
+        },
+        // This means if it matches the check it still applies damage
+        // Can be good to ignore team damage or similar scenarios
+        "deals_damage": true
+    }
 }
 ```
 
@@ -513,34 +513,34 @@ As you can see from the comments, there is a lot there but really all we are doi
 
 ```json
 "wiki:armor_sets.my_custom.taken_damage": {
-	"randomize": [
-		{
-			"weight": 1,
-			// We do a sequence here as we want to apply one command
-			// on one entity and the other on ourselves
-			"sequence": [
-				{
-					// This will take the attacker/other because it was in context
-					// at time of raising the event in the damage_sensor
-					"queue_command": {
-						// Teleport the entity away from us
-						"command": "spreadplayers ~~ 5 20 @s",
-						// Run the command on the attacker not us
-						"target": "other"
-					}
-				},
-				{
-					"queue_command": {
-						"command": "tellraw @s{\"rawtext\":[{\"text\":\"§aYour Armor Glows and the Enemy Vanishes\"}]}"
-					}
-				}
-			]
-		},
-		{
-			// Dummy weighting so it happens semi frequently
-			"weight": 20
-		}
-	]
+    "randomize": [
+        {
+            "weight": 1,
+            // We do a sequence here as we want to apply one command
+            // on one entity and the other on ourselves
+            "sequence": [
+                {
+                    // This will take the attacker/other because it was in context
+                    // at time of raising the event in the damage_sensor
+                    "queue_command": {
+                        // Teleport the entity away from us
+                        "command": "spreadplayers ~~ 5 20 @s",
+                        // Run the command on the attacker not us
+                        "target": "other"
+                    }
+                },
+                {
+                    "queue_command": {
+                        "command": "tellraw @s{\"rawtext\":[{\"text\":\"§aYour Armor Glows and the Enemy Vanishes\"}]}"
+                    }
+                }
+            ]
+        },
+        {
+            // Dummy weighting so it happens semi frequently
+            "weight": 20
+        }
+    ]
 }
 ```
 

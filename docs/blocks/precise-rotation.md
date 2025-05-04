@@ -231,19 +231,19 @@ For head-like rotation, you need to add 2 states to your block:
 
 ```json
 "description": {
-  ...
-  "traits": {
-    // Face block is placed on - default is `down` (which won't be accessible through placement)
-    "minecraft:placement_position": {
-      "enabled_states": ["minecraft:block_face"]
+    ...
+    "traits": {
+        // Face block is placed on - default is `down` (which won't be accessible through placement)
+        "minecraft:placement_position": {
+            "enabled_states": ["minecraft:block_face"]
+        }
+    },
+    "states": {
+        // Precise rotation of block when placed on `up` face
+        "wiki:rotation": {
+            "values": { "min": 0, "max": 15 } // An alternative state value format to define larger integer ranges easily
+        }
     }
-  },
-  "states": {
-    // Precise rotation of block when placed on `up` face
-    "wiki:rotation": {
-      "values": { "min": 0, "max": 15 } // An alternative state value format to define larger integer ranges easily
-    }
-  }
 }
 ```
 
@@ -333,8 +333,8 @@ Now you can apply this custom component to your block!
 
 ```json
 "components": {
-  ...
-  "minecraft:custom_components": ["wiki:shell_rotation"]
+    ...
+    "minecraft:custom_components": ["wiki:shell_rotation"]
 }
 ```
 
@@ -379,14 +379,14 @@ Add the following component to your block:
 
 ```json
 "minecraft:geometry": {
-  "identifier": "geometry.shell", // Model created in first step
-  "bone_visibility": {
-    "up_0": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 0",
-    "up_22_5": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 1",
-    "up_45": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 2",
-    "up_67_5": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 3",
-    "side": "q.block_state('minecraft:block_face') != 'up'"
-  }
+    "identifier": "geometry.shell", // Model created in first step
+    "bone_visibility": {
+        "up_0": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 0",
+        "up_22_5": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 1",
+        "up_45": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 2",
+        "up_67_5": "q.block_state('minecraft:block_face') == 'up' && math.mod(q.block_state('wiki:rotation'), 4) == 3",
+        "side": "q.block_state('minecraft:block_face') != 'up'"
+    }
 }
 ```
 

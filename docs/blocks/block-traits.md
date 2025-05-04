@@ -23,23 +23,23 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
 
 ```json
 {
-  "format_version": "1.21.70",
-  "minecraft:block": {
-    "description": {
-      "identifier": "wiki:custom_slab",
-      "menu_category": {
-        "category": "construction",
-        "group": "minecraft:itemGroup.name.slab"
-      },
-      "traits": {
-        "minecraft:placement_position": {
-          "enabled_states": ["minecraft:vertical_half"]
-        }
-      }
-    },
-    "components": { ... },
-    "permutations": [ ... ]
-  }
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:custom_slab",
+            "menu_category": {
+                "category": "construction",
+                "group": "minecraft:itemGroup.name.slab"
+            },
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": ["minecraft:vertical_half"]
+                }
+            }
+        },
+        "components": { ... },
+        "permutations": [ ... ]
+    }
 }
 ```
 
@@ -74,8 +74,8 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.20.2
 
 ```json
 "minecraft:placement_direction": {
-  "enabled_states": ["minecraft:cardinal_direction"],
-  "y_rotation_offset": 180
+    "enabled_states": ["minecraft:cardinal_direction"],
+    "y_rotation_offset": 180
 }
 ```
 
@@ -96,9 +96,9 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.20.2
 
 ```json
 "minecraft:placement_position": {
-  "enabled_states": [
-    "minecraft:block_face",
-    "minecraft:vertical_half"
-  ]
+    "enabled_states": [
+        "minecraft:block_face",
+        "minecraft:vertical_half"
+    ]
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title: Rotatable Blocks
-description: Create rotatable blocks.
+description: Learn how to create rotatable blocks.
 category: Tutorials
 license: true
 mentions:
@@ -54,14 +54,14 @@ To set the state which determines the block's direction, we will use the `minecr
 
 ```json
 "description": {
-  "identifier": "wiki:cardinal_direction_example",
-  // Block traits are defined here
-  "traits": {
-    "minecraft:placement_direction": {
-      "enabled_states": ["minecraft:cardinal_direction"], // Can be used in queries e.g. `q.block_state('minecraft:cardinal_direction') == 'north'`
-      "y_rotation_offset": 180 // Face towards player
+    "identifier": "wiki:cardinal_direction_example",
+    // Block traits are defined here
+    "traits": {
+        "minecraft:placement_direction": {
+            "enabled_states": ["minecraft:cardinal_direction"], // Can be used in queries e.g. `q.block_state('minecraft:cardinal_direction') == 'north'`
+            "y_rotation_offset": 180 // Face towards player
+        }
     }
-  }
 }
 ```
 
@@ -116,13 +116,13 @@ To set the state which determines the block's direction, we will use the `minecr
 
 ```json
 "description": {
-  "identifier": "wiki:facing_direction_example",
-  // Block traits are defined here
-  "traits": {
-    "minecraft:placement_direction": {
-      "enabled_states": ["minecraft:facing_direction"], // Can be used in queries e.g. `q.block_state('minecraft:facing_direction') == 'north'`
+    "identifier": "wiki:facing_direction_example",
+    // Block traits are defined here
+    "traits": {
+        "minecraft:placement_direction": {
+            "enabled_states": ["minecraft:facing_direction"], // Can be used in queries e.g. `q.block_state('minecraft:facing_direction') == 'north'`
+        }
     }
-  }
 }
 ```
 
@@ -191,13 +191,13 @@ To set the state which determines the block's attachment, we will use the `minec
 
 ```json
 "description": {
-  "identifier": "wiki:facing_direction_example",
-  // Block traits are defined here
-  "traits": {
-    "minecraft:placement_position": {
-      "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+    "identifier": "wiki:facing_direction_example",
+    // Block traits are defined here
+    "traits": {
+        "minecraft:placement_position": {
+            "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+        }
     }
-  }
 }
 ```
 
@@ -270,13 +270,13 @@ The state contains more values than we need for log rotation, so some permutatio
 
 ```json
 "description": {
-  "identifier": "wiki:log_rotation_example",
-  // Block traits are defined here
-  "traits": {
-    "minecraft:placement_position": {
-      "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+    "identifier": "wiki:log_rotation_example",
+    // Block traits are defined here
+    "traits": {
+        "minecraft:placement_position": {
+            "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+        }
     }
-  }
 }
 ```
 
