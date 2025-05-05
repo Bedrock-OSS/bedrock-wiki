@@ -50,7 +50,6 @@ Trailing spaces are not trimmed for in-line comments. If you want to indent a co
 ```lang
 ## Translator note: I thought this would be funny to put here.
 item.flint_and_steel.name=Flint and Steve	##[sic]
-item.flint_and_steel.name=Flint and Steve.##[sic]
 ```
 
 A translation can contain substitutions in place of text. Substitutions can either be ordered (`%1`, `%2`, etc.) or not ordered (`%s`). Vanilla translations have their values filled in by the game, while players can manually set the substitutions' values with commands that use the raw JSON text format, like with [`/tellraw`](/concepts/rawtext).
