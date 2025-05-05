@@ -280,7 +280,7 @@ Finally, let's define our block names like this:
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```c
+```lang
 tile.wiki:custom_block.name=Custom Block
 tile.wiki:compass_block.name=Compass Block
 ```

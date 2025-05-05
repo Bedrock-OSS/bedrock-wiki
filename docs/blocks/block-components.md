@@ -232,7 +232,7 @@ Type: String
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```c
+```lang
 tile.wiki:custom_block.name=Custom Block
 ```
 

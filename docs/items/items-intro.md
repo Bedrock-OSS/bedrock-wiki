@@ -133,7 +133,7 @@ Finally, let's define our item's name like this:
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```properties
+```lang
 item.wiki:custom_item=Custom Item
 ```
 
