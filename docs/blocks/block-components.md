@@ -127,7 +127,7 @@ Describes the destructible by explosion properties for this block. If set to tru
 
 Type: Boolean/Object
 
--   `explosion_resistance`: Double
+-   `explosion_resistance`: Float
     -   Describes how resistant the block is to explosion. Greater values mean the block is less likely to break when near an explosion (or has higher resistance to explosions). The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.
 
 #### Example using Boolean
@@ -157,7 +157,7 @@ If set to false, the block is indestructible by mining.
 
 Type: Boolean/Object
 
--   `seconds_to_destroy`: Double
+-   `seconds_to_destroy`: Float
     -   Sets the hardness of the block. Greater numbers result in greater mining times.
 
 :::danger SECONDS TO DESTROY
@@ -242,7 +242,7 @@ Triggers an event when an entity falls onto this block.
 
 Type: Object
 
--   `min_fall_distance`: Double
+-   `min_fall_distance`: Float
     -   The minimum distance an entity must fall to trigger the event in blocks.
 
 _Released from experiment `Beta APIs` for format versions 1.21.10 and higher._
@@ -261,7 +261,7 @@ Describes the flammable properties for this block. If set to true, default value
 
 Type: Boolean/Object
 
--   `catch_chance_modifier`: Int
+-   `catch_chance_modifier`: Integer
     -   A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a `catch_chance_modifier` greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the `destroy_chance_modifier` is 0). If the `catch_chance_modifier` is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if `destroy_chance_modifier` is greater than 0). The default value of 5 is the same as that of Planks.
 
 #### Example using Boolean
@@ -287,7 +287,7 @@ Type: Boolean/Object
 
 Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity's movement speed when it travels on the block. Greater value results in more friction.
 
-Type: Double
+Type: Float
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -388,7 +388,7 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.21.6
 
 The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -400,7 +400,7 @@ Type: Int
 
 The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -588,27 +588,27 @@ Type: Object
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-    "minecraft:placement_filter": {
-        "conditions": [
-            {
-                "allowed_faces": [
-                    "up"
-                ],
-                "block_filter": [
-                    "minecraft:dirt",
-                    {
-                        "name": "minecraft:sand",
-                        "states": {
-                            "sand_type": "red"
-                        }
-                    },
-                    {
-                        "tags": "!q.any_tag('stone', 'wiki_tag')"
+"minecraft:placement_filter": {
+    "conditions": [
+        {
+            "allowed_faces": [
+                "up"
+            ],
+            "block_filter": [
+                "minecraft:dirt",
+                {
+                    "name": "minecraft:sand",
+                    "states": {
+                        "sand_type": "red"
                     }
-                ]
-            }
-        ]
-    }
+                },
+                {
+                    "tags": "!q.any_tag('stone', 'wiki_tag')"
+                }
+            ]
+        }
+    ]
+}
 ```
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.

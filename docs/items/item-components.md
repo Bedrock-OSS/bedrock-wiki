@@ -187,7 +187,7 @@ Uses signed 16-bit integer. 2’s complements creates negative range.
 
 https://bugs.mojang.com/browse/MCPE-180073
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -224,7 +224,7 @@ Type: Object
     -   `block`: String/Object - What block the item will destroy.
         -   `tags`: String
             -   Molang query
-    -   `speed`: Int
+    -   `speed`: Integer
         -   How fast the block will be destroyed.
         -   Can be negative. If negative, the item will not be able to destroy the block.
 -   `use_efficiency`: Boolean
@@ -289,11 +289,11 @@ https://bugs.mojang.com/browse/MCPE-180112
 Type: Object
 
 -   `damage_chance`: Object - Damage chance is the percentage chance of this item losing durability. Default is set at 100. Defined as an int range with min and max value.
-    -   `min`: Int
+    -   `min`: Integer
         -   Minimum chance for durability to take damage. Range: [0, 100].
-    -   `max`: Int
+    -   `max`: Integer
         -   Maximum chance for durability to take damage. Range: [0, 100].
--   `max_durability`: Int
+-   `max_durability`: Integer
     -   Max durability is the amount of damage that this item can take before breaking. This is a required parameter with a minimum value of 0.
     -   Uses signed 16-bit integer. 2’s complements creates negative range. `[32768-65536]` - gets treated as negative. The values given to the item will be `(-32768-0)`. So the negative ranges are `[256*(256x+128) - 256*(256(x+1)))` where x is an arbitrary number.
     -   https://bugs.mojang.com/browse/MCPE-180112
@@ -388,7 +388,7 @@ Type: Object
 -   `slot`: String
     -   What enchantments can be applied (ex. Using `bow` would allow this item to be enchanted as if it were a bow).
     -   Required Field.
--   `value`: Int
+-   `value`: Integer
     -   The value of the enchantment (minimum of 0).
     -   Required Field
     -   Value is `value % 256`
@@ -480,7 +480,7 @@ Type: Object
 
 -   `can_always_eat`: Boolean
     -   If `true` you can always eat this item (even when not hungry).
--   `nutrition`: Int
+-   `nutrition`: Integer
     -   The value that is added to the actor's nutrition when the item is used.
     -   Can be negative.
     -   Max value is the 32-bit integer limit
@@ -631,7 +631,7 @@ Type: Boolean
 
 Determines how many of an item can be stacked together.
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -1011,7 +1011,7 @@ Determines where the item can be worn. If any non-hand slot is chosen, the max s
 
 Type: Object
 
--   `protection`: Int
+-   `protection`: Integer
 -   `slot`: String
 
 <CodeHeader>minecraft:item > components</CodeHeader>
