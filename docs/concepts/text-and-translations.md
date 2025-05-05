@@ -36,7 +36,7 @@ Minecraft supports 29 languages currently, as described in [§ Vanilla Languag
 
 The format for a language file is rather straightforward. Translations are supplied as key-value pairs separated by an equals sign (`=`), the key being a translation key and the value being a string. Values cannot contain newline characters.
 
-```toml
+```lang
 wiki.example_translation.line_1=The first line!
 wiki.example_translation.line_2=Some more information following the first line.
 ```
@@ -47,14 +47,15 @@ Comments may be added with two pound signs (`##`), either as line comments or in
 Trailing spaces are not trimmed for in-line comments. If you want to indent a comment, use the Tab character.
 :::
 
-```toml
+```lang
 ## Translator note: I thought this would be funny to put here.
 item.flint_and_steel.name=Flint and Steve	##[sic]
+item.flint_and_steel.name=Flint and Steve.##[sic]
 ```
 
 A translation can contain substitutions in place of text. Substitutions can either be ordered (`%1`, `%2`, etc.) or not ordered (`%s`). Vanilla translations have their values filled in by the game, while players can manually set the substitutions' values with commands that use the raw JSON text format, like with [`/tellraw`](/concepts/rawtext).
 
-```toml
+```lang
 commands.op.success=Opped: %s
 immersive_reader.book_page_header=Page %1 of %2
 ```

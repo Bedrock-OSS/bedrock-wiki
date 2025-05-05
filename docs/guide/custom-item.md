@@ -235,7 +235,7 @@ We already created these files when making our `RP` and `BP`, so we just need to
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```
+```lang
 item.wiki:ectoplasm=Ectoplasm
 ```
 

@@ -968,7 +968,7 @@ The final steps are to add our entity's name to the language files. You may have
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```json
+```lang
 entity.wiki:ghost.name=Ghost
 item.spawn_egg.entity.wiki:ghost.name=Ghost
 ```

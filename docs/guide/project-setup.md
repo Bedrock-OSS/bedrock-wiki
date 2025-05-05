@@ -201,14 +201,14 @@ The last thing to do is setup language support for your add-on. You will need to
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```json
+```lang
 pack.name=Wiki Resource Pack
 pack.description=A Ghostly Guide
 ```
 
 <CodeHeader>BP/texts/en_US.lang</CodeHeader>
 
-```json
+```lang
 pack.name=Wiki Behavior Pack
 pack.description=A Ghostly Guide
 ```

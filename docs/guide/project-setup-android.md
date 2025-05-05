@@ -181,7 +181,7 @@ Remember when we said we'll define the pack name and description in code form ea
 
 <codeHeader>BP/texts/en_US.lang</codeHeader>
 
-```
+```lang
 pack.name=§2My §lFIRST §r§2Add-on's Behaviour Pack!
 pack.description=This add-on is made by a Wiki Contributor!
 ```
@@ -194,7 +194,7 @@ pack.description=This add-on is made by a Wiki Contributor!
 
 <codeHeader>RP/texts/en_US.lang</codeHeader>
 
-```
+```lang
 pack.name=§2My §lFIRST §r§2Add-on's Resource Pack!
 pack.description=This add-on is made by a Wiki Contributor!
 ```

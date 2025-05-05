@@ -98,7 +98,7 @@ Finally, we'll define the names of the skin pack and every skin in the `.lang` f
 
 <CodeHeader>skin_packs/tutorial_skin_pack/texts/en_US.lang</CodeHeader>
 
-```
+```lang
 skinpack.tutorial=Tutorial Skin Pack
 
 skin.tutorial.tutorial_skin_1=Skin 1
