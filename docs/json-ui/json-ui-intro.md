@@ -67,7 +67,7 @@ The `_ui_defs.json` file references all JSON UI files in an array.
 
 You can make new files, for example we'll add `RP/ui/button.json` and `RP/my_ui/main_menu.json`. In the file, we would list them as such:
 
-<CodeHeader>RP/ui/\_ui_defs.json</CodeHeader>
+<CodeHeader>RP/ui/_ui_defs.json</CodeHeader>
 
 ```json
 {
@@ -84,7 +84,7 @@ You can make new files, for example we'll add `RP/ui/button.json` and `RP/my_ui/
 
 We can denote a variable `"$info_text_color"` and its value of `[0.8, 0.8, 0.8]` within the `_global_variables.json` file as such:
 
-<CodeHeader>RP/ui/\_global_variables.json</CodeHeader>
+<CodeHeader>RP/ui/_global_variables.json</CodeHeader>
 
 ```json
 {
@@ -774,9 +774,9 @@ String formatting is used in JSON UI to access or manipulate parts of a string u
 
 String length in format specifiers is measured in **display units**, not character count. Each character takes up a number of units depending on its Unicode code point:
 
-- Characters `U+0000`-`U+007F` (e.g. letters, numbers, basic symbols) count as **1 unit**  
-- Characters `U+0080`-`U+07FF` (e.g. `§`, Latin-1 accents) count as **2 units**  
-- Characters above `U+07FF` (e.g. emojis, non-Latin scripts, custom glyphs) count as **3 units**
+-   Characters `U+0000`-`U+007F` (e.g. letters, numbers, basic symbols) count as **1 unit**
+-   Characters `U+0080`-`U+07FF` (e.g. `§`, Latin-1 accents) count as **2 units**
+-   Characters above `U+07FF` (e.g. emojis, non-Latin scripts, custom glyphs) count as **3 units**
 
 If a string is read incorrectly, (i.e. cutting off a multi-unit character in the middle) the last character may fail to render. For example, if a glyph (3 units wide) is sliced at 2 units with `%.2s`, it will not display at all.
 
@@ -790,31 +790,31 @@ Assuming the variable **$var** is defined as:
 
 The following format specifiers can be used:
 
-- `%.ns`  
-  Truncates the string to the first **n display units**.  
-  Example: `('%.7s' * $var)` returns `abcdefg`.
+-   `%.ns`  
+    Truncates the string to the first **n display units**.  
+    Example: `('%.7s' * $var)` returns `abcdefg`.
 
-- `%0ns`  
-  Returns the full string if its length is **n or more units**, otherwise returns `0`.  
-  Example:  
-  `('%04s' * $var)` returns `abcdefghijklmn`  
-  `('%015s' * $var)` returns `0`
+-   `%0ns`  
+    Returns the full string if its length is **n or more units**, otherwise returns `0`.  
+    Example:  
+    `('%04s' * $var)` returns `abcdefghijklmn`  
+    `('%015s' * $var)` returns `0`
 
-- `%n.xs`  
-  Returns **x units** from the start, padded with **leading spaces** to reach **n units** in total.  
-  Example: `('%7.4s' * $var)` returns `   abcd`.
+-   `%n.xs`  
+    Returns **x units** from the start, padded with **leading spaces** to reach **n units** in total.  
+    Example: `('%7.4s' * $var)` returns `   abcd`.
 
-- `%-n.xs`  
-  Returns **x units** from the start, padded with **trailing spaces** to reach **n units** in total.  
-  Example: `('%-7.4s' * $var)` returns `abcd   `.
+-   `%-n.xs`  
+    Returns **x units** from the start, padded with **trailing spaces** to reach **n units** in total.  
+    Example: `('%-7.4s' * $var)` returns `abcd   `.
 
-- `%ns`  
-  Adds **spaces to the start** to make the total length **n units**, if needed.  
-  Example: `('%15s' * $var)` returns ` abcdefghijklmn`.
+-   `%ns`  
+    Adds **spaces to the start** to make the total length **n units**, if needed.  
+    Example: `('%15s' * $var)` returns ` abcdefghijklmn`.
 
-- `%-ns`  
-  Adds **spaces to the end** to make the total length **n units**, if needed.  
-  Example: `('%-15s' * $var)` returns `abcdefghijklmn `.
+-   `%-ns`  
+    Adds **spaces to the end** to make the total length **n units**, if needed.  
+    Example: `('%-15s' * $var)` returns `abcdefghijklmn `.
 
 Remember that the usage of this format is limited.
 
