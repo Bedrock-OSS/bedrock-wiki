@@ -187,7 +187,7 @@ Uses signed 16-bit integer. 2’s complements creates negative range.
 
 https://bugs.mojang.com/browse/MCPE-180073
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -210,7 +210,7 @@ Type: Object
 
 ```json
 "minecraft:damage_absorption": {
-	"absorbable_causes": ["all"]
+    "absorbable_causes": ["all"]
 }
 ```
 
@@ -224,7 +224,7 @@ Type: Object
     -   `block`: String/Object - What block the item will destroy.
         -   `tags`: String
             -   Molang query
-    -   `speed`: Int
+    -   `speed`: Integer
         -   How fast the block will be destroyed.
         -   Can be negative. If negative, the item will not be able to destroy the block.
 -   `use_efficiency`: Boolean
@@ -235,15 +235,15 @@ Type: Object
 
 ```json
 "minecraft:digger": {
-	"use_efficiency": true,
-	"destroy_speeds": [
-		{
-			"block": {
-				"tags": "q.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
-			},
-			"speed": 6
-		}
-	]
+    "use_efficiency": true,
+    "destroy_speeds": [
+        {
+            "block": {
+                "tags": "q.any_tag('stone', 'metal')" // Note that not all blocks have tags; listing many blocks may be necessary
+            },
+            "speed": 6
+        }
+    ]
 }
 ```
 
@@ -289,11 +289,11 @@ https://bugs.mojang.com/browse/MCPE-180112
 Type: Object
 
 -   `damage_chance`: Object - Damage chance is the percentage chance of this item losing durability. Default is set at 100. Defined as an int range with min and max value.
-    -   `min`: Int
+    -   `min`: Integer
         -   Minimum chance for durability to take damage. Range: [0, 100].
-    -   `max`: Int
+    -   `max`: Integer
         -   Maximum chance for durability to take damage. Range: [0, 100].
--   `max_durability`: Int
+-   `max_durability`: Integer
     -   Max durability is the amount of damage that this item can take before breaking. This is a required parameter with a minimum value of 0.
     -   Uses signed 16-bit integer. 2’s complements creates negative range. `[32768-65536]` - gets treated as negative. The values given to the item will be `(-32768-0)`. So the negative ranges are `[256*(256x+128) - 256*(256(x+1)))` where x is an arbitrary number.
     -   https://bugs.mojang.com/browse/MCPE-180112
@@ -373,7 +373,7 @@ Type: Object
 
 ```json
 "minecraft:dyeable": {
-	"default_color": "#ffffff"
+    "default_color": "#ffffff"
 }
 ```
 
@@ -388,7 +388,7 @@ Type: Object
 -   `slot`: String
     -   What enchantments can be applied (ex. Using `bow` would allow this item to be enchanted as if it were a bow).
     -   Required Field.
--   `value`: Int
+-   `value`: Integer
     -   The value of the enchantment (minimum of 0).
     -   Required Field
     -   Value is `value % 256`
@@ -480,7 +480,7 @@ Type: Object
 
 -   `can_always_eat`: Boolean
     -   If `true` you can always eat this item (even when not hungry).
--   `nutrition`: Int
+-   `nutrition`: Integer
     -   The value that is added to the actor's nutrition when the item is used.
     -   Can be negative.
     -   Max value is the 32-bit integer limit
@@ -568,15 +568,18 @@ Determines the icon to represent the item in the UI and elsewhere. Released from
 
 Type: Object
 
--   `textures`: Object - This map contains the different textures that can be used for the item's icon. `default` will contain the actual icon texture. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
-    -   `default`: String
+-   `textures`: Object - This map contains the different textures that can be used for the item's icon. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
+    -   `default`
         -   The actual icon used for items
-    -   `dyed`: String
-        -   The icon used after the item is dyed in a cauldron.
-        -   This can only be displayed if the item has the `minecraft:dyeable` component.
-    -   `icon_trim`: String
+    -   `dyed`
+        -   The icon displayed after a [dyeable](#dyeable) item is dyed in a cauldron.
+    -   `icon_trim`
         -   The icon overlay for when your item has a trim on it.
         -   `icon_trim` implicitly falls back to the type of slot in the `minecraft:wearable` component. Currently, the icon will only overlay if the shortname matches the item’s identifier. Whether this is a bug or feature is unknown yet.
+    -   `bundle_open_back`
+        -   The texture displayed behind the preview of the item selected in the [bundle interaction](#bundle-interaction) tooltip.
+    -   `bundle_open_front`
+        -   The texture displayed in front of the preview of the item selected in the [bundle interaction](#bundle-interaction) tooltip.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -628,7 +631,7 @@ Type: Boolean
 
 Determines how many of an item can be stacked together.
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -1008,7 +1011,7 @@ Determines where the item can be worn. If any non-hand slot is chosen, the max s
 
 Type: Object
 
--   `protection`: Int
+-   `protection`: Integer
 -   `slot`: String
 
 <CodeHeader>minecraft:item > components</CodeHeader>

@@ -1,9 +1,9 @@
 ---
 title: High Resolution Items
+description: Learn how to make items with high resolution texture in a proper way.
 category: Tutorials
 mentions:
     - BlazeDrake
-description: Learn how to make items with high resolution texture in a proper way.
 ---
 
 ::: tip
@@ -15,9 +15,9 @@ This tutorial uses attachables. If you do not know what an attachable is, read t
 Most of the time when creating items, the standard 16x16 resolution is enough. Sometimes though, you want to have a more detailed item. You may have noticed an issue with higher resolution items though: They end up looking larger rather than more detailed!
 
 <WikiImage
-	src="/assets/images/items/high-resolution-items/large_item_broken_thirdperson.png"
-	alt="alternative text"
-	width=1080
+    src="/assets/images/items/high-resolution-items/large_item_broken_thirdperson.png"
+    alt="alternative text"
+    width=1080
 />
 
 The solution to this is using an attachable to scale the item down while being held. The calculations to do so can require quite a bit of tuning, so this page gives the code you need to create an attachable to scale your item back down to a normal size! It isn't perfect, but it will look very similar to a normal item, save for some slight differences in rotation and in how it animates when you punch with it. The main idea of what it does is that it uses an animation to scale the size of the item down to what the size should be
@@ -153,7 +153,7 @@ Now that we have those files in place, we can create the animation that does all
 With all of these files in place, your item should look a lot better! For example, here is what the item I used in the first image looks like when I add all of the files in this tutorial to a resource pack, replacing all of the appropriate values with the values used in my item:
 
 <WikiImage
-	src="/assets/images/items/high-resolution-items/large_item_fixed_thirdperson.png"
-	alt="alternative text"
-	width=1080
+    src="/assets/images/items/high-resolution-items/large_item_fixed_thirdperson.png"
+    alt="alternative text"
+    width=1080
 />

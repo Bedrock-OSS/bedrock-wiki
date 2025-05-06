@@ -1,5 +1,6 @@
 ---
 title: Spawning Items
+description: Learn how to spawn item entities.
 category: Tutorials
 tags:
     - intermediate
@@ -11,7 +12,6 @@ mentions:
     - MedicalJewel105
     - aexer0e
     - Xterionix
-description: Spawn an item entity.
 ---
 
 It is fairly common to want to spawn an item in the world, as if dropped. This page will walk through how to accomplish this through various methods, including Entity Deaths, Interactions, and an all-purpose method.
@@ -28,7 +28,7 @@ The simplest method of spawning items to date is by using /loot. Formatted as su
 
 ```json
 "minecraft:loot": {
-	"table": "loot_tables/entities/cow.json"
+    "table": "loot_tables/entities/cow.json"
 }
 ```
 
@@ -40,7 +40,7 @@ Another simple method of spawning items - and generally the most common one - is
 
 ```json
 "minecraft:loot": {
-	"table": "loot_tables/entities/forium.json"
+    "table": "loot_tables/entities/forium.json"
 }
 ```
 
@@ -86,23 +86,23 @@ Note that if the entity is not removed upon interaction, it can be interacted wi
 
 ```json
 "minecraft:interact": {
-	"interactions": [
-		{
-			"on_interact": {
-				"filters": {
-					"test": "is_family",
-					"subject": "other",
-					"value": "player"
-				},
-				"event": "break_box",
-				"target": "self"
-			},
-			"swing": true,
-			"spawn_items": {
-				"table": "loot_tables/entities/box.json"
-			}
-		}
-	]
+    "interactions": [
+        {
+            "on_interact": {
+                "filters": {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                },
+                "event": "break_box",
+                "target": "self"
+            },
+            "swing": true,
+            "spawn_items": {
+                "table": "loot_tables/entities/box.json"
+            }
+        }
+    ]
 }
 ```
 
@@ -123,10 +123,10 @@ This behavior appears to push the mob back when the items are dropped. Thus it i
 ```json
 "minecraft:navigation.walk": {},
 "minecraft:behavior.drop_item_for": {
-	"priority": 1,
-	"max_dist": 16,
-	"loot_table": "loot_tables/entities/forium.json",
-	"time_of_day_range": [0.0, 1.0]
+    "priority": 1,
+    "max_dist": 16,
+    "loot_table": "loot_tables/entities/forium.json",
+    "time_of_day_range": [0.0, 1.0]
 }
 ```
 

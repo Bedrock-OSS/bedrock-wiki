@@ -127,7 +127,7 @@ Describes the destructible by explosion properties for this block. If set to tru
 
 Type: Boolean/Object
 
--   `explosion_resistance`: Double
+-   `explosion_resistance`: Float
     -   Describes how resistant the block is to explosion. Greater values mean the block is less likely to break when near an explosion (or has higher resistance to explosions). The scale will be different for different explosion power levels. A negative value or 0 means it will easily explode; larger numbers increase level of resistance.
 
 #### Example using Boolean
@@ -157,7 +157,7 @@ If set to false, the block is indestructible by mining.
 
 Type: Boolean/Object
 
--   `seconds_to_destroy`: Double
+-   `seconds_to_destroy`: Float
     -   Sets the hardness of the block. Greater numbers result in greater mining times.
 
 :::danger SECONDS TO DESTROY
@@ -182,6 +182,27 @@ By default, the number of seconds it takes to destroy a custom block is 1.5&time
 ```json
 "minecraft:destructible_by_mining": {
     "seconds_to_destroy": 20
+}
+```
+
+### Destruction Particles
+
+Determines the appearance of the particles created when hitting, destroying, stepping on and falling onto blocks.
+
+Type: Object
+
+-   `texture`: String (optional)
+    -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
+    -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
+-   `tint_method`: String (optional)
+    -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:destruction_particles": {
+    "texture": "wiki:particle_texture",
+    "tint_method": "grass"
 }
 ```
 
@@ -211,7 +232,7 @@ Type: String
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
 
-```c
+```lang
 tile.wiki:custom_block.name=Custom Block
 ```
 
@@ -221,7 +242,7 @@ Triggers an event when an entity falls onto this block.
 
 Type: Object
 
--   `min_fall_distance`: Double
+-   `min_fall_distance`: Float
     -   The minimum distance an entity must fall to trigger the event in blocks.
 
 _Released from experiment `Beta APIs` for format versions 1.21.10 and higher._
@@ -240,7 +261,7 @@ Describes the flammable properties for this block. If set to true, default value
 
 Type: Boolean/Object
 
--   `catch_chance_modifier`: Int
+-   `catch_chance_modifier`: Integer
     -   A modifier affecting the chance that this block will catch flame when next to a fire. Values are greater than or equal to 0, with a higher number meaning more likely to catch on fire. For a `catch_chance_modifier` greater than 0, the fire will continue to burn until the block is destroyed (or it will burn forever if the `destroy_chance_modifier` is 0). If the `catch_chance_modifier` is 0, and the block is directly ignited, the fire will eventually burn out without destroying the block (or it will have a chance to be destroyed if `destroy_chance_modifier` is greater than 0). The default value of 5 is the same as that of Planks.
 
 #### Example using Boolean
@@ -266,7 +287,7 @@ Type: Boolean/Object
 
 Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity's movement speed when it travels on the block. Greater value results in more friction.
 
-Type: Double
+Type: Float
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -367,7 +388,7 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.21.6
 
 The amount that light will be dampened when it passes through the block, in a range (0-15). Higher value means the light will be dampened more.
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -379,7 +400,7 @@ Type: Int
 
 The amount of light this block will emit in a range (0-15). Higher value means more light will be emitted.
 
-Type: Int
+Type: Integer
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -439,6 +460,9 @@ Sets the color of the block when rendered to a map. The color is represented as 
 
 Type: String/Object/Vector [a, b, c]
 
+-   `tint_method`: String (optional)
+    -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `color` based on the biome the block is placed in.
+
 #### Example using String
 
 <CodeHeader>minecraft:block > components</CodeHeader>
@@ -471,46 +495,56 @@ Configuration of your block's rendering, including textures and lighting.
 
 -   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
 -   Block faces will unconditionally darken if intersecting another block.
--   The texture on the `down` face is used for destruction particles.
+-   By default, the texture of the `down` (or `*` if not specified) instance is used for [destruction particles](#destruction-particles).
 
 Material instances can be combined with `RP/blocks.json` entries to create blocks which exhibit opaque-like properties. This is primarily used to enable face culling on [custom glass blocks](/blocks/custom-glass-blocks).
 
 _Released from experiment `Holiday Creator Features` for format versions 1.19.40 and higher._
 
-#### Render Methods
-
-Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
-
-| Render Method           | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples                |
-| ----------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------- |
-| alpha_test              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings.         |
-| alpha_test_single_sided |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors.               |
-| blend                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block.     |
-| double_sided            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains. |
-| opaque _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete.          |
-
--   **_Transparency_** - fully see-through areas.
-
--   **_Translucency_** - semi-transparent areas.
-
--   **_Backface Culling_** - faces become invisible when viewed from behind.
-
--   **_Distant Culling_** - the block becomes invisible before reaching the full render distance.
-
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:material_instances": {
-  // '*' instance required - default instance for cube faces
-  // Instance names 'up', 'down', 'north', 'east', 'south' and 'west' are built in
-  "*": {
-    "texture": "wiki:texture_name", // Shortname defined in `RP/textures/terrain_texture.json`
-    "render_method": "blend", // One of the render methods in the above table
-    "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
-    "ambient_occlusion": true // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
-  }
+    // '*' instance required - default instance for cube faces
+    // Instance names 'up', 'down', 'north', 'east', 'south' and 'west' are built in
+    "*": {
+        "texture": "wiki:texture_name", // Shortname defined in `RP/textures/terrain_texture.json`
+        "tint_method": "grass", // Tint the texture based on the biome the block is placed in
+        "render_method": "blend", // One of the render methods in the above table
+        "ambient_occlusion": true, // Defaults to true (1); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
+        "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
+        "isotropic": true // Causes the texture to randomly be rotated based on the block's position
+    }
 }
 ```
+
+#### Render Methods
+
+Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
+
+| Render Method             | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples               |
+| ------------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------ |
+| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings         |
+| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors               |
+| `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
+| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains |
+| `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
+
+-   **_Transparency_** - fully see-through areas.
+-   **_Translucency_** - semi-transparent areas.
+-   **_Backface Culling_** - faces become invisible when viewed from behind.
+-   **_Distant Culling_** - faces become invisible after reaching half the render distance.
+
+##### Distance-Based Render Methods
+
+| Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
+| ----------------------------------- | ------------------------- | ---------------- | ---------------- |
+| `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
+| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp             |
+| `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
+
+-   **_Near Appearance_** - the render method used before reaching half the render distance.
+-   **_Far Appearance_** - the render method used after reaching half the render distance.
 
 #### Custom Instance Names
 
@@ -524,22 +558,22 @@ Custom instance names can be defined within material instances, and can be refer
 
 ```json
 "minecraft:material_instances": {
-  "*": {
-    "texture": "wiki:texture_name",
-    "render_method": "blend" // Must match other instances
-  },
-  // Custom instance name
-  "end": {
-    "texture": "wiki:texture_name_end",
-    "render_method": "blend" // Must match other instances
-  },
-  "up": "end",
-  "down": "end",
-  // Instance name defined in model:
-  "flower": {
-    "texture": "wiki:texture_name_flower",
-    "render_method": "blend" // Must match other instances
-  }
+    "*": {
+        "texture": "wiki:texture_name",
+        "render_method": "blend" // Must match other instances
+    },
+    // Custom instance name
+    "end": {
+        "texture": "wiki:texture_name_end",
+        "render_method": "blend" // Must match other instances
+    },
+    "up": "end",
+    "down": "end",
+    // Instance name defined in model:
+    "flower": {
+        "texture": "wiki:texture_name_flower",
+        "render_method": "blend" // Must match other instances
+    }
 }
 ```
 
@@ -558,27 +592,27 @@ Type: Object
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-    "minecraft:placement_filter": {
-        "conditions": [
-            {
-                "allowed_faces": [
-                    "up"
-                ],
-                "block_filter": [
-                    "minecraft:dirt",
-                    {
-                        "name": "minecraft:sand",
-                        "states": {
-                            "sand_type": "red"
-                        }
-                    },
-                    {
-                        "tags": "!q.any_tag('stone', 'wiki_tag')"
+"minecraft:placement_filter": {
+    "conditions": [
+        {
+            "allowed_faces": [
+                "up"
+            ],
+            "block_filter": [
+                "minecraft:dirt",
+                {
+                    "name": "minecraft:sand",
+                    "states": {
+                        "sand_type": "red"
                     }
-                ]
-            }
-        ]
-    }
+                },
+                {
+                    "tags": "!q.any_tag('stone', 'wiki_tag')"
+                }
+            ]
+        }
+    ]
+}
 ```
 
 See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.

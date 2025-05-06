@@ -64,6 +64,14 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                     "texture": "wiki:custom_trapdoor",
                     "render_method": "alpha_test_single_sided"
                 }
+            },
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "liquid_type": "water",
+                        "can_contain_liquid": true
+                    }
+                ]
             }
         },
         "permutations": [
@@ -83,38 +91,38 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, -270, 0] }
+                    "minecraft:transformation": { "rotation": [180, 90, 0] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, 270, 0] }
+                    "minecraft:transformation": { "rotation": [180, -90, 0] }
                 }
             },
             // Top Open
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [-270, 0, 0] }
+                    "minecraft:transformation": { "rotation": [90, 0, 0] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [270, 0, -180] }
+                    "minecraft:transformation": { "rotation": [-90, 0, 180] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [0, 270, 90] }
+                    "minecraft:transformation": { "rotation": [0, -90, 90] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, -270, -270] }
+                    "minecraft:transformation": { "rotation": [180, 90, 90] }
                 }
             },
             // Bottom Closed
@@ -133,13 +141,13 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [0, 270, 0] }
+                    "minecraft:transformation": { "rotation": [0, -90, 0] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [0, -270, 0] }
+                    "minecraft:transformation": { "rotation": [0, 90, 0] }
                 }
             },
             // Bottom Open
@@ -152,19 +160,19 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [270, 0, 0] }
+                    "minecraft:transformation": { "rotation": [-90, 0, 0] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [0, -270, 90] }
+                    "minecraft:transformation": { "rotation": [0, 90, 90] }
                 }
             },
             {
                 "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('wiki:open')",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, 270, -270] }
+                    "minecraft:transformation": { "rotation": [180, -90, 90] }
                 }
             }
         ]

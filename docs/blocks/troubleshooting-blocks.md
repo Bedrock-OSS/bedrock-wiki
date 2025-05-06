@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Blocks
+description: Guide for blocks troubleshooting.
 category: General
 tags:
     - help
@@ -10,7 +11,6 @@ mentions:
     - MedicalJewel105
     - Sprunkles137
     - QuazChick
-description: Guide for blocks troubleshooting.
 ---
 
 :::tip
@@ -174,17 +174,17 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 
 ```json
 {
-  "format_version": "1.21.70",
-  "minecraft:block": {
-    ...
-    "components": {
-      "minecraft:material_instances": {
-        "*": {
-          "render_method": "alpha_test"
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        ...
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "render_method": "alpha_test"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
