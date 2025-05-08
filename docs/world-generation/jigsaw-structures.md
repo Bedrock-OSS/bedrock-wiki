@@ -139,7 +139,7 @@ The only type of jigsaw, this component contains the components the game uses to
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
 -   `biome_filters`: What biomes the structure can spawn in.
 
-## Structure sets
+## Structure Sets
 
 A file which tells the game how to place structures in a world. Mutliple structures can be put here and the distance of how far apart they are is set here.
 
