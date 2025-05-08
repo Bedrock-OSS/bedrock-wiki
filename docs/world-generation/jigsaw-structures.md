@@ -108,7 +108,7 @@ For now there is only one type of element ready for use to creators, `minecraft:
 
 Processors are lists of blocks and how they can be modified when the structure is placed. They can also apply loot tables to blocks that support them such as chests and sus gravel.
 
-### Processor types
+### Processor Types
 
 Processors support two types, `minecraft:rule` and `minecraft:capped`. Rule allows for the modification and replacement of blocks within a structure. It is how the vanilla trail ruins apply loot tables to sus blocks and decay the structures. Capped allows for the restriction of how many blocks a rule can apply to a structure, if you want to limit a rule processor from making half your blackstone structure into guilded blackstone you can apply a capped processor to the give the the rule processor a set number of the guilded blackstone blocks it can place before being forced to use other rules.
 
