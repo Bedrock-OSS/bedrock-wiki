@@ -16,7 +16,6 @@ Jigsaw structures are structures made out of smaller pieces and connected via ji
     alt="The jigsaw block ui"
     caption="The jigsaw block UI."
     width="420"
-    pixelated
 />
 
 Jigsaw blocks are the blocks that put all the pieces of a structure together. There are two types of them, generating jigsaws and connector jigsaws. While they are visually identical they perform differently in game.
@@ -28,7 +27,6 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
     alt="A generating jigsaw"
     caption="A generating jigsaw"
     width="240"
-    pixelated
 />
 
 -   A connecting jigsaw has a filled name field and it the block that generating jigsaws will look for when placing their connector pieces. They cannot generate anything.
@@ -38,7 +36,6 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
     alt="A generating jigsaw"
     caption="A generating jigsaw"
     width="240"
-    pixelated
 />
 
 ### Target Pool
@@ -50,21 +47,18 @@ The target pool is the field that holds the identifier of the template pool for 
     alt="Jigsaws that can connect"
     caption="These two jigsaws can connect because they are rotated the same way."
     width="120"
-    pixelated
 />
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws2.png"
     alt="Jigsaws that can connect"
     caption="These two jigsaws can connect because their arrows are facing the same way."
     width="110"
-    pixelated
 />
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/unconnectable-jigsaws.png"
     alt="Jigsaws that cannot connect"
     caption="These two jigsaws cannnot connect because their arrows are not facing the same direction."
     width="100"
-    pixelated
 />
 
 ### Name
@@ -116,28 +110,97 @@ Processors support two types, `minecraft:rule` and `minecraft:capped`. Rule allo
 
 A rule processor allows for 5 inputs, `input_predicate`, `output_state`, `block_entity_modifier`, `location_predicate`, `position_predicate`
 
--   input_predicate: Allows for 4 different inputs to tell the game how to look for a block. It can be always_true, block_match, random_block_match, and tag_match. Based on which one is picked the game will select blocks based on it. always_true is self explainatory, block_match looks for a block, random_block_match looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions, and tag_match looks for blocks with a specfied tag.
--   output_state: The block to replace the input predicate if it is found.
--   block_entity_modifier: Allows for block_entities such as chests and barrels to applied loot. They can be marked as pass_through (do nothing) or append_loot in which a loot table is input to be applied.
--   location_predicate: To specify if the block in input predicate is supposed to be looked for when placing the structure.
--   position_predicate: No difference to the one above?
+-   `input_predicate`: Allows for 4 different inputs to tell the game how to look for a block. It can be always_true, block_match, random_block_match, and tag_match. Based on which one is picked the game will select blocks based on it. always_true is self explainatory, block_match looks for a block, random_block_match looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions, and tag_match looks for blocks with a specfied tag.
+-   `output_state`: The block to replace the input predicate if it is found.
+-   `block_entity_modifier`: Allows for block_entities such as chests and barrels to applied loot. They can be marked as pass_through (do nothing) or append_loot in which a loot table is input to be applied.
+-   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
+-   `position_predicate`: No difference to the one above?
 
 ## Jigsaw Structure
 
-A jigsaw structure is a file that tells the game how to generate the structure. It's identfier is used for the /place and /locate structure commands. It also tells the game what template pool it should use to start and how large the structure should be using max_depth. They are stored in the jigsaw_structures subfolder of the worldgen folder.
+A jigsaw structure is a file that tells the game how to generate the structure. It's identfier is used for the `/place` and `/locate` structure commands. It also tells the game what template pool it should use to start and how large the structure should be using max_depth. They are stored in the jigsaw_structures subfolder of the worldgen folder.
 
 ### minecraft:jigsaw
 
 The only type of jigsaw, this component contains the components the game uses to place the structure.
 
--   `description`: contains the file identifier.
+-   `description`: Contains the file identifier. Used for `/place` and `/locate`.
 -   `step`: What step of world gen places the structure. Contains multiple options, most notable being underground_structures, strongholds, and surface_structures.
 -   `heightmap_projection`: What y level the start_height value will look for to place the structure. Can be world_surface or sea_floor.
--   `start_height`: A number, positive or negative, that tells the game what y level to place the structure realitive to the heightmap_projection.
--   `max_depth`: How large you structure will be. Values can be 1 through 20 and the larger the number the larger the structure. A vanilla village is 6 for refernce. The depth determines how many jigsaws will be placed in a row before terminating the chain. For example if the structure starts with a structure with 1 generating jigsaw it will place 1 extention which counts as 1 level however if that extention places a piece with 3 generating jigsaws each piece placed by those will count as a level so all 3 will count as level 2, if they each place 3 more then all of those will count as level 3 and so on.
+-   `start_height`: The setting which controls the offset from `heightmap_projection` to place the `start_pool`. It has multiple entries based on the `type` field.
+    -   `type`: The type of projection to be used. `constant` and `uniform` types are avalible.
+        -   `constant`: A constant anchor point will be used. The rest of the `start_height` will follow the format of `constant` when `type` is set to it.
+        -   `uniform`: Uniform distibution of possible starting heights. The rest of the `start_height` will follow the format of `uniform` when `type` is set to it.
+    -   `value`: If `type` is constant this value is used to set the height. 4 possible entries to base the value from realtive to it's assigned level.
+        -   `absolute`: A number, positive or negative of where to offset the generation of the `start_pool` piece from the `heightmap_projection`.
+        -   `above_bottom`: A height realtive to the bottom of the dimension
+        -   `below_top`: A height relative to the top of the dimension
+        -   `from_sea`: A height relative to the sea level of the dimension (overworld is 64)
+    -   `max`: If `type` is uniform this value is used to set the highest value the range of generation y levels can be.
+    -   `min`: If `type` is uniform this value is used to set the lowest value the range of generation y levels can be.
+-   `max_depth`: How large you structure will be. Values can be 1 through 20 inclusive and the larger the number the larger the structure. A vanilla village is 6 for refrence. The depth determines how many jigsaws will be placed in a row before terminating the chain. For example if the structure starts with a structure with 1 generating jigsaw it will place 1 extention which counts as 1 level however if that extention places a piece with 3 generating jigsaws each piece placed by those will count as a level so all 3 will count as level 2, if they each place 3 more then all of those will count as level 3 and so on.
 -   `terrain_adaptation`: How the game will modify the terrain around the structure. 4 options. beard_thin places a platfrom around the base like java pillager outposts and villages in both versions. beard_box hollows a cavern around the structure like a ancient city. bury puts the structure underground but any part of the structure breaching the surface will be unburied just like a trail ruin. encapsulate surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
+-   `start_jigsaw_name`: (optional) The name of the jigsaw block from a structure in the start pool that should be placed
 -   `biome_filters`: What biomes the structure can spawn in.
+-   `max_distance_from_center`: How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive.
+-   `dimension_padding`: How close to the world height and depth limits pieces of the sturcture can get before being terminated. Must be a positive number.
+-   `pool_aliases`: Can be used to reroute jigsaw target pools to a set template that will be applied to the whole structure to allow for the creation of themes. Trial chambers use them to determine what type of mob will be spawned from each type of spawner. For example the small melee spawners can pick baby zombies and every single small melee spawner will then spawn baby zombies. There are three types of redirects. `direct`, `random`, and `random_group`.
+    -   `Direct`: The redirect will reroute the alias assigned to it to a template pool. Direct has 2 extra fields after `type` is assigned to be `direct`. `alias` is the id of the pool alias to be used in the target field of a jigsaw block. `target` is the template pool to be used when the alias is called.
+    -   `random`: The redirect will reroute the alias to a weighted list of template pools where it will pick one of the entries to use for the entire structure. Like direct, `random` has 2 extra fields after `type` is assigned to be `random`. `alias` is the id of the pool alias to be used in the target field of a jigsaw block. `targets` is a array that has entries with 2 fields themselves to govern how they are picked. `data` is the id of the template pool to be used if chosen. `weight` is the weight assigned to it, a higher value is more likely to be chosen.
+    -   `random_group`: The redirect will reroute the alias to a list made up of the prior two types allowing for the pool alias to pich other types. They can be any type except `random_group`.
+ 
+<CodeHeader></CodeHeader>
+```json
+{
+    "format_version": "1.21.20"
+    "minecraft:jigsaw": {
+        "description": {
+            "identifier": "wiki:fortress"
+        },
+        "step": "surface_structures",
+        "heightmap_projection": "world_surface",
+        "start_height": {
+            "type": "constant",
+            "value": {
+                "absolute": -15
+            }, 
+        },
+        "max_depth": 15,
+        "terrain_adaptation": "beard_thin",
+        "start_pool": wiki:fortress_courtyard,
+        "biome_filters": [
+            {
+                "test": "has_biome_tag",
+                "value": "plains"
+            }
+        ],
+        "max_distance_from_center": 128,
+        "dimension_padding": 10
+        "pool_aliases: [
+            {
+                "type": "random",
+                "alias": "wiki:spawners",
+                "targets": [
+                    {
+                        "data": "wiki:spawners/zombie",
+                        "weight": 10
+                    },
+                    {
+                        "data": "wiki:spawners/skeleton",
+                        "weight": 8
+                    },
+                    {
+                        "data": "wiki:spawners/vindicator",
+                        "weight": 1
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
 
 ## Structure Sets
 
