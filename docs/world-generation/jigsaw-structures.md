@@ -9,7 +9,7 @@ description: Jigsaw structures are structures made out of smaller pieces and con
 
 Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 
-## Jigsaw blocks
+## Jigsaw Blocks
 
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/jigsaw-ui.png"
