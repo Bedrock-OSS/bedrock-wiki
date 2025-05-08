@@ -4,7 +4,7 @@ category: General
 license: true
 mentions:
     - Supernova3695YT
-description: Jigsaw structures explained.
+description: Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 ---
 
 Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
