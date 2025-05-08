@@ -112,7 +112,7 @@ Processors are lists of blocks and how they can be modified when the structure i
 
 Processors support two types, `minecraft:rule` and `minecraft:capped`. Rule allows for the modification and replacement of blocks within a structure. It is how the vanilla trail ruins apply loot tables to sus blocks and decay the structures. Capped allows for the restriction of how many blocks a rule can apply to a structure, if you want to limit a rule processor from making half your blackstone structure into guilded blackstone you can apply a capped processor to the give the the rule processor a set number of the guilded blackstone blocks it can place before being forced to use other rules.
 
-#### Rule processor
+#### Rule Processor
 
 A rule processor allows for 5 inputs, `input_predicate`, `output_state`, `block_entity_modifier`, `location_predicate`, `position_predicate`
 
