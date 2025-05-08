@@ -122,7 +122,7 @@ A rule processor allows for 5 inputs, `input_predicate`, `output_state`, `block_
 -   location_predicate: To specify if the block in input predicate is supposed to be looked for when placing the structure.
 -   position_predicate: No difference to the one above?
 
-## Jigsaw structure
+## Jigsaw Structure
 
 A jigsaw structure is a file that tells the game how to generate the structure. It's identfier is used for the /place and /locate structure commands. It also tells the game what template pool it should use to start and how large the structure should be using max_depth. They are stored in the jigsaw_structures subfolder of the worldgen folder.
 
