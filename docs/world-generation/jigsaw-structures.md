@@ -125,31 +125,174 @@ A jigsaw structure is a file that tells the game how to generate the structure. 
 The only type of jigsaw, this component contains the components the game uses to place the structure.
 
 -   `description`: Contains the file identifier. Used for `/place` and `/locate`.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "description": {
+            "identifier": "wiki:lone_fortress"
+        }
+        ```
 -   `step`: What step of world gen places the structure. Contains multiple options, most notable being underground_structures, strongholds, and surface_structures.
--   `heightmap_projection`: What y level the start_height value will look for to place the structure. Can be world_surface or sea_floor.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "step": "surface_structures"
+        ```
+-   `heightmap_projection`: (Optional) What y level the start_height value will look for to place the structure. Can be world_surface or sea_floor.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "heightmap_projection": "world_surface"
+        ```
 -   `start_height`: The setting which controls the offset from `heightmap_projection` to place the `start_pool`. It has multiple entries based on the `type` field.
     -   `type`: The type of projection to be used. `constant` and `uniform` types are avalible.
         -   `constant`: A constant anchor point will be used. The rest of the `start_height` will follow the format of `constant` when `type` is set to it.
+            -   <CodeHeader></CodeHeader>
+                ```json
+                "start_height": {
+                  "type": "constant",
+                  "value": {
+                    "absolute": 10 
+                  }
+                }
+                ```
         -   `uniform`: Uniform distibution of possible starting heights. The rest of the `start_height` will follow the format of `uniform` when `type` is set to it.
-    -   `value`: If `type` is constant this value is used to set the height. 4 possible entries to base the value from realtive to it's assigned level.
-        -   `absolute`: A number, positive or negative of where to offset the generation of the `start_pool` piece from the `heightmap_projection`.
-        -   `above_bottom`: A height realtive to the bottom of the dimension
-        -   `below_top`: A height relative to the top of the dimension
-        -   `from_sea`: A height relative to the sea level of the dimension (overworld is 64)
+            -   <CodeHeader></CodeHeader>
+                ```json
+                "start_height": {
+                  "type": "uniform",
+                  "min": {
+                    "below_top": 100 
+                  },
+                  "max": {
+                    "above_bottom": 20
+                  } 
+                }
+                ```
+    -   `value`: 4 possible entries to base the value from realtive to it's assigned level.
+        -   `absolute`: A number, positive or negative of where to offset the generation of the `start_pool` piece from the `heightmap_projection`. Must be a integer.
+        -   `above_bottom`: A height realtive to the bottom of the dimension. Must be a positive integer.
+        -   `below_top`: A height relative to the top of the dimension. Must be a positive integer.
+        -   `from_sea`: A height relative to the sea level of the dimension (overworld is 64). Must be a integer.
     -   `max`: If `type` is uniform this value is used to set the highest value the range of generation y levels can be.
+        -   Can use all 4 of the values from `value` above here
     -   `min`: If `type` is uniform this value is used to set the lowest value the range of generation y levels can be.
+        -   Can use all 4 of the values from `value` above here
 -   `max_depth`: How large you structure will be. Values can be 1 through 20 inclusive and the larger the number the larger the structure. A vanilla village is 6 for refrence. The depth determines how many jigsaws will be placed in a row before terminating the chain. For example if the structure starts with a structure with 1 generating jigsaw it will place 1 extention which counts as 1 level however if that extention places a piece with 3 generating jigsaws each piece placed by those will count as a level so all 3 will count as level 2, if they each place 3 more then all of those will count as level 3 and so on.
--   `terrain_adaptation`: How the game will modify the terrain around the structure. 4 options. beard_thin places a platfrom around the base like java pillager outposts and villages in both versions. beard_box hollows a cavern around the structure like a ancient city. bury puts the structure underground but any part of the structure breaching the surface will be unburied just like a trail ruin. encapsulate surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "max_depth": 20
+        ```
+-   `terrain_adaptation`: (optional) How the game will modify the terrain around the structure. 4 options. beard_thin places a platfrom around the base like java pillager outposts and villages in both versions. beard_box hollows a cavern around the structure like a ancient city. bury puts the structure underground but any part of the structure breaching the surface will be unburied just like a trail ruin. encapsulate surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "terrain_adaptation": "beard_thin"
+        ```
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
--   `start_jigsaw_name`: (optional) The name of the jigsaw block from a structure in the start pool that should be placed
--   `biome_filters`: What biomes the structure can spawn in.
--   `max_distance_from_center`: How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive.
--   `dimension_padding`: How close to the world height and depth limits pieces of the sturcture can get before being terminated. Must be a positive number.
--   `pool_aliases`: Can be used to reroute jigsaw target pools to a set template that will be applied to the whole structure to allow for the creation of themes. Trial chambers use them to determine what type of mob will be spawned from each type of spawner. For example the small melee spawners can pick baby zombies and every single small melee spawner will then spawn baby zombies. There are three types of redirects. `direct`, `random`, and `random_group`.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "start_pool": "wiki:lone_fortress_courtyard"
+        ```
+-   `start_jigsaw_name`: (optional) The name of the jigsaw block from a structure in the start pool that should be placed.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "start_jigsaw_name": "wiki:courtyard"
+        ```
+-   `biome_filters`: (optional) What biomes the structure can spawn in.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "biome_filters": [
+            {
+                "test": "has_biome_tag",
+                "value": "plains"
+            }
+        ]
+        ```
+-   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "max_distance_from_center": 128
+        ```
+-   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the sturcture can get before being terminated. Must be a positive number.
+    -   <CodeHeader></CodeHeader>
+        ```json
+        "dimension_padding": 0
+        ```
+-   `pool_aliases`: (optional) Can be used to reroute jigsaw target pools to a set template that will be applied to the whole structure to allow for the creation of themes. Trial chambers use them to determine what type of mob will be spawned from each type of spawner. For example the small melee spawners can pick baby zombies and every single small melee spawner will then spawn baby zombies. There are three types of redirects. `direct`, `random`, and `random_group`.
     -   `Direct`: The redirect will reroute the alias assigned to it to a template pool. Direct has 2 extra fields after `type` is assigned to be `direct`. `alias` is the id of the pool alias to be used in the target field of a jigsaw block. `target` is the template pool to be used when the alias is called.
+        -   <CodeHeader></CodeHeader>
+            ```json
+                "pool_aliases" : [
+                  {
+                    "type": "direct",
+                    "alias": "wiki:lone_fortress/spawners/spawner", 
+                    "target": "wiki:lone_fortress/spawners/skeleton" //this template pool is nested in the lone_fortress/spawners/ folder
+                  }
+                ]
+            ```
     -   `random`: The redirect will reroute the alias to a weighted list of template pools where it will pick one of the entries to use for the entire structure. Like direct, `random` has 2 extra fields after `type` is assigned to be `random`. `alias` is the id of the pool alias to be used in the target field of a jigsaw block. `targets` is a array that has entries with 2 fields themselves to govern how they are picked. `data` is the id of the template pool to be used if chosen. `weight` is the weight assigned to it, a higher value is more likely to be chosen.
+        -   <CodeHeader></CodeHeader>
+            ```json
+            "pool_aliases": [
+                  {
+                    "type": "random",
+                    "alias": "wiki:lone_fortress/spawners/spawner",
+                    "targets": [
+                        {
+                            "data": "wiki:lone_fortress/spawners/skeleton",
+                            "weight": 1
+                        },
+                        {
+                            "data": "wiki:lone_fortress/spawners/zombie",
+                            "weight": 3
+                        }
+                    ]
+                  }
+                ]
+            ```
     -   `random_group`: The redirect will reroute the alias to a list made up of the prior two types allowing for the pool alias to pich other types. They can be any type except `random_group`.
- 
+        -   <CodeHeader></CodeHeader>
+            ```json
+            "pool_aliases": [
+                {
+                    "type": "random_group",
+                    "groups": [
+                        {
+                          "data": [
+                            {
+                                "type": "direct",
+                                "alias": "wiki:lone_fortress/spawners/spawner", 
+                                "target": "wiki:lone_fortress/spawners/skeleton"
+                            },
+                            {
+                                "type": "direct",
+                                "alias": "wiki:lone_fortress/spawners/spawner_throne", 
+                                "target": "wiki:lone_fortress/spawners/zombie"
+                            }
+                          ],
+                          "weight": 1
+                      },
+                      {
+                        "data": [
+                          {
+                            "type": "random",
+                            "alias": "wiki:lone_fortress/spawners/spawner",
+                            "targets": [
+                                {
+                                    "data": "wiki:lone_fortress/spawners/skeleton",
+                                    "weight": 1
+                                },
+                                {
+                                    "data": "wiki:lone_fortress/spawners/zombie",
+                                    "weight": 3
+                                }
+                                ]
+                            }
+                        ],
+                        "weight": 1
+                      }
+                    ]
+                  }
+                ]
+            ```
+###Full Example
 <CodeHeader></CodeHeader>
 ```json
 {
