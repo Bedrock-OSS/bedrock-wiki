@@ -168,7 +168,7 @@ The only type of jigsaw, this component contains the components the game uses to
         },
         "max_depth": 15,
         "terrain_adaptation": "beard_thin",
-        "start_pool": wiki:fortress_courtyard,
+        "start_pool": "wiki:fortress_courtyard",
         "biome_filters": [
             {
                 "test": "has_biome_tag",
@@ -177,7 +177,7 @@ The only type of jigsaw, this component contains the components the game uses to
         ],
         "max_distance_from_center": 128,
         "dimension_padding": 10
-        "pool_aliases: [
+        "pool_aliases": [
             {
                 "type": "random",
                 "alias": "wiki:spawners",
