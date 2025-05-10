@@ -70,10 +70,6 @@ Tint methods can be applied to the block's map color, not just its textures!
 
 ## Tint Methods
 
-:::warning FORMAT VERSION `1.21.70`
-Tint methods are experimental and require Upcoming Creator Features to be enabled.
-:::
-
 Tint methods can be used to tint a block based on the biome it is placed in.
 Most tint methods use colormaps (found in the `RP/textures/colormap` folder) to determine tint color.
 
