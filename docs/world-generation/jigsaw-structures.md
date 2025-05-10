@@ -462,11 +462,42 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
 
 A file which tells the game how to place structures in a world. Multiple structures can be put here and the distance of how far apart they are is set here.
 
--   `description`: contains the file identifier.
--   `placement`: contains the rules of placement (next 5 entries)
+<CodeHeader>BP/worldgen/structure_sets/fortress.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.21.20",
+    "minecraft:structure_set": {
+        "description": {
+            "identifier": "wiki:fortress"
+        },
+        "placement": { ... },
+        "structures": [ ... ]
+    }
+}
+```
+
+### Placement
+
+The `placement` parameter of structure sets contains the following rules of placement:
+
 -   `type`: One value, `minecraft:random_spread`
 -   `salt`: A random 8 number string that works like a world seed. A structure set sharing the same salt, spacing, and separation values will place structures in the same location.
--   `spacing`: Grid size in chunks of where to place structures in the set. They try to spawn once with in the box.
--   `separation`: The padding distance between structures from the set. Must be less than half of the spacing value.
--   `spread_type`: The algorithm used by the game to decided how to place the structures. 2 values, linear and triangle. I've not used triangle so I'm not aware of differences between them.
--   `structures`: An array with the identifiers of structures (from the `jigsaw_structures` file) and weight for how often they should be picked.
+-   `spacing`: Grid size (in chunks) of where to place structures in the set. They try to spawn once within the box.
+-   `separation`: The padding distance (in chunks) between structures from the set. Must be less than half of the spacing value.
+-   `spread_type`: The algorithm used by the game to decided how to place the structures, either `linear` or `triangle`.
+
+### Structures
+
+The `placement` parameter of structure sets is an array with the identifiers of structures (from the `jigsaw_structures` file) and weight for how often they should be picked.
+
+<CodeHeader>minecraft:structure_set</CodeHeader>
+
+```json
+"structures": [
+    {
+        "structure": "wiki:fortress",
+        "weight": 1
+    }
+]
+```
