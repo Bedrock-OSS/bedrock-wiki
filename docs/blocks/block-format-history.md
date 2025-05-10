@@ -42,6 +42,13 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:geometry`
     -   Added `uv_lock` parameter which determines whether UVs should be locked to their original rotation when rotation from the [transformation](/blocks/block-components#transformation) component is applied.
+-   Added `minecraft:random_offset`
+    -   Causes a random offset to be applied to the block based on its position in the world
+    -   Affects the block's collision box, selection box and geometry.
+    -   Contains `x`, `y` and `z` which determine the possible offsets via the following parameters:
+        -   `range` which is a [range object](/documentation/shared-constructs#range-objects) that determines how large offsets can be on each axis.
+        -   `steps` which determines how many equally-spaced random values can be chosen across the `range`.
+            -   A value of `0` means that any value within the `range` can be used.
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
