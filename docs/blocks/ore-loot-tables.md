@@ -34,7 +34,6 @@ In addition, through use of scripts and custom components, we can create the exp
 
 -   Issues:
 
-    -   All items must be specified individually
     -   Non-player methods of breaking the block (explosions, commands, etc.) will fail to drop the loot
 
 ## Loot Table
@@ -169,3 +168,42 @@ Here you need to do two things:
 ## Result
 
 ![](/assets/images/blocks/ore-loot/result.gif)
+
+## Test items by tags
+
+You can also make a block drop its loot based on whether the item has all of the tags specified in `minecraft:match_tool_filter_all` or if it has at least one tag in `minecraft:match_tool_filter_any` ([see the list of vanilla tags](/items/item-tags#list-of-vanilla-tags)).
+
+In the example below, you can see how the condition of `match_tool` is modified so that it now tests for an item that has the tags `minecraft:is_tool` and `minecraft:is_pickaxe` and includes at least one of the tags `minecraft:iron_tier`, `minecraft:diamond_tier` and `minecraft:netherite_tier`:
+
+```json
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "match_tool",
+                    "minecraft:match_tool_filter_all": [
+                        "minecraft:is_tool",
+                        "minecraft:is_pickaxe"
+                    ],
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:iron_tier",
+                        "minecraft:diamond_tier",
+                        "minecraft:netherite_tier"
+                    ],
+                    "count": 1,
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "wiki:raw_silver"
+                }
+            ]
+        }
+    ]
+}
+```
+
+This way, you can ensure that the drop is always guaranteed if the block is mined with pickaxes of a tier equal to or higher than the iron pickaxe, regardless of whether they come from other Add-Ons or future updates.
