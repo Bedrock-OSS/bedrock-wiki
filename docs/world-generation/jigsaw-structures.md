@@ -2,11 +2,17 @@
 title: Jigsaw Structures
 description: Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 category: General
+tags:
+    - experimental
 license: true
 mentions:
     - Supernova3695YT
     - QuazChick
 ---
+
+:::warning EXPERIMENTAL
+Jigsaw structures only function when the "Data-Driven Jigsaw Structures" experiment is enabled.
+:::
 
 Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 
