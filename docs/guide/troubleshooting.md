@@ -40,7 +40,13 @@ Content log is the best tool you have for debugging your add-ons. Please don't s
 Errors are not cleared between runs, so the errors you see in the content log may be _old_ errors from prior runs.
 :::
 
-The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world. It can catch issues such as: - Wrong texture path - Wrong spelled component - Incorrect json structure
+The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world.
+
+It can catch issues such as:
+
+- Wrong texture path
+- Misspelled component
+- Incorrect json structure
 
 Content log can be turned on in in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
 
