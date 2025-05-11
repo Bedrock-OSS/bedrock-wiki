@@ -262,9 +262,11 @@ Example:
 
 Comments intended for the localizer should always be in-line, in the following format:
 
-`the.key=The string<\t>## Comment, intended for the one localizing.`
+```lang
+the.key=The string<\t>## Comment, intended for the one localizing.
+```
 
-`<\t>` represents a tab-character.
+`<\t>` should be replaced by a tab (`	`) character in your lang files.
 
 Own-line comments can be used for organizational purposes but should not store localization-critical information.
 
