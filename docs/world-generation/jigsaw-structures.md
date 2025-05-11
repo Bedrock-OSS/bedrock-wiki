@@ -53,7 +53,8 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
 
 The target pool is the field that holds the identifier of the template pool for the jigsaw to look for.
 
-The jigsaw will look through this entire list of structures looking for jigsaws which it can connect to. This is called a generating jigsaw. It has a target pool and target name which will place a structure with a connector jigsaw which only has a name.
+The jigsaw will look through this entire list of structures looking for jigsaws which it can connect to. This is called a generating jigsaw.
+It has a target pool and target name which will place a structure with a connector jigsaw which only has a name.
 
 <CardGrid>
 
@@ -81,7 +82,8 @@ The jigsaw will look through this entire list of structures looking for jigsaws 
 
 The name of the piece of structure the jigsaw is part of. A jigsaw with only this field is called a connecting jigsaw.
 
-If you want a bunch of tunnels you would give one of their jigsaws a name which a generating jigsaw can use in their target name field to select. A generating jigsaw will search through their assigned template pool for connecting jigsaws with a name field matching the target name field they have.
+If you want a bunch of tunnels you would give one of their jigsaws a name which a generating jigsaw can use in their target name field to select.
+A generating jigsaw will search through their assigned template pool for connecting jigsaws with a name field matching the target name field they have.
 
 ### Target Name
 
@@ -113,11 +115,13 @@ If the jigsaw is set to "aligned" then the 2 white bars on the side of the block
 
 ## Template Pools
 
-Template pools are lists of structure files and how they will adapt to the terrain and what processors they will use. They are the files whose identifiers are used in the target pool of the jigsaw blocks.
+Template pools are lists of structure files and how they will adapt to the terrain and what processors they will use.
+They are the files whose identifiers are used in the target pool of the jigsaw blocks.
 
 When you put a pool into the target pool you are telling the jigsaw block to look for a jigsaw in that template pool which has a name field value matching the value of the parent jigsaw's target name field.
 
-However it should be noted that they can only match with jigsaws that are of matching orientation. A jigsaw that is facing up (the direction the arrows are facing) can only match with one facing down and ones facing to the side can match with any other one facing sideways.
+However it should be noted that they can only match with jigsaws that are of matching orientation.
+A jigsaw that is facing up (the direction the arrows are facing) can only match with one facing down and ones facing to the side can match with any other one facing sideways.
 
 ### Elements
 
@@ -167,7 +171,9 @@ A rule processor allows for 5 inputs:
 
 ## Jigsaw Structures
 
-A jigsaw structure is a file that tells the game how to generate the structure. It's identifier is used for the `/place` and `/locate` structure commands. It also tells the game what template pool it should use to start and how large the structure should be using `max_depth`.
+A jigsaw structure is a file that tells the game how to generate the structure.
+Its identifier is used for the `/place` and `/locate` structure commands.
+It also tells the game what template pool it should use to start and how large the structure should be using `max_depth`.
 
 They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
 
@@ -187,7 +193,8 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
 
 ### Jigsaw Parameters
 
--   `step`: What step of world gen places the structure. Contains multiple options, most notable being underground_structures, strongholds, and surface_structures.
+-   `step`: Which step of world generation places the structure.
+    Contains multiple options, most notable being `underground_structures`, `strongholds`, and `surface_structures`.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -195,7 +202,8 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
     "step": "surface_structures"
     ```
 
--   `heightmap_projection`: (Optional) What y level the start_height value will look for to place the structure. Can be world_surface or sea_floor.
+-   `heightmap_projection`: (Optional) What y level the start_height value will look for to place the structure.
+    Can be `world_surface` or `sea_floor`.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -203,11 +211,13 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
     "heightmap_projection": "world_surface"
     ```
 
--   `start_height`: The setting which controls the offset from `heightmap_projection` to place the `start_pool`. It has multiple entries based on the `type` field.
+-   `start_height`: The setting which controls the offset from `heightmap_projection` to place the `start_pool`.
+    It has multiple entries based on the `type` field.
 
     -   `type`: The type of projection to be used. `constant` and `uniform` types are available.
 
-        -   `constant`: A constant anchor point will be used. The rest of the `start_height` will follow the format of `constant` when `type` is set to it.
+        -   `constant`: A constant anchor point will be used.
+            The rest of the `start_height` will follow the format of `constant` when `type` is set to it.
 
             <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -220,7 +230,8 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
             }
             ```
 
-        -   `uniform`: Uniform distribution of possible starting heights. The rest of the `start_height` will follow the format of `uniform` when `type` is set to it.
+        -   `uniform`: Uniform distribution of possible starting heights.
+            The rest of the `start_height` will follow the format of `uniform` when `type` is set to it.
 
             <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -331,7 +342,12 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
 
     There are three types of redirects:
 
-    -   `direct`: The redirect will reroute the alias assigned to it to a template pool. Direct has 2 extra fields after `type` is assigned to be `direct`. `alias` is the id of the pool alias to be used in the target field of a jigsaw block. `target` is the template pool to be used when the alias is called.
+    -   `direct`: The redirect will reroute the alias assigned to it to a template pool.
+
+        Direct has 2 extra fields after `type` is assigned to be `direct`:
+
+        -   `alias` is the ID of the pool alias to be used in the target field of a jigsaw block.
+        -   `target` is the template pool to be used when the alias is called.
 
         <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
 
@@ -343,7 +359,14 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
         }
         ```
 
-    -   `random`: The redirect will reroute the alias to a weighted list of template pools where it will pick one of the entries to use for the entire structure. Like direct, `random` has 2 extra fields after `type` is assigned to be `random`. `alias` is the id of the pool alias to be used in the target field of a jigsaw block. `targets` is an array that has entries with 2 fields themselves to govern how they are picked. `data` is the id of the template pool to be used if chosen. `weight` is the weight assigned to it, a higher value is more likely to be chosen.
+    -   `random`: The redirect will reroute the alias to a weighted list of template pools where it will pick one of the entries to use for the entire structure.
+
+        Like direct, `random` has 2 extra fields after `type` is assigned to be `random`:
+
+        -   `alias` is the ID of the pool alias to be used in the target field of a jigsaw block.
+        -   `targets` is an array that has entries with 2 fields themselves to govern how they are picked.
+            -   `data` is the ID of the template pool to be used if chosen.
+            -   `weight` is the weight assigned to it, a higher value is more likely to be chosen.
 
         <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
 
@@ -364,7 +387,9 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
         }
         ```
 
-    -   `random_group`: The redirect will reroute the alias to a list made up of the prior two types allowing for the pool alias to pick other types. They can be any type except `random_group`.
+    -   `random_group`: The redirect will reroute the alias to a list made up of the prior two types allowing for the pool alias to pick other types.
+
+        They can be any type except `random_group`.
 
         <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
 
