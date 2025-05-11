@@ -22,7 +22,7 @@ Jigsaw structures are structures made out of smaller pieces and connected via ji
     src="/assets/images/world-generation/jigsaw-structures/jigsaw-ui.png"
     alt="The jigsaw block ui"
     caption="The jigsaw block UI."
-    width="420"
+    width="840"
 />
 
 Jigsaw blocks are the blocks that put all the pieces of a structure together. There are two types of them, **generating jigsaws** and **connector jigsaws**. While they are visually identical they perform differently in game.
@@ -35,7 +35,7 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
         src="/assets/images/world-generation/jigsaw-structures/generating-jigsaw-block.png"
         alt="A generating jigsaw"
         caption="A generating jigsaw"
-        width="240"
+        width="480"
     />
 
 -   A **connecting jigsaw** has a filled [name](#name) field and cannot generate anything.
@@ -46,7 +46,7 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
         src="/assets/images/world-generation/jigsaw-structures/connecting-jigsaw-block.png"
         alt="A generating jigsaw"
         caption="A generating jigsaw"
-        width="240"
+        width="480"
     />
 
 ### Target Pool
