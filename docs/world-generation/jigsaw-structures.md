@@ -6,7 +6,7 @@ tags:
     - experimental
 license: true
 mentions:
-    - Supernova3695YT
+    - Supernova3695
     - QuazChick
 ---
 
