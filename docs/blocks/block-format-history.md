@@ -20,6 +20,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Updated `minecraft:geometry`
+    -   Released `culling_layer` parameter from experimental
+
 <Label color="green">Versioned</Label>
 
 -   Removed `minecraft:custom_components`
