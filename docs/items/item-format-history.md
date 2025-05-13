@@ -20,6 +20,10 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Updated `minecraft:wearable`
+    -   Added `hides_player_location` parameter which determines whether a player wearing the item will be hidden from the Locator Bar and Locator Maps.
+    -   By default, wearable items do not hide the player.
+
 <Label color="green">Versioned</Label>
 
 -   Removed `minecraft:custom_components`
