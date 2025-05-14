@@ -81,6 +81,7 @@ This type of rule should be used when you want to hide specific faces of cubes t
 
 :::warning EXPERIMENTAL 1.21.80
 Block culling rule conditions are experimental and require Upcoming Creator Features to be enabled.
+They will be available outside of experimental gameplay in versions 1.21.90 and higher.
 :::
 
 Culling rules will cull against full, opaque faces of adjacent blocks by default.
