@@ -50,9 +50,7 @@ Type: Boolean
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:allow_off_hand": {
-    "value": true
-}
+"minecraft:allow_off_hand": true
 ```
 
 ### Block Placer
@@ -113,9 +111,7 @@ Type: Boolean
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:can_destroy_in_creative": {
-    "value": true
-}
+"minecraft:can_destroy_in_creative": true
 ```
 
 ### Compostable
@@ -192,9 +188,7 @@ Type: Integer
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:damage": {
-    "value": 10
-}
+"minecraft:damage": 10
 ```
 
 ### Damage Absorption
@@ -529,9 +523,7 @@ Type: Boolean
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:glint": {
-    "value": false
-}
+"minecraft:glint": false
 ```
 
 ### Hand Equipped
@@ -543,9 +535,7 @@ Type: Boolean
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:hand_equipped": {
-    "value": true
-}
+"minecraft:hand_equipped": true
 ```
 
 ### Hover Text Color
@@ -606,9 +596,7 @@ Type: Boolean/String
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:interact_button": {
-    "value": true
-}
+"minecraft:interact_button": true
 ```
 
 ### Liquid Clipped
@@ -622,9 +610,7 @@ Type: Boolean
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:liquid_clipped": {
-    "value": true
-}
+"minecraft:liquid_clipped": true
 ```
 
 ### Max Stack Size
@@ -636,9 +622,7 @@ Type: Integer
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:max_stack_size": {
-    "value": 64
-}
+"minecraft:max_stack_size": 64
 ```
 
 ### Projectile
@@ -824,9 +808,7 @@ Type: Boolean
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:should_despawn": {
-    "value": true
-}
+"minecraft:should_despawn": true
 ```
 
 ### Stacked by Data
@@ -836,9 +818,7 @@ Determines if the same item with different aux values can stack. Additionally, d
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:stacked_by_data": {
-    "value": true
-}
+"minecraft:stacked_by_data": true
 ```
 
 ### Storage Item
@@ -969,9 +949,7 @@ Type: String
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:use_animation": {
-    "value": "eat"
-}
+"minecraft:use_animation": "eat"
 ```
 
 #### Known Animations
