@@ -423,6 +423,7 @@ Type: Object
         -   `no_reaction` - Allows the liquid to flow through the block.
         -   `popped` - The block is popped off, dropping its loot.
     -   `stops_liquid_flowing_from_direction`: Array - determines an array of directions that the liquid cannot flow out of this block from.
+        -   If `on_liquid_touches` is set to `no_reaction`, this array also determines the directions that the liquid cannot flow into this block from.
 
 _Released from experiment `Upcoming Creator Features` for format versions 1.21.60 and higher._
 
