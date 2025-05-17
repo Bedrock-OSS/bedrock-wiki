@@ -884,6 +884,8 @@ The item must have the `minecraft:storage_item` component for this component to 
 
 Type: Integer
 
+<CodeHeader>minecraft:item > components</CodeHeader>
+
 ```json
 "minecraft:storage_weight_limit": 64
 ```
@@ -895,6 +897,8 @@ Defines the additional weight the item adds when inside another storage item.
 -   A value of 0 means that this item is not allowed inside another storage item.
 
 Type: Integer (0-64)
+
+<CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
 "minecraft:storage_weight_modifier": 4
