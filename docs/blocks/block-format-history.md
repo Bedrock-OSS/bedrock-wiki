@@ -45,6 +45,10 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:geometry`
     -   Added `uv_lock` parameter which determines whether UVs should be locked to their original rotation when rotation from the [transformation](/blocks/block-components#transformation) component is applied.
+-   Added `minecraft:movable`
+    -   Determines how a block can be moved by pistons.
+    -   Contains `movement_type` which can be one of the following values: `immovable`, `popped`, `push` or `push_pull` (default).
+    -   Contains `sticky` which can be set to `same` to replicate Slime/Honey Block functionality.
 -   Added `minecraft:random_offset`
     -   Causes a random offset to be applied to the block based on its position in the world
     -   Affects the block's collision box, selection box and geometry.
