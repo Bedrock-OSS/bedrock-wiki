@@ -1,8 +1,10 @@
 ---
 title: Fake Blocks
+description: Learn how to create an entity which replicates characteristics of a block.
 category: Tutorials
 tags:
     - intermediate
+    - scripting
 mentions:
     - SirLich
     - solvedDev
@@ -12,7 +14,6 @@ mentions:
     - ThijsHankelMC
     - QuazChick
     - SmokeyStack
-description: Sometimes your block needs to have features which Minecraft doesnt allow. A possible solution is to create an entity which replicates characteristics of a block.
 ---
 
 Sometimes your block needs to have features which Minecraft doesn't allow. A possible solution is to create an entity which replicates characteristics of a block.
