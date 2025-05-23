@@ -209,7 +209,7 @@ Loot hierarchies can be formed using loot table entries.
 
 ```json
 "type": "loot_table",
-"name": "loot_tables/custom/example.json"
+"name": "loot_tables/custom/example.json",
 "weight": 1
 ```
 
