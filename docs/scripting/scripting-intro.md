@@ -11,6 +11,7 @@ mentions:
     - SimpleDevMCBE
     - QuazChick
     - jeanmajid
+    - WavePlayz
 description: Learn how to modify your world through the use of JavaScript files.
 ---
 
@@ -74,10 +75,10 @@ Additionally, dependencies will need to be set based on modules used. To import 
     "capabilities": ["script_eval"],
     "dependencies": [
         {
-            // Enables the use of @minecraft/server module, with a version of 1.17.0.
+            // Enables the use of @minecraft/server module, with a version of 1.19.0.
             // It must be the latest version or it might not work!
             "module_name": "@minecraft/server",
-            "version": "1.18.0"
+            "version": "1.19.0"
         },
         {
             // Enables the use of @minecraft/server-ui module, with a version of 1.3.0.
@@ -94,8 +95,8 @@ If your project needs other module to run your code, add the other dependencies 
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. Most features are included in stable APIs, and will not break or be changed when Minecraft is updated.
 
 -   `@minecraft/server`:
-
-    -   [`1.18.0`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0) (Latest version)
+    -   [`1.19.0`](https://www.npmjs.com/package/@minecraft/server/v/1.19.0) (Latest version)
+    -   [`1.18.0`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0)
     -   [`1.17.0`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0)
     -   [`1.16.0`](https://www.npmjs.com/package/@minecraft/server/v/1.16.0)
     -   [`1.15.0`](https://www.npmjs.com/package/@minecraft/server/v/1.15.0)
@@ -125,7 +126,6 @@ If your project needs other module to run your code, add the other dependencies 
 **Beta API modules**, requirs the Beta APIs experiment to be turned on in world settings, and add many of experimental features in the API. These APIs can be changed, removed, or added to with very little warning, and are prone to breaking. Be warned!
 
 -   `@minecraft/server`:
-
     -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0-beta.1.21.70-stable) (1.21.70x only)
     -   [`1.18.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0-beta.1.21.62-stable) (1.21.60x only)
     -   [`1.17.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0-beta.1.21.50-stable) (1.21.50x only)
@@ -245,4 +245,33 @@ Latest stable API modules:
 ```bash
 npm i @minecraft/server
 npm i @minecraft/server-ui
+```
+
+---
+
+```bash
+# syntax
+# npx betypes <moduleName>[@tag]
+
+
+# stable
+# eg. 1.19.0
+npx betypes server
+npx betypes server@stable
+npx betypes server@s
+
+# stable beta
+# eg. 2.0.0-beta.1.21.83-stable
+npx betypes server@beta
+npx betypes server@b
+
+# preview stable
+# eg. 2.0.0-rc.1.21.90-preview.26
+npx betypes server@preview
+npx betypes server@p
+
+# preview beta
+# eg. 2.1.0-beta.1.21.90-preview.26
+npx betypes server@previewBeta
+npx betypes server@pb
 ```
