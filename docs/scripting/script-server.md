@@ -8,6 +8,7 @@ mentions:
     - ThomasOrs
     - kumja1
     - QuazChick
+    - WavePlayz
 ---
 
 ::: warning
@@ -237,7 +238,7 @@ With the `@minecraft/server` module, developers can define their own custom prop
 
 In order to save data, the property must first be initialized. There are multiple ways to declare dynamic properties, either on an entity, world, or item. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited amount of data per dynamic property.
 
--   String dynamic properties can be a maximum of 32767 characters in length.
+-   String dynamic properties can be a maximum of 32,768 Bytes [not characters in length].
 -   Number dynamic properties can be a maximum of the 64-bit float limit (-1.7976931348623158e+308 to -2.2250738585072014e-308, or from 2.2250738585072014e-308 to 1.7976931348623158e+308).
 
 **Get and Set Dynamic Properties**
