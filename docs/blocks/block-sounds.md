@@ -19,7 +19,7 @@ You can apply a set of sounds to your block using this parameter:
 ```json
 {
     "format_version": "1.21.40",
-    "wiki:custom_log": {
+    "wiki:chestnut_log": {
         "sound": "wood" // Define sound here
     }
 }
@@ -40,8 +40,8 @@ This is the `sound` value that should be used in `RP/blocks.json`.
 ```json
 {
     "format_version": "1.21.40",
-    "wiki:custom_log": {
-        "sound": "wiki:custom_wood"
+    "wiki:chestnut_log": {
+        "sound": "wiki:chestnut_wood"
     }
 }
 ```
