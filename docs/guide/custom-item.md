@@ -46,10 +46,9 @@ We are able to define how our custom item will behave by using behavior componen
 
 <Spoiler title="Example Components">
 
-<CodeHeader>BP/items/example.json/components/</CodeHeader>
+<CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:food":
 "minecraft:glint": true,
 "minecraft:max_stack_size": 16
 ```
@@ -97,18 +96,18 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 ```
 
 Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
-The format version defines which version of the Add-on system Minecraft will use to read this file. For our item, we will be using `1.21.70` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
+The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.21.70` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
 
 The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
 Let us look closer at the `"description"`:
 
-<CodeHeader>ectoplasm.json/minecraft:item/</CodeHeader>
+<CodeHeader>ectoplasm.json > minecraft:item</CodeHeader>
 
 ```json
 "description": {
-	"identifier": "wiki:ectoplasm",
-	"menu_category": {
+    "identifier": "wiki:ectoplasm",
+    "menu_category": {
         "category": "items"
     }
 },
@@ -120,7 +119,7 @@ The `category` key defines which tab of the creative inventory / recipe book the
 Now we can actually define the behavior of our item, under `components`. Here we simply place any components we want our item to have.
 This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/item-components).
 
-<CodeHeader>ectoplasm.json/minecraft:item/</CodeHeader>
+<CodeHeader>ectoplasm.json > minecraft:item</CodeHeader>
 
 ```json
 "components": {
