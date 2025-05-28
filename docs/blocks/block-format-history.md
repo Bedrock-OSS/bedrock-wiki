@@ -393,8 +393,11 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Released `minecraft:geometry` from experimental
 -   Released `minecraft:material_instances` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+
 -   Removed `minecraft:breathability`
--   Renamed `minecraft:block_light_filter` to `minecraft:light_dampening`
 
 ## 1.19.30
 
