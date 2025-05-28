@@ -17,5 +17,5 @@ export default function useRedirect() {
   }
 
   onBeforeMount(redirect);
-  router.onAfterRouteChanged = redirect;
+  router.onAfterRouteChange = redirect;
 }
