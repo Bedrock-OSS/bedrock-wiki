@@ -184,6 +184,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
             permissionLevel: CommandPermissionLevel.Any,
             mandatoryParameters: [
                 {
+                    // Use the enum, by setting the name to the enum name
                     name: "wiki:teleportLocations",
                     type: CustomCommandParamType.Enum,
                 },
@@ -212,6 +213,22 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 });
 ```
 
+To clarify the structure of custom slash commands in the Script API, you need to define several key properties when registering a command:
+
+-   **Command Name and Namespace:**  
+    Every custom command should be defined with a unique namespace (for example, `wiki:goto`). Using a namespace ensures your command does not conflict with existing vanilla commands or those from other add-ons. The segment before the colon (`wiki:`) represents your chosen namespace, while the segment after the colon specifies the command's identifier.
+
+-   **Description:**  
+    The `description` property provides a short explanation of what your command does.
+
+-   **Permission Level:**  
+    The `permissionLevel` property controls who can use the command (e.g., `Any`, `Admin`, etc.). This helps restrict access to certain commands.
+
+-   **Parameters:**  
+    You can define both `mandatoryParameters` and `optionalParameters` for your command, with a maximum of 8 parameters.
+    -   `mandatoryParameters` are required for the command to run.
+    -   `optionalParameters` can be omitted by the player when using the command.
+
 The amount of parameters passed to the callback are based on the amount of parameters passed into the command, so if you have a command with 3 different parameters your callback would look like this:
 
 <CodeHeader>BP/scripts/main.js</CodeHeader>
@@ -233,4 +250,4 @@ customCommandRegistry.registerCommand(
 );
 ```
 
-For more info about slash commands read the [Microsoft Docs page](https://learn.microsoft.com/en-us/minecraft/creator/documents/customcommands)
+For more details, see the [Microsoft Docs on custom commands](https://learn.microsoft.com/en-us/minecraft/creator/documents/customcommands).
