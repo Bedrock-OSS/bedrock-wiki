@@ -214,6 +214,8 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 
 The amount of parameters passed to the callback are based on the amount of parameters passed into the command, so if you have a command with 3 different parameters your callback would look like this:
 
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
 ```js
 customCommandRegistry.registerCommand(
     {
