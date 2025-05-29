@@ -135,7 +135,7 @@ For example, let's make our commands usable only to players that have the `Admin
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { GameMode, system, world } from "@minecraft/server";
 
 world.beforeEvents.chatSend.subscribe((eventData) => {
     const player = eventData.sender;
@@ -143,11 +143,15 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
     switch (eventData.message) {
         case "!gmc":
             eventData.cancel = true;
-            player.runCommandAsync("gamemode c");
+            system.run(() => {
+                player.setGameMode(GameMode.survival);
+            });
             break;
         case "!gms":
             eventData.cancel = true;
-            player.runCommandAsync("gamemode s");
+            system.run(() => {
+                player.setGameMode(GameMode.survival);
+            });
             break;
         default:
             break;
