@@ -216,7 +216,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 To clarify the structure of custom slash commands in the Script API, you need to define several key properties when registering a command:
 
 -   **Command Name and Namespace:**  
-    Every custom command should be defined with a unique namespace (for example, `wiki:goto`). Using a namespace ensures your command does not conflict with existing vanilla commands or those from other add-ons. The segment before the colon (`wiki:`) represents your chosen namespace, while the segment after the colon specifies the command's identifier.
+    Every custom command must be defined with a unique namespace (for example, `wiki:goto`). Using a namespace ensures your command does not conflict with existing vanilla commands or those from other add-ons. The segment before the colon (`wiki:`) represents your chosen namespace, while the segment after the colon specifies the command's identifier.
 
 -   **Description:**  
     The `description` property provides a short explanation of what your command does.
