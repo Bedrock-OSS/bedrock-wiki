@@ -161,7 +161,7 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
 
 In plain text, `if (!eventData.sender.hasTag('Admin')) return;` means: "If the player does NOT (`!`) have the "Admin" tag, stop the script from running past here (`return`)"
 
-For more information about the Script API, you can reference the [wiki](/scripting/scripting-intro) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
+For more information about the Script API, you can reference the [wiki](/scripting/scripting-intro) or the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptingintroduction)
 
 ## Slash Commands
 
