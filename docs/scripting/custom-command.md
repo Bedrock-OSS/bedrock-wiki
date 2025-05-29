@@ -20,10 +20,11 @@ mentions:
     - modmaker101
     - SimpleDevMCBE
     - QuazChick
+    - jeanmajid
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.70
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.80
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
@@ -45,7 +46,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
         "name": "Custom Commands",
         "description": "Custom Commands using the Script API",
         "uuid": "c8c3239f-027f-4e80-890f-880eba65027d",
-        "min_engine_version": [1, 19, 40],
+        "min_engine_version": [1, 20, 80],
         "version": [1, 0, 0]
     },
     "modules": [
@@ -67,7 +68,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "2.0.0-beta" // needs to be the latest or it will break ( latest as of 1.21.70 )
+            "version": "2.0.0-beta" // needs to be the latest or it will break ( latest as of 1.21.80 )
         }
     ]
 }
@@ -88,7 +89,7 @@ Now comes the fun part - creating our custom commands. First, we will add the mo
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { GameMode, system, world } from "@minecraft/server";
 ```
 
 Next, we will add simple commands, such as `!gmc` to change our gamemode to creative and `!gms` to change into survival.
@@ -101,11 +102,15 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
     switch (eventData.message) {
         case "!gmc":
             eventData.cancel = true;
-            player.runCommandAsync("gamemode c");
+            system.run(() => {
+                player.setGameMode(GameMode.creative);
+            });
             break;
         case "!gms":
             eventData.cancel = true;
-            player.runCommandAsync("gamemode s");
+            system.run(() => {
+                player.setGameMode(GameMode.survival);
+            });
             break;
         default:
             break;
@@ -116,6 +121,7 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
 This is the main function to execute our commands. `world.beforeEvents.chatSend.subscribe()` will run before chat messages get sent.
 
 -   A `switch` statement runs through the possible options for the value, and if it matches, runs the code until the next `break` statement.
+-   `system.run(() => {})` is used to delay the execution of the code inside the callback to the next tick. This is needed as we are in an "before" event, which prevents us from running certain functions, as they run before the actual tick.
 -   `eventData.cancel = true` will cancel the chat message that will be sent- similar to how vanilla commands work.
 -   `const player = eventData.sender` declares the variable `player` to be used later.
 -   `player.runCommandAsync('gamemode c')` runs the command on the sender of the message.
@@ -149,6 +155,80 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
 });
 ```
 
-In plain text, `if (!eventData.sender.hasTag('Admin')) return;` means: "If the player does NOT (`!`) have the 'Admin' tag, stop the script from running past here (`return`)"
+In plain text, `if (!eventData.sender.hasTag('Admin')) return;` means: "If the player does NOT (`!`) have the "Admin" tag, stop the script from running past here (`return`)"
 
 For more information about the Script API, you can reference the [wiki](/scripting/scripting-intro) or the [Microsoft Docs](https://docs.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
+
+## Slash Commands
+
+Starting with version 1.20.80, the Script API introduced support for creating slash commands. These commands behave similarly to vanilla Minecraft commands and can be customized to suit your needs.
+
+### Example: Teleport Command
+
+In this example, we will create a custom slash command `/wiki:goto` that allows players to teleport to predefined locations: `spawn`, `shop`, or `arena`.
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+import { CommandPermissionLevel, CustomCommandParamType, system } from "@minecraft/server";
+
+system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
+    // Register an enum for teleport locations
+    customCommandRegistry.registerEnum("wiki:teleportLocations", ["spawn", "shop", "arena"]);
+
+    // Register the custom command
+    customCommandRegistry.registerCommand(
+        {
+            name: "wiki:goto",
+            description: "Teleport to a specific location",
+            permissionLevel: CommandPermissionLevel.Any,
+            mandatoryParameters: [
+                {
+                    name: "wiki:teleportLocations",
+                    type: CustomCommandParamType.Enum,
+                },
+            ],
+        },
+        (origin, locationString) => {
+            // Only run if executed by an entity
+            if (!origin.sourceEntity) return;
+
+            // Handle teleportation based on the location string
+            if (locationString === "spawn") {
+                system.run(() => {
+                    origin.sourceEntity.teleport({ x: 0, y: 100, z: 0 });
+                });
+            } else if (locationString === "shop") {
+                system.run(() => {
+                    origin.sourceEntity.teleport({ x: 100, y: 100, z: 100 });
+                });
+            } else if (locationString === "arena") {
+                system.run(() => {
+                    origin.sourceEntity.teleport({ x: 200, y: 100, z: 200 });
+                });
+            }
+        }
+    );
+});
+```
+
+The amount of parameters passed to the callback are based on the amount of parameters passed into the command, so if you have a command with 3 different parameters your callback would look like this:
+
+```js
+customCommandRegistry.registerCommand(
+    {
+        name: "wiki:command",
+        description: "An example command with three parameters",
+        mandatoryParameters: [
+            { name: "param1", type: CustomCommandParamType.String },
+            { name: "param2", type: CustomCommandParamType.Integer },
+            { name: "param3", type: CustomCommandParamType.Boolean },
+        ],
+    },
+    (origin, param1, param2, param3) => {
+        // Handle the command logic here
+    }
+);
+```
+
+For more info about slash commands read the [Microsoft Docs page](https://learn.microsoft.com/en-us/minecraft/creator/documents/customcommands)
