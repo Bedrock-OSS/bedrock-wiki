@@ -163,8 +163,8 @@ playanimation @e[type=fox,tag=wiki:fmbe] animation.ender_dragon.neck_head_moveme
 ```
 ![commandBlockChain3](/assets/images/commands/commandBlockChain/3.png)
 
-## Video Tutorial
+## Video Guide
 
 <YouTubeEmbed
-    id="DdYq_nOFeKM"
+    id="5N8yVGR1MA"
 />
