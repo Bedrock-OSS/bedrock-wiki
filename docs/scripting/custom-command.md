@@ -217,7 +217,7 @@ This is the main function to execute our commands. `world.beforeEvents.chatSend.
 
 -   A `switch` statement runs through the possible options for the value, and if it matches, runs the code until the next `break` statement.
 -   `system.run(() => {})` is used to delay the execution of the code inside the callback to the next tick. This is needed as we are in a "before" event, which prevents us from running certain functions, as they run before the actual tick.
--   `eventData.cancel = true` will cancel the chat message that will be sent- similar to how vanilla commands work.
+-   `eventData.cancel = true` will cancel the chat message that will be sent - similar to how vanilla commands work.
 -   `const player = eventData.sender` declares the variable `player` to be used later.
 -   `player.setGameMode(GameMode.creative)` Sets the players gamemode to creative.
 
