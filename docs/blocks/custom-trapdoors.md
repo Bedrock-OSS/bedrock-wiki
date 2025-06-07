@@ -5,13 +5,14 @@ category: Vanilla Re-Creations
 tags:
     - intermediate
     - scripting
+license: true
 mentions:
     - Kaioga5
     - QuazChick
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -26,7 +27,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -47,18 +48,25 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
             }
         },
         "components": {
-            "minecraft:custom_components": ["wiki:custom_trapdoor"],
+            "wiki:toggleable": {
+                "block_state": "wiki:open",
+                "enable_sound": "open.wooden_trapdoor",
+                "disable_sound": "close.wooden_trapdoor"
+            },
             "minecraft:collision_box": {
                 "origin": [-8, 0, -8],
-                "size": [16, 3, 16]
+                "size": [16, 2.92, 16]
             },
             "tag:one_way_collidable": {}, // Prevents the player from being pushed out by the trapdoor collision, just like vanilla
             "tag:trapdoors": {},
             "minecraft:selection_box": {
                 "origin": [-8, 0, -8],
-                "size": [16, 3, 16]
+                "size": [16, 2.92, 16]
             },
-            "minecraft:geometry": "geometry.trapdoor",
+            "minecraft:geometry": {
+                "identifier": "geometry.trapdoor",
+                "culling": "wiki:culling.trapdoor"
+            },
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wiki:custom_trapdoor",
@@ -187,32 +195,28 @@ Now, it's time to put these permutations to use. The following script will allow
 <CodeHeader>BP/scripts/custom_trapdoor.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockCustomTrapdoorComponent = {
-    onPlayerInteract({ block, dimension }) {
-        const isOpen = block.permutation.getState("wiki:open");
-        const sound = isOpen ? "close.wooden_trapdoor" : "open.wooden_trapdoor";
+const BlockToggleableComponent = {
+    onPlayerInteract({ block, dimension }, { params }) {
+        const currentValue = block.permutation.getState(params.block_state);
+        const toggledValue = !currentValue;
 
-        block.setPermutation(block.permutation.withState("wiki:open", !isOpen));
+        const toggleableState = params.block_state;
+        const toggleSound = toggledValue ? params.enable_sound : params.disable_sound;
 
-        dimension.playSound(sound, block.center(), {
-            pitch: 0.9,
-            volume: 0.9,
-        });
+        block.setPermutation(block.permutation.withState(toggleableState, toggledValue));
+        dimension.playSound(toggleSound, block.center());
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent(
-        "wiki:custom_trapdoor",
-        BlockCustomTrapdoorComponent
-    );
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent("wiki:toggleable", BlockToggleableComponent);
 });
 ```
 
-## Block Model
+## Block Model & Culling
 
 This will be the geometry used for your custom trapdoors.
 
@@ -222,7 +226,7 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:geometry": [
         {
             "description": {
@@ -237,7 +241,7 @@ This will be the geometry used for your custom trapdoors.
                     "cubes": [
                         {
                             "origin": [-8, 0, -8],
-                            "size": [16, 3, 16],
+                            "size": [16, 2.9, 16],
                             "uv": {
                                 "north": { "uv": [16, 3], "uv_size": [-16, -3] },
                                 "east": { "uv": [16, 3], "uv_size": [-16, -3] },
@@ -249,7 +253,27 @@ This will be the geometry used for your custom trapdoors.
                         }
                     ]
                 }
-            ]
+            ],
+            "item_display_transforms": {
+                "firstperson_righthand": {
+                    "translation": [0, 2.6, 0]
+                },
+                "thirdperson_righthand": {
+                    "translation": [0, 3.35, 2.25],
+                    "rotation": [70, 225, 0]
+                },
+                "fixed": {
+                    "translation": [0, 3.45, 0]
+                },
+                "gui": {
+                    "fit_to_frame": false,
+                    "translation": [0, -0.15, 0],
+                    "scale": [0.625, 0.625, 0.625]
+                },
+                "ground": {
+                    "translation": [0, 4.65, 0]
+                }
+            }
         }
     ]
 }
@@ -257,6 +281,61 @@ This will be the geometry used for your custom trapdoors.
 
 </Spoiler>
 
-:::tip
-Vanilla trapdoors have a few issues in the direction of the texture in certain faces and having a height of 2.95 when it should be 3. This block template and geometry fixes both of those issues.
-:::
+<Spoiler title="Block Culling Rules JSON">
+
+<CodeHeader>RP/block_culling/trapdoor.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.21.80",
+    "minecraft:block_culling_rules": {
+        "description": {
+            "identifier": "wiki:culling.trapdoor"
+        },
+        "rules": [
+            {
+                "direction": "down",
+                "geometry_part": {
+                    "bone": "trapdoor",
+                    "cube": 0,
+                    "face": "down"
+                }
+            },
+            {
+                "direction": "north",
+                "geometry_part": {
+                    "bone": "trapdoor",
+                    "cube": 0,
+                    "face": "north"
+                }
+            },
+            {
+                "direction": "south",
+                "geometry_part": {
+                    "bone": "trapdoor",
+                    "cube": 0,
+                    "face": "south"
+                }
+            },
+            {
+                "direction": "west",
+                "geometry_part": {
+                    "bone": "trapdoor",
+                    "cube": 0,
+                    "face": "west"
+                }
+            },
+            {
+                "direction": "east",
+                "geometry_part": {
+                    "bone": "trapdoor",
+                    "cube": 0,
+                    "face": "east"
+                }
+            }
+        ]
+    }
+}
+```
+
+</Spoiler>
