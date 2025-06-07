@@ -9,10 +9,14 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.70`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
+:::
+:::danger OVERRIDING COMPONENTS
+Only **one** instance of each component can be active at once.
+Duplicate components will be overridden by the latest "[permutations](#conditionally-applying-components)" array entry.
 :::
 
 ## What are Permutations?
@@ -83,7 +87,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
             {
                 "condition": "q.block_state('wiki:boolean_state_example')",
                 "components": {
-                    "minecraft:friction": 0.8 // Overrides previous permutation
+                    "minecraft:friction": 0.8 // Overrides the friction defined in the previous component list.
                 }
             },
             {
