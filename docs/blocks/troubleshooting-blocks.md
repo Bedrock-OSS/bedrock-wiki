@@ -156,7 +156,7 @@ Problem: My custom block has turned into a dirt block with a question mark on it
 
 This an `unknown` block, which appears when the block identifier is changed or if your block JSON invalid.
 
-Solution: Use a JSON linter and double check that your identifier didn't change. Ensure that you block has `minecraft:geometry` and `minecraft:material_instances`, or an `RP/blocks.json` textures entry.
+Solution: Use a JSON linter and double check that your identifier didn't change. Ensure that your block has `minecraft:geometry` and `minecraft:material_instances`, or an `RP/blocks.json` textures entry.
 
 ---
 
