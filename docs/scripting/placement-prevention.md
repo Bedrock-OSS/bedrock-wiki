@@ -95,7 +95,7 @@ After we have added the module, we will add the preventative measure for block p
 
 ```js
 world.beforeEvents.playerPlaceBlock.subscribe((event) => {
-    const player = event.source;
+    const player = event.player;
     if (event.permutationBeingPlaced.type.id === "minecraft:bedrock") {
         event.cancel = true;
         system.run(() => {
@@ -107,7 +107,7 @@ world.beforeEvents.playerPlaceBlock.subscribe((event) => {
 
 This is the main function to execute our code. `world.beforeEvents.playerPlaceBlock.subscribe()` will run before any block is placed.
 
--   `const player = event.source;` defines the variable `player` as whatever the source of the event is (the one who is placing the block). `const` is used over `var` or `let` to say that the source _cannot_ be changed, and is constant.
+-   `const player = event.player;` defines the variable `player` as whatever the source of the event is (the one who is placing the block). `const` is used over `var` or `let` to say that the source _cannot_ be changed, and is constant.
 -   The `if()` statement requires the criteria to evaluate to true in order for the code within the brackets to run.
     -   `event.permutationBeingPlaced.type.id === 'minecraft:bedrock'` verifies that the block being placed is 'minecraft:bedrock'.
     -   `event.block.typeId != "minecraft:frame" && event.block.typeId != "minecraft:glow_frame"` checks that the block being targeted is not an item frame, so that the block whose placement is being canceled can still be placed in item frames.
