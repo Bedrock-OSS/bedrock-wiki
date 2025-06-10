@@ -77,7 +77,7 @@ Additionally, dependencies will need to be set based on modules used. To import 
             // Enables the use of @minecraft/server module, with a version of 1.17.0.
             // It must be the latest version or it might not work!
             "module_name": "@minecraft/server",
-            "version": "1.18.0"
+            "version": "1.19.0"
         },
         {
             // Enables the use of @minecraft/server-ui module, with a version of 1.3.0.
@@ -95,7 +95,8 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server`:
 
-    -   [`1.18.0`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0) (Latest version)
+    -   [`1.19.0`](https://www.npmjs.com/package/@minecraft/server/v/1.19.0) (Latest version)
+    -   [`1.18.0`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0)
     -   [`1.17.0`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0)
     -   [`1.16.0`](https://www.npmjs.com/package/@minecraft/server/v/1.16.0)
     -   [`1.15.0`](https://www.npmjs.com/package/@minecraft/server/v/1.15.0)
@@ -126,7 +127,7 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server`:
 
-    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0-beta.1.21.70-stable) (1.21.70x only)
+    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0-beta.1.21.84-stable) (1.21.80x only)
     -   [`1.18.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0-beta.1.21.62-stable) (1.21.60x only)
     -   [`1.17.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0-beta.1.21.50-stable) (1.21.50x only)
     -   [`1.16.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.16.0-beta.1.21.40-stable) (1.21.40x only)
@@ -134,24 +135,24 @@ If your project needs other module to run your code, add the other dependencies 
     -   [`1.14.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.14.0-beta.1.21.20-stable) (1.21.20x only)
 
 -   `@minecraft/server-ui`:
-    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.70-stable) (1.21.70x)
+    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.84-stable) (1.21.80x)
     -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.4.0-beta.1.21.50-stable) (This can be for any version between 1.21.3x to 1.21.6x)
     -   [`1.3.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0-beta.1.21.23-stable)
 -   `@minecraft/server-gametest`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.21.70-stable)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.21.84-stable)
 
 -   `@minecraft/server-net`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.21.70-stable) (Bedrock Dedicated Server module only, must be enabled in `permission.json` as it is not enabled by default)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.21.84-stable) (Bedrock Dedicated Server module only, must be enabled in `permission.json` as it is not enabled by default)
 
 -   `@minecraft/server-admin`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.1.21.70-stable) (Bedrock Dedicated Server module only)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.1.21.84-stable) (Bedrock Dedicated Server module only)
 
 -   `@minecraft/debug-utilities`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/debug-utilities/v/1.0.0-beta.1.21.70-stable)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/debug-utilities/v/1.0.0-beta.1.21.84-stable)
 
 In order to use the `eval()` function or `Function()` constructors within your code, you can add the following in the manifest capabilities:
 
@@ -232,12 +233,12 @@ These allow for enhanced auto-completions and validation when used inside of you
 Latest beta API modules:
 
 ```bash
-npm i @minecraft/server@2.0.0-beta.1.21.70-stable
-npm i @minecraft/server-ui@2.0.0-beta.1.21.70-stable
-npm i @minecraft/server-gametest@1.0.0-beta.1.21.70-stable
-npm i @minecraft/server-admin@1.0.0-beta.1.21.70-stable
-npm i @minecraft/server-net@1.0.0-beta.1.21.70-stable
-npm i @minecraft/debug-utilities@1.0.0-beta.1.21.70-stable
+npm i @minecraft/server@2.0.0-beta.1.21.84-stable
+npm i @minecraft/server-ui@2.0.0-beta.1.21.84-stable
+npm i @minecraft/server-gametest@1.0.0-beta.1.21.84-stable
+npm i @minecraft/server-admin@1.0.0-beta.1.21.84-stable
+npm i @minecraft/server-net@1.0.0-beta.1.21.84-stable
+npm i @minecraft/debug-utilities@1.0.0-beta.1.21.84-stable
 ```
 
 Latest stable API modules:
