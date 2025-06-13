@@ -1,6 +1,6 @@
 ---
 title: Custom Crops
-description: Re-creation of vanilla crops.
+description: Learn how to create your own crop blocks that grow just like vanilla crops!
 category: Vanilla Re-Creations
 tags:
     - intermediate
@@ -14,7 +14,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.70`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -26,7 +26,6 @@ Making crops is not as difficult as you may think, it just takes a little practi
 **Issues:**
 
 -   Custom crops cannot be destroyed by flowing lava.
--   Custom crops cannot be destroyed by pistons (until 1.21.90).
 -   Custom crops become dark when surrounded by full blocks.
 -   Growth rate cannot be impacted by light level ([see feedback post](https://discord.com/channels/1138536747932864532/1231369171577602179)).
 
@@ -54,7 +53,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -69,8 +68,16 @@ This code example also includes the base components of our crop which will be ac
         },
         "components": {
             "minecraft:collision_box": false,
-            "minecraft:geometry": "geometry.crop", // Model provided in previous step.
             "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.crop", // Model provided in previous step.
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "wiki:custom_crop_0",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
             // Break the crop if it isn't placed on farmland.
             "minecraft:placement_filter": {
                 "conditions": [
@@ -88,13 +95,17 @@ This code example also includes the base components of our crop which will be ac
                         "on_liquid_touches": "broken"
                     }
                 ]
+            },
+            // Break the crop when it is pushed by a piston
+            "minecraft:movable": {
+                "movement_type": "popped"
             }
         }
     }
 }
 ```
 
-## Custom Growth Component
+## Custom Growable Component
 
 The events below do three important functions to make your crop work:
 
@@ -113,18 +124,21 @@ import { EquipmentSlot, GameMode, world } from "@minecraft/server";
  */
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const maxGrowth = 7;
-
 /** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockCustomCropGrowthComponent = {
-    onRandomTick({ block }) {
-        const growthChance = 1 / 3;
+const BlockGrowableComponent = {
+    onRandomTick({ block }, { params }) {
+        const growthState = params.growth_state;
+        const growthChance = params.growth_chance / 100;
+
         if (Math.random() > growthChance) return;
 
-        const growth = block.permutation.getState("wiki:growth");
-        block.setPermutation(block.permutation.withState("wiki:growth", growth + 1));
+        const growth = block.permutation.getState(growthState);
+        block.setPermutation(block.permutation.withState(growthState, growth + 1));
     },
-    onPlayerInteract({ block, dimension, player }) {
+    onPlayerInteract({ block, dimension, player }, { params }) {
+        const growthState = params.growth_state;
+        const maxGrowth = params.max_growth;
+
         if (!player) return;
 
         const equippable = player.getComponent("minecraft:equippable");
@@ -133,15 +147,15 @@ const BlockCustomCropGrowthComponent = {
         const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
         if (!mainhand.hasItem() || mainhand.typeId !== "minecraft:bone_meal") return;
 
-        if (player.getGameMode() === GameMode.creative) {
+        if (player.getGameMode() === GameMode.Creative) {
             // Grow crop fully
-            block.setPermutation(block.permutation.withState("wiki:growth", 7));
+            block.setPermutation(block.permutation.withState(growthState, maxGrowth));
         } else {
-            let growth = block.permutation.getState("wiki:growth");
+            let growth = block.permutation.getState(growthState);
 
             // Add random amount of growth
             growth += randomInt(1, maxGrowth - growth);
-            block.setPermutation(block.permutation.withState("wiki:growth", growth));
+            block.setPermutation(block.permutation.withState(growthState, growth));
 
             // Decrement stack
             if (mainhand.amount > 1) mainhand.amount--;
@@ -156,10 +170,7 @@ const BlockCustomCropGrowthComponent = {
 };
 
 world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent(
-        "wiki:custom_crop_growth",
-        BlockCustomCropGrowthComponent
-    );
+    blockComponentRegistry.registerCustomComponent("wiki:growable", BlockGrowableComponent);
 });
 ```
 
@@ -181,19 +192,10 @@ For example, if `wiki:growth` is 7, the texture is set to `custom_crop_3` and th
             // Loot table for when the crop is not fully grown. Vanilla crops only drop seeds when young.
             "minecraft:loot": "loot_tables/blocks/custom_crop_young.json",
             // Trigger growth on random ticks and when interacting with bone meal (only active when the block isn't fully grown).
-            "minecraft:custom_components": ["wiki:custom_crop_growth"]
-        }
-    },
-    {
-        "condition": "q.block_state('wiki:growth') >= 0",
-        "components": {
-            "minecraft:material_instances": {
-                "*": {
-                    "texture": "wiki:custom_crop_0",
-                    "render_method": "alpha_test_single_sided",
-                    "ambient_occlusion": false,
-                    "face_dimming": false
-                }
+            "wiki:growable": {
+                "growth_state": "wiki:growth",
+                "growth_chance": 50, // 50% chance to grow on each random tick
+                "max_growth": 7
             }
         }
     },
@@ -320,7 +322,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -334,10 +336,17 @@ Here is the entire `wiki:custom_crop` file for reference.
             }
         },
         "components": {
-            "minecraft:flammable": true,
             "minecraft:collision_box": false,
-            "minecraft:geometry": "geometry.crop",
             "minecraft:light_dampening": 0,
+            "minecraft:geometry": "geometry.crop", // Model provided in previous step.
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "wiki:custom_crop_0",
+                    "render_method": "alpha_test_single_sided",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
             // Break the crop if it isn't placed on farmland.
             "minecraft:placement_filter": {
                 "conditions": [
@@ -346,6 +355,19 @@ Here is the entire `wiki:custom_crop` file for reference.
                         "block_filter": ["minecraft:farmland"]
                     }
                 ]
+            },
+            // Break the crop when water flows into it.
+            "minecraft:liquid_detection": {
+                "detection_rules": [
+                    {
+                        "liquid_type": "water",
+                        "on_liquid_touches": "broken"
+                    }
+                ]
+            },
+            // Break the crop when it is pushed by a piston
+            "minecraft:movable": {
+                "movement_type": "popped"
             }
         },
         "permutations": [
@@ -355,19 +377,10 @@ Here is the entire `wiki:custom_crop` file for reference.
                     // Loot table for when the crop is not fully grown. Vanilla crops only drop seeds when young.
                     "minecraft:loot": "loot_tables/blocks/custom_crop_young.json",
                     // Trigger growth on random ticks and when interacting with bone meal (only active when the block isn't fully grown).
-                    "minecraft:custom_components": ["wiki:custom_crop_growth"]
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') >= 0",
-                "components": {
-                    "minecraft:material_instances": {
-                        "*": {
-                            "texture": "wiki:custom_crop_0",
-                            "render_method": "alpha_test_single_sided",
-                            "ambient_occlusion": false,
-                            "face_dimming": false
-                        }
+                    "wiki:growable": {
+                        "growth_state": "wiki:growth",
+                        "growth_chance": 50, // 50% chance to grow on each random tick
+                        "max_growth": 7
                     }
                 }
             },
@@ -386,15 +399,6 @@ Here is the entire `wiki:custom_crop` file for reference.
                     "minecraft:selection_box": {
                         "origin": [-8, 0, -8],
                         "size": [16, 3.2, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 6",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 11.2, 16]
                     }
                 }
             },
@@ -457,6 +461,15 @@ Here is the entire `wiki:custom_crop` file for reference.
                     "minecraft:selection_box": {
                         "origin": [-8, 0, -8],
                         "size": [16, 9.6, 16]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('wiki:growth') == 6",
+                "components": {
+                    "minecraft:selection_box": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 11.2, 16]
                     }
                 }
             },
@@ -559,7 +572,7 @@ Holding a crop block in your hand wouldn't look right, so we place the crop with
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID.
@@ -586,7 +599,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food", // Make sure this is different from your crop and seeds' ID.
