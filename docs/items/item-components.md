@@ -156,22 +156,6 @@ Type: Object
 }
 ```
 
-### Custom Components
-
-Custom components are a new way of connecting the configuration of Blocks and Items in JSON to the power of scripting in a very direct and targeted manner. This new concept allows for composability and reusability of script functionality across blocks and items, while also ensuring that the script only runs specifically for that specific block and item.
-
-Added in `1.21.10.23`. Requires `format_version: "1.21.10"` or higher.
-
-Type: Array
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:custom_components": [
-    "wiki:custom_components"
-]
-```
-
 ### Damage
 
 Determines how much extra damage the item does on attack. How much extra damage the item does on attack. Note that this must be a positive value.
