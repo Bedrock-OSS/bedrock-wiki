@@ -115,7 +115,7 @@ The events below do three important functions to make your crop work:
 <CodeHeader>BP/scripts/custom_crop.js</CodeHeader>
 
 ```js
-import { EquipmentSlot, GameMode, world } from "@minecraft/server";
+import { EquipmentSlot, GameMode, system } from "@minecraft/server";
 
 /**
  * @param {number} min The minimum integer
@@ -169,7 +169,7 @@ const BlockGrowableComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent("wiki:growable", BlockGrowableComponent);
 });
 ```
