@@ -66,7 +66,7 @@ _Released from experiment `Holiday Creator Features` for format versions 1.19.70
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",

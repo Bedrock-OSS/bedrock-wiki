@@ -164,7 +164,7 @@ The following block behavior can be used as a template. Don't forget to set the 
 Here you need to do two things:
 
 -   Point to the new loot table with the `minecraft:loot` component.
--   Add our experience reward custom component to the `minecraft:custom_components` array.
+-   Add our experience reward custom component to the block's `components`.
 
 <CodeHeader>BP/blocks/silver_ore.json</CodeHeader>
 

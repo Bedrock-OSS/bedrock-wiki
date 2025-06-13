@@ -31,7 +31,7 @@ One example of a situation where replacing the block item is necessary is with f
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:daffodil"
@@ -53,7 +53,7 @@ One example of a situation where replacing the block item is necessary is with f
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:daffodil", // Same as the block's ID
