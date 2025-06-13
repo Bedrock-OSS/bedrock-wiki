@@ -1,5 +1,6 @@
 ---
 title: Ore Loot Tables
+description: Learn how to prevent your block loot from dropping when mined with the wrong tool and drop an experience reward when mined successfully.
 category: Tutorials
 tags:
     - easy
@@ -14,21 +15,21 @@ mentions:
     - TheItsNameless
     - QuazChick
     - Keyyard
-description: Create vanilla-like loot system for custom ore.
 ---
 
-:::tip FORMAT VERSION `1.21.70`
+:::tip FORMAT VERSION `1.21.90`
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-This tutorial aims to show a new way of creating custom ore blocks with a proper loot table. The `minecraft:loot` component will run the specified loot table regardless of the tool used, but by adding the `match_tool` condition to your loot table you can specify what tools are required per pool.
+This tutorial aims to show a new way of creating custom ore blocks with a proper loot table.
+The `minecraft:loot` component will run the specified loot table regardless of the tool used, but by adding the `match_tool` condition to your loot table you can specify what tools are required per pool.
 
 In addition, through use of scripts and custom components, we can create the experience orb reward offered by vanilla ores if the correct tool is used to destroy the block.
 
 -   Features:
 
-    -   Can be mined using any given item (this tutorial covers the iron pickaxe)
+    -   Can only be mined using an appropriate tool
     -   Can specify enchantments on items
     -   Also drops experience reward
 
@@ -38,7 +39,8 @@ In addition, through use of scripts and custom components, we can create the exp
 
 ## Loot Table
 
-In the example below, you can see how the `match_tool` condition is used to test for a `minecraft:iron_pickaxe`:
+In the example below, you can see how the `match_tool` condition is used to test for a pickaxe item that is iron tier or higher:
+:
 
 <CodeHeader>BP/loot_tables/blocks/silver_ore.json</CodeHeader>
 
@@ -50,7 +52,15 @@ In the example below, you can see how the `match_tool` condition is used to test
             "conditions": [
                 {
                     "condition": "match_tool",
-                    "item": "minecraft:iron_pickaxe",
+                    "minecraft:match_tool_filter_all": [
+                        "minecraft:is_tool",
+                        "minecraft:is_pickaxe"
+                    ],
+                    "minecraft:match_tool_filter_any": [
+                        "minecraft:iron_tier",
+                        "minecraft:diamond_tier",
+                        "minecraft:netherite_tier"
+                    ],
                     "count": 1
                 }
             ],
@@ -75,18 +85,17 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 ```json
 "conditions": [
-  {
-    "condition": "match_tool",
-    "item": "minecraft:iron_pickaxe",
-    "count": 1,
-    "enchantments": [
-      {
-        "fortune": {
-          "level": 1
-        }
-      }
-    ]
-  }
+    {
+        "condition": "match_tool",
+        ...
+        "enchantments": [
+            {
+                "fortune": {
+                    "level": 1
+                }
+            }
+        ]
+    }
 ]
 ```
 
@@ -99,7 +108,7 @@ Similarly to the loot table, we check the item in the player's hand and then spa
 <CodeHeader>BP/scripts/silver_ore.js</CodeHeader>
 
 ```js
-import { world, EquipmentSlot } from "@minecraft/server";
+import { system, EquipmentSlot } from "@minecraft/server";
 
 /**
  * @param {number} min The minimum integer
@@ -108,30 +117,43 @@ import { world, EquipmentSlot } from "@minecraft/server";
  * */
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+const BlockExperienceRewardComponent = {
+    onPlayerDestroy({ block, dimension, player }, { params }) {
+        // Check the tool in the player's hand
+        const equippable = player?.getComponent("minecraft:equippable");
+        if (!equippable) return; // Exit if the player or its equipment are undefined
+
+        const itemStack = equippable.getEquipment(EquipmentSlot.Mainhand);
+        if (
+            !itemStack ||
+            !itemStack.hasTag("minecraft:is_tool") ||
+            !itemStack.hasTag("minecraft:is_pickaxe") ||
+            (!itemStack.hasTag("minecraft:iron_tier") &&
+                !itemStack.hasTag("minecraft:diamond_tier") &&
+                !itemStack.hasTag("minecraft:netherite_tier"))
+        )
+            return; // Exit if the player isn't holding a suitable pickaxe
+
+        // Specify enchantments
+        const enchantable = itemStack.getComponent("minecraft:enchantable");
+        const silkTouch = enchantable?.getEnchantment("silk_touch");
+        if (silkTouch) return; // Exit if the iron pickaxe has the Silk Touch enchantment
+
+        // Spawn the XP orbs
+        const xpAmount = randomInt(params.min, params.max); // Number of XP orbs to spawn
+
+        for (let i = 0; i < xpAmount; i++) {
+            dimension.spawnEntity("minecraft:xp_orb", block.location);
+        }
+    },
+};
+
 // Register a custom component before the world is loaded
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent("wiki:silver_ore_xp_reward", {
-        onPlayerDestroy({ block, dimension, player }) {
-            // Check the tool in the player's hand
-            const equippable = player?.getComponent("minecraft:equippable");
-            if (!equippable) return; // Exit if the player or its equipment are undefined
-
-            const itemStack = equippable.getEquipment(EquipmentSlot.Mainhand);
-            if (itemStack?.typeId !== "minecraft:iron_pickaxe") return; // Exit if the player isn't holding an iron pickaxe
-
-            // Specify enchantments
-            const enchantable = itemStack.getComponent("minecraft:enchantable");
-            const silkTouch = enchantable?.getEnchantment("silk_touch");
-            if (silkTouch) return; // Exit if the iron pickaxe has the Silk Touch enchantment
-
-            // Spawn the XP orbs
-            const xpAmount = randomInt(0, 3); // Number of XP orbs to spawn
-
-            for (let i = 0; i < xpAmount; i++) {
-                dimension.spawnEntity("minecraft:xp_orb", block.location);
-            }
-        },
-    });
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:experience_reward",
+        BlockExperienceRewardComponent
+    );
 });
 ```
 
@@ -148,7 +170,7 @@ Here you need to do two things:
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:silver_ore",
@@ -159,7 +181,10 @@ Here you need to do two things:
         },
         "components": {
             "minecraft:loot": "loot_tables/blocks/silver_ore.json", // Won't be dropped if using Silk Touch.
-            "minecraft:custom_components": ["wiki:silver_ore_xp_reward"]
+            "wiki:experience_reward": {
+                "min": 0,
+                "max": 3
+            }
         }
     }
 }
@@ -168,42 +193,3 @@ Here you need to do two things:
 ## Result
 
 ![](/assets/images/blocks/ore-loot/result.gif)
-
-## Test items by tags
-
-You can also make a block drop its loot based on whether the item has all of the tags specified in `minecraft:match_tool_filter_all` or if it has at least one tag in `minecraft:match_tool_filter_any` ([see the list of vanilla tags](/items/item-tags#list-of-vanilla-tags)).
-
-In the example below, you can see how the condition of `match_tool` is modified so that it now tests for an item that has the tags `minecraft:is_tool` and `minecraft:is_pickaxe` and includes at least one of the tags `minecraft:iron_tier`, `minecraft:diamond_tier` and `minecraft:netherite_tier`:
-
-```json
-{
-    "pools": [
-        {
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "match_tool",
-                    "minecraft:match_tool_filter_all": [
-                        "minecraft:is_tool",
-                        "minecraft:is_pickaxe"
-                    ],
-                    "minecraft:match_tool_filter_any": [
-                        "minecraft:iron_tier",
-                        "minecraft:diamond_tier",
-                        "minecraft:netherite_tier"
-                    ],
-                    "count": 1,
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "wiki:raw_silver"
-                }
-            ]
-        }
-    ]
-}
-```
-
-This way, you can ensure that the drop is always guaranteed if the block is mined with pickaxes of a tier equal to or higher than the iron pickaxe, regardless of whether they come from other Add-Ons or future updates.
