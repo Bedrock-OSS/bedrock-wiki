@@ -101,7 +101,7 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 ## XP Reward Script
 
-To spawn experience orbs when your ore block is destroyed, custom components can be used. Here, we use the [onPlayerDestroy](/blocks/block-events#player-destroy) event hook. If you don't want your block to spawn XP, this step can be ignored.
+To spawn experience orbs when your ore block is destroyed, custom components can be used. Here, we use the [onPlayerBreak](/blocks/block-events#player-break) event hook. If you don't want your block to spawn XP, this step can be ignored.
 
 Similarly to the loot table, we check the item in the player's hand and then spawn a random number of XP orbs at the block's location.
 
@@ -118,7 +118,7 @@ import { system, EquipmentSlot } from "@minecraft/server";
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const BlockExperienceRewardComponent = {
-    onPlayerDestroy({ block, dimension, player }, { params }) {
+    onPlayerBreak({ block, dimension, player }, { params }) {
         // Check the tool in the player's hand
         const equippable = player?.getComponent("minecraft:equippable");
         if (!equippable) return; // Exit if the player or its equipment are undefined

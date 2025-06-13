@@ -587,7 +587,7 @@ function releasePaper({ block, destroyedBlockPermutation, dimension }) {
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockPigeonholesStorageComponent = {
     onPlayerInteract: handleInteract,
-    onPlayerDestroy: releasePaper,
+    onPlayerBreak: releasePaper,
 };
 
 system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
@@ -784,7 +784,7 @@ const BlockDoubleFlowerPotComponent = {
             mainhand.setItem(new ItemStack(plantId));
         }
     },
-    onPlayerDestroy: releasePlants,
+    onPlayerBreak: releasePlants,
 };
 
 system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
