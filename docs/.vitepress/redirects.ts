@@ -6,7 +6,7 @@ export default {
   "/blocks/blocks-16": "/blocks/blocks-intro",
   "/blocks/blocks-stable": "/blocks/blocks-intro",
   "/blocks/custom-trapdoor": "/blocks/custom-trapdoors",
-  
+
   "/commands/nbt-commands": "/commands/giving-nbt-items",
 
   "/concepts/animation-controllers": "/animation-controllers/animation-controllers-intro",
