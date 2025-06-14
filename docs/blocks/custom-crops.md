@@ -18,6 +18,10 @@ mentions:
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
+:::warning EXPERIMENTAL
+This tutorial requires "Upcoming Creator Features" to be enabled in your world in order for the `minecraft:movable` component to function.
+Omitting this component from your block JSON will allow the block to work without experiments, however the crop will not be destroyed when pushed by a piston.
+:::
 
 If you aren't a fan of carrots - that's fine. You can make your own (far superior) crop!
 
