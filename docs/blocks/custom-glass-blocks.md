@@ -17,9 +17,6 @@ mentions:
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
-:::warning EXPERIMENTAL
-Block culling rule conditions are experimental and require Upcoming Creator Features to be enabled.
-:::
 
 Making glass blocks may seem like a simple task, however when you first try your block may appear opaque.
 This page will show you how to use [material instances](/blocks/block-components#material-instances) to allow texture translucency and [culling rules](/blocks/block-culling) to hide unwanted block faces.
