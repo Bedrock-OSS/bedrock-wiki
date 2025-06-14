@@ -10,7 +10,7 @@ description: Max's Block Entity system using commands.
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This method, developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armor stands and some sequential `/playanimation` commands.
 
@@ -74,7 +74,7 @@ execute as @e[type=armor_stand,name="Grumm"] at @s run tp ~~~
 effect @e[type=armor_stand,name="Grumm"] invisibility infinite 1 true
 ```
 
-![commandBlockChain6](/assets/images/commands/commandBlockChain/6.png)
+![Chain of 6 Command Blocks](/assets/images/commands/command-block-chain/6.png)
 
 ### Purpose of Each Command
 

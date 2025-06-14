@@ -2,7 +2,7 @@
 title: Playanimation
 category: Commands
 mentions:
-    - Pipi_Spamton
+    - PipiSpamton
     - zheaEvyline
 description: Understanding the playanimation command.
 ---
@@ -323,4 +323,10 @@ For a detailed guide, visit: [Bedrock.dev - Molang Documentation](https://bedroc
     - `head_rotation_y` — rotate the entity's head along the Y-axis.
     - `head_rotation_z` — rotate the entity's head along the Z-axis.
 
-**(Recommended) Read Next: [FMBE - A New Way to Create Display Entities](/commands/display-entities)**
+## What's Next?
+
+<Card title="FMBE - A New Way to Create Display Entities" link="/commands/display-entities" image="/assets/images/homepage/diamond_ore_0.png">
+
+Learn how to create display entities on Bedrock purely using commands.
+
+</Card>

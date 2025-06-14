@@ -11,7 +11,7 @@ mentions:
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 ![](/assets/images/documentation/tellrawshow.png)
 

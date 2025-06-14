@@ -9,7 +9,7 @@ description: These command-techniques allow you to detect certain player/entity 
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 [Image Credits: Unofficial Minecraft Wiki - ](https://minecraft.wiki/)**[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)**
 
@@ -55,7 +55,7 @@ execute as @a[scores=wiki:q.is_moving=1}] run say I started moving
 execute as @a[scores=wiki:q.is_moving=1..}] run say I'm still moving
 ```
 
-![commandBlockChain7](/assets/images/commands/commandBlockChain/7.png)
+![Chain of Seven Command Blocks](/assets/images/commands/command-block-chain/7.png)
 
 It is a requirement to follow this same sequence and properly apply the `scores` selector argument as shown for your desired commands.
 
@@ -116,7 +116,7 @@ execute as @a[scores={wiki:q.is_walking=0}] run say I'm not walking
 execute as @a[scores={wiki:q.is_walking=1}] run say I'm walking
 ```
 
-![commandBlockChain10](/assets/images/commands/commandBlockChain/10.png)
+![Chain of Ten Command Blocks](/assets/images/commands/command-block-chain/10.png)
 
 All the commands function the same way as explained previously. The only difference being the values used in the distance arguments `r` & `rm` for the walk/sprint detection commands.
 
@@ -166,7 +166,7 @@ execute as @a[scores={wiki:q.is_sleeping=1}] run say I started sleeping
 execute as @a[scores={wiki:q.is_sleeping=1..}] run say I'm still sleeping
 ```
 
-![commandBlockChain5](/assets/images/commands/commandBlockChain/5.png)
+![Chain of Five Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 It is a requirement to follow this same sequence and properly apply the `scores` selector argument as shown for your desired commands.
 
@@ -211,7 +211,7 @@ execute as @a[scores={wiki:q.is_sneaking=1}] run say I started sneaking
 execute as @a[scores={wiki:q.is_sneaking=1..}] run say I'm still sneaking
 ```
 
-![commandBlockChain5](/assets/images/commands/commandBlockChain/5.png)
+![Chain of 5 Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 It is a requirement to follow this same sequence and properly apply the `scores` selector argument as shown for your desired commands.
 
@@ -261,7 +261,7 @@ execute as @a[scores={wiki:q.is_crawling=1}] run say I started crawling
 execute as @a[scores={wiki:q.is_crawling=1..}] run say I'm still crawling
 ```
 
-![commandBlockChain5](/assets/images/commands/commandBlockChain/5.png)
+![Chain of Five Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 It is a requirement to follow this same sequence and properly apply the `scores` selector argument as shown for your desired commands.
 
@@ -318,7 +318,7 @@ execute as @a[scores={wiki:q.is_crawling=1}] run say I started crawling
 execute as @a[scores={wiki:q.is_gliding=1..}] run say I'm still gliding
 ```
 
-![commandBlockChain9](/assets/images/commands/commandBlockChain/9.png)
+![Chain of Nine Command Blocks](/assets/images/commands/command-block-chain/9.png)
 
 **Purpose of Each Command:**
 

@@ -11,7 +11,7 @@ description: Introduction to MCBE command blocks.
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 Command Blocks are special blocks in Minecraft. The same commands (cheats) you type in chat can be run automatically using command blocks and it can be reused without needing to type all over again.
 
@@ -25,15 +25,15 @@ They can only be placed or destroyed by a player with the Operator permission in
 
 ## Command Block UI
 
-![commandBlockUI](/assets/images/commands/commandBlockUI.png)
+![Command Block Ui](/assets/images/commands/intro-to-command-blocks/command-block-ui.png)
 
 ## Command Block Types
 
-![impulseCommandBlock](/assets/images/commands/impulseCommandBlock.png) **Impulse** runs the command **once** each time it is powered.
+![impulse Command Block](/assets/images/commands/intro-to-command-blocks/command-block.impulse.png) **Impulse** runs the command **once** each time it is powered.
 
-![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **Chain** runs the command in a sequence, ie., only after the previous command block it is connecting from was run.
+![Chain Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain.png) **Chain** runs the command in a sequence, ie., only after the previous command block it is connecting from was run.
 
-![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **Repeat** runs the command every game-tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/commands/intro-to-command-blocks#command-block-tick-delay).
+![Repeat Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat.png) **Repeat** runs the command every game-tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/commands/intro-to-command-blocks#command-block-tick-delay).
 
 ## Command Block Conditions
 
@@ -41,9 +41,9 @@ They can only be placed or destroyed by a player with the Operator permission in
 
 > Conditional command block states are shown by a small indent into the command block's arrow texture, as shown below:
 >
-> -   ![pasteCommandButton](/assets/images/commands/impulseConditionalCommandBlock.png) Impulse Conditional Command Block
-> -   ![chainConditionalCommandBlock](/assets/images/commands/chainConditionalCommandBlock.png) Chain Conditional Command Block
-> -   ![repeatingConditionalCommandBlock](/assets/images/commands/repeatingConditionalCommandBlock.png) Repeating Conditional Command Block
+> -   ![Impulse Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.impulse-conditional.png) Impulse Conditional Command Block
+> -   ![Chain Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain-conditional.png) Chain Conditional Command Block
+> -   ![Repeat Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat-conditional.png) Repeating Conditional Command Block
 
 **Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was succesful (`true`) or failed (`false`) the command block will still run the command.
 
@@ -60,7 +60,7 @@ In this option, you may specify how much delay there should be before the comman
 The ticks refer to Minecraft game-ticks. A **tick** is simply a unit of measure for time, in games. 1 second in real life is approximately 20 game-ticks in Minecraft.
 
 :::tip
-![gametick.png](/assets/images/commands/gametick.png)
+![Approximately Where Commands Run in a Game Tick](/assets/images/commands/intro-to-command-blocks/game-tick.png)
 :::
 
 ## Command Block Hover Note
@@ -68,13 +68,13 @@ The ticks refer to Minecraft game-ticks. A **tick** is simply a unit of measure 
 This option allows you to put a hovering text over your command blocks. It's useful for giving short-names for easy identification when working with multiple command-blocks-chains.
 
 When a command is run, the hover note will be displayed along with the output in chat if gamerule `commandblockoutput` is enabled.
-![hover_note](/assets/images/commands/hover_note.png)
+![Command Block Hover Note](/assets/images/commands/intro-to-command-blocks/command-block-hover-note.png)
 
 ## Paste Button
 
-![pasteCommandButton](/assets/images/commands/pasteCommandButton.png)
+![Command Block Paste Button](/assets/images/commands/intro-to-command-blocks/command-block-paste-button.png)
 
-The paste button allows you to paste commands from your clipboard to the 'Command Input' box.
+The paste button allows you to paste previously copied coordinates into the 'Command Input' box.
 
 ## Command Block Output
 
@@ -102,10 +102,10 @@ When placing command blocks in a chain (arranged to work in sequence) for any sy
 The arrow/facing direction can be observed from the command block texture on the sides.
 
 **✅ Correct Placement**
-![correctCommandBlockPlacement](/assets/images/commands/correctCommandBlockPlacement.png)
+![Correct Command Block Placement](/assets/images/commands/intro-to-command-blocks/command-block-placement.correct.png)
 
 **❌ Incorrect Placement**
-![incorrectCommandBlockPlacement](/assets/images/commands/incorrectCommandBlockPlacement.png)
+![Incorrect Command Block Placement](/assets/images/commands/intro-to-command-blocks/command-block-placement.incorrect.png)
 
 ## Troubleshooting Command Blocks
 
@@ -119,7 +119,7 @@ The arrow/facing direction can be observed from the command block texture on the
 
 -   Double check the block type, condition, and the command syntax. After powering it, check the 'Previous Output' again.
 
--   Just like redstone, command blocks must also be within loaded chunks for them to work. You can use a tickingarea to keep them loaded when players are not nearby. Refer to [/tickingarea](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand) command documentation for more info.
+-   Just like redstone, command blocks must also be within loaded chunks for them to work. You can use a ticking area to keep them loaded when players are not nearby. Refer to [/tickingarea](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand) command documentation for more info.
 
 If nothing seems to work, simply break and replace that command block.
 
@@ -136,10 +136,22 @@ If nothing seems to work, simply break and replace that command block.
 
 :::
 
-To put what you have learned into practice, try making this simple [Entity Counter](/commands/entity-counter) system.
-
-> When setting up command block systems following codeblock/mcfunction, always keep in mind that the first command block will be ![repeatingCommandBlock](/assets/images/commands/repeatingCommandBlock.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![chainCommandBlock](/assets/images/commands/chainCommandBlock.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
+> When setting up command block systems following codeblock/mcfunction, always keep in mind that the first command block will be ![Repeat Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![Chain Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
 >
-> ![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
+> ![Chain of Four Command Blocks](/assets/images/commands/command-block-chain/4.png)
 
-**(Recommended) Read Next: [Understanding Selectors](/commands/selectors)**
+## What's Next?
+
+<CardGrid>
+<Card title="Basic Systems" image="/assets/images/homepage/commands.png">
+
+To put what you have learned into practice, try making this simple **[On Player First Join](/commands/on-first-join)** system, or the **[Entity Counter](/commands/entity-counter)** system.
+
+</Card>
+
+<Card title="Understanding Selectors" link="/commands/selectors" image="/assets/images/homepage/spawn_egg_30.png">
+
+Learn to use target selectors in commands and how to filter them.
+
+</Card>
+</CardGrid>

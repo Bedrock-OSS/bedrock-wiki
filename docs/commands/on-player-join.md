@@ -10,7 +10,7 @@ description: This system will run your desired commands on the event that a play
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system will run your desired commands on the event that a player joins the world.
 
@@ -20,11 +20,11 @@ _To be typed in Chat:_
 
 `/scoreboard objectives add wiki:joined dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
+If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
-<CodeHeader>BP/functions/event/players/on_join.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/event/players/on_join.mcfunction</CodeHeader>
 
 ```yaml
 ## Register Players to 'wiki:joined' Objective Who Joined For First Time or Were Cleared from 'wiki:joined' Previously
@@ -40,7 +40,7 @@ scoreboard players reset * wiki:joined
 scoreboard players set @a wiki:joined 1
 ```
 
-![Chain of 4 Command Blocks](/assets/images/commands/commandBlockChain/4.png)
+![Chain of 4 Command Blocks](/assets/images/commands/command-block-chain/4.png)
 
 Here, we have used a `/tp` command as an example, but you can use any command you prefer and as many as you need.
 

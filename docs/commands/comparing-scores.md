@@ -9,7 +9,7 @@ description: Learn to test for targets of matching scores / targets with the hig
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 In this guide, you will learn how to test for targets of matching scores / targets with the highest or lowest score.
 
@@ -27,7 +27,7 @@ scoreboard players operation .Highest <objective> > * <objective>
 execute as <target> if score @s <objective> = .Highest <objective> run <command>
 ```
 
-![Chain of 2 Command Blocks](/assets/images/commands/commandBlockChain/2.png)
+![Chain of 2 Command Blocks](/assets/images/commands/command-block-chain/2.png)
 
 **Command 1:** This command compares the `.Highest` score with every other tracked score in the specified objective, and if the `.Highest` score is lesser than the one being compared to, then the `.Highest` score will be assigned the value of that score. To illustrate:
 
@@ -62,7 +62,7 @@ tag @a remove wiki:top_kills
 execute as @a if score @s wiki:kills = .Highest wiki:kills run tag @s add wiki:top_kills
 ```
 
-![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
+![Chain of 3 Command Blocks](/assets/images/commands/command-block-chain/3.png)
 
 ## Get Lowest Score ( < )
 
@@ -78,7 +78,7 @@ scoreboard players operation .Lowest <objective> < * <objective>
 execute as <target> if score @s <objective> = .Lowest <objective> run <command>
 ```
 
-![Chain of 2 Command Blocks](/assets/images/commands/commandBlockChain/2.png)
+![Chain of 2 Command Blocks](/assets/images/commands/command-block-chain/2.png)
 
 **Command 1:** This command compares the `.Lowest` score with every other tracked score in the specified objective, and if the `.Lowest` score is greater than the one being compared to, then the `.Lowest` score will be assigned the value of that score. To illustrate:
 
@@ -115,7 +115,7 @@ tag @a remove wiki:eliminated
 execute as @a if score @s wiki:blocks_travelled = .Lowest wiki:blocks_travelled run tag @s add wiki:eliminated
 ```
 
-![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
+![Chain of 3 Command Blocks](/assets/images/commands/command-block-chain/3.png)
 
 ## Get Matching Scores ( = )
 
@@ -129,7 +129,7 @@ This command compares the executing target's score with other selected targets. 
 execute as @a at @s at @a[rm=0.01] if score @s <objective> = @p <objective> run say @s and @p have matching scores!
 ```
 
-![One Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+![One Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 :::info NOTE:
 
@@ -138,7 +138,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 
 **Visualisation:**
 
-![](/assets/images/commands/comparing-scores/GetMatchingScores.gif)
+![Getting Matching Scores 2D Visualisation](/assets/images/commands/comparing-scores/2d-visualisation.gif)
 
 **Example 1:** Teleport pet to owner if farther than 6 blocks:
 
@@ -149,7 +149,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 execute as @e[tag=pet] at @s at @a[rm=7] if score @s wiki:id = @p wiki:id run tp @s @p
 ```
 
-![One Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+![One Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 **Example 2:** Set plot owner to Creative mode and others to Adventure mode:
 
@@ -163,4 +163,4 @@ execute as @e[tag=plot] at @s at @a[r=16] if score @s wiki:id = @p wiki:id run g
 execute as @e[tag=plot] at @s at @a[r=16] unless score @s wiki:id = @p wiki:id run gamemode a @p[m=!a]
 ```
 
-![Chain of 2 Command Blocks](/assets/images/commands/commandBlockChain/2.png)
+![Chain of 2 Command Blocks](/assets/images/commands/command-block-chain/2.png)

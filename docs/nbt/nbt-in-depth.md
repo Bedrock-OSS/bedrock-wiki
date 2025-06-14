@@ -14,7 +14,7 @@ description: NBT in depth.
 
 NBT (Named Binary Tag) is a name for data encoding format at the binary level, you certainly know format JSON which is based on the text level.
 Therefore, we will be able to use the JSON format for some examples, you may also notice that minecraft itself uses JSON to represent NBT in commands such as java commands or simplified bedrock commands( `/give`, `/replaceitem`).
-See [NBT Commands](/commands/nbt-commands).
+See [NBT Commands](/commands/giving-nbt-items).
 
 In this article, we will show NBT in much more detail than you will ever expect.
 What you could see in the Commands section is far from actual NBTs, and we will show you how NBT works, how to read them, as well as how `Minecraft Bedrock Edition` itself uses them.

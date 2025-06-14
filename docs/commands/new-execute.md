@@ -9,6 +9,7 @@ mentions:
     - Hatchibombotar
     - TheItsNameless
     - SmokeyStack
+    - zheaEvyline
 description: /execute command explained.
 ---
 
@@ -265,4 +266,24 @@ Now for some examples of things that were not possible to do in one command, or 
 /execute as @a at @s if entity @e[type=armor_stand,r=10] run gamemode survival @s
 ```
 
-**(Recommended) Read Next: [Execute Logic Gates](/commands/logic-gates)**
+## What's Next?
+
+<CardGrid>
+<Card title="Execute Logic Gates" link="/commands/logic-gates" image="/assets/images/homepage/scripting.png">
+
+Learn about logic gates and how to use them in commands to create more optimized systems!
+
+</Card>
+
+<Card title="Comparing & Retrieving Scores" link="/commands/comparing-scores" image="/assets/images/homepage/spawn_egg_30.png">
+
+Learn to dynamically compare and retrieve scores for multiple targets.
+
+</Card>
+
+<Card title="Execute at Block Variants" link="/commands/execute-at-block" image="/assets/images/homepage/diamond_ore_0.png">
+
+Learn how to dynamically execute commands at the location of any block variant.
+
+</Card>
+</CardGrid>

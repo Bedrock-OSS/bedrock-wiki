@@ -10,7 +10,7 @@ description: This system will run your desired commands on the event that a play
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community Discord](https://bedrockcommands.org/)
 
 This system will run your desired commands on the event that a player leaves the world.
 
@@ -22,7 +22,7 @@ This system will run your desired commands on the event that a player leaves the
 
 `/scoreboard objectives add wiki:player_count dummy`
 
-If you are working with functions and prefer to have the objective added automatically when the world initializes, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
+If you are working with functions and prefer to have the objective added automatically when the world initializes, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
@@ -49,7 +49,7 @@ scoreboard players reset .PreviousTick wiki:player_count
 execute as @a run scoreboard players add .PreviousTick wiki:player_count 1
 ```
 
-![Chain of 6 Command Blocks](/assets/images/commands/commandBlockChain/6.png)
+![Chain of 6 Command Blocks](/assets/images/commands/command-block-chain/6.png)
 
 Here, we have used a `/say` command as an example, but you can use any command you prefer and as many as you need.
 
@@ -77,7 +77,11 @@ Using this, we can execute commands when `.CurrentTick` is `-1` or lower.
 :::tip
 All commands in a command-block chain or function will execute sequentially but within the same game tick, regardless of the number of commands involved. This system works because commands execute at the end of a game tick after all events (such as player join, leave, death, etc.) occur.
 
-![Game Tick](/assets/images/commands/gametick.png)
+<WikiImage
+    src="/assets/images/commands/intro-to-command-blocks/game-tick.png"
+    alt="Game Tick"
+    height=200
+/>
 :::
 
 ## Tick JSON

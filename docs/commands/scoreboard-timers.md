@@ -10,7 +10,7 @@ description: Create world timers or entity timers using scoreboards.
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system allows you to run your desired commands at precise intervals, allowing for customizable delays as per your requirements.
 
@@ -78,7 +78,7 @@ scoreboard players operation .SpeedEffect wiki:events %= .30s wiki:ticks
 execute if score .SpeedEffect wiki:events matches 0 run effect @a speed 10 2 true
 ```
 
-![Chain of 8 Command Blocks](/assets/images/commands/commandBlockChain/8.png)
+![Chain of 8 Command Blocks](/assets/images/commands/command-block-chain/8.png)
 
 Here, we have taken 3 examples to show how to implement them, but you can add any timer you prefer and as many as you need.
 
@@ -162,7 +162,7 @@ execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:o
 execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurances matches 1.. run scoreboard players remove .SpeedEffect wiki:occurances 1
 ```
 
-![Chain of 8 Command Blocks](/assets/images/commands/commandBlockChain/8.png)
+![Chain of 8 Command Blocks](/assets/images/commands/command-block-chain/8.png)
 
 ## Executing Commands During Intervals
 
@@ -220,6 +220,6 @@ execute as @e[name="wiki:station",scores={wiki:ticks=6000}] at @s if entity @e[f
 kill @e[name="wiki:station",scores={wiki:ticks=6000}]
 ```
 
-![Chain of 7 Command Blocks](/assets/images/commands/commandBlockChain/7.png)
+![Chain of 7 Command Blocks](/assets/images/commands/command-block-chain/7.png)
 
 As shown, setting the score to `0` when it completes the timeframe will loop the timer. And setting the score to `-1` will stop/disable it. You can still set the score to `0` to start the timer again.

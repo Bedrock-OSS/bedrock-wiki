@@ -11,7 +11,7 @@ description: This system will run your desired commands on the event that a play
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system will run your desired commands on the event that a player joins the world for the first time.
 
@@ -30,7 +30,7 @@ give @a[tag=!wiki:joined] bread 16
 tag @a[tag=!wiki:joined] add wiki:joined
 ```
 
-![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
+![Chain of 3 Command Blocks](/assets/images/commands/command-block-chain/3.png)
 
 Here, we have used 2 `/give` commands as examples, but you can use any command you prefer and as many as you need.
 

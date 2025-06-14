@@ -44,7 +44,7 @@ export default {
   "/knowledge/addon-programming": "/meta/addon-programming",
   "/knowledge/bedrock-modeling": "/visuals/bedrock-modeling",
   "/knowledge/entity-movement": "/entities/entity-movement",
-  "/knowledge/nbt_commands": "/commands/nbt-commands",
+  "/knowledge/giving-nbt-items": "/commands/giving-nbt-items",
   "/knowledge/style-guide": "/meta/style-guide",
   "/knowledge/useful-links": "/meta/useful-links",
   "/knowledge/using-schemas": "/meta/using-schemas",

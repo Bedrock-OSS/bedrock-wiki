@@ -1,21 +1,30 @@
 ---
 title: Look Detection
 category: Techniques
+tags:
+  - intermediate
 mentions:
   - BedrockCommands
   - AjaxGb
   - Plagiatus
   - zheaEvyline
+  - GobbleCrow
 description: This command-technique allows you to detect when a target looks at a player/entity/coordinate and subsequently run your desired commands.
 ---
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 **Credits:** *@AjaxGb*
 
 This command-technique allows you to detect when a target looks at a player/entity/coordinate and subsequently run your desired commands.
+
+:::warning
+
+This technique does not account for obstructions in the view direction, such as a wall or tree that prevents the player from seeing the desired target or block. To account for that, you must use a **[Raycasting System](https://bedrockcommands.org/resources/raycasting)**
+
+:::
 
 ## Command
 
@@ -25,11 +34,11 @@ This command-technique allows you to detect when a target looks at a player/enti
 execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s[r=0.2] run <command>
 
 ```
-![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+![A Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 **Visualisation:**
 
-![Alex Looking at a Pig's Head](/assets/images/commands/lookDetectionVisualRep.gif)
+![Alex Looking at a Pig's Head](/assets/images/commands/look-detection/visualisation.gif)
 
 > *Note: This is a rough visual representation, not precise measurements.*
 
@@ -74,7 +83,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 execute as @a at @s anchored eyes facing entity @e[type=cow,tag=wiki:target] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s[r=0.2] run say hello cow!
 execute as @a at @s anchored eyes facing entity @e[type=sheep,tag=wiki:target] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s[r=0.2] run say hello sheep!
 ```
-![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+![A Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 2. Run a `/say` command when looking at the position `(10, 20, 30)` or `(6, 7, 8)`:
 
@@ -84,7 +93,7 @@ execute as @a at @s anchored eyes facing entity @e[type=sheep,tag=wiki:target] e
 execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s[r=0.2] run say hello block!
 execute as @a at @s anchored eyes facing 6 7 8 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s[r=0.2] run say hello block!
 ```
-![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+![A Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 **Alternative Structure:**
 
@@ -93,7 +102,7 @@ execute as @a at @s anchored eyes facing 6 7 8 positioned ~~-1.62~ positioned ^^
 ```yaml
 execute as <target> at <coordinate | entity> facing entity @s eyes positioned as @s positioned ^^^1 rotated as @s positioned ^^^1 if entity @s[r=0.02] run <command>
 ```
-![A Repeating Command Block](/assets/images/commands/commandBlockChain/1.png)
+![A Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 If you don't need to detect the target looking at the *eyes* of an entity but their feet or a coordinate, you may use this structure which negates the need for the `anchored eyes` instruction as the execution position begins from the entity/coordinate rather than the target.
 
@@ -112,3 +121,32 @@ or, the inverse to calculate what viewing angle a certain radius / distance (`r`
 
 With the above calculation, the example value of `r=0.2` leaves us with roughly a 12° angle by which we can miss the exact target in either direction and still have it considered "close enough."
 
+## Look Detection V2
+
+**Credits:** *@GobbleCrow*
+
+![Demonstration GIF: Player Looking at an Armor Stand](/assets/images/commands/look-detection/v2-demo.gif)
+
+If you need higher precision for detecting where a player is looking—ideal for fine-tuned mechanics—you can use the following command which uses a very similar logic:
+
+<CodeHeader>BP/functions/wiki/detect_state/player/is_precisely_looking_at.mcfunction</CodeHeader>
+
+```yaml
+execute as @a at @s anchored eyes positioned ~~-0.5~ facing entity @e[type=armor_stand,rm=0.0001] feet positioned ^^^10 rotated as @s positioned ^^^10 facing entity @s eyes positioned as @s positioned ^^^-1 rotated as @s positioned ^^^-1 if entity @s[r=0.766] positioned as @s anchored eyes positioned as @e[type=armor_stand,rm=0.0001] anchored feet positioned ~~0.5~ positioned ^^^100000 facing entity @s eyes positioned as @s positioned ^^^10 rotated as @s positioned ^^^10 run title @s[r=0.00005] actionbar §aFound Armor Stand!
+```
+
+This will execute a command (e.g., `/title`) when the specified target(s) (e.g., `@a`) is precisely looking at either the **eyes** or **feet** of an entity (such as `@e[type=armor_stand]`) and is within a `0.00005` detection radius, assuming all conditions are met.
+
+> **Note:** The `0.766` radius was chosen to match the armor stand’s hitbox. For other entities, you may need to adjust this value to suit their specific hitbox size and your desired precision.
+
+### Customizing for Block Coordinates
+
+To detect whether a player is looking at a specific block position instead of an entity, replace the following parts of the command:
+
+1. Replace `facing entity @e[type=armor_stand,rm=0.0001] feet`
+    - with `facing <coordinate>`
+    - *(e.g., `facing 10 0 10`)*
+
+2. Replace `positioned as @e[type=armor_stand,rm=0.0001]`
+    - with `positioned <coordinate>`
+    - *(e.g., `positioned 10 0 10`)*
