@@ -14,39 +14,19 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ## Applying Tags
 
-### From 1.20.50 and Onwards
-
-<CodeHeader></CodeHeader>
+<CodeHeader>BP/items/example_item.json</CodeHeader>
 
 ```json
 {
     "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
-            "identifier": "wiki:my_item"
+            "identifier": "wiki:example_item"
         },
         "components": {
             "minecraft:tags": {
-                "tags": ["wiki:my_tag"]
+                "tags": ["wiki:example_tag"]
             }
-        }
-    }
-}
-```
-
-### Before 1.20.50
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-    "format_version": "1.20.40",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:my_item"
-        },
-        "components": {
-            "tag:wiki:my_tag": {}
         }
     }
 }
@@ -54,12 +34,45 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ## Testing for Tags
 
-Tags can be queried with:
+### From Entities
+
+-   `q.equipped_item_all_tags`
+-   `q.equipped_item_any_tag`
+
+<CodeHeader>minecraft:client_entity > description</CodeHeader>
+
+```json
+"scripts": {
+    "pre_animation": [
+        "v.is_holding_pickaxe = q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:is_tool', 'minecraft:is_pickaxe');"
+    ]
+}
+```
+
+### From Item Descriptors
 
 -   `q.all_tags`
 -   `q.any_tag`
--   `q.equipped_item_all_tags`
--   `q.equipped_item_any_tag`
+
+<CodeHeader>Item Descriptor</CodeHeader>
+
+```json
+{
+    "tags": "q.all_tags('minecraft:is_tool', 'minecraft:is_pickaxe') && q.any_tag('minecraft:diamond_tier', 'minecraft:netherite_tier')"
+}
+```
+
+### From Recipes
+
+<CodeHeader>minecraft:recipe_shapeless</CodeHeader>
+
+```json
+"ingredients": [
+    {
+        "item": { "tag": "minecraft:planks" }
+    }
+]
+```
 
 ## List of Vanilla Tags
 
