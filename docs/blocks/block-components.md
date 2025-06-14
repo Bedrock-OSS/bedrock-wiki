@@ -75,7 +75,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 Defines the area of the block that entities and blocks collide with.
 
-_Requires format version [1.19.50](/blocks/block-format-history#_1.19.50) or later._
+_Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
 
 #### Boolean Definition {#collision-box-boolean}
 
@@ -112,7 +112,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1.19.50) or lat
 
 Turns your block into a crafting table, opening a functional crafting interface when interacted with.
 
-_Requires format version [1.19.50](/blocks/block-format-history#_1.19.50) or later._
+_Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
 
 #### Object Definition {#crafting-table-object}
 
@@ -142,7 +142,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1.19.50) or lat
 
 Determines whether the block can be destroyed by explosions.
 
-_Requires format version [1.19.20](/blocks/block-format-history#_1.19.20) or later._
+_Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
 #### Boolean Definition {#destructible-by-explosion-boolean}
 
@@ -173,7 +173,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1.19.20) or lat
 
 Determines how long it takes for players to mine the block.
 
-_Requires format version [1.19.20](/blocks/block-format-history#_1.19.20) or later._
+_Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
 #### Boolean Definition {#destructible-by-mining-boolean}
 
@@ -235,7 +235,7 @@ The language file key that determines text that will be displayed when you hover
 -   If the given string does not have a translation, the raw string will be displayed.
 -   Minecraft may revert to using `tile.<identifier>.name` in some scenarios, such as in the "can place on" tooltip.
 
-_Requires format version [1.19.60](/blocks/block-format-history#_1.19.60) or later._
+_Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
 
 #### String Definition {#display-name-string}
 
@@ -255,7 +255,7 @@ tile.wiki:custom_block.name=Custom Block
 
 Causes an [entity fall on](/blocks/block-events#entity-fall-on) event to be triggered when an entity falls onto the block.
 
-_Requires format version [1.21.10](/blocks/block-format-history#_1.21.10) or later._
+_Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
 
 #### Object Definition {#entity-fall-on-object}
 
@@ -274,7 +274,7 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1.21.10) or lat
 
 Determines how flammable the block is.
 
-_Requires format version [1.19.10](/blocks/block-format-history#_1.19.10) or later._
+_Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or later._
 
 #### Boolean Definition {#flammable-boolean}
 
@@ -310,7 +310,7 @@ When `false` (default), the block will not be able to catch on fire naturally fr
 
 Determines how much an entity is slowed down when moving on top of the block (0.0-0.9).
 
-_Requires format version [1.19.20](/blocks/block-format-history#_1.19.20) or later._
+_Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
 #### Float Definition {#friction-float}
 
@@ -334,7 +334,7 @@ The geometry of blocks can also be set to any of the [vanilla block models](/blo
 3.  The absolute bounds of the position of your 30×30×30 block are 30 pixels in each direction from the origin.
     Your block can be placed in any position within these bounds, as long as it adheres to rule #2.
 
-_Requires format version [1.21.10](/blocks/block-format-history#_1.21.10) or later._
+_Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
 
 #### String Definition {#geometry-string}
 
@@ -380,7 +380,7 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1.21.10) or lat
 
 Determines how this block is displayed as an item.
 
-_Requires format version [1.21.60](/blocks/block-format-history#_1.21.60) or later._
+_Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or later._
 
 #### Object Definition {#item-visual-object}
 
@@ -406,7 +406,7 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1.21.60) or lat
 
 Determines the maximum number of light levels (0-15) that will be dampened when passing through the block, in a range.
 
-_Requires format version [1.19.10](/blocks/block-format-history#_1.19.10) or later._
+_Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or later._
 
 #### Integer Definition {#light-dampening-integer}
 
@@ -420,7 +420,7 @@ _Requires format version [1.19.10](/blocks/block-format-history#_1.19.10) or lat
 
 Determines the integer light level (0-15) emitted by the block.
 
-_Requires format version [1.19.20](/blocks/block-format-history#_1.19.20) or later._
+_Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
 #### Integer Definition {#light-emission-integer}
 
@@ -434,7 +434,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1.19.20) or lat
 
 Determines how this blocks behaves with different types of liquid.
 
-_Requires format version [1.21.60](/blocks/block-format-history#_1.21.60) or later._
+_Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or later._
 
 #### Object Definition {#liquid-detection-object}
 
@@ -526,7 +526,7 @@ An array of 3 integers (0-255) defining the `[R, G, B]` color of the block on a 
 Configuration of your block's rendering, including textures and lighting.
 The `*` instance is required as it is the default instance for all cube faces.
 
-_Requires format version [1.19.40](/blocks/block-format-history#_1.19.40) or later._
+_Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
 
 **Known Issues:**
 
@@ -620,7 +620,7 @@ Custom instance names can be defined within material instances, and can be refer
 Determines the placement conditions that a block must be in to be able to survive.
 If none of the specified conditions are met, the block will not be placed; or if the block is already placed, it will pop off as an item.
 
-_Requires format version [1.19.60](/blocks/block-format-history#_1.19.60) or later._
+_Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
 
 #### Object Definition {#placement-filter-object}
 
@@ -663,7 +663,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1.19.60) or lat
 
 Defines a block's ability to conduct redstone power.
 
-_Requires format version [1.21.40](/blocks/block-format-history#_1.21.40) or later._
+_Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or later._
 
 #### Object Definition {#redstone-conductivity-object}
 
@@ -698,7 +698,7 @@ Does not allow the block to be replaced by a block of the same permutation.
 
 Defines the area of the block that can be selected by players.
 
-_Requires format version [1.19.60](/blocks/block-format-history#_1.19.60) or later._
+_Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
 
 #### Boolean Definition {#selection-box-boolean}
 
@@ -735,7 +735,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1.19.60) or lat
 
 Causes the block to tick after a random delay in the range specified by `interval_range`.
 
-_Requires format version [1.21.10](/blocks/block-format-history#_1.21.10) or later._
+_Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
 
 #### Object Definition {#tick-object}
 
@@ -759,7 +759,7 @@ Determines the transformation of the block's [geometry](#geometry), [collision b
 
 **Transformed models must not exceed the [block geometry limits](#geometry).**
 
-_Requires format version [1.21.0](/blocks/block-format-history#_1.21.0) or later._
+_Requires format version [1.21.0](/blocks/block-format-history#_1-21-0) or later._
 
 :::tip
 Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based on how the block is placed, just like furnaces and mob heads!

@@ -57,7 +57,7 @@ q.block_state('minecraft:vertical_half')
 
 Contains information about the player's rotation when the block was placed.
 
-_Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
+_Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
 
 #### Provided States
 
@@ -83,7 +83,7 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.20.2
 
 Contains information about where the player placed the block.
 
-_Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
+_Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
 
 #### Provided States
 

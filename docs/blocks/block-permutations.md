@@ -60,7 +60,7 @@ The block `permutations` array provides a way of conditionally applying componen
 
 Components within the `permutations` array can override the block's base components, as well as those of other component lists. The latest component list in the `permutations` array takes priority.
 
-_Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
+_Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or later._
 
 <CodeHeader>BP/blocks/custom_block.json</CodeHeader>
 

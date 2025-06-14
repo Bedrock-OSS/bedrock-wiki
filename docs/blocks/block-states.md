@@ -21,7 +21,7 @@ Valid state values can be defined as a boolean, integer or string array - or as 
 
 Each state may have up to 16 valid values defined. For integer range states, this means that the `max` value cannot be more than 15 higher than the `min` value.
 
-_Requires format version [1.19.70](/blocks/block-format-history#_1.19.70) or later._
+_Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or later._
 
 <CodeHeader>BP/blocks/custom_block.json</CodeHeader>
 
