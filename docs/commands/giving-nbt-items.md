@@ -272,3 +272,9 @@ This method also works with renamed **banners**, **chests**, **furnaces**, and *
 ## Giving NBT Items in Trade or Loot Tables
 
 It is currently not possible to set NBT via loot tables or trade tables. If you want to sell items with NBT components, you will need to use a workaround of some kind or another, such as cloning chests containing items with pre-existing NBT.
+
+## Item Editor MCBE
+
+This project provides an add-on for Minecraft Bedrock Edition that allows direct editing of item properties in-game. It leverages the Script API and requires no additional toggles in your world settings.
+
+GitHub repository link: https://github.com/Justash01/item-editor-mcbe
