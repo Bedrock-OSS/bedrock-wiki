@@ -357,6 +357,10 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1.21.10) or lat
 -   `culling`: String (optional)
     -   Determines the identifier of the culling rules that should be applied to the geometry.
     -   Culling identifiers should take the form `<namespace>:culling.<name>`.
+-   `culling_layer`: String
+    -   Determines the culling layer identifier to be checked for by the [`same_culling_layer`](/blocks/block-culling#same-culling-layer) culling rule condition.
+    -   Culling layer identifiers should take the form `<namespace>:culling_layer.<name>`.
+    -   When using the `minecraft` namespace, the only allowed culling layer identifiers are `minecraft:culling_layer.undefined` and `minecraft:culling_layer.leaves`.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
