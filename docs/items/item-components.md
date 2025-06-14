@@ -371,26 +371,28 @@ Type: Object
     -   Required Field
     -   Value is `value % 256`
 
-#### Slot
+#### Enchantable Slots
 
--   armor_feet
--   armor_torso
--   armor_head
--   armor_legs
--   axe
--   bow
--   cosmetic_head
--   crossbow
--   elytra
--   fishing_rod
--   flintsteel
--   hoe
--   pickaxe
--   shears
--   shield
--   shovel
--   sword
--   all
+| Slot Name       |
+| --------------- |
+| `armor_feet`    |
+| `armor_torso`   |
+| `armor_head`    |
+| `armor_legs`    |
+| `axe`           |
+| `bow`           |
+| `cosmetic_head` |
+| `crossbow`      |
+| `elytra`        |
+| `fishing_rod`   |
+| `flintsteel`    |
+| `hoe`           |
+| `pickaxe`       |
+| `shears`        |
+| `shield`        |
+| `shovel`        |
+| `sword`         |
+| `all`           |
 
 #### Enchantability Value
 
@@ -936,18 +938,20 @@ Type: String
 "minecraft:use_animation": "eat"
 ```
 
-#### Known Animations
+#### Use Animations
 
--   eat
--   drink
--   bow
--   block
--   camera
--   crossbow
--   none
--   brush
--   spear
--   spyglass
+| Animation Name |
+| -------------- |
+| `eat`          |
+| `drink`        |
+| `bow`          |
+| `block`        |
+| `camera`       |
+| `crossbow`     |
+| `none`         |
+| `brush`        |
+| `spear`        |
+| `spyglass`     |
 
 ### Use Modifiers
 
@@ -977,24 +981,26 @@ Determines where the item can be worn. If any non-hand slot is chosen, the max s
 
 Type: Object
 
--   `protection`: Integer
 -   `slot`: String
+-   `protection`: Integer
+-   `hides_player_location`: Boolean
+    -   Determines whether a player wearing the item will be hidden from the Locator Bar and Locator Maps.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
 "minecraft:wearable": {
-    "protection": 10,
-    "slot": "slot.armor.chest"
+    "slot": "slot.armor.chest",
+    "protection": 10
 }
 ```
 
-#### Slots
+#### Wearable Slots
 
-| Slot Name           |
-| ------------------- |
-| slot.weapon.offhand |
-| slot.armor.head     |
-| slot.armor.chest    |
-| slot.armor.legs     |
-| slot.armor.feet     |
+| Slot Name             |
+| --------------------- |
+| `slot.weapon.offhand` |
+| `slot.armor.head`     |
+| `slot.armor.chest`    |
+| `slot.armor.legs`     |
+| `slot.armor.feet`     |
