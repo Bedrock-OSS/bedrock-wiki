@@ -16,6 +16,13 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.100
+
+### Components
+
+-   Updated `minecraft:geometry`
+    -   Released `uv_lock` parameter from experimental
+
 ## 1.21.90
 
 ### Components
