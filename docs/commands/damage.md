@@ -9,7 +9,7 @@ description: /damage command explained.
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 Introduced in Minecraft Release `1.18.10`, the /damage command deals precise damage to specified entities. With this change, the clunky methods like using `/effect` command to damage entities are rendered obsolete, making maps and other creations more powerful.
 

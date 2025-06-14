@@ -218,6 +218,11 @@ Damage all players facing generally south:
 | South West       | `[ry=90,rym=0]`               |
 | South East       | `[ry=0,rym=-90]`              |
 
+**Useful Articles Related to the Rotation Arguments:**
+
+1. **[Compass Display](/commands/compass-display.md)**
+2. **[Item Drop Detection](/commands/item-drop-detection.md)**
+
 ### Level
 
 Limits the selection of targets by experience levels. Only players can have EXP, so this filters out non-player targets.

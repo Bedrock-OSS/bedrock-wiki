@@ -28,13 +28,13 @@ For this system, you will require two droppers per custom recipe item you want t
 
 Example:
 <WikiImage
-    src="/assets/images/commands/custom_crafter/recipe.png"
-    alt="alternative text"
+    src="/assets/images/commands/custom-crafter/recipe.png"
+    alt="Custom Recipe"
     width="200"
     pixelated
 /> <WikiImage
-    src="/assets/images/commands/custom_crafter/recipe_output.png"
-    alt="alternative text"
+    src="/assets/images/commands/custom-crafter/recipe-output.png"
+    alt="Custom Recipe Output"
     width="200"
     pixelated
 />
@@ -51,7 +51,7 @@ To complete the setup, place down one final dropper where you want players to be
 ## If Recipe Matches Crafter: Clone Recipe Output to Crafter
 execute if blocks <recipe> <recipe> <crafter> masked run clone <recipe_output> <recipe_output> <crafter>
 ```
-![commandBlockChain1](/assets/images/commands/commandBlockChain/1.png)
+![One repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 **Definitions:**
 - `<crafter>` — input (x,y,z) coordinates for the dropper that will be used as the **crafter**.
@@ -59,15 +59,16 @@ execute if blocks <recipe> <recipe> <crafter> masked run clone <recipe_output> <
 - `<recipe_output>` — input (x,y,z) coordinates for the dropper which contains the **output** for your recipe.
 
 For convenience, you may download the .mcstructure sample shared by @TwigYT:
-<WikiImage
-    src="/assets/images/commands/customCrafterEnd.png"
-    alt="alternative text"
-    width=800
-/>
 
 <Button link="/assets/packs/structures/customCrafter/customCrafterExample.mcstructure" download>
     Download Sample MCSTRUCTURE
 </Button>
+
+<WikiImage
+    src="/assets/images/commands/custom-crafter/completed-setup.png"
+    alt="Completed Setup"
+    width=800
+/>
 
 > Note: After importing the structure using a structure block, you will still need to replace the values in the command blocks as defined above.
 
@@ -83,6 +84,6 @@ execute if blocks <recipe> <recipe> <crafter> masked positioned <crafter> run pl
 ## If Recipe Matches Crafter: Clone Recipe Output to Crafter
 execute if blocks <recipe> <recipe> <crafter> masked run clone <recipe_out> <recipe_output> <crafter>
 ```
-![commandBlockChain2](/assets/images/commands/commandBlockChain/2.png)
+![commandChain of Two Command Blocks](/assets/images/commands/command-block-chain/2.png)
 
 To take it a step further, you may also use [MBE](/commands/block-entities) or [Fox MBE](/commands/display-entities) to give the dropper the texture of a crafting table or a smithing table as an overlay.

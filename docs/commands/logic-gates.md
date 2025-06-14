@@ -11,7 +11,7 @@ description: Logic gates are devices that take one or more binary inputs and, as
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 Logic gates are devices that take one or more binary inputs and, as the name suggests, performs logical boolean operations to give a single binary output (either `true` or `false`).
 
@@ -21,7 +21,7 @@ They are what a computer uses to perform any function. These devices are very he
 
 **Chart:**
 
-![logicGatesTable](/assets/images/commands/logicGatesTable.jpg)
+![Logic Gates Table with Diagram](/assets/images/commands/logic-gates/table-with-diagram.jpg)
 
 **Converted to Commands:**
 

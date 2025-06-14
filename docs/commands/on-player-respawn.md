@@ -10,7 +10,7 @@ description: This system will run your desired commands on the event that a play
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system will run your desired commands on the event that a player respawns from death state.
 
@@ -20,11 +20,11 @@ This system will run your desired commands on the event that a player respawns f
 
 `/scoreboard objectives add wiki:respawn dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
+If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
-<CodeHeader>BP/functions/events/player/on_respawn.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/events/player/on_respawn.mcfunction</CodeHeader>
 
 ```yaml
 ## Your Commands Here (Example)
@@ -36,7 +36,7 @@ scoreboard players set @a wiki:respawn 1
 ### Currently not respawning
 scoreboard players set @e[type=player] wiki:respawn 0
 ```
-![Chain of 3 Command Blocks](/assets/images/commands/commandBlockChain/3.png)
+![Chain of 3 Command Blocks](/assets/images/commands/command-block-chain/3.png)
 
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.

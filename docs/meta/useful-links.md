@@ -122,7 +122,7 @@ These packs are published by the open-source community.
 
 -   [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon)
 -   [Enchantment Details](https://github.com/supercam19/EnchantmentDetails)
--   [Function Pack Templates](https://github.com/BedrockCommands/developer-packs)
+-   [Function Pack Templates](https://bedrockcommands.org/resources/)
 
 ## Scripting Resources
 

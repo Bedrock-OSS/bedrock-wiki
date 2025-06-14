@@ -12,7 +12,7 @@ description: Learn about functions in MCBE.
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 Functions are `.mcfunction` files which contain multiple lines of commands. They are run with the `/function` command in-game.
 
@@ -191,7 +191,8 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 <Spoiler title="Sample 🖼 pack_icon.png">
 
 Sample A:
-![pack_icon.png](/assets/images/commands/pack_icon.png)
+
+![pack_icon.png](/assets/images/commands/mcfunctions/pack_icon.png)
 
 Sample B:
 
@@ -237,7 +238,7 @@ The final file within a functions folder is the **`tick.json`** file. This speci
 
 ## Sample Function Pack
 
-<Card image="/assets/images/commands/BClogo.png" title="Download" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
+<Card image="/assets/images/commands/mcfunctions/bcc-logo.png" title="Download" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
 
 </Card>
 
@@ -249,6 +250,6 @@ Enabling the [Content Log](/guide/troubleshooting#content-log) in the creator se
 
 The list of errors will be generated every time you load a world or run `/reload` to reflect changes after editing files. The list can be viewed on-screen for a few seconds, as well as in the content log history in settings.
 
-![contentLogToggles](/assets/images/commands/contentLogToggles.png)
+![contentLogToggles](/assets/images/commands/mcfunctions/content-log-toggles.png)
 
-![contentLogHistory](/assets/images/commands/contentLogHistory.png)
+![contentLogHistory](/assets/images/commands/mcfunctions/content-log-history.png)

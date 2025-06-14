@@ -10,7 +10,7 @@ description: This system will run your desired commands on the event that a play
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system will run your desired commands on the event that a player dies.
 
@@ -20,11 +20,11 @@ _To be typed in Chat:_
 
 `/scoreboard objectives add wiki:alive dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
+If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
-<CodeHeader>BP/functions/events/player/on_death.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/events/player/on_death.mcfunction</CodeHeader>
 
 ```yaml
 ## Set Player States
@@ -40,7 +40,7 @@ execute as @a[scores={wiki:alive=0}] run say I died
 scoreboard players set @a[scores={wiki:alive=0}] wiki:alive 2
 ```
 
-![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
+![Chain of Four Command Blocks](/assets/images/commands/command-block-chain/4.png)
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
 
@@ -118,7 +118,7 @@ execute as @a[scores={wiki:q.is_dead=1}] at @s run summon armor_stand "Corpse" ~
 execute as @a[scores={wiki:q.is_dead=1..}] run say I died and haven't respawned yet..
 ```
 
-![commandBlockChain4](/assets/images/commands/commandBlockChain/4.png)
+![Chain of Four Command Blocks](/assets/images/commands/command-block-chain/4.png)
 
 **States:**
 

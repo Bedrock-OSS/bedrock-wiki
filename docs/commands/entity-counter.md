@@ -10,7 +10,7 @@ description: This system allows you to track the total number of players/entitie
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system allows you to track the total number of players/entities on your world and subsequently execute your desired commands based on the values obtained.
 
@@ -22,7 +22,7 @@ _To be typed in Chat:_
 
 `/scoreboard objectives add wiki:count dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load.](/commands/on-first-world-load)
+If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
@@ -45,7 +45,7 @@ execute if score .Players.Alive wiki:count matches 4.. run title @a actionbar Th
 execute if score .Creeper wiki:count matches ..3 run title @a actionbar There are less than 3 creeper on the world.
 ```
 
-![Chain of 5 Command Blocks](/assets/images/commands/commandBlockChain/5.png)
+![Chain of 5 Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 Here, we are tracking alive players and creeper as examples, but you can track any entity you like and as many as you need. You may also alter the score holder names to your preference. Example: '.Players.Alive' to just 'Players'.
 

@@ -11,7 +11,7 @@ description: Learn how to use block states in commands.
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 Block States, also known as Block Properties, define how blocks appear or behave, including attributes like direction, color, variant, or power state. These are extensively used in commands such as `/clone`, `/execute`, `/fill`, `/setblock`, and `/testforblock`.
 

@@ -12,7 +12,7 @@ description: Randomly relocate all selected targets among each other, ensuring n
 
 ## Introduction
 
-[Sourced by the Bedrock Commands Community (BCC) Discord](https://discord.gg/SYstTYx5G5)
+[Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 Multiplayer Position Rearrangement function, or more accurately Multiplayer Position Derangement function, created by @ZheaEvyline, allows you to randomly relocate all selected targets among each other, ensuring no target remains in its original position.
 
@@ -61,7 +61,7 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 **Example Visualization:**
 
-![Position of Five Players Being Deranged](/assets/images/commands/rearrange-positions/MPDVisualRep.gif)
+![Position of Five Players Being Deranged](/assets/images/commands/rearrange-positions/2d-visualisation.gif)
 
 ## Functions
 
@@ -159,7 +159,7 @@ tag @e remove wiki:pos.ignored
 
 Now, for our functions to actually work, we will need to add the following objectives on our world:
 
-<CodeHeader>BP/functions/scoreboard/objectives/add_all.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/scoreboard/objectives/add_all.mcfunction</CodeHeader>
 
 ```yaml
 scoreboard objectives add wiki:wiki:id dummy
@@ -170,7 +170,7 @@ scoreboard objectives add wiki:wiki:count dummy
 
 If you wish to add the objectives automatically as soon as you load the world, you may create the function file below:
 
-<CodeHeader>BP/functions/event/worlds/on_initialise.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/event/worlds/on_initialise.mcfunction</CodeHeader>
 
 ```yaml
 ## Initialisation
