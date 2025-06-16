@@ -42,13 +42,14 @@ It's important to remember that `runtime_identifier` will only parse the _hard-c
 Not every runtime id/effect is mentioned here. Try experimenting yourself to find new runtime id/effects and also consider adding them here.
 :::
 
-## Known runtime-identifier effects:
+## Known runtime-identifier effects
 
 -   All runtime ID change name of entity to one which runtime ID's entity it is using
 
 ### minecraft:area_effect_cloud
 
--   Breaks the entity.
+-   Disables collision with the world and other entities.
+-   Makes the entity inherit attributes from vanilla [AOE clouds](/entities/introduction-to-aec), vis. existing on a timer, applying potion effects, and emitting particles.
 
 ---
 
