@@ -524,7 +524,7 @@ An array of 3 integers (0-255) defining the `[R, G, B]` color of the block on a 
 ### Material Instances
 
 Configuration of your block's rendering, including textures and lighting.
-The `*` instance is required as it is the default instance for all cube faces.
+The `*` instance is the default instance for all cube faces.
 
 _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
 

@@ -205,7 +205,7 @@ The [material instances](/blocks/block-components#material-instances) should loo
 
 ```json
 "minecraft:material_instances": {
-    "*": {
+    "down": {
         "texture": "wiki:compass_block_down" // This texture appears in destruction particles
     },
     "up": {
