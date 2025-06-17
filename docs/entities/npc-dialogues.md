@@ -295,7 +295,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:teleport_menu",
@@ -309,7 +309,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
             "minecraft:display_name": {
                 "value": "Teleport Menu"
             },
-            "minecraft:custom_components": ["wiki:teleport_menu"]
+            "wiki:teleport_menu": {}
         }
     }
 }
@@ -320,7 +320,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 <CodeHeader>BP/scripts/teleportMenu.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 const ItemTeleportMenuComponent = {
     onUse({ source }) {
@@ -328,7 +328,7 @@ const ItemTeleportMenuComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
     itemComponentRegistry.registerCustomComponent("wiki:teleport_menu", ItemTeleportMenuComponent);
 });
 ```

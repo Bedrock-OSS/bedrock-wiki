@@ -1,6 +1,6 @@
 ---
-title: Applying Constant Effects
-description: This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
+title: Applying Effects
+description: This tutorial aims to show how to apply status effects to entities that are within a certain radius of your block.
 category: Tutorials
 tags:
     - easy
@@ -14,126 +14,84 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
-This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states).
+::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
+This tutorial assumes a basic understanding of blocks, including [block events](/blocks/block-events).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
-This tutorial aims to show how to apply status effects to entities as long as these entities stand on the block.
+This tutorial aims to show how to apply status effects to entities that are within a certain radius of your block.
 
-## Detecting Treaders
+## Block JSON
 
-### Block JSON
-
-We will need to add a couple things to our code, first let's start with a state that will hold `true` when stood on, and `false` otherwise:
-
-<CodeHeader>minecraft:block > description</CodeHeader>
-
-```json
-"states": {
-    "wiki:stood_on": [false, true]
-}
-```
-
-Now we need to register our custom components to hook onto the [`stepOn`](/blocks/block-events#step-on) and [`stepOff`](/blocks/block-events#step-off) events:
+To match the vanilla Beacon block, our custom block should apply effects every 4 seconds.
+This can be achieved by causing the block to "tick" every 80 ticks.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"minecraft:custom_components": [
-    "wiki:treader_detection"
-]
+"minecraft:tick": {
+    "interval_range": [80, 80], // The interval shouldn't be random, so we use the same value for the min and max.
+    "looping": true
+}
 ```
 
-### Custom Component Script
+Next, we need to register our custom component to hook onto the [tick](/blocks/block-events#step-on) event.
+This component should apply effects to entities within a specified area, so we're going to call it `wiki:radial_effects`.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"wiki:radial_effects": {
+    "radius": 64, // Apply all of the following "effects" to entities within this radius of blocks.
+    "effects": [
+        {
+            "name": "wither",
+            "duration": 600, // 30 seconds in ticks.
+            "amplifier": 1
+        },
+        {
+            "name": "slowness",
+            "duration": 600,
+            "amplifier": 2
+        }
+    ]
+}
+```
+
+## Custom Component Script
 
 <CodeHeader>BP/scripts/treader_detection.js</CodeHeader>
 
 ```js
-import { BlockPermutation, GameMode, Player, world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockTreaderDetectionComponent = {
-    onStepOn({ entity, block }) {
-        if (entity instanceof Player && entity.getGameMode() === GameMode.creative) return;
+const BlockRadialEffectsComponent = {
+    onTick({ block, dimension }, { params }) {
+        const { radius, effects } = params; // The value we have assigned to the component in the block JSON.
 
-        block.setPermutation(
-            BlockPermutation.resolve(block.typeId, {
-                "wiki:stood_on": true,
-            })
-        );
-    },
-    onStepOff({ entity, block }) {
-        if (entity instanceof Player && entity.getGameMode() === GameMode.creative) return;
+        // Gets all entities in the specified "radius" around the block.
+        const entities = dimension.getEntities({
+            location: block.center(),
+            maxDistance: radius,
+        });
 
-        block.setPermutation(
-            BlockPermutation.resolve(block.typeId, {
-                "wiki:stood_on": false,
-            })
-        );
-    },
-};
-
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent(
-        "wiki:treader_detection",
-        BlockTreaderDetectionComponent
-    );
-});
-```
-
-## Applying Effects to Treaders
-
-### Block JSON
-
-We also need the block to tick in order to apply the desired effect every tick. For this, we'll use the [permutations](/blocks/block-permutations) array so a custom component is only applied if the block is being stepped on:
-
-<CodeHeader>minecraft:block</CodeHeader>
-
-```json
-"permutations": [
-    {
-        "condition": "q.block_state('wiki:stood_on')",
-        "components": {
-            "minecraft:custom_components": ["wiki:treader_detection", "wiki:wither_treaders"],
-            "minecraft:tick": {
-                "interval_range": [1, 1],
-                "looping": true
+        for (const entity of entities) {
+            // Iterates over each object in the "effects" array.
+            for (const { name, duration, amplifier } of effects) {
+                entity.addEffect(name, duration, { amplifier });
             }
         }
-    }
-]
-```
-
-### Custom Component Script
-
-Now, let's add our event that will give the entity the wither effect:
-
-<CodeHeader>BP/scripts/wither_treaders.js</CodeHeader>
-
-```js
-import { Entity, GameMode, Player, world } from "@minecraft/server";
-
-/** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockWitherTreadersComponent = {
-    onTick(event) {
-        const entities = event.dimension.getEntitiesAtBlockLocation(event.block.above().location);
-
-        entities.forEach((entity) => {
-            entity.addEffect("minecraft:wither", 2, { amplifier: 2 });
-        });
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent(
-        "wiki:wither_treaders",
-        BlockWitherTreadersComponent
+        "wiki:radial_effects",
+        BlockRadialEffectsComponent
     );
 });
 ```
-
-And done! The code above will trigger the desired status effect as long as the entity is standing on a block.
 
 ## Example JSON
 
@@ -143,40 +101,41 @@ And done! The code above will trigger the desired status effect as long as the e
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:wither_block",
-            "states": {
-                "wiki:stood_on": [false, true]
+            "menu_category": {
+                "category": "items"
             }
         },
         "components": {
-            "minecraft:loot": "loot_tables/empty.json",
-            "minecraft:map_color": "#181818",
             "minecraft:geometry": "geometry.wither_block",
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wiki:wither_block"
                 }
             },
-            "minecraft:custom_components": ["wiki:treader_detection"]
-        },
-        "permutations": [
-            {
-                "condition": "q.block_state('wiki:stood_on')",
-                "components": {
-                    "minecraft:custom_components": [
-                        "wiki:treader_detection",
-                        "wiki:wither_treaders"
-                    ],
-                    "minecraft:tick": {
-                        "interval_range": [1, 1],
-                        "looping": true
+            "minecraft:tick": {
+                "interval_range": [80, 80],
+                "looping": true
+            },
+            "wiki:radial_effects": {
+                "radius": 64,
+                "effects": [
+                    {
+                        "name": "wither",
+                        "duration": 600,
+                        "amplifier": 1
+                    },
+                    {
+                        "name": "slowness",
+                        "duration": 600,
+                        "amplifier": 2
                     }
-                }
+                ]
             }
-        ]
+        }
     }
 }
 ```

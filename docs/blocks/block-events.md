@@ -22,8 +22,9 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION `1.21.70`
-Using the latest format version when creating custom blocks provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.70`.
+:::tip FORMAT VERSION `1.21.90`
+Using the latest format version when creating custom blocks provides access to fresh features and improvements.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.90`.
 :::
 
 ## Registering Custom Components
@@ -34,20 +35,23 @@ Within each custom component, event handler functions (such as [`beforeOnPlayerP
 
 _This example prevents the player from placing the block if they aren't in creative mode:_
 
-<CodeHeader>BP/scripts/creative_mode_only_component.js</CodeHeader>
+<CodeHeader>BP/scripts/creativeModeOnly.js</CodeHeader>
 
 ```js
-import { world, GameMode } from "@minecraft/server";
+import { system, GameMode } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockCreativeModeOnlyComponent = {
-    beforeOnPlayerPlace(event) {
-        const isInCreative = event.player?.getGameMode() === GameMode.creative;
-        if (!isInCreative) event.cancel = true;
+    beforeOnPlayerPlace({ player }) {
+        const gameMode = player?.getGameMode();
+
+        if (gameMode === GameMode.Creative) {
+            event.cancel = true;
+        }
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent(
         "wiki:creative_mode_only",
         BlockCreativeModeOnlyComponent
@@ -57,7 +61,7 @@ world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
 
 ## Applying Custom Components
 
-To bind a custom component to a custom block, simply list them in the [`minecraft:custom_components`](/blocks/block-components#custom-components) component in your block JSON.
+To bind a custom component to a block, simply list it in the `components` of your block JSON.
 
 Like any normal component, custom components can be added and removed based on the block's [permutation](/blocks/block-permutations).
 
@@ -65,7 +69,7 @@ Like any normal component, custom components can be added and removed based on t
 
 ```json
 "components": {
-    "minecraft:custom_components": ["wiki:creative_mode_only"]
+    "wiki:creative_mode_only": {}
 }
 ```
 
@@ -73,11 +77,7 @@ Like any normal component, custom components can be added and removed based on t
 
 ### Before Player Place
 
-:::danger
-This event is not triggered on Bedrock Dedicated Servers (including Realms), or when placed by a custom [block item](/blocks/blocks-as-items).
-:::
-
-Runs before a player places the block.
+Runs before a player places the block, preventing the client-side placement of the block.
 
 <CodeHeader>Custom Component</CodeHeader>
 
@@ -135,18 +135,18 @@ onPlace(event) {
 }
 ```
 
-### Player Destroy
+### Player Break
 
-Runs when the player destroys the block.
+Runs when the player breaks the block.
 
 <CodeHeader>Custom Component</CodeHeader>
 
 ```js
-onPlayerDestroy(event) {
-    event.block // Block impacted by this event. This is the block after it has been destroyed.
-    event.destroyedBlockPermutation // Permutation of the block before it was destroyed.
+onPlayerBreak(event) {
+    event.block // Block impacted by this event. This is the block after it has been broken.
+    event.brokenBlockPermutation // Permutation of the block before it was broken.
     event.dimension // Dimension that contains the block.
-    event.player // The player that destroyed the block. May be undefined.
+    event.player // The player that broke the block. May be undefined.
 }
 ```
 

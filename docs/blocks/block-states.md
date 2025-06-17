@@ -9,7 +9,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.70`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
@@ -21,13 +21,13 @@ Valid state values can be defined as a boolean, integer or string array - or as 
 
 Each state may have up to 16 valid values defined. For integer range states, this means that the `max` value cannot be more than 15 higher than the `min` value.
 
-_Released from experiment `Holiday Creator Features` for format versions 1.19.70 and higher._
+_Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or later._
 
 <CodeHeader>BP/blocks/custom_block.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",

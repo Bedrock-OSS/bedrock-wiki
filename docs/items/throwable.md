@@ -29,7 +29,7 @@ First, you'll want to make the actual item:
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:throwable_item"

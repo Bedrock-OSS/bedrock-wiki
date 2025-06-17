@@ -112,7 +112,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:align"
@@ -131,7 +131,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 2
             },
-            "minecraft:custom_components": ["wiki:align_entity"]
+            "wiki:align_entity": {}
         }
     }
 }
@@ -140,7 +140,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 For our custom component script, we'll utilize the `beforeOnPlayerPlace` event. We use this event to prevent the block from being placed and just summon our entity instead.
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockAlignEntityComponent = {
@@ -152,7 +152,7 @@ const BlockAlignEntityComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent("wiki:align_entity", BlockAlignEntityComponent);
 });
 ```

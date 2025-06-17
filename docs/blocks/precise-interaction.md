@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
@@ -28,13 +28,9 @@ This is where precise interaction comes in! The following methods of precise int
 
 ## How it Works
 
-The provided methods of precise interaction use `faceLocation`, a property of the [player interact event](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockcomponentplayerinteractevent?view=minecraft-bedrock-experimental).
+The provided methods of precise interaction use `faceLocation`, a property of the [player interact event](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockcomponentplayerinteractevent).
 
 This value tells us where on the block's `minecraft:selection_box` was selected/hit, which is what precise interaction relies on.
-
-:::danger [MCPE-216825](https://bugs.mojang.com/browse/MCPE-216825)
-The `faceLocation` property is _supposed_ to be relative to the bottom north-west corner of the interacted block, however it is currently relative to the world origin, meaning we will have to perform an additional calculation to make it relative. When this issue is resolved, this calculation will no longer be needed.
-:::
 
 ## FaceSelectionPlains Class
 
@@ -212,18 +208,11 @@ This could be used in a [custom component](/blocks/block-events) to get the sele
 ```js
 const BlockQuadrantInteractionComponent = {
     onPlayerInteract({ block, face, faceLocation }) {
-        // Work around the faceLocation bug - get the location relative to the block
-        const relativeFaceLocation = {
-            x: faceLocation.x - block.location.x,
-            y: faceLocation.y - block.location.y,
-            z: faceLocation.z - block.location.z,
-        };
-
         // Returns the selected area's index (0, 1, 2 or 3), or name if provided (e.g. "top_left").
         // If no plain was selected, `undefined` is retured.
         const selectedQuadrant = quadrants.getSelected({
             face,
-            faceLocation: relativeFaceLocation,
+            faceLocation,
         });
 
         world.sendMessage(`Quadrant ${selectedQuadrant} was selected!`);
@@ -389,10 +378,10 @@ const verticalHalves = new SelectionBoxes(
 );
 ```
 
-This could be used with an [`itemUseOn` after event](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/itemuseonafterevent) to get the selected box:
+This could be used with a [`playerInteractWithBlock` after event](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/playerinteractwithblockafterevent) to get the selected box:
 
 ```js
-world.afterEvents.itemUseOn.subscribe((e) => {
+world.afterEvents.playerInteractWithBlock.subscribe((e) => {
     // Do nothing if the targeted block is not "wiki:example_block"
     if (e.block.typeId !== "wiki:example_block") return;
 
@@ -421,7 +410,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -444,7 +433,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
             }
         },
         "components": {
-            "minecraft:custom_components": ["wiki:pigeonholes_storage"],
+            "wiki:pigeonholes_storage": {},
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 1.5
             },
@@ -524,7 +513,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 <CodeHeader>BP/scripts/blocks/pigeonholes.js</CodeHeader>
 
 ```js
-import { world, EquipmentSlot, GameMode, ItemStack } from "@minecraft/server";
+import { system, EquipmentSlot, GameMode, ItemStack } from "@minecraft/server";
 import FaceSelectionPlains from "../utilities/face_selection_plains"; // Import the FaceSelectionPlains class to use it
 
 // Slot bounds
@@ -554,13 +543,7 @@ function handleInteract({ block, face, faceLocation, dimension, player }) {
     const equippable = player.getComponent("minecraft:equippable");
     if (!equippable) return;
 
-    const relativeFaceLocation = {
-        x: faceLocation.x - block.location.x,
-        y: faceLocation.y - block.location.y,
-        z: faceLocation.z - block.location.z,
-    };
-
-    const selectedSlot = slots.getSelected({ face, faceLocation: relativeFaceLocation });
+    const selectedSlot = slots.getSelected({ face, faceLocation });
     if (selectedSlot === undefined) return;
 
     const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
@@ -604,10 +587,10 @@ function releasePaper({ block, destroyedBlockPermutation, dimension }) {
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockPigeonholesStorageComponent = {
     onPlayerInteract: handleInteract,
-    onPlayerDestroy: releasePaper,
+    onPlayerBreak: releasePaper,
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent(
         "wiki:pigeonholes_storage",
         BlockPigeonholesStorageComponent
@@ -635,7 +618,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",
@@ -653,7 +636,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
             }
         },
         "components": {
-            "minecraft:custom_components": ["wiki:double_flower_pot"],
+            "wiki:double_flower_pot": {},
             "minecraft:collision_box": {
                 "origin": [-7, 0, -3],
                 "size": [14, 6, 6]
@@ -724,7 +707,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 <CodeHeader>BP/scripts/blocks/double_flower_pot.js</CodeHeader>
 
 ```js
-import { world, ItemStack } from "@minecraft/server";
+import { system, ItemStack, EquipmentSlot, GameMode } from "@minecraft/server";
 import SelectionBoxes from "../utilities/selection_boxes"; // Import the SelectionBoxes class to use it
 
 // Support orientation along both horizontal axes
@@ -741,7 +724,7 @@ const pots = {
 
 // The state value and sound associated with each plant
 const plants = {
-    "minecraft:yellow_flower": {
+    "minecraft:dandelion": {
         value: "dandelion",
         sound: "dig.grass",
     },
@@ -751,9 +734,15 @@ const plants = {
     },
 };
 
+const getAxis = (direction) => (direction === "west" || direction === "east" ? "z" : "x");
+
 // Get the selected pot for the appropriate axis
-const getSelectedPot = (e) =>
-    pots[e.block.permutation.getState("wiki:axis")].getSelected(e.faceLocation);
+function getSelectedPot(block, faceLocation) {
+    const direction = block.permutation.getState("minecraft:cardinal_direction");
+    const axis = getAxis(direction);
+
+    return pots[axis].getSelected(faceLocation);
+}
 
 const isPotOccupied = (block, pot) =>
     block.permutation.getState(`wiki:pot_${pot}_plant`) !== "none";
@@ -761,42 +750,55 @@ const isPotOccupied = (block, pot) =>
 const setPotPlant = (block, pot, plant) =>
     block.setPermutation(block.permutation.withState(`wiki:pot_${pot}_plant`, plant));
 
-// Our flower pots even have sound effects!
-const playPlantSound = (dimension, location, sound) =>
-    dimension.runCommand(`playsound ${sound} @a ${location.x} ${location.y} ${location.z} 0.5`);
+/** @type {import("@minecraft/server").BlockCustomComponent} */
+const BlockDoubleFlowerPotComponent = {
+    onPlayerInteract({ block, dimension, faceLocation, player }) {
+        if (!player) return;
 
-// If a pot is not selected (the inbetween area is targeted) or is already filled, the item use is cancelled.
-world.beforeEvents.itemUseOn.subscribe((e) => {
-    if (e.block.typeId !== "wiki:double_flower_pot" || !plants[e.itemStack.typeId]) return;
+        const equippable = player.getComponent("minecraft:equippable");
+        if (!equippable) return;
 
-    const selectedPot = getSelectedPot(e);
+        const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
 
-    if (selectedPot === undefined || isPotOccupied(e.block, selectedPot)) e.cancel = true;
-});
+        const selectedPot = getSelectedPot(block, faceLocation);
+        if (selectedPot === undefined) return;
 
-// -------------------------------
-//    Plant in the selected pot
-// -------------------------------
-world.afterEvents.itemUseOn.subscribe((e) => {
-    if (
-        e.block.typeId !== "wiki:double_flower_pot" ||
-        !plants[e.itemStack.typeId] ||
-        e.source.isSneaking
-    )
-        return;
+        if (mainhand.hasItem() && !isPotOccupied(block, selectedPot)) {
+            const plant = plants[mainhand.typeId];
+            if (!plant) return;
 
-    const selectedPot = getSelectedPot(e);
-    const plant = plants[e.itemStack.typeId];
+            if (player.getGameMode() !== GameMode.creative) {
+                if (mainhand.amount > 1) mainhand.amount--;
+                else mainhand.setItem(undefined);
+            }
 
-    setPotPlant(e.block, selectedPot, plant.value);
-    playPlantSound(e.block.dimension, e.block.location, plant.sound);
+            setPotPlant(block, selectedPot, plant.value);
+            dimension.playSound(plant.sound, block.center(), { volume: 0.5 });
+        } else if (!mainhand.hasItem() && isPotOccupied(block, selectedPot)) {
+            const plantValue = block.permutation.getState(`wiki:pot_${selectedPot}_plant`);
+            const plantId = Object.keys(plants).find((key) => plants[key].value === plantValue);
+
+            setPotPlant(block, selectedPot, "none");
+            dimension.playSound("random.pop", block.center());
+
+            mainhand.setItem(new ItemStack(plantId));
+        }
+    },
+    onPlayerBreak: releasePlants,
+};
+
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
+    blockComponentRegistry.registerCustomComponent(
+        "wiki:double_flower_pot",
+        BlockDoubleFlowerPotComponent
+    );
 });
 
 // -------------------------------
 //  Release plants on destruction
 // -------------------------------
-function releasePlants(e) {
-    const states = (e.brokenBlockPermutation ?? e.explodedBlockPermutation).getAllStates();
+function releasePlants({ block, brokenBlockPermutation, dimension }) {
+    const states = brokenBlockPermutation.getAllStates();
 
     // Array of plant state values e.g. ["cactus", "dandelion"]
     const storedPlants = Object.entries(states)
@@ -805,28 +807,13 @@ function releasePlants(e) {
 
     if (storedPlants.length === 0) return;
 
-    // Centre loot in block
-    const lootLocation = {
-        x: e.block.location.x + 0.5,
-        y: e.block.location.y + 0.5,
-        z: e.block.location.z + 0.5,
-    };
-
     // Create an item entity for every potted plant
     for (const plant of storedPlants) {
         const plantId = Object.keys(plants).find((key) => plants[key].value === plant);
 
-        e.dimension.spawnItem(new ItemStack(plantId), lootLocation);
-        playPlantSound(e.dimension, e.block.location, plants[plantId].sound);
+        dimension.spawnItem(new ItemStack(plantId), block.center());
     }
 }
-
-world.afterEvents.playerBreakBlock.subscribe((e) => {
-    if (e.brokenBlockPermutation.type.id === "wiki:double_flower_pot") releasePlants(e);
-});
-world.afterEvents.blockExplode.subscribe((e) => {
-    if (e.explodedBlockPermutation.type.id === "wiki:double_flower_pot") releasePlants(e);
-});
 ```
 
 </Spoiler>
@@ -851,7 +838,7 @@ Don't forget to import your scripts into your pack's entry file!
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.15.0"
+            "version": "2.0.0"
         }
     ]
 }
@@ -867,10 +854,11 @@ import "./blocks/double_flower_pot";
 
 ## Download Example Pack
 
-Template pack made according to this tutorial, adding the Pigeonholes and Double Flower Pot blocks into the `Items` tab.
+Template pack made according to this tutorial, adding the Pigeonholes and Double Flower Pot blocks into the "Items" tab.
 
 <Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_interaction.mcaddon">
     Download MCADDON
 </Button>
 
-If you require extra assistance with precise interaction, feel free to ask in the [Bedrock Add-Ons Discord](/discord)! Remember to include a link to this page in your question, as the classes provided here are not built into Minecraft.
+If you require extra assistance with precise interaction, feel free to ask in the [Bedrock Add-Ons Discord](/discord)!
+Remember to include a link to this page in your question, as the classes provided here are not built into Minecraft.

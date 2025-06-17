@@ -9,7 +9,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.70`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
 Before you learn about block traits, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
@@ -23,7 +23,7 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_slab",
@@ -57,7 +57,7 @@ q.block_state('minecraft:vertical_half')
 
 Contains information about the player's rotation when the block was placed.
 
-_Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
+_Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
 
 #### Provided States
 
@@ -83,7 +83,7 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.20.2
 
 Contains information about where the player placed the block.
 
-_Released from experiment `Upcoming Creator Features` for format versions 1.20.20 and higher._
+_Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
 
 #### Provided States
 

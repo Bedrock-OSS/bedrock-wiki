@@ -10,8 +10,8 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION `1.21.70`
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.70`.
+:::tip FORMAT VERSION `1.21.90`
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.90`.
 :::
 
 ## Registering Custom Components

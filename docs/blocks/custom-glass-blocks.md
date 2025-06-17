@@ -13,12 +13,9 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION `1.21.70`
+:::tip FORMAT VERSION `1.21.90`
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
-:::
-:::warning EXPERIMENTAL
-Block culling rule conditions are experimental and require Upcoming Creator Features to be enabled.
 :::
 
 Making glass blocks may seem like a simple task, however when you first try your block may appear opaque.
@@ -78,7 +75,7 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glass",

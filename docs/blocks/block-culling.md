@@ -1,6 +1,6 @@
 ---
 title: Block Culling
-description: Block culling rules benefit performance, allowing you to remove faces of a blocks model based on the surrounding full, opaque blocks.
+description: Block culling rules allow you to remove parts of a model based on the surrounding blocks.
 category: Visuals
 tags:
     - intermediate
@@ -16,15 +16,15 @@ Before you start, make sure you've [created a model](/blocks/block-models) for y
 
 ## Applying Culling Rules
 
-Block culling rules allow you to remove faces of a block's model based on the surrounding full, opaque blocks. This can help to improve the game's performance as resources aren't wasted on unnecessarily rendering hidden parts of your block.
+Block culling rules allow you to remove parts of a model based on the surrounding blocks. This can help to improve the game's performance as resources aren't wasted on unnecessarily rendering hidden parts of your block.
 
-Culling rules are added in your resource pack's "block_culling" folder and appear in the format shown below:
+Culling rules are added in your resource pack's `block_culling` folder and appear in the format shown below:
 
 <CodeHeader>RP/block_culling/lamp.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.80",
     "minecraft:block_culling_rules": {
         "description": {
             "identifier": "wiki:culling.lamp" // Identifier to be referenced in block JSON geometry component.
@@ -78,11 +78,6 @@ This type of rule should be used when you want to hide specific faces of cubes t
 ```
 
 ## Culling Conditions
-
-:::warning EXPERIMENTAL 1.21.80
-Block culling rule conditions are experimental and require Upcoming Creator Features to be enabled.
-They will be available outside of experimental gameplay in versions 1.21.90 and higher.
-:::
 
 Culling rules will cull against full, opaque faces of adjacent blocks by default.
 However, they can also cull against other types of blocks based on the rule's `condition` parameter.

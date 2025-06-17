@@ -12,7 +12,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -120,7 +120,7 @@ To set the state which determines the block's direction, we will use the `minecr
     // Block traits are defined here
     "traits": {
         "minecraft:placement_direction": {
-            "enabled_states": ["minecraft:facing_direction"], // Can be used in queries e.g. `q.block_state('minecraft:facing_direction') == 'north'`
+            "enabled_states": ["minecraft:facing_direction"] // Can be used in queries e.g. `q.block_state('minecraft:facing_direction') == 'north'`
         }
     }
 }
@@ -195,7 +195,7 @@ To set the state which determines the block's attachment, we will use the `minec
     // Block traits are defined here
     "traits": {
         "minecraft:placement_position": {
-            "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+            "enabled_states": ["minecraft:block_face"] // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
         }
     }
 }
@@ -274,7 +274,7 @@ The state contains more values than we need for log rotation, so some permutatio
     // Block traits are defined here
     "traits": {
         "minecraft:placement_position": {
-            "enabled_states": ["minecraft:block_face"], // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
+            "enabled_states": ["minecraft:block_face"] // Can be used in queries e.g. `q.block_state('minecraft:block_face') == 'north'`
         }
     }
 }
