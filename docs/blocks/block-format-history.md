@@ -29,6 +29,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:geometry`
     -   Released `culling_layer` parameter from experimental
+-   Updated `minecraft:material_instances`
+    -   Updated the `*` instance to be optional.
 
 <Label color="green">Versioned</Label>
 
