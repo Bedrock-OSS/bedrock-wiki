@@ -33,10 +33,20 @@ Note that any files directly in the `structures` folder are given the `mystructu
 
 In this case, the file in the `mystructure` folder is the one that "wins," resulting in the file directly in the `structures` folder being ignored.
 
+### NBT File and MC Structure difference
+[NBT files](https://minecraft.wiki/w/NBT_format), as adapted by Java and Bedrock's .mcstructure files, couldn't be more different. But even with all these differences, they have something in common: they're stored in NBT format and use index arrays and palettes. Here are a few main differences:
+| MC Structure vs .NBT Structure                             |  BE Structure File | JE Structure File |
+|------------------------------------------------------------|--------------------|-------------------|
+| File Format                                                | `.mcstructure`     | `.nbt`            |
+| Applied Compression Algorithm                              | None               | GZip Compression  |
+| Endianness                                                 | Little-Endian      | Big Endian        |
+| Root Is Property Or Value (Whether NBT starts as property) | NoName Property    | NoName Property   |
+| `.mcstructure` Compatible                                  | Yes                | No                |
+| `.nbt` Compatible                                          | No                 | Yes               |
+| Structure Compact Size (Lower better)                      | Winner             | -                 |
+| File Size (Lower better)                                   | -                  | Winner (GZip)     |
+
 ### File Format
-
-`mcstructure` files are uncompressed [NBT files](https://minecraft.wiki/w/NBT_format). Like all Bedrock Edition NBT files, they are stored in little-endian format. The tag structure is as follows:
-
 > ![Integer][int] `format_version`: Currently always set to `1`.
 >
 > ![List][list] `size`: List of three integers describing the size of the structure's bounds.
