@@ -9,12 +9,11 @@ mentions:
     - QuazChick
 ---
 
-## Introduction
-
-Blocks have a limit of 16 valid values per state that cannot be exceeded. This guide will explain how to avoid reaching the limit.
+Blocks have a limit of 16 valid values per state that cannot be exceeded.
+This guide will explain how to avoid reaching the limit.
 
 :::tip
-This tutorial does not show you how to have more than 16 states values, however using this method will simulate that!
+This tutorial does not show you how to have more than 16 values for a single state, however using this method will simulate that!
 :::
 
 ## How It Works
@@ -43,6 +42,10 @@ And then;
 
 Using this method, you achieve the same results with just 15 values. The more values available for combinations, the higher your state limit is.
 
+:::tip
+You can use more than 2 values in order to have more possible combinations.
+:::
+
 ## How It Looks
 
 Using the example above as reference, your states would look like this:
@@ -58,18 +61,14 @@ Using the example above as reference, your states would look like this:
 
 And for your conditions, like this:
 
-```json
-"condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 1"
+<CodeHeader>Permutation Condition</CodeHeader>
+
+```molang
+q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 1
 ```
 
-```json
-"condition": "q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 2"
+<CodeHeader>Permutation Condition</CodeHeader>
+
+```molang
+q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 2
 ```
-
-## What You Have Learned
-
-You have learned how to use less than 64 states and do more, combining states to have better possibilities.
-
-:::tip
-You can use more than 2 values in order to have more possible combinations.
-:::

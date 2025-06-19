@@ -18,10 +18,6 @@ In order to apply other components, such as a 2D icon for your block, you'll nee
 
 ## Replacing Block Items
 
-:::danger BEFORE PLAYER PLACE
-Replaced block items do not trigger the [`beforeOnPlayerPlace`](/blocks/block-events#before-player-place) event hook.
-:::
-
 In order to replace a block item, you will need to create a new item JSON file that has the same identifier as the block.
 
 Your new item will also need the [block placer](/items/item-components#block-placer) component which will allow the item to place the block.
@@ -35,7 +31,7 @@ One example of a situation where replacing the block item is necessary is with f
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:daffodil"
@@ -57,7 +53,7 @@ One example of a situation where replacing the block item is necessary is with f
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:daffodil", // Same as the block's ID

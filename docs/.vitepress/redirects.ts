@@ -7,6 +7,8 @@ export default {
   "/blocks/blocks-stable": "/blocks/blocks-intro",
   "/blocks/custom-trapdoor": "/blocks/custom-trapdoors",
 
+  "/commands/nbt-commands": "/commands/giving-nbt-items",
+
   "/concepts/animation-controllers": "/animation-controllers/animation-controllers-intro",
   "/concepts/biomes": "/world-generation/biomes",
   "/concepts/blocks": "/blocks/blocks-intro",
@@ -44,7 +46,7 @@ export default {
   "/knowledge/addon-programming": "/meta/addon-programming",
   "/knowledge/bedrock-modeling": "/visuals/bedrock-modeling",
   "/knowledge/entity-movement": "/entities/entity-movement",
-  "/knowledge/giving-nbt-items": "/commands/giving-nbt-items",
+  "/knowledge/nbt_commands": "/commands/giving-nbt-items",
   "/knowledge/style-guide": "/meta/style-guide",
   "/knowledge/useful-links": "/meta/useful-links",
   "/knowledge/using-schemas": "/meta/using-schemas",

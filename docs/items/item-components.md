@@ -8,8 +8,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.70`
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.70`.
+:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.90`.
 :::
 
 ## Applying Components
@@ -20,7 +20,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -154,22 +154,6 @@ Type: Object
     "category": "attack",
     "duration": 0.2
 }
-```
-
-### Custom Components
-
-Custom components are a new way of connecting the configuration of Blocks and Items in JSON to the power of scripting in a very direct and targeted manner. This new concept allows for composability and reusability of script functionality across blocks and items, while also ensuring that the script only runs specifically for that specific block and item.
-
-Added in `1.21.10.23`. Requires `format_version: "1.21.10"` or higher.
-
-Type: Array
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:custom_components": [
-    "wiki:custom_components"
-]
 ```
 
 ### Damage
@@ -387,26 +371,28 @@ Type: Object
     -   Required Field
     -   Value is `value % 256`
 
-#### Slot
+#### Enchantable Slots
 
--   armor_feet
--   armor_torso
--   armor_head
--   armor_legs
--   axe
--   bow
--   cosmetic_head
--   crossbow
--   elytra
--   fishing_rod
--   flintsteel
--   hoe
--   pickaxe
--   shears
--   shield
--   shovel
--   sword
--   all
+| Slot Name       |
+| --------------- |
+| `armor_feet`    |
+| `armor_torso`   |
+| `armor_head`    |
+| `armor_legs`    |
+| `axe`           |
+| `bow`           |
+| `cosmetic_head` |
+| `crossbow`      |
+| `elytra`        |
+| `fishing_rod`   |
+| `flintsteel`    |
+| `hoe`           |
+| `pickaxe`       |
+| `shears`        |
+| `shield`        |
+| `shovel`        |
+| `sword`         |
+| `all`           |
 
 #### Enchantability Value
 
@@ -952,18 +938,20 @@ Type: String
 "minecraft:use_animation": "eat"
 ```
 
-#### Known Animations
+#### Use Animations
 
--   eat
--   drink
--   bow
--   block
--   camera
--   crossbow
--   none
--   brush
--   spear
--   spyglass
+| Animation Name |
+| -------------- |
+| `eat`          |
+| `drink`        |
+| `bow`          |
+| `block`        |
+| `camera`       |
+| `crossbow`     |
+| `none`         |
+| `brush`        |
+| `spear`        |
+| `spyglass`     |
 
 ### Use Modifiers
 
@@ -993,24 +981,26 @@ Determines where the item can be worn. If any non-hand slot is chosen, the max s
 
 Type: Object
 
--   `protection`: Integer
 -   `slot`: String
+-   `protection`: Integer
+-   `hides_player_location`: Boolean
+    -   Determines whether a player wearing the item will be hidden from the Locator Bar and Locator Maps.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
 "minecraft:wearable": {
-    "protection": 10,
-    "slot": "slot.armor.chest"
+    "slot": "slot.armor.chest",
+    "protection": 10
 }
 ```
 
-#### Slots
+#### Wearable Slots
 
-| Slot Name           |
-| ------------------- |
-| slot.weapon.offhand |
-| slot.armor.head     |
-| slot.armor.chest    |
-| slot.armor.legs     |
-| slot.armor.feet     |
+| Slot Name             |
+| --------------------- |
+| `slot.weapon.offhand` |
+| `slot.armor.head`     |
+| `slot.armor.chest`    |
+| `slot.armor.legs`     |
+| `slot.armor.feet`     |

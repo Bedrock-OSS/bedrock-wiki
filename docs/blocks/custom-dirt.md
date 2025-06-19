@@ -2,6 +2,7 @@
 title: Custom Dirt
 category: Vanilla Re-Creations
 tags:
+    - outdated
     - experimental
     - easy
 mentions:
@@ -12,6 +13,11 @@ mentions:
     - SmokeyStack
 hidden: true
 ---
+
+:::danger OUTDATED
+This page uses creator features that are no longer available.
+Therefore, some content included in this page will not function.
+:::
 
 :::tip FORMAT & MIN ENGINE VERSION `1.21.40`
 This tutorial assumes a good understanding of blocks.

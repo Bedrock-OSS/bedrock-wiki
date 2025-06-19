@@ -1,6 +1,6 @@
 ---
 title: Precise Rotation
-description: This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs), providing examples of a shell block with this rotation type.
+description: This tutorial guides you through making a block with sub-cardinal rotation (e.g. creeper heads and signs).
 category: Tutorials
 tags:
     - expert
@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.70`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -59,7 +59,7 @@ The following model for a "shell" block can be used as a reference:
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:geometry": [
         {
             "description": {
@@ -187,7 +187,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:shell",
@@ -262,7 +262,7 @@ Now, in our `shell.js` file, we need to import the `world` object from [`@minecr
 <CodeHeader>BP/scripts/shell.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 ```
 
 ## Rotation Calculation
@@ -319,7 +319,7 @@ const BlockShellRotationComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent(
         "wiki:shell_rotation",
         BlockShellRotationComponent
@@ -334,7 +334,7 @@ Now you can apply this custom component to your block!
 ```json
 "components": {
     ...
-    "minecraft:custom_components": ["wiki:shell_rotation"]
+    "wiki:shell_rotation": {}
 }
 ```
 
@@ -348,24 +348,24 @@ Insert the following permutations into your block JSON (in the presented order):
 
 ```json
 "permutations": [
-  {
-    "condition": "q.block_state('wiki:rotation') >= 4 || q.block_state('minecraft:block_face') == 'east'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, -90, 0] }
+    {
+        "condition": "q.block_state('wiki:rotation') >= 4 || q.block_state('minecraft:block_face') == 'east'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, -90, 0] }
+        }
+    },
+    {
+        "condition": "q.block_state('wiki:rotation') >= 8 || q.block_state('minecraft:block_face') == 'south'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 180, 0] }
+        }
+    },
+    {
+        "condition": "q.block_state('wiki:rotation') >= 12 || q.block_state('minecraft:block_face') == 'west'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 90, 0] }
+        }
     }
-  },
-  {
-    "condition": "q.block_state('wiki:rotation') >= 8 || q.block_state('minecraft:block_face') == 'south'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 180, 0] }
-    }
-  },
-  {
-    "condition": "q.block_state('wiki:rotation') >= 12 || q.block_state('minecraft:block_face') == 'west'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 90, 0] }
-    }
-  }
 ]
 ```
 
@@ -423,7 +423,7 @@ Your block JSON and script files after the above steps should look similar to th
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:shell",
@@ -472,7 +472,7 @@ Your block JSON and script files after the above steps should look similar to th
                     }
                 ]
             },
-            "minecraft:custom_components": ["wiki:shell_rotation"]
+            "wiki:shell_rotation": {}
         },
         "permutations": [
             {
@@ -518,7 +518,7 @@ Your block JSON and script files after the above steps should look similar to th
 <CodeHeader>BP/scripts/shell.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 /** @param {number} playerYRotation */
 function getPreciseRotation(playerYRotation) {
@@ -544,7 +544,7 @@ const BlockShellRotationComponent = {
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
     blockComponentRegistry.registerCustomComponent(
         "wiki:shell_rotation",
         BlockShellRotationComponent
@@ -568,7 +568,7 @@ What you have created:
 
 ## Download Example Pack
 
-Template pack made according to this tutorial, adding a "shell" block into the `Nature` tab.
+Template pack made according to this tutorial, adding a "shell" block into the "Nature" tab.
 
 <Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon">
     Download MCADDON

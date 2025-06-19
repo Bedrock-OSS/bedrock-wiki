@@ -14,7 +14,8 @@ mentions:
 This page requires you to be comfortable with basic JavaScript and requires knowledge of how modern [block events](/blocks/block-events) work.
 :::
 
-Struggling to upgrade your blocks' JSON events to [custom components](/blocks/block-events#registering-custom-components)? Don't worry! This page will help you to understand what the deprecated JSON event responses look like implemented using the Script API.
+Struggling to upgrade your blocks' JSON events to [custom components](/blocks/block-events#registering-custom-components)?
+Don't worry! This page will help you to understand what the deprecated JSON event responses look like implemented using the Script API.
 
 ## Add Mob Effect
 
@@ -65,7 +66,7 @@ onPlayerInteract({ player }) {
     if (!mainhand.hasItem()) return;
 
     // Apply durability damage when not in creative mode
-    if (player.getGameMode() === GameMode.creative) return;
+    if (player.getGameMode() === GameMode.Creative) return;
 
     const itemStack = mainhand.getItem(); // Allows us to get item components
 
@@ -111,7 +112,7 @@ onPlayerInteract({ player }) {
     const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
     if (!mainhand.hasItem()) return;
 
-    if (player.getGameMode() !== GameMode.creative) {
+    if (player.getGameMode() !== GameMode.Creative) {
         if (mainhand.amount > 1) {
             mainhand.amount--; // Remove one item from the stack
         } else {

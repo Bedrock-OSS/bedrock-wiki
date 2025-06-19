@@ -12,7 +12,9 @@ mentions:
     - SmokeyStack
 ---
 
-Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models. This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net). You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
+Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models.
+This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net).
+You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
 
 **NOTE:** Custom block models must be within the [model size limits](/blocks/block-components#geometry).
 
@@ -27,36 +29,43 @@ Now you can give your model an identifier! Your file name can be decided here, o
 The UV mode and texture size should remain unchanged.
 
 :::danger NAMESPACES
-Model identifiers are **not namespaced and cannot contain colons**. Colons were previously used for model inheritance and are invalid in modern geometry formats.
+Model identifiers are **not namespaced and cannot contain colons**.
+Colons were previously used for model inheritance and are invalid in modern geometry formats.
 :::
 
 ![](/assets/images/blocks/block-models/project_settings.png)
 
 ## Adding Cubes
 
-Despite not necessarily being perfect cube shapes, elements in your model are called **cubes**. All cubes must be contained within **bones**, which act as groups.
+Despite not necessarily being perfect cube shapes, elements in your model are called **cubes**.
+All cubes must be contained within **bones**, which act as groups.
 
-First, let's create a root bone for our model from the outliner by clicking on `Add Group`. Bones can be renamed by pressing `F2`.
+First, let's create a root bone for our model from the outliner by clicking on `Add Group`.
+Bones can be renamed by pressing `F2`.
 
 ![](/assets/images/blocks/block-models/root_bone.png)
 
-The "paper bag" model will need two cubes: one for the handle, and one for the main bag. These can be added by selecting your root bone and clicking `Add Cube`.
+The "paper bag" model will need two cubes: one for the handle, and one for the main bag.
+These can be added by selecting your root bone and clicking `Add Cube`.
 
 <WikiImage src="/assets/images/blocks/block-models/new_cube.png" alt width="600" class="my-4" />
 
-Cubes can be moved, resized and rotated from the top toolbar. Below are the two cubes my "paper_bag" model will use.
+Cubes can be moved, resized and rotated from the top toolbar.
+Below are the two cubes my "paper_bag" model will use.
 
 <WikiImage src="/assets/images/blocks/block-models/paper_bag_cubes.png" alt="" width="300" />
 
 ## Removing Faces
 
-Some of the faces of our cubes might not need to be visible. In my example, the top face of the paper_bag should be removed so that you can see inside.
+Some of the faces of our cubes might not need to be visible.
+In my example, the top face of the paper_bag should be removed so that you can see inside.
 
 To remove a face, click on it in the preview and remove its UV.
 
 <WikiImage src="/assets/images/blocks/block-models/paper_bag_top_removed.png" alt="" width="600" />
 
-Additionally, only the north and south faces of the handle should be visible. You can select multiple faces by holding Ctrl while clicking on the face names in the UV panel.
+Additionally, only the north and south faces of the handle should be visible.
+You can select multiple faces by holding Ctrl while clicking on the face names in the UV panel.
 
 <WikiImage
     src="/assets/images/blocks/block-models/paper_bag_handle_faces_removed.png"
@@ -109,7 +118,8 @@ These can be imported into Blockbench and then dragged onto each appropriate blo
 
 ## Rearranging UVs
 
-To get textures into the right positions, you may need to reposition/resize your faces' UV mapping. This can be done by selecting the affected face and using the UV panel.
+To get textures into the right positions, you may need to reposition/resize your faces' UV mapping.
+This can be done by selecting the affected face and using the UV panel.
 
 <WikiImage src="/assets/images/blocks/block-models/paper_bag_handle_uv.png" alt="" width="300" />
 
@@ -123,7 +133,8 @@ They can be edited by right-clicking on a cube and opening `Edit Material Instan
 
 ![](/assets/images/blocks/block-models/select_edit_material_instances.png)
 
-For the "paper_bag" model, the east and west faces should have their own texture. We can indicate this by giving them a material instance.
+For the "paper_bag" model, the east and west faces should have their own texture.
+We can indicate this by giving them a material instance.
 
 ![](/assets/images/blocks/block-models/edit_material_instances.png)
 
@@ -131,19 +142,19 @@ For the "paper_bag" model, the east and west faces should have their own texture
 
 Once exported from `File > Export > Export Bedrock Geometry` into your `RP/models/blocks` folder, you can reference a model in your block JSON.
 
-Then, textures can be applied by material instances through their `RP/textures/terrian_texture.json` shortname. In this example, the paper_bag shouldn't block light, so its light dampening is set to 0.
+Then, textures can be applied by material instances through their `RP/textures/terrian_texture.json` shortname.
 
 :::warning BLOCKS.JSON
 Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block will cause the game to ignore texture definitions in `RP/blocks.json`.
 
-If you have textures for your block defined in that file, make sure you migrate them to [`minecraft:material_instances`](/blocks/block-components#material-instances) for them to appear.
+If you have textures for your block defined in that file, make sure you move them to [`minecraft:material_instances`](/blocks/block-components#material-instances) for them to appear.
 :::
 
 <CodeHeader>BP/blocks/paper_bag.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:paper_bag",
@@ -169,9 +180,7 @@ If you have textures for your block defined in that file, make sure you migrate 
                     "texture": "wiki:paper_bag_side_gusset",
                     "render_method": "alpha_test" // Must be the same in all instances
                 }
-            },
-            // Prevent shadows
-            "minecraft:light_dampening": 0
+            }
         }
     }
 }
@@ -186,8 +195,7 @@ If you have textures for your block defined in that file, make sure you migrate 
     image="/assets/images/homepage/crafting_table_0.png"
 >
 
-Creating culling rules for your model can aid performance by telling the game to unrender
-hidden parts of your model.
+Creating culling rules for your model can aid performance by telling the game to hide parts of your model that are being unnecessarily rendered.
 
 </Card>
 <Card
@@ -196,7 +204,17 @@ hidden parts of your model.
     image="/assets/images/homepage/scripting.png"
 >
 
-Use the "bone_visibility" parameter of the [geometry](/blocks/block-components#geometry) component to render different model bones based on your block's current permutation.
+Use the `bone_visibility` parameter of the [geometry](/blocks/block-components#geometry) component to render different model bones based on your block's current permutation.
+
+</Card>
+<Card
+    title="Vanilla Models"
+    link="/blocks/vanilla-block-models"
+    image="/assets/images/homepage/diamond_ore_0.png"
+>
+
+Use a vanilla model rather than making your own for simple blocks!
+These models are especially useful when making full blocks and plants for your add-on.
 
 </Card>
 </CardGrid>

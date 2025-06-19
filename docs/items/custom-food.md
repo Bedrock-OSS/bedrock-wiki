@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.21.70`
+:::tip FORMAT VERSION `1.21.90`
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) before starting!
 :::
@@ -24,7 +24,7 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 ```json
 {
-    "format_version": "1.21.70",
+    "format_version": "1.21.90",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food",
@@ -83,7 +83,18 @@ Make sure to change the namespace to something that uniquely identifies your add
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:custom_components": ["wiki:food_effects"]
+"wiki:food_effects": [
+    {
+        "name": "wither",
+        "duration": 600, // 30 seconds in ticks.
+        "amplifier": 1
+    },
+    {
+        "name": "slowness",
+        "duration": 600,
+        "amplifier": 2
+    }
+]
 ```
 
 ### Custom Component Script
@@ -93,23 +104,18 @@ In the scripts file, just use a single event after using a specific item, and af
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 const ItemFoodEffectsComponent = {
-    onConsume({ itemStack, source }) {
-        // Check for the item that should trigger the following effects
-        if (itemStack.typeId === "wiki:custom_food") {
-            // minecraft:speed is the name of the effect.
-            // 100 is the duration of the effect in ticks (1 second is 20 ticks, divide by 20 to get the results in seconds).
-            source.addEffect("minecraft:speed", 100, {
-                amplifier: 2, // The effect level, starting at 1 and ending at 256.
-                showParticle: true, // A boolean representing whether the particles will appear or not.
-            });
+    onConsume({ source }, { params }) {
+        // Iterates over each object in the component's array.
+        for (const { name, duration, amplifier } of params) {
+            source.addEffect(name, duration, { amplifier });
         }
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
     // Register the custom component for use in the item JSON file:
     itemComponentRegistry.registerCustomComponent("wiki:food_effects", ItemFoodEffectsComponent);
 });

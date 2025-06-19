@@ -2,6 +2,8 @@
 title: Block Shapes
 description: Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files.
 category: Documentation
+tags:
+    - deprecated
 mentions:
     - SirLich
     - yanasakana
@@ -13,12 +15,13 @@ mentions:
     - QuazChick
 ---
 
-:::warning DEPRECATED
-Block shapes are no longer officially supported and cannot be used with custom blocks, however they can still be used with those of vanilla.
-Support was dropped after **1.19**, meaning blocks introduced in Trails and Tales and forward do not have available block shapes.
-:::
+Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files. The geometries themselves cannot be overridden, nor new ones created - but existing ones can be assigned to _most_ vanilla blocks through a resource pack.
 
-Block shapes are essentially block geometries that are hard-coded into vanilla, meaning that they exist without having accessible files. The geometries themselves cannot be overriden, nor new ones created - but existing ones can be assigned to _most_ vanilla blocks through a resource pack.
+:::danger DEPRECATED
+Block shapes are no longer officially supported and cannot be used with custom blocks, however they can still be used with those of vanilla.
+
+Support was dropped after **1.19.0**, meaning blocks introduced in "Trails & Tales" and later do not have available block shapes.
+:::
 
 ## Application
 
