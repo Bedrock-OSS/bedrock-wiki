@@ -317,7 +317,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 ### Events
 
 <Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
+<Label color="red">Holiday Creator Features</Label>
 
 -   Renamed `set_block_property` response to `set_block_state`
 
