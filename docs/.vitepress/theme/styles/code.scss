@@ -57,7 +57,82 @@
   & > .shiki {
     grid-area: code;
     overflow-x: auto;
-    padding-inline: 1em;
+
+    & > code {
+      padding-inline: 1em;
+      display: block;
+      width: fit-content;
+      min-width: 100%;
+      max-width: none;
+    }
+  }
+}
+
+.shiki .line:is(.highlighted, .diff) {
+  --line-symbol: "";
+
+  display: inline-block;
+  width: 100%;
+
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: var(--line-symbol);
+    background-color: var(--line-bg-color);
+
+    padding-left: 0.2em;
+    position: absolute;
+    max-width: none;
+    inset: 0 -1em;
+    z-index: -1;
+  }
+}
+
+.shiki .line {
+  &.highlighted {
+    --line-bg-color: rgb(1, 1, 1, 0.05);
+  }
+
+  &.warning {
+    --line-bg-color: rgba(255, 230, 100, 0.3);
+  }
+
+  &.error {
+    --line-bg-color: rgba(220, 120, 120, 0.1);
+  }
+
+  &.add {
+    --line-symbol: "+";
+    --line-bg-color: rgba(150, 255, 200, 0.2);
+  }
+
+  &.remove {
+    opacity: 0.8;
+    --line-symbol: "–";
+    --line-bg-color: rgba(220, 120, 120, 0.1);
+  }
+}
+
+.dark .shiki .line {
+  &.highlighted {
+    --line-bg-color: rgba(255, 255, 255, 0.05);
+  }
+
+  &.warning {
+    --line-bg-color: rgba(255, 230, 100, 0.1);
+  }
+
+  &.error {
+    --line-bg-color: rgba(200, 120, 120, 0.1);
+  }
+
+  &.add {
+    --line-bg-color: rgba(150, 255, 200, 0.1);
+  }
+
+  &.remove {
+    --line-bg-color: rgba(220, 120, 120, 0.1);
   }
 }
 
