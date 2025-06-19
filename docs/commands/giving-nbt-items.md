@@ -236,7 +236,7 @@ This is especially useful for adventure maps or servers — for example, giving 
 ### Steps
 
 1. Prepare your shulker box and place it in a secure area accessible only to operators.
-2. Ensure this area remains loaded at all times using a **[ticking area](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand**)**.
+2. Ensure this area remains loaded at all times using a **[ticking area](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand)**.
 3. You can now give the prepared shulker box to players using the **[/loot](https://learn.microsoft.com/en-us/minecraft/creator/commands/commands/loot?view=minecraft-bedrock-stable)** command, as shown below:
 
    <CodeHeader>Example</CodeHeader>
