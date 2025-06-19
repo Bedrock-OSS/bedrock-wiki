@@ -23,6 +23,10 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:geometry`
     -   Released `uv_lock` parameter from experimental
 
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:movable` from experimental
+
 ## 1.21.90
 
 ### Components
