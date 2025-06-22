@@ -14,14 +14,15 @@ description: About .mcstructure format.
 [compound]: /assets/images/nbt/compound.png
 [string]: /assets/images/nbt/string.png
 
-### Saving and Loading
+## Saving and Loading Structures
 
 The **Export** button creates `.mcstructure` files in a structure block. The files must be placed in a behavior pack to load them in-game with a load structure block. The path determines the structure identifier, which is typed into the structure block to load the structure.
 
 **Examples:**
-`BP/structures/house.mcstructure` → `mystructure:house`
-`BP/structures/dungeon/entrance.mcstructure` → `dungeon:entrance`
-`BP/structures/stuff/towers/diamond.mcstructure` → `stuff:towers/diamond`
+
+-   `BP/structures/house.mcstructure` → `mystructure:house`
+-   `BP/structures/dungeon/entrance.mcstructure` → `dungeon:entrance`
+-   `BP/structures/stuff/towers/diamond.mcstructure` → `stuff:towers/diamond`
 
 The first subfolder defines the namespace, and subsequent folders define the path, ending with the structure file's name.
 
@@ -33,20 +34,8 @@ Note that any files directly in the `structures` folder are given the `mystructu
 
 In this case, the file in the `mystructure` folder is the one that "wins," resulting in the file directly in the `structures` folder being ignored.
 
-### NBT File and MC Structure difference
-[NBT files](https://minecraft.wiki/w/NBT_format), as adapted by Java and Bedrock's .mcstructure files, couldn't be more different. But even with all these differences, they have something in common: they're stored in NBT format and use index arrays and palettes. Here are a few main differences:
-| MC Structure vs .NBT Structure                             |  BE Structure File                                             | JE Structure File                                                  |
-|------------------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------|
-| File Format                                                | `.mcstructure`                                                 | `.nbt`                                                             |
-| Applied Compression Algorithm                              | None                                                           | GZip Compression                                                   |
-| Endianness                                                 | Little-Endian                                                  | Big Endian                                                         |
-| Root Is Property Or Value (Whether NBT starts as property) | NoName Property                                                | NoName Property                                                    |
-| `.mcstructure` Compatible                                  | Yes                                                            | No                                                                 |
-| `.nbt` Compatible                                          | No                                                             | Yes                                                                |
-| Structure Compact Size (Lower better)                      | (Better) Order of blocks harcoded, only pallete indexes saved  | Each block is stored as (location, palette index, optional NBT)    |
-| After All File Size (Lower better)                         | No Compression used                                            | GZip compression outperforms the compact `.mcstructure` format.    |
+## File Format
 
-### File Format
 > ![Integer][int] `format_version`: Currently always set to `1`.
 >
 > ![List][list] `size`: List of three integers describing the size of the structure's bounds.
@@ -97,7 +86,7 @@ In this case, the file in the `mystructure` folder is the one that "wins," resul
 > > ![Integer][int] Structure origin Y position.
 > > ![Integer][int] Structure origin Z position.
 
-### What Happens If...
+## What Happens If...
 
 Results from testing to see what happens when modified structure files are loaded:
 
@@ -134,6 +123,24 @@ Results from testing to see what happens when modified structure files are loade
 ```
 [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field should have as many elements as defined by the "size" field.
 ```
+
+## NBT File and MC Structure Comparison
+
+[NBT files](https://minecraft.wiki/w/NBT_format), as adapted by Java and Bedrock's .mcstructure files, couldn't be more different.
+But even with all these differences, they have something in common: they're stored in NBT format and use index arrays and palettes.
+
+Here are a few main differences:
+
+| MC Structure vs .NBT Structure                             |  BE Structure File                                             | JE Structure File                                                  |
+| ---------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
+| File Format                                                | `.mcstructure`                                                 | `.nbt`                                                             |
+| Applied Compression Algorithm                              | None                                                           | GZip Compression                                                   |
+| Endianness                                                 | Little-Endian                                                  | Big Endian                                                         |
+| Root Is Property Or Value (Whether NBT starts as property) | NoName Property                                                | NoName Property                                                    |
+| `.mcstructure` Compatible                                  | Yes                                                            | No                                                                 |
+| `.nbt` Compatible                                          | No                                                             | Yes                                                                |
+| Structure Compact Size (Lower better)                      | (Better) Order of blocks harcoded, only pallete indexes saved  | Each block is stored as (location, palette index, optional NBT)    |
+| After All File Size (Lower better)                         | No Compression used                                            | GZip compression outperforms the compact `.mcstructure` format.    |
 
 ## NBT Editors
 
