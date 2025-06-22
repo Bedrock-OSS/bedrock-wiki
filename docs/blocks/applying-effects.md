@@ -59,7 +59,7 @@ This component should apply effects to entities within a specified area, so we'r
 
 ## Custom Component Script
 
-<CodeHeader>BP/scripts/treader_detection.js</CodeHeader>
+<CodeHeader>BP/scripts/radialEffects.js</CodeHeader>
 
 ```js
 import { system } from "@minecraft/server";
