@@ -46,7 +46,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
         "name": "Custom Commands",
         "description": "Custom Commands using the Script API",
         "uuid": "c8c3239f-027f-4e80-890f-880eba65027d",
-        "min_engine_version": [1, 20, 80],
+        "min_engine_version": [1, 21, 90],
         "version": [1, 0, 0]
     },
     "modules": [
