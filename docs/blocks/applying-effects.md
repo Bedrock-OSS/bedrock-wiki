@@ -41,21 +41,20 @@ This component should apply effects to entities within a specified area, so we'r
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"wiki:radial_effects": {
-    "radius": 64, // Apply all of the following "effects" to entities within this radius of blocks.
-    "effects": [
-        {
-            "name": "wither",
-            "duration": 600, // 30 seconds in ticks.
-            "amplifier": 1
-        },
-        {
-            "name": "slowness",
-            "duration": 600,
-            "amplifier": 2
-        }
-    ]
-}
+"wiki:radial_effects": [
+    {
+        "radius": 64, // Apply the following effect to entities within this radius of blocks.
+        "name": "wither",
+        "duration": 600, // 30 seconds in ticks.
+        "amplifier": 1
+    },
+    {
+        "radius": 64,
+        "name": "slowness",
+        "duration": 600,
+        "amplifier": 2
+    }
+]
 ```
 
 ## Custom Component Script
@@ -68,17 +67,17 @@ import { system } from "@minecraft/server";
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockRadialEffectsComponent = {
     onTick({ block, dimension }, { params }) {
-        const { radius, effects } = params; // The value we have assigned to the component in the block JSON.
+        const effects = params; // The value we have assigned to the component in the block JSON.
 
-        // Gets all entities in the specified "radius" around the block.
-        const entities = dimension.getEntities({
-            location: block.center(),
-            maxDistance: radius,
-        });
+        // Iterates over each object in the array.
+        for (const { radius, name, duration, amplifier } of effects) {
+            // Gets all entities in the specified "radius" around the block.
+            const entities = dimension.getEntities({
+                location: block.center(),
+                maxDistance: radius,
+            });
 
-        for (const entity of entities) {
-            // Iterates over each object in the "effects" array.
-            for (const { name, duration, amplifier } of effects) {
+            for (const entity of entities) {
                 entity.addEffect(name, duration, { amplifier });
             }
         }
@@ -120,21 +119,20 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
                 "interval_range": [80, 80],
                 "looping": true
             },
-            "wiki:radial_effects": {
-                "radius": 64,
-                "effects": [
-                    {
-                        "name": "wither",
-                        "duration": 600,
-                        "amplifier": 1
-                    },
-                    {
-                        "name": "slowness",
-                        "duration": 600,
-                        "amplifier": 2
-                    }
-                ]
-            }
+            "wiki:radial_effects": [
+                {
+                    "radius": 64,
+                    "name": "wither",
+                    "duration": 600,
+                    "amplifier": 1
+                },
+                {
+                    "radius": 64,
+                    "name": "slowness",
+                    "duration": 600,
+                    "amplifier": 2
+                }
+            ]
         }
     }
 }
