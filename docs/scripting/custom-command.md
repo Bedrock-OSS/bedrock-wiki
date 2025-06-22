@@ -24,7 +24,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.80
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.90
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
@@ -68,7 +68,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "2.0.0-beta" // needs to be the latest or it will break ( latest as of 1.21.80 )
+            "version": "2.1.0-beta" // Needs to be the latest beta or it will break (latest as of 1.21.90)
         }
     ]
 }
@@ -77,9 +77,9 @@ Assuming you have understood the basics of scripting, let's start creating the p
 In our manifest, we have added a script module. The `entry` is where our script file is stored. This is typically within the `scripts` folder of the behavior pack. The dependency allows us to use that script module in our script.
 
 <FolderView :paths="[
+    'BP/scripts/main.js',
     'BP/manifest.json',
-    'BP/pack_icon.png',
-    'BP/scripts/main.js'
+    'BP/pack_icon.png'
 ]" />
 
 ## Creating Custom Commands
@@ -179,10 +179,10 @@ customCommandRegistry.registerCommand(
 
 For more details about custom commands, see the [Microsoft Docs on custom commands](https://learn.microsoft.com/en-us/minecraft/creator/documents/customcommands).
 
-## Commands via chat send event
+## Commands via Chat Send
 
 ::: warning
-Deprecated in favor of slash commands as of 1.20.80
+Deprecated in favor of slash commands as of 1.21.90
 :::
 
 We will add simple commands, such as `!gmc` to change our gamemode to creative and `!gms` to change into survival.
@@ -198,13 +198,13 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
         case "!gmc":
             eventData.cancel = true;
             system.run(() => {
-                player.setGameMode(GameMode.creative);
+                player.setGameMode(GameMode.Creative);
             });
             break;
         case "!gms":
             eventData.cancel = true;
             system.run(() => {
-                player.setGameMode(GameMode.survival);
+                player.setGameMode(GameMode.Survival);
             });
             break;
         default:
