@@ -19,7 +19,7 @@ This script API page assumes basic knowledge of pack setup for add-ons. For info
 :::
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.70x.
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.80x.
 :::
 
 ## Overview
@@ -74,7 +74,7 @@ Additionally, dependencies will need to be set based on modules used. To import 
     "capabilities": ["script_eval"],
     "dependencies": [
         {
-            // Enables the use of @minecraft/server module, with a version of 1.17.0.
+            // Enables the use of @minecraft/server module, with a version of 1.18.0.
             // It must be the latest version or it might not work!
             "module_name": "@minecraft/server",
             "version": "1.18.0"
