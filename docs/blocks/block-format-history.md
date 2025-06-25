@@ -26,6 +26,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 <Label color="green">Versioned</Label>
 
 -   Released `minecraft:movable` from experimental
+-   Released `minecraft:random_offset` from experimental
 
 ## 1.21.90
 
