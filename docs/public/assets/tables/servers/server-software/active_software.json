@@ -31,7 +31,7 @@
     },
     {
       "name": "[Chorus](https://github.com/Chorus-OSS/Chorus)",
-      "description": "Minecraft: Bedrock server software, open source and written in Kotlin"
+      "description": "Minecraft: Bedrock server software, open source and written in Kotlin",
       "languages": "Kotlin",
       "type": "Custom"
     },
