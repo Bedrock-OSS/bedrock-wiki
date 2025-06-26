@@ -211,6 +211,8 @@ By default, the number of seconds it takes to destroy a custom block is 1.5× it
 
 Determines the appearance of the particles created when hitting, destroying, stepping on and falling onto blocks.
 
+_Requires format version [1.21.70](/blocks/block-format-history#_1-21-70) or later._
+
 #### Object Definition {#destruction-particles-object}
 
 -   `texture`: String (optional)
