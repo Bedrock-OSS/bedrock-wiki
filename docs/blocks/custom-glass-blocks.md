@@ -5,7 +5,6 @@ category: Vanilla Re-Creations
 tags:
     - beginner
     - easy
-    - experimental
 license: true
 mentions:
     - Eko-byte
