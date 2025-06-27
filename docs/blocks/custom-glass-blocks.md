@@ -206,5 +206,5 @@ This means that, when multiple glass blocks are next to each other, there will b
 "minecraft:geometry": {
     "identifier": "geometry.custom_glass",
     "culling": "wiki:culling.custom_glass"
-},
+}
 ```
