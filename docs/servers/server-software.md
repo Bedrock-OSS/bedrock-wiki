@@ -26,6 +26,8 @@ mentions:
     - sculkmp
     - bedrock-crustaceans
     - QuazChick
+    - OmniacDev
+    - Chorus-OSS
 description: Software for Bedrock servers.
 ---
 
