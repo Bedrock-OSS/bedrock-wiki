@@ -32,6 +32,8 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 <Spoiler title="Custom Glass Model JSON">
 
+<CodeHeader>RP/models/blocks/custom_glass.geo.json</CodeHeader>
+
 ```json
 {
     "format_version": "1.21.80",
