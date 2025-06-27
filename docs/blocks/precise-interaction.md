@@ -15,9 +15,8 @@ mentions:
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
-::: danger BUG
-An issue with the `faceLocation` property of many events means that it is not always relative to the bottom north-west corner of a block depending on its position in the world.
-
+::: danger [MCPE-223452](https://bugs.mojang.com/browse/MCPE-223452)
+An issue with the `faceLocation` property of many events means that it is not always relative to the bottom north-west corner of a block depending on the block's position in the world.
 As a result, precise interaction does not work correctly and the following method should not be used until this bug is fixed.
 :::
 
