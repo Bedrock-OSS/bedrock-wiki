@@ -37,6 +37,7 @@ Important links have a ⭐.
 -   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
+-   [Bedrock Protocol](https://discord.gg/G5sBv3TTCE)
 -   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
 -   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
