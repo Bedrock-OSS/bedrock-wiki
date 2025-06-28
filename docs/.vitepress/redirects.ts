@@ -35,7 +35,7 @@ export default {
   "/documentation/tellraw": "/commands/tellraw",
 
   "/entities/entities-intro": "/entities/entity-intro-bp",
-  "/entities/npc-dialogs": "/entities/npc-dialogues",
+  "/entities/npc-dialogs": "/entities/npc-dialogue",
 
   "/items/3d-items": "/items/attachables",
   "/items/item-categories": "/items/creative-categories",
@@ -75,7 +75,7 @@ export default {
   "/tutorials/fake_blocks": "/blocks/fake-blocks",
   "/tutorials/invulnerable-entities": "/entities/invulnerable-entities",
   "/tutorials/item-models": "/items/attachables",
-  "/tutorials/npc-dialogs": "/entities/npc-dialogues",
+  "/tutorials/npc-dialogs": "/entities/npc-dialogue",
   "/tutorials/pathfinding-entities": "/entities/pathfinding-entities",
   "/tutorials/player-geometry": "/visuals/player-geometry",
   "/tutorials/remove-shadows": "/visuals/remove-shadows",

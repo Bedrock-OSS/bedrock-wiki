@@ -1,5 +1,5 @@
 ---
-title: NPC Dialogues
+title: NPC Dialogue
 category: General
 tags:
     - intermediate
@@ -15,13 +15,14 @@ mentions:
     - QuazChick
 ---
 
-Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons. They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal add-on.
+Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons.
+They were originally designed for use in adventure maps, but with the introduction of the `/dialogue` command, they can now be used in the context of a normal add-on.
 
 ## Dialogue Files
 
 NPC dialogue data is stored in dialogue files, which are stored in the `dialogue` folder in the root of the behavior pack. Here is a basic NPC dialogue file:
 
-<CodeHeader>dialogue/example.diag.json</CodeHeader>
+<CodeHeader>BP/dialogue/example.json</CodeHeader>
 
 ```json
 {
@@ -29,7 +30,7 @@ NPC dialogue data is stored in dialogue files, which are stored in the `dialogue
     "minecraft:npc_dialogue": {
         "scenes": [
             {
-                "scene_tag": "example",
+                "scene_tag": "wiki:example",
                 "npc_name": "Steve",
                 "text": "Hello"
             }
@@ -40,19 +41,19 @@ NPC dialogue data is stored in dialogue files, which are stored in the `dialogue
 
 In this file, there is an array of scenes. Each scene is a separate dialogue. You can put every dialogue in one file, or you can put each one in a separate file. Within each scene object are a number of properties that can be set to control the dialogue:
 
-#### scene_tag
+### Scene Tag
 
 The identifier of the scene, used to target the scene.
 
-#### npc_name
+### NPC Name
 
 The display name of the NPC. Optional, if it is not specified, the name of the NPC entity will be used, which is `§eNPC` by default.
 
-#### text
+### Text
 
 The text to display in the speech bubble. Optional.
 
-#### on_open_commands
+### Open Commands
 
 Array of command strings to be run when the dialogue is opened. Optional.
 
@@ -60,11 +61,11 @@ Array of command strings to be run when the dialogue is opened. Optional.
 
 ```json
 "on_open_commands": [
-  "/say Hello"
+    "/say Hello"
 ]
 ```
 
-#### on_close_commands
+### Close Commands
 
 Array of command strings to be run when the dialogue is closed. Optional.
 
@@ -72,11 +73,11 @@ Array of command strings to be run when the dialogue is closed. Optional.
 
 ```json
 "on_close_commands": [
-  "/say Goodbye"
+    "/say Goodbye"
 ]
 ```
 
-#### buttons
+### Buttons
 
 An array of objects specifying the buttons to show in the dialogue. Optional.
 
@@ -139,11 +140,11 @@ The translation key used should then be specified in the resource pack's languag
 
 ## Opening Dialogues
 
-The `/dialogue` command is used to open and control dialogues. The command looks like this: `/dialogue open <npc: target> <player: target> [sceneName:string]`
+The `/dialogue` command is used to open and control dialogues. The command looks like this: `/dialogue open <npc: target> <player: target> [sceneName: string]`
 
 -   `<npc: target>`: A selector pointing to any entity with the `minecraft:npc` component, such as the vanilla NPC. This determines where dialogue commands are executed from, as well as the appearance of the NPC in the dialogue.
 -   `<player: target>`: A selector pointing to the player who will see the dialogue.
--   `[sceneName:string]`: A string matching the `scene_tag` of the dialogue to be shown. Optional, if not present, the last dialogue shown by the NPC will be shown.
+-   `[sceneName: string]`: A string matching the `scene_tag` of the dialogue to be shown. Optional, if not present, the last dialogue shown by the NPC will be shown.
 
 For example, the following command would open the dialogue `example` for the nearest player, using the nearest NPC:
 
@@ -153,10 +154,10 @@ For example, the following command would open the dialogue `example` for the nea
 
 ## Changing Dialogues
 
-The `/dialogue` command is also used to change the dialogue of an NPC. Unlike the `/dialogue open` command, this command has no effect until a player opens the NPC dialogue manually. This syntax looks like this: `/dialogue change <npc: target> <sceneName:string> [player: target]`
+The `/dialogue` command is also used to change the dialogue of an NPC. Unlike the `/dialogue open` command, this command has no effect until a player opens the NPC dialogue manually. This syntax looks like this: `/dialogue change <npc: target> <sceneName: string> [player: target]`
 
 -   `<npc: target>`: A selector pointing to the NPC to change the dialogue of.
--   `<sceneName:string>`: A string matching the `scene_tag` of the dialogue to be shown.
+-   `<sceneName: string>`: A string matching the `scene_tag` of the dialogue to be shown.
 -   `[player: target]`: A selector pointing to the player who will see the updated dialogue. Optional, if not present, all player will be affected.
 
 For example, the following command would change the nearest NPC's dialogue to `example` for a random player.
@@ -167,7 +168,8 @@ For example, the following command would change the nearest NPC's dialogue to `e
 
 ## Full Example
 
-This full example will create a custom item that will allow the player to teleport when they right-click/interact while holding the item. Full source code for this example can be found [on Github](https://github.com/Llama-Studios/dialog-demo). For this demo, use the manifest file at the top of this page.
+This full example will create a custom item that will allow the player to teleport when they right-click/interact while holding the item.
+For this demo, use the manifest file at the top of this page.
 
 ### Creating the NPC
 
@@ -231,7 +233,7 @@ To avoid this add the `minecraft:interaction` to the entity which will replace t
 
 This dialogue file features two dialogues, each with two teleport buttons, and a button to switch between the two.
 
-<CodeHeader>dialogue/example.diag.json</CodeHeader>
+<CodeHeader>BP/dialogue/example.json</CodeHeader>
 
 ```json
 {
@@ -239,14 +241,14 @@ This dialogue file features two dialogues, each with two teleport buttons, and a
     "minecraft:npc_dialogue": {
         "scenes": [
             {
-                "scene_tag": "main_teleport_menu",
+                "scene_tag": "wiki:main_teleport_menu",
                 "npc_name": "Teleport",
                 "text": "Where would you like to teleport?",
                 "buttons": [
                     {
                         "name": "Districts",
                         "commands": [
-                            "/dialogue open @e[type=npc,c=1] @initiator districts_teleport_menu"
+                            "/dialogue open @e[type=npc,c=1] @initiator wiki:districts_teleport_menu"
                         ]
                     },
                     {
@@ -260,14 +262,14 @@ This dialogue file features two dialogues, each with two teleport buttons, and a
                 ]
             },
             {
-                "scene_tag": "districts_teleport_menu",
+                "scene_tag": "wiki:districts_teleport_menu",
                 "npc_name": "District Teleport",
                 "text": "What district would you like to teleport to?",
                 "buttons": [
                     {
                         "name": "< Back",
                         "commands": [
-                            "/dialogue open @e[type=npc,c=1] @initiator main_teleport_menu"
+                            "/dialogue open @e[type=npc,c=1] @initiator wiki:main_teleport_menu"
                         ]
                     },
                     {
@@ -324,7 +326,7 @@ import { system } from "@minecraft/server";
 
 const ItemTeleportMenuComponent = {
     onUse({ source }) {
-        source.runCommand("dialogue open @e[type=npc, c=1] @s main_teleport_menu");
+        source.runCommand("dialogue open @e[type=npc, c=1] @s wiki:main_teleport_menu");
     },
 };
 
