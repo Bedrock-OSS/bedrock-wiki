@@ -2,11 +2,11 @@
 title: Raw Text
 description: Understanding raw text JSON components used in the /tellraw and /titleraw commands.
 mentions:
-  - BedrockCommands
-  - GTB3NW
-  - SpacebarNinja
-  - zheaEvyline
-  - QuazChick
+    - BedrockCommands
+    - GTB3NW
+    - SpacebarNinja
+    - zheaEvyline
+    - QuazChick
 ---
 
 ## Introduction
@@ -23,7 +23,7 @@ Inside the squared brackets `[]`, this is where you will list multiple text obje
 { "rawtext": [] }
 ```
 
-You can combine components by adding a comma ` , ` at the end of a component.
+You can combine components by adding a comma `,` at the end of a component.
 
 ## Text Component
 
@@ -43,35 +43,38 @@ Send a "Hello everyone!" message to all players in chat:
 /tellraw @a { "rawtext": [{ "text":"Hello everyone!" }] }
 ```
 
-### Breaks, Line Breaks, And Unicodes
+### Escapes, Line Breaks, And Unicodes
 
-1. Breaks are accessed as ` \ ` and are used in order to use quotation marks ` " ` within components. Example:
+1. Escapes are accessed as `\` and are used in order to use quotation marks `"` within components. Example:
 
-```json
-/tellraw @a { "rawtext": [{ "text":"He said, \"I like apples\"..." }] }
-#Output in chat:
-#    He said, "I like apples"...
-```
+    ```json
+    /tellraw @a { "rawtext": [{ "text":"He said, \"I like apples\"..." }] }
+    #Output in chat:
+    #    He said, "I like apples"...
+    ```
 
-2. Line breaks are used as ` \n ` to go down a line. Example:
+2. Line breaks are used as `\n` to go down a line. Example:
 
-```json
-/tellraw @a { "rawtext": [{ "text":"Hello\nNext line" }] }
-#Output in chat:
-#    Hello
-#    Next line
-```
+    ```json
+    /tellraw @a { "rawtext": [{ "text":"Hello\nNext line" }] }
+    #Output in chat:
+    #    Hello
+    #    Next line
+    ```
 
 3. Unicodes provides a unique number that displays an icon/emoji. Example:
 
-```json
-/tellraw @a { "rawtext": [{ "text":"\ue100" }] }
-```
-- Output in chat:
-    - ![](/assets/images/concepts/emojis/hud/food.png)
-> Note: the unicode symbol will display as it's corresponding icon/emoji in Minecraft only.
+    ```json
+    /tellraw @a { "rawtext": [{ "text":"\ue100" }] }
+    ```
 
-For more info and the full list of unicodes available in Bedrock, refer to the [Emojis & Symbols](/concepts/emojis) page.
+    - Output in chat:
+
+        ![](/assets/images/concepts/emojis/hud/shank.png)
+
+    Note: the unicode symbol will display as it's corresponding icon/emoji in Minecraft only.
+
+    For more info and the full list of unicodes available in Bedrock, refer to the [Emojis & Symbols](/concepts/emojis) page.
 
 ## Selector Component
 
@@ -80,16 +83,19 @@ Displays the name of a target of your choice. Target Selector arguments are allo
 **Syntax:**
 
 ```json
-{ "selector":"<target>" }
+{ "selector": "<target>" }
 ```
 
 **Examples:**
 
 1. Send name of all players in chat:
+
 ```json
 /tellraw @a { "rawtext": [{ "selector": "@a" }] }
 ```
+
 2. Send name of all players tagged 'wiki:winner' in chat:
+
 ```json
 /tellraw @a { "rawtext": [{ "selector": "@a[tag=wiki:winner]" }] }
 ```
@@ -99,23 +105,27 @@ Displays the name of a target of your choice. Target Selector arguments are allo
 Displays a score from a scoreboard objective.
 
 **Syntax:**
+
 ```json
-{ "score": { "name": "<name>", "objective":"<score>" } }
+{ "score": { "name": "<name>", "objective": "<score>" } }
 ```
 
-- **` name `** - This can be any selector like `@p` or a player's name.
-    - You can also use the **` * `** wildcard to display the reader's own score.
-- **` objective `** - The name of the scoreboard you want to display the score from.
+-   **`name`** - This can be any selector like `@p` or a player's name.
+    -   You can also use the **`*`** wildcard to display the reader's own score.
+-   **`objective`** - The name of the scoreboard you want to display the score from.
 
 Both are required when using the score component.
 
 **Examples:**
 
 1. Display the `wiki:points` score of the closest player in chat:
+
 ```json
 /tellraw @a { "rawtext": [{ "score": { "name": "@p", "objective": "wiki:points" } }] }
 ```
+
 2. Display the `wiki:money` score of the reader in chat:
+
 ```json
 /titleraw @a title { "rawtext": [{ "score": { "name": "*", "objective": "wiki:money" } }] }
 ```
@@ -138,7 +148,7 @@ Allows creators to display localized text to users. The list of the strings to t
 #    %s joined the game
 ```
 
-In the example above, it outputs "`%s joined the game`". For a name to appear instead of `%s`, ` with ` needs to be specified as well. Requires an array ` [] ` instead of curly brackets ` {} `
+In the example above, it outputs "`%s joined the game`". For a name to appear instead of `%s`, `with` needs to be specified as well. Requires an array `[]` instead of curly brackets `{}`
 
 ```json
 /tellraw @a { "rawtext": [{ "translate": "multiplayer.player.joined", "with": ["Steve"] }] }
@@ -158,7 +168,6 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 #    Hello Steve
 ```
 
-
 ### Multiple %%s
 
 `%%s` can be used multiple times. They are filled in the order as shown.
@@ -171,7 +180,7 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 
 ### Ordering with %%#
 
-The order to fill in ` %s ` can be changed by replacing ` s ` with a number at the end. For example, to swap the position of Steve and Alex in the above example:
+The order to fill in `%s` can be changed by replacing `s` with a number at the end. For example, to swap the position of Steve and Alex in the above example:
 
 ```json
 /tellraw @a { "rawtext": [{ "translate": "Hello %%2 and %%1", "with": ["Steve","Alex"] }] }
@@ -187,26 +196,25 @@ And instead of an array, you can use a rawtext component, like so.
 #    Hello Steve and Apple
 ```
 
-*Additional example shared by @CornyFlex:*
+_Additional example shared by @CornyFlex:_
 
 ```json
 /tellraw @a { "rawtext": [{ "translate": "Role: %%%%s", "with": { "rawtext": [{ "score": { "name": "*", "objective": "wiki:role" } }, { "text":"Member" }, { "text": "Moderator" }, { "text": "Admin" }] } }] }
 ```
+
 This structure allows you to display different text to the selected players based on scores.
 
-- Output in chat:
-    - Member
-        - When 'wiki:role' score of the player equals 1.
-    - Moderator
-        - When 'wiki:role' score of the player equals 2.
-    - Admin
-        - When 'wiki:role' score of the player equals 3.
-> Note: Score must be a positive integer.
+Note: Score must be a positive integer.
+
+-   Output in chat:
+
+    -   Member - When 'wiki:role' score of the player equals 1.
+    -   Moderator - When 'wiki:role' score of the player equals 2.
+    -   Admin - When 'wiki:role' score of the player equals 3.
 
 **How It Works:**
 
-- At "`%%%%s`", the first `%%` is left invalid because no argument (either "s" or an integer) is provided. As a result, it cannot display a value from the array.
-- For the second `%%`, the argument "s" is provided, which displays the first slot in the array (a `{score}`).
-- Since there is no space between the first `%%` and the `{score}` (`%%s`), the `{score}` is interpreted as the integer argument for the first `%%`, making it valid.
-- This allows the score to dynamically change the index of the slot to be displayed.
-
+-   At "`%%%%s`", the first `%%` is left invalid because no argument (either "s" or an integer) is provided. As a result, it cannot display a value from the array.
+-   For the second `%%`, the argument "s" is provided, which displays the first slot in the array (a `{score}`).
+-   Since there is no space between the first `%%` and the `{score}` (`%%s`), the `{score}` is interpreted as the integer argument for the first `%%`, making it valid.
+-   This allows the score to dynamically change the index of the slot to be displayed.
