@@ -1,46 +1,29 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, StyleValue } from "vue";
 import { withBase } from "vitepress";
-import useData from "../../composables/data";
-
-const { isDark } = useData();
 
 const props = defineProps<{
   alt?: string;
   caption?: string;
-  src?: string | { dark: string; light: string };
+  src: string | { dark: string; light: string };
   pixelated?: boolean;
   width?: string;
   height?: string;
 }>();
 
-const src = computed(() => {
-  let source = props.src;
-  if (source === undefined) return;
-
-  if (typeof source === "object") {
-    if (isDark.value) source = source.dark;
-    else source = source.light;
-  }
-
-  return withBase(source);
-});
-
-const { alt, width, height } = props;
+const style = computed<StyleValue>(() => ({
+  imageRendering: props.pixelated ? "pixelated" : undefined,
+  objectFit: "contain",
+}));
 </script>
 
 <template>
   <div class="wiki-image">
-    <img
-      :src
-      :alt
-      :width
-      :height
-      :style="{
-        imageRendering: pixelated ? 'pixelated' : undefined,
-        objectFit: 'contain',
-      }"
-    />
+    <img v-if="typeof src === 'string'" :src="withBase(src)" :alt :width :height :style />
+    <template v-else>
+      <img :src="withBase(src.dark)" :alt :width :height :style data-theme="dark" />
+      <img :src="withBase(src.light)" :alt :width :height :style data-theme="light" />
+    </template>
     <div v-if="caption" class="caption">{{ caption }}</div>
   </div>
 </template>
@@ -67,5 +50,18 @@ img {
 
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+}
+
+img[data-theme="dark"] {
+  display: none;
+}
+
+.dark {
+  img[data-theme="light"] {
+    display: none;
+  }
+  img[data-theme="dark"] {
+    display: block;
+  }
 }
 </style>

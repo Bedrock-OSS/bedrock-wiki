@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import WikiImage from "./WikiImage.vue";
 
-const props = defineProps<{
+defineProps<{
   title: string;
   link?: string;
   image?: string | { light: string; dark: string };
@@ -11,9 +11,9 @@ const props = defineProps<{
 <template>
   <div class="card">
     <header>
-      <WikiImage v-if="props.image !== undefined" :src="image" alt="" width="60" height="60" />
-      <h2 v-if="props.link">
-        <a :href="props.link">{{ title }}</a>
+      <WikiImage v-if="image !== undefined" :src="image" alt="" width="60" height="60" />
+      <h2 v-if="link">
+        <a :href="link">{{ title }}</a>
       </h2>
       <h2 v-else>
         {{ title }}
