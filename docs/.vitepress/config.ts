@@ -1,4 +1,4 @@
-import { defineWikiConfig } from "./theme";
+import { defineWikiConfig } from "./theme/config";
 
 import redirects from "./redirects";
 import tags from "./tags";
