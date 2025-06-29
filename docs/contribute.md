@@ -53,7 +53,7 @@ For more information on how to contribute to the wiki, including setting up your
 <Card
     title="Page Editing"
     link="/contribute-style"
-    image="/assets/images/homepage/wikilogo.png"
+    image="/assets/images/icons/logo.png"
 >
 
 Keeping the style is very important, it allows us to keep guides easy to learn and attractive. Let's write all pages in one style.

@@ -300,7 +300,7 @@ In this page, you've learnt about the following:
 ## What's Next?
 
 <CardGrid>
-<Card title="Add Functionality" image="/assets/images/homepage/crafting_table_0.png">
+<Card title="Add Functionality" image="/assets/images/icons/crafting_table.png">
 
 Learn about the available block [components](/blocks/block-components) to craft unique gameplay.
 
@@ -308,14 +308,14 @@ Why not give your block a custom model with the [geometry](/blocks/block-compone
 You could also configure your own [collision](/blocks/block-components#collision-box) and [selection](/blocks/block-components#selection-box) boxes to match!
 
 </Card>
-<Card title="Create Variants" image="/assets/images/homepage/scripting.png">
+<Card title="Create Variants" image="/assets/images/icons/levers.png">
 
 Make use of block [states](/blocks/block-states) and [permutations](/blocks/block-permutations) to conditionally enable components on your blocks.
 
 For example, you could add liquid depth levels to your custom tank block, with support for multiple liquid types.
 
 </Card>
-<Card title="Replicate Vanilla" image="/assets/images/homepage/diamond_ore_0.png">
+<Card title="Replicate Vanilla" image="/assets/images/icons/diamond_ore.png">
 
 Browse several complete replicas of existing blocks in the **Vanilla Re-Creations** category.
 

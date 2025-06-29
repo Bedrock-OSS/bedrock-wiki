@@ -192,7 +192,7 @@ If you have textures for your block defined in that file, make sure you move the
 <Card
     title="Create Culling Rules"
     link="/blocks/block-culling"
-    image="/assets/images/homepage/crafting_table_0.png"
+    image="/assets/images/icons/crafting_table.png"
 >
 
 Creating culling rules for your model can aid performance by telling the game to hide parts of your model that are being unnecessarily rendered.
@@ -201,7 +201,7 @@ Creating culling rules for your model can aid performance by telling the game to
 <Card
     title="Conditional Bones"
     link="/blocks/block-components#bone-visibility"
-    image="/assets/images/homepage/scripting.png"
+    image="/assets/images/icons/levers.png"
 >
 
 Use the `bone_visibility` parameter of the [geometry](/blocks/block-components#geometry) component to render different model bones based on your block's current permutation.
@@ -210,7 +210,7 @@ Use the `bone_visibility` parameter of the [geometry](/blocks/block-components#g
 <Card
     title="Vanilla Models"
     link="/blocks/vanilla-block-models"
-    image="/assets/images/homepage/diamond_ore_0.png"
+    image="/assets/images/icons/diamond_ore.png"
 >
 
 Use a vanilla model rather than making your own for simple blocks!

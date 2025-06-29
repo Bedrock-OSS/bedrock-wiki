@@ -143,13 +143,13 @@ If nothing seems to work, simply break and replace that command block.
 ## What's Next?
 
 <CardGrid>
-<Card title="Basic Systems" image="/assets/images/homepage/commands.png">
+<Card title="Basic Systems" image="/assets/images/icons/command_block.png">
 
 To put what you have learned into practice, try making this simple **[On Player First Join](/commands/on-first-join)** system, or the **[Entity Counter](/commands/entity-counter)** system.
 
 </Card>
 
-<Card title="Understanding Selectors" link="/commands/selectors" image="/assets/images/homepage/spawn_egg_30.png">
+<Card title="Understanding Selectors" link="/commands/selectors" image="/assets/images/icons/parrot.png">
 
 Learn to use target selectors in commands and how to filter them.
 
