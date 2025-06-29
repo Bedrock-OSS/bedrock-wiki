@@ -18,7 +18,7 @@ import FileIcon from "../icons/FileIcon.vue";
   background-color: var(--bg-color);
   margin-top: 0.5em;
   padding: 0.5em;
-  padding-right: 6em;
+  padding-right: 4em;
   gap: 0.4em;
 
   border: var(--border);
@@ -50,14 +50,14 @@ import FileIcon from "../icons/FileIcon.vue";
   & > .copy {
     display: inline-block;
     position: absolute;
-    top: -2em;
-    right: 0.5em;
+    top: -2.05em;
+    right: 0.45em;
     height: 1.5em;
     text-transform: uppercase;
     font-weight: 600;
-    padding-inline: 0.5em;
+    padding-inline: 0.4em;
     line-height: 1;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.1s;
 
