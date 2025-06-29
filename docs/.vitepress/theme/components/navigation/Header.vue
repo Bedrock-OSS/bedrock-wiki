@@ -128,4 +128,13 @@ function toggleSidebarVisibility() {
     }
   }
 }
+
+@media (max-width: 900px) {
+  .sidebar-visible {
+    .header {
+      background-color: var(--light-bg-color);
+      backdrop-filter: none;
+    }
+  }
+}
 </style>

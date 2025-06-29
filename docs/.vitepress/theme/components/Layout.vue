@@ -8,6 +8,7 @@ import useData from "../composables/data";
 
 import Header from "./navigation/Header.vue";
 import Sidebar from "./navigation/Sidebar.vue";
+import FrameCorner from "./icons/FrameCorner.vue";
 
 import NotFound from "./NotFound.vue";
 import Article from "./Article.vue";
@@ -32,6 +33,7 @@ useRedirect();
     <Header />
     <Sidebar />
     <main @pointerdown="() => isMobile && (isSidebarVisible = false)">
+      <FrameCorner />
       <NotFound v-if="page.isNotFound" />
       <Article v-else />
       <Footer />
