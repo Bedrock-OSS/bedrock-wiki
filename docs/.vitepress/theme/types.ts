@@ -1,6 +1,22 @@
 import { DefaultTheme } from "vitepress";
 
+export interface WikiConfig {
+  url: string;
+  repository: string;
+  algolia: DefaultTheme.AlgoliaSearchOptions;
+  navigation: NavigationItem[];
+  redirects: Redirects;
+  tags: Tags;
+  title: string;
+  longTitle?: string;
+  description: string;
+  fastBuild: {
+    excludedPages: string[];
+  };
+}
+
 export interface ThemeConfig {
+  longTitle: string;
   url: string;
   repository: string;
   algolia: DefaultTheme.AlgoliaSearchOptions;

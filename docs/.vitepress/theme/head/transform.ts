@@ -6,11 +6,10 @@ export function transformHead({ pageData, siteConfig }: TransformContext) {
 
   const { frontmatter, relativePath } = pageData;
 
-  const title = frontmatter.title ?? "The Bedrock Wiki";
+  const title = frontmatter.title ?? config.themeConfig.longTitle;
   const description = frontmatter.description ?? config.description;
 
-  const image = `${config.themeConfig.url}/assets/images/homepage/wikilogo.png`;
-  const imageAlt = "Bedrock Wiki Logo";
+  const image = `${config.themeConfig.url}/assets/images/icons/logo.png`;
 
   const path = relativePath.replace(".md", "");
 
@@ -23,7 +22,6 @@ export function transformHead({ pageData, siteConfig }: TransformContext) {
     "og:title": title,
     "og:description": description,
     "og:image": image,
-    "og:image:alt": imageAlt,
     "og:url": url,
     "og:site_name": site,
     // Twitter
@@ -31,7 +29,6 @@ export function transformHead({ pageData, siteConfig }: TransformContext) {
     "twitter:title": title,
     "twitter:description": description,
     "twitter:image": image,
-    "twitter:image:alt": imageAlt,
     "twitter:site": site,
   };
 

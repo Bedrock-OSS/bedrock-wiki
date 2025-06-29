@@ -42,4 +42,5 @@ export default {
   },
 } satisfies Theme;
 
+export * from "./config";
 export * from "./types";
