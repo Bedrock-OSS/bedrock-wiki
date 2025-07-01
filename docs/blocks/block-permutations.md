@@ -123,11 +123,14 @@ As with all things blocks, some limitations have been put in place by Mojang to 
 ### Maximum Amount Per Block
 
 A block _cannot_ have more than 65,536 permutations (equivalent to 4 states with 16 values each).
-Exceeding this limit will result in a content log error and some states being absent from your block.
+This is because a block permutation must be representable by 16 bits.
+
+Exceeding this limit will result in some states being absent from your block so that its permutation count is within the limit, along with a content log error.
 
 ### Maximum Amount Per World
 
-A world _should_ not have more than 65,536 block permutations registered (not necessarily placed).
-Exceeding this limit will result in the following content log warning:
+A world _shouldn't_ have more than a total of 65,536 **custom** block permutations registered (not necessarily placed).
 
-> World with over 65536 block permutations may degrade performance. Current world has XXXXX permutations.
+Exceeding this limit should not affect block functionality, however will result in the following content log warning:
+
+> [Blocks][warning]-World with over 65536 block permutations may degrade performance. Current world has XXXXX permutations.
