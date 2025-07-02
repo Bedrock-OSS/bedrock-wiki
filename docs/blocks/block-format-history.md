@@ -20,6 +20,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Updated `minecraft:destruction_particles`
+    -   Released `particle_count` parameter from experimental
 -   Updated `minecraft:geometry`
     -   Released `uv_lock` parameter from experimental
 
