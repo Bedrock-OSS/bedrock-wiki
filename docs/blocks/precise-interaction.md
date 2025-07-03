@@ -9,6 +9,7 @@ license: true
 mentions:
     - QuazChick
     - SmokeyStack
+hidden: true
 ---
 
 ::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
