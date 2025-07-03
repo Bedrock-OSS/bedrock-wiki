@@ -145,7 +145,7 @@ These packs are published by the open-source community.
 -   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
 -   [CubitosMC](https://www.cubitosmc.com/)
 -   [MCDLHub](https://mcdlhub.com/)
--   [Minecraft Marketplace Partners](https://www.playthismap.com/partners)
+-   [Minecraft Marketplace Partners](https://bedrockexplorer.com/partners)
 -   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 -   [Modbay](https://modbay.org/)
 
