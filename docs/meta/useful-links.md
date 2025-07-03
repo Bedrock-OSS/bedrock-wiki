@@ -59,6 +59,7 @@ Important links have a ⭐.
 -   [CoreCoder (Code Editor)](https://hanprog.itch.io/core-coder)
 -   [Feature Rule Generator v2 (Free Version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
 -   [Feature Rule Generator v2 (Paid Version)](https://machine-builder.itch.io/frg-v2)
+-   [Mcblend (Blender Plugin)](https://github.com/Nusiq/mcblend)
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [SuitcaseJS (MCPack Compressor)](https://github.com/TBroz15/SuitcaseJS)
