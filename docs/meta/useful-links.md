@@ -97,6 +97,7 @@ Important links have a ⭐.
 -   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
 -   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
 -   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
+-   [Bedrock Network Protocol (Mojang)](https://mojang.github.io/bedrock-protocol-docs/) => [GitHub](https://github.com/Mojang/bedrock-protocol-docs)
 
 ### Getting Started with Your First Add-On
 
