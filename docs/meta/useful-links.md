@@ -140,7 +140,7 @@ These packs are published by the open-source community.
 
 ## Add-On Marketplaces & Links
 
--   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
+-   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/marketplace)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
 -   [CubitosMC](https://www.cubitosmc.com/)
