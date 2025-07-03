@@ -47,7 +47,7 @@ Important links have a ⭐.
 ## Software (installed)
 
 -   ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
--   ⭐ [bridge. Add-on Editor](https://bridge-core.github.io/)
+-   ⭐ [bridge. Add-on Editor](https://bridge-core.app/)
 -   ⭐ [VSCode Editor](https://code.visualstudio.com/)
 -   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith)
 -   [Add-on JSON Generator (Paid)](https://kaifireborn.itch.io/add-on-json-generator)
@@ -66,6 +66,7 @@ Important links have a ⭐.
 ## Bedrock Tools Websites
 
 -   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
+-   ⭐ [mctools.dev](https://mctools.dev/)
 -   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Add-on Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
