@@ -34,14 +34,12 @@ Important links have a ⭐.
 -   ⭐️ [Snowstorm](https://discord.gg/W9d78Z8AvM)
 -   [Amethyst](https://discord.gg/Cxrj9UXnDB)
 -   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
--   [Artists Refuge](https://discord.gg/aVXbPCdRr3)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
 -   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
 -   [Bedrock Protocol](https://discord.gg/G5sBv3TTCE)
 -   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
--   [MCBE Realm Hub](https://discord.gg/pCkYPvSGC8)
+-   [MCBE Realm Hub](https://discord.gg/mekWvR7kRx)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
--   [MCPECore](https://discord.com/invite/N3e6exUQGs)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
 -   [Minecraft RTX](http://discord.gg/vNWc3Hh)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
@@ -71,12 +69,12 @@ Important links have a ⭐.
 -   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Add-on Obfuscator](https://tools.pixelpoly.co/obfuscator)
 -   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
--   [behavior-builder (beta)](https://stirante.com/behavior/index)
--   [controller-builder (beta)](https://stirante.com/controller/index)
+-   [behavior-builder (beta)](https://stirante.com/behavior)
+-   [controller-builder (beta)](https://stirante.com/controller)
 -   [Convert .mcstructure to .mcfunction](https://mcbe-essentials.github.io/structure-to-function/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
--   [Foxynotail Tools](https://www.foxynotail.com/tools/)
+-   [Foxynotail Tools](https://foxynotail.com/software)
 -   [Glyph Tools](https://nhanaz.github.io/glyph/)
 -   [Items to Glyph Tool](https://minato-mba.github.io/content/Items%20to%20Glyph.html)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
@@ -99,7 +97,6 @@ Important links have a ⭐.
 -   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
 -   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 -   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
--   [Mcbehub](https://mcbehub.com/category/realmdocs)
 
 ### Getting Started with Your First Add-On
 
@@ -139,7 +136,6 @@ These packs are published by the open-source community.
 -   [`.texture_set.json` Adobe Substance 3D Painter plugin](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
 -   [r/minecraftRTX Getting Started Guide](https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/)
 -   [RenderBender](https://github.com/SpeedyCodes/RenderBender)
--   [RTX Presets](https://discord.com/channels/691547840463241267/919021996271108108)
 
 ## Add-On Marketplaces & Links
 
@@ -159,9 +155,7 @@ These packs are published by the open-source community.
 -   [Block Models](https://blockmodels.com/)
 -   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
 -   [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
--   [Minecraft Marketplace Partner Twitter List](https://twitter.com/i/lists/1191945551853629442?s=09)
 -   [Minecraft.net Official Add-ons Page](https://www.minecraft.net/en-us/addons)
 -   [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
 -   [Skin Pack Generator](https://github.com/MedicalJewel105/bedrock-skin-pack-generator)
 -   [UUID v4 Generator (Online)](https://www.uuidgenerator.net/version4)
--   [Windows 10 Non-Renderdragon Install](https://support.playhive.com/windows-10-installing-non-renderdragon-clients/)
