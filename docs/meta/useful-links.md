@@ -96,7 +96,6 @@ Important links have a ⭐.
 -   ⭐ [bedrock.dev](https://bedrock.dev/)
 -   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
 -   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
--   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 -   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
 ### Getting Started with Your First Add-On
@@ -160,3 +159,4 @@ These packs are published by the open-source community.
 -   [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
 -   [Skin Pack Generator](https://github.com/MedicalJewel105/bedrock-skin-pack-generator)
 -   [UUID v4 Generator (Online)](https://www.uuidgenerator.net/version4)
+-   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
