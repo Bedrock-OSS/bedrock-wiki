@@ -108,12 +108,12 @@ Where to use namespaces:
 Some content is identified by its file path. Therefore, it should be included in a folder that acts as the namespace:
 
 <FolderView :paths="[
-    "BP/functions/<namespace>/*.mcfunction",
-    "BP/loot_tables/<namespace>/*.json",
-    "BP/trading/<namespace>/*.json",
-    "BP/structures/<namespace>/*.mcstructure",
-    "RP/sounds/<namespace>/*.ogg",
-    "RP/textures/<namespace>/*.png",
+    'BP/functions/<namespace>/*.mcfunction',
+    'BP/loot_tables/<namespace>/*.json',
+    'BP/trading/<namespace>/*.json',
+    'BP/structures/<namespace>/*.mcstructure',
+    'RP/sounds/<namespace>/*.ogg',
+    'RP/textures/<namespace>/*.png',
 ]" />
 
 Other folders should not contain namespaces.
