@@ -848,12 +848,16 @@ The item must have the `minecraft:storage_item` component for this component to 
 -   To calculate the weight of an item, divide 64 by its max stack size.
 -   Items that stack to 64 weigh 1 each, those that stack to 16 weigh 4 each and unstackable items weigh 64.
 
-Type: Integer
+Type: Object
+
+-   `max_weight_limit`: Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:storage_weight_limit": 64
+"minecraft:storage_weight_limit": {
+    "max_weight_limit": 64
+}
 ```
 
 ### Storage Weight Modifier
@@ -862,12 +866,16 @@ Defines the additional weight the item adds when inside another storage item.
 
 -   A value of 0 means that this item is not allowed inside another storage item.
 
-Type: Integer (0-64)
+Type: Object
+
+-   `weight_in_storage_item`: Integer (0-64)
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:storage_weight_modifier": 4
+"minecraft:storage_weight_modifier": {
+    "weight_in_storage_item": 4
+}
 ```
 
 ### Tags
