@@ -21,7 +21,7 @@ This wiki is a knowledge-sharing website for technical features of Minecraft Bed
 Step-by-step tutorials intended as your first contact with add-ons.
 
 </Card>
-<Card title="Discord" link="/discord" image="assets/images/icons/discord.png">
+<Card title="Discord" link="/discord" image="assets/images/icons/book.png">
 
 Join our Discord server to learn about add-ons and seek help from other add-on creators.
 
