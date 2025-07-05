@@ -16,6 +16,7 @@ It's very easy to create custom splash texts. All you have to do is to create a 
 
 ```json
 {
+  "canMerge": true,
   "splashes": [
     "my custom splash text",
     "and my second custom splash text!",
@@ -24,6 +25,8 @@ It's very easy to create custom splash texts. All you have to do is to create a 
   ]
 }
 ```
+
+`canMerge` parameter decides if the game will show vanilla splash texts alongside custom splash texts too. If you set this parameter to `true`, the splash text will be choosen from both vanilla splash texts and custom splash texts. If you set this parameter to `false` or don't include it at all, the splash text will be choosen only from custom splash texts.
 
 <WikiImage
     src="/assets/images/concepts/splashes/A_splash_text_example.png"
