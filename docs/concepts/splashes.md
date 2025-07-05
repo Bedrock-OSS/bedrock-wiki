@@ -1,6 +1,7 @@
 ---
 title: Splashes
 description: Learn how to add your own splash texts to Minecraft.
+license: true
 mentions:
     - Peawies
 ---
