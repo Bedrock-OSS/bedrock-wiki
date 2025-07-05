@@ -6,7 +6,7 @@ mentions:
     - Peawies
 ---
 
-Splash texts are the yellow lines that appear next to Minecraft title on title screen. There are a bunch of splash texts that Minecraft has on its own, but you can modify these splashes too.
+Splash texts are the yellow lines that appear next to the Minecraft logo on the title screen. There are a bunch of splash texts that Minecraft has on its own, but you can modify these splashes too.
 
 ## Editing splashes
 
