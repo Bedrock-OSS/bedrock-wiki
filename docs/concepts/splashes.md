@@ -12,9 +12,7 @@ Splash texts are the yellow lines that appear next to the Minecraft logo on the 
 
 It's very easy to create custom splash texts. All you have to do is to create a `splashes.json` file in your resource pack and edit it. Splash texts support color symbols (`§`), so you can use them if you want.
 
-<FolderView :paths="[
-    'RP/splashes.json'
-]" />
+<CodeHeader>RP/splashes.json</CodeHeader>
 
 ```json
 {
