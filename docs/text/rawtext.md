@@ -14,7 +14,7 @@ mentions:
 
 [Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
-![](/assets/images/documentation/tellrawshow.png)
+![](/assets/images/text/rawtext/tellraw.png)
 
 Raw text is used to send and display rich text to players. This can be used in a `/tellraw` or `/titleraw` command.
 
@@ -157,7 +157,7 @@ In the example above, it outputs "`%s joined the game`". For a name to appear in
 #    Steve joined the game
 ```
 
-![](/assets/images/documentation/tellrawtranslate.png)
+![](/assets/images/text/rawtext/translations.png)
 
 ### %%s
 
