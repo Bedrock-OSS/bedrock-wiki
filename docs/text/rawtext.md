@@ -1,6 +1,7 @@
 ---
 title: Raw Text
 description: Understanding raw text JSON components used in the /tellraw and /titleraw commands.
+category: General
 mentions:
     - BedrockCommands
     - GTB3NW
@@ -15,7 +16,7 @@ mentions:
 
 ![](/assets/images/documentation/tellrawshow.png)
 
-Rawtexts are used to send and display rich text to players. This can be used in a `/tellraw` or `/titleraw` command.
+Raw text is used to send and display rich text to players. This can be used in a `/tellraw` or `/titleraw` command.
 
 Inside the squared brackets `[]`, this is where you will list multiple text objects of your choice.
 
@@ -27,7 +28,7 @@ You can combine components by adding a comma `,` at the end of a component.
 
 ## Text Component
 
-Displays a text. Used inside the quotation marks.
+Displays a regular string of text. Used inside the quotation marks.
 
 **Syntax:**
 
@@ -40,7 +41,7 @@ Displays a text. Used inside the quotation marks.
 Send a "Hello everyone!" message to all players in chat:
 
 ```json
-/tellraw @a { "rawtext": [{ "text":"Hello everyone!" }] }
+/tellraw @a { "rawtext": [{ "text": "Hello everyone!" }] }
 ```
 
 ### Escapes, Line Breaks, And Unicodes
@@ -48,7 +49,7 @@ Send a "Hello everyone!" message to all players in chat:
 1. Escapes are accessed as `\` and are used in order to use quotation marks `"` within components. Example:
 
     ```json
-    /tellraw @a { "rawtext": [{ "text":"He said, \"I like apples\"..." }] }
+    /tellraw @a { "rawtext": [{ "text": "He said, \"I like apples\"..." }] }
     #Output in chat:
     #    He said, "I like apples"...
     ```
@@ -56,7 +57,7 @@ Send a "Hello everyone!" message to all players in chat:
 2. Line breaks are used as `\n` to go down a line. Example:
 
     ```json
-    /tellraw @a { "rawtext": [{ "text":"Hello\nNext line" }] }
+    /tellraw @a { "rawtext": [{ "text": "Hello\nNext line" }] }
     #Output in chat:
     #    Hello
     #    Next line
@@ -65,16 +66,16 @@ Send a "Hello everyone!" message to all players in chat:
 3. Unicodes provides a unique number that displays an icon/emoji. Example:
 
     ```json
-    /tellraw @a { "rawtext": [{ "text":"\ue100" }] }
+    /tellraw @a { "rawtext": [{ "text": "\ue100" }] }
     ```
 
     - Output in chat:
 
-        ![](/assets/images/concepts/emojis/hud/shank.png)
+        ![](/assets/images/text/emojis/hud/shank.png)
 
     Note: the unicode symbol will display as it's corresponding icon/emoji in Minecraft only.
 
-    For more info and the full list of unicodes available in Bedrock, refer to the [Emojis & Symbols](/concepts/emojis) page.
+    For more info and the full list of unicodes available in Bedrock, refer to the [Emojis & Symbols](/text/emojis) page.
 
 ## Selector Component
 
