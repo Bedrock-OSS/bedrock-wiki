@@ -228,7 +228,7 @@ Now your texture should appear on your item.
 
 ### Item Name
 
-The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm`. This is the translation key for your item name, and it is used to allow for [localization](/concepts/text-and-translations). To set it, we just have to define it in our language files.
+The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm`. This is the translation key for your item name, and it is used to allow for [localization](/text/text-intro). To set it, we just have to define it in our language files.
 
 We already created these files when making our `RP` and `BP`, so we just need to add to them.
 

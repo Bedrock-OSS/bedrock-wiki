@@ -285,7 +285,7 @@ tile.wiki:custom_block.name=Custom Block
 tile.wiki:compass_block.name=Compass Block
 ```
 
-You can learn more about translation [here](/concepts/text-and-translations).
+You can learn more about translation [here](/text/text-intro).
 
 ## Result
 

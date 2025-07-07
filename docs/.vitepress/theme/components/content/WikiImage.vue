@@ -18,7 +18,7 @@ const style = computed<StyleValue>(() => ({
 </script>
 
 <template>
-  <div class="wiki-image">
+  <div class="wiki-image" :data-captioned="caption ? '' : undefined">
     <img v-if="typeof src === 'string'" :src="withBase(src)" :alt :width :height :style />
     <template v-else>
       <img :src="withBase(src.dark)" :alt :width :height :style data-theme="dark" />
@@ -38,6 +38,11 @@ const style = computed<StyleValue>(() => ({
 img {
   display: block;
   min-width: 100%;
+}
+
+[data-captioned] img {
+  background-color: var(--light-bg-color);
+  box-shadow: inset 0 0 0 1px var(--border-color);
 }
 
 .caption {
