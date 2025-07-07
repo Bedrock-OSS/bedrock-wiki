@@ -34,7 +34,7 @@ const language: LanguageRegistration = {
       },
     },
     emoji: {
-      match: ":\\w+:",
+      match: ":[^:]+:",
       name: "constant.character.escape.lang",
     },
     linebreak: {
