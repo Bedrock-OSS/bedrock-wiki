@@ -29,11 +29,7 @@ Item components are used to change how your item appears and functions in the wo
             }
         },
         "components": {
-            "minecraft:icon": {
-                "textures": {
-                    "default": "wiki:custom_item"
-                }
-            }
+            "minecraft:icon": "wiki:custom_item"
         }
     }
 }
