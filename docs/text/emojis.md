@@ -34,7 +34,7 @@ Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wik
 These can be used anywhere where normal letters can, such as in signs, books, item names, chat, etc.
 
 Below you can find platform specific emojis, as well as general symbols.
-There are instructions for creating custom emojis at the bottom of this page.
+You can learn how to create your own emojis [here](/text/custom-emojis)!
 
 ## Using Emojis
 
