@@ -39,17 +39,17 @@ The number of iterations increases proportionally with the number of elements.
 For reference, here is the number of derangements possible for elements ranging from 1 to 10:
 
 | Number of Elements (N) | Number of Derangements Possible (D(N)) |
-|------------------------|------------------------------|
-| 1                      | 0                            |
-| 2                      | 1                            |
-| 3                      | 2                            |
-| 4                      | 9                            |
-| 5                      | 44                           |
-| 6                      | 265                          |
-| 7                      | 1,854                        |
-| 8                      | 14,833                       |
-| 9                      | 133,496                      |
-| 10                     | 1,334,961                    |
+| ---------------------- | -------------------------------------- |
+| 1                      | 0                                      |
+| 2                      | 1                                      |
+| 3                      | 2                                      |
+| 4                      | 9                                      |
+| 5                      | 44                                     |
+| 6                      | 265                                    |
+| 7                      | 1,854                                  |
+| 8                      | 14,833                                 |
+| 9                      | 133,496                                |
+| 10                     | 1,334,961                              |
 
 The number of derangement possibilities increases rapidly as the number of elements grows.
 
@@ -84,7 +84,7 @@ scoreboard players operation @r[scores={wiki:id=0}] wiki:id = .Total wiki:id
 
 This is the function you run (once) each time you need to derange the positions of all targets:
 
-- `/function wiki/derange_position/initiate`
+-   `/function wiki/derange_position/initiate`
 
 <CodeHeader>BP/functions/wiki/derange_position/initiate.mcfunction</CodeHeader>
 
@@ -194,45 +194,33 @@ Finally, create your `tick.json` file:
 
 ```json
 {
-  "values": [
-    "wiki/event/worlds/on_initialise",
-    "wiki/scoreboard/players/id"
-  ]
+    "values": ["wiki/event/worlds/on_initialise", "wiki/scoreboard/players/id"]
 }
 ```
 
 ## Folder Structure
 
-<FolderView
-	:paths="[
-    'BP',
-    'BP/functions',
-    'BP/manifest.json',
-    'BP/pack_icon.png',
-    'BP/functions/wiki',
-    'BP/functions/wiki/scoreboard',
-    'BP/functions/wiki/scoreboard/players',
-    'BP/functions/wiki/scoreboard/players/id.mcfunction',
-    'BP/functions/wiki/scoreboard/objectives',
-    'BP/functions/wiki/scoreboard/objectives/add_all.mcfunction',
-    'BP/functions/wiki/event',
-    'BP/functions/wiki/event/worlds',
-    'BP/functions/wiki/event/worlds/on_initialise.mcfunction',
-    'BP/functions/wiki/derange_position',
+<FolderView :paths="[
     'BP/functions/wiki/derange_position/initiate.mcfunction',
     'BP/functions/wiki/derange_position/process.mcfunction',
     'BP/functions/wiki/derange_position/teleport.mcfunction',
-    'BP/functions/tick.json'
-]"
-></FolderView>
+    'BP/functions/wiki/event/worlds/on_initialise.mcfunction',
+    'BP/functions/wiki/scoreboard/objectives/add_all.mcfunction',
+    'BP/functions/wiki/scoreboard/players/id.mcfunction',
+    'BP/functions/tick.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+]" />
 
 ## Download Function Pack
 
 For convenience, you can download the `.mcpack` for the Function Pack here:
 
-<Card image="/assets/images/commands/BClogo.png" title="Download" link="https://github.com/BedrockCommands/developer-packs/releases/download/mpd/Multiplayer_Position_Derangement.FP.mcpack">
-
-</Card>
+<Card
+    image="/assets/images/discord/bcc.png"
+    title="Download"
+    link="https://github.com/BedrockCommands/developer-packs/releases/download/mpd/Multiplayer_Position_Derangement.FP.mcpack"
+/>
 
 Simply activate the pack on your world and run once (each time you need) the following command in multiplayer:
 
