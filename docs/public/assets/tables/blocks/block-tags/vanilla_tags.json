@@ -1250,7 +1250,8 @@
         "`minecraft:detector_rail`",
         "`minecraft:golden_rail`",
         "`minecraft:rail`"
-      ]
+      ],
+      "functionality": "Gives the block rail functionality, as long as the block does not have a collision box. This will only work in the North and South directions."
     },
     {
       "tag": "`sand`",
