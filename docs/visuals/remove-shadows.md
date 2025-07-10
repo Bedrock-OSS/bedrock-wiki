@@ -45,27 +45,31 @@ You can also add the [custom hit test component](https://bedrock.dev/docs/stable
     ]
 }
 ```
+
 ## Render when Invisible
-Another method is to give the entity the effect of invisibility, and set the `"minecraft:renders_when_invisible"` component
+
+Another method is to give the entity the effect of invisibility (which hides the entity's shadow) and apply the `"minecraft:renders_when_invisible"` component.
+
 ```json
-    "components": {
-        "minecraft:renders_when_invisible": {},
-        "minecraft:spell_effects": {
-            "add_effects": [
-                {
+"components": {
+    "minecraft:renders_when_invisible": {},
+    "minecraft:spell_effects": {
+        "add_effects": [
+            {
                 "visible": false,
                 "effect": "invisibility",
                 "duration": "infinite"
-                }
-            ]
-        },
+            }
+        ]
     }
+}
 ```
-## Teleport underground
+
+## Teleport Underground
 
 If you have a dummy entity (invisible) that you need to interact with, you can teleport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
 
-## Using runtime identifier
+## Using Runtime Identifiers
 
 Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifiers document](/entities/runtime-identifier) for more information.
 
@@ -76,8 +80,10 @@ This method is no longer supported. With the advent of render-dragon, materials 
 :::
 
 :::warning
-    - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
-    - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+
+-   This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
+-   This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+
 :::
 
 <Spoiler title="Removing shadows via Materials.">
