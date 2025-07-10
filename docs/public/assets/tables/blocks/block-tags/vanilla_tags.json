@@ -1250,7 +1250,8 @@
         "`minecraft:detector_rail`",
         "`minecraft:golden_rail`",
         "`minecraft:rail`"
-      ]
+      ],
+      "functionality": "Allows minecarts to be placed on the block. Causes entities with the `minecraft:rail_movement` component (such as minecarts) to snap to the block and move across it towards the north or south as long as the block does not have a collision box."
     },
     {
       "tag": "`sand`",
