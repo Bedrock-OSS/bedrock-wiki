@@ -21,7 +21,7 @@ This document will showcase some of the various ways to remove shadows, and any 
 
 One possibility is to make the size of the collision component very small. This will make it hard to interact/hit the entity, but it will make the shadow disappear!
 
-<CodeHeader></CodeHeader>
+<CodeHeader>minecraft:entity > components</CodeHeader>
 
 ```json
 "minecraft:collision_box": {
@@ -32,16 +32,17 @@ One possibility is to make the size of the collision component very small. This 
 
 You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit the entity, although you will not be able to interact with it. The `custom_hit_test` will not create a shadow.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>minecraft:entity > components</CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
         {
-            "pivot": [0, 0.5, 0],//This is the position of the hitbox, you can change the X, Y and Z values.
+            "pivot": [0, 0.5, 0], // This is the position of the hitbox, you can change the X, Y and Z values.
             "width": 0.8,
             "height": 0.7
-        }//And you can add many more hitboxes as you want, just copy-paste the hitbox inside the "hitboxes" array.
+        }
+        // And you can add many more hitboxes as you want, just copy-paste the hitbox inside the "hitboxes" array.
     ]
 }
 ```
@@ -50,18 +51,18 @@ You can also add the [custom hit test component](https://bedrock.dev/docs/stable
 
 Another method is to give the entity the effect of invisibility (which hides the entity's shadow) and apply the `"minecraft:renders_when_invisible"` component.
 
+<CodeHeader>minecraft:entity > components</CodeHeader>
+
 ```json
-"components": {
-    "minecraft:renders_when_invisible": {},
-    "minecraft:spell_effects": {
-        "add_effects": [
-            {
-                "visible": false,
-                "effect": "invisibility",
-                "duration": "infinite"
-            }
-        ]
-    }
+"minecraft:renders_when_invisible": {},
+"minecraft:spell_effects": {
+    "add_effects": [
+        {
+            "visible": false,
+            "effect": "invisibility",
+            "duration": "infinite"
+        }
+    ]
 }
 ```
 
