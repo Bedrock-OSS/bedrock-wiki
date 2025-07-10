@@ -45,7 +45,22 @@ You can also add the [custom hit test component](https://bedrock.dev/docs/stable
     ]
 }
 ```
-
+## Render when Invisible
+Another method is to give the entity the effect of invisibility, and set the `"minecraft:renders_when_invisible"` component
+```json
+    "components": {
+        "minecraft:renders_when_invisible": {},
+        "minecraft:spell_effects": {
+            "add_effects": [
+                {
+                "visible": false,
+                "effect": "invisibility",
+                "duration": "infinite"
+                }
+            ]
+        },
+    }
+```
 ## Teleport underground
 
 If you have a dummy entity (invisible) that you need to interact with, you can teleport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
