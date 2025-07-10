@@ -1251,7 +1251,7 @@
         "`minecraft:golden_rail`",
         "`minecraft:rail`"
       ],
-      "functionality": "Gives the block rail functionality, as long as the block does not have a collision box. This will only work in the North and South directions."
+      "functionality": "Allows minecarts to be placed on the block. Causes entities with the `minecraft:rail_movement` component (such as minecarts) to snap to the block and move across it towards the north or south as long as the block does not have a collision box."
     },
     {
       "tag": "`sand`",
