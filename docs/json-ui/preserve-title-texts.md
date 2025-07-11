@@ -6,7 +6,7 @@ tags:
 mentions:
     - shanewolf38
     - SmokeyStack
-    - pedro_denovo
+    - pedrodenovo
 description: In this tutorial, you will learn how to create reusable UI elements that preserve binding data, updating only when a specific keyword is detected in the data.
 ---
 
