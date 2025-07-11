@@ -113,7 +113,7 @@ Permutation conditions are written as Molang expression strings, and have very l
     -   Variables (including `temp` variables) cannot be assigned.
 
 ```molang
-q.block_state('wiki:integer_state_example') < 6 && !q.block_state('wiki:boolean_state_example')
+q.block_state('wiki:integer_state_example') < 6 || !q.block_state('wiki:boolean_state_example')
 ```
 
 ## Permutation Limits
