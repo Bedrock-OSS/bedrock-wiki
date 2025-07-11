@@ -158,7 +158,8 @@
         "`minecraft:sweet_berry_bush`",
         "`minecraft:torchflower_crop`",
         "`minecraft:wheat`"
-      ]
+      ],
+      "functionality": "Allows the block to be pollinated by entities with the `minecraft:grows_crops` component (such as bees). Given that custom blocks cannot have the `growth` state, pollination will only result in particles and sounds playing."
     },
     {
       "tag": "`minecraft:diamond_tier_destructible`",
