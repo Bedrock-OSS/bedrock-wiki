@@ -6,6 +6,7 @@ mentions:
     - TheItsNameless
     - MedicalJewel105
     - QuazChick
+    - Andexter8
 ---
 
 Now that you have the wiki set up locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
@@ -213,6 +214,20 @@ A dangerous place
 :::danger STOP!
 A dangerous place
 :::
+
+### Syntax highlighting on inline code blocks
+
+The wiki has support for syntax highlighting on inline code blocks.
+
+Here is an example of how to use it:
+
+```md
+`console.log("Hello World!");`{lang=js}
+```
+
+The above example will render as:
+
+`console.log("Hello World!");`{lang=js}
 
 ### Links
 
