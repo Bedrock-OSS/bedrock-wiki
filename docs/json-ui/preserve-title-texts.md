@@ -6,26 +6,34 @@ tags:
 mentions:
     - shanewolf38
     - SmokeyStack
-description: In this tutorial, you will learn how to preserve binding data and update elements based on titles containing specific strings.
+    - pedrodenovo
+description: In this tutorial, you will learn how to create reusable UI elements that preserve binding data, updating only when a specific keyword is detected in the data.
 ---
 
-In this tutorial, you will learn how to preserve binding data and update elements based on titles containing specific strings.
+In this tutorial, you will learn how to create a robust and reusable UI component that preserves binding data. The element will listen for incoming data (like a title or subtitle) and only update its display when that data contains a specific keyword, ignoring all other data.
 
 ## Overview
 
-Titles are a very common method used to pass data into the UI system. It is very helpful to have elements that will only update this data when titles containing specific strings are passed in, ignoring all other titles that do not contain that string. Despite the name of this tutorial, this method will work for any data that is passed in through a binding (such as subtitles, player scoreboard names, etc.), not just titles.
+Passing data to the UI via titles, subtitles, or scoreboards is a very common technique. However, you often need a UI element to only react to specific information, not every single title command that is run.
 
-To save specific strings, the `visibility_changed` binding update condition is used in combination with `source_control_name` to update a binding only when a specific string is included and then pass that binding to another element.
+This guide demonstrates how to build a component that "listens" for a keyword. When it sees it, it saves the associated text and displays it. The key is creating a component that is self-contained and can be used multiple times on the same screen without conflicts.
 
-## Title Command
+The old methods for this often had bugs or used `global` variables, which is not ideal for reusable components. The method below uses a **`property_bag`** to ensure each component instance has its own local "memory", making it truly modular.
 
-The following code creates a label element that, when added to the root panel, displays the title on the screen when that title includes the string "update" in it (the "update" text is removed from the text displayed). Any title passed after will only update the displayed text if the string "update" is included in it.
+---
+
+## The Reusable Component
+
+The following JSON creates a `label` element that is controlled by a hidden child panel. This panel handles all the logic for detecting the keyword, saving the text, and making it available to the parent label.
+
+### The Code
+
+This code can be placed in any UI screen file, such as `hud_screen.json`.
 
 <CodeHeader>RP/ui/hud_screen.json</CodeHeader>
-
 ```json
 "preserved_title_display": {
-	"$update_string": "update",   // title must include this string to update the element
+	"$update_string": "update",
 	"type": "label",
 	"text": "#text",
 	"controls": [
@@ -33,16 +41,18 @@ The following code creates a label element that, when added to the root panel, d
 			"data_control": {
 				"type": "panel",
 				"size": [ 0, 0 ],
+				"property_bag": {
+					"#preserved_text": ""
+				},
 				"bindings": [
 					{
-						"binding_name": "#hud_title_text_string"      // reads in the current title string
+						"binding_name": "#hud_title_text_string"
 					},
 					{
 						"binding_name": "#hud_title_text_string",
-						"binding_name_override": "#preserved_text",   // updates #preserved_text when visibility of this element changes
+						"binding_name_override": "#preserved_text",
 						"binding_condition": "visibility_changed"
 					},
-					// element becomes visible then immediately turns invisible when a title containing the update string is passed
 					{
 						"binding_type": "view",
 						"source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
@@ -55,19 +65,43 @@ The following code creates a label element that, when added to the root panel, d
 	"bindings": [
 		{
 			"binding_type": "view",
-			"source_control_name": "data_control",   						// reads bindings from the "data_control" child element
-			//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
-			"source_property_name": "(#preserved_text - $update_string)",   // remove string update text from the text to be displayed
+			"source_control_name": "data_control",
+			"source_property_name": "(#preserved_text - $update_string)",
 			"target_property_name": "#text"
 		}
 	]
-},
-```
+}
+````
 
-The variable `$update_string` defines the specific string that must be included in the title command for this element to update. The child element `data_control` is used to preserve the title text whenever it includes the update string. This must be a child or sibling element of the element the preserved text is passed, as the visibility of the `data_control` element must change to save the text. The first binding in the element will keep track of the current title text, the second binding will save the current title text to the `#preserved_text` binding whenever the visibility of the element changes, and the third binding will make the element visible and then immediately turn it invisible when a title including the update string is passed.
+-----
 
-The third binding in the `data_control` element has two main parts, both of which must be true for the element to be visible.
-1. `not (#hud_title_text_string = #preserved_text)` - becomes true whenever the current title text does not match the preserved title text
-2. `not ((#hud_title_text_string - $update_string)` - becomes true when the current title text includes the update string
+### How It Works
 
-When a title containing the update string is passed which differs from the currently preserved text, both parts become true and the element updates. The preserved text is then updated and the first part immediately becomes false, turning the element invisible.
+This component is divided into two main parts: the visible **`label`** (`preserved_title_display`) and a hidden **`panel`** (`data_control`) that acts as the brain.
+
+#### The `data_control` Logic
+
+This invisible panel does all the heavy lifting.
+
+1.  **`property_bag`**: This is the key to making the component reusable.
+
+      * `"#preserved_text": ""` creates and initializes a **local variable** called `#preserved_text`.
+      * Because it's not `global`, every instance of `preserved_title_display` gets its own private `#preserved_text`, so they don't interfere with each other. This fixes the major flaw in older methods.
+
+2.  **`visibility_changed` Binding**: This binding is the trigger for saving data. When the `data_control` panel's visibility changes, it instantly copies the current title (`#hud_title_text_string`) into our local `#preserved_text` variable.
+
+3.  **Visibility Condition**: This binding makes the panel "flicker" (become visible for a single frame) only when the right conditions are met. Both must be true:
+
+      * `not (#hud_title_text_string = #preserved_text)`: Is the incoming title **different** from the one we already have saved? (Prevents running on the same title).
+      * `not ((#hud_title_text_string - $update_string) = #hud_title_text_string)`: Does the incoming title **contain** our keyword (`$update_string`)?
+
+When a new title with the keyword arrives, the panel becomes visible, `visibility_changed` fires and saves the text, and then the visibility condition immediately becomes false again, hiding the panel.
+
+#### The `preserved_title_display` Binding
+
+The main label element has a simple job. It just reads the text from its child `data_control`.
+
+  * `"source_control_name": "data_control"`: Tells the label to look at its child for data.
+  * `source_property_name`: `(#preserved_text - $update_string)`: It takes the text saved in our local `#preserved_text` variable and removes the keyword (`$update_string`) before displaying it.
+
+This creates a clean, efficient, and fully reusable component for your UI.
