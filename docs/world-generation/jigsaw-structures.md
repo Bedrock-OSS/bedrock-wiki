@@ -210,7 +210,13 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
     ```json
     "heightmap_projection": "world_surface"
     ```
-
+-   `liquid_settings`: Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`.
+-   
+    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    
+    ```json
+    "liquid_settings": "ignore_waterlogging"
+    ```
 -   `start_height`: The setting which controls the offset from `heightmap_projection` to place the `start_pool`.
     It has multiple entries based on the `type` field.
 
