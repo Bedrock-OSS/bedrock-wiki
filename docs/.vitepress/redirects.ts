@@ -42,7 +42,8 @@ export default {
   "/entities/npc-dialogs": "/entities/npc-dialogue",
 
   "/items/3d-items": "/items/attachables",
-  "/items/item-categories": "/items/creative-categories",
+  "/items/custom-pottery-sherd": "/items/custom-pottery-sherds",
+  "/items/item-categories": "/documentation/menu-categories",
 
   "/json-ui/custom-buttons": "/json-ui/buttons-and-toggles",
 
