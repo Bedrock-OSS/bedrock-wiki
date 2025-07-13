@@ -570,6 +570,6 @@ What you have created:
 
 Template pack made according to this tutorial, adding a "shell" block into the "Nature" tab.
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_rotation.mcaddon">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/precise_rotation.mcaddon">
     Download MCADDON
 </Button>

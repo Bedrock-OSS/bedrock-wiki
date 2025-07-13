@@ -440,9 +440,9 @@ Our entity now has its shape, but it also needs a texture. This texture can also
 
 `RP/textures/entity/ghost.png`
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/entity/ghost.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/main/ma-guide/guide_RP/textures/entity/ghost.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/entity/ghost.png">
     Download texture here
 </Button>
 

@@ -236,7 +236,7 @@ The final file within a functions folder is the **`tick.json`** file. This speci
 <Card
     image="/assets/images/discord/bcc.png"
     title="Download"
-    link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack"
+    link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/functions_sample.mcpack"
 />
 
 ## Troubleshooting Functions

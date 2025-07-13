@@ -92,9 +92,9 @@ A common mistake everyone does the first time is to repeat the page title as a l
 You should never do this because the title given in the frontmatter will already be placed at the top of your page automatically, and having multiple level 1 headings in a single page is invalid.
 :::
 
-## Wiki Add-On
+## Bedrock Examples
 
-Sometimes we need to give a template/example pack after a guide. For this purpose we use separate GitHub repository: [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon).
+Sometimes we need to give a template/example pack after a guide. For this purpose we use separate GitHub repository: [bedrock-examples](https://github.com/Bedrock-OSS/bedrock-examples).
 Please, add your packs there. It helps us to maintain all add-ons and keep them up-to-date.
 
 ## Viewing the Wiki Locally

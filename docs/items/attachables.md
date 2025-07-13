@@ -243,6 +243,6 @@ Similar to the third-person animation, look in the Attachable Guide file and imp
 
 Each of these methods have been compiled into an example pack you may reference, for if you are getting stuck or simply want to see a working example.
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/attachable-example.mcpack">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/attachable-example.mcpack">
     💾 Example Pack
 </Button>

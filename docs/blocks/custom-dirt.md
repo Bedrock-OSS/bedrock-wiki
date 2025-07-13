@@ -122,10 +122,10 @@ Nevertheless, it's just special dirt. Let's walk through how it works:
 -   Create a "farmland" texture for the top of the block (both wet and dry) and then assign it a dirt texture to the sides. You will also need to make a custom block geometry that is 16&times;15&times;16 pixels in height, one row smaller then a normal block.
 -   After that we can add our moisture logic to our block to emulate vanilla functionality.
 
-<BButton
-    link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/farmland.geo.json"
+<Button
+    link="https://github.com/Bedrock-OSS/bedrock-examples/blob/main/resources/custom_crops/rp/models/blocks/farmland.geo.json"
     color=blue
->Download Custom Farmland Geometry</BButton>
+>Download Custom Farmland Geometry</Button>
 
 ### Farmland Moisture
 
