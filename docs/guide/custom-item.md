@@ -162,9 +162,9 @@ Textures are stored in the resource pack under `RP/textures` as images. In order
 
 To start we need a texture for our item. For our ectoplasm, we will be using this image.
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resouces/guide/rp/textures/items/ectoplasm.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resouces/guide/rp/textures/items/ectoplasm.png">
     Download texture here
 </Button>
 
@@ -302,7 +302,7 @@ Your folder structure should look like this:
 
 </Spoiler>
 
-If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
+If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/bedrock-examples/tree/main/guide).
 
 ## Your Progress So Far
 

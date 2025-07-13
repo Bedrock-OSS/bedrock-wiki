@@ -120,7 +120,7 @@ These packs are maintained and published by Mojang.
 
 These packs are published by the open-source community.
 
--   [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon)
+-   [bedrock-examples](https://github.com/Bedrock-OSS/bedrock-examples)
 -   [Enchantment Details](https://github.com/supercam19/EnchantmentDetails)
 -   [Function Pack Templates](https://bedrockcommands.org/resources/)
 
