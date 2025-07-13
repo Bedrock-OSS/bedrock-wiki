@@ -45,7 +45,7 @@ export function defineWikiConfig(config: WikiConfig) {
     transformHead,
 
     srcExclude,
-    ignoreDeadLinks: isFastBuild,
+    ignoreDeadLinks: isFastBuild ? fastBuild.excludedPages : undefined,
 
     themeConfig: {
       longTitle,
