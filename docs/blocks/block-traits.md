@@ -45,7 +45,7 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
 
 _This example will set the `minecraft:vertical_half` block state when placed to either `'top'` or `'bottom'` - depending on where the player is looking._
 
-**Permutations are still required for this state to make a functional difference, with conditions querying**
+**Entries in the [permutations array](/blocks/block-permutations#conditionally-applying-components) are still required for this state to make a functional difference, with conditions querying**
 
 ```molang
 q.block_state('minecraft:vertical_half')
