@@ -143,7 +143,7 @@
         "`minecraft:skull_pottery_sherd`",
         "`minecraft:snort_pottery_sherd`"
       ],
-      "functionality": "Items that can be used to craft a Decorated Pot. Learn how to create custom pottery sherds [here](/items/custom-pottery-sherd)."
+      "functionality": "Items that can be used to craft a Decorated Pot. Learn how to create custom pottery sherds [here](/items/custom-pottery-sherds)."
     },
     {
       "tag": "`minecraft:diamond_tier`",
