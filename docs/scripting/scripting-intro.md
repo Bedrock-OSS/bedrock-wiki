@@ -8,7 +8,7 @@ mentions:
     - JaylyDev
     - SmokeyStack
     - kumja1
-    - SimpleDevMCBE
+    - realfeatherdev
     - QuazChick
     - jeanmajid
 description: Learn how to modify your world through the use of JavaScript files.
@@ -19,7 +19,7 @@ This script API page assumes basic knowledge of pack setup for add-ons. For info
 :::
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.80x.
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.90.
 :::
 
 ## Overview
@@ -39,7 +39,7 @@ In the behavior pack manifest, you need to add a `script` module and set an `ent
 ```json
 {
     "uuid": "239c134f-67bf-4738-9bcc-8c69d31b1f72",
-    "version": [1, 0, 0],
+    "version": "1.0.0",
     "type": "script",
     "language": "javascript",
     "entry": "scripts/main.js"
@@ -57,33 +57,26 @@ Additionally, dependencies will need to be set based on modules used. To import 
         "name": "Bedrock Add-ons",
         "description": "Script API Template",
         "uuid": "<UUID>",
-        "version": [0, 1, 0],
-        "min_engine_version": [1, 20, 70]
+        "version": "1.0.0"
+        "min_engine_version": [1, 21, 90]
     },
     "modules": [
         {
+            "uuid": "<UUID>",
+            "version": "1.0.0",
             "type": "script",
             "language": "javascript",
-            "uuid": "<UUID>",
             // Your entry file; where Minecraft will read your code from.
             "entry": "scripts/main.js",
-            "version": [0, 1, 0]
         }
     ],
-    // to use eval() and Function() inside your code, remove it if not neccessary
-    "capabilities": ["script_eval"],
+    // Uncomment to use eval() and Function() inside your code (unrecommended), remove if not neccessary
+    // "capabilities": ["script_eval"],
     "dependencies": [
         {
-            // Enables the use of @minecraft/server module, with a version of 1.18.0.
-            // It must be the latest version or it might not work!
+            // Enables the use of @minecraft/server module, with a version of 2.0.0 (the latest stable version available).
             "module_name": "@minecraft/server",
-            "version": "1.18.0"
-        },
-        {
-            // Enables the use of @minecraft/server-ui module, with a version of 1.3.0.
-            // It must be the latest version or it might not work!
-            "module_name": "@minecraft/server-ui",
-            "version": "1.3.0"
+            "version": "2.0.0"
         }
     ]
 }
@@ -95,7 +88,9 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server`:
 
-    -   [`1.18.0`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0) (Latest version)
+    -   [`2.0.0`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0) (Latest version)
+    -   [`1.19.0`](https://www.npmjs.com/package/@minecraft/server/v/1.19.0)
+    -   [`1.18.0`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0)
     -   [`1.17.0`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0)
     -   [`1.16.0`](https://www.npmjs.com/package/@minecraft/server/v/1.16.0)
     -   [`1.15.0`](https://www.npmjs.com/package/@minecraft/server/v/1.15.0)
@@ -117,7 +112,8 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server-ui`:
 
-    -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0) (Latest version)
+    -   [`2.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0) (Latest version, requires `@minecraft/server@2.0.0`)
+    -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0)
     -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.2.0)
     -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server/v/1.1.0)
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0) (Requires `@minecraft/server@1.2.0`)
@@ -126,32 +122,36 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server`:
 
-    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0-beta.1.21.70-stable) (1.21.70x only)
-    -   [`1.18.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0-beta.1.21.62-stable) (1.21.60x only)
-    -   [`1.17.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0-beta.1.21.50-stable) (1.21.50x only)
-    -   [`1.16.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.16.0-beta.1.21.40-stable) (1.21.40x only)
-    -   [`1.15.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.15.0-beta.1.21.30-stable) (1.21.30x only)
-    -   [`1.14.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.14.0-beta.1.21.20-stable) (1.21.20x only)
+    -   [`2.1.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.1.0-beta.1.21.90-stable) (1.21.90)
+    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0-beta.1.21.80-stable) (1.21.70)
+    -   [`1.18.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.18.0-beta.1.21.62-stable) (1.21.60)
+    -   [`1.17.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.17.0-beta.1.21.50-stable) (1.21.50)
+    -   [`1.16.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.16.0-beta.1.21.40-stable) (1.21.40)
+    -   [`1.15.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.15.0-beta.1.21.30-stable) (1.21.30)
+    -   [`1.14.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.14.0-beta.1.21.20-stable) (1.21.20)
 
 -   `@minecraft/server-ui`:
-    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.70-stable) (1.21.70x)
-    -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.4.0-beta.1.21.50-stable) (This can be for any version between 1.21.3x to 1.21.6x)
-    -   [`1.3.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0-beta.1.21.23-stable)
+
+    -   [`2.1.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.90-stable) (1.21.90)
+    -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.80-stable) (1.21.70)
+    -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.4.0-beta.1.21.50-stable) (1.21.30)
+    -   [`1.3.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0-beta.1.21.23-stable) (1.21.20)
+    
 -   `@minecraft/server-gametest`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.21.70-stable)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.21.90-stable)
 
 -   `@minecraft/server-net`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.21.70-stable) (Bedrock Dedicated Server module only, must be enabled in `permission.json` as it is not enabled by default)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-net/v/1.0.0-beta.1.21.90-stable) (Bedrock Dedicated Server module only, must be enabled in `permission.json` as it is not enabled by default)
 
 -   `@minecraft/server-admin`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.1.21.70-stable) (Bedrock Dedicated Server module only)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-admin/v/1.0.0-beta.1.21.90-stable) (Bedrock Dedicated Server module only)
 
 -   `@minecraft/debug-utilities`:
 
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/debug-utilities/v/1.0.0-beta.1.21.70-stable)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/debug-utilities/v/1.0.0-beta.1.21.90-stable)
 
 In order to use the `eval()` function or `Function()` constructors within your code, you can add the following in the manifest capabilities:
 
@@ -232,12 +232,12 @@ These allow for enhanced auto-completions and validation when used inside of you
 Latest beta API modules:
 
 ```bash
-npm i @minecraft/server@2.0.0-beta.1.21.70-stable
-npm i @minecraft/server-ui@2.0.0-beta.1.21.70-stable
-npm i @minecraft/server-gametest@1.0.0-beta.1.21.70-stable
-npm i @minecraft/server-admin@1.0.0-beta.1.21.70-stable
-npm i @minecraft/server-net@1.0.0-beta.1.21.70-stable
-npm i @minecraft/debug-utilities@1.0.0-beta.1.21.70-stable
+npm i @minecraft/server@2.1.0-beta.1.21.90-stable
+npm i @minecraft/server-ui@2.1.0-beta.1.21.90-stable
+npm i @minecraft/server-gametest@1.0.0-beta.1.21.90-stable
+npm i @minecraft/server-admin@1.0.0-beta.1.21.90-stable
+npm i @minecraft/server-net@1.0.0-beta.1.21.90-stable
+npm i @minecraft/debug-utilities@1.0.0-beta.1.21.90-stable
 ```
 
 Latest stable API modules:
