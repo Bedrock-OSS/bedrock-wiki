@@ -123,7 +123,7 @@ This will be our `"minecraft:max_stack_size"` component. For other components yo
 
 ```json
 "components": {
-	"minecraft:max_stack_size": 16
+    "minecraft:max_stack_size": 16
 }
 ```
 
@@ -162,9 +162,9 @@ Textures are stored in the resource pack under `RP/textures` as images. In order
 
 To start we need a texture for our item. For our ectoplasm, we will be using this image.
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resouces/guide/rp/textures/items/ectoplasm.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/items/ectoplasm.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resouces/guide/rp/textures/items/ectoplasm.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/items/ectoplasm.png">
     Download texture here
 </Button>
 
