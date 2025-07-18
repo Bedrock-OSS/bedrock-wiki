@@ -45,7 +45,7 @@ const BlockCreativeModeOnlyComponent = {
     beforeOnPlayerPlace(event) {
         const gameMode = event.player?.getGameMode();
 
-        if (gameMode === GameMode.Creative) {
+        if (gameMode !== GameMode.Creative) {
             event.cancel = true;
         }
     },
