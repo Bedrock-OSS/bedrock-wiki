@@ -558,10 +558,10 @@ Render methods essentially control how a block appears in the world, much like e
 
 | Render Method             | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples               |
 | ------------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------ |
-| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings         |
-| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors               |
+| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Ladder, Monster Spawner, Vines |
+| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Saplings, Trapdoors     |
 | `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
-| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains |
+| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | Powder Snow                    |
 | `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
 
 -   **_Transparency_** - fully see-through areas.
@@ -578,7 +578,7 @@ Material instances using the following render methods will currently not actuall
 | Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
 | ----------------------------------- | ------------------------- | ---------------- | ---------------- |
 | `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
-| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp             |
+| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp, Sugarcane  |
 | `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
 
 -   **_Near Appearance_** - the render method used before reaching half the render distance.
