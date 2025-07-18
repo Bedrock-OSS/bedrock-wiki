@@ -42,8 +42,8 @@ import { system, GameMode } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockCreativeModeOnlyComponent = {
-    beforeOnPlayerPlace({ player }) {
-        const gameMode = player?.getGameMode();
+    beforeOnPlayerPlace(event) {
+        const gameMode = event.player?.getGameMode();
 
         if (gameMode === GameMode.Creative) {
             event.cancel = true;
