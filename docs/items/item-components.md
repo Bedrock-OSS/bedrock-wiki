@@ -448,9 +448,10 @@ Type: Object
 
 ### Food
 
-When an item has a food component, it becomes edible to the player. Must have the `minecraft:use_modifiers` component in order to function properly.
+When an item has a food component, it becomes edible to the player.
+Must have the [`minecraft:use_modifiers`](#use-modifiers) component in order to function properly.
 
-Will implicitly play the eating animation in third person. First person requires `minecraft:use_animation`.
+To display an eating/drinking animation, also apply the [`minecraft:use_animation`](#use-animation) component to the item.
 
 Type: Object
 
