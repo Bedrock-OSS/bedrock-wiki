@@ -84,3 +84,12 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
     We have bunch of additional methods exposed by QuickJS, but do not expect anything game-changing!
     We do have some additional string methods to wrap string in html formats. For example: `"text".bolt() -> "<b>text<b>"`.
     These methods are useless and not documented and we are not going to either.
+
+## JavaScript Engine Update History
+
+- **_1.21 (Tricky Trials)_**
+
+    - `BigInt` – Global support for arbitrary-precision integers (e.g. `123n`).
+    - `Object.hasOwn(obj, prop)` – Checks if `obj` has its own property `prop`.
+    - `Array.prototype.findLast(callbackFn, thisArg?)` – Returns the last item matching the condition.
+    - `Array.prototype.at(index)` – Returns the element at the given `index`.
