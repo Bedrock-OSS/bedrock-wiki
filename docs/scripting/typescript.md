@@ -23,8 +23,6 @@ TypeScript is a language which requires compilation into JavaScript. Minecraft h
 
 First, the TypeScript files need to be compiled into JavaScript, which is all accomplished by utilizing the [TypeScript Compiler](https://www.npmjs.com/package/typescript). Then the files can be utilized by Minecraft's scripting system.
 
-## Script API
-
 ## Prerequisites
 
 1. Minecraft Bedrock Edition (Windows 10)
