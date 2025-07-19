@@ -19,7 +19,7 @@ This also means that they are not compatible with the `bone_visibility` and `cul
 
 ## Applying Vanilla Models
 
-Vanilla block models are applied in the same way as [custom block models](/blocks/block-models), using the [geometry](/blocks/block-components#geometry) component, with textures defined through [material instances](/blocks/block-components#material-instances):
+Vanilla block models are applied in the same way as [custom block models](/blocks/block-models), using the [geometry](/blocks/block-components#geometry) component, with textures defined in [material instances](/blocks/block-components#material-instances):
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
