@@ -18,7 +18,9 @@ This wiki is a knowledge-sharing website for technical features of Minecraft Bed
 <CardGrid>
 <Card title="Beginner's Guide" link="/guide/introduction" image="/assets/images/icons/crafting_table.png">
 
-Step-by-step tutorials intended as your first contact with add-ons.
+Our collection of step-by-step tutorials intended as your first contact with add-ons.
+
+Learn what add-ons are and how you can set up your own project to get started developing.
 
 </Card>
 <Card title="Discord" link="/discord" image="assets/images/icons/book.png">
