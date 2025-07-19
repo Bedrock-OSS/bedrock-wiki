@@ -48,6 +48,7 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
 
 -   **_What is supported_**
 
+    -   `BigInt`{lang=js} – Global support for arbitrary-precision integers (e.g. `123n`{lang=js}).
     -   `Object`{lang=js} - Standard function constructor for objects
     -   `Function`{lang=js} - Standard function constructor for functions. Note that to use this the `script_eval` capability must be added to the pack manifest.
     -   `Error`{lang=js} - (`EvalError`{lang=js}, `RangeError`{lang=js}, `ReferenceError`{lang=js}, `SyntaxError`{lang=js}, `TypeError`{lang=js}, `URIError`{lang=js}, `InternalError`{lang=js}, `AggregateError`{lang=js}) - Classes for error construction
@@ -84,6 +85,7 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
 -   **Extended Methods**
 
     We have bunch of additional methods exposed by QuickJS, but do not expect anything game-changing!
+
     We do have some additional string methods to wrap string in html formats. For example: `"text".bolt()`{lang=js} → `<b>text<b>`{lang=html}.
     These methods are useless and not documented and we are not going to either.
 
