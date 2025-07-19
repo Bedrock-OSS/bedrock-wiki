@@ -533,8 +533,11 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 **Known Issues:**
 
 -   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
--   Block faces will unconditionally darken if intersecting another block.
+-   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
 -   By default, the texture of the `down` (or `*` if not specified) instance _should be_ used for [destruction particles](#destruction-particles) however this does not currently work correctly ([MCPE-219143](https://bugs.mojang.com/browse/MCPE-219143)).
+-   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
+-   In user interfaces, face dimming is based on the direction the face is viewed from, rather than the actual direction of the face.
+-   Blocks do not render in the Structure Block preview.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -558,10 +561,10 @@ Render methods essentially control how a block appears in the world, much like e
 
 | Render Method             | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples               |
 | ------------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------ |
-| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings         |
-| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors               |
+| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Ladder, Monster Spawner, Vines |
+| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Saplings, Trapdoors     |
 | `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
-| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains |
+| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | Powder Snow                    |
 | `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
 
 -   **_Transparency_** - fully see-through areas.
@@ -578,7 +581,7 @@ Material instances using the following render methods will currently not actuall
 | Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
 | ----------------------------------- | ------------------------- | ---------------- | ---------------- |
 | `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
-| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp             |
+| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp, Sugarcane  |
 | `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
 
 -   **_Near Appearance_** - the render method used before reaching half the render distance.
