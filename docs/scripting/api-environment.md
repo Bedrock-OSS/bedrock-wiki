@@ -84,7 +84,7 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
 -   **Extended Methods**
 
     We have bunch of additional methods exposed by QuickJS, but do not expect anything game-changing!
-    We do have some additional string methods to wrap string in html formats. For example: `"text".bolt() `{lang=js noRightCodeBlock=true}-> "`<b>text<b>`{lang=html noLeftCodeBlock=true noRightCodeBlock=true}`"`{noLeftCodeBlock=true}.
+    We do have some additional string methods to wrap string in html formats. For example: `"text".bolt()`{lang=js} → `<b>text<b>`{lang=html}.
     These methods are useless and not documented and we are not going to either.
 
 ## JavaScript Engine Update History
