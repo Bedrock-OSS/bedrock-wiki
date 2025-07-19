@@ -20,7 +20,7 @@ This wiki is a knowledge-sharing website for technical features of Minecraft Bed
 
 Our collection of step-by-step tutorials intended as your first contact with add-ons.
 
-Learn what add-ons are and how you can set up your own project to get started developing.
+Learn how to set up your own project to get started developing.
 
 </Card>
 <Card title="Discord" link="/discord" image="assets/images/icons/book.png">
