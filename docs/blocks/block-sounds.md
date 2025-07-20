@@ -2,11 +2,11 @@
 title: Block Sounds
 description: Learn how to modify the sounds that blocks play after actions such as placement.
 category: Documentation
+license: true
 mentions:
     - MedicalJewel105
     - TheItsNameless
     - QuazChick
-license: true
 ---
 
 ## Applying Sounds
