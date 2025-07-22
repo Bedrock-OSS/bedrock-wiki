@@ -8,6 +8,7 @@ tags:
 license: true
 mentions:
     - SmokeyStack
+    - QuazChick
 ---
 
 :::tip FORMAT VERSION `1.21.90`
@@ -18,22 +19,23 @@ Using the latest format version when creating custom items provides access to fr
 
 Item events trigger when certain conditions are met and can be "listened" to in **custom components** which are registered in scripts before the world is loaded.
 
-Within each custom component, event handler functions (such as [`onBeforeDurabilityDamage`](#onBeforeDurabilityDamage)) are listed to configure what you want to happen when each event is triggered.
+Within each custom component, event handler functions (such as [`onBeforeDurabilityDamage`](#before-durability-damage)) are listed to configure what you want to happen when each event is triggered.
 
 _This example prevents the item from taking durability damage when hitting an entity:_
 
-<CodeHeader>BP/scripts/unbreakable_component.js</CodeHeader>
+<CodeHeader>BP/scripts/unbreakable.js</CodeHeader>
 
 ```js
 import { world } from "@minecraft/server";
 
+/** @type {import("@minecraft/server").ItemCustomComponent} */
 const ItemUnbreakableComponent = {
     onBeforeDurabilityDamage(event) {
         event.durabilityDamage = 0;
     },
 };
 
-world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
+system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
     itemComponentRegistry.registerCustomComponent("wiki:unbreakable", ItemUnbreakableComponent);
 });
 ```
@@ -46,7 +48,7 @@ To bind a custom component to a custom item, simply list them in the [`minecraft
 
 ```json
 "components": {
-    "minecraft:custom_components": ["wiki:unbreakable"]
+    "wiki:unbreakable": {}
 }
 ```
 
