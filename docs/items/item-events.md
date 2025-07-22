@@ -26,7 +26,7 @@ _This example prevents the item from taking durability damage when hitting an en
 <CodeHeader>BP/scripts/unbreakable.js</CodeHeader>
 
 ```js
-import { world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 
 /** @type {import("@minecraft/server").ItemCustomComponent} */
 const ItemUnbreakableComponent = {
