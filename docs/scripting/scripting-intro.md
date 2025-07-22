@@ -57,7 +57,7 @@ Additionally, dependencies will need to be set based on modules used. To import 
         "name": "Bedrock Add-ons",
         "description": "Script API Template",
         "uuid": "<UUID>",
-        "version": "1.0.0"
+        "version": "1.0.0",
         "min_engine_version": [1, 21, 90]
     },
     "modules": [
