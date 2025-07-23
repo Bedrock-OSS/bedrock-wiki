@@ -1,10 +1,11 @@
 ---
 title: Damage
+description: /damage command explained.
 category: Commands
 mentions:
     - BedrockCommands
     - cda94581
-description: /damage command explained.
+    - QuazChick
 ---
 
 ## Introduction
@@ -53,49 +54,45 @@ Introduced in Minecraft Release `1.18.10`, the /damage command deals precise dam
 /damage @e[type=sheep] 40 entity_attack entity @r
 ```
 
-## Damage Cause List
+## List of Damage Causes
 
-Listed below are all the 'damage sources' in MCBE for the `/damage` command currently available:
+Listed below are all the 'cause' values that can be used in the `/damage` command:
 
-<CodeHeader></CodeHeader>
-
-```
-all
-anvil
-block_explosion
-campfire
-charging
-contact
-drowning
-entity_attack
-entity_explosion
-fall
-falling_block
-fire
-fire_tick
-fireworks
-fly_into_wall
-freezing
-lava
-lightning
-magic
-magma
-none
-override
-piston
-projectile
-self_destruct
-ram_attack
-sonic_boom
-soul_campfire
-stalactite
-stalagmite
-starve
-suffocation
-temperature
-thorns
-void
-wither
-```
-
-For an up-to-date list, visit the official add-on documentation page **[here](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonentities?view=minecraft-bedrock-stable#entity-damage-source)**.
+| Damage Cause       |
+| ------------------ |
+| `all`              |
+| `anvil`            |
+| `block_explosion`  |
+| `campfire`         |
+| `charging`         |
+| `contact`          |
+| `drowning`         |
+| `entity_attack`    |
+| `entity_explosion` |
+| `fall`             |
+| `falling_block`    |
+| `fire`             |
+| `fire_tick`        |
+| `fireworks`        |
+| `fly_into_wall`    |
+| `freezing`         |
+| `lava`             |
+| `lightning`        |
+| `magic`            |
+| `magma`            |
+| `none`             |
+| `override`         |
+| `piston`           |
+| `projectile`       |
+| `self_destruct`    |
+| `ram_attack`       |
+| `sonic_boom`       |
+| `soul_campfire`    |
+| `stalactite`       |
+| `stalagmite`       |
+| `starve`           |
+| `suffocation`      |
+| `temperature`      |
+| `thorns`           |
+| `void`             |
+| `wither`           |
