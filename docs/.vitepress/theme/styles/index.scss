@@ -102,9 +102,18 @@ option {
   background-color: var(--bg-color);
 }
 
+* {
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid;
+  }
+}
+
 @media not (max-width: 1300px) {
   .outline-visible {
     article {
+      padding-inline: 2em 0;
       margin-right: var(--outline-width);
     }
   }

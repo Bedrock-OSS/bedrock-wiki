@@ -2,35 +2,43 @@
 import { computed } from "vue";
 import FolderViewEntry from "./FolderViewEntry.vue";
 
-const props = defineProps<{ paths: string[] }>();
+const props = defineProps<{
+  paths: string[];
+  links?(path: string): string;
+  collapsed?: boolean;
+}>();
 
 export interface Entry {
   name: string;
+  path: string;
   children: Record<string, Entry>;
 }
 
 const entries = computed(() => {
-  const entries = {};
+  const entries: Record<string, Entry> = {};
 
   props.paths.forEach((path) => {
-    fillEntries(entries, path.split("/"));
+    fillEntries(entries, path);
   });
 
   return entries;
 });
 
-function fillEntries(entries: Record<string, Entry>, path: string[]) {
-  let first = path.shift()!;
+function fillEntries(entries: Record<string, Entry>, path: string, parentPath?: string) {
+  let name = path.split("/")[0];
+
+  const entryPath = parentPath ? parentPath + "/" + name : name;
 
   // Create if needed
-  entries[first] ??= {
-    name: first,
+  entries[name] ??= {
+    path: entryPath,
+    name,
     children: {},
   };
 
   // If there are more paths, recurse
-  if (path.length > 0) {
-    fillEntries(entries[first]["children"], path);
+  if (path.length > name.length) {
+    fillEntries(entries[name].children, path.substring(name.length + 1), entryPath);
   }
 }
 </script>
@@ -38,7 +46,7 @@ function fillEntries(entries: Record<string, Entry>, path: string[]) {
 <template>
   <div class="folder-view">
     <ul>
-      <FolderViewEntry v-for="(entry, i) in entries" :key="i" :entry />
+      <FolderViewEntry v-for="entry in entries" :key="entry.name" :entry :collapsed :links />
     </ul>
   </div>
 </template>
@@ -48,27 +56,55 @@ function fillEntries(entries: Record<string, Entry>, path: string[]) {
   width: max-content;
   background-color: var(--light-bg-color);
   padding-block: 0.5em;
-  padding-right: 1em;
+  padding-inline: 1em;
   border: var(--border);
   border-radius: var(--border-radius);
   white-space: nowrap;
   overflow: auto;
 
   ul {
-    list-style: none;
     margin: 0;
-    padding-left: 1em;
+    padding-left: 1.4em;
 
     button {
       cursor: pointer;
     }
   }
 
-  [data-collapsed] {
-    opacity: 0.6;
+  li {
+    & > div,
+    & > a,
+    & > button {
+      text-align: left;
+      display: block;
+      width: 100%;
 
-    & > ul {
-      display: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &::marker {
+      content: attr(data-icon);
+    }
+
+    &:has(.active) {
+      & > button {
+        font-weight: 600;
+        pointer-events: none;
+      }
+    }
+
+    &[data-collapsed]:not(:has(.active)) {
+      opacity: 0.8;
+
+      &::marker {
+        content: "📁";
+      }
+
+      & > ul {
+        display: none;
+      }
     }
   }
 }
