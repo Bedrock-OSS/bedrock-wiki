@@ -66,6 +66,12 @@
       "type": "BDS-based"
     },
     {
+      "name": "[Lumi](https://github.com/KoshakMineDev/Lumi)",
+      "description": "A Minecraft Bedrock server software with multiversion, custom (items, blocks, enchantments), and better API.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
       "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
       "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
       "languages": "C++",
