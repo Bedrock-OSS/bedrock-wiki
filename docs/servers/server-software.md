@@ -28,6 +28,8 @@ mentions:
     - QuazChick
     - OmniacDev
     - Chorus-OSS
+    - KoshakMineDEV
+    - MEFRREEX
 description: Software for Bedrock servers.
 ---
 
