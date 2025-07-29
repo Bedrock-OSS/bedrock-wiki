@@ -14,10 +14,119 @@ mentions:
     - Lufurrius
     - TheItsNameless
     - Halo333X
+    - causal-guide
 description: Learn how to make a flying behavior for your entity.
 ---
 
-Whether making a plane or a dragon, adding controllability to flying entities will probably challenge most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.
+Whether making a plane or a dragon, adding controllability to flying entities will probably challenge most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 4 main workaround ways you can use to achieve this.
+
+## Input air controlled
+
+Use WASD and mouse in 3D space,it only works when the entity has `movement.hover` or entity doesnt have gravity.
+
+<CodeHeader></CodeHeader>
+
+```json
+"minecraft:input_air_controlled": {
+  "strafe_speed_modifier": 1,
+  "backwards_movement_modifier": 0.5
+}
+```
+
+
+## Input air controlled for entity that has gravity / walk
+
+Even tho `minecraft:input_air_controlled` only works when the entity has `movement.hover` or entity doesnt have gravity,
+but you can disable and enable again gravity when player ride / dismount 
+
+Component groups for enabling and disabling gravity and set the flying speed:
+<CodeHeader></CodeHeader>
+```json
+"component_groups": {
+    "walk": { //enable gravity
+        "minecraft:physics": {
+            "has_gravity": true
+        }
+    },
+    "fly": { //disable gravity
+        "minecraft:physics": {
+            "has_gravity": false
+        },
+        "minecraft:flying_speed": {
+            "value": 0.0833333
+        }
+    }
+}
+```
+
+Components :
+- `minecraft:input_air_controlled` for controlling
+- `minecraft:rideable` for making the entity rideable and for calling the fly and walk events
+- `minecraft:damage_sensor` for disabling fall damage
+<CodeHeader></CodeHeader>
+```json
+"components": {
+    "minecraft:input_air_controlled": {
+        "strafe_speed_modifier": 1,
+        "backwards_movement_modifier": 0.5
+    },
+    "minecraft:rideable": {
+        "seat_count": 1,
+        "interact_text": "action.interact.ride.horse",
+        "family_types": [
+            "player"
+        ],
+        "seats": {
+            "position": [
+                0.0,
+                0.63,
+                0.0
+            ]
+        },
+        "on_rider_enter_event": "fly",//call fly event on enter
+        "on_rider_exit_event": "walk"//call walk event on exit
+    },
+    "minecraft:damage_sensor": {
+        "triggers": {
+            "cause": "fall",//enable fall damage
+            "deals_damage": "no"
+        }
+    }
+}
+```
+Events for adding fly and walk components group:
+<CodeHeader></CodeHeader>
+```json
+"events": {
+    "fly": {
+        "add": { //add fly
+            "component_groups": [
+                "fly"
+            ]
+        },
+        "remove": { //remove walk
+            "component_groups": [
+                "walk"
+            ]
+        }
+    },
+    "walk": { //remove fly
+        "remove": {
+            "component_groups": [
+                "fly"
+            ]
+        },
+        "add": { //add walk
+            "component_groups": [
+                "walk"
+            ]
+        }
+    }
+}
+    
+
+```
+
 
 ## Great Jump, Slow Fall
 
