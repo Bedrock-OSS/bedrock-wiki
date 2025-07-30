@@ -255,6 +255,18 @@
       "type": "Custom"
     },
     {
+      "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
+      "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
+      "languages": "TypeScript",
+      "type": "Custom"
+    },
+    {
+      "name": "[JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)",
+      "description": "A Minecraft Bedrock Edition Server Software.",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
       "name": "[LeafMCBE](https://github.com/LeafMCBE/LeafMCBE)",
       "description": "A Minecraft: Bedrock Server Software written in TypeScript",
       "languages": "TypeScript",
@@ -421,6 +433,12 @@
       "type": "Custom"
     },
     {
+      "name": "[RAstra](https://github.com/bedrock-crustaceans/RAstra)",
+      "description": "Modern Minecraft Bedrock Server Software written in Rust.",
+      "languages": "Rust, JavaScript, TypeScript",
+      "type": "Custom"
+    },
+    {
       "name": "[Rockit-LMS](https://github.com/cr0sh/Rockit-LMS)",
       "description": "Lightweight MC:PE server.",
       "languages": "Go",
@@ -430,6 +448,12 @@
       "name": "[Saddle](https://github.com/saddlemc/saddle)",
       "description": "Modular server software for Minecraft Bedrock Edition written in Go",
       "languages": "Go",
+      "type": "Custom"
+    },
+    {
+      "name": "[Sculk](https://github.com/sculkmp/Sculk)",
+      "description": "Sculk-Powered Minecraft: Bedrock Edition Server Software.",
+      "languages": "Java",
       "type": "Custom"
     },
     {

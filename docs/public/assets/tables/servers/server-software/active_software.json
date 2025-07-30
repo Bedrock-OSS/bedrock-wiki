@@ -48,18 +48,6 @@
       "type": "BDS-based"
     },
     {
-      "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
-      "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
-      "languages": "TypeScript",
-      "type": "Custom"
-    },
-    {
-      "name": "[JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)",
-      "description": "A Minecraft Bedrock Edition Server Software.",
-      "languages": "Java",
-      "type": "Custom"
-    },
-    {
       "name": "[LeviLamina](https://github.com/LiteLDev/LeviLamina)",
       "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
       "languages": "C++",
@@ -99,18 +87,6 @@
       "name": "[PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)",
       "description": "Feature-rich, highly customizable third-party server software for Minecraft: Bedrock Edition.",
       "languages": "Java, JavaScript",
-      "type": "Custom"
-    },
-    {
-      "name": "[RAstra](https://github.com/bedrock-crustaceans/RAstra)",
-      "description": "Modern Minecraft Bedrock Server Software written in Rust.",
-      "languages": "Rust, JavaScript, TypeScript",
-      "type": "Custom"
-    },
-    {
-      "name": "[Sculk](https://github.com/sculkmp/Sculk)",
-      "description": "Sculk-Powered Minecraft: Bedrock Edition Server Software.",
-      "languages": "Java",
       "type": "Custom"
     },
     {
