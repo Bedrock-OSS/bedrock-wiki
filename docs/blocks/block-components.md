@@ -73,7 +73,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ### Collision Box
 
-Defines the area of the block that entities and blocks collide with.
+Defines the area of the block that entities and particles collide with.
 
 _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
 
