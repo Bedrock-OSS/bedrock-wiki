@@ -60,6 +60,12 @@
       "type": "Custom"
     },
     {
+      "name": "[PumpkinMC](https://github.com/Pumpkin-MC/Pumpkin)",
+      "description": "A Minecraft server built entirely in Rust, offering a fast, efficient, and customizable experience.",
+      "languages": "Rust",
+      "type": "Custom"
+    },
+    {
       "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
       "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
       "languages": "C++",
