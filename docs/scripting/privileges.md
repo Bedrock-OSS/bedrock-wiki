@@ -126,7 +126,7 @@ Difference
 +    });
 ```
 
-Highly recommend to check the API reference to see if the method or property can be called in read-only state. Each property or method that can't be called in read-only mode is mentioned in the description with the following text:
+We highly recommend that you check the API reference to see if the method or property can be called in read-only state. Each property or method that can't be called in read-only mode is mentioned in the description with the following text:
 
 > *   This function **can't be called** in read-only mode.
 > *   This property **can't be edited** in read-only mode.
