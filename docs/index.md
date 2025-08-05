@@ -74,7 +74,7 @@ Learn about the capabilities of custom items, such as durability.
 Learn the basics of the Script APIs that Minecraft offers.
 
 [Custom Commands](/scripting/custom-command) —
-Learn how to listen to chat events to create your own custom commands!
+Learn how to use scripting to create your own commands!
 
 </Card>
 <Card title="World Generation" link="/world-generation/world-generation-intro" image="/assets/images/icons/structure.png">
