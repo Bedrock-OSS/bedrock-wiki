@@ -21,7 +21,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
 The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.90`.
 :::
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -211,10 +211,13 @@ By default, the number of seconds it takes to destroy a custom block is 1.5× it
 
 Determines the appearance of the particles created when hitting, destroying, stepping on and falling onto blocks.
 
-_Requires format version [1.21.70](/blocks/block-format-history#_1-21-70) or later._
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
 #### Object Definition {#destruction-particles-object}
 
+-   `particle_count`: Integer (optional)
+    -   Determines how many particles are created when the block is destroyed (0-255).
+    -   By default, 100 particles are created.
 -   `texture`: String (optional)
     -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
     -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
@@ -336,7 +339,7 @@ The geometry of blocks can also be set to any of the [vanilla block models](/blo
 3.  The absolute bounds of the position of your 30×30×30 block are 30 pixels in each direction from the origin.
     Your block can be placed in any position within these bounds, as long as it adheres to rule #2.
 
-_Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
 #### String Definition {#geometry-string}
 
@@ -363,6 +366,9 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or lat
     -   Determines the culling layer identifier to be checked for by the [`same_culling_layer`](/blocks/block-culling#same-culling-layer) culling rule condition.
     -   Culling layer identifiers should take the form `<namespace>:culling_layer.<name>`.
     -   When using the `minecraft` namespace, the only allowed culling layer identifiers are `minecraft:culling_layer.undefined` and `minecraft:culling_layer.leaves`.
+-   `uv_lock`: Boolean (optional)
+    -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
+    -   By default, rotation is applied to UVs.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -534,7 +540,6 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 
 -   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
--   By default, the texture of the `down` (or `*` if not specified) instance _should be_ used for [destruction particles](#destruction-particles) however this does not currently work correctly ([MCPE-219143](https://bugs.mojang.com/browse/MCPE-219143)).
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
 -   In user interfaces, face dimming is based on the direction the face is viewed from, rather than the actual direction of the face.
 -   Blocks do not render in the Structure Block preview.
@@ -573,10 +578,6 @@ Render methods essentially control how a block appears in the world, much like e
 -   **_Distant Culling_** - faces become invisible after reaching half the render distance.
 
 ##### Distance-Based Render Methods
-
-:::warning
-Material instances using the following render methods will currently not actually turn opaque at a distance.
-:::
 
 | Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
 | ----------------------------------- | ------------------------- | ---------------- | ---------------- |
@@ -617,6 +618,27 @@ Custom instance names can be defined within material instances, and can be refer
         "texture": "wiki:texture_name_flower",
         "render_method": "blend" // Must match other instances due to bug
     }
+}
+```
+
+### Movable
+
+Determines how a block can be moved by pistons.
+
+_Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
+
+#### Object Definition {#movable-object}
+
+-   `movement_type`: String
+    -   Can be one of the following values: `immovable`, `popped`, `push` or `push_pull` (default).
+-   `sticky` String (optional)
+    -   Can be set to `same` to replicate Slime/Honey Block functionality.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:movable": {
+    "movement_type": "popped" // Block is broken when pushed by a piston.
 }
 ```
 
@@ -661,6 +683,51 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
             ]
         }
     ]
+}
+```
+
+### Random Offset
+
+Causes a random offset to be applied to the block based on its position in the world, affecting the block's collision box, selection box and geometry.
+
+**Offset models must not exceed the [block geometry limits](#geometry).**
+
+_Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
+
+#### Object Definition {#random-offset-object}
+
+-   `x`/`y`/`z`: Object (optional)
+    -   `range`: [Range](/documentation/shared-constructs#range-objects)
+        -   Determines how large offsets can be on each axis.
+    -   `steps`: Integer
+        -   Determines how many equally-spaced random values can be chosen across the `range`.
+        -   A value of `0` means that any value within the `range` can be used.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:random_offset": {
+    "x": {
+        "steps": 0,
+        "range": {
+            "min": -8,
+            "max": 8
+        }
+    },
+    "y": {
+        "steps": 3,
+        "range": {
+            "min": -2,
+            "max": 0
+        }
+    },
+    "z": {
+        "steps": 0,
+        "range": {
+            "min": -8,
+            "max": 8
+        }
+    }
 }
 ```
 

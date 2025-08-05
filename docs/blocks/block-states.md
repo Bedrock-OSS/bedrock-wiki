@@ -9,7 +9,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
 :::
 
@@ -27,7 +27,7 @@ _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or lat
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
