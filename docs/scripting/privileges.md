@@ -16,7 +16,7 @@ There are two reasons this message occurs, one is that the method or property is
 
 ## [Read-only mode](#read-only-mode)
 
-This means script that are in this state are not allowed to alter world state within these callbacks. The script is in read-only state when Minecraft simulation begins and before events are triggered, or before the start of the "script" tick.
+This means scripts that are in this state are not allowed to alter world state within these callbacks. The script is in read-only state when Minecraft simulation begins and before events are triggered, or before the start of the "script" tick.
 
 When the error above occurs, that means you attempted to run a function that tries to modify the state of the world on before events.
 
