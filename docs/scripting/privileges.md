@@ -4,8 +4,6 @@ category: Tutorials
 license: true
 ---
 
-# [Script Privileges](#script-privileges)
-
 This is a guide on understanding what Scripting API privileges are. This includes going through what read-only mode, and the new early-execution mode implemented in Scripting v2.0.0 are about.
 
 You might have encounted this error when running your scripts, about not having required privileges when calling a native function or a property such as the following mesasge:
@@ -14,13 +12,13 @@ You might have encounted this error when running your scripts, about not having 
 
 There are two reasons this message occurs, one is that the method or property is called during read-only mode, or early-execution mode.
 
-## [Read-only mode](#read-only-mode)
+## Read-only mode
 
 This means scripts that are in this state are not allowed to alter world state within these callbacks. The script is in read-only state when Minecraft simulation begins and before events are triggered, or before the start of the "script" tick.
 
 When the error above occurs, that means you attempted to run a function that tries to modify the state of the world on before events.
 
-### [Resolving read-only issue](#resolving-read-only-issue)
+### Resolving read-only issue
 
 The easiest way to resolve this issue is to move code, which contains all native functions that can't be called in read-only mode, and all native properties that can't be edited in read-only mode into a `system.run` callback. Here is an example scnerario where we're trying to modify the state of the world in a before event callback.
 
@@ -131,13 +129,13 @@ We highly recommend that you check the API reference to see if the method or pro
 > *   This function **can't be called** in read-only mode.
 > *   This property **can't be edited** in read-only mode.
 
-## [Early-execution mode](#early-execution-mode)
+## Early-execution mode
 
 This means the script is an environment before the world is loaded, which means most APIs like general world gamemode get property queries, are not ready to be accessed and worked with.
 
 When the privilege error occurs, that means you attempted to run a function or edit a property that requires the world is loaded, before the world is loaded.
 
-### [Resolving early-execution issue](#resolving-early-execution-issue)
+### Resolving early-execution issue
 
 If you have code using an API that is being run in the root context of a script file, it will need to be deferred to run either during or after the `world.afterEvents.worldLoad` event, or the traditional `system.run` timed callback.
 
@@ -197,7 +195,7 @@ Difference
 + });
 ```
 
-#### [What APIs are available in early execution?](#what-apis-are-available-in-early-execution)
+#### What APIs are available in early execution?
 
 The following are the initial APIs available in early execution mode for scripting v2.0.0-beta:
 
