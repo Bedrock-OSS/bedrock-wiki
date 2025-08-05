@@ -621,6 +621,27 @@ Custom instance names can be defined within material instances, and can be refer
 }
 ```
 
+### Movable
+
+Determines how a block can be moved by pistons.
+
+_Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
+
+#### Object Definition {#movable-object}
+
+-   `movement_type`: String
+    -   Can be one of the following values: `immovable`, `popped`, `push` or `push_pull` (default).
+-   `sticky` String (optional)
+    -   Can be set to `same` to replicate Slime/Honey Block functionality.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:movable": {
+    "movement_type": "popped" // Block is broken when pushed by a piston.
+}
+```
+
 ### Placement Filter
 
 Determines the placement conditions that a block must be in to be able to survive.
