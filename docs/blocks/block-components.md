@@ -339,7 +339,7 @@ The geometry of blocks can also be set to any of the [vanilla block models](/blo
 3.  The absolute bounds of the position of your 30×30×30 block are 30 pixels in each direction from the origin.
     Your block can be placed in any position within these bounds, as long as it adheres to rule #2.
 
-_Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
 #### String Definition {#geometry-string}
 
@@ -366,6 +366,9 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or lat
     -   Determines the culling layer identifier to be checked for by the [`same_culling_layer`](/blocks/block-culling#same-culling-layer) culling rule condition.
     -   Culling layer identifiers should take the form `<namespace>:culling_layer.<name>`.
     -   When using the `minecraft` namespace, the only allowed culling layer identifiers are `minecraft:culling_layer.undefined` and `minecraft:culling_layer.leaves`.
+-   `uv_lock`: Boolean (optional)
+    -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
+    -   By default, rotation is applied to UVs.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
