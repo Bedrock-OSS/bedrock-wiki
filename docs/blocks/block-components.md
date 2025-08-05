@@ -211,10 +211,13 @@ By default, the number of seconds it takes to destroy a custom block is 1.5× it
 
 Determines the appearance of the particles created when hitting, destroying, stepping on and falling onto blocks.
 
-_Requires format version [1.21.70](/blocks/block-format-history#_1-21-70) or later._
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
 #### Object Definition {#destruction-particles-object}
 
+-   `particle_count`: Integer (optional)
+    -   Determines how many particles are created when the block is destroyed (0-255).
+    -   By default, 100 particles are created.
 -   `texture`: String (optional)
     -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
     -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
