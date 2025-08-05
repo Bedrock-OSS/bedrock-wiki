@@ -574,10 +574,6 @@ Render methods essentially control how a block appears in the world, much like e
 
 ##### Distance-Based Render Methods
 
-:::warning
-Material instances using the following render methods will currently not actually turn opaque at a distance.
-:::
-
 | Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
 | ----------------------------------- | ------------------------- | ---------------- | ---------------- |
 | `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
