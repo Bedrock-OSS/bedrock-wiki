@@ -1,6 +1,7 @@
 ---
 title: Script Privileges
 category: Tutorials
+license: true
 ---
 
 # [Script Privileges](#script-privileges)
