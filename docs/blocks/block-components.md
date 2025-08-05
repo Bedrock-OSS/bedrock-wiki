@@ -686,6 +686,51 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 }
 ```
 
+### Random Offset
+
+Causes a random offset to be applied to the block based on its position in the world, affecting the block's collision box, selection box and geometry.
+
+**Offset models must not exceed the [block geometry limits](#geometry).**
+
+_Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
+
+#### Object Definition {#random-offset-object}
+
+-   `x`/`y`/`z`: Object (optional)
+    -   `range`: [Range](/documentation/shared-constructs#range-objects)
+        -   Determines how large offsets can be on each axis.
+    -   `steps`: Integer
+        -   Determines how many equally-spaced random values can be chosen across the `range`.
+        -   A value of `0` means that any value within the `range` can be used.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:random_offset": {
+    "x": {
+        "steps": 0,
+        "range": {
+            "min": -8,
+            "max": 8
+        }
+    },
+    "y": {
+        "steps": 3,
+        "range": {
+            "min": -2,
+            "max": 0
+        }
+    },
+    "z": {
+        "steps": 0,
+        "range": {
+            "min": -8,
+            "max": 8
+        }
+    }
+}
+```
+
 ### Redstone Conductivity
 
 Defines a block's ability to conduct redstone power.
