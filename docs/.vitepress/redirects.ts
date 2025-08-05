@@ -57,6 +57,7 @@ export default {
   "/knowledge/using-schemas": "/meta/using-schemas",
   "/knowledge/version-control": "/meta/version-control",
 
+  "/scripting/custom-command": "/scripting/custom-commands",
   "/scripting/gametest-qna": "/meta/gametest-qna",
   "/scripting/scripting-editor-qna": "/meta/scripting-editor-qna",
   "/scripting/starting-scripts": "/scripting/scripting-intro",
