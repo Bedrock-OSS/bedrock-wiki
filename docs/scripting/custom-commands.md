@@ -1,9 +1,7 @@
 ---
-title: Simple Chat Commands
-description: Custom commands using scripts.
+title: Custom Commands
+description: Learn how to create your own commands that can be used in chat, command blocks and elsewhere using scripts.
 category: Tutorials
-tags:
-    - experimental
 mentions:
     - cda94581
     - FrankyRay
@@ -24,12 +22,12 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.90
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.100
 :::
 
 Who doesn't want cool custom commands? With the Script API, you can create your own. In this article, we will be creating them using the Script API.
 
-## Setup Pack
+## Pack Setup
 
 :::tip
 Before creating a script, it is recommended to learn the basics of JavaScript, Add-Ons, and the Script API. To see what the Script API can do, see the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
@@ -47,28 +45,26 @@ Assuming you have understood the basics of scripting, let's start creating the p
         "description": "Custom Commands using the Script API",
         "uuid": "c8c3239f-027f-4e80-890f-880eba65027d",
         "min_engine_version": [1, 21, 90],
-        "version": [1, 0, 0]
+        "version": "1.0.0"
     },
     "modules": [
         {
-            "description": "Behavior Pack Module",
             "type": "data",
             "uuid": "cd2cd41a-1849-410e-8f0a-5d30fde4bd9a",
-            "version": [1, 0, 0]
+            "version": "1.0.0!
         },
         {
-            "description": "Gametest Module",
             "type": "script",
             "language": "javascript",
             "entry": "scripts/main.js",
             "uuid": "f626740d-50a6-49f1-a24a-834983b72134",
-            "version": [1, 0, 0]
+            "version": "1.0.0"
         }
     ],
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "2.1.0-beta" // Needs to be the latest beta or it will break (latest as of 1.21.90)
+            "version": "2.1.0" // Needs to be at least 2.1.0
         }
     ]
 }
@@ -178,47 +174,3 @@ customCommandRegistry.registerCommand(
 ```
 
 For more details about custom commands, see the [Microsoft Docs on custom commands](https://learn.microsoft.com/en-us/minecraft/creator/documents/customcommands).
-
-## Commands via Chat Send
-
-::: warning
-Deprecated in favor of slash commands as of 1.21.90
-:::
-
-We will add simple commands, such as `!gmc` to change our gamemode to creative and `!gms` to change into survival.
-
-<CodeHeader>BP/scripts/main.js</CodeHeader>
-
-```js
-import { GameMode, system, world } from "@minecraft/server";
-
-world.beforeEvents.chatSend.subscribe((eventData) => {
-    const player = eventData.sender;
-    switch (eventData.message) {
-        case "!gmc":
-            eventData.cancel = true;
-            system.run(() => {
-                player.setGameMode(GameMode.Creative);
-            });
-            break;
-        case "!gms":
-            eventData.cancel = true;
-            system.run(() => {
-                player.setGameMode(GameMode.Survival);
-            });
-            break;
-        default:
-            break;
-    }
-});
-```
-
-This is the main function to execute our commands. `world.beforeEvents.chatSend.subscribe()` will run before chat messages get sent.
-
--   A `switch` statement runs through the possible options for the value, and if it matches, runs the code until the next `break` statement.
--   `system.run(() => {})` is used to delay the execution of the code inside the callback to the next tick. This is needed as we are in a "before" event, which prevents us from running certain functions, as they run before the actual tick.
--   `eventData.cancel = true` will cancel the chat message that will be sent - similar to how vanilla commands work.
--   `const player = eventData.sender` declares the variable `player` to be used later.
--   `player.setGameMode(GameMode.creative)` Sets the players gamemode to creative.
-
-For more information about the Script API, you can reference the [wiki](/scripting/scripting-intro) or the [Microsoft Docs](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptingintroduction)
