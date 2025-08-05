@@ -73,7 +73,7 @@ Learn about the capabilities of custom items, such as durability.
 [Beginner's Guide](/scripting/scripting-intro) —
 Learn the basics of the Script APIs that Minecraft offers.
 
-[Custom Commands](/scripting/custom-command) —
+[Custom Commands](/scripting/custom-commands) —
 Learn how to use scripting to create your own commands!
 
 </Card>
