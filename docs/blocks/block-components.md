@@ -534,7 +534,6 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 
 -   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
--   By default, the texture of the `down` (or `*` if not specified) instance _should be_ used for [destruction particles](#destruction-particles) however this does not currently work correctly ([MCPE-219143](https://bugs.mojang.com/browse/MCPE-219143)).
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
 -   In user interfaces, face dimming is based on the direction the face is viewed from, rather than the actual direction of the face.
 -   Blocks do not render in the Structure Block preview.
