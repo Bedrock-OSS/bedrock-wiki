@@ -51,7 +51,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
         {
             "type": "data",
             "uuid": "cd2cd41a-1849-410e-8f0a-5d30fde4bd9a",
-            "version": "1.0.0!
+            "version": "1.0.0"
         },
         {
             "type": "script",
