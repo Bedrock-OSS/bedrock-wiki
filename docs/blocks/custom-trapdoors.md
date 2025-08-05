@@ -73,6 +73,9 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                     "render_method": "alpha_test_single_sided"
                 }
             },
+            "minecraft:destruction_particles": {
+                "particle_count": 50
+            },
             "minecraft:liquid_detection": {
                 "detection_rules": [
                     {
