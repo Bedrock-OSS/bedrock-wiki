@@ -21,7 +21,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
 The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.90`.
 :::
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",

@@ -29,7 +29,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:tree_stump",
