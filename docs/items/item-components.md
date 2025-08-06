@@ -539,7 +539,7 @@ Type: String
 
 Determines the icon to represent the item in the UI and elsewhere. Released from experiment in format version 1.20.10.
 
-### String Definition {#icon-string}
+#### String Definition {#icon-string}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -547,7 +547,7 @@ Determines the icon to represent the item in the UI and elsewhere. Released from
 "minecraft:icon": "wiki:custom_item"
 ```
 
-### Object Definition {#icon-object}
+#### Object Definition {#icon-object}
 
 -   `textures`: Object - This map contains the different textures that can be used for the item's icon. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
     -   `default`
