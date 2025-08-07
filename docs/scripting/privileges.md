@@ -1,10 +1,11 @@
 ---
 title: Script Privileges
+description: Learn about Script API priviliges, including read-only and early-execution modes.
 category: Tutorials
 license: true
 ---
 
-This is a guide on understanding what Scripting API privileges are. This includes going through what read-only mode, and the new early-execution mode implemented in Scripting v2.0.0 are about.
+This is a guide on understanding what Script API privileges are. This includes going through what read-only mode, and the new early-execution mode implemented in Scripting v2.0.0 are about.
 
 You might have encounted this error when running your scripts, about not having required privileges when calling a native function or a property such as the following mesasge:
 
