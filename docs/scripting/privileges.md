@@ -2,7 +2,12 @@
 title: Script Privileges
 description: Learn about Script API privileges, including read-only and early-execution modes.
 category: Tutorials
+tags:
+    - beginner
 license: true
+mentions:
+    - bot174
+    - QuazChick
 ---
 
 This is a guide on understanding what Script API privileges are. This includes going through what read-only mode, and the new early-execution mode implemented in Scripting v2.0.0 are about.
