@@ -14,7 +14,7 @@ This is a guide on understanding what Script API privileges are. This includes g
 
 You might have encounted this error when running your scripts, about not having required privileges when calling a native function or a property such as the following mesasge:
 
-> Plugin \[<plugin name> - <target module version>\] - \[<file>\] ran with error: \[ReferenceError: Native function \[<Class>::<method>\] does not have required privileges. at ...\]
+> ReferenceError: Native function \[Class::method\] does not have required privileges.
 
 There are two reasons this message occurs, one is that the method or property is called during read-only mode, or early-execution mode.
 
