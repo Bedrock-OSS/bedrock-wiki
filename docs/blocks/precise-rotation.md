@@ -59,7 +59,7 @@ The following model for a "shell" block can be used as a reference:
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:geometry": [
         {
             "description": {
