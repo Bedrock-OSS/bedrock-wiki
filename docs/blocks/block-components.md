@@ -366,8 +366,9 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
     -   Determines the culling layer identifier to be checked for by the [`same_culling_layer`](/blocks/block-culling#same-culling-layer) culling rule condition.
     -   Culling layer identifiers should take the form `<namespace>:culling_layer.<name>`.
     -   When using the `minecraft` namespace, the only allowed culling layer identifiers are `minecraft:culling_layer.undefined` and `minecraft:culling_layer.leaves`.
--   `uv_lock`: Boolean (optional)
+-   `uv_lock`: String Array or Boolean (optional)
     -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
+    -   An array is used to list bone names that have locked UVs, a single boolean can be used to lock all UVs in the model.
     -   By default, rotation is applied to UVs.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
