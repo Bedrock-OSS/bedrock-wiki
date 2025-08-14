@@ -42,7 +42,7 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
 
 ## Applying Custom Components
 
-To bind a custom component to a custom item, simply list them in the [`minecraft:custom_components`](/items/item-components#custom-components) component in your item JSON.
+To bind a custom component to an item, simply list it in the `components` of your item JSON.
 
 <CodeHeader>minecraft:item</CodeHeader>
 
