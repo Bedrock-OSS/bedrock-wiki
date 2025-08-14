@@ -28,7 +28,6 @@ Making crops is not as difficult as you may think, it just takes a little practi
 -   Custom crops cannot be destroyed by flowing lava.
 -   Custom crops become dark when surrounded by full blocks.
 -   Growth rate cannot be impacted by light level ([see feedback post](https://discord.com/channels/1138536747932864532/1231369171577602179)).
--   Destruction particles do not match the current growth stage texture ([MCPE-219143](https://bugs.mojang.com/browse/MCPE-219143)).
 
 ## Crop Model
 
