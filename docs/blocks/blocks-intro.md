@@ -19,7 +19,7 @@ mentions:
     - stirante
     - ChibiMango
     - Hatchibombotar
-    - FrankyRay
+    - fraysdev
     - Ciosciaa
     - Sprunkles137
     - ThomasOrs

@@ -14,7 +14,7 @@ mentions:
     - Ciosciaa
     - MedicalJewel105
     - ChibiMango
-    - FrankyRay
+    - fraysdev
 ---
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:

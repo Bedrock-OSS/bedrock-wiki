@@ -4,7 +4,7 @@ description: Learn how to create your own commands that can be used in chat, com
 category: Tutorials
 mentions:
     - cda94581
-    - FrankyRay
+    - fraysdev
     - destruc7ion
     - jannik-de
     - riesters
