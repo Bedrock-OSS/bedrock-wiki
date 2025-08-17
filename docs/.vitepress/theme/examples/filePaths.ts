@@ -2,6 +2,8 @@ import { Dirent, readdirSync } from "fs";
 import { minimatch } from "minimatch";
 import { join, resolve } from "path";
 
+export const examplesSourceDirectory = resolve("examples/resources");
+
 export const examplesCacheDirectory = resolve("docs/.vitepress/cache/examples");
 export const archivesCacheDirectory = resolve("docs/.vitepress/cache/archives");
 

@@ -10,6 +10,7 @@ import { FilePage } from "./types";
 import {
   archivesCacheDirectory,
   examplesCacheDirectory,
+  examplesSourceDirectory,
   getFilePaths,
   rootMapFilePath,
   transformFilePath,
@@ -20,6 +21,12 @@ const metaFileName = "meta.json";
 const isProduction = process.env.NODE_ENV === "production";
 
 export async function paths() {
+  if (!existsSync(examplesSourceDirectory)) {
+    throw new Error(
+      'The examples repository is missing. You may need to run "git submodule update --init".'
+    );
+  }
+
   rmSync(archivesCacheDirectory, { force: true, recursive: true });
   rmSync(examplesCacheDirectory, { force: true, recursive: true });
 
@@ -40,7 +47,7 @@ export async function paths() {
     const exampleId = frontmatter.data.example;
     if (!exampleId) continue;
 
-    const filesDirectory = join("examples/resources", exampleId);
+    const filesDirectory = join(examplesSourceDirectory, exampleId);
 
     if (!existsSync(filesDirectory)) {
       throw new Error(`The examples directory "${exampleId}" does not exist.`);
