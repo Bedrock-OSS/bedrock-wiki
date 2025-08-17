@@ -23,10 +23,10 @@ const icon = computed(() => {
   let type = props.entry.name.split(".").pop();
 
   switch (type) {
-    case "tga":
-    case "png":
     case "jpg":
     case "jpeg":
+    case "png":
+    case "tga":
       return "🖼️";
     case "lang":
       return "🈵";

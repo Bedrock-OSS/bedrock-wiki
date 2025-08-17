@@ -2,6 +2,7 @@
 import { computed } from "vue";
 
 import useSidebarVisibility from "../composables/sidebarVisibility";
+import useFilePage from "../composables/filePage";
 import useIsMobile from "../composables/isMobile";
 import useRedirect from "../composables/redirect";
 import useData from "../composables/data";
@@ -20,6 +21,8 @@ const isMobile = useIsMobile();
 const isSidebarVisible = useSidebarVisibility();
 const isOutlineVisible = computed(() => frontmatter.value?.show_outline ?? !page.value.isNotFound);
 
+const filePage = useFilePage();
+
 useRedirect();
 </script>
 
@@ -28,6 +31,7 @@ useRedirect();
     :class="{
       'sidebar-visible': isSidebarVisible,
       'outline-visible': isOutlineVisible,
+      'example-file': !!filePage,
     }"
   >
     <Header />

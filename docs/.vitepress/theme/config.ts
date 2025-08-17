@@ -1,6 +1,7 @@
 import { defineConfigWithTheme } from "vitepress";
 
 import { ThemeConfig, WikiConfig } from "./types";
+import { copyExampleArchives } from "./examples";
 import head, { transformHead } from "./head";
 import languages from "./languages";
 import plugins from "./plugins";
@@ -14,6 +15,8 @@ export function defineWikiConfig(config: WikiConfig) {
     description,
     url,
     repository,
+    branch,
+    examples,
     algolia,
     navigation,
     fastBuild,
@@ -52,6 +55,9 @@ export function defineWikiConfig(config: WikiConfig) {
 
       url,
       repository,
+      branch,
+
+      examples,
 
       algolia: {
         placeholder: `Search ${title}…`,
@@ -80,6 +86,10 @@ export function defineWikiConfig(config: WikiConfig) {
       config(md) {
         for (const plugin of plugins) md.use(plugin);
       },
+    },
+
+    async buildEnd({ outDir }) {
+      await copyExampleArchives(outDir);
     },
 
     vite: {

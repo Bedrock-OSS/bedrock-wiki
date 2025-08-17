@@ -3,6 +3,8 @@ import { DefaultTheme } from "vitepress";
 export interface WikiConfig {
   url: string;
   repository: string;
+  branch: string;
+  examples?: ExamplesOptions;
   algolia: DefaultTheme.AlgoliaSearchOptions;
   navigation: NavigationItem[];
   redirects: Redirects;
@@ -19,10 +21,17 @@ export interface ThemeConfig {
   longTitle: string;
   url: string;
   repository: string;
+  branch: string;
+  examples?: ExamplesOptions;
   algolia: DefaultTheme.AlgoliaSearchOptions;
   navigation: NavigationItem[];
   redirects: Redirects;
   tags: Tags;
+}
+
+export interface ExamplesOptions {
+  repository: string;
+  branch: string;
 }
 
 export type AccentColor = "red" | "orange" | "yellow" | "green" | "blue" | "purple";
