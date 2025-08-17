@@ -39,10 +39,10 @@ const filePage = useFilePage();
         :title="filePage ? 'Example Files' : 'Contents'"
         :open="!filePage"
       >
-        <Outline :files="filePage !== undefined" />
+        <Outline />
       </Spoiler>
 
-      <Outline v-else :files="filePage !== undefined" />
+      <Outline v-else />
     </div>
 
     <Content id="content" />
