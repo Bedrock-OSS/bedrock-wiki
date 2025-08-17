@@ -37,6 +37,10 @@
 			"```"
 		]
 	},
+  "ExampleFile": {
+    "prefix": "wiki.examplefile",
+    "body": "<ExampleFile path=\"$1\" />"
+  },
 	"Spoiler": {
 		"prefix": "wiki.spoiler",
 		"body": [
