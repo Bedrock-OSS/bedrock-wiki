@@ -50,7 +50,7 @@ function renderImageFile(path: string, url: string, link?: string) {
 }
 
 function tgaToPng(buffer: Buffer) {
-  const tga = new TGA(buffer);
+  const tga = new TGA(buffer, { dontFixAlpha: true });
 
   const png = new PNG({
     width: tga.width,
