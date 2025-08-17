@@ -23,6 +23,8 @@ export async function paths() {
   rmSync(archivesCacheDirectory, { force: true, recursive: true });
   rmSync(examplesCacheDirectory, { force: true, recursive: true });
 
+  mkdirSync(examplesCacheDirectory, { recursive: true });
+
   const rootMap: Record<string, string> = {};
 
   const pages: FilePage[] = [];

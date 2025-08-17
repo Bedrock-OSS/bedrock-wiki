@@ -6,9 +6,9 @@ import { examplesCacheDirectory, renderExampleFile, rootMapFilePath } from "../e
 
 const exampleFilePattern = /^<ExampleFile\s+path="(?<path>[^"]*)"\s*\/>$/;
 
-const rootMap: Record<string, string> = JSON.parse(readFileSync(rootMapFilePath, "utf-8"));
-
 export const exampleFilePlugin: PluginSimple = (md) => {
+  const rootMap: Record<string, string> = JSON.parse(readFileSync(rootMapFilePath, "utf-8"));
+
   md.core.ruler.after("block", "example_file", ({ env, tokens, md, inlineMode }) => {
     if (inlineMode) return;
 
