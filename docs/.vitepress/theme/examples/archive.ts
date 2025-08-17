@@ -3,7 +3,7 @@ import { dirname, join } from "path";
 import { globIterate } from "glob";
 import archiver from "archiver";
 
-import { archivesCacheDirectory } from "./filePaths";
+import { archivesCacheDirectory } from "./data";
 
 export function createExampleArchive(path: string) {
   const archivePath = join(archivesCacheDirectory, path + ".zip");

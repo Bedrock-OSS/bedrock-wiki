@@ -1,24 +1,19 @@
-import { basename, dirname, join, relative, sep } from "path";
-import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
+import { minimatch } from "minimatch";
+import { join, relative } from "path";
 import { globIterate } from "glob";
 import matter from "gray-matter";
-import { Archiver } from "archiver";
 
-import { createExampleArchive } from "./archive";
-import { renderExampleFile } from "./markdown";
-import { FilePage } from "./types";
+import { FilePage, FilePageParams, getFilePageIterator } from "./filePage";
+import { getFilePaths, transformFilePath } from "./filePaths";
 import {
+  examplesSourceDirectory,
   archivesCacheDirectory,
   examplesCacheDirectory,
-  examplesSourceDirectory,
-  getFilePaths,
   rootMapFilePath,
-  transformFilePath,
-} from "./filePaths";
+} from "./data";
 
 const metaFileName = "meta.json";
-
-const isProduction = process.env.NODE_ENV === "production";
 
 export async function paths() {
   if (!existsSync(examplesSourceDirectory)) {
@@ -63,11 +58,9 @@ export async function paths() {
 
     const metadata = JSON.parse(readFileSync(filesDirectoryMetaPath, "utf-8"));
 
-    const isRootSection = /[\\/]index\.md$/.test(path);
-
     const rootPath = relative("docs", path)
-      .replace(sep, "/")
-      .replace(/.md$/, "")
+      .replaceAll("\\", "/")
+      .replace(/\.md$/, "")
       .replace(/(^|\/)index$/, "");
 
     rootMap[rootPath] = exampleId;
@@ -77,57 +70,27 @@ export async function paths() {
       sort: true,
     });
 
-    // Set up archive (download links will not work in development builds)
-    let archive: Archiver | undefined;
+    const example: FilePageParams["example"] = {
+      id: exampleId,
+      files: filePaths.map(transformFilePath),
+      type: metadata.type,
+      archiveRoot: transformFilePath(metadata.archive_root ?? ""),
+    };
 
-    if (isProduction) {
-      archive = createExampleArchive(rootPath);
-    }
+    const root: FilePageParams["root"] = {
+      title: frontmatter.data.title,
+      path: rootPath,
+      type: minimatch(path, "docs/*/index.md") ? "section" : "page",
+    };
 
-    // Iterate over each file in the example
-    for (const filePath of filePaths) {
-      const fullPath = join(filesDirectory, filePath);
+    const pageIterator = getFilePageIterator({
+      filesDirectory,
+      filePaths,
+      example,
+      root,
+    });
 
-      const transformedFilePath = transformFilePath(filePath);
-      const buffer = readFileSync(fullPath);
-
-      const cachePath = join(examplesCacheDirectory, exampleId, transformedFilePath);
-
-      mkdirSync(dirname(cachePath), { recursive: true });
-      copyFileSync(fullPath, cachePath);
-
-      archive?.append(buffer, { name: transformedFilePath });
-
-      const content = `---
-title: ${transformedFilePath} | ${frontmatter.data.title}
-show_contributors: false
----
-
-${renderExampleFile(transformedFilePath, buffer)}
-`;
-
-      pages.push({
-        content,
-        params: {
-          file: `${rootPath}/files/${transformedFilePath}`,
-          name: basename(transformedFilePath),
-          path: transformedFilePath,
-          sourcePath: filePath,
-          example: {
-            id: exampleId,
-            files: filePaths.map(transformFilePath),
-            type: metadata.type,
-          },
-          root: {
-            title: frontmatter.data.title,
-            path: rootPath.replaceAll(sep, "/"),
-            type: isRootSection ? "section" : "page",
-          },
-        },
-      });
-    }
-
-    archive?.finalize();
+    pages.push(...pageIterator);
   }
 
   writeFileSync(rootMapFilePath, JSON.stringify(rootMap));
