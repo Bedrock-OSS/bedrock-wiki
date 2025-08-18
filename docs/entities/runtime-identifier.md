@@ -285,6 +285,13 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 ### minecraft:piglin
 
 -   Allows `minecraft:celebrate_hunt` to function (which activates q.is_celebrating).
+-   Allows `minecraft:behavior.charge_held_item` to play sounds when charging crossbow
+
+---
+
+### minecraft:pillager
+
+- Allows `minecraft:behavior.charge_held_item` to play sounds when charging crossbow
 
 ---
 
@@ -354,9 +361,21 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
+### minecraft:creeper
+-  Prevents other entities with minecraft:owner_hurt_target from targeting the "creeper"
+-  Restricts entity to spawn at block light level 0
+
+---
+
 ### minecraft:spider
 
 -   Allows cobwebs to not slow down entity.
+-   Restricts entity to spawn at block light level 0
+
+---
+
+### minecraft:phantom
+-   Prevents entity from spawning normally (may spawn with insomnia?)
 
 ---
 
@@ -365,6 +384,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
 -   Inflicts Wither status effect with both melee and ranged attacks if Variant is 1 or greater.
+-   Restricts entity to spawn at block light level 0
 
 ---
 
@@ -373,8 +393,12 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
 -   Makes entity do not receive freezing damage.
+-   Restricts entity to spawn at block light level 0
 
 ---
+
+### minecraft:ghast
+-   Makes entities using minecraft:behavior.random_look_around look straight up occasionally
 
 ### minecraft:squid
 
