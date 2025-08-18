@@ -107,7 +107,7 @@ This code example also includes the base components of our crop which will be ac
 
 ## Custom Growable Component
 
-The events below do three important functions to make your crop work:
+The events below do two important functions to make your crop work:
 
 -   The [`onRandomTick`](/blocks/block-events#random-tick) event hook is used to increment the `wiki:growth` state at a random interval.
 -   The [`onPlayerInteract`](/blocks/block-events#player-interact) event hook is for bone meal support, adding a random value to `wiki:growth` in survival mode or fully growing the crop in creative mode.
