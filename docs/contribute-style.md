@@ -348,8 +348,8 @@ A list where each item is either checked or unchecked. An `x` between the square
 
 Our wiki uses special Vue-Components, which you can use to add things like Buttons, Spoilers, CodeBlocks, etc.
 
-:::tip Snippets
-We have snippets for our components. To see them, start typing `wiki.` in Markdown file and then press `Ctrl + Space`.
+:::tip SNIPPETS
+We have snippets for our components. To see them, press `Ctrl + Space` when editing a page.
 
 ![](/assets/images/contribute/snippets/snippets.png)
 :::
