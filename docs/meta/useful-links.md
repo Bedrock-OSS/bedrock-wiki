@@ -60,7 +60,7 @@ Important links have a ⭐.
 -   [Mcblend (Blender Plugin)](https://github.com/Nusiq/mcblend)
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
--   [SuitcaseJS (MCPack Compressor)](https://github.com/TBroz15/SuitcaseJS)
+-   [TesserPack (Pack Optimizer)](https://github.com/TBroz15/TesserPack)
 -   [World Converter (Paid)](https://www.universalminecraftconverter.com/download)
 
 ## Bedrock Tools Websites
