@@ -203,13 +203,14 @@ import { system } from "@minecraft/server";
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockToggleableComponent = {
     onPlayerInteract({ block, dimension }, { params }) {
-        const currentValue = block.permutation.getState(params.block_state);
+        const toggleableState = params.block_state;
+
+        const currentValue = block.permutation.getState(toggleableState);
         const toggledValue = !currentValue;
 
-        const toggleableState = params.block_state;
-        const toggleSound = toggledValue ? params.enable_sound : params.disable_sound;
-
         block.setPermutation(block.permutation.withState(toggleableState, toggledValue));
+
+        const toggleSound = toggledValue ? params.enable_sound : params.disable_sound;
         dimension.playSound(toggleSound, block.center());
     },
 };
