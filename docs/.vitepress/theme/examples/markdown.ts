@@ -33,7 +33,8 @@ export function renderExampleFile(path: string, buffer: Buffer, link?: string) {
 function renderCodeFile(path: string, lang: string, code: string, link?: string) {
   if (link) path = `<a href="${link}" title="${viewFileTooltip}">${path}</a>`;
 
-  if (lang === "mcfunction") lang = ""; // No syntax highlighting
+  if (lang === "material") lang = "json";
+  else if (lang === "mcfunction") lang = ""; // No syntax highlighting
 
   return [
     //
