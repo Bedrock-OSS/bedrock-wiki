@@ -196,7 +196,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 The name of the `seconds_to_destroy` parameter is misleading.
 While the name suggests that this parameter determines how many seconds it takes to destroy the block, in reality the parameter sets the "hardness" value of the block.
 
-By default, the number of seconds it takes to destroy a custom block is 1.5× its hardness.
+By default, the number of seconds it actually takes to destroy a custom block is 1.5× the value set here.
 :::
 
 <CodeHeader>minecraft:block > components</CodeHeader>
