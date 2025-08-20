@@ -8,7 +8,10 @@ import { join } from "path";
  * - Replaces `rp` with `RP`
  */
 export function transformFilePath(path: string) {
-  return path.replaceAll("\\", "/").replace(/^rp\//, "RP/").replace(/^bp\//, "BP/");
+  return path
+    .replaceAll("\\", "/")
+    .replace(/^rp(?=\/|$)/, "RP")
+    .replace(/^bp(?=\/|$)/, "BP");
 }
 
 /**
