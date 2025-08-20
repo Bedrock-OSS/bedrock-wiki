@@ -68,7 +68,7 @@ export function* getFilePageIterator({
 
     const archiveFilePath = transformFilePath(relative(example.archiveRoot, transformedFilePath));
 
-    if (archiveFilePath.startsWith("../")) {
+    if (!archiveFilePath.startsWith("../")) {
       archive?.append(buffer, { name: archiveFilePath });
     }
 
