@@ -16,6 +16,13 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.110
+
+### Components
+
+-   Added `minecraft:flower_pottable`
+    -   An empty object which allows this block to be placed in a Flower Pot.
+
 ## 1.21.100
 
 ### Components
