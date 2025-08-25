@@ -481,7 +481,7 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
 The path of the loot table to drop when the block is destroyed (ignored when a tool with the "Silk Touch" enchantment is used).
 If omitted, the block is dropped as an item.
 
-#### Loot Definition {#loot-string}
+#### String Definition {#loot-string}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -533,13 +533,14 @@ An array of 3 integers (0-255) defining the `[R, G, B]` color of the block on a 
 ### Material Instances
 
 Configuration of your block's rendering, including textures and lighting.
-The `*` instance is the default instance for all cube faces.
+
+-   The `*` instance is the default instance for all cube faces, however it is not required if all faces have a material instance already defined.
+-   All instances must have the same render method.
 
 _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
 
 **Known Issues:**
 
--   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
 -   In user interfaces, face dimming is based on the direction the face is viewed from, rather than the actual direction of the face.
@@ -583,7 +584,7 @@ Render methods essentially control how a block appears in the world, much like e
 | Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
 | ----------------------------------- | ------------------------- | ---------------- | ---------------- |
 | `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
-| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp, Sugarcane  |
+| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp, Sugar Cane |
 | `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
 
 -   **_Near Appearance_** - the render method used before reaching half the render distance.
