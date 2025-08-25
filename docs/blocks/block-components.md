@@ -532,10 +532,7 @@ An array of 3 integers (0-255) defining the `[R, G, B]` color of the block on a 
 
 ### Material Instances
 
-Configuration of your block's rendering, including textures and lighting.
-
--   The `*` instance is the default instance for all cube faces, however it is not required if all faces have a material instance already defined.
--   All instances must have the same render method.
+Configuration of the block's rendering, including textures and lighting.
 
 _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
 
@@ -543,8 +540,32 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
--   In user interfaces, face dimming is based on the direction the face is viewed from, rather than the actual direction of the face.
 -   Blocks do not render in the Structure Block preview.
+
+#### Object Definition {#material-instances-object}
+
+Each key is the name of a material instance and each value is a material instance object.
+The `*` instance is the default instance for all cube faces, however it is not required if all faces have a material instance separately defined.
+
+-   `<name>`{lang=xml}: Object
+    -   `texture`: String
+        -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
+    -   `render_method`: String (optional)
+        -   The [render method](#render-methods) to use when rendering faces using the material instance.
+        -   **All material instances must use the same render method.**
+        -   By default, the `opaque` material instance is used.
+    -   `tint_method`: String (optional)
+        -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
+    -   `ambient_occlusion`: Float (0.0-10.0) or Boolean (optional)
+        -   Determines whether "smooth lighting" is applied to faces using the material instance.
+        -   Float values can be used to determine ambient occlusion intensity.
+        -   By default, this is `false` (or `0.0`) for blocks that emit light and `true` (or `1.0`) for blocks that do not emit light.
+    -   `face_dimming`: Boolean (optional)
+        -   Determines whether faces using the material instance are dimmed by their direction.
+        -   By default, this is `false` for blocks that emit light and `true` for blocks that do not emit light.
+    -   `isotropic`: Boolean (optional)
+        -   Determines whether the UVs of faces using the material instance are randomly rotated based on the block's position in the world.
+        -   By default, textures are not randomly rotated.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -553,11 +574,8 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
     // Instance names "up", "down", "north", "east", "south" and "west" are built in.
     "*": {
         "texture": "wiki:texture_name", // Shortname defined in "RP/textures/terrain_texture.json".
-        "render_method": "blend", // One of the render methods in the following tables.
-        "tint_method": "grass", // Tint the texture based on the biome the block is placed in.
-        "ambient_occlusion": true, // Defaults to true (1.0); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
-        "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
-        "isotropic": true // Causes the texture to randomly be rotated based on the block's position.
+        "render_method": "blend", // Support texture translucency
+        "isotropic": true // Randomly rotate the texture
     }
 }
 ```
@@ -606,19 +624,19 @@ Custom instance names can be defined within material instances, and can be refer
 "minecraft:material_instances": {
     "*": {
         "texture": "wiki:texture_name",
-        "render_method": "blend" // Must match other instances due to bug
+        "render_method": "blend" // Must match other instances
     },
     // Custom instance name
     "end": {
         "texture": "wiki:texture_name_end",
-        "render_method": "blend" // Must match other instances due to bug
+        "render_method": "blend" // Must match other instances
     },
     "up": "end",
     "down": "end",
     // Instance name defined in model:
     "flower": {
         "texture": "wiki:texture_name_flower",
-        "render_method": "blend" // Must match other instances due to bug
+        "render_method": "blend" // Must match other instances
     }
 }
 ```
