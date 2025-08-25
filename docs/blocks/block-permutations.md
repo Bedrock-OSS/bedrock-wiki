@@ -19,7 +19,7 @@ Only **one** instance of each component can be active at once.
 Duplicate components will be overridden by the latest "[permutations](#conditionally-applying-components)" array entry.
 :::
 
-## What are Permutations?
+## What Are Permutations?
 
 Block permutations represent all state value configurations that each block can possibly be in.
 
