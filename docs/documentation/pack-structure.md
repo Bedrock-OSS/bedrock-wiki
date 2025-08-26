@@ -95,7 +95,9 @@ mentions:
     'RP/water/example_water.json',
     'RP/blocks.json',
     'RP/contents.json',
+    'RP/loading_messages.json',
     'RP/manifest.json',
     'RP/pack_icon.png',
-    'RP/sounds.json'
+    'RP/sounds.json',
+    'RP/splashes.json'
 ]" />
