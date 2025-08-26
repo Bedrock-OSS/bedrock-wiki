@@ -8,6 +8,7 @@ license: true
 mentions:
     - Supernova3695
     - QuazChick
+    - Nusiq
 ---
 
 :::warning EXPERIMENTAL
@@ -175,9 +176,9 @@ A jigsaw structure is a file that tells the game how to generate the structure.
 Its identifier is used for the `/place` and `/locate` structure commands.
 It also tells the game what template pool it should use to start and how large the structure should be using `max_depth`.
 
-They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
+They are stored in the `structures` subfolder of the `worldgen` folder.
 
-<CodeHeader>BP/worldgen/jigsaw_structures/lone_fortress.json</CodeHeader>
+<CodeHeader>BP/worldgen/structures/lone_fortress.json</CodeHeader>
 
 ```json
 {
@@ -437,7 +438,7 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
 
 ### Full Example
 
-<CodeHeader>BP/worldgen/jigsaw_structures/fortress.json</CodeHeader>
+<CodeHeader>BP/worldgen/structures/fortress.json</CodeHeader>
 
 ```json
 {
@@ -520,7 +521,7 @@ The `placement` parameter of structure sets contains the following rules of plac
 
 ### Structures
 
-The `placement` parameter of structure sets is an array with the identifiers of structures (from the `jigsaw_structures` file) and weight for how often they should be picked.
+The `placement` parameter of structure sets is an array with the identifiers of structures (from the `worldgen/structures` file) and weight for how often they should be picked.
 
 <CodeHeader>minecraft:structure_set</CodeHeader>
 
