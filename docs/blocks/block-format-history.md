@@ -20,16 +20,15 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
 -   Added `minecraft:embedded_visual`
     -   Determines how this block is displayed when in a Flower Pot.
     -   Contains `geometry` which determines the displayed geometry component.
     -   Contains `material_instances` which determines the displayed material instances component.
 -   Added `minecraft:flower_pottable`
     -   An empty object which allows this block to be placed in a Flower Pot.
-
-<Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
-
 -   Added `minecraft:redstone_producer`
     -   Causes the block to produce redstone power.
     -   Contains `power` which determines the power level produced by the block as an integer (0-15).
