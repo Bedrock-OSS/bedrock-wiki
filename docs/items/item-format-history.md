@@ -21,7 +21,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 ### Components
 
 -   Added `minecraft:fire_resistant`
-    -   Determines whether the item can be destroyed by fire and lava.
+    -   Determines whether the item cannot be destroyed by fire and lava.
 
 ## 1.21.90
 
