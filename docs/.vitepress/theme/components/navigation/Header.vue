@@ -2,7 +2,6 @@
 import { useMediaQuery } from "@vueuse/core";
 
 import useSidebarVisibility from "../../composables/sidebarVisibility";
-import useIsMobile from "../../composables/isMobile";
 import useData from "../../composables/data";
 
 import MenuIcon from "../icons/MenuIcon.vue";
