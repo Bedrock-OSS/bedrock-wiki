@@ -63,7 +63,7 @@
       "name": "[PumpkinMC](https://github.com/Pumpkin-MC/Pumpkin)",
       "description": "A Minecraft server built entirely in Rust, offering a fast, efficient, and customizable experience.",
       "languages": "Rust",
-      "type": "Custom"
+      "type": "Java Edition cross-play"
     },
     {
       "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
