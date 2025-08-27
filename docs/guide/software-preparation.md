@@ -115,9 +115,9 @@ Gimp is similar to Krita in that it is a free and open source digital art progra
 
 [Download Gimp](https://www.gimp.org/)
 
-### Paint․net
+### Paint.NET
 
-Paint․net is a simple yet powerful image editing and art software. Paint․net may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use.
+Paint.NET is a simple yet powerful image editing and art software. Paint.NET may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use.
 
 -   **+ Pros:** Easy to use and learn.
 -   **- Cons:** Only works on Windows.
