@@ -120,6 +120,7 @@ To set the state which determines the block's direction, we will use the `minecr
     // Block traits are defined here
     "traits": {
         "minecraft:placement_direction": {
+            "y_rotation_offset": 180,
             "enabled_states": ["minecraft:facing_direction"] // Can be used in queries e.g. `q.block_state('minecraft:facing_direction') == 'north'`
         }
     }
@@ -140,14 +141,14 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
   {
     "condition": "q.block_state('minecraft:facing_direction') == 'down'",
     "components": {
-      "minecraft:transformation": { "rotation": [-90, 0, 0] }
+      "minecraft:transformation": { "rotation": [90, 0, 0] }
     }
   },
   // Facing up
   {
     "condition": "q.block_state('minecraft:facing_direction') == 'up'",
     "components": {
-      "minecraft:transformation": { "rotation": [90, 0, 0] }
+      "minecraft:transformation": { "rotation": [-90, 0, 0] }
     }
   },
   // Facing north
