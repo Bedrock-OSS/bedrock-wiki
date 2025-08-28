@@ -35,7 +35,7 @@ This can be achieved by causing the block to "tick" every 80 ticks.
 }
 ```
 
-Next, we need to register our custom component to hook onto the [tick](/blocks/block-events#step-on) event.
+Next, we need to register our custom component to hook onto the [tick](/blocks/block-events#tick) event.
 This component should apply effects to entities within a specified area, so we're going to call it `wiki:radial_effects`.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
