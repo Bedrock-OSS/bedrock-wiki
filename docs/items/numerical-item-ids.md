@@ -1,11 +1,11 @@
----
+ ---
 title: Numerical Item IDs
 category: Documentation
 description: Numerical Item IDs.
 ---
 
 ::: tip
-This page is a more accurate version of [this page](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems), and is current as of version 1.21.20.
+This page is a more accurate version of [this page](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems), and is current as of version 1.21.100.
 :::
 
 ## Overview
@@ -14,10 +14,10 @@ Item IDs (not to be confused with type IDs) are an older system which are mainly
 
 ## ID Formatting
 
--   Vanilla items & blocks have IDs from `-962` to `770`.
--   All custom blocks have _increasingly negative_ IDs, starting from an ID of `-963`. These do not interfere with vanilla IDs in any way. Note that custom blocks do not currently render with their IDs. It is unknown if this is a bug or not.
--   All old custom items (1.10 format) have _increasingly positive_ IDs, starting from an ID of `750`. These do not interfere with vanilla IDs in any way.
--   All new custom items (1.16.100, 1.20.80+ format) have _increasingly positive_ IDs, starting from an ID of `261`. These **WILL SHIFT VANILLA IDs** that are higher than 261. For example, `'minecraft:golden_apple'` (ID of `263`) will be moved up to an ID of `264` if you have one of these custom items.
+-   Vanilla items & blocks have IDs from `-1038` to `828`.
+-   All custom blocks have _increasingly negative_ IDs, starting from an ID of `-1038`. These do not interfere with vanilla IDs in any way. Note that custom blocks do not currently render with their IDs. It is unknown if this is a bug or not.
+-   All old custom items (1.10 format) have _increasingly positive_ IDs, starting from an ID of `828`. These do not interfere with vanilla IDs in any way.
+-   All new custom items (1.16.100, 1.20.80+ format) have _increasingly positive_ IDs, starting from an ID of `256`. These **WILL SHIFT VANILLA IDs** that are higher than 256. For example, `'minecraft:golden_apple'` (ID of `280`) will be moved up to an ID of `281` if you have one of these custom items.
 
 ## Vanilla ID List
 
