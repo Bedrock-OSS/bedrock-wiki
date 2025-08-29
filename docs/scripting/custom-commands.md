@@ -142,7 +142,7 @@ Optional parameters do not need to be specified and will always follow mandatory
 
 ### Command Callback
 
-This is the function that is called (in [read-only mode](/scripting/priviliges#read-only-mode)) every time the command is executed.
+This is the function that is called (in [read-only mode](/scripting/privileges#read-only-mode)) every time the command is executed.
 
 The callback always gets the command origin as its first parameter, the rest of the parameters are based on the `mandatoryParameters` and `optionalParameters` you provide.
 The number of parameters passed to the callback matches the number of parameters defined in the command, so if you have a command with 3 different parameters your callback would look like this:
