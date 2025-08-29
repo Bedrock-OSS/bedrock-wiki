@@ -179,7 +179,7 @@ In command autocompletions, its syntax is the following:
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { CommandPermissionLevel, CustomCommandParamType, system } from "@minecraft/server";
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     // Register an enum for teleport locations
@@ -202,7 +202,9 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
         },
         (origin, teleportLocation) => {
             // Only run if executed by an entity
-            if (!origin.sourceEntity) return;
+            if (!origin.sourceEntity) return {
+                status: CustomCommandStatus.Failure,
+            };
 
             let location;
 
@@ -218,6 +220,11 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
             system.run(() => {
                 origin.sourceEntity.teleport(location);
             });
+
+            return {
+                status: CustomCommandStatus.Success,
+                message: "Teleporting to " + teleportLocation,
+            }
         }
     );
 });
