@@ -60,6 +60,7 @@ Important links have a ⭐.
 -   [Mcblend (Blender Plugin)](https://github.com/Nusiq/mcblend)
 -   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
+-   [Ore UI Customizer App (Allows you to modify Ore UI)](https://github.com/8Crafter-Studios/Ore-UI-Customizer-App)
 -   [TesserPack (Pack Optimizer)](https://github.com/TBroz15/TesserPack)
 -   [World Converter (Paid)](https://www.universalminecraftconverter.com/download)
 
@@ -73,6 +74,7 @@ Important links have a ⭐.
 -   [behavior-builder (beta)](https://stirante.com/behavior)
 -   [controller-builder (beta)](https://stirante.com/controller)
 -   [Convert .mcstructure to .mcfunction](https://mcbe-essentials.github.io/structure-to-function/)
+-   [Convert .mcstructure to .mcpack](https://www.8crafter.com/utilities/mcstructure-loader)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
 -   [Foxynotail Tools](https://foxynotail.com/software)
@@ -86,6 +88,7 @@ Important links have a ⭐.
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
 -   [NBT Explorer](https://phoenixr-codes.github.io/mcnbt/)
 -   [Nine Slice Visualiser (UI)](https://minato-mba.github.io/content/9slice.html)
+-   [Ore UI Customizer (Allows you to modify Ore UI)](https://www.8crafter.com/utilities/ore-ui-customizer)
 -   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
 -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
