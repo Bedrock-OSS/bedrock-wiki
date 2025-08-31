@@ -41,6 +41,14 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Contains `tranform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
         -   By default, faces are not transform-relative.
 
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:material_instances`
+    -   Updated `texture` instance parameter to support [texture variation](/blocks/block-texture-variation).
+    -   In previous format versions, the first variation of the referenced atlas entry would always be selected.
+
 ## 1.21.100
 
 ### Components
