@@ -146,6 +146,12 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 
 ---
 
+### minecraft:creeper
+-   Prevents other entities with `minecraft:owner_hurt_target` from targeting the "creeper"
+-   Restricts entity to spawn at block light level 0
+
+---
+
 ### minecraft:dolphin
 
 -   Adds `minecraft:movement.dolphin` component.
@@ -231,6 +237,14 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 -   Breaks the entity also makes it fall.
 -   When entity touches ground, it despawns with no animations at all. Just drops acacia button.
 -   Removes the ability to have effects.
+
+---
+
+### minecraft:ghast
+
+-   Makes entities using `minecraft:behavior.random_look_around` look straight up occasionally
+
+---
 
 ### minecraft:horse
 
@@ -361,12 +375,6 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 
-### minecraft:creeper
--  Prevents other entities with minecraft:owner_hurt_target from targeting the "creeper"
--  Restricts entity to spawn at block light level 0
-
----
-
 ### minecraft:spider
 
 -   Allows cobwebs to not slow down entity.
@@ -375,7 +383,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ---
 
 ### minecraft:phantom
--   Prevents entity from spawning normally (may spawn with insomnia?)
+
+-   Prevents entity from spawning with spawn rules.
 
 ---
 
@@ -396,9 +405,6 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   Restricts entity to spawn at block light level 0
 
 ---
-
-### minecraft:ghast
--   Makes entities using minecraft:behavior.random_look_around look straight up occasionally
 
 ### minecraft:squid
 
@@ -446,12 +452,6 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 -   Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect.
 -   Makes the entity receive increased damage from weapons with Smite enchantment.
 -   Restricts entity to spawn at block light level 0
-
----
-
-### minecraft:phantom
-
--   Prevents entity from spawning normally with spawn rules.
 
 ---
 
