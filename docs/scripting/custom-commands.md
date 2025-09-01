@@ -19,6 +19,7 @@ mentions:
     - SimpleDevMCBE
     - QuazChick
     - jeanmajid
+    - nperma
 ---
 
 Who doesn't want cool custom commands? In this tutorial, you will learn how to create your own commands that can be used in chat, command blocks and elsewhere using scripts.
@@ -229,5 +230,59 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     );
 });
 ```
+
+Oke, aku tambahin contoh di bagian **Custom Command Only For Player** biar rapi dan konsisten dengan docs yang kamu kasih.
+Contohnya gini:
+
+---
+
+## Command Only For Player Example
+
+In this example, we will create a custom slash command `/wiki:heal` that can only be executed by players (not the server console or command blocks).
+This command will restore the player's health back to full.
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, Player } from "@minecraft/server";
+
+system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
+    // Register the custom command
+    customCommandRegistry.registerCommand(
+        {
+            name: "wiki:heal",
+            description: "commands.wiki:heal.description",
+            permissionLevel: CommandPermissionLevel.Any,
+            cheatsRequired: false,
+            mandatoryParameters: [],
+        },
+        (origin) => {
+            const source = origin.initiator || origin.sourceEntity;
+            // Only allow players to use this command
+            if (!(source instanceof Player)) 
+                return {
+                    status: CustomCommandStatus.Failure,
+                    message: "This command can only be used by player.",
+                };
+
+            // Heal player
+            system.run(() => source.getComponent("health").resetToDefaultValue());
+
+            return {
+                status: CustomCommandStatus.Success,
+                message: "You have been fully healed!",
+            };
+        }
+    );
+});
+```
+
+<CodeHeader>RP/texts/en\_US.lang</CodeHeader>
+
+```lang
+commands.wiki:heal.description=Restore your health to maximum.
+```
+
+---
 
 For more details about custom commands, see the [Microsoft Docs on custom commands](https://learn.microsoft.com/minecraft/creator/documents/scripting/custom-commands).
