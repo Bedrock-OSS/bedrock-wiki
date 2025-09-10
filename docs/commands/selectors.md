@@ -10,6 +10,7 @@ mentions:
     - Hatchibombotar
     - SpacebarNinja
     - jeanmajid
+    - keyyard
 description: Understanding target selectors in commands.
 ---
 
@@ -181,6 +182,16 @@ Limits the selection of targets by type family. This argument can be repeated to
 
 Affect all entities in the "monster" family with Regeneration:
 -   `/effect @e[family=monster] regeneration`
+
+### Property
+Limits the selection of targets by property. This argument can be repeated to test for multiple families, and all filters must pass for an entity to be selected. Negating this argument selects entities whose property does not match. Properties can be defined in the Entity Behavior file, and various from types (bool, int, enum,..etc based on behavior set-up)
+
+- `has_property={key=value}` - Include only entities with the correct property
+- `has_property=!{key=value}` - Excludes any entities with the correct property
+
+- **Examples**
+Kill all entities with wiki:property=true:
+- `/kill @e[has_property={wiki:property=true}]`
 
 ### Rotation
 
