@@ -214,7 +214,7 @@ playanimation @e[tag=wiki:fmbe] animation.ender_dragon.neck_head_movement none 0
 
 ## Advanced FMBE Diagonal Transformation - BETA
 
-This is the beta version of a new, slighlty more advanced FMBE, which reduces the total number of command blocks required to 5, while also allowing for more complex transformations.
+This is the beta version of a new, slightly more advanced FMBE, which reduces the total number of command blocks required to 5, while also allowing for more complex transformations.
 
 ![Advanced FMBE Diagonal Transformation Demo GIF](/assets/images/commands/display-entities/advanced-fmbe-diagonal-transformation.gif)
 
