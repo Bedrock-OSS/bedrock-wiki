@@ -227,3 +227,7 @@ Again, please check the API reference to see if the method or property can be ca
 
 > *   This property **can be read** in early-execution mode.
 > *   This function **can be called** in early-execution mode.
+
+---
+
+[Original Credit](https://jaylydev.github.io/scriptapi-docs/features/script-privileges.html)
