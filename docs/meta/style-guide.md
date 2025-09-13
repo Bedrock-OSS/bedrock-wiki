@@ -60,8 +60,8 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 | Geometry              | dragon.geo.json                                                   |
 | Animations            | dragon.animation.json<br>dragon.anim.json                         |
 | Animation Controllers | dragon.animation_controllers.json<br>dragon.ac.json               |
-| RP Entity             | dragon.entity.json<br>dragon.client_entity.json<br>dragon.ce.json |
-| BP Entity             | dragon.behavior.json<br>dragon.se.json<br>_(se: server entity)_   |
+| Entity                | dragon.behavior.json<br>dragon.se.json<br>_(se: server entity)_   |
+| Client Entity         | dragon.entity.json<br>dragon.client_entity.json<br>dragon.ce.json |
 | Item                  | dragon_tooth.item.json                                            |
 | Legacy Item (BP)      | dragon_tooth.item.bp.json                                         |
 | Legacy Item (RP)      | dragon_tooth.item.rp.json                                         |
@@ -70,7 +70,7 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 | Recipe                | dragon_saddle.recipe.json                                         |
 | Spawn Rules           | dragon.spawn.json                                                 |
 | Trade Table           | dragon.json                                                       |
-| Particles             | dragon_magic.particle.json                                        |
+| Particle Effect       | dragon_magic.particle.json                                        |
 | Texture               | dragon.png                                                        |
 | Script                | dragonFlight.js                                                   |
 
@@ -78,7 +78,7 @@ Do not use identifiers that begin with a number, and especially don't use an ide
 
 A suitable namespace should be unique to you or your team. Something like `mob` or `cars` or `content` or `custom` would be a **bad** namespace since another developer might come up with the same namespace as you.
 
-`minecraft` and `minecon` are reserved. Don't use these.
+The `minecraft` namespace is reserved for vanilla content so cannot be used unless overriding vanilla content.
 
 For personal projects, use a convenient version of your player name, and for team projects, use a suitable version of your team name.
 
@@ -86,17 +86,37 @@ When multiple developers work on a project together, the namespace should always
 
 Where to use namespaces:
 
--   entities
--   particles
--   component groups
--   events
+-   Biomes
+    -   Tags
+-   Blocks
+    -   Culling rules
+    -   Culling layers
+    -   Crafting tags
+    -   Tags
+-   Entities
+    -   Component groups
+    -   Events
+    -   Families
+-   Items
+    -   Cooldown categories
+    -   Catalog groups
+    -   Tags
+-   Particles
 
-When not to use namespaces:
+### Namespace Folders
 
--   do not include your namespace in any folder path or file name.
--   **Note:** The following folders are exceptions: `functions`, `structures`, `loot_tables`, `trade_tables`, `sounds`, and `textures`.
-    -   Using a **namespace** in these folders is recommended to prevent conflicts with other packs.
-    -   **Example:** `BP/functions/namespace/test.mcfunction`
+Some content is identified by its file path. Therefore, it should be included in a folder that acts as the namespace:
+
+<FolderView :paths="[
+    'BP/functions/<namespace>/*.mcfunction',
+    'BP/loot_tables/<namespace>/*.json',
+    'BP/trading/<namespace>/*.json',
+    'BP/structures/<namespace>/*.mcstructure',
+    'RP/sounds/<namespace>/*.ogg',
+    'RP/textures/<namespace>/*.png',
+]" />
+
+Other folders should not contain namespaces.
 
 ## Sub-Indexing
 
@@ -112,8 +132,7 @@ When using sub-indexing, use `_` as space, not another `.`.
 
 ❌ `animation.controller.dragon.flying.taking.off`
 
-You can use sub-indexing in your entities:
-`wiki:dragon.drake`
+You can use sub-indexing in your entities: `wiki:dragon.drake`
 
 ## Groups and Events Should Complement Each Other
 
@@ -270,24 +289,38 @@ the.key=The string<\t>## Comment, intended for the one localizing.
 
 Own-line comments can be used for organizational purposes but should not store localization-critical information.
 
-## Acronyms when Discussing
+## Abbreviations
 
-| Acronym | Concept                            |
-| ------- | ---------------------------------- |
-| BP      | Behavior Pack                      |
-| RP      | Resource Pack                      |
-| FP      | Function Pack                      |
-| VRP     | Vanilla Resource Pack              |
-| VBP     | Vanilla Behavior Pack              |
-| AC      | Animation Controller               |
-| RPAC    | Resource Pack Animation Controller |
-| BPAC    | Behavior Pack Animation Controller |
-| BB      | Blockbench                         |
-| BDS     | Bedrock Dedicated Server           |
-| FPV     | First Person View                  |
-| RD      | Render Dragon                      |
-| SP      | Skin Pack                          |
-| VSCode  | Visual Studio Code                 |
+### Pack Types
+
+| Abbreviation | Pack Type                          |
+| ------------ | ---------------------------------- |
+| BP           | Behavior Pack                      |
+| RP           | Resource Pack                      |
+| SP           | Skin Pack                          |
+
+### Languages
+
+| Abbreviation | Language                           |
+| ------------ | ---------------------------------- |
+| JS           | JavaScript                         |
+| JSON         | JavaScript Object Notation         |
+| NBT          | Named Binary Tag                   |
+| TS           | TypeScript                         |
+
+### Other
+
+| Abbreviation | Concept                            |
+| ------------ | ---------------------------------- |
+| AC           | Animation Controller               |
+| RPAC         | Resource Pack Animation Controller |
+| BPAC         | Behavior Pack Animation Controller |
+| BDS          | Bedrock Dedicated Server           |
+| HUD          | Heads-Up Display                   |
+| IDE          | Integrated Development Environment |
+| OSS          | Open-Source Software               |
+| UI           | User Interface                     |
+| VS Code      | Visual Studio Code                 |
 
 ## Definition Format Orders
 

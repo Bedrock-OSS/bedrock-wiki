@@ -14,15 +14,21 @@
   "rows": [
     {
       "tag": "`acacia`",
-      "vanilla_usage": ["`minecraft:acacia_log`"]
+      "vanilla_usage": [
+        "`minecraft:acacia_log`"
+      ]
     },
     {
       "tag": "`birch`",
-      "vanilla_usage": ["`minecraft:birch_log`"]
+      "vanilla_usage": [
+        "`minecraft:birch_log`"
+      ]
     },
     {
       "tag": "`dark_oak`",
-      "vanilla_usage": ["`minecraft:dark_oak_log`"]
+      "vanilla_usage": [
+        "`minecraft:dark_oak_log`"
+      ]
     },
     {
       "tag": "`diamond_pick_diggable`",
@@ -63,7 +69,7 @@
         "`minecraft:pale_moss_block`",
         "`minecraft:podzol`"
       ],
-      "functionality": "Allows trees to be placed on this block during world generation. The block will be replaced with Dirt if a tree does generated above it. Also allows *some* plants to be placed on the block, including Bamboo, Cactus Flower, Dead Bush, Pink Petals, Sugar Cane and Wildflowers."
+      "functionality": "Allows trees to be placed on this block during world generation. The block will be replaced with Dirt if a tree does generate above it. Also allows *some* plants to be placed on the block, including Bamboo, Cactus Flower, Dead Bush, Pink Petals, Sugar Cane and Wildflowers."
     },
     {
       "tag": "`fertilize_area`",
@@ -98,7 +104,10 @@
     },
     {
       "tag": "`gravel`",
-      "vanilla_usage": ["`minecraft:gravel`", "`minecraft:suspicious_gravel`"]
+      "vanilla_usage": [
+        "`minecraft:gravel`",
+        "`minecraft:suspicious_gravel`"
+      ]
     },
     {
       "tag": "`iron_pick_diggable`",
@@ -125,7 +134,9 @@
     },
     {
       "tag": "`jungle`",
-      "vanilla_usage": ["`minecraft:jungle_log`"]
+      "vanilla_usage": [
+        "`minecraft:jungle_log`"
+      ]
     },
     {
       "tag": "`log`",
@@ -142,10 +153,18 @@
       "tag": "`metal`",
       "vanilla_usage": [
         "`minecraft:cauldron`",
+        "`minecraft:copper_bars`",
+        "`minecraft:exposed_copper_bars`",
         "`minecraft:gold_block`",
         "`minecraft:iron_bars`",
         "`minecraft:iron_block`",
-        "`minecraft:iron_door`"
+        "`minecraft:iron_door`",
+        "`minecraft:oxidized_copper_bars`",
+        "`minecraft:waxed_copper_bars`",
+        "`minecraft:waxed_exposed_copper_bars`",
+        "`minecraft:waxed_oxidized_copper_bars`",
+        "`minecraft:waxed_weathered_copper_bars`",
+        "`minecraft:weathered_copper_bars`"
       ]
     },
     {
@@ -158,7 +177,8 @@
         "`minecraft:sweet_berry_bush`",
         "`minecraft:torchflower_crop`",
         "`minecraft:wheat`"
-      ]
+      ],
+      "functionality": "Allows the block to be pollinated by entities with the `minecraft:grows_crops` component (such as bees). Given that custom blocks cannot have the `growth` state, pollination will only result in particles and sounds playing."
     },
     {
       "tag": "`minecraft:diamond_tier_destructible`",
@@ -204,6 +224,7 @@
         "`minecraft:acacia_log`",
         "`minecraft:acacia_planks`",
         "`minecraft:acacia_pressure_plate`",
+        "`minecraft:acacia_shelf`",
         "`minecraft:acacia_slab`",
         "`minecraft:acacia_stairs`",
         "`minecraft:acacia_standing_sign`",
@@ -224,6 +245,7 @@
         "`minecraft:bamboo_mosaic_stairs`",
         "`minecraft:bamboo_planks`",
         "`minecraft:bamboo_pressure_plate`",
+        "`minecraft:bamboo_shelf`",
         "`minecraft:bamboo_slab`",
         "`minecraft:bamboo_stairs`",
         "`minecraft:bamboo_standing_sign`",
@@ -242,6 +264,7 @@
         "`minecraft:birch_log`",
         "`minecraft:birch_planks`",
         "`minecraft:birch_pressure_plate`",
+        "`minecraft:birch_shelf`",
         "`minecraft:birch_slab`",
         "`minecraft:birch_stairs`",
         "`minecraft:birch_standing_sign`",
@@ -264,6 +287,7 @@
         "`minecraft:cherry_log`",
         "`minecraft:cherry_planks`",
         "`minecraft:cherry_pressure_plate`",
+        "`minecraft:cherry_shelf`",
         "`minecraft:cherry_slab`",
         "`minecraft:cherry_stairs`",
         "`minecraft:cherry_standing_sign`",
@@ -287,6 +311,7 @@
         "`minecraft:crimson_hyphae`",
         "`minecraft:crimson_planks`",
         "`minecraft:crimson_pressure_plate`",
+        "`minecraft:crimson_shelf`",
         "`minecraft:crimson_slab`",
         "`minecraft:crimson_stairs`",
         "`minecraft:crimson_standing_sign`",
@@ -302,6 +327,7 @@
         "`minecraft:dark_oak_log`",
         "`minecraft:dark_oak_planks`",
         "`minecraft:dark_oak_pressure_plate`",
+        "`minecraft:dark_oak_shelf`",
         "`minecraft:dark_oak_slab`",
         "`minecraft:dark_oak_stairs`",
         "`minecraft:dark_oak_trapdoor`",
@@ -323,6 +349,7 @@
         "`minecraft:jungle_log`",
         "`minecraft:jungle_planks`",
         "`minecraft:jungle_pressure_plate`",
+        "`minecraft:jungle_shelf`",
         "`minecraft:jungle_slab`",
         "`minecraft:jungle_stairs`",
         "`minecraft:jungle_standing_sign`",
@@ -343,6 +370,7 @@
         "`minecraft:mangrove_planks`",
         "`minecraft:mangrove_pressure_plate`",
         "`minecraft:mangrove_roots`",
+        "`minecraft:mangrove_shelf`",
         "`minecraft:mangrove_slab`",
         "`minecraft:mangrove_stairs`",
         "`minecraft:mangrove_standing_sign`",
@@ -357,6 +385,7 @@
         "`minecraft:oak_hanging_sign`",
         "`minecraft:oak_log`",
         "`minecraft:oak_planks`",
+        "`minecraft:oak_shelf`",
         "`minecraft:oak_slab`",
         "`minecraft:oak_stairs`",
         "`minecraft:oak_wood`",
@@ -369,6 +398,7 @@
         "`minecraft:pale_oak_log`",
         "`minecraft:pale_oak_planks`",
         "`minecraft:pale_oak_pressure_plate`",
+        "`minecraft:pale_oak_shelf`",
         "`minecraft:pale_oak_slab`",
         "`minecraft:pale_oak_stairs`",
         "`minecraft:pale_oak_standing_sign`",
@@ -389,6 +419,7 @@
         "`minecraft:spruce_log`",
         "`minecraft:spruce_planks`",
         "`minecraft:spruce_pressure_plate`",
+        "`minecraft:spruce_shelf`",
         "`minecraft:spruce_slab`",
         "`minecraft:spruce_stairs`",
         "`minecraft:spruce_standing_sign`",
@@ -434,6 +465,7 @@
         "`minecraft:warped_hyphae`",
         "`minecraft:warped_planks`",
         "`minecraft:warped_pressure_plate`",
+        "`minecraft:warped_shelf`",
         "`minecraft:warped_slab`",
         "`minecraft:warped_stairs`",
         "`minecraft:warped_standing_sign`",
@@ -528,7 +560,6 @@
         "`minecraft:budding_amethyst`",
         "`minecraft:calcite`",
         "`minecraft:cauldron`",
-        "`minecraft:chain`",
         "`minecraft:chemical_heat`",
         "`minecraft:chipped_anvil`",
         "`minecraft:chiseled_copper`",
@@ -555,10 +586,15 @@
         "`minecraft:cobblestone_wall`",
         "`minecraft:compound_creator`",
         "`minecraft:conduit`",
+        "`minecraft:copper_bars`",
         "`minecraft:copper_block`",
         "`minecraft:copper_bulb`",
+        "`minecraft:copper_chain`",
+        "`minecraft:copper_chest`",
         "`minecraft:copper_door`",
+        "`minecraft:copper_golem_statue`",
         "`minecraft:copper_grate`",
+        "`minecraft:copper_lantern`",
         "`minecraft:copper_ore`",
         "`minecraft:copper_trapdoor`",
         "`minecraft:cracked_deepslate_bricks`",
@@ -639,14 +675,20 @@
         "`minecraft:ender_chest`",
         "`minecraft:exposed_chiseled_copper`",
         "`minecraft:exposed_copper`",
+        "`minecraft:exposed_copper_bars`",
         "`minecraft:exposed_copper_bulb`",
+        "`minecraft:exposed_copper_chain`",
+        "`minecraft:exposed_copper_chest`",
         "`minecraft:exposed_copper_door`",
+        "`minecraft:exposed_copper_golem_statue`",
         "`minecraft:exposed_copper_grate`",
+        "`minecraft:exposed_copper_lantern`",
         "`minecraft:exposed_copper_trapdoor`",
         "`minecraft:exposed_cut_copper`",
         "`minecraft:exposed_cut_copper_slab`",
         "`minecraft:exposed_cut_copper_stairs`",
         "`minecraft:exposed_double_cut_copper_slab`",
+        "`minecraft:exposed_lightning_rod`",
         "`minecraft:fire_coral_block`",
         "`minecraft:furnace`",
         "`minecraft:gilded_blackstone`",
@@ -683,6 +725,7 @@
         "`minecraft:infested_stone_bricks`",
         "`minecraft:iron_bars`",
         "`minecraft:iron_block`",
+        "`minecraft:iron_chain`",
         "`minecraft:iron_door`",
         "`minecraft:iron_ore`",
         "`minecraft:iron_trapdoor`",
@@ -754,14 +797,20 @@
         "`minecraft:orange_terracotta`",
         "`minecraft:oxidized_chiseled_copper`",
         "`minecraft:oxidized_copper`",
+        "`minecraft:oxidized_copper_bars`",
         "`minecraft:oxidized_copper_bulb`",
+        "`minecraft:oxidized_copper_chain`",
+        "`minecraft:oxidized_copper_chest`",
         "`minecraft:oxidized_copper_door`",
+        "`minecraft:oxidized_copper_golem_statue`",
         "`minecraft:oxidized_copper_grate`",
+        "`minecraft:oxidized_copper_lantern`",
         "`minecraft:oxidized_copper_trapdoor`",
         "`minecraft:oxidized_cut_copper`",
         "`minecraft:oxidized_cut_copper_slab`",
         "`minecraft:oxidized_cut_copper_stairs`",
         "`minecraft:oxidized_double_cut_copper_slab`",
+        "`minecraft:oxidized_lightning_rod`",
         "`minecraft:packed_ice`",
         "`minecraft:packed_mud`",
         "`minecraft:petrified_oak_double_slab`",
@@ -912,9 +961,14 @@
         "`minecraft:warped_nylium`",
         "`minecraft:waxed_chiseled_copper`",
         "`minecraft:waxed_copper`",
+        "`minecraft:waxed_copper_bars`",
         "`minecraft:waxed_copper_bulb`",
+        "`minecraft:waxed_copper_chain`",
+        "`minecraft:waxed_copper_chest`",
         "`minecraft:waxed_copper_door`",
+        "`minecraft:waxed_copper_golem_statue`",
         "`minecraft:waxed_copper_grate`",
+        "`minecraft:waxed_copper_lantern`",
         "`minecraft:waxed_copper_trapdoor`",
         "`minecraft:waxed_cut_copper`",
         "`minecraft:waxed_cut_copper_slab`",
@@ -922,44 +976,69 @@
         "`minecraft:waxed_double_cut_copper_slab`",
         "`minecraft:waxed_exposed_chiseled_copper`",
         "`minecraft:waxed_exposed_copper`",
+        "`minecraft:waxed_exposed_copper_bars`",
         "`minecraft:waxed_exposed_copper_bulb`",
+        "`minecraft:waxed_exposed_copper_chain`",
+        "`minecraft:waxed_exposed_copper_chest`",
         "`minecraft:waxed_exposed_copper_door`",
+        "`minecraft:waxed_exposed_copper_golem_statue`",
         "`minecraft:waxed_exposed_copper_grate`",
+        "`minecraft:waxed_exposed_copper_lantern`",
         "`minecraft:waxed_exposed_copper_trapdoor`",
         "`minecraft:waxed_exposed_cut_copper`",
         "`minecraft:waxed_exposed_cut_copper_slab`",
         "`minecraft:waxed_exposed_cut_copper_stairs`",
         "`minecraft:waxed_exposed_double_cut_copper_slab`",
+        "`minecraft:waxed_exposed_lightning_rod`",
+        "`minecraft:waxed_lightning_rod`",
         "`minecraft:waxed_oxidized_chiseled_copper`",
         "`minecraft:waxed_oxidized_copper`",
+        "`minecraft:waxed_oxidized_copper_bars`",
         "`minecraft:waxed_oxidized_copper_bulb`",
+        "`minecraft:waxed_oxidized_copper_chain`",
+        "`minecraft:waxed_oxidized_copper_chest`",
         "`minecraft:waxed_oxidized_copper_door`",
+        "`minecraft:waxed_oxidized_copper_golem_statue`",
         "`minecraft:waxed_oxidized_copper_grate`",
+        "`minecraft:waxed_oxidized_copper_lantern`",
         "`minecraft:waxed_oxidized_copper_trapdoor`",
         "`minecraft:waxed_oxidized_cut_copper`",
         "`minecraft:waxed_oxidized_cut_copper_slab`",
         "`minecraft:waxed_oxidized_cut_copper_stairs`",
         "`minecraft:waxed_oxidized_double_cut_copper_slab`",
+        "`minecraft:waxed_oxidized_lightning_rod`",
         "`minecraft:waxed_weathered_chiseled_copper`",
         "`minecraft:waxed_weathered_copper`",
+        "`minecraft:waxed_weathered_copper_bars`",
         "`minecraft:waxed_weathered_copper_bulb`",
+        "`minecraft:waxed_weathered_copper_chain`",
+        "`minecraft:waxed_weathered_copper_chest`",
         "`minecraft:waxed_weathered_copper_door`",
+        "`minecraft:waxed_weathered_copper_golem_statue`",
         "`minecraft:waxed_weathered_copper_grate`",
+        "`minecraft:waxed_weathered_copper_lantern`",
         "`minecraft:waxed_weathered_copper_trapdoor`",
         "`minecraft:waxed_weathered_cut_copper`",
         "`minecraft:waxed_weathered_cut_copper_slab`",
         "`minecraft:waxed_weathered_cut_copper_stairs`",
         "`minecraft:waxed_weathered_double_cut_copper_slab`",
+        "`minecraft:waxed_weathered_lightning_rod`",
         "`minecraft:weathered_chiseled_copper`",
         "`minecraft:weathered_copper`",
+        "`minecraft:weathered_copper_bars`",
         "`minecraft:weathered_copper_bulb`",
+        "`minecraft:weathered_copper_chain`",
+        "`minecraft:weathered_copper_chest`",
         "`minecraft:weathered_copper_door`",
+        "`minecraft:weathered_copper_golem_statue`",
         "`minecraft:weathered_copper_grate`",
+        "`minecraft:weathered_copper_lantern`",
         "`minecraft:weathered_copper_trapdoor`",
         "`minecraft:weathered_cut_copper`",
         "`minecraft:weathered_cut_copper_slab`",
         "`minecraft:weathered_cut_copper_stairs`",
         "`minecraft:weathered_double_cut_copper_slab`",
+        "`minecraft:weathered_lightning_rod`",
         "`minecraft:white_concrete`",
         "`minecraft:white_glazed_terracotta`",
         "`minecraft:white_shulker_box`",
@@ -973,7 +1052,9 @@
     },
     {
       "tag": "`minecraft:is_shears_item_destructible`",
-      "vanilla_usage": ["`minecraft:web`"],
+      "vanilla_usage": [
+        "`minecraft:web`"
+      ],
       "functionality": "Instructs shears to mine this block faster. Custom shears should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
@@ -1020,7 +1101,9 @@
     },
     {
       "tag": "`minecraft:is_sword_item_destructible`",
-      "vanilla_usage": ["`minecraft:web`"],
+      "vanilla_usage": [
+        "`minecraft:web`"
+      ],
       "functionality": "Instructs swords to mine this block faster. Custom swords should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
@@ -1029,6 +1112,7 @@
         "`minecraft:chiseled_copper`",
         "`minecraft:copper_block`",
         "`minecraft:copper_bulb`",
+        "`minecraft:copper_chest`",
         "`minecraft:copper_grate`",
         "`minecraft:copper_ore`",
         "`minecraft:copper_trapdoor`",
@@ -1042,12 +1126,14 @@
         "`minecraft:exposed_chiseled_copper`",
         "`minecraft:exposed_copper`",
         "`minecraft:exposed_copper_bulb`",
+        "`minecraft:exposed_copper_chest`",
         "`minecraft:exposed_copper_grate`",
         "`minecraft:exposed_copper_trapdoor`",
         "`minecraft:exposed_cut_copper`",
         "`minecraft:exposed_cut_copper_slab`",
         "`minecraft:exposed_cut_copper_stairs`",
         "`minecraft:exposed_double_cut_copper_slab`",
+        "`minecraft:exposed_lightning_rod`",
         "`minecraft:iron_block`",
         "`minecraft:iron_ore`",
         "`minecraft:lapis_block`",
@@ -1056,17 +1142,20 @@
         "`minecraft:oxidized_chiseled_copper`",
         "`minecraft:oxidized_copper`",
         "`minecraft:oxidized_copper_bulb`",
+        "`minecraft:oxidized_copper_chest`",
         "`minecraft:oxidized_copper_grate`",
         "`minecraft:oxidized_copper_trapdoor`",
         "`minecraft:oxidized_cut_copper`",
         "`minecraft:oxidized_cut_copper_slab`",
         "`minecraft:oxidized_cut_copper_stairs`",
         "`minecraft:oxidized_double_cut_copper_slab`",
+        "`minecraft:oxidized_lightning_rod`",
         "`minecraft:raw_copper_block`",
         "`minecraft:raw_iron_block`",
         "`minecraft:waxed_chiseled_copper`",
         "`minecraft:waxed_copper`",
         "`minecraft:waxed_copper_bulb`",
+        "`minecraft:waxed_copper_chest`",
         "`minecraft:waxed_copper_grate`",
         "`minecraft:waxed_copper_trapdoor`",
         "`minecraft:waxed_cut_copper`",
@@ -1076,61 +1165,94 @@
         "`minecraft:waxed_exposed_chiseled_copper`",
         "`minecraft:waxed_exposed_copper`",
         "`minecraft:waxed_exposed_copper_bulb`",
+        "`minecraft:waxed_exposed_copper_chest`",
         "`minecraft:waxed_exposed_copper_grate`",
         "`minecraft:waxed_exposed_copper_trapdoor`",
         "`minecraft:waxed_exposed_cut_copper`",
         "`minecraft:waxed_exposed_cut_copper_slab`",
         "`minecraft:waxed_exposed_cut_copper_stairs`",
         "`minecraft:waxed_exposed_double_cut_copper_slab`",
+        "`minecraft:waxed_exposed_lightning_rod`",
+        "`minecraft:waxed_lightning_rod`",
         "`minecraft:waxed_oxidized_chiseled_copper`",
         "`minecraft:waxed_oxidized_copper`",
         "`minecraft:waxed_oxidized_copper_bulb`",
+        "`minecraft:waxed_oxidized_copper_chest`",
         "`minecraft:waxed_oxidized_copper_grate`",
         "`minecraft:waxed_oxidized_copper_trapdoor`",
         "`minecraft:waxed_oxidized_cut_copper`",
         "`minecraft:waxed_oxidized_cut_copper_slab`",
         "`minecraft:waxed_oxidized_cut_copper_stairs`",
         "`minecraft:waxed_oxidized_double_cut_copper_slab`",
+        "`minecraft:waxed_oxidized_lightning_rod`",
         "`minecraft:waxed_weathered_chiseled_copper`",
         "`minecraft:waxed_weathered_copper`",
         "`minecraft:waxed_weathered_copper_bulb`",
+        "`minecraft:waxed_weathered_copper_chest`",
         "`minecraft:waxed_weathered_copper_grate`",
         "`minecraft:waxed_weathered_copper_trapdoor`",
         "`minecraft:waxed_weathered_cut_copper`",
         "`minecraft:waxed_weathered_cut_copper_slab`",
         "`minecraft:waxed_weathered_cut_copper_stairs`",
         "`minecraft:waxed_weathered_double_cut_copper_slab`",
+        "`minecraft:waxed_weathered_lightning_rod`",
         "`minecraft:weathered_chiseled_copper`",
         "`minecraft:weathered_copper`",
         "`minecraft:weathered_copper_bulb`",
+        "`minecraft:weathered_copper_chest`",
         "`minecraft:weathered_copper_grate`",
         "`minecraft:weathered_copper_trapdoor`",
         "`minecraft:weathered_cut_copper`",
         "`minecraft:weathered_cut_copper_slab`",
         "`minecraft:weathered_cut_copper_stairs`",
-        "`minecraft:weathered_double_cut_copper_slab`"
+        "`minecraft:weathered_double_cut_copper_slab`",
+        "`minecraft:weathered_lightning_rod`"
       ],
       "functionality": "Indicates that the block must be destroyed by a stone tier tool in order to drop. This does not automatically prevent drops for custom blocks."
     },
     {
       "tag": "`mob_spawner`",
-      "vanilla_usage": ["`minecraft:mob_spawner`"]
+      "vanilla_usage": [
+        "`minecraft:mob_spawner`"
+      ]
     },
     {
       "tag": "`not_feature_replaceable`",
       "vanilla_usage": [
+        "`minecraft:acacia_shelf`",
+        "`minecraft:bamboo_shelf`",
         "`minecraft:bedrock`",
+        "`minecraft:birch_shelf`",
+        "`minecraft:cherry_shelf`",
         "`minecraft:chest`",
         "`minecraft:chiseled_bookshelf`",
+        "`minecraft:copper_chest`",
+        "`minecraft:crimson_shelf`",
+        "`minecraft:dark_oak_shelf`",
         "`minecraft:end_portal_frame`",
+        "`minecraft:exposed_copper_chest`",
+        "`minecraft:jungle_shelf`",
+        "`minecraft:mangrove_shelf`",
         "`minecraft:mob_spawner`",
+        "`minecraft:oak_shelf`",
+        "`minecraft:oxidized_copper_chest`",
+        "`minecraft:pale_oak_shelf`",
+        "`minecraft:spruce_shelf`",
         "`minecraft:trial_spawner`",
-        "`minecraft:vault`"
+        "`minecraft:vault`",
+        "`minecraft:warped_shelf`",
+        "`minecraft:waxed_copper_chest`",
+        "`minecraft:waxed_exposed_copper_chest`",
+        "`minecraft:waxed_oxidized_copper_chest`",
+        "`minecraft:waxed_weathered_copper_chest`",
+        "`minecraft:weathered_copper_chest`"
       ]
     },
     {
       "tag": "`oak`",
-      "vanilla_usage": ["`minecraft:oak_log`"]
+      "vanilla_usage": [
+        "`minecraft:oak_log`"
+      ]
     },
     {
       "tag": "`one_way_collidable`",
@@ -1226,20 +1348,29 @@
         "`minecraft:detector_rail`",
         "`minecraft:golden_rail`",
         "`minecraft:rail`"
-      ]
+      ],
+      "functionality": "Allows minecarts to be placed on the block. Causes entities with the `minecraft:rail_movement` component (such as minecarts) to snap to the block and move across it towards the north or south as long as the block does not have a collision box."
     },
     {
       "tag": "`sand`",
-      "vanilla_usage": ["`minecraft:red_sand`", "`minecraft:sand`", "`minecraft:suspicious_sand`"],
+      "vanilla_usage": [
+        "`minecraft:red_sand`",
+        "`minecraft:sand`",
+        "`minecraft:suspicious_sand`"
+      ],
       "functionality": "Allows cacti and sugarcane to be placed on the block."
     },
     {
       "tag": "`snow`",
-      "vanilla_usage": ["`minecraft:snow_layer`"]
+      "vanilla_usage": [
+        "`minecraft:snow_layer`"
+      ]
     },
     {
       "tag": "`spruce`",
-      "vanilla_usage": ["`minecraft:spruce_log`"]
+      "vanilla_usage": [
+        "`minecraft:spruce_log`"
+      ]
     },
     {
       "tag": "`stone_pick_diggable`",
@@ -1247,6 +1378,8 @@
         "`minecraft:chiseled_copper`",
         "`minecraft:copper_block`",
         "`minecraft:copper_bulb`",
+        "`minecraft:copper_chest`",
+        "`minecraft:copper_golem_statue`",
         "`minecraft:copper_grate`",
         "`minecraft:copper_ore`",
         "`minecraft:cut_copper`",
@@ -1255,12 +1388,16 @@
         "`minecraft:exposed_chiseled_copper`",
         "`minecraft:exposed_copper`",
         "`minecraft:exposed_copper_bulb`",
+        "`minecraft:exposed_copper_chest`",
+        "`minecraft:exposed_copper_golem_statue`",
         "`minecraft:exposed_copper_grate`",
         "`minecraft:exposed_cut_copper`",
         "`minecraft:exposed_cut_copper_stairs`",
         "`minecraft:oxidized_chiseled_copper`",
         "`minecraft:oxidized_copper`",
         "`minecraft:oxidized_copper_bulb`",
+        "`minecraft:oxidized_copper_chest`",
+        "`minecraft:oxidized_copper_golem_statue`",
         "`minecraft:oxidized_copper_grate`",
         "`minecraft:oxidized_cut_copper`",
         "`minecraft:oxidized_cut_copper_stairs`",
@@ -1268,18 +1405,24 @@
         "`minecraft:waxed_chiseled_copper`",
         "`minecraft:waxed_copper`",
         "`minecraft:waxed_copper_bulb`",
+        "`minecraft:waxed_copper_chest`",
+        "`minecraft:waxed_copper_golem_statue`",
         "`minecraft:waxed_copper_grate`",
         "`minecraft:waxed_cut_copper`",
         "`minecraft:waxed_cut_copper_stairs`",
         "`minecraft:waxed_exposed_chiseled_copper`",
         "`minecraft:waxed_exposed_copper`",
         "`minecraft:waxed_exposed_copper_bulb`",
+        "`minecraft:waxed_exposed_copper_chest`",
+        "`minecraft:waxed_exposed_copper_golem_statue`",
         "`minecraft:waxed_exposed_copper_grate`",
         "`minecraft:waxed_exposed_cut_copper`",
         "`minecraft:waxed_exposed_cut_copper_stairs`",
         "`minecraft:waxed_oxidized_chiseled_copper`",
         "`minecraft:waxed_oxidized_copper`",
         "`minecraft:waxed_oxidized_copper_bulb`",
+        "`minecraft:waxed_oxidized_copper_chest`",
+        "`minecraft:waxed_oxidized_copper_golem_statue`",
         "`minecraft:waxed_oxidized_copper_grate`",
         "`minecraft:waxed_oxidized_cut_copper`",
         "`minecraft:waxed_oxidized_cut_copper_slab`",
@@ -1288,12 +1431,16 @@
         "`minecraft:waxed_weathered_chiseled_copper`",
         "`minecraft:waxed_weathered_copper`",
         "`minecraft:waxed_weathered_copper_bulb`",
+        "`minecraft:waxed_weathered_copper_chest`",
+        "`minecraft:waxed_weathered_copper_golem_statue`",
         "`minecraft:waxed_weathered_copper_grate`",
         "`minecraft:waxed_weathered_cut_copper`",
         "`minecraft:waxed_weathered_cut_copper_stairs`",
         "`minecraft:weathered_chiseled_copper`",
         "`minecraft:weathered_copper`",
         "`minecraft:weathered_copper_bulb`",
+        "`minecraft:weathered_copper_chest`",
+        "`minecraft:weathered_copper_golem_statue`",
         "`minecraft:weathered_copper_grate`",
         "`minecraft:weathered_cut_copper`",
         "`minecraft:weathered_cut_copper_stairs`"
@@ -1419,7 +1566,10 @@
     },
     {
       "tag": "`water`",
-      "vanilla_usage": ["`minecraft:flowing_water`", "`minecraft:water`"]
+      "vanilla_usage": [
+        "`minecraft:flowing_water`",
+        "`minecraft:water`"
+      ]
     },
     {
       "tag": "`wood`",
@@ -1576,3 +1726,4 @@
     }
   ]
 }
+

@@ -13,33 +13,27 @@ description: Introduction to area-of-effect clouds.
 
 ## Overview
 
-Area-of-effect clouds have several special features we can take advantage of:
+AOE clouds have several special features we can take advantage of:
 
--   As [dummy entities](/entities/dummy-entities), they are highly performant and barely affect framerate, and they are also completely static and have no collision with the world. This makes them perfect for situations around players or where precise positioning is important.
--   It does not send the client updates. Once it spawns in, it will visually appear to be frozen in place until it despawns. However, it can still be moved around through commands just fine.
--   It can apply any potion effect in highly configurable ways. The duration can be set down to the tick, as well as whether or not the effect is ambient, or displays on the screen, if it emits particles, etc.
+-   As [dummy entities](/entities/dummy-entities), AOE clouds are highly performant. They are optimized to have no collision with the world or other entities. This makes them perfect for situations around players or other entities.
+-   AOE clouds are perfectly static and can only be moved with commands. This is ideal for situations where precise positioning is important.
+-   AOE clouds can be configured to apply potion effects. The duration can be set down to the tick, as well as whether or not the effect is ambient, if it displays on the screen, if it emits particles, etc.
 -   Entities with a runtime identifier of `minecraft:area_effect_cloud` inherit these same properties.
 
-## Method 1: Projectile Component
+## Placing AOE Clouds
 
-The projectile component supports spawning in area-of-effect clouds on hit. Minecraft uses this to spawn in AOE clouds from lingering potions.
-
-[Projectiles Documentation](/entities/projectiles#spawn-aoe-cloud)
-
-## Method 2: NBT Editing
-
-Another way to spawn in these area-of-effect clouds is through structure files. This grants us finer control over the potion effects the cloud can have. So, our first order of business is getting a means to edit these structures.
+To create an AOE cloud, we need to first create a structure to contain one. An AOE cloud must have specific NBT data in order to exist properly.
 
 ### NBT Editors
 
-One of the following NBT editors are recommended:
+One of the following NBT editors are recommended for editing structure files:
 
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio) (a standalone program by tryashtar)
 -   [NBT Viewer](https://marketplace.visualstudio.com/items?itemName=Misodee.vscode-nbt) (a Visual Studio Code extension by Misode)
 
 ### Structure file
 
-For convenience, this article contains a premade structure file you can download and use. Inside is an AOE cloud that exists for the maximum possible time.
+For convenience, this article contains a premade structure file you can download and use. Inside is an AOE cloud with the smallest possible radius (0.5 blocks) that exists for the maximum possible time (`2^31 - 1` ticks, or about 29,826 hours).
 
 <Button link="/assets/packs/entities/aec/aec.mcstructure" download>
     Download MCSTRUCTURE
@@ -49,19 +43,19 @@ Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructu
 
 ### NBT Format
 
-| Tag                  | Type    | Description                                                   |
-| -------------------- | ------- | ------------------------------------------------------------- |
-| Duration             | Integer | How long the cloud exists for before expiring, in ticks.      |
-| DurationOnUse        | Integer | How much the duration should change when effects are applied. |
-| InitialRadius        | Float   | The size of this cloud's radius when created.                 |
-| ParticleColor        | Integer | The color of the particle effect, in decimal.                 |
-| ParticleId           | Integer | The particle effect this cloud emits. 0 emits no particles.   |
-| PotionId             | Short   | This cloud's potion effect ID when created. Has no effect.    |
-| RadiusChangeOnPickup | Float   | Unknown.                                                      |
-| RadiusOnUse          | Float   | How much the radius should change when effects are applied.   |
-| RadiusPerTick        | Float   | How much the radius changes every tick.                       |
-| ReapplicationDelay   | Integer | The interval at which effects can be applied, in ticks.       |
-| mobEffects           | List    | Describes what potion effects should be applied.              |
+| Tag                  | Type    | Description                                                                                                          |
+| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| Duration             | Integer | How long the cloud will exist for before expiring, in ticks. A value of 0 will cause the cloud to despawn instantly. |
+| DurationOnUse        | Integer | How much the duration should change when effects are applied.                                                        |
+| InitialRadius        | Float   | The size of this cloud's radius when created. Values below 0.5 cause the cloud to despawn instantly.                 |
+| RadiusChangeOnPickup | Float   | Unknown.                                                                                                             |
+| RadiusOnUse          | Float   | How much the radius should change when effects are applied.                                                          |
+| RadiusPerTick        | Float   | How much the radius changes every tick.                                                                              |
+| ParticleColor        | Integer | The color of the particle effect, stored in decimal.                                                                 |
+| ParticleId           | Integer | Legacy value for storing a component particle ID. Has no effect.                                                     |
+| PotionId             | Short   | This cloud's potion effect ID when created. Has no effect.                                                           |
+| ReapplicationDelay   | Integer | The interval at which effects can be applied, in ticks.                                                              |
+| mobEffects           | List    | Describes what potion effects should be applied.                                                                     |
 
 Below are the parameters for the `mobEffects` tag.
 
@@ -76,3 +70,57 @@ Below are the parameters for the `mobEffects` tag.
 | DurationHard                    | Integer | Unknown, seemingly unused.                                            |
 | Id                              | Byte    | The potion effect ID for this effect.                                 |
 | ShowParticles                   | Byte    | Defines whether this effect's particles should appear or not.         |
+
+## Using AOE Clouds
+
+Once an AOE cloud is placed, we can then use it like any other marker/dummy entity.
+
+Some things to consider when using an AOE cloud:
+
+-   They use the particle emitter `minecraft:mobspell_lingering`. To avoid seeing particles, a resource pack must alter this particle emitter.
+-   The entity `minecraft:area_effect_cloud` does not send the client updates about its position; this means it will appear fixed to where it spawned in. It can still be moved around with `/teleport`.
+
+### Scripting Utility
+
+To make manipulating AOE clouds easier, the following utility is provided. It exports a function, `registerOnEntityLoad`, that invokes a callback when an entity loads in. This can be used to access the AOE cloud after deferring its spawning to the structure manager.
+
+<Button link="/assets/packs/entities/aec/entity_load_handler.js" download>
+    Download utility
+</Button>
+
+<CodeHeader>Example usage:</CodeHeader>
+
+```js
+import { world, DimensionLocation } from "@minecraft/server";
+import { registerOnEntityLoad } from "./entity_load_handler.js";
+
+/**
+ * @param {DimensionLocation} location
+ */
+function spawnMarker(location) {
+    const Structure_Location = {
+        x: Math.floor(location.x),
+        y: Math.floor(location.y),
+        z: Math.floor(location.z)
+    };
+    world.structureManager.place(
+        "mystructure:aec",
+        location.dimension,
+        Structure_Location,
+    );
+    registerOnEntityLoad(
+        "minecraft:area_effect_cloud",
+        function initializeMarker(entity) {
+            const Entity_Location = {
+                x: location.x,
+                y: location.y,
+                z: location.z
+            };
+            entity.teleport(Entity_Location);
+            entity.addTag("origin");
+            // etc.
+        }
+    );
+}
+
+```

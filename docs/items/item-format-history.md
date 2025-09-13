@@ -16,6 +16,23 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.120
+
+### Description
+
+<Label color="green">Versioned</Label>
+
+-   Updated `menu_category`
+    -   Items with no category can now be used in commands.
+    -   If `is_hidden_in_commands` is set to `true`, the item will still be invalid in commands.
+
+## 1.21.110
+
+### Components
+
+-   Added `minecraft:fire_resistant`
+    -   Determines whether the item cannot be destroyed by fire and lava.
+
 ## 1.21.90
 
 ### Components

@@ -9,11 +9,16 @@ license: true
 mentions:
     - QuazChick
     - SmokeyStack
+hidden: true
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.100`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
+:::
+::: danger [MCPE-223452](https://bugs.mojang.com/browse/MCPE-223452)
+An issue with the `faceLocation` property of many events means that it is not always relative to the bottom north-west corner of a block depending on the block's position in the world.
+As a result, precise interaction does not work correctly and the following method should not be used until this bug is fixed.
 :::
 
 The ability to create custom blocks that the player can interact with can be very basic to implement, yet still allow for complex functionality. However, sometimes the default interaction mode, which is based on simply right-clicking or tapping the block without location-specific conditions, is not enough to achieve the desired functionality.
@@ -400,7 +405,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ![Pigeonholes Showcase](/assets/images/blocks/precise-interaction/pigeonholes.png)
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/pigeonholes.geo.json">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/blob/main/resources/precise_interaction/rp/models/blocks/pigeonholes.geo.json">
     Download Pigeonholes Model
 </Button>
 
@@ -410,7 +415,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -612,7 +617,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ![Double Flower Pot Showcase](/assets/images/blocks/precise-interaction/double_flower_pot.png)
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-precise_interaction/rp/models/blocks/double_flower_pot.geo.json">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/blob/main/resources/precise_interaction/rp/models/blocks/double_flower_pot.geo.json">
     Download Double Flower Pot Model
 </Button>
 
@@ -622,7 +627,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",
@@ -860,7 +865,7 @@ import "./blocks/double_flower_pot";
 
 Template pack made according to this tutorial, adding the Pigeonholes and Double Flower Pot blocks into the "Items" tab.
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/precise_interaction.mcaddon">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/precise_interaction.mcaddon">
     Download MCADDON
 </Button>
 

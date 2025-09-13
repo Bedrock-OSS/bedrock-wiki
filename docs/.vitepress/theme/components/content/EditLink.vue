@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { useData } from "vitepress";
 import { computed } from "vue";
+import useData from "../../composables/data";
 
 import NavLink from "../navigation/NavLink.vue";
 
 const { site, page } = useData();
 
 const link = computed(
-  () => `${site.value.themeConfig.repository}/blob/wiki/docs/${page.value.relativePath}`
+  () => `${site.value.themeConfig.repository}/edit/wiki/docs/${page.value.relativePath}`
 );
 </script>
 

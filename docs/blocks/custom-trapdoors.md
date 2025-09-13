@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.100`
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -27,7 +27,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -72,6 +72,9 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                     "texture": "wiki:custom_trapdoor",
                     "render_method": "alpha_test_single_sided"
                 }
+            },
+            "minecraft:destruction_particles": {
+                "particle_count": 50
             },
             "minecraft:liquid_detection": {
                 "detection_rules": [
@@ -200,13 +203,14 @@ import { system } from "@minecraft/server";
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockToggleableComponent = {
     onPlayerInteract({ block, dimension }, { params }) {
-        const currentValue = block.permutation.getState(params.block_state);
+        const toggleableState = params.block_state;
+
+        const currentValue = block.permutation.getState(toggleableState);
         const toggledValue = !currentValue;
 
-        const toggleableState = params.block_state;
-        const toggleSound = toggledValue ? params.enable_sound : params.disable_sound;
-
         block.setPermutation(block.permutation.withState(toggleableState, toggledValue));
+
+        const toggleSound = toggledValue ? params.enable_sound : params.disable_sound;
         dimension.playSound(toggleSound, block.center());
     },
 };
@@ -226,7 +230,7 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:geometry": [
         {
             "description": {

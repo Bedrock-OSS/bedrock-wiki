@@ -28,6 +28,7 @@ export default function useNavLink(item: {
         isExternal: isExternal.value,
       },
       href: isExternal.value ? item.link : withBase(item.link),
+      target: isExternal.value ? "_blank" : undefined,
     };
   });
 

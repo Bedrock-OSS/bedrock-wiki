@@ -5,7 +5,6 @@ category: Vanilla Re-Creations
 tags:
     - beginner
     - easy
-    - experimental
 license: true
 mentions:
     - Eko-byte
@@ -13,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION `1.21.90`
+:::tip FORMAT VERSION `1.21.100`
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -32,9 +31,11 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 <Spoiler title="Custom Glass Model JSON">
 
+<CodeHeader>RP/models/blocks/custom_glass.geo.json</CodeHeader>
+
 ```json
 {
-    "format_version": "1.21.80",
+    "format_version": "1.21.100",
     "minecraft:geometry": [
         {
             "description": {
@@ -75,7 +76,7 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glass",
@@ -205,5 +206,5 @@ This means that, when multiple glass blocks are next to each other, there will b
 "minecraft:geometry": {
     "identifier": "geometry.custom_glass",
     "culling": "wiki:culling.custom_glass"
-},
+}
 ```

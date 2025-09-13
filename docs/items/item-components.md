@@ -29,11 +29,7 @@ Item components are used to change how your item appears and functions in the wo
             }
         },
         "components": {
-            "minecraft:icon": {
-                "textures": {
-                    "default": "wiki:custom_item"
-                }
-            }
+            "minecraft:icon": "wiki:custom_item"
         }
     }
 }
@@ -452,9 +448,10 @@ Type: Object
 
 ### Food
 
-When an item has a food component, it becomes edible to the player. Must have the `minecraft:use_modifiers` component in order to function properly.
+When an item has a food component, it becomes edible to the player.
+Must have the [`minecraft:use_modifiers`](#use-modifiers) component in order to function properly.
 
-Will implicitly play the eating animation in third person. First person requires `minecraft:use_animation`.
+To display an eating/drinking animation, also apply the [`minecraft:use_animation`](#use-animation) component to the item.
 
 Type: Object
 
@@ -542,7 +539,15 @@ Type: String
 
 Determines the icon to represent the item in the UI and elsewhere. Released from experiment in format version 1.20.10.
 
-Type: Object
+#### String Definition {#icon-string}
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:icon": "wiki:custom_item"
+```
+
+#### Object Definition {#icon-object}
 
 -   `textures`: Object - This map contains the different textures that can be used for the item's icon. Armor trim textures and palettes can be specified here as well. The icon textures are the keys from the `resource_pack/textures/item_texture.json -> texture_data` object associated with the texture file.
     -   `default`
@@ -848,12 +853,16 @@ The item must have the `minecraft:storage_item` component for this component to 
 -   To calculate the weight of an item, divide 64 by its max stack size.
 -   Items that stack to 64 weigh 1 each, those that stack to 16 weigh 4 each and unstackable items weigh 64.
 
-Type: Integer
+Type: Object
+
+-   `max_weight_limit`: Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:storage_weight_limit": 64
+"minecraft:storage_weight_limit": {
+    "max_weight_limit": 64
+}
 ```
 
 ### Storage Weight Modifier
@@ -862,12 +871,16 @@ Defines the additional weight the item adds when inside another storage item.
 
 -   A value of 0 means that this item is not allowed inside another storage item.
 
-Type: Integer (0-64)
+Type: Object
+
+-   `weight_in_storage_item`: Integer (0-64)
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
-"minecraft:storage_weight_modifier": 4
+"minecraft:storage_weight_modifier": {
+    "weight_in_storage_item": 4
+}
 ```
 
 ### Tags

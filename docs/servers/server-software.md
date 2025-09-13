@@ -26,6 +26,11 @@ mentions:
     - sculkmp
     - bedrock-crustaceans
     - QuazChick
+    - OmniacDev
+    - Chorus-OSS
+    - KoshakMineDEV
+    - MEFRREEX
+    - Snowiiii
 description: Software for Bedrock servers.
 ---
 

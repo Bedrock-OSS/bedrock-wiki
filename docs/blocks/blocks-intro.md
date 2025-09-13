@@ -19,14 +19,14 @@ mentions:
     - stirante
     - ChibiMango
     - Hatchibombotar
-    - FrankyRay
+    - fraysdev
     - Ciosciaa
     - Sprunkles137
     - ThomasOrs
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger NOTE
@@ -49,7 +49,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -82,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -97,7 +97,6 @@ Let's configure our own functionality!
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 3
             },
-            "minecraft:friction": 0.4,
             "minecraft:map_color": "#ffffff",
             "minecraft:light_dampening": 0,
             "minecraft:light_emission": 4,
@@ -109,7 +108,6 @@ Let's configure our own functionality!
 
 -   [`minecraft:destructible_by_mining`](/blocks/block-components#destructible-by-mining) defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
 -   [`minecraft:destructible_by_explosion`](/blocks/block-components#destructible-by-explosion) defines the resistance to explosions. The higher the value, the lower the chance of destruction.
--   [`minecraft:friction`](/blocks/block-components#friction) defines how much friction the block has. For example, soul sand has a high value for friction, so it slows the players. Ice has a lower friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.4`.
 -   [`minecraft:map_color`](/blocks/block-components#map-color) is the hex color code that will be displayed on a Minecraft map to represent this block. `#ffffff` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker).
 -   [`minecraft:light_dampening`](/blocks/block-components#light-dampening) defines how much light will be blocked from passing through.
 -   [`minecraft:light_emission`](/blocks/block-components#light-emission) defines the light level the block will output.
@@ -285,7 +283,7 @@ tile.wiki:custom_block.name=Custom Block
 tile.wiki:compass_block.name=Compass Block
 ```
 
-You can learn more about translation [here](/concepts/text-and-translations).
+You can learn more about translation [here](/text/text-intro).
 
 ## Result
 
@@ -300,7 +298,7 @@ In this page, you've learnt about the following:
 ## What's Next?
 
 <CardGrid>
-<Card title="Add Functionality" image="/assets/images/homepage/crafting_table_0.png">
+<Card title="Add Functionality" image="/assets/images/icons/crafting_table.png">
 
 Learn about the available block [components](/blocks/block-components) to craft unique gameplay.
 
@@ -308,14 +306,14 @@ Why not give your block a custom model with the [geometry](/blocks/block-compone
 You could also configure your own [collision](/blocks/block-components#collision-box) and [selection](/blocks/block-components#selection-box) boxes to match!
 
 </Card>
-<Card title="Create Variants" image="/assets/images/homepage/scripting.png">
+<Card title="Create Variants" image="/assets/images/icons/levers.png">
 
 Make use of block [states](/blocks/block-states) and [permutations](/blocks/block-permutations) to conditionally enable components on your blocks.
 
 For example, you could add liquid depth levels to your custom tank block, with support for multiple liquid types.
 
 </Card>
-<Card title="Replicate Vanilla" image="/assets/images/homepage/diamond_ore_0.png">
+<Card title="Replicate Vanilla" image="/assets/images/icons/diamond_ore.png">
 
 Browse several complete replicas of existing blocks in the **Vanilla Re-Creations** category.
 

@@ -123,7 +123,7 @@ This will be our `"minecraft:max_stack_size"` component. For other components yo
 
 ```json
 "components": {
-	"minecraft:max_stack_size": 16
+    "minecraft:max_stack_size": 16
 }
 ```
 
@@ -162,9 +162,9 @@ Textures are stored in the resource pack under `RP/textures` as images. In order
 
 To start we need a texture for our item. For our ectoplasm, we will be using this image.
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/items/ectoplasm.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/wiki-addon/86b0380310d3d5748a43a4be1f93d4c59668e4bf/guide/guide_RP/textures/items/ectoplasm.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/items/ectoplasm.png">
     Download texture here
 </Button>
 
@@ -228,7 +228,7 @@ Now your texture should appear on your item.
 
 ### Item Name
 
-The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm`. This is the translation key for your item name, and it is used to allow for [localization](/concepts/text-and-translations). To set it, we just have to define it in our language files.
+The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm`. This is the translation key for your item name, and it is used to allow for [localization](/text/text-intro). To set it, we just have to define it in our language files.
 
 We already created these files when making our `RP` and `BP`, so we just need to add to them.
 
@@ -302,7 +302,7 @@ Your folder structure should look like this:
 
 </Spoiler>
 
-If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/wiki-addon/tree/main/guide).
+If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/bedrock-examples/tree/main/guide).
 
 ## Your Progress So Far
 

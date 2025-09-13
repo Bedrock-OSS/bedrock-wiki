@@ -22,21 +22,16 @@ Functions are useful in many ways to reduce the time spent going from command bl
 
 ## Function Pack Folder Structure
 
-<FolderView
-	:paths="[
-    'BP',
-    'BP/functions',
+<FolderView :paths="[
     'BP/functions/this_code.mcfunction',
     'BP/functions/more_of_this_code.mcfunction',
     'BP/functions/tick.json',
-    'BP/functions/nested',
     'BP/functions/nested/this_code_is_nested.mcfunction',
-]"
-></FolderView>
+]" />
 
 To help create a consistent format, make it easier for everyone to follow, and to maintain uniformity across your functions, it is advised to follow these best-practices for your folder structure:
 
-1. All your `.mcfunction` files must be  go in a namespaced root-folder within the functions folder. On Bedrock Wiki, we use the `wiki` namespace. However, you may choose a namespace based on your name or project. For more info, refer to the [namespaces](/concepts/namespaces) page.
+1. All your `.mcfunction` files must be go in a namespaced root-folder within the functions folder. On Bedrock Wiki, we use the `wiki` namespace. However, you may choose a namespace based on your name or project. For more info, refer to the [namespaces](/concepts/namespaces) page.
     - ✅️ `BP/functions/wiki/random_number.mcfunction`
     - ❌️ `BP/functions/random_number.mcfunction`
 2. Folders and files in a pack must be named using `snake_case`
@@ -63,8 +58,8 @@ BP/functions/wiki/event/players/on_death.mcfunction
 BP/functions/wiki/event/worlds/on_initialise.mcfunction
 ```
 
-- All content folders `ability` and `event` are consistently singular.
-- The content folders in `event` are also consistent, as both `players` and `worlds` are plural.
+-   All content folders `ability` and `event` are consistently singular.
+-   The content folders in `event` are also consistent, as both `players` and `worlds` are plural.
 
 ❌️ **Inconsistent**:
 
@@ -106,12 +101,12 @@ effect @a[tag=wiki:in_nether] fire_resistance 12 255 true
 
 ## Comments Style Guide
 
--    When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
--    *Optionally*, to further distinguish these levels, you can apply different styles:
-    -    level 1 headers - **# UPPERCASE**
-    -    level 2 headers - **## Title Case**
-    -    level 3 headers - **### Sentence case**
--    Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
+-   When working with functions that contain many commands, it's helpful to keep them organized by using multiple hashtags in comments to indicate different header levels.
+-   _Optionally_, to further distinguish these levels, you can apply different styles:
+-   level 1 headers - **# UPPERCASE**
+-   level 2 headers - **## Title Case**
+-   level 3 headers - **### Sentence case**
+-   Try to avoid the use of more than three header levels or too many headers overall, as this can make the code look cluttered. For your reference, see the example file below:
 
 <Spoiler title="Example Function File">
 
@@ -238,9 +233,11 @@ The final file within a functions folder is the **`tick.json`** file. This speci
 
 ## Sample Function Pack
 
-<Card image="/assets/images/commands/mcfunctions/bcc-logo.png" title="Download" link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/functions_sample.mcpack">
-
-</Card>
+<Card
+    image="/assets/images/discord/bcc.png"
+    title="Download"
+    link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/functions_sample.mcpack"
+/>
 
 ## Troubleshooting Functions
 

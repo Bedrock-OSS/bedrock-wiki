@@ -8,17 +8,21 @@ export default {
   "/blocks/custom-trapdoor": "/blocks/custom-trapdoors",
 
   "/commands/nbt-commands": "/commands/giving-nbt-items",
+  "/commands/tellraw": "/text/rawtext",
 
   "/concepts/animation-controllers": "/animation-controllers/animation-controllers-intro",
   "/concepts/biomes": "/world-generation/biomes",
   "/concepts/blocks": "/blocks/blocks-intro",
   "/concepts/components-events-groups": "/entities/entity-intro-bp",
+  "/concepts/emojis": "/text/emojis",
   "/concepts/entity-properties": "/entities/entity-properties",
   "/concepts/items": "/items/item-components",
   "/concepts/json-ui": "/json-ui/json-ui-intro",
   "/concepts/math-based-animations": "/visuals/math-based-animations",
   "/concepts/mcfunction": "/commands/mcfunction",
+  "/concepts/rawtext": "/text/rawtext",
   "/concepts/render-controller": "/visuals/render-controller",
+  "/concepts/text-and-translations": "/text/text-intro",
 
   "/documentation/biome-tags": "/world-generation/biome-tags",
   "/documentation/block-model-materials": "/blocks/block-components#render-methods",
@@ -26,19 +30,20 @@ export default {
   "/documentation/block-tags": "/blocks/block-tags",
   "/documentation/creative-categories": "/documentation/menu-categories",
   "/documentation/dummy-components": "/entities/dummy-components",
-  "/documentation/emojis": "/concepts/emojis",
+  "/documentation/emojis": "/text/emojis",
   "/documentation/item-groups": "/items/item-groups",
   "/documentation/json-ui": "/json-ui/json-ui-documentation",
   "/documentation/projectiles": "/entities/projectiles",
   "/documentation/runtime-identifier": "/entities/runtime-identifier",
   "/documentation/subpacks": "/concepts/subpacks",
-  "/documentation/tellraw": "/commands/tellraw",
+  "/documentation/tellraw": "/text/rawtext",
 
   "/entities/entities-intro": "/entities/entity-intro-bp",
-  "/entities/npc-dialogs": "/entities/npc-dialogues",
+  "/entities/npc-dialogs": "/entities/npc-dialogue",
 
   "/items/3d-items": "/items/attachables",
-  "/items/item-categories": "/items/creative-categories",
+  "/items/custom-pottery-sherd": "/items/custom-pottery-sherds",
+  "/items/item-categories": "/documentation/menu-categories",
 
   "/json-ui/custom-buttons": "/json-ui/buttons-and-toggles",
 
@@ -52,6 +57,7 @@ export default {
   "/knowledge/using-schemas": "/meta/using-schemas",
   "/knowledge/version-control": "/meta/version-control",
 
+  "/scripting/custom-command": "/scripting/custom-commands",
   "/scripting/gametest-qna": "/meta/gametest-qna",
   "/scripting/scripting-editor-qna": "/meta/scripting-editor-qna",
   "/scripting/starting-scripts": "/scripting/scripting-intro",
@@ -75,7 +81,7 @@ export default {
   "/tutorials/fake_blocks": "/blocks/fake-blocks",
   "/tutorials/invulnerable-entities": "/entities/invulnerable-entities",
   "/tutorials/item-models": "/items/attachables",
-  "/tutorials/npc-dialogs": "/entities/npc-dialogues",
+  "/tutorials/npc-dialogs": "/entities/npc-dialogue",
   "/tutorials/pathfinding-entities": "/entities/pathfinding-entities",
   "/tutorials/player-geometry": "/visuals/player-geometry",
   "/tutorials/remove-shadows": "/visuals/remove-shadows",

@@ -124,7 +124,6 @@ To align a target to the center of a block, run:
 /execute as <target> at @s align xyz run tp @s ~0.5 ~0.5 ~0.5
 ```
 
-
 ### `/execute anchored`
 
 Sets the anchor of the command to the executor's feet or eyes. Changing the anchor will affect the position where local coordinates will start at.
@@ -269,19 +268,19 @@ Now for some examples of things that were not possible to do in one command, or 
 ## What's Next?
 
 <CardGrid>
-<Card title="Execute Logic Gates" link="/commands/logic-gates" image="/assets/images/homepage/scripting.png">
+<Card title="Execute Logic Gates" link="/commands/logic-gates" image="/assets/images/icons/levers.png">
 
 Learn about logic gates and how to use them in commands to create more optimized systems!
 
 </Card>
 
-<Card title="Comparing & Retrieving Scores" link="/commands/comparing-scores" image="/assets/images/homepage/spawn_egg_30.png">
+<Card title="Comparing & Retrieving Scores" link="/commands/comparing-scores" image="/assets/images/icons/parrot.png">
 
 Learn to dynamically compare and retrieve scores for multiple targets.
 
 </Card>
 
-<Card title="Execute at Block Variants" link="/commands/execute-at-block" image="/assets/images/homepage/diamond_ore_0.png">
+<Card title="Execute at Block Variants" link="/commands/execute-at-block" image="/assets/images/icons/diamond_ore.png">
 
 Learn how to dynamically execute commands at the location of any block variant.
 

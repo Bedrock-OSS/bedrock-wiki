@@ -9,7 +9,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
@@ -19,7 +19,7 @@ Only **one** instance of each component can be active at once.
 Duplicate components will be overridden by the latest "[permutations](#conditionally-applying-components)" array entry.
 :::
 
-## What are Permutations?
+## What Are Permutations?
 
 Block permutations represent all state value configurations that each block can possibly be in.
 
@@ -66,7 +66,7 @@ _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or lat
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -113,7 +113,7 @@ Permutation conditions are written as Molang expression strings, and have very l
     -   Variables (including `temp` variables) cannot be assigned.
 
 ```molang
-q.block_state('wiki:integer_state_example') < 6 && !q.block_state('wiki:boolean_state_example')
+q.block_state('wiki:integer_state_example') < 6 || !q.block_state('wiki:boolean_state_example')
 ```
 
 ## Permutation Limits
@@ -123,11 +123,14 @@ As with all things blocks, some limitations have been put in place by Mojang to 
 ### Maximum Amount Per Block
 
 A block _cannot_ have more than 65,536 permutations (equivalent to 4 states with 16 values each).
-Exceeding this limit will result in a content log error and some states being absent from your block.
+This is because a block permutation must be representable by 16 bits.
+
+Exceeding this limit will result in some states being absent from your block so that its permutation count is within the limit, along with a content log error.
 
 ### Maximum Amount Per World
 
-A world _should_ not have more than 65,536 block permutations registered (not necessarily placed).
-Exceeding this limit will result in the following content log warning:
+A world _shouldn't_ have more than a total of 65,536 **custom** block permutations registered (not necessarily placed).
 
-> World with over 65536 block permutations may degrade performance. Current world has XXXXX permutations.
+Exceeding this limit should not affect block functionality, however will result in the following content log warning:
+
+> [Blocks][warning]-World with over 65536 block permutations may degrade performance. Current world has XXXXX permutations.

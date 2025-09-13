@@ -26,7 +26,7 @@ To get the most out of the guide, you should always attempt all guide-exercises 
 
 Download here:
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/legacy_guide.mcaddon">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/guide.mcaddon">
     Download Add-On
 </Button>
 

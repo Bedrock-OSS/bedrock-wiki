@@ -14,13 +14,9 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
-:::
-:::warning EXPERIMENTAL
-This tutorial requires "Upcoming Creator Features" to be enabled in your world in order for the `minecraft:movable` component to function.
-Omitting this component from your block JSON will allow the block to work without experiments, however the crop will not be destroyed when pushed by a piston.
 :::
 
 If you aren't a fan of carrots - that's fine. You can make your own (far superior) crop!
@@ -32,7 +28,6 @@ Making crops is not as difficult as you may think, it just takes a little practi
 -   Custom crops cannot be destroyed by flowing lava.
 -   Custom crops become dark when surrounded by full blocks.
 -   Growth rate cannot be impacted by light level ([see feedback post](https://discord.com/channels/1138536747932864532/1231369171577602179)).
--   Destruction particles do not match the current growth stage texture ([MCPE-219143](https://bugs.mojang.com/browse/MCPE-219143)).
 
 ## Crop Model
 
@@ -44,7 +39,7 @@ By lowering the position down a pixel, it will sit above farmland perfectly maki
 
 ![](/assets/images/blocks/custom-crops/model.png)
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/blob/main/ma-custom_crops/rp/models/blocks/crop.geo.json">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/blob/main/resources/custom_crops/rp/models/blocks/crop.geo.json">
     Download Custom Crop Geometry
 </Button>
 
@@ -58,7 +53,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -112,7 +107,7 @@ This code example also includes the base components of our crop which will be ac
 
 ## Custom Growable Component
 
-The events below do three important functions to make your crop work:
+The events below do two important functions to make your crop work:
 
 -   The [`onRandomTick`](/blocks/block-events#random-tick) event hook is used to increment the `wiki:growth` state at a random interval.
 -   The [`onPlayerInteract`](/blocks/block-events#player-interact) event hook is for bone meal support, adding a random value to `wiki:growth` in survival mode or fully growing the crop in creative mode.
@@ -327,7 +322,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -647,6 +642,6 @@ With the help of this tutorial/template, you now have the knowledge and skills t
 
 If you require further assistance or would like to access the complete template files, please use the download button provided below. Happy designing!
 
-<Button link="https://github.com/Bedrock-OSS/wiki-addon/releases/download/download/custom_crops.mcaddon">
+<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/custom_crops.mcaddon">
     Download MCADDON
 </Button>

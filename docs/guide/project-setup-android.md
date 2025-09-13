@@ -177,7 +177,7 @@ You must place a copy of your desired image in both the behaviour and resource p
 
 ## Language Files
 
-Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your add-on. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can You can learn more about how Minecraft handles localization [here](/concepts/text-and-translations). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
+Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your add-on. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can You can learn more about how Minecraft handles localization [here](/text/text-intro). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
 
 <codeHeader>BP/texts/en_US.lang</codeHeader>
 

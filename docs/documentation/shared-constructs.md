@@ -1,7 +1,6 @@
 ---
 title: Shared Constructs
 description: JSON constructs are expressible in multiple locations in the add-ons system.
-nav_order: 1
 mentions:
     - Ciosciaa
     - ThomasOrs

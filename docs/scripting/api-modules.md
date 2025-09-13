@@ -11,7 +11,7 @@ mentions:
 
 Script API has modules for developers to interact with Minecraft. Additionally, manifest dependencies will need to be set based on the modules used within your add-on.
 
-| Module Name                         | UUID                                   | Previous Names Alisase          | First Module Version |
+| Module Name                         | UUID                                   | Previous Names Aliases          | First Module Version |
 | ----------------------------------- | -------------------------------------- | ------------------------------- | -------------------- |
 | `@minecraft/common`                 | `77ec12b4-1b2b-4c98-8d34-d1cd63f849d5` |                                 | `Engine 1.20.40`     |
 | `@minecraft/debug-utilities`        | `1796ea86-0daf-4409-99ee-fd6467cf1203` |                                 | `Engine 1.20.70`     |

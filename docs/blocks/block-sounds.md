@@ -2,6 +2,7 @@
 title: Block Sounds
 description: Learn how to modify the sounds that blocks play after actions such as placement.
 category: Documentation
+license: true
 mentions:
     - MedicalJewel105
     - TheItsNameless
@@ -107,7 +108,7 @@ The following sound events can be defined in the `interactive_sounds` section of
 
 ## List of Vanilla Sounds
 
-The following are valid values for the sound property:
+The following are valid values for the `sound` parameter:
 
 <!-- page_dumper_start -->
 | *Last updated for 1.21.60* |

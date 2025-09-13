@@ -62,8 +62,7 @@ function toggleSection(id: string) {
 
   transition: left var(--sidebar-visibility-transition-duration);
 
-  background-color: var(--nav-bg-color);
-  backdrop-filter: var(--nav-bg-blur);
+  background-color: var(--light-bg-color);
 
   ul {
     list-style: none;

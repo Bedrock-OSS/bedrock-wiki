@@ -21,7 +21,7 @@ const codeLicense = computed(() => licenses[normalizedLicenses.value.code]);
 
 <template>
   <hr style="margin-block: 1em" />
-  <p>
+  <p v-if="mainLicense">
     Text and image content on this page is licensed under the
     <NavLink :link="mainLicense.link">{{ mainLicense.title }}</NavLink>
   </p>

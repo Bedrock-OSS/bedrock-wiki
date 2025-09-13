@@ -93,6 +93,20 @@
       "vanilla_usage": ["`minecraft:charcoal`", "`minecraft:coal`"]
     },
     {
+      "tag": "`minecraft:copper_tier`",
+      "vanilla_usage": [
+        "`minecraft:copper_axe`",
+        "`minecraft:copper_boots`",
+        "`minecraft:copper_chestplate`",
+        "`minecraft:copper_helmet`",
+        "`minecraft:copper_hoe`",
+        "`minecraft:copper_leggings`",
+        "`minecraft:copper_pickaxe`",
+        "`minecraft:copper_shovel`",
+        "`minecraft:copper_sword`"
+      ]
+    },
+    {
       "tag": "`minecraft:crimson_stems`",
       "vanilla_usage": [
         "`minecraft:crimson_hyphae`",
@@ -129,7 +143,7 @@
         "`minecraft:skull_pottery_sherd`",
         "`minecraft:snort_pottery_sherd`"
       ],
-      "functionality": "Items that can be used to craft a Decorated Pot. Learn how to create custom pottery sherds [here](/items/custom-pottery-sherd)."
+      "functionality": "Items that can be used to craft a Decorated Pot. Learn how to create custom pottery sherds [here](/items/custom-pottery-sherds)."
     },
     {
       "tag": "`minecraft:diamond_tier`",
@@ -149,6 +163,10 @@
     {
       "tag": "`minecraft:digger`",
       "vanilla_usage": [
+        "`minecraft:copper_axe`",
+        "`minecraft:copper_hoe`",
+        "`minecraft:copper_pickaxe`",
+        "`minecraft:copper_shovel`",
         "`minecraft:diamond_axe`",
         "`minecraft:diamond_hoe`",
         "`minecraft:diamond_pickaxe`",
@@ -264,6 +282,7 @@
     {
       "tag": "`minecraft:horse_armor`",
       "vanilla_usage": [
+        "`minecraft:copper_horse_armor`",
         "`minecraft:diamond_horse_armor`",
         "`minecraft:golden_horse_armor`",
         "`minecraft:iron_horse_armor`",
@@ -291,6 +310,10 @@
         "`minecraft:chainmail_chestplate`",
         "`minecraft:chainmail_helmet`",
         "`minecraft:chainmail_leggings`",
+        "`minecraft:copper_boots`",
+        "`minecraft:copper_chestplate`",
+        "`minecraft:copper_helmet`",
+        "`minecraft:copper_leggings`",
         "`minecraft:diamond_boots`",
         "`minecraft:diamond_chestplate`",
         "`minecraft:diamond_helmet`",
@@ -318,6 +341,7 @@
     {
       "tag": "`minecraft:is_axe`",
       "vanilla_usage": [
+        "`minecraft:copper_axe`",
         "`minecraft:diamond_axe`",
         "`minecraft:golden_axe`",
         "`minecraft:iron_axe`",
@@ -361,31 +385,43 @@
         "`minecraft:bread`",
         "`minecraft:carrot`",
         "`minecraft:chicken`",
+        "`minecraft:chorus_fruit`",
+        "`minecraft:cod`",
         "`minecraft:cooked_beef`",
         "`minecraft:cooked_chicken`",
+        "`minecraft:cooked_cod`",
         "`minecraft:cooked_mutton`",
         "`minecraft:cooked_porkchop`",
         "`minecraft:cooked_rabbit`",
+        "`minecraft:cooked_salmon`",
         "`minecraft:cookie`",
         "`minecraft:dried_kelp`",
         "`minecraft:enchanted_golden_apple`",
         "`minecraft:golden_apple`",
         "`minecraft:golden_carrot`",
+        "`minecraft:honey_bottle`",
         "`minecraft:melon_slice`",
         "`minecraft:mushroom_stew`",
         "`minecraft:mutton`",
+        "`minecraft:poisonous_potato`",
         "`minecraft:porkchop`",
         "`minecraft:potato`",
+        "`minecraft:pufferfish`",
         "`minecraft:pumpkin_pie`",
         "`minecraft:rabbit`",
         "`minecraft:rabbit_stew`",
         "`minecraft:rotten_flesh`",
-        "`minecraft:sweet_berries`"
+        "`minecraft:salmon`",
+        "`minecraft:spider_eye`",
+        "`minecraft:suspicious_stew`",
+        "`minecraft:sweet_berries`",
+        "`minecraft:tropical_fish`"
       ]
     },
     {
       "tag": "`minecraft:is_hoe`",
       "vanilla_usage": [
+        "`minecraft:copper_hoe`",
         "`minecraft:diamond_hoe`",
         "`minecraft:golden_hoe`",
         "`minecraft:iron_hoe`",
@@ -424,6 +460,7 @@
     {
       "tag": "`minecraft:is_pickaxe`",
       "vanilla_usage": [
+        "`minecraft:copper_pickaxe`",
         "`minecraft:diamond_pickaxe`",
         "`minecraft:golden_pickaxe`",
         "`minecraft:iron_pickaxe`",
@@ -439,6 +476,7 @@
     {
       "tag": "`minecraft:is_shovel`",
       "vanilla_usage": [
+        "`minecraft:copper_shovel`",
         "`minecraft:diamond_shovel`",
         "`minecraft:golden_shovel`",
         "`minecraft:iron_shovel`",
@@ -450,6 +488,7 @@
     {
       "tag": "`minecraft:is_sword`",
       "vanilla_usage": [
+        "`minecraft:copper_sword`",
         "`minecraft:diamond_sword`",
         "`minecraft:golden_sword`",
         "`minecraft:iron_sword`",
@@ -462,6 +501,11 @@
     {
       "tag": "`minecraft:is_tool`",
       "vanilla_usage": [
+        "`minecraft:copper_axe`",
+        "`minecraft:copper_hoe`",
+        "`minecraft:copper_pickaxe`",
+        "`minecraft:copper_shovel`",
+        "`minecraft:copper_sword`",
         "`minecraft:diamond_axe`",
         "`minecraft:diamond_hoe`",
         "`minecraft:diamond_pickaxe`",
@@ -623,6 +667,7 @@
         "`minecraft:music_disc_creator`",
         "`minecraft:music_disc_creator_music_box`",
         "`minecraft:music_disc_far`",
+        "`minecraft:music_disc_lava_chicken`",
         "`minecraft:music_disc_mall`",
         "`minecraft:music_disc_mellohi`",
         "`minecraft:music_disc_otherside`",
@@ -631,6 +676,7 @@
         "`minecraft:music_disc_relic`",
         "`minecraft:music_disc_stal`",
         "`minecraft:music_disc_strad`",
+        "`minecraft:music_disc_tears`",
         "`minecraft:music_disc_wait`",
         "`minecraft:music_disc_ward`"
       ]
@@ -720,6 +766,7 @@
         "`minecraft:cave_spider_spawn_egg`",
         "`minecraft:chicken_spawn_egg`",
         "`minecraft:cod_spawn_egg`",
+        "`minecraft:copper_golem_spawn_egg`",
         "`minecraft:cow_spawn_egg`",
         "`minecraft:creaking_spawn_egg`",
         "`minecraft:creeper_spawn_egg`",
@@ -897,6 +944,10 @@
         "`minecraft:chainmail_chestplate`",
         "`minecraft:chainmail_helmet`",
         "`minecraft:chainmail_leggings`",
+        "`minecraft:copper_boots`",
+        "`minecraft:copper_chestplate`",
+        "`minecraft:copper_helmet`",
+        "`minecraft:copper_leggings`",
         "`minecraft:diamond_boots`",
         "`minecraft:diamond_chestplate`",
         "`minecraft:diamond_helmet`",

@@ -6,6 +6,7 @@ mentions:
     - TheItsNameless
     - MedicalJewel105
     - QuazChick
+    - Andexter8
 ---
 
 Now that you have the wiki set up locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
@@ -91,9 +92,9 @@ A common mistake everyone does the first time is to repeat the page title as a l
 You should never do this because the title given in the frontmatter will already be placed at the top of your page automatically, and having multiple level 1 headings in a single page is invalid.
 :::
 
-## Wiki Add-On
+## Bedrock Examples
 
-Sometimes we need to give a template/example pack after a guide. For this purpose we use separate GitHub repository: [wiki-addon](https://github.com/Bedrock-OSS/wiki-addon).
+Sometimes we need to give a template/example pack after a guide. For this purpose we use separate GitHub repository: [bedrock-examples](https://github.com/Bedrock-OSS/bedrock-examples).
 Please, add your packs there. It helps us to maintain all add-ons and keep them up-to-date.
 
 ## Viewing the Wiki Locally
@@ -213,6 +214,20 @@ A dangerous place
 :::danger STOP!
 A dangerous place
 :::
+
+### Syntax highlighting on inline code blocks
+
+The wiki has support for syntax highlighting on inline code blocks.
+
+Here is an example of how to use it:
+
+```md
+`console.log("Hello World!");`{lang=js}
+```
+
+The above example will render as:
+
+`console.log("Hello World!");`{lang=js}
 
 ### Links
 
@@ -390,14 +405,14 @@ With cards you can make fancy boxes with an image and text which contains a link
 Cards may also have content which is defined between two `Card` tags.
 
 ```md
-<Card image="/assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title" link="https://google.com">
 
 This is some _content_.
 
 </Card>
 ```
 
-<Card image="/assets/images/homepage/wikilogo.png" title="Title" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title" link="https://google.com">
 
 This is some _content_.
 
@@ -417,17 +432,17 @@ Used to display multiple cards in a grid layout.
 
 ```md
 <CardGrid>
-<Card image="/assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title 1" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="/assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title 2" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="/assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title 3" link="https://google.com">
 
 This is some _content_.
 
@@ -436,17 +451,17 @@ This is some _content_.
 ```
 
 <CardGrid>
-<Card image="/assets/images/homepage/wikilogo.png" title="Title 1" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title 1" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="/assets/images/homepage/wikilogo.png" title="Title 2" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title 2" link="https://google.com">
 
 This is some _content_.
 
 </Card>
-<Card image="/assets/images/homepage/wikilogo.png" title="Title 3" link="https://google.com">
+<Card image="/assets/images/icons/logo.png" title="Title 3" link="https://google.com">
 
 This is some _content_.
 
@@ -599,7 +614,7 @@ Note that images go in `docs/public/assets/images/` folder, but their path is de
 
 ```md
 <WikiImage
-    src="/assets/images/homepage/wikilogo.png"
+    src="/assets/images/icons/logo.png"
     alt="alternative text"
     caption="Such a beautiful image!"
     width="420"
@@ -608,7 +623,7 @@ Note that images go in `docs/public/assets/images/` folder, but their path is de
 ```
 
 <WikiImage
-    src="/assets/images/homepage/wikilogo.png"
+    src="/assets/images/icons/logo.png"
     alt="alternative text"
     caption="Such a beautiful image!"
     width="420"

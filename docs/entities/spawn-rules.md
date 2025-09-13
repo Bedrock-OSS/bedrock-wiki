@@ -7,7 +7,7 @@ mentions:
     - MedicalJewel105
     - aexer0e
     - Ciosciaa
-    - FrankyRay
+    - fraysdev
     - Lufurrius
     - TheItsNameless
     - SmokeyStack

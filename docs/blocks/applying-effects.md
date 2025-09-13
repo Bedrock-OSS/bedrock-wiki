@@ -14,7 +14,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.90`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.100`
 This tutorial assumes a basic understanding of blocks, including [block events](/blocks/block-events).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -35,32 +35,31 @@ This can be achieved by causing the block to "tick" every 80 ticks.
 }
 ```
 
-Next, we need to register our custom component to hook onto the [tick](/blocks/block-events#step-on) event.
+Next, we need to register our custom component to hook onto the [tick](/blocks/block-events#tick) event.
 This component should apply effects to entities within a specified area, so we're going to call it `wiki:radial_effects`.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
-"wiki:radial_effects": {
-    "radius": 64, // Apply all of the following "effects" to entities within this radius of blocks.
-    "effects": [
-        {
-            "name": "wither",
-            "duration": 600, // 30 seconds in ticks.
-            "amplifier": 1
-        },
-        {
-            "name": "slowness",
-            "duration": 600,
-            "amplifier": 2
-        }
-    ]
-}
+"wiki:radial_effects": [
+    {
+        "radius": 64, // Apply the following effect to entities within this radius of blocks.
+        "name": "wither",
+        "duration": 600, // 30 seconds in ticks.
+        "amplifier": 1
+    },
+    {
+        "radius": 64,
+        "name": "slowness",
+        "duration": 600,
+        "amplifier": 2
+    }
+]
 ```
 
 ## Custom Component Script
 
-<CodeHeader>BP/scripts/treader_detection.js</CodeHeader>
+<CodeHeader>BP/scripts/radialEffects.js</CodeHeader>
 
 ```js
 import { system } from "@minecraft/server";
@@ -68,17 +67,17 @@ import { system } from "@minecraft/server";
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockRadialEffectsComponent = {
     onTick({ block, dimension }, { params }) {
-        const { radius, effects } = params; // The value we have assigned to the component in the block JSON.
+        const effects = params; // The value we have assigned to the component in the block JSON.
 
-        // Gets all entities in the specified "radius" around the block.
-        const entities = dimension.getEntities({
-            location: block.center(),
-            maxDistance: radius,
-        });
+        // Iterates over each object in the array.
+        for (const { radius, name, duration, amplifier } of effects) {
+            // Gets all entities in the specified "radius" around the block.
+            const entities = dimension.getEntities({
+                location: block.center(),
+                maxDistance: radius,
+            });
 
-        for (const entity of entities) {
-            // Iterates over each object in the "effects" array.
-            for (const { name, duration, amplifier } of effects) {
+            for (const entity of entities) {
                 entity.addEffect(name, duration, { amplifier });
             }
         }
@@ -101,7 +100,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:wither_block",
@@ -120,21 +119,20 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
                 "interval_range": [80, 80],
                 "looping": true
             },
-            "wiki:radial_effects": {
-                "radius": 64,
-                "effects": [
-                    {
-                        "name": "wither",
-                        "duration": 600,
-                        "amplifier": 1
-                    },
-                    {
-                        "name": "slowness",
-                        "duration": 600,
-                        "amplifier": 2
-                    }
-                ]
-            }
+            "wiki:radial_effects": [
+                {
+                    "radius": 64,
+                    "name": "wither",
+                    "duration": 600,
+                    "amplifier": 1
+                },
+                {
+                    "radius": 64,
+                    "name": "slowness",
+                    "duration": 600,
+                    "amplifier": 2
+                }
+            ]
         }
     }
 }

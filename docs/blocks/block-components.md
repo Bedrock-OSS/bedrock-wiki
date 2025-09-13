@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.90`.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.100`.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.100",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -73,7 +73,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ### Collision Box
 
-Defines the area of the block that entities and blocks collide with.
+Defines the area of the block that entities and particles collide with.
 
 _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
 
@@ -196,7 +196,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 The name of the `seconds_to_destroy` parameter is misleading.
 While the name suggests that this parameter determines how many seconds it takes to destroy the block, in reality the parameter sets the "hardness" value of the block.
 
-By default, the number of seconds it takes to destroy a custom block is 1.5× its hardness.
+By default, the number of seconds it actually takes to destroy a custom block is 1.5× the value set here.
 :::
 
 <CodeHeader>minecraft:block > components</CodeHeader>
@@ -211,8 +211,13 @@ By default, the number of seconds it takes to destroy a custom block is 1.5× it
 
 Determines the appearance of the particles created when hitting, destroying, stepping on and falling onto blocks.
 
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
+
 #### Object Definition {#destruction-particles-object}
 
+-   `particle_count`: Integer (optional)
+    -   Determines how many particles are created when the block is destroyed (0-255).
+    -   By default, 100 particles are created.
 -   `texture`: String (optional)
     -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
     -   By default, particles will use the texture of the `down` material instance (or `*` if not specified).
@@ -334,7 +339,7 @@ The geometry of blocks can also be set to any of the [vanilla block models](/blo
 3.  The absolute bounds of the position of your 30×30×30 block are 30 pixels in each direction from the origin.
     Your block can be placed in any position within these bounds, as long as it adheres to rule #2.
 
-_Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
 #### String Definition {#geometry-string}
 
@@ -361,6 +366,10 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or lat
     -   Determines the culling layer identifier to be checked for by the [`same_culling_layer`](/blocks/block-culling#same-culling-layer) culling rule condition.
     -   Culling layer identifiers should take the form `<namespace>:culling_layer.<name>`.
     -   When using the `minecraft` namespace, the only allowed culling layer identifiers are `minecraft:culling_layer.undefined` and `minecraft:culling_layer.leaves`.
+-   `uv_lock`: String Array or Boolean (optional)
+    -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
+    -   An array is used to list bone names that have locked UVs, a single boolean can be used to lock all UVs in the model.
+    -   By default, rotation is applied to UVs.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -472,7 +481,7 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
 The path of the loot table to drop when the block is destroyed (ignored when a tool with the "Silk Touch" enchantment is used).
 If omitted, the block is dropped as an item.
 
-#### Loot Definition {#loot-string}
+#### String Definition {#loot-string}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -523,16 +532,40 @@ An array of 3 integers (0-255) defining the `[R, G, B]` color of the block on a 
 
 ### Material Instances
 
-Configuration of your block's rendering, including textures and lighting.
-The `*` instance is the default instance for all cube faces.
+Configuration of the block's rendering, including textures and lighting.
 
 _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
 
 **Known Issues:**
 
--   All instances must have the same render method ([MCPE-190430](https://bugs.mojang.com/browse/MCPE-190430)).
--   Block faces will unconditionally darken if intersecting another block.
--   By default, the texture of the `down` (or `*` if not specified) instance _should be_ used for [destruction particles](#destruction-particles) however this does not currently work correctly ([MCPE-219143](https://bugs.mojang.com/browse/MCPE-219143)).
+-   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
+-   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
+-   Blocks do not render in the Structure Block preview.
+
+#### Object Definition {#material-instances-object}
+
+Each key is the name of a material instance and each value is a material instance object.
+The `*` instance is the default instance for all cube faces, however it is not required if all faces have a material instance separately defined.
+
+-   `<name>`{lang=xml}: Object
+    -   `texture`: String
+        -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
+    -   `render_method`: String (optional)
+        -   The [render method](#render-methods) to use when rendering faces using the material instance.
+        -   **All material instances must use the same render method.**
+        -   By default, the `opaque` material instance is used.
+    -   `tint_method`: String (optional)
+        -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
+    -   `ambient_occlusion`: Float (0.0-10.0) or Boolean (optional)
+        -   Determines whether "smooth lighting" is applied to faces using the material instance.
+        -   Float values can be used to determine ambient occlusion intensity.
+        -   By default, this is `false` (or `0.0`) for blocks that emit light and `true` (or `1.0`) for blocks that do not emit light.
+    -   `face_dimming`: Boolean (optional)
+        -   Determines whether faces using the material instance are dimmed by their direction.
+        -   By default, this is `false` for blocks that emit light and `true` for blocks that do not emit light.
+    -   `isotropic`: Boolean (optional)
+        -   Determines whether the UVs of faces using the material instance are randomly rotated based on the block's position in the world.
+        -   By default, textures are not randomly rotated.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -541,11 +574,8 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
     // Instance names "up", "down", "north", "east", "south" and "west" are built in.
     "*": {
         "texture": "wiki:texture_name", // Shortname defined in "RP/textures/terrain_texture.json".
-        "render_method": "blend", // One of the render methods in the following tables.
-        "tint_method": "grass", // Tint the texture based on the biome the block is placed in.
-        "ambient_occlusion": true, // Defaults to true (1.0); should shadows be created based on surrounding blocks? Floats determine ambient occlusion intensity.
-        "face_dimming": true, // Defaults to true; should faces with this material be dimmed by their direction?
-        "isotropic": true // Causes the texture to randomly be rotated based on the block's position.
+        "render_method": "blend", // Support texture translucency
+        "isotropic": true // Randomly rotate the texture
     }
 }
 ```
@@ -556,10 +586,10 @@ Render methods essentially control how a block appears in the world, much like e
 
 | Render Method             | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples               |
 | ------------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------ |
-| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Vines, Rails, Saplings         |
-| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Trapdoors               |
+| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Ladder, Monster Spawner, Vines |
+| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Saplings, Trapdoors     |
 | `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
-| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | N/A - Use for opaque 2D plains |
+| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | Powder Snow                    |
 | `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
 
 -   **_Transparency_** - fully see-through areas.
@@ -569,14 +599,10 @@ Render methods essentially control how a block appears in the world, much like e
 
 ##### Distance-Based Render Methods
 
-:::warning
-Material instances using the following render methods will currently not actually turn opaque at a distance.
-:::
-
 | Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
 | ----------------------------------- | ------------------------- | ---------------- | ---------------- |
 | `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
-| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp             |
+| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp, Sugar Cane |
 | `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
 
 -   **_Near Appearance_** - the render method used before reaching half the render distance.
@@ -598,20 +624,41 @@ Custom instance names can be defined within material instances, and can be refer
 "minecraft:material_instances": {
     "*": {
         "texture": "wiki:texture_name",
-        "render_method": "blend" // Must match other instances due to bug
+        "render_method": "blend" // Must match other instances
     },
     // Custom instance name
     "end": {
         "texture": "wiki:texture_name_end",
-        "render_method": "blend" // Must match other instances due to bug
+        "render_method": "blend" // Must match other instances
     },
     "up": "end",
     "down": "end",
     // Instance name defined in model:
     "flower": {
         "texture": "wiki:texture_name_flower",
-        "render_method": "blend" // Must match other instances due to bug
+        "render_method": "blend" // Must match other instances
     }
+}
+```
+
+### Movable
+
+Determines how a block can be moved by pistons.
+
+_Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
+
+#### Object Definition {#movable-object}
+
+-   `movement_type`: String
+    -   Can be one of the following values: `immovable`, `popped`, `push` or `push_pull` (default).
+-   `sticky` String (optional)
+    -   Can be set to `same` to replicate Slime/Honey Block functionality.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:movable": {
+    "movement_type": "popped" // Block is broken when pushed by a piston.
 }
 ```
 
@@ -656,6 +703,51 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
             ]
         }
     ]
+}
+```
+
+### Random Offset
+
+Causes a random offset to be applied to the block based on its position in the world, affecting the block's collision box, selection box and geometry.
+
+**Offset models must not exceed the [block geometry limits](#geometry).**
+
+_Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
+
+#### Object Definition {#random-offset-object}
+
+-   `x`/`y`/`z`: Object (optional)
+    -   `range`: [Range](/documentation/shared-constructs#range-objects)
+        -   Determines how large offsets can be on each axis.
+    -   `steps`: Integer
+        -   Determines how many equally-spaced random values can be chosen across the `range`.
+        -   A value of `0` means that any value within the `range` can be used.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:random_offset": {
+    "x": {
+        "steps": 0,
+        "range": {
+            "min": -8,
+            "max": 8
+        }
+    },
+    "y": {
+        "steps": 3,
+        "range": {
+            "min": -2,
+            "max": 0
+        }
+    },
+    "z": {
+        "steps": 0,
+        "range": {
+            "min": -8,
+            "max": 8
+        }
+    }
 }
 ```
 

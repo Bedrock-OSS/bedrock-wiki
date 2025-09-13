@@ -16,16 +16,52 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.110
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:embedded_visual`
+    -   Determines how this block is displayed when in a Flower Pot.
+    -   Contains `geometry` which determines the displayed geometry component.
+    -   Contains `material_instances` which determines the displayed material instances component.
+-   Added `minecraft:flower_pottable`
+    -   An empty object which allows this block to be placed in a Flower Pot.
+-   Added `minecraft:redstone_producer`
+    -   Causes the block to produce redstone power.
+    -   Contains `power` which determines the power level produced by the block as an integer (0-15).
+    -   Contains `connected_faces` which determines which directions power is produced in.
+        -   Defined as an array of faces which may include `down`, `up`, `north`, `south`, `west` and `east`.
+        -   By default, all faces are connected.
+    -   Contains `strongly_powered_face` which determines the direction where strong power is produced.
+        -   If strong power is received by a [redstone conductor](/blocks/block-components#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
+        -   By default, no face is strongly powered.
+    -   Contains `tranform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
+        -   By default, faces are not transform-relative.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:material_instances`
+    -   Updated `texture` instance parameter to support [texture variation](/blocks/block-texture-variation).
+    -   In previous format versions, the first variation of the referenced atlas entry would always be selected.
+
 ## 1.21.100
 
 ### Components
 
+-   Updated `minecraft:destruction_particles`
+    -   Released `particle_count` parameter from experimental
 -   Updated `minecraft:geometry`
     -   Released `uv_lock` parameter from experimental
 
 <Label color="green">Versioned</Label>
 
 -   Released `minecraft:movable` from experimental
+-   Released `minecraft:random_offset` from experimental
 
 ## 1.21.90
 

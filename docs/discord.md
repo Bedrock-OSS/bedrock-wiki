@@ -38,7 +38,7 @@ Here you can report wiki issues, collaborate on new articles, and get help with 
 <Card
     title="Additional Servers"
     link="/meta/useful-links#discord-links"
-    image="/assets/images/homepage/discord.png"
+    image="/assets/images/icons/book.png"
 >
 
 We maintain an active list of community discords as well, which you can find on our Useful Links page.

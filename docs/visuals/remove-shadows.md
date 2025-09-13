@@ -21,7 +21,7 @@ This document will showcase some of the various ways to remove shadows, and any 
 
 One possibility is to make the size of the collision component very small. This will make it hard to interact/hit the entity, but it will make the shadow disappear!
 
-<CodeHeader></CodeHeader>
+<CodeHeader>minecraft:entity > components</CodeHeader>
 
 ```json
 "minecraft:collision_box": {
@@ -32,25 +32,45 @@ One possibility is to make the size of the collision component very small. This 
 
 You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit the entity, although you will not be able to interact with it. The `custom_hit_test` will not create a shadow.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>minecraft:entity > components</CodeHeader>
 
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
         {
-            "pivot": [0, 0.5, 0],//This is the position of the hitbox, you can change the X, Y and Z values.
+            "pivot": [0, 0.5, 0], // This is the position of the hitbox, you can change the X, Y and Z values.
             "width": 0.8,
             "height": 0.7
-        }//And you can add many more hitboxes as you want, just copy-paste the hitbox inside the "hitboxes" array.
+        }
+        // And you can add many more hitboxes as you want, just copy-paste the hitbox inside the "hitboxes" array.
     ]
 }
 ```
 
-## Teleport underground
+## Render when Invisible
+
+Another method is to give the entity the effect of invisibility (which hides the entity's shadow) and apply the `"minecraft:renders_when_invisible"` component.
+
+<CodeHeader>minecraft:entity > components</CodeHeader>
+
+```json
+"minecraft:renders_when_invisible": {},
+"minecraft:spell_effects": {
+    "add_effects": [
+        {
+            "visible": false,
+            "effect": "invisibility",
+            "duration": "infinite"
+        }
+    ]
+}
+```
+
+## Teleport Underground
 
 If you have a dummy entity (invisible) that you need to interact with, you can teleport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
 
-## Using runtime identifier
+## Using Runtime Identifiers
 
 Some entities don't have shadows, or very small shadows at least. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors, which can sometimes be very problematic. See the [runtime identifiers document](/entities/runtime-identifier) for more information.
 
@@ -61,8 +81,10 @@ This method is no longer supported. With the advent of render-dragon, materials 
 :::
 
 :::warning
-    - This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
-    - This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+
+-   This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
+-   This has not been tested for blocks and has only been verified for entities. If you find it works on blocks too please let us know so we can add that in.
+
 :::
 
 <Spoiler title="Removing shadows via Materials.">
