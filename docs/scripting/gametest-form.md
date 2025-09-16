@@ -216,6 +216,7 @@ Dropdown is a property that contains a list options. It has 3 arguments.
 2. Options (`List[String]`), the list of the options for the player to choose from.
 3. Default Value Index (`Int`)[Optional], the index of the default value. Default is `0` (first item in the list).
 
+Dropdowns are also unique in that they don't return the value of whatever the option is, rather, they return the number of the option. For example, the first option will return "0", the second "1", etc. This way, options can be mapped to their respective values behind-the-scenes, and have different display text from values.
 ```js
 // Internal Options
 form.dropdown("Dropdown", ["Opt 1", "Opt 2", "Opt 3"], 1);
