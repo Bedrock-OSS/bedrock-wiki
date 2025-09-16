@@ -40,7 +40,7 @@ You should create a shortcut to the `com.mojang` folder on your Desktop or on yo
 
 On windows, the `com.mojang` folder is located within your app-data folder.
 
-_Tip: You can type `%appdata%` into the searchbar to jump directly into the `C:\Users\<USERNAME>\AppData\` folder._
+_Tip: You can type `%localappdata%` into the searchbar to jump directly into the `C:\Users\<USERNAME>\AppData\Local\` folder._
 
 `C:\Users\<USERNAME>\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
 
