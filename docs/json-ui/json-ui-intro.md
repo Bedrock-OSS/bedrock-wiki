@@ -772,13 +772,41 @@ String formatting is used in JSON UI to access or manipulate parts of a string u
 
 ### Unicode Character Width
 
-String length in format specifiers is measured in **display units**, not character count. Each character takes up a number of units depending on its Unicode code point:
+String length in format specifiers is measured in **bytes**, not character count. Each character takes up a number of bytes depending on its Unicode code point:
 
--   Characters `U+0000`-`U+007F` (e.g. letters, numbers, basic symbols) count as **1 unit**
--   Characters `U+0080`-`U+07FF` (e.g. `§`, Latin-1 accents) count as **2 units**
--   Characters above `U+07FF` (e.g. emojis, non-Latin scripts, custom glyphs) count as **3 units**
+-   Characters `U+0000`-`U+007F` (e.g., letters, numbers, basic symbols) use **1 byte**
+-   Characters `U+0080`-`U+07FF` (e.g., `§`, Latin-1 accents) use **2 bytes**
+-   Characters above `U+07FF` (e.g., emojis, non-Latin scripts, custom glyphs) use **3 bytes**
 
-If a string is read incorrectly, (i.e. cutting off a multi-unit character in the middle) the last character may fail to render. For example, if a glyph (3 units wide) is sliced at 2 units with `%.2s`, it will not display at all.
+If a string is read incorrectly (i.e., cutting off a multi-byte character in the middle), the last character may fail to render. For example, if a 3 bytes character is sliced at **2 bytes** with `%.2s`, it will not display at all.
+
+The following field let you count a string length in **bytes**:
+
+<div>
+    <form>
+        <input
+            id="textValue"
+            placeholder="Enter a String"
+            class="button"
+            style="background: none; outline: none;"
+        />
+        <input
+            id="byteCount"
+            placeholder="Byte count"
+            readonly
+            class="button"
+            style="background: none; outline: none; margin-inline: 0.5em;"
+        />
+        <button
+            type="button"
+            class="button"
+            style="cursor: pointer;"
+            onclick="document.getElementById('byteCount').value = new TextEncoder().encode(document.getElementById('textValue').value).length"
+        >
+            Count Bytes
+        </button>
+    </form>
+</div>
 
 ### Format Specifiers
 
@@ -791,29 +819,29 @@ Assuming the variable **$var** is defined as:
 The following format specifiers can be used:
 
 -   `%.ns`  
-    Truncates the string to the first **n display units**.  
+    Truncates the string to the first **n byte**.  
     Example: `('%.7s' * $var)` returns `abcdefg`.
 
 -   `%0ns`  
-    Returns the full string if its length is **n or more units**, otherwise returns `0`.  
+    Returns the full string if its length is **n or more byte**, otherwise returns `0`.  
     Example:  
     `('%04s' * $var)` returns `abcdefghijklmn`  
     `('%015s' * $var)` returns `0`
 
 -   `%n.xs`  
-    Returns **x units** from the start, padded with **leading spaces** to reach **n units** in total.  
+    Returns **x byte** from the start, padded with **leading spaces** to reach **n byte** in total.  
     Example: `('%7.4s' * $var)` returns `   abcd`.
 
 -   `%-n.xs`  
-    Returns **x units** from the start, padded with **trailing spaces** to reach **n units** in total.  
+    Returns **x byte** from the start, padded with **trailing spaces** to reach **n byte** in total.  
     Example: `('%-7.4s' * $var)` returns `abcd   `.
 
 -   `%ns`  
-    Adds **spaces to the start** to make the total length **n units**, if needed.  
+    Adds **spaces to the start** to make the total length **n byte**, if needed.  
     Example: `('%15s' * $var)` returns ` abcdefghijklmn`.
 
 -   `%-ns`  
-    Adds **spaces to the end** to make the total length **n units**, if needed.  
+    Adds **spaces to the end** to make the total length **n byte**, if needed.  
     Example: `('%-15s' * $var)` returns `abcdefghijklmn `.
 
 Remember that the usage of this format is limited.
