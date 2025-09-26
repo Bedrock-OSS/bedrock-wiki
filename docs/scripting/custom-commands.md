@@ -94,6 +94,9 @@ Doing so will cause command blocks, functions, etc. to stop working if another a
 ### Command Description
 
 You also need to provide a description for the command which will appear next to the command's name in autocompletions.
+
+<!--
+
 This should be a translation key (preferably in the form `commands.<name>.description`) from a `.lang` file.
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
@@ -101,6 +104,8 @@ This should be a translation key (preferably in the form `commands.<name>.descri
 ```lang
 commands.wiki:goto.description=Teleport to a specific location.
 ```
+
+-->
 
 ### Command Permission Level
 
@@ -153,7 +158,7 @@ The number of parameters passed to the callback matches the number of parameters
 customCommandRegistry.registerCommand(
     {
         name: "wiki:command",
-        description: "commands.wiki:command.description",
+        description: "A very useful command.",
         mandatoryParameters: [
             { name: "param1", type: CustomCommandParamType.String },
             { name: "param2", type: CustomCommandParamType.Integer },
@@ -189,7 +194,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     customCommandRegistry.registerCommand(
         {
             name: "wiki:goto",
-            description: "commands.wiki:goto.description",
+            description: "Teleport to a specific location.",
             permissionLevel: CommandPermissionLevel.Any, // Allow all players to run the command
             cheatsRequired: false // Allow the command to be ran without enabling cheats
             mandatoryParameters: [
