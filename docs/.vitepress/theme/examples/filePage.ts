@@ -72,10 +72,15 @@ export function* getFilePageIterator({
       archive?.append(buffer, { name: archiveFilePath });
     }
 
+    const frontmatter = {
+      title: `${transformedFilePath} | ${root.title}`,
+      show_contributors: false,
+      license: { code: "MIT" },
+    };
+
     const content = [
       "---",
-      `title: ${transformedFilePath} | ${root.title}`,
-      "show_contributors: false",
+      JSON.stringify(frontmatter),
       "---",
       renderExampleFile(transformedFilePath, buffer),
     ].join("\n");
