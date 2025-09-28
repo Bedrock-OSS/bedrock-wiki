@@ -231,9 +231,6 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 });
 ```
 
-Oke, aku tambahin contoh di bagian **Custom Command Only For Player** biar rapi dan konsisten dengan docs yang kamu kasih.
-Contohnya gini:
-
 ---
 
 ## Command Only For Player Example
