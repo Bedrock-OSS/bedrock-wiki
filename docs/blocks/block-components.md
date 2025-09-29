@@ -256,6 +256,38 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 tile.wiki:custom_block.name=Custom Block
 ```
 
+### Embedded Visual (EXPERIMENTAL) {#embedded-visual}
+
+:::warning EXPERIMENTAL
+This component requires "Upcoming Creator Features" to be enabled for your world.
+:::
+:::tip ROOT ONLY
+This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
+:::
+
+Determines how this block is displayed when in a Flower Pot.
+For a block to be able to be placed in a Flower Pot, it must also have the flower pottable component applied.
+
+#### Object Definition {#embedded-visual-object}
+
+-   `geometry`: String/Object
+    -   The displayed [geometry](#geometry) component.
+-   `material_instances`: Object
+    -   The displayed [material instances](#material-instances) component.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:embedded_visual": {
+    "geometry": "minecraft:geometry.full_block",
+    "material_instances": {
+        "*": {
+            "texture": "wiki:block_texture"
+        }
+    }
+}
+```
+
 ### Entity Fall On
 
 Causes an [entity fall on](/blocks/block-events#entity-fall-on) event to be triggered when an entity falls onto the block.
