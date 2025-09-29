@@ -3,6 +3,7 @@ title: Custom Crops
 description: Learn how to create your own crop blocks that grow just like vanilla crops!
 category: Vanilla Re-Creations
 tags:
+    - experimental
     - intermediate
     - scripting
 license: true
@@ -18,6 +19,9 @@ mentions:
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
+:::warning EXPERIMENTAL
+This example requires "Beta APIs" to be enabled for your world in order to use the light level APIs to affect crop growth.
+:::
 
 If you aren't a fan of carrots - that's fine. You can make your own (far superior) crop!
 
@@ -27,7 +31,6 @@ Making crops is not as difficult as you may think, it just takes a little practi
 
 -   Custom crops cannot be destroyed by flowing lava.
 -   Custom crops become dark when surrounded by full blocks.
--   Growth rate cannot be impacted by light level ([see feedback post](https://discord.com/channels/1138536747932864532/1231369171577602179)).
 
 ## Crop Model
 
@@ -127,6 +130,11 @@ const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockGrowableComponent = {
     onRandomTick({ block }, { params }) {
+        const minLightLevel = params.min_light_level;
+
+        const lightLevel = block.getLightLevel();
+        if (lightLevel < minLightLevel) return;
+
         const growthState = params.growth_state;
         const growthChance = params.growth_chance / 100;
 
@@ -145,7 +153,9 @@ const BlockGrowableComponent = {
         if (!equippable) return;
 
         const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
-        if (!mainhand.hasItem() || mainhand.typeId !== "minecraft:bone_meal") return;
+        const hasBoneMeal = mainhand.hasItem() && mainhand.typeId === "minecraft:bone_meal";
+
+        if (!hasBoneMeal) return;
 
         if (player.getGameMode() === GameMode.Creative) {
             // Grow crop fully
@@ -195,6 +205,7 @@ For example, if `wiki:growth` is 7, the texture is set to `custom_crop_3` and th
             "wiki:growable": {
                 "growth_state": "wiki:growth",
                 "growth_chance": 50, // 50% chance to grow on each random tick
+                "min_light_level": 9, // Minimum light level needed to grow on random ticks
                 "max_growth": 7
             }
         }
@@ -380,6 +391,7 @@ Here is the entire `wiki:custom_crop` file for reference.
                     "wiki:growable": {
                         "growth_state": "wiki:growth",
                         "growth_chance": 50, // 50% chance to grow on each random tick
+                        "min_light_level": 9, // Minimum light level needed to grow on random ticks
                         "max_growth": 7
                     }
                 }
