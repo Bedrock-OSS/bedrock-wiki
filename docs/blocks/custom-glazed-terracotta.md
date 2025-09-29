@@ -32,9 +32,16 @@ This guide will teach you how to create your own blocks resembling Glazed Terrac
             "menu_category": {
                 "category": "construction",
                 "group": "minecraft:itemGroup.name.glazedTerracotta"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"],
+                    "y_rotation_offset": 180
+                }
             }
         },
         "components": {
+            "minecraft:light_dampening": 15,
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wiki:custom_glazed_terracotta"
