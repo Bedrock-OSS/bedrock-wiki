@@ -266,7 +266,7 @@ This component may only be defined in the root `components` object of your block
 :::
 
 Determines how this block is displayed when in a Flower Pot.
-For a block to be able to be placed in a Flower Pot, it must also have the flower pottable component applied.
+For a block to be able to be placed in a Flower Pot, it must also have the [flower pottable](#flower-pottable) component applied.
 
 #### Object Definition {#embedded-visual-object}
 
@@ -341,6 +341,26 @@ When `false` (default), the block will not be able to catch on fire naturally fr
     "catch_chance_modifier": 5,
     "destroy_chance_modifier": 20
 }
+```
+
+### Flower Pottable (EXPERIMENTAL) {#flower-pottable}
+
+:::warning EXPERIMENTAL
+This component requires "Upcoming Creator Features" to be enabled for your world.
+:::
+:::tip ROOT ONLY
+This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
+:::
+
+Allows the block to be placed in a Flower Pot.
+The [embedded visual](#embedded-visual) component can be used to change the appearance of the block when in a Flower Pot.
+
+#### Object Definition {#flower-pottable-object}
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:flower_pottable": {}
 ```
 
 ### Friction
