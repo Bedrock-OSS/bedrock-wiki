@@ -69,7 +69,7 @@
         "`minecraft:pale_moss_block`",
         "`minecraft:podzol`"
       ],
-      "functionality": "Allows trees to be placed on this block during world generation. The block will be replaced with Dirt if a tree does generate above it. Also allows *some* plants to be placed on the block, including Bamboo, Cactus Flower, Dead Bush, Pink Petals, Sugar Cane and Wildflowers."
+      "functionality": "Allows trees to be placed on this block during world generation. The block will be replaced with Dirt if a tree does generate above it. Also allows *some* plants to be placed on the block, including Bamboo, Dead Bush, Pink Petals, Sugar Cane and Wildflowers."
     },
     {
       "tag": "`fertilize_area`",
@@ -107,7 +107,8 @@
       "vanilla_usage": [
         "`minecraft:gravel`",
         "`minecraft:suspicious_gravel`"
-      ]
+      ],
+      "functionality": "Allows Bamboo to be placed on the block."
     },
     {
       "tag": "`iron_pick_diggable`",
