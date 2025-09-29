@@ -825,6 +825,39 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 }
 ```
 
+### Redstone Producer (EXPERIMENTAL) {#redstone-producer}
+
+:::warning EXPERIMENTAL
+This component requires "Upcoming Creator Features" to be enabled for your world.
+:::
+
+Causes the block to produce redstone power.
+
+#### Object Definition {#redstone-producer-object}
+
+-   `power`: Integer (0-15)
+    -   Determines the power level produced by the block as an integer.
+-   `strongly_powered_face`
+    -   Determines the direction where strong power is produced.
+    -   If strong power is received by a [redstone conductor](#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
+-   `connected_faces`: String Array (optional)
+    -   Determines which directions power is produced in.
+    -   Defined as an array of faces which may include down, up, north, south, west and east.
+    -   By default, all faces are connected.
+-   `transform_relative`: Boolean (optional)
+    -   Determines whether face directions should be relative to the rotation value in the [transformation](#transformation) component.
+    -   By default, faces are not transform-relative.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_producer": {
+    "power": 15,
+    "strongly_powered_face": "north",
+    "transform_relative": true
+}
+```
+
 ### Replaceable
 
 Allows this block to be replaced by attempting to place another block in its position.
