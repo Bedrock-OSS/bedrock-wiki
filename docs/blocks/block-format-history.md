@@ -16,6 +16,21 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.120
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Added `minecraft:precipitation_interactions` component
+    -   Determines how this block interacts with precipitation (rain and snow).
+    -   Contains `precipitation_behavior` which can be one of the following values:
+        -   `obstruct_rain_accumulate_snow` (default) prevents rain from passing through the block, instead splashing on top of it and causes snow layers to build up above the block if it is snowing.
+        -   `obstruct_rain` prevents rain from passing through the block, instead splashing on top of it.
+        -   `none` allows rain and snow to pass through the block.
+
 ## 1.21.110
 
 ### Components
@@ -38,7 +53,7 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Contains `strongly_powered_face` which determines the direction where strong power is produced.
         -   If strong power is received by a [redstone conductor](/blocks/block-components#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
         -   By default, no face is strongly powered.
-    -   Contains `tranform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
+    -   Contains `transform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
         -   By default, faces are not transform-relative.
 
 <Tag name="experimental" />
