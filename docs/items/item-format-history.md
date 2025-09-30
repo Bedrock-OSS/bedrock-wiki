@@ -30,6 +30,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Added `minecraft:swing_duration`
     -    Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
+-   Updated `minecraft:use_modifiers`
+    -    Added `emit_vibrations` parameter which determins whether the item emits vibrations when it starts and stops being used.
 
 ## 1.21.110
 
