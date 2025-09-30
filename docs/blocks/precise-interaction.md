@@ -12,7 +12,7 @@ mentions:
 hidden: true
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.100`
+::: tip FORMAT & MIN ENGINE VERSION `1.21.110`
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
@@ -415,7 +415,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.110",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -627,7 +627,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.110",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",

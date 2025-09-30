@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
+:::tip FORMAT & MIN ENGINE VERSION `1.21.110`
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.100`.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.110`.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.110",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -256,6 +256,38 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 tile.wiki:custom_block.name=Custom Block
 ```
 
+### Embedded Visual (EXPERIMENTAL) {#embedded-visual}
+
+:::warning EXPERIMENTAL
+This component requires "Upcoming Creator Features" to be enabled for your world.
+:::
+:::tip ROOT ONLY
+This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
+:::
+
+Determines how this block is displayed when in a Flower Pot.
+For a block to be able to be placed in a Flower Pot, it must also have the [flower pottable](#flower-pottable) component applied.
+
+#### Object Definition {#embedded-visual-object}
+
+-   `geometry`: String/Object
+    -   The displayed [geometry](#geometry) component.
+-   `material_instances`: Object
+    -   The displayed [material instances](#material-instances) component.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:embedded_visual": {
+    "geometry": "minecraft:geometry.full_block",
+    "material_instances": {
+        "*": {
+            "texture": "wiki:block_texture"
+        }
+    }
+}
+```
+
 ### Entity Fall On
 
 Causes an [entity fall on](/blocks/block-events#entity-fall-on) event to be triggered when an entity falls onto the block.
@@ -309,6 +341,26 @@ When `false` (default), the block will not be able to catch on fire naturally fr
     "catch_chance_modifier": 5,
     "destroy_chance_modifier": 20
 }
+```
+
+### Flower Pottable (EXPERIMENTAL) {#flower-pottable}
+
+:::warning EXPERIMENTAL
+This component requires "Upcoming Creator Features" to be enabled for your world.
+:::
+:::tip ROOT ONLY
+This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
+:::
+
+Allows the block to be placed in a Flower Pot.
+The [embedded visual](#embedded-visual) component can be used to change the appearance of the block when in a Flower Pot.
+
+#### Object Definition {#flower-pottable-object}
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:flower_pottable": {}
 ```
 
 ### Friction
@@ -770,6 +822,39 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 "minecraft:redstone_conductivity": {
     "redstone_conductor": true,
     "allows_wire_to_step_down": false
+}
+```
+
+### Redstone Producer (EXPERIMENTAL) {#redstone-producer}
+
+:::warning EXPERIMENTAL
+This component requires "Upcoming Creator Features" to be enabled for your world.
+:::
+
+Causes the block to produce redstone power.
+
+#### Object Definition {#redstone-producer-object}
+
+-   `power`: Integer (0-15)
+    -   Determines the power level produced by the block as an integer.
+-   `strongly_powered_face`
+    -   Determines the direction where strong power is produced.
+    -   If strong power is received by a [redstone conductor](#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
+-   `connected_faces`: String Array (optional)
+    -   Determines which directions power is produced in.
+    -   Defined as an array of faces which may include down, up, north, south, west and east.
+    -   By default, all faces are connected.
+-   `transform_relative`: Boolean (optional)
+    -   Determines whether face directions should be relative to the rotation value in the [transformation](#transformation) component.
+    -   By default, faces are not transform-relative.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_producer": {
+    "power": 15,
+    "strongly_powered_face": "north",
+    "transform_relative": true
 }
 ```
 

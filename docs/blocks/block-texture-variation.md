@@ -3,6 +3,7 @@ title: Block Texture Variation
 description: Block texture variation is when a block type can have multiple textures that are randomly applied to the block based on its position in the world.
 category: Visuals
 tags:
+    - experimental
     - intermediate
 mentions:
     - SirLich
@@ -14,7 +15,7 @@ mentions:
 ---
 
 :::warning MATERIAL INSTANCES
-The [material instances](/blocks/block-components#material-instances) component does not support texture variation. To apply variated textures, you must not have the [geometry](/blocks/block-components#geometry) component applied to your block and textures must be referenced in `RP/blocks.json` instead.
+To use texture variation with the [material instances](/blocks/block-components#material-instances) component, you must have "Upcoming Creator Features" enabled for your world and be using a format version of `1.21.110` or higher.
 :::
 
 Block texture variation is when a block type can have multiple textures that are randomly applied to the block based on its position in the world. This is useful for blocks such as dirt or grass, where some blocks may have slight variations, such as small rocks, and others don't.
