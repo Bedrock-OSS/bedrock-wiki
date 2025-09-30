@@ -24,12 +24,14 @@ An experiment must be enabled in your world for experimental changes to take eff
 <Label color="blue">Upcoming Creator Features</Label>
 <Label color="green">Versioned</Label>
 
--   Added `minecraft:precipitation_interactions` component
+-   Added `minecraft:precipitation_interactions`
     -   Determines how this block interacts with precipitation (rain and snow).
     -   Contains `precipitation_behavior` which can be one of the following values:
         -   `obstruct_rain_accumulate_snow` (default) prevents rain from passing through the block, instead splashing on top of it and causes snow layers to build up above the block if it is snowing.
         -   `obstruct_rain` prevents rain from passing through the block, instead splashing on top of it.
         -   `none` allows rain and snow to pass through the block.
+-   Updated `minecraft:material_instances`
+    -   Added `emissive` instance parameter which determines whether faces using the material instance should appear emissive.
 
 ## 1.21.110
 
