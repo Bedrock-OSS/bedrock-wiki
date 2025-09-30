@@ -26,6 +26,11 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Items with no category can now be used in commands.
     -   If `is_hidden_in_commands` is set to `true`, the item will still be invalid in commands.
 
+### Components
+
+-   Added `minecraft:swing_duration`
+    -    Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
+
 ## 1.21.110
 
 ### Components
