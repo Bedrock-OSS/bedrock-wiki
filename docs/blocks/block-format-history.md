@@ -31,6 +31,8 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   `obstruct_rain` prevents rain from passing through the block, instead splashing on top of it.
         -   `none` allows rain and snow to pass through the block.
 -   Updated `minecraft:material_instances`
+    -   Added `alpha_masked_tint` instance parameter which determines whether the intensity of the tint applied by [tint methods](/blocks/block-tinting#tint-methods) should be based on the alpha channel of the texture.
+        -   This requires a `tint_method` to specified (that is not `none`) as well as a `render_method` of `opaque`.
     -   Added `emissive` instance parameter which determines whether faces using the material instance should appear emissive.
 
 ## 1.21.110
