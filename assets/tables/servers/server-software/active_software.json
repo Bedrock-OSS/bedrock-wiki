@@ -42,6 +42,12 @@
       "type": "Custom"
     },
     {
+      "name": "[Dragonfly](https://github.com/df-mc/dragonfly)",
+      "description": "A heavily asynchronous server software for Minecraft: Bedrock Edition written in Go.",
+      "languages": "Go",
+      "type": "Custom"
+    },
+    {
       "name": "[Endstone](https://github.com/EndstoneMC/endstone)",
       "description": "A High-level Plugin API for Modding Bedrock Dedicated Servers, in both Python and C++.",
       "languages": "C++, Python",
