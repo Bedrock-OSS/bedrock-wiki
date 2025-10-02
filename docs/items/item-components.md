@@ -147,7 +147,7 @@ Type: Object
 
 ```json
 "minecraft:cooldown": {
-    "category": "attack",
+    "category": "wiki:cooldown",
     "duration": 0.2
 }
 ```
