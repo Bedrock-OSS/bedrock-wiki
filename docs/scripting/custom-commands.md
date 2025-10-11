@@ -159,6 +159,7 @@ customCommandRegistry.registerCommand(
     {
         name: "wiki:command",
         description: "A very useful command.",
+        permissionLevel: CommandPermissionLevel.GameDirectors,
         mandatoryParameters: [
             { name: "param1", type: CustomCommandParamType.String },
             { name: "param2", type: CustomCommandParamType.Integer },
