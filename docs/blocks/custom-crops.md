@@ -34,7 +34,7 @@ Making crops is not as difficult as you may think, it just takes a little practi
 
 ## Crop Model
 
-If you look at crops like carrots and potatoes in-game, you will see that they are made up of 4 planes that are situated 4 pixels from each edge, as shown in the screenshot below. The visible faces point inwards in order to prevent shadows on the crop when surrounded by other blocks.
+If you look at crops like carrots and potatoes in-game, you will see that they are made up of 4 planes that are situated 4 pixels from each edge, as shown in the screenshot below.
 
 It is noteworthy to mention that each plane sits 1 pixel down, unlike traditional blocks. If you forget to lower the planes down by one, then the crops will appear to grow one pixel higher then the top of farmland which has a shorter model.
 
