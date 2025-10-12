@@ -20,6 +20,12 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Released `minecraft:embedded_visual` from experimental
+-   Released `minecraft:flower_pottable` from experimental
+-   Released `minecraft:redstone_producer` from experimental
+-   Updated `minecraft:material_instances`
+    -   Released [texture variation](/blocks/block-texture-variation) support for `texture` instance parameter from experimental.
+
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 <Label color="green">Versioned</Label>
