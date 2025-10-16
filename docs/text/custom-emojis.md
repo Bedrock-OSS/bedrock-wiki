@@ -7,7 +7,7 @@ mentions:
     - MedicalJewel105
     - QuazChick
     - MaragiDev
-    - DarkGamerYT
+    - xKingDark
     - zheaEvyline
 ---
 

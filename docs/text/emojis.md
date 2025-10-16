@@ -19,7 +19,7 @@ mentions:
     - t3hero
     - QuazChick
     - MaragiDev
-    - DarkGamerYT
+    - xKingDark
     - zheaEvyline
 ---
 
