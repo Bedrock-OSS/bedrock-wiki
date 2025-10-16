@@ -1,8 +1,6 @@
 ---
 title: Feature Types
 category: General
-tags:
-    - experimental
 mentions:
     - SirLich
     - MedicalJewel105
@@ -59,7 +57,7 @@ The **target block**, the block to be placed, is specified by the `"places_block
 **Conditions** can be specified to limit placement success. If any of the conditions would fail, the block will not be placed.
 
 ::: warning
-For the sake of placement success, single block features are considered to fail if replacing themselves. This is an important distinction for [aggregate features](#aggregate-features), [conditional lists](#conditional-lists), and others. Proxy single block features with a [search feature](#search-feature) when only considering placement restriction success.
+For the sake of placement success, single block features are considered to fail if replacing themselves. This is an important distinction for [aggregate features](#aggregate-features) and others. Proxy single block features with a [search feature](#search-feature) when only considering placement restriction success.
 :::
 
 ##### Innate Block Conditions
@@ -1067,87 +1065,6 @@ After the coordinates for an iteration have been determined, world generation mo
 
 When finished with the target’s feature tree, if more iterations have yet to be run from the scatter feature, focus returns to the scatter feature beginning with the first-evaluated coordinate and execution is resumed.
 
-### Conditional Lists
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-    "format_version": "1.13.0",
-
-    "minecraft:conditional_list": {
-        "description": {
-            "identifier": "wiki:columns_selection"
-        },
-
-        "conditional_features": [
-            {
-                "places_feature": "wiki:columns_unweathered",
-                "condition": "q.noise(v.originx, v.originz) < 0"
-            },
-            {
-                "places_feature": "wiki:columns_weathered",
-                "condition": 1
-            }
-        ],
-
-        "early_out_scheme": "placement_success"
-    }
-}
-```
-
-**Conditional lists** pick a single feature from a collection based on conditions; they are akin to “if-else if” blocks in programming languages. Once a condition has been evaluated as successful (as determined via [success determination](#success-determination), the conditional list will select _only that one feature_ for placement.
-
-::: tip NOTE
-Instead, if _every_ success should place a feature in the same location, use an [aggregate feature](#aggregate-features) pointing to [scatter features](#scatter-features) that proxy the target features.
-:::
-
-#### Conditions List
-
-<CodeHeader></CodeHeader>
-
-```json
-"conditional_features": [
-	{
-		"places_feature": "summer_fun:beachadjustment_water",
-		"condition": "q.heightmap(v.originx, v.originz) < 63 && q.noise(v.originx, v.originz) < 0"
-	},
-	{
-		"places_feature": "summer_fun:beachadjustment_coral",
-		"condition": "q.heightmap(v.originx, v.originz) < 63 && q.noise(v.originx, v.originz) >= 0"
-	},
-	{
-		"places_feature": "summer_fun:beachadjustment_air",
-		"condition": 1
-	}
-]
-```
-
-The **conditions list**, `"conditional_features"`, is an ordered array comprised of **feature entries** objects. Feature entries bind [**target features**](#proxy-features) to their **conditions**:
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-    "places_feature": "verona:evergreen_trees_stumps",
-    "condition": "v.evergreen_forest.type == v.evergreen_forest.types.lumberjack_ruined"
-}
-```
-
-Conditions are given with the required `"condition"` property. Conditions are traditionally represented via Molang strings, but numbers may be used as well. `0` will always result in that feature entry being disabled. Non-zero values will always cause that entry to succeed. Generally, using `1` can be considered as a catch-all “else” or “default” clause — it should only be used at the very end of the conditions list.
-
-The condition of each feature entry is evaluated by entry order in the conditions list. Once a feature entry [would succeed](#success-determination), no later-listed conditions will be evaluated.
-
-#### Success Determination
-
-<CodeHeader></CodeHeader>
-
-```json
-"early_out_scheme": "placement_success"
-```
-
-Feature entry success is considered in light of the optional **early out scheme**. Two mechanisms are provided for controlling if a feature entry would succeed. `"condition_success"` — the default if no `"early_out_scheme"` is provided — considers a success to occur when a condition evaluates to true. `"placement_success"` goes further: a condition must evaluate to true, and its target feature’s placement must succeed.
-
 ### Aggregate Features
 
 <CodeHeader></CodeHeader>
@@ -1328,60 +1245,6 @@ The feature is only placed if the number given by the optional `"required_succes
 
 The search begins at the position given by the [minimum vector](#search-volume) relative to the [feature origin](#). This position is updated one coordinate at a time, as determined by the [search axis](#search-axis). When the maximum for a coordinate is reached, the position is wrapped to the start of the next coordinate; if iterating over the search axis, the specified direction (`+` or `-`) is considered. At each position, the search conditions innate to the [target feature](#search-features) are checked. Once the number of successes found reaches the [required successes threshold](#search-specifications) (or once one such success is found if no threshold is provided), the target feature is placed at _every_ such success. No features are placed prior to the threshold being reached.
 
-### Rect Layouts
-
-::: warning
-Rect layouts are currently bugged and should not be used. No information has been provided about how they will work. Presumably, rect layouts divide the surface area of a chunk into the provided rectangles given by `"area_dimensions"` and place their associated features based on the declared ratio of empty space.
-:::
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-    "format_version": "1.13.0",
-
-    "minecraft:rect_layout": {
-        "description": {
-            "identifier": "wiki:garden_maze"
-        },
-
-        "ratio_of_empty_space": 0.5,
-        "feature_areas": [
-            {
-                "feature": "wiki:flower_patch",
-                "area_dimensions": [2, 4]
-            },
-            {
-                "feature": "wiki:garden_hedge",
-                "area_dimensions": [1, 3]
-            }
-        ]
-    }
-}
-```
-
-### Scan Surface Features
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-    "format_version": "1.13.0",
-
-    "minecraft:scan_surface": {
-        "description": {
-            "identifier": "wiki:fallen_leaves_cover"
-        },
-
-        "scan_surface_feature": "wiki:fallen_leaves"
-    }
-}
-```
-
-Every block across the surface of a chunk can be covered by a feature using **scan surface features**. For this reason, it is strongly recommended to choose a feature that only occupies a column’s space.
-
-The **target feature** to be placed is given with the `"scan_surface_feature"` property. Placement position is the same as [the Molang query `heightmap`](#), which means that water surfaces are used instead of their floors. It is therefore typically recommended to use [scatter features](#scatter-features) with a _y_ expression utilizing the [`above_top_solid` query](#).
-
 ### Weighted Random Features
 
 <CodeHeader></CodeHeader>
@@ -1464,39 +1327,6 @@ Scene features only allow minimal customizations of their shapes to achieve thei
 ```
 
 **Geode features** construct spherical structures comprised of multiple block layers; they allow placement of sub-features along walls of the interior.
-
-### Beards and Shavers
-
-::: warning
-Beards and shavers are currently bugged and should be avoided. In particular, the platform is poorly constructed, with the surface block usually generating on the incorrect layer and the shape being cut off awkwardly.
-:::
-
-<CodeHeader></CodeHeader>
-
-```json
-{
-    "format_version": "1.13.0",
-
-    "minecraft:beards_and_shavers": {
-        "description": {
-            "identifier": "wiki:highland_tower_foundation"
-        },
-
-        "places_feature": "wiki:highland_tower",
-        "y_delta": 0,
-
-        "bounding_box_min": [-4, 0, -4],
-        "bounding_box_max": [5, 12, 5],
-        "beard_raggedness_min": 0.25,
-        "beard_raggedness_max": 0.5,
-
-        "surface_block_type": "minecraft:grass",
-        "subsurface_block_type": "minecraft:dirt"
-    }
-}
-```
-
-**Beards and shavers** simultaneously provide a platform (beard) and a clearance (shaver) for a feature to generate.
 
 ### Vegetation Patch Features
 
