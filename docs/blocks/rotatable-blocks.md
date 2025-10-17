@@ -75,34 +75,34 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 ```json
 "permutations": [
-  // Facing north
-  {
-    "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 0, 0] }
+    // Facing north
+    {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 0, 0] }
+        }
+    },
+    // Facing west
+    {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 90, 0] }
+        }
+    },
+    // Facing south
+    {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 180, 0] }
+        }
+    },
+    // Facing east
+    {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, -90, 0] }
+        }
     }
-  },
-  // Facing west
-  {
-    "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 90, 0] }
-    }
-  },
-  // Facing south
-  {
-    "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 180, 0] }
-    }
-  },
-  // Facing east
-  {
-    "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, -90, 0] }
-    }
-  }
 ]
 ```
 
@@ -137,48 +137,48 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 ```json
 "permutations": [
-  // Facing down
-  {
-    "condition": "q.block_state('minecraft:facing_direction') == 'down'",
-    "components": {
-      "minecraft:transformation": { "rotation": [90, 0, 0] }
+    // Facing down
+    {
+        "condition": "q.block_state('minecraft:facing_direction') == 'down'",
+        "components": {
+            "minecraft:transformation": { "rotation": [90, 0, 0] }
+        }
+    },
+    // Facing up
+    {
+        "condition": "q.block_state('minecraft:facing_direction') == 'up'",
+        "components": {
+            "minecraft:transformation": { "rotation": [-90, 0, 0] }
+        }
+    },
+    // Facing north
+    {
+        "condition": "q.block_state('minecraft:facing_direction') == 'north'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 0, 0] }
+        }
+    },
+    // Facing west
+    {
+        "condition": "q.block_state('minecraft:facing_direction') == 'west'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 90, 0] }
+        }
+    },
+    // Facing south
+    {
+        "condition": "q.block_state('minecraft:facing_direction') == 'south'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 180, 0] }
+        }
+    },
+    // Facing east
+    {
+        "condition": "q.block_state('minecraft:facing_direction') == 'east'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, -90, 0] }
+        }
     }
-  },
-  // Facing up
-  {
-    "condition": "q.block_state('minecraft:facing_direction') == 'up'",
-    "components": {
-      "minecraft:transformation": { "rotation": [-90, 0, 0] }
-    }
-  },
-  // Facing north
-  {
-    "condition": "q.block_state('minecraft:facing_direction') == 'north'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 0, 0] }
-    }
-  },
-  // Facing west
-  {
-    "condition": "q.block_state('minecraft:facing_direction') == 'west'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 90, 0] }
-    }
-  },
-  // Facing south
-  {
-    "condition": "q.block_state('minecraft:facing_direction') == 'south'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 180, 0] }
-    }
-  },
-  // Facing east
-  {
-    "condition": "q.block_state('minecraft:facing_direction') == 'east'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, -90, 0] }
-    }
-  }
 ]
 ```
 
@@ -212,48 +212,48 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 ```json
 "permutations": [
-  // Facing down
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'down'",
-    "components": {
-      "minecraft:transformation": { "rotation": [-90, 0, 0] }
+    // Facing down
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'down'",
+        "components": {
+            "minecraft:transformation": { "rotation": [-90, 0, 0] }
+        }
+    },
+    // Facing up
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'up'",
+        "components": {
+            "minecraft:transformation": { "rotation": [90, 0, 0] }
+        }
+    },
+    // Facing north
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'north'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 0, 0] }
+        }
+    },
+    // Facing west
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'west'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 90, 0] }
+        }
+    },
+    // Facing south
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'south'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 180, 0] }
+        }
+    },
+    // Facing east
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'east'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, -90, 0] }
+        }
     }
-  },
-  // Facing up
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'up'",
-    "components": {
-      "minecraft:transformation": { "rotation": [90, 0, 0] }
-    }
-  },
-  // Facing north
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'north'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 0, 0] }
-    }
-  },
-  // Facing west
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'west'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 90, 0] }
-    }
-  },
-  // Facing south
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'south'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 180, 0] }
-    }
-  },
-  // Facing east
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'east'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, -90, 0] }
-    }
-  }
 ]
 ```
 
@@ -289,26 +289,26 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 ```json
 "permutations": [
-  // X axis
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 0, 90] }
+    // X axis
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'west' || q.block_state('minecraft:block_face') == 'east'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 0, 90] }
+        }
+    },
+    // Y axis
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'down' || q.block_state('minecraft:block_face') == 'up'",
+        "components": {
+            "minecraft:transformation": { "rotation": [0, 0, 0] }
+        }
+    },
+    // Z axis
+    {
+        "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
+        "components": {
+            "minecraft:transformation": { "rotation": [90, 0, 0] }
+        }
     }
-  },
-  // Y axis
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'down' || q.block_state('minecraft:block_face') == 'up'",
-    "components": {
-      "minecraft:transformation": { "rotation": [0, 0, 0] }
-    }
-  },
-  // Z axis
-  {
-    "condition": "q.block_state('minecraft:block_face') == 'north' || q.block_state('minecraft:block_face') == 'south'",
-    "components": {
-      "minecraft:transformation": { "rotation": [90, 0, 0] }
-    }
-  }
 ]
 ```
