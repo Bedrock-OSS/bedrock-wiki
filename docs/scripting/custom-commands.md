@@ -16,7 +16,7 @@ mentions:
     - conmaster2112
     - kumja1
     - modmaker101
-    - SimpleDevMCBE
+    - realfeatherdev
     - QuazChick
     - jeanmajid
 ---
