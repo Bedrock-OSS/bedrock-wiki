@@ -357,12 +357,12 @@ Unicode Range: `U+000D, U+0020-007E, U+00A0-00FF, U+0131, U+0141-0142, U+0152-01
 
 ## Minecraft-Seven.ttf Supported Unicode Characters
 
-This file is used by Ore UI. Whenever you see the Mojangles font in Ore UI, this is the font file being used. The file can be found in `data/gui/dist/hbui/fonts/Minecraft-Seven-*.ttf`.
+This file is used by Ore UI. Whenever you see the Mojangles font in Ore UI when not in a world/realm/server, this is usually the font file being used. The file can be found in `data/gui/dist/hbui/fonts/Minecraft-Seven-*.ttf`.
 
 Unicode Range: `U+000D, U+0020-007E, U+00A0-00B1, U+00B4, U+00B6-00B8, U+00BA-00BB, U+00BF-0148, U+014A-017E, U+0192, U+01FC-01FF, U+0218-021B, U+0237, U+02C6-02C7, U+02C9, U+02D8-02DD, U+0384-0386, U+0388-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0400-045F, U+0490-0491, U+1E02-1E03, U+1E0A-1E0B, U+1E1E-1E1F, U+1E22-1E23, U+1E30-1E31, U+1E40-1E41, U+1E56-1E57, U+1E60-1E61, U+1E6A-1E6B, U+1E80-1E85, U+1E9E, U+1EF2-1EF3, U+2013-2015, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2126, U+2206, U+220F, U+2211-2212, U+221E, U+25CA, U+F6C3, U+F8FF, U+FB01-FB02`
 
 ## Minecraft-Seven-v4.ttf Supported Unicode Characters
 
-This file is used by Ore UI. While referenced by the Ore UI CSS files, it is not actually used. The file can be found in `data/gui/dist/hbui/fonts/Minecraft-Seven-v4-*.ttf`.
+This file is used by Ore UI. This is used mainly on gameplay Ore UI screens (Ore UI screens you see while you are in a world/realm/server). The file can be found in `data/gui/dist/hbui/fonts/Minecraft-Seven-v4-*.ttf`.
 
 Unicode Range: `U+0020-007E, U+00A0-00AC, U+00AE-017E, U+0192, U+01FC-01FF, U+0218-021B, U+0237, U+02C6-02C7, U+02C9, U+02D8-02DD, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0400-045F, U+0490-0491, U+1E02-1E03, U+1E0A-1E0B, U+1E1E-1E23, U+1E30-1E31, U+1E40-1E41, U+1E56-1E57, U+1E60-1E61, U+1E6A-1E6B, U+1E80-1E85, U+1E9E, U+1EF2-1EF3, U+2013-2015, U+2017-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2126, U+2206, U+220F, U+2211-2212, U+221E, U+25CA, U+3000, U+F6C3, U+F8FF, U+FB01-FB02`
