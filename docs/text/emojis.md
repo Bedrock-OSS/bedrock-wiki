@@ -2,7 +2,7 @@
 title: Intro to Emojis
 description: Learn how to use emojis in Minecraft.
 category: Emojis & Symbols
-nav_order: 1
+nav_order: 2
 mentions:
     - SirLich
     - Joelant05
