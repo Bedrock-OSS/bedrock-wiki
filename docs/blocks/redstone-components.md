@@ -9,6 +9,10 @@ mentions:
     - QuazChick
 ---
 
+:::tip FORMAT & MIN ENGINE VERSION `1.21.110`
+Using the latest format version when creating custom blocks provides access to the newest redstone features.
+:::
+
 This page will help you learn about the different types of components that can make up a redstone circuit.
 Only types of components that can be created with add-ons are documented.
 
