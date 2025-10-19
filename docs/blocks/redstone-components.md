@@ -48,7 +48,7 @@ Generally, if a block is full and opaque, it will act as a conductor.
 However, it is important to remember that a block's functionality is not determined by its appearance so there can be exceptions.
 For example, despite being full and opaque, observers are [insulators](#redstone-insulators) so will not conduct redstone.
 
-In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit and also become powered.
+In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit and also becomes powered.
 
 <WikiImage
     src="/assets/images/blocks/redstone-components/conductor.png"
