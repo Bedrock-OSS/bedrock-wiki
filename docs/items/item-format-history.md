@@ -16,6 +16,33 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.130
+
+### Components
+
+-   Added `minecraft:kinetic_weapon`
+    -   Causes the item to damage (as well as dismount and apply knockback to) each entity that the player moves towards (or that move towards the player) while the item is being used.
+    -   Contains `delay` which determines the duration (in ticks) before kinetic damage and effects start to be applied.
+    -   Contains `hitbox_margin` which determines how close (in blocks) each target's collision needs to be to the player's view direction to be affected by the kinetic attack.
+        -   By default, there is no additional hitbox margin.
+    -   Contains `range` which determines the range (in blocks) of how far away entities must be from the player in order to be affected by the kinetic attack.
+        -   By default, entities between 0 and 3 blocks away from the player will be affected by the kinetic attack.
+    -   Contains `damage_multiplier` which the base damage of the kinetic attack is multiplied by to obtain a multiplied damage value.
+    -   Contains `damage_modifier` which is added to the multiplied damage value to obtain a final damage value to be inflicted upon each target.
+    -   Contains `damage_conditions` which lists the conditions that need to be met for damage to be inflicted.
+    -   Contains `dismount_conditions` which lists the conditions that need to be met for each target to be dismounted from the entity it is riding by the kinetic attack.
+        -   By default, entities are never dismounted.
+    -   Contains `knockback_conditions` which lists the conditions that need to be met for each target to be receive knockback from the kinetic attack.
+        -   By default, knockback is never applied.
+-   Added `minecraft:piercing_weapon`
+    -   Causes the item to damage all entities in a straight line from the player's view direction when attacking.
+    -   If there are block collisions between the player and other entities, the damage will be blocked.
+    -   Prevents the item from being used to mine blocks.
+    -   Contains `hitbox_margin` which determines how close (in blocks) each entity's collision needs to be to the player's view direction to receive damage.
+        -   By default, there is no additional hitbox margin.
+    -   Contains `range` which determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
+        -   By default, entities between 0 and 3 blocks away from the player will receive damage.
+
 ## 1.21.120
 
 ### Description
@@ -29,9 +56,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 ### Components
 
 -   Added `minecraft:swing_duration`
-    -    Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
+    -   Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
 -   Updated `minecraft:use_modifiers`
-    -    Added `emit_vibrations` parameter which determins whether the item emits vibrations when it starts and stops being used.
+    -   Added `emit_vibrations` parameter which determins whether the item emits vibrations when it starts and stops being used.
 
 ## 1.21.110
 
