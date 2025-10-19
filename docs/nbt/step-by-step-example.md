@@ -30,7 +30,7 @@ The name size of our root element property is zero so we won't read any more byt
 
 ![](/assets/images/nbt/VS_Editor_images/step3.png)
 
-We already know that the next property in our root compound is type of string, but before we read our property value, we first read its name written such as string. So we read another 2 bytes to get the length of the string name from of our property.
+We already know that the next property in our root compound is type of string, but before we read our property value, we first read its name written such as string. So we read another 2 bytes to get the length of the string name of our property.
 
 ![](/assets/images/nbt/VS_Editor_images/step4.png)
 
