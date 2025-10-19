@@ -24,7 +24,7 @@ You can use the `/playsound` command to play sound effects to players present an
 
 - It is the sound effect you wish to play.
 - You can find the list of Sound Effect IDs currently available at:
-    - https://www.digminecraft.com/lists/sound_list_pe.php
+    - https://playsoundlist.xyz/
 
 ### Player
 
