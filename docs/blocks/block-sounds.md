@@ -11,7 +11,7 @@ mentions:
 
 ## Applying Sounds
 
-The `sounds` parameter in `RP/blocks.json` is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound.
+The `sound` parameter in `RP/blocks.json` is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound.
 
 You can apply a set of sounds to your block using this parameter:
 
