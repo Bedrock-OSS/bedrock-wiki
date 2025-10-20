@@ -24,9 +24,9 @@ However, it is important to remember that a block's functionality is not determi
 For example, despite being translucent, slime blocks are not insulators and will instead [conduct](#redstone-conductors) strong redstone power.
 :::
 
-While they technically do not form part of a circuit, **redstone insulators** are very useful when building compact redstone circuits as they do _not_ conduct a redstone signal when strongly powered.
+While they technically do not form part of a circuit, **redstone insulators** are very useful when building compact redstone circuits as they do _not_ conduct a redstone signal when powered.
 
-In the diagram below, the powered repeater on the left is strongly powering the stonecutter block. However, given that the stonecutter is a redstone insulator, the repeater to the right of it is not connected to the circuit and remains unpowered.
+In the diagram below, the powered repeater on the left is strongly powering the stonecutter block. However, given that the stonecutter is a redstone insulator, the repeater to the right of it is not connected to the circuit so remains unpowered.
 
 <WikiImage
     src="/assets/images/blocks/redstone-components/insulator.png"
@@ -64,10 +64,13 @@ However, it is important to remember that a block's functionality is not determi
 For example, despite being full and opaque, observers are [insulators](#redstone-insulators) so will not conduct redstone.
 :::
 
-**Redstone conductors** are the opposite of insulators, they _do_ conduct a redstone signal to adjacent blocks when strongly powered.
-For example, this means that redstone dust and repeaters pointing away from a strongly powered conductor will become connected to the circuit and receive the power level that was conducted.
+**Redstone conductors** are the opposite of insulators, they _do_ conduct a redstone signal to adjacent blocks when powered.
 
-In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit and also becomes powered.
+-   Strongly powering a conductor (using a [redstone producer](#redstone-producers)) will connect adjacent redstone dust and components to the circuit, causing them to receive the power that was conducted.
+
+-   Weakly powering a conductor (by powering redstone dust pointing into the conductor) will connect adjacent redstone components to the circuit, causing them to receive the power that was conducted without connecting adjacent redstone dust.
+
+In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit so also becomes powered.
 
 <WikiImage
     src="/assets/images/blocks/redstone-components/conductor.png"
