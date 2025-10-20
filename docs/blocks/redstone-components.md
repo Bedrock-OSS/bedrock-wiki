@@ -18,11 +18,13 @@ Only types of components that can be created with add-ons are documented.
 
 ## Redstone Insulators
 
-While they technically do not form part of a circuit, **redstone insulators** are very useful when building compact redstone circuits as they do _not_ [conduct](#redstone-conductors) a redstone signal when strongly powered.
-
-Generally, if a block is not full and opaque, it will act as an insulator.
+:::tip
+Generally, if a vanilla block is not full and opaque, it will act as an insulator.
 However, it is important to remember that a block's functionality is not determined by its appearance so there can be exceptions.
-For example, despite being translucent, slime blocks are not insulators and will instead conduct strong redstone power.
+For example, despite being translucent, slime blocks are not insulators and will instead [conduct](#redstone-conductors) strong redstone power.
+:::
+
+While they technically do not form part of a circuit, **redstone insulators** are very useful when building compact redstone circuits as they do _not_ conduct a redstone signal when strongly powered.
 
 In the diagram below, the powered repeater on the left is strongly powering the stonecutter block. However, given that the stonecutter is a redstone insulator, the repeater to the right of it is not connected to the circuit and remains unpowered.
 
@@ -41,12 +43,14 @@ You don't need to add anything to your block's JSON definition.
 
 ## Redstone Conductors
 
-**Redstone conductors** are the opposite of insulators, they _do_ conduct a redstone signal to adjacent blocks when powered.
-For example, this means that redstone dust and repeaters pointing away from a strongly powered conductor will become connected to the circuit and receive the power level that was conducted.
-
-Generally, if a block is full and opaque, it will act as a conductor.
+:::tip
+Generally, if a vanilla block is full and opaque, it will act as a conductor.
 However, it is important to remember that a block's functionality is not determined by its appearance so there can be exceptions.
 For example, despite being full and opaque, observers are [insulators](#redstone-insulators) so will not conduct redstone.
+:::
+
+**Redstone conductors** are the opposite of insulators, they _do_ conduct a redstone signal to adjacent blocks when strongly powered.
+For example, this means that redstone dust and repeaters pointing away from a strongly powered conductor will become connected to the circuit and receive the power level that was conducted.
 
 In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit and also becomes powered.
 
