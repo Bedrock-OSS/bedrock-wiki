@@ -41,6 +41,21 @@ Creating custom redstone insulators couldn't be easier, since that's how custom 
 
 You don't need to add anything to your block's JSON definition.
 
+### Preventing Wire Step-Down
+
+By default, wires of redstone dust are allowed to step down the side of insulators to carry power downwards.
+However, unlike other insulators such as glass, vanilla slabs do not allow wire to step down the side of them.
+
+You can prevent wire from stepping down your own block by using the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_conductivity": {
+    "allows_wire_to_step_down": false
+}
+```
+
 ## Redstone Conductors
 
 :::tip
