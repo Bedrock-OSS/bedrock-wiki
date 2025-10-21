@@ -19,6 +19,7 @@ mentions:
     - realfeatherdev
     - QuazChick
     - jeanmajid
+    - nperma
 ---
 
 Who doesn't want cool custom commands? In this tutorial, you will learn how to create your own commands that can be used in chat, command blocks and elsewhere using scripts.
@@ -231,6 +232,49 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
                 status: CustomCommandStatus.Success,
                 message: "Teleporting to " + teleportLocation,
             }
+        }
+    );
+});
+```
+
+## Restricting Command Execution to Players
+
+By default, the "any" command permission level allows sources that are not players to run the command, which isn't suitable for commands that should only be ran by players.
+
+In this example, we will create a custom slash command `/wiki:heal` that can only be executed by players (not the server console or command blocks).
+This command will restore the player's health back to full.
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, Player } from "@minecraft/server";
+
+system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
+    customCommandRegistry.registerCommand(
+        {
+            name: "wiki:heal",
+            description: "Restore your health to the default value.",
+            permissionLevel: CommandPermissionLevel.Any,
+            cheatsRequired: false
+        },
+        (origin) => {
+            const source = origin.initiator ?? origin.sourceEntity;
+
+            // Only allow players to use this command (or NPCs, treating the initiator as the player executing the command)
+            if (!(source instanceof Player)) {
+                return {
+                    status: CustomCommandStatus.Failure,
+                    message: "This command can only be executed by players.",
+                };
+            }
+
+            // Escape read-only mode to heal the player
+            system.run(() => source.getComponent("health").resetToDefaultValue());
+
+            return {
+                status: CustomCommandStatus.Success,
+                message: "You have been fully healed!",
+            };
         }
     );
 });
