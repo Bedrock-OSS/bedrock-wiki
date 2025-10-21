@@ -66,9 +66,11 @@ For example, despite being full and opaque, observers are [insulators](#redstone
 
 **Redstone conductors** are the opposite of insulators, they _do_ conduct a redstone signal to adjacent blocks when powered.
 
--   Strongly powering a conductor (using a [redstone producer](#redstone-producers)) will connect adjacent redstone dust and components to the circuit, causing them to receive the power that was conducted.
+-   **Strongly powering** a conductor (using a [redstone producer](#redstone-producers)) will connect adjacent redstone dust and components to the circuit, causing them to receive the power that was conducted.
 
--   Weakly powering a conductor (by powering redstone dust pointing into the conductor) will connect adjacent redstone components to the circuit, causing them to receive the power that was conducted without connecting adjacent redstone dust.
+-   **Weakly powering** a conductor (by powering redstone dust pointing into the conductor) will connect adjacent redstone components to the circuit, causing them to receive the power that was conducted without connecting adjacent redstone dust.
+
+If a block is a redstone conductor, it will **prevent wire from stepping down** to the block directly below it, cutting the wire off from that part of the circuit.
 
 In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit so also becomes powered.
 
