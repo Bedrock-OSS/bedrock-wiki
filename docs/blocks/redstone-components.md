@@ -68,7 +68,7 @@ For example, despite being full and opaque, observers are [insulators](#redstone
 
 -   **Strongly powering** a conductor (using a [redstone producer](#redstone-producers)) will connect adjacent redstone dust and components to the circuit, causing them to receive the power that was conducted.
 
--   **Weakly powering** a conductor (by powering redstone dust pointing into the conductor) will connect adjacent redstone components to the circuit, causing them to receive the power that was conducted without connecting adjacent redstone dust.
+-   **Weakly powering** a conductor (by powering redstone dust that is on top of or pointing into the conductor) will connect adjacent redstone components to the circuit, causing them to receive the power that was conducted without connecting adjacent redstone dust.
 
 If a block is a redstone conductor, it will **prevent wire from stepping down** to the block directly below it, cutting the wire off from that part of the circuit.
 
