@@ -814,14 +814,14 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 -   `redstone_conductor`: Boolean
     -   Determines whether this block conducts direct redstone power.
 -   `allows_wire_to_step_down`: Boolean
-    -   Determines whether redstone wire can travel down the side of this block.
+    -   Determines whether redstone wire can travel down the side of this block (if the block is not a conductor).
+    -   Redstone wire can always travel down the side of redstone conductors.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
 "minecraft:redstone_conductivity": {
-    "redstone_conductor": true,
-    "allows_wire_to_step_down": false
+    "redstone_conductor": true
 }
 ```
 
