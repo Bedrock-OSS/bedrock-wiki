@@ -231,9 +231,9 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 });
 ```
 
----
+## Restricting Command Execution to Players
 
-## Command Only For Player Example
+By default, the "any" command permission level allows sources that are not players to run the command, which isn't suitable for commands that should only be ran by players.
 
 In this example, we will create a custom slash command `/wiki:heal` that can only be executed by players (not the server console or command blocks).
 This command will restore the player's health back to full.
@@ -244,25 +244,25 @@ This command will restore the player's health back to full.
 import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, Player } from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
-    // Register the custom command
     customCommandRegistry.registerCommand(
         {
             name: "wiki:heal",
-            description: "commands.wiki:heal.description",
+            description: "Restore your health to the default value.",
             permissionLevel: CommandPermissionLevel.Any,
-            cheatsRequired: false,
-            mandatoryParameters: [],
+            cheatsRequired: false
         },
         (origin) => {
-            const source = origin.initiator || origin.sourceEntity;
-            // Only allow players to use this command
-            if (!(source instanceof Player)) 
+            const source = origin.initiator ?? origin.sourceEntity;
+
+            // Only allow players to use this command (or NPCs, treating the initiator as the player executing the command)
+            if (!(source instanceof Player)) {
                 return {
                     status: CustomCommandStatus.Failure,
-                    message: "This command can only be used by player.",
+                    message: "This command can only be executed by players.",
                 };
+            }
 
-            // Heal player
+            // Escape read-only mode to heal the player
             system.run(() => source.getComponent("health").resetToDefaultValue());
 
             return {
@@ -273,13 +273,5 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     );
 });
 ```
-
-<CodeHeader>RP/texts/en\_US.lang</CodeHeader>
-
-```lang
-commands.wiki:heal.description=Restore your health to maximum.
-```
-
----
 
 For more details about custom commands, see the [Microsoft Docs on custom commands](https://learn.microsoft.com/minecraft/creator/documents/scripting/custom-commands).
