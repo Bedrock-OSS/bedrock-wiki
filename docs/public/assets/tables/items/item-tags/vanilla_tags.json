@@ -103,6 +103,7 @@
         "`minecraft:copper_leggings`",
         "`minecraft:copper_pickaxe`",
         "`minecraft:copper_shovel`",
+        "`minecraft:copper_spear`",
         "`minecraft:copper_sword`"
       ]
     },
@@ -156,6 +157,7 @@
         "`minecraft:diamond_leggings`",
         "`minecraft:diamond_pickaxe`",
         "`minecraft:diamond_shovel`",
+        "`minecraft:diamond_spear`",
         "`minecraft:diamond_sword`",
         "`minecraft:mace`"
       ]
@@ -234,6 +236,7 @@
         "`minecraft:golden_leggings`",
         "`minecraft:golden_pickaxe`",
         "`minecraft:golden_shovel`",
+        "`minecraft:golden_spear`",
         "`minecraft:golden_sword`"
       ]
     },
@@ -300,6 +303,7 @@
         "`minecraft:iron_leggings`",
         "`minecraft:iron_pickaxe`",
         "`minecraft:iron_shovel`",
+        "`minecraft:iron_spear`",
         "`minecraft:iron_sword`"
       ]
     },
@@ -682,6 +686,16 @@
       ]
     },
     {
+      "tag": "`minecraft:nautilus_armor`",
+      "vanilla_usage": [
+        "`minecraft:copper_nautilus_armor`",
+        "`minecraft:diamond_nautilus_armor`",
+        "`minecraft:golden_nautilus_armor`",
+        "`minecraft:iron_nautilus_armor`",
+        "`minecraft:netherite_nautilus_armor`"
+      ]
+    },
+    {
       "tag": "`minecraft:netherite_tier`",
       "vanilla_usage": [
         "`minecraft:netherite_axe`",
@@ -692,6 +706,7 @@
         "`minecraft:netherite_leggings`",
         "`minecraft:netherite_pickaxe`",
         "`minecraft:netherite_shovel`",
+        "`minecraft:netherite_spear`",
         "`minecraft:netherite_sword`"
       ]
     },
@@ -793,6 +808,7 @@
         "`minecraft:magma_cube_spawn_egg`",
         "`minecraft:mooshroom_spawn_egg`",
         "`minecraft:mule_spawn_egg`",
+        "`minecraft:nautilus_spawn_egg`",
         "`minecraft:ocelot_spawn_egg`",
         "`minecraft:panda_spawn_egg`",
         "`minecraft:parrot_spawn_egg`",
@@ -833,9 +849,22 @@
         "`minecraft:wolf_spawn_egg`",
         "`minecraft:zoglin_spawn_egg`",
         "`minecraft:zombie_horse_spawn_egg`",
+        "`minecraft:zombie_nautilus_spawn_egg`",
         "`minecraft:zombie_pigman_spawn_egg`",
         "`minecraft:zombie_spawn_egg`",
         "`minecraft:zombie_villager_spawn_egg`"
+      ]
+    },
+    {
+      "tag": "`minecraft:spear`",
+      "vanilla_usage": [
+        "`minecraft:copper_spear`",
+        "`minecraft:diamond_spear`",
+        "`minecraft:golden_spear`",
+        "`minecraft:iron_spear`",
+        "`minecraft:netherite_spear`",
+        "`minecraft:stone_spear`",
+        "`minecraft:wooden_spear`"
       ]
     },
     {
@@ -863,6 +892,7 @@
         "`minecraft:stone_hoe`",
         "`minecraft:stone_pickaxe`",
         "`minecraft:stone_shovel`",
+        "`minecraft:stone_spear`",
         "`minecraft:stone_sword`"
       ]
     },
@@ -892,8 +922,10 @@
         "`minecraft:diamond_helmet`",
         "`minecraft:diamond_hoe`",
         "`minecraft:diamond_leggings`",
+        "`minecraft:diamond_nautilus_armor`",
         "`minecraft:diamond_pickaxe`",
         "`minecraft:diamond_shovel`",
+        "`minecraft:diamond_spear`",
         "`minecraft:diamond_sword`",
         "`minecraft:golden_boots`"
       ]
@@ -1043,6 +1075,7 @@
         "`minecraft:wooden_hoe`",
         "`minecraft:wooden_pickaxe`",
         "`minecraft:wooden_shovel`",
+        "`minecraft:wooden_spear`",
         "`minecraft:wooden_sword`"
       ]
     },
