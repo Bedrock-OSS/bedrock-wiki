@@ -14,21 +14,15 @@
   "rows": [
     {
       "tag": "`acacia`",
-      "vanilla_usage": [
-        "`minecraft:acacia_log`"
-      ]
+      "vanilla_usage": ["`minecraft:acacia_log`"]
     },
     {
       "tag": "`birch`",
-      "vanilla_usage": [
-        "`minecraft:birch_log`"
-      ]
+      "vanilla_usage": ["`minecraft:birch_log`"]
     },
     {
       "tag": "`dark_oak`",
-      "vanilla_usage": [
-        "`minecraft:dark_oak_log`"
-      ]
+      "vanilla_usage": ["`minecraft:dark_oak_log`"]
     },
     {
       "tag": "`diamond_pick_diggable`",
@@ -104,10 +98,7 @@
     },
     {
       "tag": "`gravel`",
-      "vanilla_usage": [
-        "`minecraft:gravel`",
-        "`minecraft:suspicious_gravel`"
-      ],
+      "vanilla_usage": ["`minecraft:gravel`", "`minecraft:suspicious_gravel`"],
       "functionality": "Allows Bamboo to be placed on the block."
     },
     {
@@ -135,9 +126,7 @@
     },
     {
       "tag": "`jungle`",
-      "vanilla_usage": [
-        "`minecraft:jungle_log`"
-      ]
+      "vanilla_usage": ["`minecraft:jungle_log`"]
     },
     {
       "tag": "`log`",
@@ -166,6 +155,69 @@
         "`minecraft:waxed_oxidized_copper_bars`",
         "`minecraft:waxed_weathered_copper_bars`",
         "`minecraft:weathered_copper_bars`"
+      ]
+    },
+    {
+      "tag": "`minecraft:cornerable_stairs`",
+      "vanilla_usage": [
+        "`minecraft:acacia_stairs`",
+        "`minecraft:andesite_stairs`",
+        "`minecraft:bamboo_mosaic_stairs`",
+        "`minecraft:bamboo_stairs`",
+        "`minecraft:birch_stairs`",
+        "`minecraft:blackstone_stairs`",
+        "`minecraft:brick_stairs`",
+        "`minecraft:cherry_stairs`",
+        "`minecraft:cobbled_deepslate_stairs`",
+        "`minecraft:crimson_stairs`",
+        "`minecraft:cut_copper_stairs`",
+        "`minecraft:dark_oak_stairs`",
+        "`minecraft:dark_prismarine_stairs`",
+        "`minecraft:deepslate_brick_stairs`",
+        "`minecraft:deepslate_tile_stairs`",
+        "`minecraft:diorite_stairs`",
+        "`minecraft:end_brick_stairs`",
+        "`minecraft:exposed_cut_copper_stairs`",
+        "`minecraft:granite_stairs`",
+        "`minecraft:jungle_stairs`",
+        "`minecraft:mangrove_stairs`",
+        "`minecraft:mossy_cobblestone_stairs`",
+        "`minecraft:mossy_stone_brick_stairs`",
+        "`minecraft:mud_brick_stairs`",
+        "`minecraft:nether_brick_stairs`",
+        "`minecraft:normal_stone_stairs`",
+        "`minecraft:oak_stairs`",
+        "`minecraft:oxidized_cut_copper_stairs`",
+        "`minecraft:pale_oak_stairs`",
+        "`minecraft:polished_andesite_stairs`",
+        "`minecraft:polished_blackstone_brick_stairs`",
+        "`minecraft:polished_blackstone_stairs`",
+        "`minecraft:polished_deepslate_stairs`",
+        "`minecraft:polished_diorite_stairs`",
+        "`minecraft:polished_granite_stairs`",
+        "`minecraft:polished_tuff_stairs`",
+        "`minecraft:prismarine_bricks_stairs`",
+        "`minecraft:prismarine_stairs`",
+        "`minecraft:purpur_stairs`",
+        "`minecraft:quartz_stairs`",
+        "`minecraft:red_nether_brick_stairs`",
+        "`minecraft:red_sandstone_stairs`",
+        "`minecraft:resin_brick_stairs`",
+        "`minecraft:sandstone_stairs`",
+        "`minecraft:smooth_quartz_stairs`",
+        "`minecraft:smooth_red_sandstone_stairs`",
+        "`minecraft:smooth_sandstone_stairs`",
+        "`minecraft:spruce_stairs`",
+        "`minecraft:stone_brick_stairs`",
+        "`minecraft:stone_stairs`",
+        "`minecraft:tuff_brick_stairs`",
+        "`minecraft:tuff_stairs`",
+        "`minecraft:warped_stairs`",
+        "`minecraft:waxed_cut_copper_stairs`",
+        "`minecraft:waxed_exposed_cut_copper_stairs`",
+        "`minecraft:waxed_oxidized_cut_copper_stairs`",
+        "`minecraft:waxed_weathered_cut_copper_stairs`",
+        "`minecraft:weathered_cut_copper_stairs`"
       ]
     },
     {
@@ -1053,9 +1105,7 @@
     },
     {
       "tag": "`minecraft:is_shears_item_destructible`",
-      "vanilla_usage": [
-        "`minecraft:web`"
-      ],
+      "vanilla_usage": ["`minecraft:web`"],
       "functionality": "Instructs shears to mine this block faster. Custom shears should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
@@ -1102,9 +1152,7 @@
     },
     {
       "tag": "`minecraft:is_sword_item_destructible`",
-      "vanilla_usage": [
-        "`minecraft:web`"
-      ],
+      "vanilla_usage": ["`minecraft:web`"],
       "functionality": "Instructs swords to mine this block faster. Custom swords should check for this tag in their [digger](/items/item-components#digger) component."
     },
     {
@@ -1213,9 +1261,7 @@
     },
     {
       "tag": "`mob_spawner`",
-      "vanilla_usage": [
-        "`minecraft:mob_spawner`"
-      ]
+      "vanilla_usage": ["`minecraft:mob_spawner`"]
     },
     {
       "tag": "`not_feature_replaceable`",
@@ -1251,9 +1297,7 @@
     },
     {
       "tag": "`oak`",
-      "vanilla_usage": [
-        "`minecraft:oak_log`"
-      ]
+      "vanilla_usage": ["`minecraft:oak_log`"]
     },
     {
       "tag": "`one_way_collidable`",
@@ -1354,24 +1398,16 @@
     },
     {
       "tag": "`sand`",
-      "vanilla_usage": [
-        "`minecraft:red_sand`",
-        "`minecraft:sand`",
-        "`minecraft:suspicious_sand`"
-      ],
+      "vanilla_usage": ["`minecraft:red_sand`", "`minecraft:sand`", "`minecraft:suspicious_sand`"],
       "functionality": "Allows cacti and sugarcane to be placed on the block."
     },
     {
       "tag": "`snow`",
-      "vanilla_usage": [
-        "`minecraft:snow_layer`"
-      ]
+      "vanilla_usage": ["`minecraft:snow_layer`"]
     },
     {
       "tag": "`spruce`",
-      "vanilla_usage": [
-        "`minecraft:spruce_log`"
-      ]
+      "vanilla_usage": ["`minecraft:spruce_log`"]
     },
     {
       "tag": "`stone_pick_diggable`",
@@ -1567,10 +1603,7 @@
     },
     {
       "tag": "`water`",
-      "vanilla_usage": [
-        "`minecraft:flowing_water`",
-        "`minecraft:water`"
-      ]
+      "vanilla_usage": ["`minecraft:flowing_water`", "`minecraft:water`"]
     },
     {
       "tag": "`wood`",
@@ -1727,4 +1760,3 @@
     }
   ]
 }
-
