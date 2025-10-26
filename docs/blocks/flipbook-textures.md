@@ -146,7 +146,7 @@ A component where you'll define the block variant (which is registered to the `v
 }
 ```
 
-Now let's say we wanted path 1 to be animated, now what you'll do here is to put `"atlas_tile_variant": 1` on the Dirt block's flipbook texture.
+Now let's say we wanted the first path to be animated, now what you'll do here is to put `"atlas_tile_variant": 0` on the Dirt block's flipbook texture.
 
 ### `replicate`
 
