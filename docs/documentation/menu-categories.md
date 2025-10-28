@@ -35,10 +35,6 @@ If `menu_category` is omitted, the item will only be accessible through commands
 }
 ```
 
-:::danger HIDDEN ITEMS INACCESSIBLE IN COMMANDS ([MCPE-177866](https://bugs.mojang.com/browse/MCPE-177866))
-Currently, setting the category to "none" in a custom item (not block) prevents the item from being used in commands, overriding the "is_hidden_in_commands" option. This issue doesn't affect blocks.
-:::
-
 ## Block Example
 
 <CodeHeader>BP/blocks/balsa_wood.json</CodeHeader>
