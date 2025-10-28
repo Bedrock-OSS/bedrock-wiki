@@ -41,7 +41,7 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   This requires a `tint_method` to specified (that is not `none`) as well as a `render_method` of `opaque`.
     -   Added `emissive` instance parameter which determines whether faces using the material instance should appear emissive.
 
-## 1.21.110
+## 1.21.120
 
 ### Components
 

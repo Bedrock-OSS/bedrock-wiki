@@ -49,17 +49,17 @@ Experimental features may not be compatible with every device and can cause your
 
 #### Add-On Creators
 
-| Feature Name (In-Game)               | Feature Name (NBT)             |
-| ------------------------------------ | ------------------------------ |
-| Render Dragon Features for Creators  | `deferred_technical_preview`   |
+| Feature Name (In-Game)              | Feature Name (NBT)           |
+| ----------------------------------- | ---------------------------- |
+| Render Dragon Features for Creators | `deferred_technical_preview` |
 
-### 1.21.110
+### 1.21.120
 
 #### Gameplay
 
-| Feature Name (In-Game)               | Feature Name (NBT)             |
-| ------------------------------------ | ------------------------------ |
-| Villager Trade Rebalancing           | `villager_trades_rebalance`    |
+| Feature Name (In-Game)     | Feature Name (NBT)          |
+| -------------------------- | --------------------------- |
+| Villager Trade Rebalancing | `villager_trades_rebalance` |
 
 #### Add-On Creators
 
@@ -74,10 +74,10 @@ Experimental features may not be compatible with every device and can cause your
 
 #### Gameplay
 
-| Feature Name (In-Game)               | Feature Name (NBT)             |
-| ------------------------------------ | ------------------------------ |
-| Villager Trade Rebalancing           | `villager_trades_rebalance`    |
-| Drop 3 2025                          | `y_2025_drop_3`                |
+| Feature Name (In-Game)     | Feature Name (NBT)          |
+| -------------------------- | --------------------------- |
+| Villager Trade Rebalancing | `villager_trades_rebalance` |
+| Drop 3 2025                | `y_2025_drop_3`             |
 
 #### Add-On Creators
 
@@ -96,11 +96,11 @@ Try to add only features that will persist over time if you want to use that wor
 
 ## Gallery
 
-*(Add Byte Tag window)*
+_(Add Byte Tag window)_
 
 ![](/assets/images/nbt/experiments-education-edition/byte-add-new.png)
 
-*(Below is, how your `experiments` compound structure might look like)*
+_(Below is, how your `experiments` compound structure might look like)_
 
 ![](/assets/images/nbt/experiments-education-edition/experiments-file.png)
 

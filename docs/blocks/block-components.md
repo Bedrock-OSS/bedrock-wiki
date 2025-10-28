@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.110
+:::tip FORMAT VERSION 1.21.120
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.110.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.120.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
