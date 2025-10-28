@@ -8,8 +8,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.110
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.21.110.
+:::tip FORMAT VERSION 1.21.120
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.21.120.
 :::
 
 ## Applying Components
@@ -20,7 +20,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -449,10 +449,6 @@ Type: Object
 ### Fire Resistant
 
 Determines whether items should be able to withstand fire and lava when dropped rather than being destroyed.
-
-:::danger CLIENT SYNC
-This component does not currently sync with the player client meaning that items will visually disappear when set on fire, however they can still be picked up.
-:::
 
 #### Boolean Definition {#fire-resistant-boolean}
 

@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.110
+:::tip FORMAT VERSION 1.21.120
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.110.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.120.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -256,11 +256,8 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 tile.wiki:custom_block.name=Custom Block
 ```
 
-### Embedded Visual (EXPERIMENTAL) {#embedded-visual}
+### Embedded Visual
 
-:::warning EXPERIMENTAL
-This component requires "Upcoming Creator Features" to be enabled for your world.
-:::
 :::tip ROOT ONLY
 This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
 :::
@@ -343,11 +340,8 @@ When `false` (default), the block will not be able to catch on fire naturally fr
 }
 ```
 
-### Flower Pottable (EXPERIMENTAL) {#flower-pottable}
+### Flower Pottable
 
-:::warning EXPERIMENTAL
-This component requires "Upcoming Creator Features" to be enabled for your world.
-:::
 :::tip ROOT ONLY
 This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
 :::
@@ -830,11 +824,7 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 }
 ```
 
-### Redstone Producer (EXPERIMENTAL) {#redstone-producer}
-
-:::warning EXPERIMENTAL
-This component requires "Upcoming Creator Features" to be enabled for your world.
-:::
+### Redstone Producer
 
 Causes the block to produce redstone power.
 

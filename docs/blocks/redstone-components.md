@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.110
+:::tip FORMAT VERSION 1.21.120
 Using the latest format version when creating custom blocks provides access to the newest redstone features.
 :::
 :::danger REDSTONE INPUT
@@ -114,10 +114,6 @@ Additionally, it is strongly powering the block above it.
 />
 
 ### Creating Redstone Producers
-
-:::warning EXPERIMENTAL
-Creating custom redstone producers requires "Upcoming Creator Features" to be enabled for your world.
-:::
 
 To create custom redstone producers, you'll need to include the [redstone producer](/blocks/block-components#redstone-producer) component in your block.
 

@@ -3,7 +3,6 @@ title: Custom Crops
 description: Learn how to create your own crop blocks that grow just like vanilla crops!
 category: Vanilla Re-Creations
 tags:
-    - experimental
     - intermediate
     - scripting
 license: true
@@ -15,12 +14,9 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.21.110
+:::tip FORMAT VERSION 1.21.120
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
-:::
-:::warning EXPERIMENTAL
-This example requires "Beta APIs" to be enabled for your world in order to use the light level APIs to affect crop growth.
 :::
 
 If you aren't a fan of carrots - that's fine. You can make your own (far superior) crop!
@@ -56,7 +52,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -333,7 +329,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -584,7 +580,7 @@ Holding a crop block in your hand wouldn't look right, so we place the crop with
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID.
@@ -611,7 +607,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food", // Make sure this is different from your crop and seeds' ID.

@@ -154,7 +154,7 @@ If you have textures for your block defined in that file, make sure you move the
 
 ```json
 {
-    "format_version": "1.21.110",
+    "format_version": "1.21.120",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:paper_bag",
