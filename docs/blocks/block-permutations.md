@@ -9,14 +9,14 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.110`
+:::tip FORMAT VERSION 1.21.110
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
-When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
+When working with block states, ensure that the `min_engine_version` in your pack manifest is 1.20.20 or higher.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
-Duplicate components will be overridden by the latest "[permutations](#conditionally-applying-components)" array entry.
+Duplicate components will be overridden by the latest [`permutations`](#conditionally-applying-components) array entry.
 :::
 
 ## What Are Permutations?
@@ -39,12 +39,12 @@ For example, if you added a custom block with two boolean states…
 
 …the 4 following block permutations would be added to the world:
 
-| Block Identifier          | wiki:first_state | wiki:second_state |
-| ------------------------- | ---------------- | ----------------- |
-| wiki:permutations_example | false            | false             |
-| wiki:permutations_example | true             | false             |
-| wiki:permutations_example | false            | true              |
-| wiki:permutations_example | true             | true              |
+| Block Type                  | `wiki:first_state` | `wiki:second_state` |
+| --------------------------- | ------------------ | ------------------- |
+| `wiki:permutations_example` | `false`{lang=json} | `false`{lang=json}  |
+| `wiki:permutations_example` | `true`{lang=json}  | `false`{lang=json}  |
+| `wiki:permutations_example` | `false`{lang=json} | `true`{lang=json}   |
+| `wiki:permutations_example` | `true`{lang=json}  | `true`{lang=json}   |
 
 To calculate how many permutations your block has, multiply the amount of valid state values each state has together.
 For instance, the calculation for the example above would be 2 &times; 2, meaning this block has 4 permutations.
@@ -103,14 +103,14 @@ _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or lat
 
 ### Permutation Conditions
 
-When evaluated as truthy (not false or 0), the involved component list is applied.
+When evaluated as truthy (not `false`{lang=json} or `0`{lang=json}), the involved component list is applied.
 
 Permutation conditions are written as Molang expression strings, and have very limited context:
 
--   Conditions are purely based on the block's permutation, therefore only have access to the `q.block_state` query function.
+-   Conditions are purely based on the block's permutation, therefore only have access to the `q.block_state`{lang=molang} query function.
 -   This also means that conditions cannot have side effects.
-    -   The following math functions may not be used: `math.die_roll`, `math.die_roll_integer`, `math.random`, `math.random_integer`.
-    -   Variables (including `temp` variables) cannot be assigned.
+    -   The following math functions may not be used: `math.die_roll`{lang=molang}, `math.die_roll_integer`{lang=molang}, `math.random`{lang=molang}, `math.random_integer`{lang=molang}.
+    -   Variables (including `temp`{lang=molang} variables) cannot be assigned.
 
 ```molang
 q.block_state('wiki:integer_state_example') < 6 || !q.block_state('wiki:boolean_state_example')

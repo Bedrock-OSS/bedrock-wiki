@@ -12,7 +12,7 @@ mentions:
 hidden: true
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.110`
+::: tip FORMAT VERSION 1.21.110
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
@@ -149,7 +149,7 @@ export default class FaceSelectionPlains {
     getSelected(selection: { face: Direction; faceLocation: Vector3 }, options?: { invertU?: boolean; invertV?: boolean }): number | string | undefined
     ```
 
-    Returns the involved plain's array index, or name if provided. If no plain is selected, `undefined` is returned.
+    Returns the involved plain's array index, or name if provided. If no plain is selected, `undefined`{lang=js} is returned.
 
       <Spoiler title="Parameters">
 
@@ -341,7 +341,7 @@ export default class SelectionBoxes {
 
     Get the box which the `faceLocation` lies within.
 
-    Returns the involved box's array index, or name if provided. If no box is selected, `undefined` is returned.
+    Returns the involved box's array index, or name if provided. If no box is selected, `undefined`{lang=js} is returned.
 
       <Spoiler title="Parameters">
 

@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.21.110`
+:::tip FORMAT VERSION 1.21.110
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) before starting!
 :::

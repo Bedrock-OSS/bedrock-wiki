@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION `1.21.110`
+:::tip FORMAT VERSION 1.21.110
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::

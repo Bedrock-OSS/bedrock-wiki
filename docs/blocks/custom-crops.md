@@ -15,7 +15,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.110`
+:::tip FORMAT VERSION 1.21.110
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -190,7 +190,7 @@ So we know how to set our block states, what happens when our block is on a part
 
 The permutations below set a certain selection box, loot table and texture to the block based its `wiki:growth` value.
 
-For example, if `wiki:growth` is 7, the texture is set to `custom_crop_3` and the crop is able to drop food.
+For example, if `wiki:growth` is `7`{lang=json}, the texture is set to `custom_crop_3` and the crop is able to drop food.
 
 <CodeHeader>minecraft:block</CodeHeader>
 

@@ -50,8 +50,8 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ### From Block Descriptors
 
--   `q.all_tags`
--   `q.any_tag`
+-   `q.all_tags`{lang=molang}
+-   `q.any_tag`{lang=molang}
 
 <CodeHeader>Block Descriptor</CodeHeader>
 
@@ -63,10 +63,10 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ### From Entities
 
--   `q.relative_block_has_all_tags`
--   `q.relative_block_has_any_tag`
--   `q.block_has_all_tags`
--   `q.block_has_any_tag`
+-   `q.relative_block_has_all_tags`{lang=molang}
+-   `q.relative_block_has_any_tag`{lang=molang}
+-   `q.block_has_all_tags`{lang=molang}
+-   `q.block_has_any_tag`{lang=molang}
 
 <CodeHeader>minecraft:client_entity > description</CodeHeader>
 
@@ -82,8 +82,8 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 **NOTE:** The following query functions have no known use cases.
 
--   `q.block_neighbor_has_all_tags`
--   `q.block_neighbor_has_any_tag`
+-   `q.block_neighbor_has_all_tags`{lang=molang}
+-   `q.block_neighbor_has_any_tag`{lang=molang}
 
 Example of an item querying a block's tags:
 

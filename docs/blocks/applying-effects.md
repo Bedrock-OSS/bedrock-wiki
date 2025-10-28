@@ -14,7 +14,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.110`
+::: tip FORMAT VERSION 1.21.110
 This tutorial assumes a basic understanding of blocks, including [block events](/blocks/block-events).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
