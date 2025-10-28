@@ -895,6 +895,20 @@ Type: Object
 }
 ```
 
+### Swing Duration
+
+Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
+
+#### Float Definition {#swing-duration-float}
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:swing_duration": {
+    "value": 1
+}
+```
+
 ### Tags
 
 The `tags` component determines which tags are attached to an item.
