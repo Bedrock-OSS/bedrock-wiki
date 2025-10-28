@@ -3,7 +3,6 @@ title: Custom Crops
 description: Learn how to create your own crop blocks that grow just like vanilla crops!
 category: Vanilla Re-Creations
 tags:
-    - experimental
     - intermediate
     - scripting
 license: true
@@ -18,9 +17,6 @@ mentions:
 :::tip FORMAT VERSION 1.21.120
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
-:::
-:::warning EXPERIMENTAL
-This example requires "Beta APIs" to be enabled for your world in order to use the light level APIs to affect crop growth.
 :::
 
 If you aren't a fan of carrots - that's fine. You can make your own (far superior) crop!

@@ -115,10 +115,6 @@ Additionally, it is strongly powering the block above it.
 
 ### Creating Redstone Producers
 
-:::warning EXPERIMENTAL
-Creating custom redstone producers requires "Upcoming Creator Features" to be enabled for your world.
-:::
-
 To create custom redstone producers, you'll need to include the [redstone producer](/blocks/block-components#redstone-producer) component in your block.
 
 Here's how the redstone producer component of the lit redstone torch in the above diagram would look:
