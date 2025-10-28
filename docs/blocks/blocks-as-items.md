@@ -41,6 +41,7 @@ One example of a situation where replacing the block item is necessary is with f
             "identifier": "wiki:daffodil"
         },
         "components": {
+            "minecraft:flower_pottable": {},
             "minecraft:geometry": "minecraft:geometry.cross",
             "minecraft:material_instances": {
                 "*": {
