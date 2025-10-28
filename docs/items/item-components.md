@@ -998,12 +998,12 @@ Modifies use effects, including how long an item takes to use and the player's s
 
 Type: Object
 
--   `movement_modifier`: Float
+-   `emit_vibrations`: Boolean (optional)
+    -   Determines whether the item emits vibrations when it starts and stops being used.
+-   `movement_modifier`: Float (`0.0-1.0`{lang=js}) (optional)
     -   Modifier value to scale the players movement speed when item is in use.
-    -   Range: [0, 1]
 -   `use_duration`: Float
     -   How long the item takes to use in seconds.
-    -   Required Field
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
