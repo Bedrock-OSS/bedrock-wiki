@@ -95,6 +95,12 @@
       "type": "Custom"
     },
     {
+      "name": "[Chorus](https://github.com/Chorus-OSS/Chorus)",
+      "description": "Minecraft: Bedrock server software, open source and written in Kotlin",
+      "languages": "Kotlin",
+      "type": "Custom"
+    },
+    {
       "name": "[ClearSky](https://github.com/ClearSkyTeam/ClearSky)",
       "description": "An fast, clean PM spoon, while having many features.",
       "languages": "PHP",
