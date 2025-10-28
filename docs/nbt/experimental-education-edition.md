@@ -68,6 +68,22 @@ Experimental features may not be compatible with every device and can cause your
 | Upcoming Creator Features            | `upcoming_creator_features`    |
 | Beta APIs                            | `gametest`                     |
 | Experimental Creator Camera Features | `experimental_creator_cameras` |
+
+### 1.21.110
+
+#### Gameplay
+
+| Feature Name (In-Game)     | Feature Name (NBT)          |
+| -------------------------- | --------------------------- |
+| Villager Trade Rebalancing | `villager_trades_rebalance` |
+
+#### Add-On Creators
+
+| Feature Name (In-Game)               | Feature Name (NBT)             |
+| ------------------------------------ | ------------------------------ |
+| Upcoming Creator Features            | `upcoming_creator_features`    |
+| Beta APIs                            | `gametest`                     |
+| Experimental Creator Camera Features | `experimental_creator_cameras` |
 | Data-Driven Jigsaw Structures        | `jigsaw_structures`            |
 
 ### 1.21.100
