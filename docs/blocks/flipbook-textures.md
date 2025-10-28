@@ -106,7 +106,7 @@ While looking up for something in vanilla flipbook texture file, you may notice 
 | `atlas_tile_variant` | Integer         | The variant of the block's texture array inside the shortname's block variation.                            |
 | `ticks_per_frame`    | Integer         | How fast frames should be changed. 20 ticks = 1 second.                                                     |
 | `frames`             | Array / Integer | List with frame index to use on each frame, or the total number of frames to be repeated one after another. |
-| replicate            | Integer         | Sets the size of pixels. Default: `1`{lang=json}                                                            |
+| `replicate`          | Integer         | Sets the size of pixels. Default: `1`{lang=json}                                                            |
 | `blend_frames`       | Boolean         | Defines should frames transition be smooth or not. Default: `true`{lang=json}                               |
 
 ### Atlas Index
@@ -146,7 +146,7 @@ A component where you'll define the block variant (which is registered to the `v
 }
 ```
 
-Now let's say we wanted path 1 to be animated, now what you'll do here is to put `"atlas_tile_variant": 1`{lang=json} on the Dirt block's flipbook texture.
+Now let's say we wanted the first path to be animated, now what you'll do here is to put `"atlas_tile_variant": 0`{lang=json} on the Dirt block's flipbook texture.
 
 ### Replicate
 
