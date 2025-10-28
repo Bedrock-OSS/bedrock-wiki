@@ -450,10 +450,6 @@ Type: Object
 
 Determines whether items should be able to withstand fire and lava when dropped rather than being destroyed.
 
-:::danger CLIENT SYNC
-This component does not currently sync with the player client meaning that items will visually disappear when set on fire, however they can still be picked up.
-:::
-
 #### Boolean Definition {#fire-resistant-boolean}
 
 ```json
