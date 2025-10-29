@@ -60,7 +60,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:use_modifiers`
     -   Added `emit_vibrations` parameter which determins whether the item emits vibrations when it starts and stops being used.
 
-## 1.21.120
+## 1.21.110
 
 ### Components
 
