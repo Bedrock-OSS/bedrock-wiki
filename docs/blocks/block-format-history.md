@@ -38,8 +38,9 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   `none` allows rain and snow to pass through the block.
 -   Updated `minecraft:material_instances`
     -   Added `alpha_masked_tint` instance parameter which determines whether the intensity of the tint applied by [tint methods](/blocks/block-tinting#tint-methods) should be based on the alpha channel of the texture.
-        -   This requires a `tint_method` to specified (that is not `none`) as well as a `render_method` of `opaque`.
-    -   Added `emissive` instance parameter which determines whether faces using the material instance should appear emissive.
+        -   This requires a `tint_method` to be specified (that is not `none`) as well as a `render_method` of `opaque`.
+    -   Added `emissive` instance parameter which determines whether faces using the material instance should have no shading (disabling face dimming and ambient occlusion).
+        -   Note that this parameter does not cause faces to be displayed at full brightness at all times.
 
 ## 1.21.110
 
