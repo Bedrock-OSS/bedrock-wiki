@@ -490,6 +490,18 @@
       ]
     },
     {
+      "tag": "`minecraft:is_spear`",
+      "vanilla_usage": [
+        "`minecraft:copper_spear`",
+        "`minecraft:diamond_spear`",
+        "`minecraft:golden_spear`",
+        "`minecraft:iron_spear`",
+        "`minecraft:netherite_spear`",
+        "`minecraft:stone_spear`",
+        "`minecraft:wooden_spear`"
+      ]
+    },
+    {
       "tag": "`minecraft:is_sword`",
       "vanilla_usage": [
         "`minecraft:copper_sword`",
@@ -776,6 +788,7 @@
         "`minecraft:blaze_spawn_egg`",
         "`minecraft:bogged_spawn_egg`",
         "`minecraft:breeze_spawn_egg`",
+        "`minecraft:camel_husk_spawn_egg`",
         "`minecraft:camel_spawn_egg`",
         "`minecraft:cat_spawn_egg`",
         "`minecraft:cave_spider_spawn_egg`",
@@ -811,6 +824,7 @@
         "`minecraft:nautilus_spawn_egg`",
         "`minecraft:ocelot_spawn_egg`",
         "`minecraft:panda_spawn_egg`",
+        "`minecraft:parched_spawn_egg`",
         "`minecraft:parrot_spawn_egg`",
         "`minecraft:phantom_spawn_egg`",
         "`minecraft:pig_spawn_egg`",
@@ -853,18 +867,6 @@
         "`minecraft:zombie_pigman_spawn_egg`",
         "`minecraft:zombie_spawn_egg`",
         "`minecraft:zombie_villager_spawn_egg`"
-      ]
-    },
-    {
-      "tag": "`minecraft:spear`",
-      "vanilla_usage": [
-        "`minecraft:copper_spear`",
-        "`minecraft:diamond_spear`",
-        "`minecraft:golden_spear`",
-        "`minecraft:iron_spear`",
-        "`minecraft:netherite_spear`",
-        "`minecraft:stone_spear`",
-        "`minecraft:wooden_spear`"
       ]
     },
     {
