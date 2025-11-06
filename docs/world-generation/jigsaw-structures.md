@@ -2,8 +2,6 @@
 title: Jigsaw Structures
 description: Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 category: General
-tags:
-    - experimental
 license: true
 mentions:
     - Supernova3695
