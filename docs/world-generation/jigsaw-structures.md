@@ -10,10 +10,6 @@ mentions:
     - QuazChick
 ---
 
-:::warning EXPERIMENTAL
-Jigsaw structures only function when the "Data-Driven Jigsaw Structures" experiment is enabled.
-:::
-
 Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 
 ## Jigsaw Blocks
@@ -125,7 +121,7 @@ A jigsaw that is facing up (the direction the arrows are facing) can only match 
 
 ### Elements
 
-For now there is only one type of element ready for use to creators, `minecraft:single_pool_element`.
+For now there is only two types of element ready for use to creators, `minecraft:single_pool_element` and `minecraft:empty_pool_element`.
 
 -   `weight` is a number applied to entries on a pool that tells the jigsaw block how often it should pick this element. Higher values are higher likelihood.
 
@@ -137,6 +133,10 @@ This element places a structure file and then applies a processor to it. Once th
 
     -   `minecraft:rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel.
     -   `minecraft:terrain_matching`: Terrain matching tells the game to make all the blocks, including air, to match the level of the ground like village paths.
+ 
+#### Empty Pool Element
+
+This element places nothing. If the jigsaw blocks are view using debug generation jigsaws will have no connection if a empty pool element was selected. A structure will fail generation if this is the starting element.
 
 ## Processors
 
@@ -163,6 +163,8 @@ A rule processor allows for 5 inputs:
     -   `minecraft:block_match` looks for a block.
     -   `minecraft:random_block_match` looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions.
     -   `minecraft:tag_match` looks for blocks with a specified tag.
+    -   `minecraft:random_blockstate_match` looks for a block and a specified block state at random to change into another block. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement.
+    -   `minecraft:blockstate_match` looks for a block and a specified block state to replace it with another block.
 
 -   `output_state`: The block to replace the input predicate if it is found.
 -   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied.
@@ -175,9 +177,9 @@ A jigsaw structure is a file that tells the game how to generate the structure.
 Its identifier is used for the `/place` and `/locate` structure commands.
 It also tells the game what template pool it should use to start and how large the structure should be using `max_depth`.
 
-They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
+They are stored in the `structures` subfolder of the `worldgen` folder.
 
-<CodeHeader>BP/worldgen/jigsaw_structures/lone_fortress.json</CodeHeader>
+<CodeHeader>BP/worldgen/structures/lone_fortress.json</CodeHeader>
 
 ```json
 {
@@ -266,7 +268,7 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
 
 -   `max_depth`: How large you structure will be. Values can be 1 through 20 inclusive and the larger the number the larger the structure.
 
-    A vanilla village is 6 for reference.
+    A vanilla village on java is 6 for reference. A trial chamber is 20.
 
     The depth determines how many jigsaws will be placed in a row before terminating the chain.
     For example if the structure starts with a structure with 1 generating jigsaw it will place 1 extension which counts as 1 level however if that extension places a piece with 3 generating jigsaws each piece placed by those will count as a level so all 3 will count as level 2, if they each place 3 more then all of those will count as level 3 and so on.
@@ -327,7 +329,7 @@ They are stored in the `jigsaw_structures` subfolder of the `worldgen` folder.
     "max_distance_from_center": 128
     ```
 
--   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number.
+-   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. 
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
