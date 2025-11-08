@@ -119,7 +119,7 @@ A jigsaw that is facing up (the direction the arrows are facing) can only match 
 
 ### Elements
 
-For now there are only two types of element availabke for creators to use: `minecraft:empty_pool_element` and `minecraft:single_pool_element`.
+For now there are only two types of element available for creators to use: `minecraft:empty_pool_element` and `minecraft:single_pool_element`.
 
 -   `weight` is a number applied to entries on a pool that tells the jigsaw block how often it should pick this element. Higher values are higher likelihood.
 
