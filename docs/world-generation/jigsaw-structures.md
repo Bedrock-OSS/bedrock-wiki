@@ -2,18 +2,12 @@
 title: Jigsaw Structures
 description: Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 category: General
-tags:
-    - experimental
 license: true
 mentions:
     - Supernova3695
     - QuazChick
     - Nusiq
 ---
-
-:::warning EXPERIMENTAL
-Jigsaw structures only function when the "Data-Driven Jigsaw Structures" experiment is enabled.
-:::
 
 Jigsaw structures are structures made out of smaller pieces and connected via jigsaw blocks.
 
@@ -126,9 +120,13 @@ A jigsaw that is facing up (the direction the arrows are facing) can only match 
 
 ### Elements
 
-For now there is only one type of element ready for use to creators, `minecraft:single_pool_element`.
+For now there are only two types of element available for creators to use: `minecraft:empty_pool_element` and `minecraft:single_pool_element`.
 
 -   `weight` is a number applied to entries on a pool that tells the jigsaw block how often it should pick this element. Higher values are higher likelihood.
+
+#### Empty Pool Element
+
+This element places nothing. If the jigsaw blocks are viewed using debug generation, they will have no connection if an empty pool element was selected. A structure will fail to generate if this is the starting element.
 
 #### Single Pool Element
 
@@ -162,7 +160,9 @@ A rule processor allows for 5 inputs:
 
     -   `minecraft:always_true` is self explanatory.
     -   `minecraft:block_match` looks for a block.
+    -   `minecraft:blockstate_match` looks for a block and a specified block state to replace it with another block.
     -   `minecraft:random_block_match` looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions.
+    -   `minecraft:random_blockstate_match` looks for a block and a specified block state at random to change into another block. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement.
     -   `minecraft:tag_match` looks for blocks with a specified tag.
 
 -   `output_state`: The block to replace the input predicate if it is found.
@@ -210,6 +210,13 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
 
     ```json
     "heightmap_projection": "world_surface"
+    ```
+
+-   `liquid_settings`: Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`.
+-   <CodeHeader>minecraft:jigsaw</CodeHeader>
+
+    ```json
+    "liquid_settings": "ignore_waterlogging"
     ```
 
 -   `start_height`: The setting which controls the offset from `heightmap_projection` to place the `start_pool`.
@@ -260,7 +267,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
 
 -   `max_depth`: How large you structure will be. Values can be 1 through 20 inclusive and the larger the number the larger the structure.
 
-    A vanilla village is 6 for reference.
+    A vanilla village on java is 6 for reference. A trial chamber is 20.
 
     The depth determines how many jigsaws will be placed in a row before terminating the chain.
     For example if the structure starts with a structure with 1 generating jigsaw it will place 1 extension which counts as 1 level however if that extension places a piece with 3 generating jigsaws each piece placed by those will count as a level so all 3 will count as level 2, if they each place 3 more then all of those will count as level 3 and so on.
@@ -321,7 +328,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "max_distance_from_center": 128
     ```
 
--   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number.
+-   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. 
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
