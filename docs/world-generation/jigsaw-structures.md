@@ -119,9 +119,13 @@ A jigsaw that is facing up (the direction the arrows are facing) can only match 
 
 ### Elements
 
-For now there is only two types of element ready for use to creators, `minecraft:single_pool_element` and `minecraft:empty_pool_element`.
+For now there are only two types of element availabke for creators to use: `minecraft:empty_pool_element` and `minecraft:single_pool_element`.
 
 -   `weight` is a number applied to entries on a pool that tells the jigsaw block how often it should pick this element. Higher values are higher likelihood.
+
+#### Empty Pool Element
+
+This element places nothing. If the jigsaw blocks are viewed using debug generation, they will have no connection if an empty pool element was selected. A structure will fail to generate if this is the starting element.
 
 #### Single Pool Element
 
@@ -131,10 +135,6 @@ This element places a structure file and then applies a processor to it. Once th
 
     -   `minecraft:rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel.
     -   `minecraft:terrain_matching`: Terrain matching tells the game to make all the blocks, including air, to match the level of the ground like village paths.
- 
-#### Empty Pool Element
-
-This element places nothing. If the jigsaw blocks are view using debug generation jigsaws will have no connection if a empty pool element was selected. A structure will fail generation if this is the starting element.
 
 ## Processors
 
@@ -159,10 +159,10 @@ A rule processor allows for 5 inputs:
 
     -   `minecraft:always_true` is self explanatory.
     -   `minecraft:block_match` looks for a block.
-    -   `minecraft:random_block_match` looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions.
-    -   `minecraft:tag_match` looks for blocks with a specified tag.
-    -   `minecraft:random_blockstate_match` looks for a block and a specified block state at random to change into another block. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement.
     -   `minecraft:blockstate_match` looks for a block and a specified block state to replace it with another block.
+    -   `minecraft:random_block_match` looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions.
+    -   `minecraft:random_blockstate_match` looks for a block and a specified block state at random to change into another block. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement.
+    -   `minecraft:tag_match` looks for blocks with a specified tag.
 
 -   `output_state`: The block to replace the input predicate if it is found.
 -   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied.
