@@ -65,7 +65,7 @@ In our manifest, we have added script module. The `entry` is where our script fi
 	]"
 />
 
-## First Preventative Measure (Stable)
+## Preventing Placement
 
 Even if you are going to use another block, if this is your first time creating this script, follow the tutorial exactly. After you are sure you made the script correctly, you can change the block.
 
