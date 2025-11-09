@@ -6,6 +6,7 @@ tags:
 mentions:
     - Sprunkles137
     - MedicalJewel105
+    - Nytreon
 description: Introduction to area-of-effect clouds.
 ---
 
@@ -63,11 +64,11 @@ Below are the parameters for the `mobEffects` tag.
 | ------------------------------- | ------- | --------------------------------------------------------------------- |
 | Ambient                         | Byte    | Defines whether this effect's particles should be translucent or not. |
 | Amplifier                       | Byte    | The strength of this potion effect.                                   |
-| DisplayOnScreenTextureAnimation | Byte    | Unknown.                                                              |
+| DisplayOnScreenTextureAnimation | Byte    | Displays a screen animation when an effect is applied. This is used in bad omen, totems, and the hero of the village to display the floating icon once you get the effect.                                                              |
 | Duration                        | Integer | The amount of time this effect is applied for, in ticks.              |
-| DurationEasy                    | Integer | Unknown, seemingly unused.                                            |
-| DurationNormal                  | Integer | Unknown, seemingly unused.                                            |
-| DurationHard                    | Integer | Unknown, seemingly unused.                                            |
+| DurationEasy                    | Integer | Number of ticks before the effect wears off for Easy mode.                                            |
+| DurationNormal                  | Integer | Number of ticks before the effect wears off for Normal mode.                                            |
+| DurationHard                    | Integer | Number of ticks before the effect wears off for Hard mode.                                            |
 | Id                              | Byte    | The potion effect ID for this effect.                                 |
 | ShowParticles                   | Byte    | Defines whether this effect's particles should appear or not.         |
 
