@@ -193,7 +193,7 @@ Your best bet to resolve this issue is to split your trades in half and move the
 
 ### Streaming
 
--   As general guidance, sounds over 500kb in size or 1 minute in length should be streamed
+-   As general guidance, sounds over 500kB in size or 1 minute in length should be streamed
 
 ## Redstone
 
