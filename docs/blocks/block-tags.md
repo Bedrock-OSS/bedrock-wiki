@@ -50,8 +50,10 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ### From Block Descriptors
 
--   `q.all_tags`{lang=molang}
--   `q.any_tag`{lang=molang}
+-   `q.all_tags(...tags)`{lang=molang}
+    -   Returns whether the block has all of the listed tags.
+-   `q.any_tag(...tags)`{lang=molang}
+    -   Returns whether the block has at least one of the listed tags.
 
 <CodeHeader>Block Descriptor</CodeHeader>
 
@@ -63,10 +65,14 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ### From Entities
 
--   `q.relative_block_has_all_tags`{lang=molang}
--   `q.relative_block_has_any_tag`{lang=molang}
--   `q.block_has_all_tags`{lang=molang}
--   `q.block_has_any_tag`{lang=molang}
+-   `q.block_has_all_tags(x, y, z, ...tags)`{lang=molang}
+    -   Returns whether the block at the specified coordinates has all of the listed tags.
+-   `q.block_has_any_tag(x, y, z, ...tags)`{lang=molang}
+    -   Returns whether the block at the specified coordinates has at least one of the listed tags.
+-   `q.relative_block_has_all_tags(x, y, z, ...tags)`{lang=molang}
+    -   Returns whether the block at the specified offset from the entity has all of the listed tags.
+-   `q.relative_block_has_any_tag(x, y, z, ...tags)`{lang=molang}
+    -   Returns whether the block at the specified offset from the entity has at least one of the listed tags.
 
 <CodeHeader>minecraft:client_entity > description</CodeHeader>
 
@@ -82,8 +88,10 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 **NOTE:** The following query functions have no known use cases.
 
--   `q.block_neighbor_has_all_tags`{lang=molang}
--   `q.block_neighbor_has_any_tag`{lang=molang}
+-   `q.block_neighbor_has_all_tags(x, y, z, ...tags)`{lang=molang}
+-   `q.block_neighbor_has_any_tag(x, y, z, ...tags)`{lang=molang}
+
+### Digger Example
 
 Example of an item querying a block's tags:
 
@@ -107,7 +115,7 @@ Example of an item querying a block's tags:
                     {
                         "speed": 5,
                         "block": {
-                            "tags": "q.any_tag('custom_ore', 'stone', 'metal')"
+                            "tags": "q.any_tag('minecraft:is_pickaxe_item_destructible')"
                         }
                     }
                 ]
