@@ -49,7 +49,7 @@ Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructu
 | Duration             | Integer | How long the cloud will exist for before expiring, in ticks. A value of 0 will cause the cloud to despawn instantly. |
 | DurationOnUse        | Integer | How much the duration should change when effects are applied.                                                        |
 | InitialRadius        | Float   | The size of this cloud's radius when created. Values below 0.5 cause the cloud to despawn instantly.                 |
-| RadiusChangeOnPickup | Float   | Unknown.                                                                                                             |
+| RadiusChangeOnPickup | Float   | Determines by how much the effect radius changes when picked up by a glass bottle. This is used in the ender dragon breath cloud. |
 | RadiusOnUse          | Float   | How much the radius should change when effects are applied.                                                          |
 | RadiusPerTick        | Float   | How much the radius changes every tick.                                                                              |
 | ParticleColor        | Integer | The color of the particle effect, stored in decimal.                                                                 |
@@ -64,11 +64,11 @@ Below are the parameters for the `mobEffects` tag.
 | ------------------------------- | ------- | --------------------------------------------------------------------- |
 | Ambient                         | Byte    | Defines whether this effect's particles should be translucent or not. |
 | Amplifier                       | Byte    | The strength of this potion effect.                                   |
-| DisplayOnScreenTextureAnimation | Byte    | Displays a screen animation when an effect is applied. This is used in bad omen, totems, and the hero of the village to display the floating icon once you get the effect.                                                              |
+| DisplayOnScreenTextureAnimation | Byte    | Displays a screen animation when an effect is applied. This is used in bad omen, totems, and the hero of the village to display the floating icon once you get the effect.                            |
 | Duration                        | Integer | The amount of time this effect is applied for, in ticks.              |
-| DurationEasy                    | Integer | Number of ticks before the effect wears off for Easy mode.                                            |
-| DurationNormal                  | Integer | Number of ticks before the effect wears off for Normal mode.                                            |
-| DurationHard                    | Integer | Number of ticks before the effect wears off for Hard mode.                                            |
+| DurationEasy                    | Integer | Number of ticks before the effect wears off for Easy mode.            |
+| DurationNormal                  | Integer | Number of ticks before the effect wears off for Normal mode.          |
+| DurationHard                    | Integer | Number of ticks before the effect wears off for Hard mode.            |
 | Id                              | Byte    | The potion effect ID for this effect.                                 |
 | ShowParticles                   | Byte    | Defines whether this effect's particles should appear or not.         |
 
