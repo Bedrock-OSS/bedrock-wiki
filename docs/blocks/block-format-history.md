@@ -16,6 +16,16 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.21.130
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:material_instances`
+    -   Removed redundant `emissive` instance parameter
+
 ## 1.21.120
 
 ### Components
