@@ -189,6 +189,15 @@ This can be achieved by using the `item_specific_speeds` parameter of the destru
 }
 ```
 
+### Tier Destructible Tags
+
+There are also several tier destructible [vanilla block tags](/blocks/block-tags#list-of-vanilla-tags) that indicate the tier of tool required for the block to drop.
+While adding one of these tags to your block does not come with changes in block functionality (such as preventing drops without a custom loot table), the appropriate tag should be added to your block to be consistent with vanilla blocks.
+
+-   Stone or better: `minecraft:stone_tier_destructible`
+-   Iron or better: `minecraft:iron_tier_destructible`
+-   Diamond or better: `minecraft:diamond_tier_destructible`
+
 ## Bad Practices
 
 -   Do not use `item_specific_speeds` to individually define a _hardness_ value for each tool item.
