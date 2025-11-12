@@ -107,9 +107,9 @@ When evaluated as truthy (not `false`{lang=json} or `0`{lang=json}), the involve
 
 Permutation conditions are written as Molang expression strings, and have very limited context:
 
--   Conditions are purely based on the block's permutation, therefore only have access to the `q.block_state`{lang=molang} query function.
+-   Conditions are purely based on the block's permutation, therefore only have access to the `q.block_state()`{lang=molang} query function.
 -   This also means that conditions cannot have side effects.
-    -   The following math functions may not be used: `math.die_roll`{lang=molang}, `math.die_roll_integer`{lang=molang}, `math.random`{lang=molang}, `math.random_integer`{lang=molang}.
+    -   The following math functions may not be used: `math.die_roll()`{lang=molang}, `math.die_roll_integer()`{lang=molang}, `math.random()`{lang=molang}, `math.random_integer()`{lang=molang}.
     -   Variables (including `temp`{lang=molang} variables) cannot be assigned.
 
 ```molang
