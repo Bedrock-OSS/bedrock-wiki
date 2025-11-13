@@ -25,8 +25,10 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Contains `delay` which determines the duration (in ticks) before kinetic damage and effects start to be applied.
     -   Contains `hitbox_margin` which determines how close (in blocks) each target's collision needs to be to the player's view direction to be affected by the kinetic attack.
         -   By default, there is no additional hitbox margin.
-    -   Contains `range` which determines the range (in blocks) of how far away entities must be from the player in order to be affected by the kinetic attack.
+    -   Contains `reach` which determines the range (in blocks) of how far away entities must be from the player in order to be affected by the kinetic attack.
         -   By default, entities between 0 and 3 blocks away from the player will be affected by the kinetic attack.
+    -   Contains `creative_reach` which determines the `reach` applied when the player is in creative mode.
+        -   By default, players in creative mode will be restricted to the normal `reach` range.
     -   Contains `damage_multiplier` which the base damage of the kinetic attack is multiplied by to obtain a multiplied damage value.
     -   Contains `damage_modifier` which is added to the multiplied damage value to obtain a final damage value to be inflicted upon each target.
     -   Contains `damage_conditions` which lists the conditions that need to be met for damage to be inflicted.
@@ -40,13 +42,19 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Prevents the item from being used to mine blocks.
     -   Contains `hitbox_margin` which determines how close (in blocks) each entity's collision needs to be to the player's view direction to receive damage.
         -   By default, there is no additional hitbox margin.
-    -   Contains `range` which determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
+    -   Contains `reach` which determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
         -   By default, entities between 0 and 3 blocks away from the player will receive damage.
+    -   Contains `creative_reach` which determines the `reach` applied when the player is in creative mode.
+        -   By default, players in creative mode will be restricted to the normal `reach` range.
 -   Added `minecraft:swing_sounds`
     -   Determines the vanilla sound events triggered when a player attacks when holding the item.
     -   Contains `attack_miss` which determines the sound event triggered when no entity is hit or no damage is dealt.
     -   Contains `attack_hit` which determines the sound event triggered when an entity is hit and non-critical damage is dealt.
     -   Contains `attack_critical_hit` which determines the sound event triggered when an entity is hit and critical damage is dealt.
+-   Updated `minecraft:cooldown`
+    -   Added `type` parameter which determines which of the following types of input the cooldown affects:
+        -   `use` (default) triggers when the item is used and prevents the item from being used while the cooldown is active.
+        -   `attack` triggers when the player attacks while holding the item and prevents the item from being used to attack while the cooldown is active.
 
 ## 1.21.120
 
