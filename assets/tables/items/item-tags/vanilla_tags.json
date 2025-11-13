@@ -144,7 +144,10 @@
         "`minecraft:skull_pottery_sherd`",
         "`minecraft:snort_pottery_sherd`"
       ],
-      "functionality": "Items that can be used to craft a Decorated Pot. Learn how to create custom pottery sherds [here](/items/custom-pottery-sherds)."
+      "functionality": [
+        "Items that can be used to craft a Decorated Pot.",
+        "Learn how to create custom pottery sherds [here](/items/custom-pottery-sherds)."
+      ]
     },
     {
       "tag": "`minecraft:diamond_tier`",
@@ -353,7 +356,8 @@
         "`minecraft:netherite_axe`",
         "`minecraft:stone_axe`",
         "`minecraft:wooden_axe`"
-      ]
+      ],
+      "functionality": "Allows the item to be used to strip logs."
     },
     {
       "tag": "`minecraft:is_cooked`",
@@ -421,7 +425,8 @@
         "`minecraft:suspicious_stew`",
         "`minecraft:sweet_berries`",
         "`minecraft:tropical_fish`"
-      ]
+      ],
+      "functionality": "Allows the item to be picked up by foxes."
     },
     {
       "tag": "`minecraft:is_hoe`",
@@ -488,7 +493,8 @@
         "`minecraft:netherite_shovel`",
         "`minecraft:stone_shovel`",
         "`minecraft:wooden_shovel`"
-      ]
+      ],
+      "functionality": "Allows the item to be used to create dirt paths, extinguish campfires and turn layers of snow into snowballs."
     },
     {
       "tag": "`minecraft:is_spear`",
@@ -574,47 +580,6 @@
       "vanilla_usage": ["`minecraft:writable_book`"]
     },
     {
-      "tag": "`minecraft:logs_that_burn`",
-      "vanilla_usage": [
-        "`minecraft:acacia_log`",
-        "`minecraft:acacia_wood`",
-        "`minecraft:birch_log`",
-        "`minecraft:birch_wood`",
-        "`minecraft:cherry_log`",
-        "`minecraft:cherry_wood`",
-        "`minecraft:dark_oak_log`",
-        "`minecraft:dark_oak_wood`",
-        "`minecraft:jungle_log`",
-        "`minecraft:jungle_wood`",
-        "`minecraft:mangrove_log`",
-        "`minecraft:mangrove_wood`",
-        "`minecraft:oak_log`",
-        "`minecraft:oak_wood`",
-        "`minecraft:pale_oak_log`",
-        "`minecraft:pale_oak_wood`",
-        "`minecraft:spruce_log`",
-        "`minecraft:spruce_wood`",
-        "`minecraft:stripped_acacia_log`",
-        "`minecraft:stripped_acacia_wood`",
-        "`minecraft:stripped_birch_log`",
-        "`minecraft:stripped_birch_wood`",
-        "`minecraft:stripped_cherry_log`",
-        "`minecraft:stripped_cherry_wood`",
-        "`minecraft:stripped_dark_oak_log`",
-        "`minecraft:stripped_dark_oak_wood`",
-        "`minecraft:stripped_jungle_log`",
-        "`minecraft:stripped_jungle_wood`",
-        "`minecraft:stripped_mangrove_log`",
-        "`minecraft:stripped_mangrove_wood`",
-        "`minecraft:stripped_oak_log`",
-        "`minecraft:stripped_oak_wood`",
-        "`minecraft:stripped_pale_oak_log`",
-        "`minecraft:stripped_pale_oak_wood`",
-        "`minecraft:stripped_spruce_log`",
-        "`minecraft:stripped_spruce_wood`"
-      ]
-    },
-    {
       "tag": "`minecraft:logs`",
       "vanilla_usage": [
         "`minecraft:acacia_log`",
@@ -661,7 +626,50 @@
         "`minecraft:stripped_warped_stem`",
         "`minecraft:warped_hyphae`",
         "`minecraft:warped_stem`"
-      ]
+      ],
+      "functionality": "Items that can be used as logs when crafting blocks such as campfires and the Smoker."
+    },
+    {
+      "tag": "`minecraft:logs_that_burn`",
+      "vanilla_usage": [
+        "`minecraft:acacia_log`",
+        "`minecraft:acacia_wood`",
+        "`minecraft:birch_log`",
+        "`minecraft:birch_wood`",
+        "`minecraft:cherry_log`",
+        "`minecraft:cherry_wood`",
+        "`minecraft:dark_oak_log`",
+        "`minecraft:dark_oak_wood`",
+        "`minecraft:jungle_log`",
+        "`minecraft:jungle_wood`",
+        "`minecraft:mangrove_log`",
+        "`minecraft:mangrove_wood`",
+        "`minecraft:oak_log`",
+        "`minecraft:oak_wood`",
+        "`minecraft:pale_oak_log`",
+        "`minecraft:pale_oak_wood`",
+        "`minecraft:spruce_log`",
+        "`minecraft:spruce_wood`",
+        "`minecraft:stripped_acacia_log`",
+        "`minecraft:stripped_acacia_wood`",
+        "`minecraft:stripped_birch_log`",
+        "`minecraft:stripped_birch_wood`",
+        "`minecraft:stripped_cherry_log`",
+        "`minecraft:stripped_cherry_wood`",
+        "`minecraft:stripped_dark_oak_log`",
+        "`minecraft:stripped_dark_oak_wood`",
+        "`minecraft:stripped_jungle_log`",
+        "`minecraft:stripped_jungle_wood`",
+        "`minecraft:stripped_mangrove_log`",
+        "`minecraft:stripped_mangrove_wood`",
+        "`minecraft:stripped_oak_log`",
+        "`minecraft:stripped_oak_wood`",
+        "`minecraft:stripped_pale_oak_log`",
+        "`minecraft:stripped_pale_oak_wood`",
+        "`minecraft:stripped_spruce_log`",
+        "`minecraft:stripped_spruce_wood`"
+      ],
+      "functionality": "Items that can be smelted in a furnace to create Charcoal."
     },
     {
       "tag": "`minecraft:mangrove_logs`",
@@ -778,7 +786,8 @@
     },
     {
       "tag": "`minecraft:soul_fire_base_blocks`",
-      "vanilla_usage": ["`minecraft:soul_sand`", "`minecraft:soul_soil`"]
+      "vanilla_usage": ["`minecraft:soul_sand`", "`minecraft:soul_soil`"],
+      "functionality": "Items that can be used like soul sand/soil when crafting blocks such as the Soul Campfire and Soul Torch."
     },
     {
       "tag": "`minecraft:spawn_egg`",
