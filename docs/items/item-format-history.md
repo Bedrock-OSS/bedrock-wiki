@@ -42,6 +42,11 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   By default, there is no additional hitbox margin.
     -   Contains `range` which determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
         -   By default, entities between 0 and 3 blocks away from the player will receive damage.
+-   Added `minecraft:swing_sounds`
+    -   Determines the vanilla sound events triggered when a player attacks when holding the item.
+    -   Contains `attack_miss` which determines the sound event triggered when no entity is hit or no damage is dealt.
+    -   Contains `attack_hit` which determines the sound event triggered when an entity is hit and non-critical damage is dealt.
+    -   Contains `attack_critical_hit` which determines the sound event triggered when an entity is hit and critical damage is dealt.
 
 ## 1.21.120
 
