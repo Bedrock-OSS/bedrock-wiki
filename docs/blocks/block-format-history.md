@@ -23,6 +23,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 
+-   Added `minecraft:leashable`
+    -   Allows leads to be attached to the block like fences.
+    -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
 -   Updated `minecraft:material_instances`
     -   Removed redundant `emissive` instance parameter
 
