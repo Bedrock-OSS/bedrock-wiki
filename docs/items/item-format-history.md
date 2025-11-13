@@ -55,6 +55,8 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Added `type` parameter which determines which of the following types of input the cooldown affects:
         -   `use` (default) triggers when the item is used and prevents the item from being used while the cooldown is active.
         -   `attack` triggers when the player attacks while holding the item and prevents the item from being used to attack while the cooldown is active.
+-   Updated `minecraft:use_modifiers`
+    -   Added `start_sound` parameter which determines the vanilla sound event that is triggered when the item starts to be used.
 
 ## 1.21.120
 
@@ -71,7 +73,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:swing_duration`
     -   Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
 -   Updated `minecraft:use_modifiers`
-    -   Added `emit_vibrations` parameter which determins whether the item emits vibrations when it starts and stops being used.
+    -   Added `emit_vibrations` parameter which determines whether the item emits vibrations when it starts and stops being used.
 
 ## 1.21.110
 
