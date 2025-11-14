@@ -23,6 +23,7 @@ export default {
   "/concepts/rawtext": "/text/rawtext",
   "/concepts/render-controller": "/visuals/render-controller",
   "/concepts/text-and-translations": "/text/text-intro",
+  "/concepts/texture-list": "/concepts/textures-list",
 
   "/documentation/biome-tags": "/world-generation/biome-tags",
   "/documentation/block-model-materials": "/blocks/block-components#render-methods",
