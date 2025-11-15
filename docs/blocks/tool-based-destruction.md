@@ -106,6 +106,9 @@ These tags can be applied to your block in its `components`:
 There is no proper way to specify which tools are required for a block to drop loot.
 The following section describes workarounds that can be used to replicate vanilla drop mechanics as well as possible.
 :::
+:::danger SILK TOUCH
+It is impossible to prevent a block from dropping itself when mined using an item with the Silk Touch enchantment.
+:::
 
 In order to prevent your block from dropping when destroyed without the required tool, you'll need to create a new loot table.
 
