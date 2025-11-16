@@ -152,6 +152,10 @@ onPlayerBreak(event) {
 
 ### Player Interact
 
+:::danger EMPTY BUCKETS
+The `onPlayerInteract` hook is not called when the player interacts with the block using an empty bucket.
+:::
+
 Runs when the player interacts with / uses the block.
 
 <CodeHeader>Custom Component</CodeHeader>
