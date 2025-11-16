@@ -46,7 +46,12 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
                 "category": "items"
             }
         },
-        "components": {} // Must be here, even if empty!
+        "components": {
+            // Minecraft requires at least one component such as:
+            // - minecraft:icon
+            // - or minecraft:block_placer with replace_block_item == true
+          "minecraft:icon": "wiki:custom_item"
+        }
     }
 }
 ```
