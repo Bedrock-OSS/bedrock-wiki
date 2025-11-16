@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION 1.21.120
+:::tip FORMAT VERSION 1.21.120
 This tutorial assumes a basic understanding of blocks and [block tags](/blocks/block-tags).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -53,7 +53,7 @@ Here are some hardness values used by vanilla blocks:
 -   Stone: `1.5`{lang=json}
 -   Planks: `2`{lang=json}
 
-_You can find other hardness values on the [Minecraft Wiki](https://minecraft.wiki)._
+_You can find other hardness values on the [Minecraft Wiki](https://minecraft.wiki/w/Breaking#Blocks_by_hardness)._
 
 ### Defining Suitable Tools
 
