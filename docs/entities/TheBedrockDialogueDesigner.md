@@ -19,7 +19,7 @@ Whats in this article:
 
 [Wrapping it up](#wrapping-it-up)
 
-
+[Credits](#credits)
 
 ## Why you are here
 
@@ -74,5 +74,7 @@ Once you are satisfied with the dialogue, you can export it with the button in t
 ![](Media/Export.png)
 
 For more information on how to use dialogue files in-game, click [this link](https://wiki.bedrock.dev/entities/npc-dialogue).
+
+## Credits
 
 This page was based on the MS learn page [Create NPC Dialogues with DialogueDesigner](https://learn.microsoft.com/en-us/minecraft/creator/documents/npcdialoguedesigner?view=minecraft-bedrock-stable)
