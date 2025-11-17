@@ -1,11 +1,11 @@
 ---
-title: The Dialogue Designer
+title: The DialogueDesigner
 category: Tutorials
 tags:
     - easy
 mentions:
     - ArDanZ11
-description: Learn how to use the Dialogue Designer by JannisX11.
+description: Learn how to use the DialogueDesigner by JannisX11.
 ---
 
 
@@ -27,7 +27,7 @@ I'm sure we have all played those DLCs where NPC mobs have huge dialogues that y
 
 
 
-Thankfully, we have an online application made by [JannisX11](https://github.com/jannisx11), creator of [Blockbench](www.blockbench.net), a widely know low-poly 3D model editor. But today we are going to look at something called [Dialogue Designer](https://jannisx11.github.io/dialogue-designer). It is a tool that simplifies the creation of dialogue addons by adding a UI editor for you.
+Thankfully, we have an online application made by [JannisX11](https://github.com/jannisx11), creator of [Blockbench](www.blockbench.net), a widely know low-poly 3D model editor. But today we are going to look at something called [DialogueDesigner](https://jannisx11.github.io/dialogue-designer). It is a tool that simplifies the creation of dialogue addons by adding a UI editor for you.
 
 
 
@@ -35,11 +35,11 @@ Thankfully, we have an online application made by [JannisX11](https://github.com
 
 
 
-The dialogue designer is made for Minecraft: Bedrock Edition and makes JSON dialogue files.
+The DialogueDesigner is made for Minecraft: Bedrock Edition and makes JSON dialogue files.
 
 
 
-> Note: DIalogue Designer only works for the latest version of Minecraft: Bedrock Edition. Please make sure that your game is properly updated.
+> Note: DialogueDesigner only works for the latest version of Minecraft: Bedrock Edition. Please make sure that your game is properly updated.
 
 To begin, you should see a screen like this:
 
@@ -73,4 +73,6 @@ Once you are satisfied with the dialogue, you can export it with the button in t
 
 ![](Media/Export.png)
 
-For more information on how to inport a dialogue into the game, check out [this page](https://learn.microsoft.com/en-us/minecraft/creator/documents/npcdialogue?view=minecraft-bedrock-stable).
+For more information on how to use dialogue files in-game, click [this link](https://wiki.bedrock.dev/entities/npc-dialogue).
+
+This page was based on the MS learn page [Create NPC Dialogues with DialogueDesigner](https://learn.microsoft.com/en-us/minecraft/creator/documents/npcdialoguedesigner?view=minecraft-bedrock-stable)
