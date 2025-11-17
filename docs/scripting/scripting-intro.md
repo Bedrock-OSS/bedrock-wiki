@@ -77,7 +77,7 @@ Additionally, dependencies will need to be set based on modules used. To import 
         {
             // Enables the use of @minecraft/server module, with a version of 2.2.0 (the latest stable version available).
             "module_name": "@minecraft/server",
-            "version": "2.2.0"
+            "version": "2.3.0"
         }
     ]
 }
@@ -88,8 +88,8 @@ If your project needs other module to run your code, add the other dependencies 
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. Most features are included in stable APIs, and will not break or be changed when Minecraft is updated.
 
 - `@minecraft/server`:
-
-  - [`2.2.0`](https://www.npmjs.com/package/@minecraft/server/v/2.2.0) (Latest version)
+  - [`2.3.0`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0) (Latest version)
+  - [`2.2.0`](https://www.npmjs.com/package/@minecraft/server/v/2.2.0)
   - [`2.1.0`](https://www.npmjs.com/package/@minecraft/server/v/2.1.0)
   - [`2.0.0`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0)
   - [`1.19.0`](https://www.npmjs.com/package/@minecraft/server/v/1.19.0)
