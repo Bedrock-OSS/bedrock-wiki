@@ -1,10 +1,17 @@
-# The Bedrock Dialogue Designer
-
+---
+title: The Dialogue Designer
+category: Tutorials
+tags:
+    - easy
+mentions:
+    - ArDanZ11
+description: Learn how to use the Dialogue Designer by JannisX11.
+---
 
 
 Whats in this article:
 
-[The Good Stuff](#the-good-stuff)
+[Why you're here](#why-you-are-here)
 
 [How it works and the basics](#how-it-works-and-the-basics)
 
@@ -14,7 +21,7 @@ Whats in this article:
 
 
 
-## The Good Stuff
+## Why you are here
 
 I'm sure we have all played those DLCs where NPC mobs have huge dialogues that you just can't create in the game. Well, if you are one of the more geeky ones, you may know that they use JSON dialogue in addons, bringing new dialogue files into the game. But, JSON dialogue files are also quite difficult to make, as they are complicated. If someone is just trying to have fun in the learning process, the task of making one of these might be a little daunting.
 
