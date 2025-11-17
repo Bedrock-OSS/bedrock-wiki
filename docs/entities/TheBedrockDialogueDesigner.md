@@ -73,8 +73,8 @@ Once you are satisfied with the dialogue, you can export it with the button in t
 
 ![](Media/Export.png)
 
-For more information on how to use dialogue files in-game, click [this link](https://wiki.bedrock.dev/entities/npc-dialogue).
+For more information on how to use dialogue files in-game, click [this link](https://wiki.bedrock.dev/entities/npc-dialogue). For complete directions from the creator, go to the [DialogueDesigner docs](https://github.com/JannisX11/dialogue-designer/tree/main/docs).
 
 ## Credits
 
-This page was based on the MS learn page [Create NPC Dialogues with DialogueDesigner](https://learn.microsoft.com/en-us/minecraft/creator/documents/npcdialoguedesigner?view=minecraft-bedrock-stable)
+This page was based on the MS learn page [Create NPC Dialogues with DialogueDesigner](https://learn.microsoft.com/en-us/minecraft/creator/documents/npcdialoguedesigner?view=minecraft-bedrock-stable).
