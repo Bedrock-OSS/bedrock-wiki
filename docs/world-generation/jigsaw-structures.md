@@ -166,9 +166,9 @@ A rule processor allows for 5 inputs:
     -   `minecraft:tag_match` looks for blocks with a specified tag.
 
 -   `output_state`: The block to replace the input predicate if it is found.
--   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied.
+-   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied to the block.
 -   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
--   `position_predicate`: No difference to the one above?
+-   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
 
 ## Jigsaw Structures
 
@@ -212,7 +212,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "heightmap_projection": "world_surface"
     ```
 
--   `liquid_settings`: Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`.
+-   `liquid_settings`: (Optional) Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`. Defaults to `apply_waterlogging`.
 -   <CodeHeader>minecraft:jigsaw</CodeHeader>
 
     ```json
