@@ -35,11 +35,12 @@ Thankfully, we have an online application made by [JannisX11](https://github.com
 
 
 
-The DialogueDesigner is made for Minecraft: Bedrock Edition and makes JSON dialogue files.
+The DialogueDesigner is made for Minecraft: Bedrock Edition and makes JSON dialogue files. You can also edit the raw JSON within the web app.
 
 
-
-> Note: DialogueDesigner only works for the latest version of Minecraft: Bedrock Edition. Please make sure that your game is properly updated.
+:::note
+DialogueDesigner only works with the latest version of Minecraft: Bedrock Edition. Please make sure that your game is updated before continuing.
+:::
 
 To begin, you should see a screen like this:
 
