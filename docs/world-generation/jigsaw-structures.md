@@ -203,7 +203,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "step": "surface_structures"
     ```
 
--   `heightmap_projection`: (Optional) What y level the start_height value will look for to place the structure.
+-   `heightmap_projection`: (optional) What y level the start_height value will look for to place the structure.
     Can be `world_surface` or `sea_floor`.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
@@ -212,7 +212,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "heightmap_projection": "world_surface"
     ```
 
--   `liquid_settings`: (Optional) Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`. Defaults to `apply_waterlogging`.
+-   `liquid_settings`: (optional) Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`. Defaults to `apply_waterlogging`.
 -   <CodeHeader>minecraft:jigsaw</CodeHeader>
 
     ```json
@@ -290,6 +290,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     -   `beard_thin` places a platform around the base like villages.
     -   `bury` puts the structure underground but any part of the structure breaching the surface will be unburied just like a trail ruin.
     -   `encapsulate` surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
+    -   `none` does nothing.
 
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
 
@@ -299,7 +300,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "start_pool": "wiki:lone_fortress_courtyard"
     ```
 
--   `start_jigsaw_name`: (optional) The name of the jigsaw block from a structure in the start pool that should be placed.
+-   `start_jigsaw_name`: (optional) The name in the name fied of the jigsaw block from a structure in the start pool that should be concidered the origin point of the structure. The location of the jigsaw block will be the center that `max_distance_from_center` uses as a origin and it will also be the coords that `/locate` guides to
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -320,7 +321,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     ]
     ```
 
--   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive.
+-   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive. Defaults to 128.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -328,7 +329,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "max_distance_from_center": 128
     ```
 
--   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. 
+-   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. Defaults to 0.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -528,7 +529,7 @@ The `placement` parameter of structure sets contains the following rules of plac
 
 ### Structures
 
-The `placement` parameter of structure sets is an array with the identifiers of structures (from the `worldgen/structures` file) and weight for how often they should be picked.
+The `structures` parameter of structure sets is an array with the identifiers of structures (from the `worldgen/structures` file) and weight for how often they should be picked.
 
 <CodeHeader>minecraft:structure_set</CodeHeader>
 
