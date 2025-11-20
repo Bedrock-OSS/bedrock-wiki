@@ -20,7 +20,7 @@ Jigsaw structures are structures made out of smaller pieces and connected via ji
     width="840"
 />
 
-Jigsaw blocks are the blocks that put all the pieces of a structure together. There are two types of them, **generating jigsaws** and **connector jigsaws**. While they are visually identical they perform differently in game.
+Jigsaw blocks are the blocks that put all the pieces of a structure together. There are two types of them, **generating jigsaws** and **connector jigsaws**. While they are visually identical they perform differently in game. A jigsaw block can also be both. You can fill out the target pool, target name, and name fields and the jigsaw will be able to generate pieces and be generated as a connector. This can be useful for tunnels or roads that are a turn so that mutiple different turns don't need to be specified. A jigsaw block placing that piece could select either end if all fields are used.
 
 -   A **generating jigsaw** has a filled [target pool](#target-pool) and [target name](#target-name) field.
 
@@ -56,19 +56,19 @@ It has a target pool and target name which will place a structure with a connect
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws.png"
     alt="Jigsaws that can connect"
-    caption="These two jigsaws can connect because they are rotated the same way."
+    caption="These two jigsaws can connect because their arrows are both aligned horizontally."
 />
 
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws2.png"
     alt="Jigsaws that can connect"
-    caption="These two jigsaws can connect because their arrows are facing the same way."
+    caption="These two jigsaws can connect because their arrows are both aligned horizontally."
 />
 
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/unconnectable-jigsaws.png"
     alt="Jigsaws that cannot connect"
-    caption="These two jigsaws cannot connect because their arrows are not facing the same direction."
+    caption="These two jigsaws cannot connect because one is aligned horizontally while the other is aligned vertically."
 />
 
 </CardGrid>
@@ -102,7 +102,7 @@ If a structure has 2+ connecting jigsaws the game will prioritize the connector 
 
 ### Joint Type
 
-Not valid if the jigsaw is facing outwards, only up or down.
+Not valid if the jigsaw is aligned horizontally, only vertical jigsaws can have this.
 
 If the jigsaw is facing up and "rollable" is selected, the piece will select a random rotation to place the jigsaws.
 
@@ -132,14 +132,17 @@ This element places nothing. If the jigsaw blocks are viewed using debug generat
 
 This element places a structure file and then applies a processor to it. Once the element is set up then you can apply weight and terrain adaptation to it.
 
--   `projection` tells the game how the piece should adapt to the existing the terrain. There are two options:
+-   `projection`: (optional) tells the game how the piece should adapt to the existing the terrain. There are two options:
 
-    -   `minecraft:rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel.
+    -   `minecraft:rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel. This is the default if `projection` is not specified.
     -   `minecraft:terrain_matching`: Terrain matching tells the game to make all the blocks, including air, to match the level of the ground like village paths.
+ 
+-   `location`: tells the game where the file to generate is.
+-   `processors`: (optional) the ID of a processor to apply to the piece.
 
 ## Processors
 
-Processors are lists of blocks and how they can be modified when the structure is placed. They can also apply loot tables to blocks that support them such as chests and sus gravel.
+Processors are lists of blocks and how they can be modified when the structure is placed. They can also apply loot tables to blocks that support them such as chests and suspicous gravel.
 
 Processors support two types, `minecraft:capped` and `minecraft:rule`.
 
@@ -159,24 +162,25 @@ A rule processor allows for 5 inputs:
 -   `input_predicate`: Allows for 4 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked.
 
     -   `minecraft:always_true` is self explanatory.
-    -   `minecraft:block_match` looks for a block.
-    -   `minecraft:blockstate_match` looks for a block and a specified block state to replace it with another block.
-    -   `minecraft:random_block_match` looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions.
-    -   `minecraft:random_blockstate_match` looks for a block and a specified block state at random to change into another block. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement.
+    -   `minecraft:block_match` looks for a specific block type.
+    -   `minecraft:blockstate_match` looks for a block with the specified block state values.
+    -   `minecraft:random_block_match` looks for a specific block and picks some of them at random, if you had stone bricks in your structure this could be used to replace some with cracked or mossy versions.
+    -   `minecraft:random_blockstate_match` looks for a block with the specified block state values and picks some of them at random. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement into upper mossy stonebrick slabs.
     -   `minecraft:tag_match` looks for blocks with a specified tag.
 
 -   `output_state`: The block to replace the input predicate if it is found.
--   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied.
+-   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied to the block. This resets the rotation of chests if `append_loot` is used ([MCPE-230078](https://bugs.mojang.com/browse/MCPE-230078)).
 -   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
--   `position_predicate`: No difference to the one above?
+-   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
 
-## Jigsaw Structures
+## Jigsaw Structure Definition
 
-A jigsaw structure is a file that tells the game how to generate the structure.
-Its identifier is used for the `/place` and `/locate` structure commands.
-It also tells the game what template pool it should use to start and how large the structure should be using `max_depth`.
+Jigsaw structure files tell the game how to generate structures that make use of jigsaws.
+They are stored in the `BP/worldgen/structures` folder and each jigsaw structure's identifier is used for the `/place` and `/locate` structure commands.
 
-They are stored in the `structures` subfolder of the `worldgen` folder.
+They tell the game which template pool should be used to start generating the structure and how large the structure should be using `max_depth` among other things.
+
+They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 <CodeHeader>BP/worldgen/structures/lone_fortress.json</CodeHeader>
 
@@ -192,7 +196,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
 }
 ```
 
-### Jigsaw Parameters
+### Generation Configuration
 
 -   `step`: Which step of world generation places the structure.
     Contains multiple options, most notable being `underground_structures`, `strongholds`, and `surface_structures`.
@@ -203,7 +207,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "step": "surface_structures"
     ```
 
--   `heightmap_projection`: (Optional) What y level the start_height value will look for to place the structure.
+-   `heightmap_projection`: (optional) What y level the start_height value will look for to place the structure.
     Can be `world_surface` or `sea_floor`.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
@@ -212,7 +216,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "heightmap_projection": "world_surface"
     ```
 
--   `liquid_settings`: Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`.
+-   `liquid_settings`: (optional) Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`. Defaults to `apply_waterlogging`.
 -   <CodeHeader>minecraft:jigsaw</CodeHeader>
 
     ```json
@@ -246,10 +250,10 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
             ```json
             "start_height": {
                 "type": "uniform",
-                "min": {
+                "max": {
                     "below_top": 100
                 },
-                "max": {
+                "min": {
                     "above_bottom": 20
                 }
             }
@@ -265,7 +269,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     -   `min`: If `type` is uniform this value is used to set the lowest value the range of generation y levels can be.
         -   Can use all 4 of the values from `value` above here
 
--   `max_depth`: How large you structure will be. Values can be 1 through 20 inclusive and the larger the number the larger the structure.
+-   `max_depth`: How large the structure will be. Values can be 1 through 20 inclusive and the larger the number the larger the structure.
 
     A vanilla village on java is 6 for reference. A trial chamber is 20.
 
@@ -288,8 +292,9 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
 
     -   `beard_box` hollows a cavern around the structure like an ancient city.
     -   `beard_thin` places a platform around the base like villages.
-    -   `bury` puts the structure underground but any part of the structure breaching the surface will be unburied just like a trail ruin.
+    -   `bury` puts the structure starting piece underground but any part of the structure breaching the surface will be unburied just like a trail ruin.
     -   `encapsulate` surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
+    -   `none` does nothing.
 
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
 
@@ -299,7 +304,8 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "start_pool": "wiki:lone_fortress_courtyard"
     ```
 
--   `start_jigsaw_name`: (optional) The name of the jigsaw block from a structure in the start pool that should be placed.
+-   `start_jigsaw_name`: (optional) The name field value of the jigsaw block from a structure in the start pool that should be considered the origin point of the structure.
+    The location of the jigsaw block will be the center that `max_distance_from_center` uses as an origin and it will also be the coordinates that `/locate` guides to.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -320,7 +326,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     ]
     ```
 
--   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive.
+-   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive. Defaults to 128.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -328,7 +334,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "max_distance_from_center": 128
     ```
 
--   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. 
+-   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. Defaults to 0.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -456,6 +462,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
         },
         "step": "surface_structures",
         "heightmap_projection": "world_surface",
+        "liquid_settings": "apply_waterlogging"
         "start_height": {
             "type": "constant",
             "value": {
@@ -518,17 +525,21 @@ A file which tells the game how to place structures in a world. Multiple structu
 
 ### Placement
 
-The `placement` parameter of structure sets contains the following rules of placement:
+The `placement` parameter of structure sets contains the following rules of placement, each of which is required:
 
 -   `type`: One value, `minecraft:random_spread`
 -   `salt`: A random 8 number string that works like a world seed. A structure set sharing the same salt, spacing, and separation values will place structures in the same location.
 -   `spacing`: Grid size (in chunks) of where to place structures in the set. They try to spawn once within the box.
 -   `separation`: The padding distance (in chunks) between structures from the set. Must be less than half of the spacing value.
 -   `spread_type`: The algorithm used by the game to decided how to place the structures, either `linear` or `triangle`.
+    -   `linear` is basic randomness.
+    -   `triangle` is more advanced randomness.
 
 ### Structures
 
-The `placement` parameter of structure sets is an array with the identifiers of structures (from the `worldgen/structures` file) and weight for how often they should be picked.
+The `structures` parameter of structure sets is an array with the identifiers of structures (from the `BP/worldgen/structures` folder) and weight for how often they should be picked.
+In this example, the two structures have an equal chance of being picked when the structure set marks a spot for a structure.
+If the structure selected to generate rolls a `minecraft:empty_pool_element` for its starting pool, the structure will fail to generate and the structure set will reroll until a structure is generated.
 
 <CodeHeader>minecraft:structure_set</CodeHeader>
 
@@ -536,6 +547,10 @@ The `placement` parameter of structure sets is an array with the identifiers of 
 "structures": [
     {
         "structure": "wiki:fortress",
+        "weight": 1
+    },
+    {
+        "structure": "wiki:mage_tower",
         "weight": 1
     }
 ]
