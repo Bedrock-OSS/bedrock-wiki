@@ -173,12 +173,14 @@ A rule processor allows for 5 inputs:
 -   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
 -   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
 
-## Generation Configuration
+## Jigsaw Structure Definition
 
-A generation configuration file is a file that tells the game how to generate the structure. It is stored in the worldgen/structures folder.
-It's identifier is used for the `/place` and `/locate` structure commands. It tells the game what template pool it should use to start and how large the structure should be using `max_depth` among other things.
+Jigsaw structure files tell the game how to generate structures that make use of jigsaws.
+They are stored in the `BP/worldgen/structures` folder and each jigsaw structure's identifier is used for the `/place` and `/locate` structure commands.
 
-They are stored in the `structures` subfolder of the `worldgen` folder.
+They tell the game which template pool should be used to start generating the structure and how large the structure should be using `max_depth` among other things.
+
+They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 <CodeHeader>BP/worldgen/structures/lone_fortress.json</CodeHeader>
 
@@ -194,7 +196,7 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
 }
 ```
 
-### Jigsaw Parameters
+### Generation Configuration
 
 -   `step`: Which step of world generation places the structure.
     Contains multiple options, most notable being `underground_structures`, `strongholds`, and `surface_structures`.
