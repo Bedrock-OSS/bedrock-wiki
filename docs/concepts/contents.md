@@ -50,7 +50,7 @@ Each `content` entry can contain two parameters:
     'RP/entity/my_entity.entity.json',
     'RP/texts/en_US.lang',
     'RP/textures/textures_list.json',
-    'RP/textures/blocks/my_block.png'
+    'RP/textures/blocks/my_block.png',
     'RP/contents.json',
     'RP/manifest.json',
 ]" />
