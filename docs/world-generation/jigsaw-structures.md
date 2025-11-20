@@ -56,19 +56,19 @@ It has a target pool and target name which will place a structure with a connect
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws.png"
     alt="Jigsaws that can connect"
-    caption="These two jigsaws can connect because their arrows are both horizontal positioned."
+    caption="These two jigsaws can connect because their arrows are both aligned horizontally."
 />
 
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws2.png"
     alt="Jigsaws that can connect"
-    caption="These two jigsaws can connect because their arrows are both horizontal positioned."
+    caption="These two jigsaws can connect because their arrows are both aligned horizontally."
 />
 
 <WikiImage
     src="/assets/images/world-generation/jigsaw-structures/unconnectable-jigsaws.png"
     alt="Jigsaws that cannot connect"
-    caption="These two jigsaws cannot connect because one is horizontally aligned while the other is vertical aligned."
+    caption="These two jigsaws cannot connect because one is aligned horizontally while the other is aligned vertically."
 />
 
 </CardGrid>
@@ -102,7 +102,7 @@ If a structure has 2+ connecting jigsaws the game will prioritize the connector 
 
 ### Joint Type
 
-Not valid if the jigsaw is facing horizontal, only vertical jigsaws can have this.
+Not valid if the jigsaw is aligned horizontally, only vertical jigsaws can have this.
 
 If the jigsaw is facing up and "rollable" is selected, the piece will select a random rotation to place the jigsaws.
 
@@ -162,14 +162,14 @@ A rule processor allows for 5 inputs:
 -   `input_predicate`: Allows for 4 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked.
 
     -   `minecraft:always_true` is self explanatory.
-    -   `minecraft:block_match` looks for a specific block.
-    -   `minecraft:blockstate_match` looks for a block and a specified block state of that block to replace it with another block or a blockstate.
-    -   `minecraft:random_block_match` looks for a block and picks some of them at random, if you had stone bricks this can be used to randomize it to cracked or mossy versions.
-    -   `minecraft:random_blockstate_match` looks for a block and a specified block state at random to change into another block or a blockstate. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement into upper mossy stonebrick slabs.
+    -   `minecraft:block_match` looks for a specific block type.
+    -   `minecraft:blockstate_match` looks for a block with the specified block state values.
+    -   `minecraft:random_block_match` looks for a specific block and picks some of them at random, if you had stone bricks in your structure this could be used to replace some with cracked or mossy versions.
+    -   `minecraft:random_blockstate_match` looks for a block with the specified block state values and picks some of them at random. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement into upper mossy stonebrick slabs.
     -   `minecraft:tag_match` looks for blocks with a specified tag.
 
 -   `output_state`: The block to replace the input predicate if it is found.
--   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied to the block. This resets the rotation of chests if `append_loot` is used.
+-   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied to the block. This resets the rotation of chests if `append_loot` is used ([MCPE-230078](https://bugs.mojang.com/browse/MCPE-230078)).
 -   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
 -   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
 
@@ -302,7 +302,8 @@ They are stored in the `structures` subfolder of the `worldgen` folder.
     "start_pool": "wiki:lone_fortress_courtyard"
     ```
 
--   `start_jigsaw_name`: (optional) The name in the name fied of the jigsaw block from a structure in the start pool that should be concidered the origin point of the structure. The location of the jigsaw block will be the center that `max_distance_from_center` uses as a origin and it will also be the coordinates that `/locate` guides to
+-   `start_jigsaw_name`: (optional) The name field value of the jigsaw block from a structure in the start pool that should be considered the origin point of the structure.
+    The location of the jigsaw block will be the center that `max_distance_from_center` uses as an origin and it will also be the coordinates that `/locate` guides to.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -522,7 +523,7 @@ A file which tells the game how to place structures in a world. Multiple structu
 
 ### Placement
 
-The `placement` parameter of structure sets contains the following rules of placement. All of them are required:
+The `placement` parameter of structure sets contains the following rules of placement, each of which is required:
 
 -   `type`: One value, `minecraft:random_spread`
 -   `salt`: A random 8 number string that works like a world seed. A structure set sharing the same salt, spacing, and separation values will place structures in the same location.
@@ -534,7 +535,9 @@ The `placement` parameter of structure sets contains the following rules of plac
 
 ### Structures
 
-The `structures` parameter of structure sets is an array with the identifiers of structures (from the `worldgen/structures` folder) and weight for how often they should be picked. The example has the two structures with a equal chance of being picked when the structure set marks a spot for a structure. If the structure selected to generate rolls a `minecraft:empty_pool_element` for it's starting pool the structure will fail to generate and the structure set will reroll until a structure is generated.
+The `structures` parameter of structure sets is an array with the identifiers of structures (from the `BP/worldgen/structures` folder) and weight for how often they should be picked.
+In this example, the two structures have an equal chance of being picked when the structure set marks a spot for a structure.
+If the structure selected to generate rolls a `minecraft:empty_pool_element` for its starting pool, the structure will fail to generate and the structure set will reroll until a structure is generated.
 
 <CodeHeader>minecraft:structure_set</CodeHeader>
 
