@@ -23,7 +23,7 @@ This page is somewhat out-dated, and contains limited information. For the most 
 
 You can change the world's generation via Add-ons. The needed folders in the Behavior pack for these are:
 
-`structures`, `features`, `feature_rules` and `biomes`. It's quite self-explanatory: you can store your .mcstructure files from (or for) structure blocks in `structures`, biome files in `biomes`, terrain features, like ores, in `features` and the rules for their generation in `feature_rules`. Let's go over adding a custom biome first.
+`structures`, `features`, `feature_rules`, `biomes`, and `worldgen`. It's quite self-explanatory: you can store your .mcstructure files from (or for) structure blocks in `structures`, biome files in `biomes`, jigsaw structure files in `worldgen` and it's subfolders, terrain features, like ores, in `features` and the rules for their generation in `feature_rules`. Let's go over adding a custom biome first.
 
 _Note: it might be easier to create biomes using bridge., a Visual software for Add-on creation (also linked in Links and Contact), since the official Documentation is rather incomplete. You can also generate all example files of vanilla biomes, features and feature rules for reference, like shown here:_
 
@@ -332,4 +332,4 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 -   [x] Made your very first ore generate naturally.
 -   [x] Learned to use bridge. for vanilla files generation and referencing.
 -   [x] Learned about other Custom Generation methods.
--   [x] Created custom Structures
+-   [x] Created custom structures
