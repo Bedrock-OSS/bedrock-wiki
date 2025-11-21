@@ -121,7 +121,7 @@ Your custom biome is now complete!
 
 ## Features and Feature Rules
 
-Note: in v.1.15Beta, it is possible to use `.mcstructures` from the `structures` folder instead of `features` to generate custom structures with `feature_rules`. More on that after the update arrives.
+Note: in v.1.15 Beta, it is possible to use `.mcstructures` from the `structures` folder instead of `features` to generate custom structures with `feature_rules`. More on that after the update arrives.
 
 Features and Feature Rules are used to generate everything from ores to grass and flowers, vegetation to granite or clay patches.
 It is even possible to create custom structures using those, but as it is very grindy and will be much easier after the mentioned update, we won't talk about it just yet.
@@ -283,7 +283,7 @@ It's a good idea to proceed checking out other feature and feature_rule vanilla 
 
 ## Custom Structures
 
-As of MCBE v1.16.20, **Custom Generated structures are possible**.
+As of MCBE v1.16.20, **Custom Generated structures are possible** and as of 1.21.50, custom Jigsaw Structures can be created.
 A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](/nbt/mcstructure).
 
 ---
@@ -332,4 +332,4 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 -   [x] Made your very first ore generate naturally.
 -   [x] Learned to use bridge. for vanilla files generation and referencing.
 -   [x] Learned about other Custom Generation methods.
--   [x] Created custom structures
+-   [x] Created custom structures.
