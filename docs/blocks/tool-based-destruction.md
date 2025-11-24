@@ -62,9 +62,9 @@ There are currently 6 item destructible [vanilla block tags](/blocks/block-tags#
 -   Axes: `minecraft:is_axe_item_destructible`
 -   Hoes: `minecraft:is_hoe_item_destructible`
 -   Pickaxes: `minecraft:is_pickaxe_item_destructible`
--   Shears: `minecraft:is_shears_item_destructible`
+-   Shears: ~~`minecraft:is_shears_item_destructible`~~ (not functional, see [MCPE-189586](https://bugs.mojang.com/browse/MCPE-189586))
 -   Shovels: `minecraft:is_shovel_item_destructible`
--   Swords: `minecraft:is_sword_item_destructible`
+-   Swords: ~~`minecraft:is_sword_item_destructible`~~ (not functional, see [MCPE-189586](https://bugs.mojang.com/browse/MCPE-189586))
 
 Applying one of these tags to your block will instruct the relevant tools to mine the block faster.
 
