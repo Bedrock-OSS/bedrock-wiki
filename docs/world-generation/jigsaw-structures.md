@@ -181,7 +181,7 @@ Capped allows for the restriction of how many blocks a rule can apply to a struc
 For example, if you want to limit a rule processor from making half your blackstone structure into gilded blackstone you can apply a capped processor to the give the the rule processor a set number of the gilded blackstone blocks it can place before being forced to use other rules.
 
 A capped processor allows for 2 fields: 
--    `limit`: A positive integer that sets the amount of times the delegate field will be run.
+-    `limit`: A positive integer that sets the amount of times the delegate field will be run. Limit can also be a object and specify a type of `uniform` then a `max_inclusive`, a integer, and then a `min_inclusive`, also a integer. Limit can also specify a type of `constant` and then a `value`, a integer.
 -    `delegate`: A processor that will run the amount of times set in `limit`. It cannot be another `minecraft:capped` processor.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
