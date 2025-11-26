@@ -29,6 +29,13 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:material_instances`
     -   Removed redundant `emissive` instance parameter
 
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:collision_box`
+    -   Can now be defined as an array of multiple boxes.
+
 ## 1.21.120
 
 ### Components
