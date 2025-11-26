@@ -26,6 +26,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:leashable`
     -   Allows leads to be attached to the block like fences.
     -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
+-   Added `minecraft:support`
+    -   Defines the block's ability to support other blocks that are attached to it.
+    -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
 -   Updated `minecraft:material_instances`
     -   Removed redundant `emissive` instance parameter
 
