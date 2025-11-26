@@ -90,7 +90,7 @@ If you have a connecting jigsaw in a tunnel with the name tunnel and have a gene
 
 This field determines the identifier of the block that the jigsaw should turn into when done generating.
 
-Custom blocks are supported but all blocks in that field need their technical identifier found with `/give` or `/fill`.
+Custom blocks are supported but all blocks in that field need their technical identifier found with `/give` or `/fill`. Block states can be specified in this field as well. `minecraft:campfire["extinguished"=true]` is an example.
 
 ### Selection Priority
 
@@ -144,13 +144,66 @@ This element places a structure file and then applies a processor to it. Once th
 
 Processors are lists of blocks and how they can be modified when the structure is placed. They can also apply loot tables to blocks that support them such as chests and suspicous gravel.
 
-Processors support two types, `minecraft:capped` and `minecraft:rule`.
+Processors support four `processor_type`s, `minecraft:capped`, `minecraft:protected_blocks`, `minecraft:block_ignore` and `minecraft:rule`.
+
+### Block Ignore Processors
+
+Block ignore processors allow for a array of blocks that will not be placed in the structure. Cobblestone could be listed in the array and no cobblestone would be placed in pieces using that processor.
+
+A block ignore processor allows for 1 field:
+
+-   `blocks`: A array of block identifiers. Block IDs can be found with `/setblock`.
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+{
+    "processor_type": "minecraft:block_ignore",
+    "blocks": [
+        "minecraft:cobblestone"
+    ]
+}
+```
+
+### Protected Blocks Processor
+
+Protected blocks processors allow for specification of a block tag that will not be overwritten by the structure when generated. The stone block tag could be provided and no blocks with that tag would be replaced by pieces with that processor applied.
+
+A protected block processor allows for 1 field:
+
+-   `value`: A ([block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags)).
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+{
+    "processor_type": "minecraft:protected_blocks",
+    "value": "mob_spawner"
+}
+```
 
 ### Capped Processor
 
 Capped allows for the restriction of how many blocks a rule can apply to a structure.
 
 For example, if you want to limit a rule processor from making half your blackstone structure into gilded blackstone you can apply a capped processor to the give the the rule processor a set number of the gilded blackstone blocks it can place before being forced to use other rules.
+
+A capped processor allows for 2 fields: 
+
+-   `limit`: A positive integer that sets the amount of times the delegate field will be run.
+    Limit can also be a object and specify a type of `uniform` then a `max_inclusive`, a integer, and then a `min_inclusive`, also a integer.
+    Limit can also specify a type of `constant` and then a `value`, a integer.
+-   `delegate`: A processor that will run the amount of times set in `limit`. It cannot be another `minecraft:capped` processor.
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+{
+    "processor_type": "minecraft:capped",
+    "limit": 5,
+    "delegate": {}
+}
+```
 
 ### Rule Processor
 
@@ -159,7 +212,7 @@ It is how the vanilla trail ruins apply loot tables to sus blocks and decay the 
 
 A rule processor allows for 5 inputs:
 
--   `input_predicate`: Allows for 4 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked.
+-   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked.
 
     -   `minecraft:always_true` is self explanatory.
     -   `minecraft:block_match` looks for a specific block type.
@@ -172,6 +225,24 @@ A rule processor allows for 5 inputs:
 -   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied to the block. This resets the rotation of chests if `append_loot` is used ([MCPE-230078](https://bugs.mojang.com/browse/MCPE-230078)).
 -   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
 -   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+{
+    "processor_type": "minecraft:rule",
+    "rules": [
+        {
+            "input_predicate": {
+                "predicate_type": "minecraft:random_block_match",
+                "block": "minecraft:diamond_block",
+                "probability": 0.5
+            },
+            "output_state": "minecraft:gold_block"
+        }
+    ]
+}
+```
 
 ## Jigsaw Structure Definition
 
@@ -189,7 +260,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     "format_version": "1.21.20",
     "minecraft:jigsaw": {
         "description": {
-            "identifier": "wiki:lone_fortress" // Used for "/locate" and "/place"
+            "identifier": "wiki:fortress" // Used for "/locate" and "/place"
         }
         // Other parameters go here
     }
@@ -449,61 +520,6 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
         }
         ```
 
-### Full Example
-
-<CodeHeader>BP/worldgen/structures/fortress.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.21.20",
-    "minecraft:jigsaw": {
-        "description": {
-            "identifier": "wiki:fortress"
-        },
-        "step": "surface_structures",
-        "heightmap_projection": "world_surface",
-        "liquid_settings": "apply_waterlogging"
-        "start_height": {
-            "type": "constant",
-            "value": {
-                "absolute": -15
-            }
-        },
-        "max_depth": 15,
-        "terrain_adaptation": "beard_thin",
-        "start_pool": "wiki:fortress_courtyard",
-        "biome_filters": [
-            {
-                "test": "has_biome_tag",
-                "value": "plains"
-            }
-        ],
-        "max_distance_from_center": 128,
-        "dimension_padding": 10,
-        "pool_aliases": [
-            {
-                "type": "random",
-                "alias": "wiki:spawners",
-                "targets": [
-                    {
-                        "data": "wiki:spawners/zombie",
-                        "weight": 10
-                    },
-                    {
-                        "data": "wiki:spawners/skeleton",
-                        "weight": 8
-                    },
-                    {
-                        "data": "wiki:spawners/vindicator",
-                        "weight": 1
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
-
 ## Structure Sets
 
 A file which tells the game how to place structures in a world. Multiple structures can be put here and the distance of how far apart they are is set here.
@@ -554,4 +570,172 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
         "weight": 1
     }
 ]
+```
+
+## Full Code Examples
+
+### Jigsaw Definition
+
+<CodeHeader>BP/worldgen/structures/fortress.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.21.120",
+    "minecraft:jigsaw": {
+        "description": {
+            "identifier": "wiki:fortress"
+        },
+        "step": "surface_structures",
+        "heightmap_projection": "world_surface",
+        "liquid_settings": "apply_waterlogging",
+        "start_height": {
+            "type": "constant",
+            "value": {
+                "absolute": -15
+            }
+        },
+        "max_depth": 15,
+        "terrain_adaptation": "beard_thin",
+        "start_pool": "wiki:fortress_courtyard",
+        "biome_filters": [
+            {
+                "test": "has_biome_tag",
+                "value": "plains"
+            }
+        ],
+        "max_distance_from_center": 128,
+        "dimension_padding": 10,
+        "pool_aliases": [
+            {
+                "type": "random",
+                "alias": "wiki:spawners",
+                "targets": [
+                    {
+                        "data": "wiki:spawners/zombie",
+                        "weight": 10
+                    },
+                    {
+                        "data": "wiki:spawners/skeleton",
+                        "weight": 8
+                    },
+                    {
+                        "data": "wiki:spawners/vindicator",
+                        "weight": 1
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+### Template Pool
+
+<CodeHeader>BP/worldgen/template_pools/lone_fortress_courtyard.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.21.120",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "wiki:lone_fortress_courtyard"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "wiki/lone/fortress/courtyard_1",
+					"processors": "wiki:fortress_decay",
+					"projection": "rigid"
+				},
+				"weight": 1
+			}
+		]
+	}
+}
+```
+
+### Processor List
+
+<CodeHeader>BP/worldgen/processors/fortress_decay.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.21.120",
+	"minecraft:processor_list": {
+		"description": {
+			"identifier": "wiki:fortress_decay"
+		},
+		"processors": [
+			{
+				"processor_type": "minecraft:protected_blocks",
+				"value": "mob_spawner"
+			},
+			{
+				"processor_type": "minecraft:rule",
+				"rules": [
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:diamond_block",
+							"probability": 0.5
+						},
+						"output_state": "minecraft:gold_block"
+					}
+				]
+			},
+			{
+				"processor_type": "minecraft:block_ignore",
+				"blocks": [
+					"minecraft:barrier"
+				]
+			},
+			{
+				"processor_type": "minecraft:capped",
+				"limit": 5,
+				"delegate": {
+					"processor_type": "minecraft:rule",
+					"rules": [
+						{
+							"input_predicate": {
+								"predicate_type": "minecraft:random_block_match",
+								"block": "diamond_block",
+								"probability": 1
+							},
+							"output_state": "gold_block"
+						}
+					]
+				}
+			}
+		]
+	}
+}
+```
+
+### Structure Set
+
+<CodeHeader>BP/worldgen/structure_sets/fortress.json</CodeHeader>
+
+```json
+{
+	"format_version": "1.21.120",
+	"minecraft:structure_set": {
+		"description": {
+			"identifier": "wiki:fortress"
+		},
+		"placement": {
+			"type": "minecraft:random_spread",
+			"salt": 89673456,
+			"separation": 10,
+			"spacing": 100,
+			"spread_type": "triangular"
+		},
+		"structures": [
+			{
+				"structure": "wiki:fortress",
+				"weight": 1
+			}
+		]
+	}
+}
 ```
