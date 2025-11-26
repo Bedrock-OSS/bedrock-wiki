@@ -151,14 +151,18 @@ Processors support four `processor_type`s, `minecraft:capped`, `minecraft:protec
 Block ignore processors allow for a array of blocks that will not be placed in the structure. Cobblestone could be listed in the array and no cobblestone would be placed in pieces using that processor.
 
 A block ignore processor allows for 1 field:
--    `blocks`: A array of block identifiers. Block ID's can be found with `/setblock`.
+
+-   `blocks`: A array of block identifiers. Block IDs can be found with `/setblock`.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
+
 ```json
+{
     "processor_type": "minecraft:block_ignore",
     "blocks": [
         "minecraft:cobblestone"
     ]
+}
 ```
 
 ### Protected Blocks Processor
@@ -166,7 +170,8 @@ A block ignore processor allows for 1 field:
 Protected blocks processors allow for specification of a block tag that will not be overwritten by the structure when generated. The stone block tag could be provided and no blocks with that tag would be replaced by pieces with that processor applied.
 
 A protected block processor allows for 1 field:
--    `value`: A ([block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags)).
+
+-   `value`: A ([block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags)).
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
@@ -184,8 +189,11 @@ Capped allows for the restriction of how many blocks a rule can apply to a struc
 For example, if you want to limit a rule processor from making half your blackstone structure into gilded blackstone you can apply a capped processor to the give the the rule processor a set number of the gilded blackstone blocks it can place before being forced to use other rules.
 
 A capped processor allows for 2 fields: 
--    `limit`: A positive integer that sets the amount of times the delegate field will be run. Limit can also be a object and specify a type of `uniform` then a `max_inclusive`, a integer, and then a `min_inclusive`, also a integer. Limit can also specify a type of `constant` and then a `value`, a integer.
--    `delegate`: A processor that will run the amount of times set in `limit`. It cannot be another `minecraft:capped` processor.
+
+-   `limit`: A positive integer that sets the amount of times the delegate field will be run.
+    Limit can also be a object and specify a type of `uniform` then a `max_inclusive`, a integer, and then a `min_inclusive`, also a integer.
+    Limit can also specify a type of `constant` and then a `value`, a integer.
+-   `delegate`: A processor that will run the amount of times set in `limit`. It cannot be another `minecraft:capped` processor.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
@@ -567,6 +575,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 ## Full Code Examples
 
 ### Jigsaw Definition
+
 <CodeHeader>BP/worldgen/structures/fortress.json</CodeHeader>
 
 ```json
