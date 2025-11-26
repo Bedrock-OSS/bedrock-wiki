@@ -127,6 +127,10 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 }
 ```
 
+:::tip BLOCK ICONS
+Alternatively, [block placer](/items/item-components#block-placer) items can omit the `minecraft:icon` component to display the item using the block's 3D icon.
+:::
+
 ## Defining Names
 
 Finally, let's define our item's name like this:
