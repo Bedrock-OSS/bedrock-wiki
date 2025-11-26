@@ -24,6 +24,7 @@ mentions:
     - QuazChick
     - 1cce
     - MinecraftBedrockArabic
+    - smell-of-curry
 description: Documentation for JSON UI.
 ---
 
@@ -229,7 +230,7 @@ Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 | clip_pixelperfect           |            boolean             |                 | If the clip should try to be the most pixel accurate possible                                                                                                                                                                                                                              |
 | keep_ratio                  |            boolean             |     `true`      | Keep ratio when resizing image                                                                                                                                                                                                                                                             |
 | bilinear                    |            boolean             |     `false`     | Use the bilinear function when resizing the image                                                                                                                                                                                                                                          |
-| fill                        |            boolean             |     `false`     | Scratch the image to the size                                                                                                                                                                                                                                                              |
+| fill                        |            boolean             |     `false`     | Stretch the image to the size                                                                                                                                                                                                                                                              |
 | $fit_to_width               |            boolean             |                 |                                                                                                                                                                                                                                                                                            |
 | zip_folder                  |             string             |                 |                                                                                                                                                                                                                                                                                            |
 | grayscale                   |            boolean             |     `false`     | Render image in black and white                                                                                                                                                                                                                                                            |
