@@ -90,7 +90,7 @@ If you have a connecting jigsaw in a tunnel with the name tunnel and have a gene
 
 This field determines the identifier of the block that the jigsaw should turn into when done generating.
 
-Custom blocks are supported but all blocks in that field need their technical identifier found with `/give` or `/fill`. Block states can be specified in this field as well. `minecraft:dark_oak_slab[type=top]` is an example.
+Custom blocks are supported but all blocks in that field need their technical identifier found with `/give` or `/fill`. Block states can be specified in this field as well. `minecraft:campfire["extinguished"=true]` is an example.
 
 ### Selection Priority
 
@@ -169,9 +169,12 @@ A protected block processor allows for 1 field:
 -    `value`: A ([block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags)).
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
+
 ```json
+{
     "processor_type": "minecraft:protected_blocks",
     "value": "mob_spawner"
+}
 ```
 
 ### Capped Processor
@@ -185,10 +188,13 @@ A capped processor allows for 2 fields:
 -    `delegate`: A processor that will run the amount of times set in `limit`. It cannot be another `minecraft:capped` processor.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
+
 ```json
+{
     "processor_type": "minecraft:capped",
     "limit": 5,
     "delegate": {}
+}
 ```
 
 ### Rule Processor
@@ -213,7 +219,9 @@ A rule processor allows for 5 inputs:
 -   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
+
 ```json
+{
     "processor_type": "minecraft:rule",
     "rules": [
         {
@@ -225,6 +233,7 @@ A rule processor allows for 5 inputs:
             "output_state": "minecraft:gold_block"
         }
     ]
+}
 ```
 
 ## Jigsaw Structure Definition
