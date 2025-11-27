@@ -626,6 +626,9 @@ Your crop can't only drop seeds! Create a custom food using the template below.
             "minecraft:use_modifiers": {
                 "use_duration": 1.6,
                 "movement_modifier": 0.33
+            },
+            "minecraft:tags": {
+                "tags": ["minecraft:is_food"]
             }
         }
     }
