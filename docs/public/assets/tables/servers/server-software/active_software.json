@@ -54,6 +54,12 @@
       "type": "BDS-based"
     },
     {
+      "name": "[TorchCS](https://github.com/TorchCS-MC)",
+      "description": "TorchCS is a modding project for Minecraft Bedrock. It includes its own server software, a proxy manager, and more.",
+      "languages": "C++, Rust, Java",
+      "type": "BDS-based"
+    },
+    {
       "name": "[Lumi](https://github.com/KoshakMineDev/Lumi)",
       "description": "A Minecraft Bedrock server software with multiversion, custom (items, blocks, enchantments), and better API.",
       "languages": "Java",
