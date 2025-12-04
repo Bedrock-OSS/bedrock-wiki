@@ -7,6 +7,7 @@ mentions:
     - SmokeyStack
     - Ciosciaa
     - rebrainertv
+    - Supernova3695
 tags:
     - easy
 description: Setup loot table for containers in structure.
