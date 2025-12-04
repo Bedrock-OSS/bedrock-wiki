@@ -130,12 +130,12 @@ This element places nothing. If the jigsaw blocks are viewed using debug generat
 
 #### Single Pool Element
 
-This element places a structure file and then applies a processor to it. Once the element is set up then you can apply weight and terrain adaptation to it.
+This element places a structure template and then applies a processor and projection to it. 
 
 -   `projection`: (optional) tells the game how the piece should adapt to the existing the terrain. There are two options:
 
-    -   `minecraft:rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel. This is the default if `projection` is not specified.
-    -   `minecraft:terrain_matching`: Terrain matching tells the game to make all the blocks, including air, to match the level of the ground like village paths.
+    -   `rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel. This is the default if `projection` is not specified.
+    -   `terrain_matching`: Terrain matching tells the game to make all the blocks, including air, to match the level of the ground like village paths. These pieces do not have terrain density from `terrain_adaptation` applied to them.
  
 -   `location`: tells the game where the file to generate is.
 -   `processors`: (optional) the ID of a processor to apply to the piece.
@@ -171,7 +171,7 @@ Protected blocks processors allow for specification of a block tag that will not
 
 A protected block processor allows for 1 field:
 
--   `value`: A ([block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags)).
+-   `value`: A [block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags).
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
@@ -363,7 +363,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
     -   `beard_box` hollows a cavern around the structure like an ancient city.
     -   `beard_thin` places a platform around the base like villages.
-    -   `bury` puts the structure starting piece underground but any part of the structure breaching the surface will be unburied just like a trail ruin.
+    -   `bury` surrounds the structure starting piece in terrain (helpful if the structure is started in the ground with `start_height` but any part of the structure above the start piece will be unburied just like a trail ruin.
     -   `encapsulate` surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
     -   `none` does nothing.
 
@@ -547,9 +547,9 @@ The `placement` parameter of structure sets contains the following rules of plac
 -   `salt`: A random 8 number string that works like a world seed. A structure set sharing the same salt, spacing, and separation values will place structures in the same location.
 -   `spacing`: Grid size (in chunks) of where to place structures in the set. They try to spawn once within the box.
 -   `separation`: The padding distance (in chunks) between structures from the set. Must be less than half of the spacing value.
--   `spread_type`: The algorithm used by the game to decided how to place the structures, either `linear` or `triangle`.
+-   `spread_type`: The algorithm used by the game to decided how to place the structures, either `linear` or `triangular`.
     -   `linear` is basic randomness.
-    -   `triangle` is more advanced randomness.
+    -   `triangular` is more advanced randomness.
 
 ### Structures
 
@@ -591,7 +591,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
         "start_height": {
             "type": "constant",
             "value": {
-                "absolute": -15
+                "absolute": 0
             }
         },
         "max_depth": 15,
