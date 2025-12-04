@@ -119,8 +119,125 @@ Under "Loot Table", enter the path to your loot table. Set "Loot Table Seed" to 
 
 Download your structure file and place it in `BP/structures`.
 
+## Jigsaw Processors
+
+Jigsaw processors for jigsaw structures can set blocks like suspicous sand and chests to have loot. This can be done using a `minecraft:rule` processor with a `block_entity_modifier` rule. The `type` field should be specified to `minecraft:append_loot` with the `loot_table` being set to the path to your loot table. Using that rule in combination with `blockstate_match` predicates will allow for blocks to be given loot tables. 
+
+A processor setting a chest to have loot will set it to the default rotation unless `blockstate_match` is set to match the input chest with the loot table and then output a chest with the loot table and same rotation. 4 rules are needed for all rotations of a chest and 6 for all rotations of barrels.
+
+All of the specified block in the structure template with the processor applied will have the loot. There is no way to have different loot in different chests in the same structure template using processors.
+
+### Example
+
+A example of a suspicius gravel having a loot table applied.
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+"rules": [
+    {
+        "block_entity_modifier": {
+            "type": "minecraft:append_loot",
+            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+        },
+        "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "minecraft:gravel"
+        },
+        "output_state": {
+            "name": "minecraft:suspicious_gravel"
+        }
+    }
+]
+```
+
+A example of a chest having a loot table applied to all rotations.
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+"rules": [
+    {
+        "block_entity_modifier": {
+            "type": "minecraft:append_loot",
+            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+        },
+        "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block": "minecraft:chest",
+            "states": {
+                "minecraft:cardinal_direction": "north"
+            }
+        },
+        "output_state": {
+            "name": "minecraft:chest"
+            "states": {
+                "minecraft:cardinal_direction": "north"
+            }
+        }
+    },
+    {
+        "block_entity_modifier": {
+            "type": "minecraft:append_loot",
+            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+        },
+        "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block": "minecraft:chest",
+            "states": {
+                "minecraft:cardinal_direction": "south"
+            }
+        },
+        "output_state": {
+            "name": "minecraft:chest"
+            "states": {
+                "minecraft:cardinal_direction": "south"
+            }
+        }
+    },
+    {
+        "block_entity_modifier": {
+            "type": "minecraft:append_loot",
+            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+        },
+        "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block": "minecraft:chest",
+            "states": {
+                "minecraft:cardinal_direction": "east"
+            }
+        },
+        "output_state": {
+            "name": "minecraft:chest"
+            "states": {
+                "minecraft:cardinal_direction": "east"
+            }
+        }
+    },
+    {
+        "block_entity_modifier": {
+            "type": "minecraft:append_loot",
+            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+        },
+        "input_predicate": {
+            "predicate_type": "minecraft:blockstate_match",
+            "block": "minecraft:chest",
+            "states": {
+                "minecraft:cardinal_direction": "west"
+            }
+        },
+        "output_state": {
+            "name": "minecraft:chest"
+            "states": {
+                "minecraft:cardinal_direction": "west"
+            }
+        }
+    }
+]
+```
+
 ## Testing
 
-Load your structure and open the container
+Load your structure and open the container. For jigsaws use `/place structure` or `/place jigsaw`. 
 
 ![](/assets/images/tutorials/randomised-structure-loot/test.png)
