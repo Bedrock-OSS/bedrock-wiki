@@ -2062,4 +2062,4 @@ Aux = ID \* 65536
 ID = Aux / 65536
 65536 = Aux / ID
 
-Get all Item IDs [here](https://docs.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonitems).
+Get all Item IDs [here](https://learn.microsoft.com/minecraft/creator/reference/content/vanillalistingsreference/items).
