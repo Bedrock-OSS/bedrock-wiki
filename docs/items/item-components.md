@@ -608,6 +608,66 @@ Type: Boolean/String
 "minecraft:interact_button": true
 ```
 
+### Kinetic Weapon
+
+Causes the item to damage (as well as dismount and apply knockback to) each entity that the player moves towards (or that move towards the player) while the item is being used.
+
+#### Object Definition {#kinetic-weapon-object}
+
+-   `delay`: Integer
+    -   Determines the duration (in ticks) before kinetic damage and effects start to be applied.
+-   `hitbox_margin`: Float
+    -   Determines how close (in blocks) each target's collision needs to be to the player's view direction to be affected by the kinetic attack.
+    -   By default, there is no additional hitbox margin.
+-   `reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the range (in blocks) of how far away entities must be from the player in order to be affected by the kinetic attack.
+    -   By default, entities between 0 and 3 blocks away from the player will be affected by the kinetic attack.
+-   `creative_reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the `reach` applied when the player is in creative mode.
+    -   By default, players in creative mode will be restricted to the normal `reach` range.
+-   `damage_multiplier`: Float
+    -   Determines the base damage of the kinetic attack is multiplied by to obtain a multiplied damage value.
+-   `damage_modifier`: Float
+    -   Added to the multiplied damage value to obtain a final damage value to be inflicted upon each target.
+-   `damage_conditions`: Object
+    -   Lists the conditions that need to be met for damage to be inflicted.
+-   `dismount_conditions`: Object
+    -   Lists the conditions that need to be met for each target to be dismounted from the entity it is riding by the kinetic attack.
+    -   By default, entities are never dismounted.
+-   `knockback_conditions`: Object
+    -   Lists the conditions that need to be met for each target to be receive knockback from the kinetic attack.
+    -   By default, knockback is never applied.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:kinetic_weapon": {
+    "delay": 15,
+    "reach": {
+        "min": 2.0,
+        "max": 4.5
+    },
+    "creative_reach": {
+        "min": 2.0,
+        "max": 7.5
+    },
+    "hitbox_margin": 0.25,
+    "damage_multiplier": 0.7,
+    "damage_conditions": {
+        "max_duration": 300,
+        "min_relative_speed": 4.6
+    },
+    "knockback_conditions": {
+        "max_duration": 120,
+        "min_speed": 5.1
+    },
+    "dismount_conditions": {
+        "max_duration": 100,
+        "min_speed": 14.0
+    }
+}
+```
+
 ### Liquid Clipped
 
 Determines whether an item interacts with liquid blocks on use.
@@ -632,6 +692,42 @@ Type: Integer
 
 ```json
 "minecraft:max_stack_size": 64
+```
+
+### Piercing Weapon
+
+Causes the item to damage all entities in a straight line from the player's view direction when attacking.
+
+-   If there are block collisions between the player and other entities, the damage will be blocked.
+
+-   Prevents the item from being used to mine blocks.
+
+#### Object Definition {#piercing-weapon-object}
+
+-   `hitbox_margin`: Float
+    -   Determines how close (in blocks) each entity's collision needs to be to the player's view direction to receive damage.
+    -   By default, there is no additional hitbox margin.
+-   `reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
+    -   By default, entities between 0 and 3 blocks away from the player will receive damage.
+-   `creative_reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the `reach` applied when the player is in creative mode.
+    -   By default, players in creative mode will be restricted to the normal `reach` range.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:piercing_weapon": {
+    "reach": {
+        "min": 2.0,
+        "max": 4.5
+    },
+    "creative_reach": {
+        "min": 2.0,
+        "max": 7.5
+    },
+    "hitbox_margin": 0.25
+}
 ```
 
 ### Projectile
