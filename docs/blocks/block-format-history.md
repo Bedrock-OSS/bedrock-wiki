@@ -16,9 +16,38 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+:::info <Label color="yellow">Use Beta Features</Label> CHANGES
+The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
+:::
+
 ## 1.21.130
 
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:connection`
+    -   Allows for fence-like connection permutations.
+    -   Can be used to enable the following boolean states by including `"minecraft:cardinal_connections"`{lang=json} in the `enabled_states` array:
+        -   `minecraft:connection_north`
+        -   `minecraft:connection_east`
+        -   `minecraft:connection_south`
+        -   `minecraft:connection_west`
+
+<Tag name="experimental" />
+<Label color="yellow">Beta APIs</Label>
+<Label color="yellow">Use Beta Features</Label>
+
+-   Updated `minecraft:placement_direction`
+    -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value for the `enabled_states` array, which can be used to replicate stair rotation and cornering, enabling the following states:
+        -   `minecraft:cardinal_direction`
+        -   `minecraft:corner`
+    -   Added `blocks_to_corner_with` property which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+
 ### Components
+
+-   Released `minecraft:precipitation_interactions` from experimental
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
@@ -26,6 +55,13 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:leashable`
     -   Allows leads to be attached to the block like fences.
     -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
+-   Added `minecraft:redstone_consumer`
+    -   Allows the block to respond to redstone power via custom components.
+    -   Contains `min_power` which determines the minimum power level (0-15) required to trigger the `onRedstoneUpdate` custom component event hook.
+    -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
+        -   Note that the spelling of this parameter is incorrect (it corrected to `propagates_power` in 1.26.0).
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity).
+            -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
     -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
@@ -38,6 +74,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:collision_box`
     -   Can now be defined as an array of multiple boxes.
+    -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
 
 ## 1.21.120
 

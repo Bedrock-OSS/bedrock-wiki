@@ -751,7 +751,7 @@ Example:
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             // Describing an object with components.

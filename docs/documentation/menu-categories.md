@@ -41,7 +41,7 @@ If `menu_category` is omitted, the item will only be accessible through commands
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:balsa_wood",
@@ -60,7 +60,7 @@ If `menu_category` is omitted, the item will only be accessible through commands
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:dagger",

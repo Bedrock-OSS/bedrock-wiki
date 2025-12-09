@@ -8,8 +8,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.120
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.21.120.
+:::tip FORMAT VERSION 1.21.130
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.21.130.
 :::
 
 ## Applying Components
@@ -20,7 +20,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -131,24 +131,30 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.21.6
 
 ### Cooldown
 
-Cool down time for a component. After use, all items in a specified 'cool down category' become unusable for a determined amount of time defined in the component. Released from experiment in format version 1.20.10.
+Determines how cooldowns are triggered for the item and how long each cooldown should last.
 
-Requires `minecraft:use_modifiers`.
+_Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-Type: Object
+#### Object Definition {#cooldown-object}
 
 -   `category`: String
-    -   The type of cool down for this item.
+    -   The category of cooldown for this item.
+    -   Items with the same category will share cooldowns.
 -   `duration`: Float
     -   The duration of time (in seconds) items with a matching category will spend cooling down before becoming usable again.
     -   If this value is a negative number, it renders the item unusable.
+-   `type`: String (optional)
+    -   Determines which of the following types of input the cooldown affects:
+        -   `"use"`{lang=json} (default) causes the cooldown to start when the item is used and prevents the item from being used while the cooldown is active.
+        -   `"attack"`{lang=json} causes the cooldown to start when the player attacks while holding the item and prevents the item from being used to attack while the cooldown is active.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
 "minecraft:cooldown": {
     "category": "wiki:cooldown",
-    "duration": 0.2
+    "duration": 0.2,
+    "type": "use"
 }
 ```
 
@@ -602,6 +608,66 @@ Type: Boolean/String
 "minecraft:interact_button": true
 ```
 
+### Kinetic Weapon
+
+Causes the item to damage (as well as dismount and apply knockback to) each entity that the player moves towards (or that move towards the player) while the item is being used.
+
+#### Object Definition {#kinetic-weapon-object}
+
+-   `delay`: Integer
+    -   Determines the duration (in ticks) before kinetic damage and effects start to be applied.
+-   `hitbox_margin`: Float
+    -   Determines how close (in blocks) each target's collision needs to be to the player's view direction to be affected by the kinetic attack.
+    -   By default, there is no additional hitbox margin.
+-   `reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the range (in blocks) of how far away entities must be from the player in order to be affected by the kinetic attack.
+    -   By default, entities between 0 and 3 blocks away from the player will be affected by the kinetic attack.
+-   `creative_reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the `reach` applied when the player is in creative mode.
+    -   By default, players in creative mode will be restricted to the normal `reach` range.
+-   `damage_multiplier`: Float
+    -   Determines the base damage of the kinetic attack is multiplied by to obtain a multiplied damage value.
+-   `damage_modifier`: Float
+    -   Added to the multiplied damage value to obtain a final damage value to be inflicted upon each target.
+-   `damage_conditions`: Object
+    -   Lists the conditions that need to be met for damage to be inflicted.
+-   `dismount_conditions`: Object
+    -   Lists the conditions that need to be met for each target to be dismounted from the entity it is riding by the kinetic attack.
+    -   By default, entities are never dismounted.
+-   `knockback_conditions`: Object
+    -   Lists the conditions that need to be met for each target to be receive knockback from the kinetic attack.
+    -   By default, knockback is never applied.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:kinetic_weapon": {
+    "delay": 15,
+    "reach": {
+        "min": 2.0,
+        "max": 4.5
+    },
+    "creative_reach": {
+        "min": 2.0,
+        "max": 7.5
+    },
+    "hitbox_margin": 0.25,
+    "damage_multiplier": 0.7,
+    "damage_conditions": {
+        "max_duration": 300,
+        "min_relative_speed": 4.6
+    },
+    "knockback_conditions": {
+        "max_duration": 120,
+        "min_speed": 5.1
+    },
+    "dismount_conditions": {
+        "max_duration": 100,
+        "min_speed": 14.0
+    }
+}
+```
+
 ### Liquid Clipped
 
 Determines whether an item interacts with liquid blocks on use.
@@ -626,6 +692,42 @@ Type: Integer
 
 ```json
 "minecraft:max_stack_size": 64
+```
+
+### Piercing Weapon
+
+Causes the item to damage all entities in a straight line from the player's view direction when attacking.
+
+-   If there are block collisions between the player and other entities, the damage will be blocked.
+
+-   Prevents the item from being used to mine blocks.
+
+#### Object Definition {#piercing-weapon-object}
+
+-   `hitbox_margin`: Float
+    -   Determines how close (in blocks) each entity's collision needs to be to the player's view direction to receive damage.
+    -   By default, there is no additional hitbox margin.
+-   `reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
+    -   By default, entities between 0 and 3 blocks away from the player will receive damage.
+-   `creative_reach`: Float [Range](/documentation/shared-constructs#range-objects)
+    -   Determines the `reach` applied when the player is in creative mode.
+    -   By default, players in creative mode will be restricted to the normal `reach` range.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:piercing_weapon": {
+    "reach": {
+        "min": 2.0,
+        "max": 4.5
+    },
+    "creative_reach": {
+        "min": 2.0,
+        "max": 7.5
+    },
+    "hitbox_margin": 0.25
+}
 ```
 
 ### Projectile
@@ -909,6 +1011,28 @@ Determines the duration, in seconds, of the player's swing animation when mining
 }
 ```
 
+### Swing Sounds
+
+Determines the vanilla sound events triggered when a player attacks when holding the item.
+
+#### Object Definitions {#swing-sounds-object}
+
+-   `attack_miss`: String (optional)
+    -   Determines the _vanilla_ sound event triggered when no entity is hit or no damage is dealt.
+-   `attack_hit`: String (optional)
+    -   Determines the _vanilla_ sound event triggered when an entity is hit and non-critical damage is dealt.
+-   `attack_critical_hit`: String (optional)
+    -   Determines the _vanilla_ sound event triggered when an entity is hit and critical damage is dealt.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:swing_sounds": {
+    "attack_miss": "item.wooden_spear.attack_miss",
+    "attack_hit": "item.wooden_spear.attack_hit"
+}
+```
+
 ### Tags
 
 The `tags` component determines which tags are attached to an item.
@@ -1002,6 +1126,8 @@ Type: Object
     -   Determines whether the item emits vibrations when it starts and stops being used.
 -   `movement_modifier`: Float (`0.0-1.0`{lang=js}) (optional)
     -   Modifier value to scale the players movement speed when item is in use.
+-   `start_sound`: String (optional)
+    -   Determines the _vanilla_ sound event that is triggered when the item starts to be used.
 -   `use_duration`: Float
     -   How long the item takes to use in seconds.
 

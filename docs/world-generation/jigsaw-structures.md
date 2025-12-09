@@ -130,13 +130,13 @@ This element places nothing. If the jigsaw blocks are viewed using debug generat
 
 #### Single Pool Element
 
-This element places a structure template and then applies a processor and projection to it. 
+This element places a structure template and then applies a processor and projection to it.
 
 -   `projection`: (optional) tells the game how the piece should adapt to the existing the terrain. There are two options:
 
     -   `rigid`: Rigid tells the game to keep the structure as it is, like a stronghold tunnel. This is the default if `projection` is not specified.
     -   `terrain_matching`: Terrain matching tells the game to make all the blocks, including air, to match the level of the ground like village paths. These pieces do not have terrain density from `terrain_adaptation` applied to them.
- 
+
 -   `location`: tells the game where the file to generate is.
 -   `processors`: (optional) the ID of a processor to apply to the piece.
 
@@ -159,9 +159,7 @@ A block ignore processor allows for 1 field:
 ```json
 {
     "processor_type": "minecraft:block_ignore",
-    "blocks": [
-        "minecraft:cobblestone"
-    ]
+    "blocks": ["minecraft:cobblestone"]
 }
 ```
 
@@ -188,7 +186,7 @@ Capped allows for the restriction of how many blocks a rule can apply to a struc
 
 For example, if you want to limit a rule processor from making half your blackstone structure into gilded blackstone you can apply a capped processor to the give the the rule processor a set number of the gilded blackstone blocks it can place before being forced to use other rules.
 
-A capped processor allows for 2 fields: 
+A capped processor allows for 2 fields:
 
 -   `limit`: A positive integer that sets the amount of times the delegate field will be run.
     Limit can also be a object and specify a type of `uniform` then a `max_inclusive`, a integer, and then a `min_inclusive`, also a integer.
@@ -580,7 +578,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:jigsaw": {
         "description": {
             "identifier": "wiki:fortress"
@@ -635,23 +633,23 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-	"format_version": "1.21.120",
-	"minecraft:template_pool": {
-		"description": {
-			"identifier": "wiki:lone_fortress_courtyard"
-		},
-		"elements": [
-			{
-				"element": {
-					"element_type": "minecraft:single_pool_element",
-					"location": "wiki/lone/fortress/courtyard_1",
-					"processors": "wiki:fortress_decay",
-					"projection": "rigid"
-				},
-				"weight": 1
-			}
-		]
-	}
+    "format_version": "1.21.130",
+    "minecraft:template_pool": {
+        "description": {
+            "identifier": "wiki:lone_fortress_courtyard"
+        },
+        "elements": [
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "wiki/lone/fortress/courtyard_1",
+                    "processors": "wiki:fortress_decay",
+                    "projection": "rigid"
+                },
+                "weight": 1
+            }
+        ]
+    }
 }
 ```
 
@@ -661,54 +659,52 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-	"format_version": "1.21.120",
-	"minecraft:processor_list": {
-		"description": {
-			"identifier": "wiki:fortress_decay"
-		},
-		"processors": [
-			{
-				"processor_type": "minecraft:protected_blocks",
-				"value": "mob_spawner"
-			},
-			{
-				"processor_type": "minecraft:rule",
-				"rules": [
-					{
-						"input_predicate": {
-							"predicate_type": "minecraft:random_block_match",
-							"block": "minecraft:diamond_block",
-							"probability": 0.5
-						},
-						"output_state": "minecraft:gold_block"
-					}
-				]
-			},
-			{
-				"processor_type": "minecraft:block_ignore",
-				"blocks": [
-					"minecraft:barrier"
-				]
-			},
-			{
-				"processor_type": "minecraft:capped",
-				"limit": 5,
-				"delegate": {
-					"processor_type": "minecraft:rule",
-					"rules": [
-						{
-							"input_predicate": {
-								"predicate_type": "minecraft:random_block_match",
-								"block": "diamond_block",
-								"probability": 1
-							},
-							"output_state": "gold_block"
-						}
-					]
-				}
-			}
-		]
-	}
+    "format_version": "1.21.130",
+    "minecraft:processor_list": {
+        "description": {
+            "identifier": "wiki:fortress_decay"
+        },
+        "processors": [
+            {
+                "processor_type": "minecraft:protected_blocks",
+                "value": "mob_spawner"
+            },
+            {
+                "processor_type": "minecraft:rule",
+                "rules": [
+                    {
+                        "input_predicate": {
+                            "predicate_type": "minecraft:random_block_match",
+                            "block": "minecraft:diamond_block",
+                            "probability": 0.5
+                        },
+                        "output_state": "minecraft:gold_block"
+                    }
+                ]
+            },
+            {
+                "processor_type": "minecraft:block_ignore",
+                "blocks": ["minecraft:barrier"]
+            },
+            {
+                "processor_type": "minecraft:capped",
+                "limit": 5,
+                "delegate": {
+                    "processor_type": "minecraft:rule",
+                    "rules": [
+                        {
+                            "input_predicate": {
+                                "predicate_type": "minecraft:random_block_match",
+                                "block": "diamond_block",
+                                "probability": 1
+                            },
+                            "output_state": "gold_block"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
 }
 ```
 
@@ -718,24 +714,24 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-	"format_version": "1.21.120",
-	"minecraft:structure_set": {
-		"description": {
-			"identifier": "wiki:fortress"
-		},
-		"placement": {
-			"type": "minecraft:random_spread",
-			"salt": 89673456,
-			"separation": 10,
-			"spacing": 100,
-			"spread_type": "triangular"
-		},
-		"structures": [
-			{
-				"structure": "wiki:fortress",
-				"weight": 1
-			}
-		]
-	}
+    "format_version": "1.21.130",
+    "minecraft:structure_set": {
+        "description": {
+            "identifier": "wiki:fortress"
+        },
+        "placement": {
+            "type": "minecraft:random_spread",
+            "salt": 89673456,
+            "separation": 10,
+            "spacing": 100,
+            "spread_type": "triangular"
+        },
+        "structures": [
+            {
+                "structure": "wiki:fortress",
+                "weight": 1
+            }
+        ]
+    }
 }
 ```

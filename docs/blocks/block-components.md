@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.120
+:::tip FORMAT VERSION 1.21.130
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.120.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.130.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -588,9 +588,9 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 
 **Known Issues:**
 
--   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks. This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
+-   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks.
+    This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
--   Blocks do not render in the Structure Block preview.
 
 #### Object Definition {#material-instances-object}
 
@@ -753,6 +753,27 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
             ]
         }
     ]
+}
+```
+
+### Precipitation Interactions
+
+Determines how the block interacts with precipitation (rain and snow).
+
+_Requires format version [1.21.120](/blocks/block-format-history#_1-21-120) or later._
+
+#### Object Definition {#precipitation-interactions-object}
+
+-   `precipitation_behavior`: String
+    -   `"obstruct_rain_accumulate_snow"`{lang=json} (default) prevents rain from passing through the block, instead causing it to splash on top of it and causes snow layers to build up above the block while it is snowing.
+    -   `"obstruct_rain"`{lang=json} prevents rain from passing through the block, instead causing it to splash on top of it.
+    -   `"none"`{lang=json} allows rain and snow to pass through the block.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:precipitation_interactions": {
+    "precipitation_behavior": "none"
 }
 ```
 

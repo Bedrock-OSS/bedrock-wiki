@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.21.120
+:::tip FORMAT VERSION 1.21.130
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -35,7 +35,7 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:geometry": [
         {
             "description": {
@@ -76,7 +76,7 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glass",

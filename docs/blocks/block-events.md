@@ -22,9 +22,9 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION 1.21.120
+:::tip FORMAT VERSION 1.21.130
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.120.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.130.
 :::
 
 ## Registering Custom Components
@@ -89,6 +89,22 @@ beforeOnPlayerPlace(event) {
     event.face // The block face that was placed onto.
     event.permutationToPlace // The block permutation that will be placed. Can be changed to place a different permutation instead.
     event.player // The player that is placing this block. May be undefined.
+}
+```
+
+### Break
+
+Runs whenever the block is removed from the world, including when replaced via commands.
+
+<CodeHeader>Custom Component</CodeHeader>
+
+```js
+onBreak(event) {
+    event.block // Block impacted by this event. This is the block after it has been broken.
+    event.dimension // Dimension that contains the block.
+    event.blockDestructionSource // The block that broke the block (such as an extended piston). May be undefined.
+    event.brokenBlockPermutation // Permutation of the block before it was broken.
+    event.entitySource // The entity that broke the block. May be undefined.
 }
 ```
 
