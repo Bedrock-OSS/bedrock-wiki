@@ -1008,6 +1008,8 @@ Type: Object
     -   Determines whether the item emits vibrations when it starts and stops being used.
 -   `movement_modifier`: Float (`0.0-1.0`{lang=js}) (optional)
     -   Modifier value to scale the players movement speed when item is in use.
+-   `start_sound`: String (optional)
+    -   Determines the _vanilla_ sound event that is triggered when the item starts to be used.
 -   `use_duration`: Float
     -   How long the item takes to use in seconds.
 
