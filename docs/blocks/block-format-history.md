@@ -36,7 +36,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
         -   `minecraft:connection_west`
 
 <Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
 <Label color="yellow">Beta APIs</Label>
 <Label color="yellow">Use Beta Features</Label>
 
