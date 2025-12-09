@@ -1011,6 +1011,28 @@ Determines the duration, in seconds, of the player's swing animation when mining
 }
 ```
 
+### Swing Sounds
+
+Determines the vanilla sound events triggered when a player attacks when holding the item.
+
+#### Object Definitions {#swing-sounds-object}
+
+-   `attack_miss`: String (optional)
+    -   Determines the _vanilla_ sound event triggered when no entity is hit or no damage is dealt.
+-   `attack_hit`: String (optional)
+    -   Determines the _vanilla_ sound event triggered when an entity is hit and non-critical damage is dealt.
+-   `attack_critical_hit`: String (optional)
+    -   Determines the _vanilla_ sound event triggered when an entity is hit and critical damage is dealt.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:swing_sounds": {
+    "attack_miss": "item.wooden_spear.attack_miss",
+    "attack_hit": "item.wooden_spear.attack_hit"
+}
+```
+
 ### Tags
 
 The `tags` component determines which tags are attached to an item.
