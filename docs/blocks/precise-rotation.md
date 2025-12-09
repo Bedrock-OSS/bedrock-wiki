@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.21.120
+::: tip FORMAT VERSION 1.21.130
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -59,7 +59,7 @@ The following model for a "shell" block can be used as a reference:
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:geometry": [
         {
             "description": {
@@ -187,7 +187,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:shell",
@@ -423,7 +423,7 @@ Your block JSON and script files after the above steps should look similar to th
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:shell",

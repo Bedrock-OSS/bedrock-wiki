@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION 1.21.120
+::: tip FORMAT VERSION 1.21.130
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -25,7 +25,7 @@ This guide will teach you how to create your own blocks resembling Glazed Terrac
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glazed_terracotta",
@@ -96,7 +96,7 @@ This requires two separate bottom faces with different rotations.
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.21.130",
     "minecraft:geometry": [
         {
             "description": {
