@@ -48,6 +48,8 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ### Components
 
+-   Released `minecraft:precipitation_interactions` from experimental
+
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 
