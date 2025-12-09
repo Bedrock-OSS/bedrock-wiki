@@ -131,24 +131,30 @@ _Released from experiment `Upcoming Creator Features` for format versions 1.21.6
 
 ### Cooldown
 
-Cool down time for a component. After use, all items in a specified 'cool down category' become unusable for a determined amount of time defined in the component. Released from experiment in format version 1.20.10.
+Determines how cooldowns are triggered for the item and how long each cooldown should last.
 
-Requires `minecraft:use_modifiers`.
+_Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-Type: Object
+#### Object Definition {#cooldown-object}
 
 -   `category`: String
-    -   The type of cool down for this item.
+    -   The category of cooldown for this item.
+    -   Items with the same category will share cooldowns.
 -   `duration`: Float
     -   The duration of time (in seconds) items with a matching category will spend cooling down before becoming usable again.
     -   If this value is a negative number, it renders the item unusable.
+-   `type`: String (optional)
+    -   Determines which of the following types of input the cooldown affects:
+        -   `"use"`{lang=json} (default) causes the cooldown to start when the item is used and prevents the item from being used while the cooldown is active.
+        -   `"attack"`{lang=json} causes the cooldown to start when the player attacks while holding the item and prevents the item from being used to attack while the cooldown is active.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
 ```json
 "minecraft:cooldown": {
     "category": "wiki:cooldown",
-    "duration": 0.2
+    "duration": 0.2,
+    "type": "use"
 }
 ```
 
