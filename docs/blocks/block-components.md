@@ -756,6 +756,27 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 }
 ```
 
+### Precipitation Interactions
+
+Determines how the block interacts with precipitation (rain and snow).
+
+_Requires format version [1.21.120](/blocks/block-format-history#_1-21-120) or later._
+
+#### Object Definition {#precipitation-interactions-object}
+
+-   `precipitation_behavior`: String
+    -   `"obstruct_rain_accumulate_snow"`{lang=json} (default) prevents rain from passing through the block, instead causing it to splash on top of it and causes snow layers to build up above the block while it is snowing.
+    -   `"obstruct_rain"`{lang=json} prevents rain from passing through the block, instead causing it to splash on top of it.
+    -   `"none"`{lang=json} allows rain and snow to pass through the block.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:precipitation_interactions": {
+    "precipitation_behavior": "none"
+}
+```
+
 ### Random Offset
 
 Causes a random offset to be applied to the block based on its position in the world, affecting the block's collision box, selection box and geometry.
