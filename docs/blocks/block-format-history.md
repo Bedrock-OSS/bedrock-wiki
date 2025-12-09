@@ -16,7 +16,35 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+:::info <Label color="yellow">Use Beta Features</Label> CHANGES
+The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
+:::
+
 ## 1.21.130
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:connection`
+    -   Allows for fence-like connection permutations.
+    -   Can be used to enable the following boolean states by including `"minecraft:cardinal_connections"`{lang=json} in the `enabled_states` array:
+        -   `minecraft:connection_north`
+        -   `minecraft:connection_east`
+        -   `minecraft:connection_south`
+        -   `minecraft:connection_west`
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="yellow">Beta APIs</Label>
+<Label color="yellow">Use Beta Features</Label>
+
+-   Updated `minecraft:placement_direction`
+    -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value for the `enabled_states` array, which can be used to replicate stair rotation and cornering, enabling the following states:
+        -   `minecraft:cardinal_direction`
+        -   `minecraft:corner`
+    -   Added `blocks_to_corner_with` property which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
 
 ### Components
 
