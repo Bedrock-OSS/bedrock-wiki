@@ -55,6 +55,13 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `minecraft:leashable`
     -   Allows leads to be attached to the block like fences.
     -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
+-   Added `minecraft:redstone_consumer`
+    -   Allows the block to respond to redstone power via custom components.
+    -   Contains `min_power` which determines the minimum power level (0-15) required to trigger the `onRedstoneUpdate` custom component event hook.
+    -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
+        -   Note that the spelling of this parameter is incorrect (it corrected to `propagates_power` in 1.26.0).
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity).
+            -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
     -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
