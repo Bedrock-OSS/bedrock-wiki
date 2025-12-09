@@ -74,6 +74,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Updated `minecraft:collision_box`
     -   Can now be defined as an array of multiple boxes.
+    -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
 
 ## 1.21.120
 
