@@ -1,5 +1,6 @@
 ---
 title: Randomized Structure Loot
+description: Learn how to add loot tables to containers in custom structures.
 category: Tutorials
 mentions:
     - MedicalJewel105
@@ -8,14 +9,15 @@ mentions:
     - Ciosciaa
     - rebrainertv
     - Supernova3695
+    - QuazChick
 tags:
     - easy
-description: Setup loot table for containers in structure.
 ---
 
 Adding loot tables to containers in structure is easy, you need to have a PC and your choice of either [NBT Studio](https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe) (executable) or [Loot Tabler](https://mcbe-essentials.github.io/structure-editor/loot-tabler) (browser application).
 
 ## Setup
+
 ### Creating the Loot Table
 
 To start, create the directory `BP/loot_tables/chests` and create your loot table file here.
@@ -122,11 +124,18 @@ Download your structure file and place it in `BP/structures`.
 
 ## Jigsaw Processors
 
-Jigsaw processors for jigsaw structures can set blocks like suspicous sand and chests to have loot. This can be done using a `minecraft:rule` processor with a `block_entity_modifier` rule. The `type` field should be specified to `minecraft:append_loot` with the `loot_table` being set to the path to your loot table. Using that rule in combination with `blockstate_match` predicates will allow for blocks to be given loot tables. 
+[Processors](/world-generation/jigsaw-structures#processors) for jigsaw structures can set blocks like suspicious sand and chests to have loot.
 
-A processor setting a chest to have loot will set it to the default rotation unless `blockstate_match` is set to match the input chest with the loot table and then output a chest with the loot table and same rotation. 4 rules are needed for all rotations of a chest and 6 for all rotations of barrels.
+This can be done using a `minecraft:rule` processor with a `block_entity_modifier` rule.
+The `type` field should be specified to `minecraft:append_loot` with the `loot_table` being set to the path to your loot table.
 
-All of the specified block in the structure template with the processor applied will have the loot. There is no way to have different loot in different chests in the same structure template using processors.
+Using that rule in combination with `blockstate_match` predicates will allow for blocks to be given loot tables. 
+
+A processor setting a chest to have loot will set it to the default rotation unless `blockstate_match` is set to match the input chest with the loot table and then output a chest with the loot table and same rotation.
+A rule is needed for all permutations of the block you want to replace. For example, chests have 4 cardinal directions so 4 rules would be needed.
+
+All of the specified blocks in the structure template with the processor applied will have the loot.
+There is no way to have different loot in different chests in the same structure template using processors.
 
 ### Example
 
