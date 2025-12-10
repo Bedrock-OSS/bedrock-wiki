@@ -14,7 +14,7 @@ tags:
     - easy
 ---
 
-Adding loot tables to containers in structure is easy, you need to have a PC and your choice of either [NBT Studio](https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe) (executable) or [Loot Tabler](https://mcbe-essentials.github.io/structure-editor/loot-tabler) (browser application).
+Adding loot tables to containers in structure is easy, you need to have a PC and your choice of either [NBT Studio](https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe) (executable) or [Loot Tabler](https://mcbe-essentials.github.io/structure-editor/loot-tabler) (browser application). If the wanted loot is in a jigsaw structure a processor can be used.
 
 ## Setup
 
@@ -144,21 +144,24 @@ A example of a suspicius gravel having a loot table applied.
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
 ```json
-"rules": [
-    {
-        "block_entity_modifier": {
-            "type": "minecraft:append_loot",
-            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
-        },
-        "input_predicate": {
-            "predicate_type": "minecraft:block_match",
-            "block": "minecraft:gravel"
-        },
-        "output_state": {
-            "name": "minecraft:suspicious_gravel"
+{
+    "processor_type": "minecraft:rule",
+    "rules": [
+        {
+            "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+            },
+            "input_predicate": {
+                "predicate_type": "minecraft:block_match",
+                "block": "minecraft:suspicious_gravel"
+            },
+            "output_state": {
+                "name": "minecraft:suspicious_gravel"
+            }
         }
-    }
-]
+    ]
+}
 ```
 
 A example of a chest having a loot table applied to all rotations.
@@ -166,84 +169,87 @@ A example of a chest having a loot table applied to all rotations.
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
 ```json
-"rules": [
-    {
-        "block_entity_modifier": {
-            "type": "minecraft:append_loot",
-            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
-        },
-        "input_predicate": {
-            "predicate_type": "minecraft:blockstate_match",
-            "block": "minecraft:chest",
-            "states": {
-                "minecraft:cardinal_direction": "north"
+{
+    "processor_type": "minecraft:rule",
+    "rules": [
+        {
+            "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+            },
+            "input_predicate": {
+                "predicate_type": "minecraft:blockstate_match",
+                "block": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "north"
+                }
+            },
+            "output_state": {
+                "name": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "north"
+                }
             }
         },
-        "output_state": {
-            "name": "minecraft:chest"
-            "states": {
-                "minecraft:cardinal_direction": "north"
+        {
+            "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+            },
+            "input_predicate": {
+                "predicate_type": "minecraft:blockstate_match",
+                "block": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "south"
+                }
+            },
+            "output_state": {
+                "name": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "south"
+                }
+            }
+        },
+        {
+            "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+            },
+            "input_predicate": {
+                "predicate_type": "minecraft:blockstate_match",
+                "block": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "east"
+                }
+            },
+            "output_state": {
+                "name": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "east"
+                }
+            }
+        },
+        {
+            "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
+            },
+            "input_predicate": {
+                "predicate_type": "minecraft:blockstate_match",
+                "block": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "west"
+                }
+            },
+            "output_state": {
+                "name": "minecraft:chest",
+                "states": {
+                    "minecraft:cardinal_direction": "west"
+                }
             }
         }
-    },
-    {
-        "block_entity_modifier": {
-            "type": "minecraft:append_loot",
-            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
-        },
-        "input_predicate": {
-            "predicate_type": "minecraft:blockstate_match",
-            "block": "minecraft:chest",
-            "states": {
-                "minecraft:cardinal_direction": "south"
-            }
-        },
-        "output_state": {
-            "name": "minecraft:chest"
-            "states": {
-                "minecraft:cardinal_direction": "south"
-            }
-        }
-    },
-    {
-        "block_entity_modifier": {
-            "type": "minecraft:append_loot",
-            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
-        },
-        "input_predicate": {
-            "predicate_type": "minecraft:blockstate_match",
-            "block": "minecraft:chest",
-            "states": {
-                "minecraft:cardinal_direction": "east"
-            }
-        },
-        "output_state": {
-            "name": "minecraft:chest"
-            "states": {
-                "minecraft:cardinal_direction": "east"
-            }
-        }
-    },
-    {
-        "block_entity_modifier": {
-            "type": "minecraft:append_loot",
-            "loot_table": "loot_tables/entities/trail_ruins_brushable_block_common.json"
-        },
-        "input_predicate": {
-            "predicate_type": "minecraft:blockstate_match",
-            "block": "minecraft:chest",
-            "states": {
-                "minecraft:cardinal_direction": "west"
-            }
-        },
-        "output_state": {
-            "name": "minecraft:chest"
-            "states": {
-                "minecraft:cardinal_direction": "west"
-            }
-        }
-    }
-]
+    ]
+}
 ```
 
 ## Testing
