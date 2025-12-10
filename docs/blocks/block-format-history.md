@@ -20,6 +20,16 @@ An experiment must be enabled in your world for experimental changes to take eff
 The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
 :::
 
+## 1.26.0
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:redstone_consumer` from experimental
+-   Updated `minecraft:redstone_consumer`
+    -   Renamed `propogates_power` parameter to `propagates_power`
+
 ## 1.21.130
 
 ### Traits
