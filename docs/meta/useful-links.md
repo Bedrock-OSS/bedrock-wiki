@@ -38,9 +38,9 @@ Important links have a ⭐.
 -   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
 -   [Bedrock Protocol](https://discord.gg/G5sBv3TTCE)
 -   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
--   [MCBE Realm Hub](https://discord.gg/mekWvR7kRx)
 -   [MCBE Utilities](https://discord.gg/9S4aKh684W)
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
+-   [Minecraft Realm Hub](https://discord.gg/realmhub)
 -   [Minecraft RTX](http://discord.gg/vNWc3Hh)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 
