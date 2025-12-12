@@ -36,7 +36,7 @@ The following code creates a label element that, when added to the root panel, d
         },
         {
             "binding_type": "view",
-            "source_property_name": "(#player_score_sidebar * 1)",   // convert score from string to number
+            "source_property_name": "(0 + #player_score_sidebar)",   // convert score from string to number
             "target_property_name": "#score"
         },
         {
