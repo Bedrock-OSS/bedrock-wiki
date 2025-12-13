@@ -70,7 +70,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Contains `min_power` which determines the minimum power level (0-15) required to trigger the `onRedstoneUpdate` custom component event hook.
     -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
         -   Note that the spelling of this parameter is incorrect (it is corrected to `propagates_power` in 1.26.0).
-        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity).
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
             -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
