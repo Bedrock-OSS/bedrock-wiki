@@ -27,6 +27,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 <Label color="green">Versioned</Label>
 
 -   Released `minecraft:connection_rule` from experimental
+-   Released `minecraft:support` from experimental
 -   Released `minecraft:redstone_consumer` from experimental
 -   Updated `minecraft:redstone_consumer`
     -   Renamed `propogates_power` parameter to `propagates_power`
