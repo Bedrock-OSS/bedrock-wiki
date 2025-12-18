@@ -26,6 +26,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 <Label color="green">Versioned</Label>
 
+-   Released `minecraft:connection_rule` from experimental
 -   Released `minecraft:redstone_consumer` from experimental
 -   Updated `minecraft:redstone_consumer`
     -   Renamed `propogates_power` parameter to `propagates_power`
@@ -62,6 +63,14 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 
+-   Added `minecraft:connection_rule`
+    -   Determines whether other blocks such as fences and walls can connect to the block.
+    -   Contains `accepts_connection_from` which may be set to one of the following values:
+        -   `"all"`{lang=json} (default) allows any block to connect to the block.
+        -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
+        -   `"none"`{lang=json} prevents all blocks from connecting.
+    -   Contains `enabled_directions` which lists the cardinal directions from which other blocks can connect to the block.
+        -   By default, blocks can connect from any cardinal direction.
 -   Added `minecraft:leashable`
     -   Allows leads to be attached to the block like fences.
     -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
