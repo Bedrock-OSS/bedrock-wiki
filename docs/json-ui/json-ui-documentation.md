@@ -540,7 +540,7 @@ For example,in setting that is accessibility and in inventory,the construction,e
 | end_event            |       string        | `credits_renderer`                            |                                                               |
 | item_id_aux          |       number        | `equipment_preview_renderer`                  | Item id aux of the equipment you want display                 |
 | item_custom_color    |       number        | `equipment_preview_renderer`                  | Dyed Leather Armor Colors ID                                  |
-| armor_trim_material  | enum                | `equipment_preview_renderer`                  | Possible values: <br> `amethyst` <br> `copper` <br> `diamond` <br> `emerald` <br> `gold` <br> `iron` <br> `lapis` <br> `netherite` <br> `quartz` <br> `redstone` |
+| armor_trim_material  | enum                | `equipment_preview_renderer`                  | Possible values: <br> `amethyst` <br> `copper` <br> `diamond` <br> `emerald` <br> `gold` <br> `iron` <br> `lapis` <br> `netherite` <br> `quartz` <br> `redstone` <br> `resin` |
 | armor_trim_pattern   | enum                | `equipment_preview_renderer`                  | Possible values: <br> `coast` <br> `dune` <br> `eye` <br> `host` <br> `raiser` <br> `rib` <br> `sentry` <br> `shaper` <br> `silence` <br> `snout` <br> `spire` <br> `tide` <br> `vex` <br> `ward` <br> `wayfinder` <br> `wild` <br> `bolt` <br> `flow` |
 
 
