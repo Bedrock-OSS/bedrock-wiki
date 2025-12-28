@@ -198,7 +198,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
             name: "wiki:goto",
             description: "Teleport to a specific location.",
             permissionLevel: CommandPermissionLevel.Any, // Allow all players to run the command
-            cheatsRequired: false // Allow the command to be ran without enabling cheats
+            cheatsRequired: false, // Allow the command to be ran without enabling cheats
             mandatoryParameters: [
                 {
                     // Use the enum by setting the name to the enum name
