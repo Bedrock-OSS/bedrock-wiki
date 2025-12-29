@@ -32,7 +32,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 
 ```json
 {
-	"format_version": "1.16.0",
+	"format_version": "1.21.50",
 	"minecraft:entity": {
 		"description": {
 			"identifier": "wiki:dummy",
@@ -41,6 +41,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 			"is_experimental": false
 		},
 		"components": {
+			"minecraft:cannot_be_attacked": {}, //Optional, blocks entities from attacking the owner entity unless they have the "minecraft:ignore_cannot_be_attacked" component.
 			"minecraft:breathable": { //Optional, allows the entity to breath underwater
 				"breathes_water": true
 			},
