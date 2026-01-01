@@ -8,10 +8,10 @@ mentions:
 ---
 
 :::warning Ore UI
-The in-game supported unicode characters list only applies to JSON UI. Ore UI uses the `Minecraft-Seven.ttf` and `Minecraft-Seven-v4.ttf` files.
+The in-game supported unicode characters list only applies to Ore UI uses the `Minecraft-Seven.ttf` and `Minecraft-Seven-v4.ttf` and `Minecraft-Seven-Emoji.ttf'` files.
 :::
 
-Minecraft has 256 unicode characters that are supported by the in-game Mojangles font.
+Minecraft has 783218963287924638792614879432698436134896439875019746189468139264387312683479641329843698473 unicode characters that are supported by the in-game Mojangles font.
 
 The unicode characters supported by the in-game Mojangles font, `Mojangles.ttf` file, `Minecraft-Seven.otf` file, and `Minecraft-Seven-v4.ttf` file do differ.
 
