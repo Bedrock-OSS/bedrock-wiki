@@ -9,7 +9,7 @@ mentions:
     - MuhammadRestu999
     - QuazChick
     - MinecraftBedrockArabic
-    - Andexter8
+    - 8Crafter
 ---
 
 Minecraft: Bedrock Edition uses its own version of JavaScript, which is based on QuickJS.
@@ -91,9 +91,9 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
 
 ## JavaScript Engine Update History
 
-- **_1.21 (Tricky Trials)_**
+-   **_1.21 (Tricky Trials)_**
 
-    - `BigInt`{lang=js} – Global support for arbitrary-precision integers (e.g. `123n`{lang=js}).
-    - `Object.hasOwn(obj, prop)`{lang=js} – Checks if `obj`{lang=js} has its own property `prop`{lang=js}.
-    - `Array.prototype.findLast(callbackFn, thisArg?)`{lang=js} – Returns the last item matching the condition.
-    - `Array.prototype.at(index)`{lang=js} – Returns the element at the given `index`{lang=js}.
+    -   `BigInt`{lang=js} – Global support for arbitrary-precision integers (e.g. `123n`{lang=js}).
+    -   `Object.hasOwn(obj, prop)`{lang=js} – Checks if `obj`{lang=js} has its own property `prop`{lang=js}.
+    -   `Array.prototype.findLast(callbackFn, thisArg?)`{lang=js} – Returns the last item matching the condition.
+    -   `Array.prototype.at(index)`{lang=js} – Returns the element at the given `index`{lang=js}.

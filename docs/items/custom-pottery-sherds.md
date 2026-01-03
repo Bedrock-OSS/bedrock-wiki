@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.21.90`
+:::tip FORMAT VERSION 1.21.130
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) and [item tags](/items/item-tags) before starting!
 :::
@@ -25,7 +25,7 @@ To allow an item to be used to craft a Decorated Pot, we need to apply the `mine
 
 :::warning ITEM NAME
 
-The tooltip that displays the pottery sherds used to craft a Decorated Pot will assume that the item's localization key is in the format `item.<identifier>.name`.
+The tooltip that displays the pottery sherds used to craft a Decorated Pot will assume that the item's localization key is in the format `item.<identifier>.name`{lang=xml}.
 Therefore, you will need to change your item's display name to be in this format.
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
@@ -40,7 +40,7 @@ item.wiki:custom_pottery_sherd.name=Custom Pottery Sherd
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_pottery_sherd",

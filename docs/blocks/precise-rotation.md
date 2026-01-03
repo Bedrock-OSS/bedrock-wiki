@@ -11,7 +11,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.100`
+::: tip FORMAT VERSION 1.21.130
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -44,7 +44,7 @@ There are 4 bones required for precise ground rotation, each with different Y ax
 The bones will likely be duplicates of each other, excluding rotation change.
 
 :::tip
-Keep your bones' pivots set to `[0, 0, 0]` so that their rotation is around the middle of the block.
+Keep your bones' pivots set to `[0, 0, 0]`{lang=json} so that their rotation is around the middle of the block.
 :::
 
 In addition, a `side` bone will be necessary for placement on side faces.
@@ -59,7 +59,7 @@ The following model for a "shell" block can be used as a reference:
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:geometry": [
         {
             "description": {
@@ -187,7 +187,7 @@ Below is the base "shell" block we will be adding advanced rotation to.
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:shell",
@@ -423,7 +423,7 @@ Your block JSON and script files after the above steps should look similar to th
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:shell",

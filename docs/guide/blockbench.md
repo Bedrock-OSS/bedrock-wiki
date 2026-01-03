@@ -91,7 +91,7 @@ You might want to adjust one of the toolbars by adding "Export Animations" and "
 
 Now that our model, texture, and walk animation are complete, you can save your work.
 
-Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
+Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/wiki/entity/` (where `wiki` is replaced by your own namespace) and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
 
 _Meanwhile, why not upgrade the visuals of your own unique entities' or create another one?_
 

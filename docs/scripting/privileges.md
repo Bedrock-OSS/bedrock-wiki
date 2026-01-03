@@ -27,7 +27,7 @@ When the error above occurs, that means you attempted to run a function that tri
 
 ### Escaping Read-Only Mode
 
-The easiest way to resolve this issue is to move code, which contains all native functions that can't be called in read-only mode, and all native properties that can't be edited in read-only mode into a `system.run` callback. Here is an example scnerario where we're trying to modify the state of the world in a before event callback.
+The easiest way to resolve this issue is to move code, which contains all native functions that can't be called in read-only mode, and all native properties that can't be edited in read-only mode into a `system.run` callback. Here is an example scenario where we're trying to modify the state of the world in a before event callback.
 
 The native function `MessageFormData.show()` cannot be called in read-only mode, so the following code will throw a ReferenceError explaining that function does not have required privileges.
 

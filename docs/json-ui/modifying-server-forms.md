@@ -380,7 +380,7 @@ If you've tried this, you might notice it overlaps with the normal modal form. T
           },
           {
             "binding_type": "view",
-            "source_control_name": "((#title_text - 'wiki_form:') = #title_text)", // We need to define the title we added on $title_needs_to_contain
+            "source_property_name": "((#title_text - 'wiki_form:') = #title_text)", // We need to define the title we added on $title_needs_to_contain
             // By the way, you can also put the title of your forms as much as you want like this -> (#title_text - 'form_1' - 'form_2' - 'form_3')
             "target_property_name": "#visible"
           }

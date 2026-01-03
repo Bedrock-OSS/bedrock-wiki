@@ -16,6 +16,113 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+:::info <Label color="yellow">Use Beta Features</Label> CHANGES
+The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
+:::
+
+## 1.26.0
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:connection_rule` from experimental
+-   Released `minecraft:leashable` from experimental
+-   Released `minecraft:support` from experimental
+-   Released `minecraft:redstone_consumer` from experimental
+-   Updated `minecraft:redstone_consumer`
+    -   Renamed `propogates_power` parameter to `propagates_power`
+
+## 1.21.130
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:connection`
+    -   Allows for fence-like connection permutations.
+    -   Can be used to enable the following boolean states by including `"minecraft:cardinal_connections"`{lang=json} in the `enabled_states` array:
+        -   `minecraft:connection_north`
+        -   `minecraft:connection_east`
+        -   `minecraft:connection_south`
+        -   `minecraft:connection_west`
+
+<Tag name="experimental" />
+<Label color="yellow">Beta APIs</Label>
+<Label color="yellow">Use Beta Features</Label>
+
+-   Updated `minecraft:placement_direction`
+    -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value for the `enabled_states` array, which can be used to replicate stair rotation and cornering, enabling the following states:
+        -   `minecraft:cardinal_direction`
+        -   `minecraft:corner`
+    -   Added `blocks_to_corner_with` property which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+
+### Components
+
+-   Released `minecraft:precipitation_interactions` from experimental
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:connection_rule`
+    -   Determines whether other blocks such as fences and walls can connect to the block.
+    -   Contains `accepts_connection_from` which may be set to one of the following values:
+        -   `"all"`{lang=json} (default) allows any block to connect to the block.
+        -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
+        -   `"none"`{lang=json} prevents all blocks from connecting.
+    -   Contains `enabled_directions` which lists the cardinal directions from which other blocks can connect to the block.
+        -   By default, blocks can connect from any cardinal direction.
+-   Added `minecraft:leashable`
+    -   Allows leads to be attached to the block like fences.
+    -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
+-   Added `minecraft:redstone_consumer`
+    -   Allows the block to respond to redstone power via custom components.
+    -   Contains `min_power` which determines the minimum power level (0-15) required to trigger the `onRedstoneUpdate` custom component event hook.
+    -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
+        -   Note that the spelling of this parameter is incorrect (it is corrected to `propagates_power` in 1.26.0).
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
+            -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+-   Added `minecraft:support`
+    -   Defines the block's ability to support other blocks that are attached to it.
+    -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
+-   Updated `minecraft:material_instances`
+    -   Removed redundant `emissive` instance parameter
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:collision_box`
+    -   Can now be defined as an array of multiple boxes.
+    -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
+
+## 1.21.120
+
+### Components
+
+-   Released `minecraft:embedded_visual` from experimental
+-   Released `minecraft:flower_pottable` from experimental
+-   Released `minecraft:redstone_producer` from experimental
+-   Updated `minecraft:material_instances`
+    -   Released [texture variation](/blocks/block-texture-variation) support for `texture` instance parameter from experimental.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Added `minecraft:precipitation_interactions`
+    -   Determines how this block interacts with precipitation (rain and snow).
+    -   Contains `precipitation_behavior` which can be one of the following values:
+        -   `obstruct_rain_accumulate_snow` (default) prevents rain from passing through the block, instead splashing on top of it and causes snow layers to build up above the block if it is snowing.
+        -   `obstruct_rain` prevents rain from passing through the block, instead splashing on top of it.
+        -   `none` allows rain and snow to pass through the block.
+-   Updated `minecraft:material_instances`
+    -   Added `alpha_masked_tint` instance parameter which determines whether the intensity of the tint applied by [tint methods](/blocks/block-tinting#tint-methods) should be based on the alpha channel of the texture.
+        -   This requires a `tint_method` to be specified (that is not `none`) as well as a `render_method` of `opaque`.
+    -   Added `emissive` instance parameter which determines whether faces using the material instance should have no shading (disabling face dimming and ambient occlusion).
+        -   Note that this parameter does not cause faces to be displayed at full brightness at all times.
+
 ## 1.21.110
 
 ### Components
@@ -38,7 +145,7 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Contains `strongly_powered_face` which determines the direction where strong power is produced.
         -   If strong power is received by a [redstone conductor](/blocks/block-components#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
         -   By default, no face is strongly powered.
-    -   Contains `tranform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
+    -   Contains `transform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
         -   By default, faces are not transform-relative.
 
 <Tag name="experimental" />

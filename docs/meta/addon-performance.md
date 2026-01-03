@@ -1,12 +1,12 @@
 ---
 title: Add-On Performance
+description: Learn how to optimize your add-on.
 mentions:
     - SirLich
     - Joelant05
     - MedicalJewel105
     - TheItsNameless
     - SmokeyStack
-description: Learn how to optimize your add-on.
 ---
 
 ::: warning
@@ -31,16 +31,16 @@ This guide is a non-exhaustive list of specific performance considerations separ
 -   Hundreds of iterations per chunk of a multi-block feature have been achieved at a low-performance cost.
 -   Thousands of iterations per chunk of multi-block features negatively impact gameplay.
 -   Hundreds of thousands of iterations per chunk of a single-block feature have been achieved at a low-performance cost.
--   Thousands of instances of features *per chunk* comes at little cost.
--   Tens of thousands of feature instances *per chunk* yields a noticeable impact on chunk loading.
--   Hundreds of thousands of instances of features *per chunk* slows chunk loading to an unbearable crawl.
+-   Thousands of instances of features _per chunk_ comes at little cost.
+-   Tens of thousands of feature instances _per chunk_ yields a noticeable impact on chunk loading.
+-   Hundreds of thousands of instances of features _per chunk_ slows chunk loading to an unbearable crawl.
 
 ## Blocks
 
 ### Materials
 
 -   The minimum needed material type with regards to rendering should always be utilized
-> `alpha_blend` performance is worse than `alpha_test`, which is worse than `opaque`
+    > `alpha_blend` performance is worse than `alpha_test`, which is worse than `opaque`
 
 ### Quantity and Type
 
@@ -55,9 +55,9 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Quantity and Type
 
 -   Minimize the number of commands run per tick
-> `/effect` and `/gamemode` run every tick are avoidable and have a significant performance impact
+    > `/effect` and `/gamemode` run every tick are avoidable and have a significant performance impact
 -   Large clones, fills and structure loads during runtime should be avoided
-> Breaking these more extensive operations into multiple commands distributed over multiple ticks will avoid lag spikes, consider using structure loading animations
+    > Breaking these more extensive operations into multiple commands distributed over multiple ticks will avoid lag spikes, consider using structure loading animations
 
 ### Selectors
 
@@ -78,7 +78,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 -   Pathfinding on flying mobs has a significant performance cost
 -   Flying mobs in general encounter performance problems
-> Faking flying mobs via animation should be considered if possible
+    > Faking flying mobs via animation should be considered if possible
 
 ### Dummy Entities
 
@@ -102,20 +102,20 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Quantity
 
 -   Loaded entities at any given time should be minimized
-> Below 30 is optimal
+    > Below 30 is optimal
 
 ## Lighting
 
 ### Map Considerations
 
 -   Hollow areas will cause lag due to lighting calculations even if you don't see them
-> Avoid this by filling in unused enclosed areas
+    > Avoid this by filling in unused enclosed areas
 -   Keeping the map set to day or night will avoid lighting recalculation
 
 ### Sources
 
 -   Bedrock lighting is calculated dynamically, meaning different light sources have different performance costs
-> Light blocks are the most performant because they lack particles, rendering, and particular state logic
+    > Light blocks are the most performant because they lack particles, rendering, and particular state logic
 
 > Torches are a minor performance issue because they emit particles, render, and have particular state logic dependent on what block they connect to
 
@@ -124,7 +124,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 #### Comparison Table
 
 |     Light Source | Score | Redstone Updates | Animted Texture | Light Updates | Tick Updates | Particles | Renders |
-|-----------------:|:-----:|:----------------:|:---------------:|:-------------:|:------------:|:---------:|:-------:|
+| ---------------: | :---: | :--------------: | :-------------: | :-----------: | :----------: | :-------: | :-----: |
 |     Light Blocks |   1   |      False       |      False      |     True      |    False     |   False   |  False  |
 |         Lanterns |   4   |      False       |      True       |     True      |     True     |   False   |  True   |
 |    Custom Blocks |   2   |      False       |      False      |     True      |    False     |   False   |  True   |
@@ -154,29 +154,29 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 ## Textures
 
-### texture_list.json
+### Textures List
 
--   Tons of textures badly affect game performance. Create a [`texture_list.json`](/concepts/textures-list) file.
+-   Tons of textures badly affect game performance. Create a [`textures_list.json`](/concepts/textures-list) file.
 
 ### Quantity
 
--   No more than 3000 textures should be used
-> This is due to limits imposed by Render Dragon
+-   No more than 3000 textures should be used.
+    This is due to limits imposed by Render Dragon
 
 > Render Dragon has a 4096 texture quantity limit, and there are 800 vanilla textures as of 1.16
 
 ### Resolution
 
--   The maximum texture resolution is 16384x16384
--   The recommended maximum texture resolution is 4096x4096 to maintain compatibility with low-end devices
--   Keep in mind that textures are atlased, and larger textures can mess with atlas generation on lower-end devices
+-   The maximum texture resolution is 16384×16384
+-   The recommended maximum texture resolution is 4096×4096 to maintain compatibility with low-end devices
+-   Keep in mind that block and item textures are [atlased](/concepts/texture-atlases), and larger textures can mess with atlas generation on lower-end devices
 -   Only make textures as significant as needed to convey the detail needed at the needed distance
 
 ## Trades
 
 Villager trades cause performance issues and even crashes on all devices at 60 trades or greater. Avoid tons of trades for one entity.
 Your best bet to resolve this issue is to split your trades in half and move them to another villager or custom entity/npc, 30 trades is a good safe number from testing.
-*probably JSON UI issues*
+_probably JSON UI issues_
 
 ## Sounds
 
@@ -189,11 +189,11 @@ Your best bet to resolve this issue is to split your trades in half and move the
 -   Sound compression is exceptionally beneficial to pack size
 -   This is especially noticeable on older and low power devices, such as the Switch
 -   The FMod simple API utilized by Bedrock decompresses all sounds into WAV before loading into RAM, meaning no CPU performance improvement in this respect
-> If audio is streamed, this does not occur
+    -   If audio is streamed, this does not occur
 
 ### Streaming
 
--   As general guidance, sounds over 500kb in size or 1 minute in length should be streamed
+-   As general guidance, sounds over 500kB in size or 1 minute in length should be streamed
 
 ## Redstone
 
@@ -211,7 +211,7 @@ Your best bet to resolve this issue is to split your trades in half and move the
 -   Total chunks are of more significant concern than ticking areas
 -   Dynamic areas should be avoided unless necessary
 -   Best practice is to minimizing the ticking area to one chunk if possible
-> All always-on Redstone should fit in this ticking chunk
+    -   All always-on Redstone should fit in this ticking chunk
 -   Unload ticking areas when they are no longer needed, testing via /testforblock
 
 ## Files

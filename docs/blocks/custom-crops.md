@@ -14,7 +14,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
+:::tip FORMAT VERSION 1.21.130
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -27,11 +27,10 @@ Making crops is not as difficult as you may think, it just takes a little practi
 
 -   Custom crops cannot be destroyed by flowing lava.
 -   Custom crops become dark when surrounded by full blocks.
--   Growth rate cannot be impacted by light level ([see feedback post](https://discord.com/channels/1138536747932864532/1231369171577602179)).
 
 ## Crop Model
 
-If you look at crops like carrots and potatoes in-game, you will see that they are made up of 4 planes that are situated 4 pixels from each edge, as shown in the screenshot below. The visible faces point inwards in order to prevent shadows on the crop when surrounded by other blocks.
+If you look at crops like carrots and potatoes in-game, you will see that they are made up of 4 planes that are situated 4 pixels from each edge, as shown in the screenshot below.
 
 It is noteworthy to mention that each plane sits 1 pixel down, unlike traditional blocks. If you forget to lower the planes down by one, then the crops will appear to grow one pixel higher then the top of farmland which has a shorter model.
 
@@ -53,7 +52,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -127,6 +126,11 @@ const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockGrowableComponent = {
     onRandomTick({ block }, { params }) {
+        const minLightLevel = params.min_light_level;
+
+        const lightLevel = block.getLightLevel();
+        if (lightLevel < minLightLevel) return;
+
         const growthState = params.growth_state;
         const growthChance = params.growth_chance / 100;
 
@@ -145,7 +149,9 @@ const BlockGrowableComponent = {
         if (!equippable) return;
 
         const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
-        if (!mainhand.hasItem() || mainhand.typeId !== "minecraft:bone_meal") return;
+        const hasBoneMeal = mainhand.hasItem() && mainhand.typeId === "minecraft:bone_meal";
+
+        if (!hasBoneMeal) return;
 
         if (player.getGameMode() === GameMode.Creative) {
             // Grow crop fully
@@ -180,7 +186,7 @@ So we know how to set our block states, what happens when our block is on a part
 
 The permutations below set a certain selection box, loot table and texture to the block based its `wiki:growth` value.
 
-For example, if `wiki:growth` is 7, the texture is set to `custom_crop_3` and the crop is able to drop food.
+For example, if `wiki:growth` is `7`{lang=json}, the texture is set to `custom_crop_3` and the crop is able to drop food.
 
 <CodeHeader>minecraft:block</CodeHeader>
 
@@ -195,6 +201,7 @@ For example, if `wiki:growth` is 7, the texture is set to `custom_crop_3` and th
             "wiki:growable": {
                 "growth_state": "wiki:growth",
                 "growth_chance": 50, // 50% chance to grow on each random tick
+                "min_light_level": 9, // Minimum light level needed to grow on random ticks
                 "max_growth": 7
             }
         }
@@ -322,7 +329,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -380,6 +387,7 @@ Here is the entire `wiki:custom_crop` file for reference.
                     "wiki:growable": {
                         "growth_state": "wiki:growth",
                         "growth_chance": 50, // 50% chance to grow on each random tick
+                        "min_light_level": 9, // Minimum light level needed to grow on random ticks
                         "max_growth": 7
                     }
                 }
@@ -572,7 +580,7 @@ Holding a crop block in your hand wouldn't look right, so we place the crop with
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID.
@@ -599,7 +607,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food", // Make sure this is different from your crop and seeds' ID.
@@ -618,6 +626,9 @@ Your crop can't only drop seeds! Create a custom food using the template below.
             "minecraft:use_modifiers": {
                 "use_duration": 1.6,
                 "movement_modifier": 0.33
+            },
+            "minecraft:tags": {
+                "tags": ["minecraft:is_food"]
             }
         }
     }

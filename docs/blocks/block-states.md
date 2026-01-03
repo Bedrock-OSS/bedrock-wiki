@@ -9,8 +9,8 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.100`
-When working with block states, ensure that the `min_engine_version` in your pack manifest is `1.20.20` or higher.
+:::tip FORMAT VERSION 1.21.130
+When working with block states, ensure that the `min_engine_version` in your pack manifest is 1.20.20 or higher.
 :::
 
 Block states allow your blocks to have variants, each with its own functionality and appearance through use of [permutations](/blocks/block-permutations).
@@ -27,7 +27,7 @@ _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or lat
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -52,7 +52,7 @@ Listed below are ways to get the current value of block states in different cont
 
 ### Molang Query Function
 
-State values are returned by the `block_state` query function.
+State values are returned by the `q.block_state()`{lang=molang} query function.
 
 <CodeHeader>Molang Expression</CodeHeader>
 
@@ -72,7 +72,7 @@ execute if block ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki
 
 ### Script API
 
-The [`BlockPermutation.getState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method allows you to get the current value of different states.
+The [`BlockPermutation.getState()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method allows you to get the current value of different states.
 
 <CodeHeader>Script</CodeHeader>
 
@@ -94,7 +94,7 @@ setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer
 
 ### Script API
 
-The [`BlockPermutation.withState()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method returns a new block permutation with the specified state value changed. This permutation can be applied to the block using the [`Block.setPermutation()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/block#setpermutation) method, as seen below.
+The [`BlockPermutation.withState()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method returns a new block permutation with the specified state value changed. This permutation can be applied to the block using the [`Block.setPermutation()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/block#setpermutation) method, as seen below.
 
 <CodeHeader>Script</CodeHeader>
 

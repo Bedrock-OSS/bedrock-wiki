@@ -22,9 +22,9 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION `1.21.100`
+:::tip FORMAT VERSION 1.21.130
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version `1.21.100`.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.130.
 :::
 
 ## Registering Custom Components
@@ -92,12 +92,28 @@ beforeOnPlayerPlace(event) {
 }
 ```
 
+### Break
+
+Runs whenever the block is removed from the world, including when replaced via commands.
+
+<CodeHeader>Custom Component</CodeHeader>
+
+```js
+onBreak(event) {
+    event.block // Block impacted by this event. This is the block after it has been broken.
+    event.dimension // Dimension that contains the block.
+    event.blockDestructionSource // The block that broke the block (such as an extended piston). May be undefined.
+    event.brokenBlockPermutation // Permutation of the block before it was broken.
+    event.entitySource // The entity that broke the block. May be undefined.
+}
+```
+
 ### Entity Fall On
 
 :::tip DEPENDENCIES
 The entity fall on event requires the [`minecraft:entity_fall_on`](/blocks/block-components#entity-fall-on) component to be active on your block to trigger.
 
-The entity fall on event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
+The entity fall on event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be taller than `3.2`{lang=json} pixels on the Y-axis in order to trigger.
 :::
 
 Runs when an entity falls on the block.
@@ -152,6 +168,10 @@ onPlayerBreak(event) {
 
 ### Player Interact
 
+:::danger EMPTY BUCKETS
+The `onPlayerInteract` hook is not called when the player interacts with the block using an empty bucket.
+:::
+
 Runs when the player interacts with / uses the block.
 
 <CodeHeader>Custom Component</CodeHeader>
@@ -182,7 +202,7 @@ onRandomTick(event) {
 ### Step Off
 
 :::tip DEPENDENCY
-The step off event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
+The step off event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be taller than `3.2`{lang=json} pixels on the Y-axis in order to trigger.
 :::
 
 Runs when an entity steps off the block.
@@ -200,7 +220,7 @@ onStepOff(event) {
 ### Step On
 
 :::tip DEPENDENCY
-The step on event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be 4 or higher on the Y-axis in order to trigger.
+The step on event requires the [`minecraft:collision_box`](/blocks/block-components#collision-box) component to be taller than `3.2`{lang=json} pixels on the Y-axis in order to trigger.
 :::
 
 Runs when an entity steps onto the block.

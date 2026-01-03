@@ -32,7 +32,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:flipbook_block",
@@ -98,22 +98,22 @@ After making block have animated texture, it is time to figure out how it all wo
 
 While looking up for something in vanilla flipbook texture file, you may notice some additional parameters:
 
-| Component          | Type             | Description                                                                                                 |
-| ------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| flipbook_texture   | string           | Path to texture.                                                                                            |
-| atlas_tile         | string           | The shortname defined in the `terrain_texture.json` file.                                                   |
-| atlas_index        | integer          | The index of the texture array inside the definition of that shortname.                                     |
-| atlas_tile_variant | integer          | The variant of the block's texture array inside the shortname's block variation.                            |
-| ticks_per_frame    | integer          | How fast frames should be changed. 20 ticks = 1 second.                                                     |
-| frames             | array or integer | List with frame index to use on each frame, or the total number of frames to be repeated one after another. |
-| replicate          | integer          | Sets the size of pixels. Default: 1.                                                                        |
-| blend_frames       | boolean          | Defines should frames transition be smooth or not. Default: true.                                           |
+| Component            | Type            | Description                                                                                                 |
+| -------------------- | --------------- | ----------------------------------------------------------------------------------------------------------- |
+| `flipbook_texture`   | String          | Path to texture.                                                                                            |
+| `atlas_tile`         | String          | The shortname defined in the `terrain_texture.json` file.                                                   |
+| `atlas_index`        | Integer         | The index of the texture array inside the definition of that shortname.                                     |
+| `atlas_tile_variant` | Integer         | The variant of the block's texture array inside the shortname's block variation.                            |
+| `ticks_per_frame`    | Integer         | How fast frames should be changed. 20 ticks = 1 second.                                                     |
+| `frames`             | Array / Integer | List with frame index to use on each frame, or the total number of frames to be repeated one after another. |
+| `replicate`          | Integer         | Sets the size of pixels. Default: `1`{lang=json}                                                            |
+| `blend_frames`       | Boolean         | Defines should frames transition be smooth or not. Default: `true`{lang=json}                               |
 
-### `atlas_index`
+### Atlas Index
 
 A component where you'll define the block texture index to animate.
 
-<CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
+<CodeHeader>RP/textures/terrain_texture.json > texture_data</CodeHeader>
 
 ```json
 "dirt": {
@@ -124,13 +124,13 @@ A component where you'll define the block texture index to animate.
 }
 ```
 
-Since path 2 has an animated texture, therefore you'll put `"atlas_index": 1` on the Dirt block's flipbook texture.
+Since path 2 has an animated texture, therefore you'll put `"atlas_index": 1`{lang=json} on the Dirt block's flipbook texture.
 
-### `atlas_tile_variant`
+### Atlas Tile Variant
 
 A component where you'll define the block variant (which is registered to the `variations` array) to animate.
 
-<CodeHeader>RP/textures/terrain_texture.json#texture_data</CodeHeader>
+<CodeHeader>RP/textures/terrain_texture.json > texture_data</CodeHeader>
 
 ```json
 "dirt": {
@@ -146,18 +146,18 @@ A component where you'll define the block variant (which is registered to the `v
 }
 ```
 
-Now let's say we wanted path 1 to be animated, now what you'll do here is to put `"atlas_tile_variant": 1` on the Dirt block's flipbook texture.
+Now let's say we wanted the first path to be animated, now what you'll do here is to put `"atlas_tile_variant": 0`{lang=json} on the Dirt block's flipbook texture.
 
-### `replicate`
+### Replicate
 
 Changes size of the peace of used texture. Can only take values that are multiples of two. If frame has smaller amount of pixels, extends them.
 
-| `replicate` value | what it does                              |
-| ----------------- | ----------------------------------------- |
-| < 0               | Breaks animation                          |
-| 0                 | Breaks animation & texture                |
-| 2                 | Renders 1 / 4 pixels of frame             |
-| x                 | Renders 1 / x<sup>2</sup> pixels of frame |
+| Value | Functionality                     |
+| ----- | --------------------------------- |
+| < 0   | Breaks animation                  |
+| 0     | Breaks animation & texture        |
+| 2     | Renders 1 / 4 pixels of frame     |
+| $n$   | Renders 1 / $n^2$ pixels of frame |
 
 ## Result
 

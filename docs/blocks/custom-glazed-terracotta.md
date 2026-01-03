@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT & MIN ENGINE VERSION `1.21.100`
+::: tip FORMAT VERSION 1.21.130
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -25,16 +25,23 @@ This guide will teach you how to create your own blocks resembling Glazed Terrac
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glazed_terracotta",
             "menu_category": {
                 "category": "construction",
                 "group": "minecraft:itemGroup.name.glazedTerracotta"
+            },
+            "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"],
+                    "y_rotation_offset": 180
+                }
             }
         },
         "components": {
+            "minecraft:light_dampening": 15,
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wiki:custom_glazed_terracotta"
@@ -89,7 +96,7 @@ This requires two separate bottom faces with different rotations.
 
 ```json
 {
-    "format_version": "1.21.100",
+    "format_version": "1.21.130",
     "minecraft:geometry": [
         {
             "description": {

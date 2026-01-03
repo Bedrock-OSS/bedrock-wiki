@@ -34,7 +34,7 @@ Like other modules, you will need to add the dependency into your `manifest.json
     "dependencies": [
         {
             "module_name": "@minecraft/server-ui",
-            "version": "1.2.0-beta"
+            "version": "2.0.0"
         },
         {
             "module_name": "@minecraft/server",
@@ -249,13 +249,12 @@ form.slider("Slider", 0, 10, 2, 10);
 Toggle is a property that only has a true/false option. It has 2 arguments.
 
 1. Label (`Str`), the title for the toggle.
-2. Default Value (`Bool`), the default boolean value of the toggle. Default is `false`.
+2. Optional toggleOptions (`Dict`), which allows setting default value and tooltip
 
 ```js
-// Without default value
-form.toggle("Toggle");
-// With default value
-form.toggle("Toggle", true);
+form.toggle("Toggle", {
+   defaultValue: true
+});
 ```
 
 #### Example
@@ -268,8 +267,12 @@ let effectList = ["Regeneration", "Protection", "Poison", "Wither"];
 form.title("Effect Generator");
 form.textField("Target", "Target of Effect");
 form.dropdown("Effect Type", effectList);
-form.slider("Effect Level", 0, 255, 1);
-form.toggle("Hide Effect Particle", true);
+form.slider("Effect Level", 0, 255, {
+    defaultValue: 1
+});
+form.toggle("Hide Effect Particle", {
+    defaultValue: true
+});
 ```
 
 ![image](/assets/images/gametest/gametest-form/modal-form.png)

@@ -13,11 +13,12 @@ mentions:
     - QuazChick
 ---
 
-:::warning MATERIAL INSTANCES
-The [material instances](/blocks/block-components#material-instances) component does not support texture variation. To apply variated textures, you must not have the [geometry](/blocks/block-components#geometry) component applied to your block and textures must be referenced in `RP/blocks.json` instead.
+:::tip FORMAT VERSION 1.21.130
+When using texture variation with the [material instances](/blocks/block-components#material-instances) component, ensure that the `format_version` of your block JSON is 1.21.110 or higher.
 :::
 
-Block texture variation is when a block type can have multiple textures that are randomly applied to the block based on its position in the world. This is useful for blocks such as dirt or grass, where some blocks may have slight variations, such as small rocks, and others don't.
+Block texture variation is when a block type can have multiple textures that are randomly applied to the block based on its position in the world.
+This is useful for blocks such as dirt or grass, where some blocks may have slight variations, such as small rocks, and others don't.
 
 **Issues:**
 
@@ -27,20 +28,21 @@ Block texture variation is when a block type can have multiple textures that are
 
 To enable texture variations, create a `terrain_texture.json` file in your resource pack's `textures` folder.
 
-This file contains a list of block textures. Variated block textures have a `variation` parameter which is an array of the different textures that will be randomly displayed on the block. Through use of the `weight` parameter, certain texture variations can be made more common than others ([see here](#weighted-texture-variation)).
+This file contains a list of block textures to be included in the terrain [texture atlas](/concepts/texture-atlases).
+Variated atlas entries have a `variations` parameter which is an array of the different textures that will be randomly displayed on the block.
+Through use of the `weight` parameter, certain texture variations can be made more common than others ([see here](#weighted-texture-variation)).
 
 This is an example of how to create 3 texture variations for the vanilla dirt block:
 
 -   Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`.
--   Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in the path variable. This could contain additional folders if you want to be orderly.
--   Add the following to dirt's texture entry:
+-   Copy the `dirt0.png`, `dirt1.png` and `dirt2.png` files to the location specified by the `path` parameter.
+    This could contain additional folders if you want to be orderly.
+-   Add the following to the `dirt` texture atlas entry:
 
 <CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "dirt": {
             "textures": {
@@ -65,8 +67,6 @@ To calculate how likely a texture variation is, add all of the weights together 
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "dirt": {
             "textures": {

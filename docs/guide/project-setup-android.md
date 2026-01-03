@@ -130,7 +130,7 @@ Now create another `manifest.json` file in your add-on's resource pack folder. A
 ```json
 {
 	"format_version": 2,
-	"header" {
+	"header": {
 		"name": "pack.name",
 		"description": "pack.description",
 		"uuid": "...",

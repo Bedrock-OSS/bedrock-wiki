@@ -1,5 +1,6 @@
 ---
 title: contents.json
+description: A file that lists every file in your pack.
 mentions:
     - MedicalJewel105
     - Osaxely
@@ -8,67 +9,58 @@ mentions:
     - Joelant05
     - Jorginhor
     - TheItsNameless
-description: contents.json is a file that is probably used for the game to process the pack files more easily. It is probably intended for marketplace content creators and Mojang, it is not required to have this file in the pack for the pack to work properly.
+    - QuazChick
 ---
 
-`contents.json` is a file that is _probably_ used for the game to process the pack files more easily. It is _probably_ intended for marketplace content creators and Mojang, it is not required to have this file in the pack for the pack to work properly.
+`contents.json` is a file that is _probably_ used for the game to process the pack files more easily.
+It is not required to have this file in your pack for the pack to work properly.
 
-You will find there some instructions about the usage of this file.
+Its main purpose is allowing files in Marketplace content to be encrypted, however it is also included in the vanilla packs which are not encrypted.
 
-## Structure of the file
+## JSON Format
 
-`contents.json` is located at the root of the add-on directory. It contains a list of the files that are included in the pack.
-Example:
+The `contents.json` file is located at the root of the pack directory, in the same place as the pack's `manifest.json`.
+It contains a list of the files that are included in the pack in the form of an array under the `content` parameter.
+
+Each `content` entry can contain two parameters:
+
+-   `path` — The path of the file relative to the pack's root directory. This must include the file extension.
+-   `key` (optional) — The key used for decrypting a file that has been encrypted.
 
 <CodeHeader>RP/contents.json</CodeHeader>
 
 ```json
 {
-	"content": [
-		{
-			"path": "texts/en_US.lang"
-		},
-		{
-			"path": "contents.json"
-		},
-		{
-			"path": "manifest.json"
-		},
-		{
-			"path": "animations/my_animation.animation.json"
-		},
-		{
-			"path": "animation_controllers/my_ac.ac.json"
-		},
-		{
-			"path": "entity/my_entity.entity.json"
-		},
-		{
-			"path": "textures/textures_list.json"
-		},
-		{
-			"path": "textures/blocks/my_block.png"
-		}
-	]
+    "content": [
+        { "path": "animations/my_animation.animation.json" },
+        { "path": "animation_controllers/my_ac.ac.json" },
+        { "path": "entity/my_entity.entity.json" },
+        { "path": "texts/en_US.lang" },
+        { "path": "textures/textures_list.json" },
+        { "path": "textures/blocks/my_block.png" },
+        { "path": "contents.json" },
+        { "path": "manifest.json" }
+    ]
 }
 ```
 
-<FolderView
-	:paths="[
-    'RP/texts/en_US.lang',
-    'RP/manifest.json',
-    'RP/contents.json',
+<FolderView :paths="[
     'RP/animations/my_animation.animation.json',
     'RP/animation_controllers/my_ac.ac.json',
     'RP/entity/my_entity.entity.json',
-    'RP/textures/texture_list.json',
-    'RP/textures/blocks/my_block.png'
-]"
-> </FolderView>
+    'RP/texts/en_US.lang',
+    'RP/textures/textures_list.json',
+    'RP/textures/blocks/my_block.png',
+    'RP/contents.json',
+    'RP/manifest.json',
+]" />
 
-## Automatizing the process
+## Automating the Process
 
-The `contents.json` file can be generated automatically by the game itself, it is very recommended to decrease the risks of making mistakes. However, the file must be prepared first. Create a new empty file called `contents.json` in the root directory of your add-on, and add empty brackets.
+The `contents.json` file can be generated automatically by the game itself!
+Allowing Minecraft to generate this file for you means that you won't make mistakes trying to create it.
+
+However, the file must be prepared first. Create a new empty file called `contents.json` in the root directory of your add-on, and add empty brackets.
 
 <CodeHeader>BP|RP/contents.json</CodeHeader>
 
@@ -78,8 +70,8 @@ The `contents.json` file can be generated automatically by the game itself, it i
 
 The file content will be automatically written next time the game is launched.
 
-## Additional information
+## Additional Information
 
--   The automatic process can be achieved no matter what is the location of the pack (Development folders or normal folders).
--   Do not make multiple `contents.json` for subpacks, the file at the root of the pack is sufficient.
--   This file is not required for the add-on to work properly.
+-   The automatic process can be achieved regardless of the location of the pack (development folders or normal folders).
+-   Do not make a `contents.json` for each subpack, the file at the root of the pack is sufficient.
+-   This file is not required for your packs to work properly.
