@@ -20,7 +20,7 @@ mentions:
     - inotflying
     - TheItsNameless
     - SmokeyStack
-    - GotembaYuka
+    - Gotemba912
     - QuazChick
     - 1cce
     - MinecraftBedrockArabic
