@@ -361,6 +361,14 @@ The [embedded visual](#embedded-visual) component can be used to change the appe
 
 Determines how much an entity is slowed down when moving on top of the block (`0.0-0.9`{lang=js}).
 
+:::warning
+This component is somewhat broken. While it works correctly on boats, it behaves backwards on most other entities.
+
+On non-boat entities:
+- Lower values (e.g. `< 0.9`) result in **more** friction
+- Higher values (e.g. `> 0.0`) result in **less** friction
+:::
+
 _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
 #### Float Definition {#friction-float}
