@@ -20,11 +20,12 @@ mentions:
     - inotflying
     - TheItsNameless
     - SmokeyStack
-    - GotembaYuka
+    - Gotemba912
     - QuazChick
     - 1cce
     - MinecraftBedrockArabic
     - smell-of-curry
+    - causal-guide
 description: Documentation for JSON UI.
 ---
 
@@ -476,7 +477,7 @@ For example,in setting that is accessibility and in inventory,the construction,e
 
 | Property Name | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------- | :--: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| renderer      | enum | Possible values: <br> `hover_text_renderer` <br> `3d_structure_renderer` <br> `splash_text_renderer` <br> `ui_holo_cursor` <br> `trial_time_renderer` <br> `panorama_renderer` <br> `actor_portrait_renderer` <br> `banner_pattern_renderer` <br> `live_player_renderer` <br> `web_view_renderer` <br> `hunger_renderer` <br> `bubbles_renderer` <br> `mob_effects_renderer` <br> `cursor_renderer` <br> `progress_indicator_renderer` <br> `camera_renderer` <br> `horse_jump_renderer` <br> `armor_renderer` <br> `horse_heart_renderer` <br> `heart_renderer` <br> `hotbar_cooldown_renderer` <br> `hotbar_renderer` <br> `hud_player_renderer` <br> `live_horse_renderer` <br> `holographic_postrenderer` <br> `enchanting_book_renderer` <br> `debug_screen_renderer` <br> `gradient_renderer` <br> `paper_doll_renderer` <br> `name_tag_renderer` <br> `flying_item_renderer` <br> `inventory_item_renderer` <br> `credits_renderer` <br> `vignette_renderer` <br> `progress_bar_renderer` <br> `debug_overlay_renderer` <br> `background_renderer` <br> `bohr_model_renderer` <br> `experience_renderer` (Legacy, no longer works) <br> `menu_background_renderer` (Legacy, no longer works) |
+| renderer      | enum | Possible values: <br> `hover_text_renderer` <br> `3d_structure_renderer` <br> `splash_text_renderer` <br> `ui_holo_cursor` <br> `trial_time_renderer` <br> `panorama_renderer` <br> `actor_portrait_renderer` <br> `banner_pattern_renderer` <br> `live_player_renderer` <br> `web_view_renderer` <br> `hunger_renderer` <br> `bubbles_renderer` <br> `mob_effects_renderer` <br> `cursor_renderer` <br> `progress_indicator_renderer` <br> `camera_renderer` <br> `horse_jump_renderer` <br> `armor_renderer` <br> `horse_heart_renderer` <br> `heart_renderer` <br> `hotbar_cooldown_renderer` <br> `hotbar_renderer` <br> `hud_player_renderer` <br> `live_horse_renderer` <br> `holographic_postrenderer` <br> `enchanting_book_renderer` <br> `debug_screen_renderer` <br> `gradient_renderer` <br> `paper_doll_renderer` <br> `name_tag_renderer` <br> `flying_item_renderer` <br> `inventory_item_renderer` <br> `credits_renderer` <br> `vignette_renderer` <br> `progress_bar_renderer` <br> `debug_overlay_renderer` <br> `background_renderer` <br> `bohr_model_renderer` <br> `equipment_preview_renderer` <br> `experience_renderer` (Legacy, no longer works) <br> `menu_background_renderer` (Legacy, no longer works) |
 
 #### Renderers
 
@@ -504,6 +505,7 @@ For example,in setting that is accessibility and in inventory,the construction,e
 | `bubbles_renderer`            | Draws the respiration bubbles                                                                                  |
 | `mob_effects_renderer`        | Draws the effects that are applied to the player                                                               |
 | `cursor_renderer`             | Draws the crosshair in the center of the screen                                                                |
+| `equipment_preview_renderer`  | Draws armor stand                                                                                              |
 | `progress_indicator_renderer` | Not used                                                                                                       |
 | `camera_renderer`             | Used for the camera item                                                                                       |
 | `web_view_renderer`           | Shows a website view                                                                                           |
@@ -536,6 +538,11 @@ For example,in setting that is accessibility and in inventory,the construction,e
 | use_player_paperdoll |       boolean       | `paper_doll_renderer`                         |                                                               |
 | rotation             |        enum         | `paper_doll_renderer` and `panorama_renderer` | Possible values: <br> `auto` <br> `gesture_x` <br> `custom_y` |
 | end_event            |       string        | `credits_renderer`                            |                                                               |
+| item_id_aux          |       number        | `equipment_preview_renderer`                  | Item id aux of the equipment you want display                 |
+| item_custom_color    |       number        | `equipment_preview_renderer`                  | Dyed Leather Armor Colors ID                                  |
+| armor_trim_material  | enum                | `equipment_preview_renderer`                  | Possible values: <br> `amethyst` <br> `copper` <br> `diamond` <br> `emerald` <br> `gold` <br> `iron` <br> `lapis` <br> `netherite` <br> `quartz` <br> `redstone` <br> `resin` |
+| armor_trim_pattern   | enum                | `equipment_preview_renderer`                  | Possible values: <br> `coast` <br> `dune` <br> `eye` <br> `host` <br> `raiser` <br> `rib` <br> `sentry` <br> `shaper` <br> `silence` <br> `snout` <br> `spire` <br> `tide` <br> `vex` <br> `ward` <br> `wayfinder` <br> `wild` <br> `bolt` <br> `flow` |
+
 
 ### Screen
 

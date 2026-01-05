@@ -603,7 +603,7 @@ The `*` instance is the default instance for all cube faces, however it is not r
     -   `render_method` — String (optional)
         -   The [render method](#render-methods) to use when rendering faces using the material instance.
         -   **All material instances must use the same render method.**
-        -   By default, the `opaque` material instance is used.
+        -   By default, the `opaque` render method is used.
     -   `tint_method` — String (optional)
         -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
     -   `ambient_occlusion` — Boolean / Float (`0.0-10.0`{lang=json}) (optional)

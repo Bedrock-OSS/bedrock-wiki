@@ -36,9 +36,9 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ### From Entities
 
--   `q.equipped_item_all_tags(slot, index?, ...tags)`{lang=molang}
+-   `q.equipped_item_all_tags(slot, ...tags)`{lang=molang}
     -   Returns whether the item at the specified location has all of the listed tags.
--   `q.equipped_item_any_tag(slot, index?, ...tags)`{lang=molang}
+-   `q.equipped_item_any_tag(slot, ...tags)`{lang=molang}
     -   Returns whether the item at the specified location has at least one of the listed tags.
 
 <CodeHeader>minecraft:client_entity > description</CodeHeader>
@@ -46,8 +46,7 @@ Item tags can be used to ensure that an item meets certain conditions.
 ```json
 "scripts": {
     "pre_animation": [
-        "v.is_holding_pickaxe = q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:is_tool', 'minecraft:is_pickaxe');",
-        "v.last_slot_has_food = q.equipped_item_any_tag('slot.hotbar', 8, 'minecraft:is_food');"
+        "v.is_holding_pickaxe = q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:is_tool', 'minecraft:is_pickaxe');"
     ]
 }
 ```

@@ -458,6 +458,8 @@ Determines whether items should be able to withstand fire and lava when dropped 
 
 #### Boolean Definition {#fire-resistant-boolean}
 
+<CodeHeader>minecraft:item > components</CodeHeader>
+
 ```json
 "minecraft:fire_resistant": {
     "value": true
