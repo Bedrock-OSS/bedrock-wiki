@@ -73,6 +73,25 @@ bridge. includes a regular text editor for experienced add-on creators and a tre
 
 </Spoiler>
 
+## CLI & Automation Tools
+
+While add-ons can be created entirely by hand, many developers use command-line tools to speed up repetitive tasks such as project setup, file creation, and boilerplate generation.
+
+### Module Craft Code CLI (mccc)
+
+Module Craft Code CLI is a command-line tool designed to help streamline Minecraft Bedrock add-on development. It allows you to quickly generate common files and structures, reducing setup time and minimizing human error.
+
+This tool is especially useful for intermediate and advanced creators who prefer working with automation and standardized project layouts.
+
+-   **+ Pros:** Faster project setup, consistent file structure, automation-friendly.
+-   **- Cons:** Requires basic knowledge of the command line.
+
+> ⚠️ This tool is optional. You can fully follow this guide without using any CLI tools.
+
+[Learn more about Module Craft Code CLI](https://www.npmjs.com/package/module-craft-code-cli)
+
+</Spoiler>
+
 ### Mobile Editors
 
 #### Android
