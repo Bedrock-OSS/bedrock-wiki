@@ -1,26 +1,7 @@
----
+Players like bot spawn command
 title: Custom Commands
 description: Learn how to create your own commands that can be used in chat, command blocks and elsewhere using scripts.
 category: Tutorials
-mentions:
-    - cda94581
-    - fraysdev
-    - destruc7ion
-    - jannik-de
-    - riesters
-    - Fabrimat
-    - SmokeyStack
-    - CrackedMatter
-    - JaylyDev
-    - Herobrine643928
-    - conmaster2112
-    - kumja1
-    - modmaker101
-    - realfeatherdev
-    - QuazChick
-    - jeanmajid
-    - nperma
----
 
 Who doesn't want cool custom commands? In this tutorial, you will learn how to create your own commands that can be used in chat, command blocks and elsewhere using scripts.
 
