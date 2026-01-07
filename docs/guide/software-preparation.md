@@ -90,7 +90,6 @@ This tool is especially useful for intermediate and advanced creators who prefer
 
 [Learn more about Module Craft Code CLI](https://www.npmjs.com/package/module-craft-code-cli)
 
-</Spoiler>
 
 ### Mobile Editors
 
