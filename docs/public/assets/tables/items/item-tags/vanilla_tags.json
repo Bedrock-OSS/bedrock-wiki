@@ -77,7 +77,7 @@
         "`minecraft:enchanted_book`",
         "`minecraft:writable_book`"
       ],
-      "functionality": "Items that can be stored in a Chiseled Bookshelf."
+      "functionality": "Allows the item to be stored in a Chiseled Bookshelf."
     },
     {
       "tag": "`minecraft:chainmail_tier`",
@@ -145,7 +145,7 @@
         "`minecraft:snort_pottery_sherd`"
       ],
       "functionality": [
-        "Items that can be used to craft a Decorated Pot.",
+        "Allows the item to be used to craft a Decorated Pot.",
         "Learn how to create custom pottery sherds [here](/items/custom-pottery-sherds)."
       ]
     },
@@ -357,7 +357,7 @@
         "`minecraft:stone_axe`",
         "`minecraft:wooden_axe`"
       ],
-      "functionality": "Allows the item to be used to strip logs."
+      "functionality": "Allows the item to be used to scrape copper and strip logs."
     },
     {
       "tag": "`minecraft:is_cooked`",
@@ -506,6 +506,10 @@
         "`minecraft:netherite_spear`",
         "`minecraft:stone_spear`",
         "`minecraft:wooden_spear`"
+      ],
+      "functionality": [
+        "Allows the item to be picked up by entities including the Bogged, Drowned, Parched, Skeleton and Stray.",
+        "Enables spear animations on entities including the Husk, Piglin, Player, Zombie, Zombie Villager and Zombified Piglin when held in the main hand."
       ]
     },
     {
@@ -627,7 +631,7 @@
         "`minecraft:warped_hyphae`",
         "`minecraft:warped_stem`"
       ],
-      "functionality": "Items that can be used as logs when crafting blocks such as campfires and the Smoker."
+      "functionality": "Allows the item to be used like logs when crafting blocks such as campfires and the Smoker."
     },
     {
       "tag": "`minecraft:logs_that_burn`",
@@ -669,7 +673,7 @@
         "`minecraft:stripped_spruce_log`",
         "`minecraft:stripped_spruce_wood`"
       ],
-      "functionality": "Items that can be smelted in a furnace to create Charcoal."
+      "functionality": "Allows the item to be smelted in a furnace to create Charcoal."
     },
     {
       "tag": "`minecraft:mangrove_logs`",
@@ -679,6 +683,15 @@
         "`minecraft:stripped_mangrove_log`",
         "`minecraft:stripped_mangrove_wood`"
       ]
+    },
+    {
+      "tag": "`minecraft:metal_nuggets`",
+      "vanilla_usage": [
+        "`minecraft:copper_nugget`",
+        "`minecraft:gold_nugget`",
+        "`minecraft:iron_nugget`"
+      ],
+      "functionality": "Allows the item to be used like metal nuggets when crafting items such as the Name Tag."
     },
     {
       "tag": "`minecraft:music_disc`",
@@ -787,7 +800,7 @@
     {
       "tag": "`minecraft:soul_fire_base_blocks`",
       "vanilla_usage": ["`minecraft:soul_sand`", "`minecraft:soul_soil`"],
-      "functionality": "Items that can be used like soul sand/soil when crafting blocks such as the Soul Campfire and Soul Torch."
+      "functionality": "Allows the item to be used like soul sand/soil when crafting blocks such as the Soul Campfire and Soul Torch."
     },
     {
       "tag": "`minecraft:spawn_egg`",
@@ -897,7 +910,7 @@
         "`minecraft:cobbled_deepslate`",
         "`minecraft:cobblestone`"
       ],
-      "functionality": "Items that can be used like cobblestone when crafting blocks such as the Furnace and Brewing Stand."
+      "functionality": "Allows the item to be used like cobblestone when crafting blocks such as the Furnace and Brewing Stand."
     },
     {
       "tag": "`minecraft:stone_tier`",
@@ -917,7 +930,7 @@
         "`minecraft:cobbled_deepslate`",
         "`minecraft:cobblestone`"
       ],
-      "functionality": "Items that can be used like cobblestone to craft stone tools."
+      "functionality": "Allows the item to be used like cobblestone to craft stone tools."
     },
     {
       "tag": "`minecraft:transform_materials`",
@@ -1017,7 +1030,7 @@
         "`minecraft:netherite_leggings`",
         "`minecraft:turtle_helmet`"
       ],
-      "functionality": "Items that can be trimmed in a Smithing Table."
+      "functionality": "Allows the item to be trimmed in a Smithing Table."
     },
     {
       "tag": "`minecraft:vibration_damper`",
