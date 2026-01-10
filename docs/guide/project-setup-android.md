@@ -129,21 +129,21 @@ Now create another `manifest.json` file in your add-on's resource pack folder. A
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "pack.name",
-		"description": "pack.description",
-		"uuid": "...",
-		"version": [0, 0, 1],
-		"min_engine_version": [1, 16, 0]
-	},
-	"modules": [
-		{
-			"type": "resources",
-			"uuid": "...",
-			"version": [0, 0, 1]
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "pack.name",
+        "description": "pack.description",
+        "uuid": "...",
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "...",
+            "version": [0, 0, 1]
+        }
+    ]
 }
 ```
 

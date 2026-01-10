@@ -35,7 +35,8 @@ This feature places a `single_block_feature` which can be specified with the con
         "enforce_placement_rules": false,
         "enforce_survivability_rules": false,
         "may_replace": ["minecraft:air"], //Only blocks the feature is allowed to be placed in.
-        "may_attach_to": { //Attachment conditions - what blocks can surround the feature when its being placed
+        //Attachment conditions - what blocks can surround the feature when its being placed
+        "may_attach_to": {
             "bottom": ["minecraft:grass"] //Only blocks the feature can be placed on top of.
         }
     }
@@ -92,30 +93,31 @@ This is the actual feature we want to be conditionally placed. It is `ore_featur
 
 ```json
 {
-	"format_version": "1.18.0",
-	"minecraft:ore_feature": {
-		"description": {
-			"identifier": "wiki:rock_ore_feature"
-		},
-		"count": 12,
-		"replace_rules": [
-			{
-				"places_block": "minecraft:stone",
-				"may_replace": ["minecraft:air","minecraft:grass"]
-			},
-			{
-				"places_block": {
+    "format_version": "1.18.0",
+    "minecraft:ore_feature": {
+        "description": {
+            "identifier": "wiki:rock_ore_feature"
+        },
+        "count": 12,
+        "replace_rules": [
+            {
+                "places_block": "minecraft:stone",
+                "may_replace": ["minecraft:air", "minecraft:grass"]
+            },
+            {
+                "places_block": {
                     "name": "minecraft:dirt",
                     "states": {
-                      "dirt_type": "coarse"
+                        "dirt_type": "coarse"
                     }
                 },
-				"may_replace": ["minecraft:dirt"]
-			}
-		]
-	}
+                "may_replace": ["minecraft:dirt"]
+            }
+        ]
+    }
 }
 ```
+
 :::tip
 If you want to learn more about ore features, you can visit [Generating Custom Ores](/world-generation/custom-ores) tutorial.
 :::
@@ -126,55 +128,55 @@ If you want to learn more about ore features, you can visit [Generating Custom O
 
 ```json
 {
-	"format_version": "1.18.0",
-	"minecraft:feature_rules": {
-		"description": {
-			"identifier": "wiki:overworld_after_surface_rock_feature",
-			"places_feature": "wiki:aggregate_placement_rock_feature"
-		},
-		"conditions": {
-			//Places the feature in any overworld biome along with features in the after_surface_pass
-			"placement_pass": "after_surface_pass",
-			"minecraft:biome_filter": [
-				{
-					"any_of": [
-						{
-							"test": "has_biome_tag",
-							"operator": "==",
-							"value": "overworld"
-						},
-						{
-							"test": "has_biome_tag",
-							"operator": "==",
-							"value": "overworld_generation"
-						}
-					]
-				}
-			]
-		},
-		"distribution": {
-			//1 in 3 chance to attempt 1 placement in chunk
+    "format_version": "1.18.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "wiki:overworld_after_surface_rock_feature",
+            "places_feature": "wiki:aggregate_placement_rock_feature"
+        },
+        "conditions": {
+            //Places the feature in any overworld biome along with features in the after_surface_pass
+            "placement_pass": "after_surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "any_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "overworld"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "==",
+                            "value": "overworld_generation"
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            //1 in 3 chance to attempt 1 placement in chunk
             "scatter_chance": 33,
-			"iterations": 1, 
-			"coordinate_eval_order": "xzy",
-			"x": {
-				"distribution": "uniform",
-				"extent": [0, 15]
-			},
-			//Places the feature along the heightmap
-			"y": "q.heightmap(v.worldx,v.worldz)",
-			"z": {
-				"distribution": "uniform",
-				"extent": [0, 15]
-			}
-		}
-	}
+            "iterations": 1,
+            "coordinate_eval_order": "xzy",
+            "x": {
+                "distribution": "uniform",
+                "extent": [0, 15]
+            },
+            //Places the feature along the heightmap
+            "y": "q.heightmap(v.worldx,v.worldz)",
+            "z": {
+                "distribution": "uniform",
+                "extent": [0, 15]
+            }
+        }
+    }
 }
 ```
 
 ## Summary
 
-After reading this tutorial you should be able to use block conditions on any feature you want. This was a very basic example as this can be used for far more complex creations and can be used with any feature. 
+After reading this tutorial you should be able to use block conditions on any feature you want. This was a very basic example as this can be used for far more complex creations and can be used with any feature.
 
 Like that we have made a rock feature that can only be placed in air blocks and above grass blocks.
 

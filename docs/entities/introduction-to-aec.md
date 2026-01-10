@@ -102,26 +102,18 @@ function spawnMarker(location) {
     const Structure_Location = {
         x: Math.floor(location.x),
         y: Math.floor(location.y),
-        z: Math.floor(location.z)
+        z: Math.floor(location.z),
     };
-    world.structureManager.place(
-        "mystructure:aec",
-        location.dimension,
-        Structure_Location,
-    );
-    registerOnEntityLoad(
-        "minecraft:area_effect_cloud",
-        function initializeMarker(entity) {
-            const Entity_Location = {
-                x: location.x,
-                y: location.y,
-                z: location.z
-            };
-            entity.teleport(Entity_Location);
-            entity.addTag("origin");
-            // etc.
-        }
-    );
+    world.structureManager.place("mystructure:aec", location.dimension, Structure_Location);
+    registerOnEntityLoad("minecraft:area_effect_cloud", function initializeMarker(entity) {
+        const Entity_Location = {
+            x: location.x,
+            y: location.y,
+            z: location.z,
+        };
+        entity.teleport(Entity_Location);
+        entity.addTag("origin");
+        // etc.
+    });
 }
-
 ```

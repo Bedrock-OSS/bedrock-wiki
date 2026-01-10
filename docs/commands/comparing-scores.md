@@ -32,10 +32,10 @@ execute as <target> if score @s <objective> = .Highest <objective> run <command>
 **Command 1:** This command compares the `.Highest` score with every other tracked score in the specified objective, and if the `.Highest` score is lesser than the one being compared to, then the `.Highest` score will be assigned the value of that score. To illustrate:
 
 |  #  | Player | Objective: `wiki:kills` | Comparison with `.Highest` | `.Highest` after comparison |
-| :-: | :----: | :----------------: | :-----------------------: | :------------------------: |
-|  1  |  Alex  |         10         |     `.Highest > Alex`      |       `.Highest = 10`       |
-|  2  |  Kai   |         5          |      `.Highest > Kai`      |       `.Highest = 10`       |
-|  3  | Steve  |         20         |     `.Highest > Alex`      |       `.Highest = 20`       |
+| :-: | :----: | :---------------------: | :------------------------: | :-------------------------: |
+|  1  |  Alex  |           10            |     `.Highest > Alex`      |       `.Highest = 10`       |
+|  2  |  Kai   |            5            |      `.Highest > Kai`      |       `.Highest = 10`       |
+|  3  | Steve  |           20            |     `.Highest > Alex`      |       `.Highest = 20`       |
 
 _No change when `.Highest` score is compared to player 2 after player 1 (since 10 is already greater than 5)._
 
@@ -83,10 +83,10 @@ execute as <target> if score @s <objective> = .Lowest <objective> run <command>
 **Command 1:** This command compares the `.Lowest` score with every other tracked score in the specified objective, and if the `.Lowest` score is greater than the one being compared to, then the `.Lowest` score will be assigned the value of that score. To illustrate:
 
 |  #  | Player | Objective: `wiki:blocks_travelled` | Comparison with `.Lowest` | `.Lowest` after comparison |
-| :-: | :----: | :---------------------------: | :----------------------: | :-----------------------: |
-|  1  |  Alex  |              100              |     `.Lowest < Alex`      |      `.Lowest = 100`       |
-|  2  |  Kai   |              50               |      `.Lowest < Kai`      |       `.Lowest = 50`       |
-|  3  | Steve  |              200              |     `.Lowest < Alex`      |       `.Lowest = 50`       |
+| :-: | :----: | :--------------------------------: | :-----------------------: | :------------------------: |
+|  1  |  Alex  |                100                 |     `.Lowest < Alex`      |      `.Lowest = 100`       |
+|  2  |  Kai   |                 50                 |      `.Lowest < Kai`      |       `.Lowest = 50`       |
+|  3  | Steve  |                200                 |     `.Lowest < Alex`      |       `.Lowest = 50`       |
 
 _No change when `.Lowest` score is compared to player 3 after player 2 (since 50 is already less than 200)._
 

@@ -69,7 +69,7 @@ You can modify/expand these as well. Example: a `/kill` command instead of a `/t
         - **`n..n1`** any number _n_ to any number _n1_. (smaller number first)
 
 :::info NOTE:
-When working with numerous score holders across multiple objectives, it is advisable to reset previous score to zero for each score holder individually rather than using the wildcard (` * `), for better performance.
+When working with numerous score holders across multiple objectives, it is advisable to reset previous score to zero for each score holder individually rather than using the wildcard (`*`), for better performance.
 :::
 
 ## Tick JSON

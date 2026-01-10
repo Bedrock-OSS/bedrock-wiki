@@ -2,9 +2,9 @@
 title: Modifying Server Forms
 category: Tutorials
 tags:
-  - intermediate
+    - intermediate
 mentions:
-  - TheoristMC
+    - TheoristMC
 description: In this tutorial, you will learn how to efficiently modify server forms.
 ---
 
