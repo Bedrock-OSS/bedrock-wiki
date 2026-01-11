@@ -28,6 +28,8 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Added `use_liquid_clipping` detection rule parameter which determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](/blocks/block-components#collision-box)).
         -   In format versions prior to `1.26.0`, the default value is `true`{lang=json}.
         -   In format versions of `1.26.0` and higher, the default value is `false`{lang=json}.
+-   Updated `minecraft:material_instances`
+    -   Released `alpha_masked_tint` instance parameter from experimental
 -   Updated `minecraft:redstone_consumer`
     -   Renamed `propogates_power` parameter to `propagates_power`
 
