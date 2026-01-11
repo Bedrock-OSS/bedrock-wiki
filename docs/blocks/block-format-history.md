@@ -32,6 +32,9 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ### Components
 
+-   Updated `minecraft:geometry`
+    -   Added backwards compatibility mapping for `"minecraft:geometry.full_block"`{lang=json} identifier.
+        -   In format versions prior to `1.26.0`, `"minecraft:geometry.full_block"`{lang=json} will be treated as `"minecraft:geometry.full_block_v1"`{lang=json}.
 -   Updated `minecraft:liquid_detection`
     -   Added `use_liquid_clipping` detection rule parameter which determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](/blocks/block-components#collision-box)).
         -   In format versions prior to `1.26.0`, the default value is `true`{lang=json}.
