@@ -22,6 +22,14 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ## 1.26.0
 
+### Traits
+
+-   Released `minecraft:connection` from experimental
+-   Updated `minecraft:placement_direction`
+    -   Released `blocks_to_corner_with` parameter from experimental
+    -   Updated `enabled_states` parameter
+        -   Released `"minecraft:corner_and_cardinal_direction"`{lang=json} value from experimental
+
 ### Components
 
 -   Updated `minecraft:liquid_detection`
@@ -60,10 +68,11 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 <Label color="yellow">Use Beta Features</Label>
 
 -   Updated `minecraft:placement_direction`
-    -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value for the `enabled_states` array, which can be used to replicate stair rotation and cornering, enabling the following states:
-        -   `minecraft:cardinal_direction`
-        -   `minecraft:corner`
-    -   Added `blocks_to_corner_with` property which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   Added `blocks_to_corner_with` parameter which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   Updated `enabled_states` parameter
+        -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value, which can be used to replicate stair rotation and cornering, enabling the following states:
+            -   `minecraft:cardinal_direction`
+            -   `minecraft:corner`
 
 ### Components
 
@@ -445,7 +454,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Released `traits` from experimental
 
-#### Traits
+### Traits
 
 <Label color="green">Versioned</Label>
 
@@ -480,7 +489,10 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `traits`
     -   Block traits are shortcuts for creators to add vanilla states and value setters to data-driven blocks.
 
-#### Traits
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
 
 -   Added `minecraft:placement_direction`
     -   Can enable the states `minecraft:cardinal_direction` and `minecraft:facing_direction`.
