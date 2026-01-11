@@ -91,16 +91,11 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
     -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
--   Updated `minecraft:material_instances`
-    -   Removed redundant `emissive` instance parameter
-
-<Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
-<Label color="green">Versioned</Label>
-
 -   Updated `minecraft:collision_box`
     -   Can now be defined as an array of multiple boxes.
     -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
+-   Updated `minecraft:material_instances`
+    -   Removed redundant `emissive` instance parameter
 
 ## 1.21.120
 
