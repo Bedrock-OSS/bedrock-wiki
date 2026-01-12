@@ -210,19 +210,27 @@ It is how the vanilla trail ruins apply loot tables to sus blocks and decay the 
 
 A rule processor allows for 5 inputs:
 
--   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked.
-
+-   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked. The field is specified by field `predicate_type`.
     -   `minecraft:always_true` is self explanatory.
     -   `minecraft:block_match` looks for a specific block type.
     -   `minecraft:blockstate_match` looks for a block with the specified block state values.
     -   `minecraft:random_block_match` looks for a specific block and picks some of them at random, if you had stone bricks in your structure this could be used to replace some with cracked or mossy versions.
     -   `minecraft:random_blockstate_match` looks for a block with the specified block state values and picks some of them at random. If you have a upper stone brick slab this rule can look for specifically upper stone brick slabs for replacement into upper mossy stonebrick slabs.
     -   `minecraft:tag_match` looks for blocks with a specified tag.
-
 -   `output_state`: The block to replace the input predicate if it is found.
--   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. They can be marked as `pass_through` (do nothing) or `append_loot` in which a loot table is input to be applied to the block. This resets the rotation of chests if `append_loot` is used ([MCPE-230078](https://bugs.mojang.com/browse/MCPE-230078)).
--   `location_predicate`: To specify if the block in input predicate is supposed to be looked for when placing the structure.
--   `position_predicate`: Changes the block based on where in the structure it is based off the origin of the structure.
+-   `block_entity_modifier`: Allows for block entities such as chests and barrels to have loot applied. The field is specified by field `predicate_type`.
+    -   `minecraft:passthrough` does nothing.
+    -   `minecraft:append_loot` applies a loot table to the block if it can support loot tables. This resets the block to its default permutation, resulting in states like chest direction being lost ([MCPE-230078](https://bugs.mojang.com/browse/MCPE-230078)).
+        -   `loot_table` is the loot table to apply.
+-   `location_predicate`: Checks the block that previosly existed in the world before a block from the structure replaced it. This predicate uses rule tests like `input_predicate` does but it runs it on the block being replaced instead of the block in the structure being placed.
+-   `position_predicate`: Changes the block based on its postion realtive to the structure origin point. It has 2 predicate types. The field is specified by field `predicate_type`.
+    -   `minecraft:always_true` is self explantory.
+    -   `minecraft:axis_aligned_linear_pos` can select blocks at certain ranges from the structure origin based on a specific axis.
+        -   `axis` the axis to test, `x`, `y`, or `z` are valid.
+        -   `min_distance` the distance from the structure origin to apply `min_chance`. All blocks from the origin to this block will have the `min_chance` field apply and run the rule test based off that percentage.
+        -   `max_distance` the distance from the `min_distance` to this field to apply `max_chance`. All blocks from the `min_distance` to this block will have the `max_chance` field apply and run the rule test based off that percentage.
+        -   `min_chance` a percentage from 0.0 to 1.0 for the processor to be run if the block is between the origin and the `min_distance`.
+        -   `max_chance` a percentage from 0.0 to 1.0 for the processor to be run if the block is between the `min_distance` and the `max_distance`.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
