@@ -2,12 +2,12 @@
 title: Look at Entity
 category: Tutorials
 tags:
-  - intermediate
+    - intermediate
 mentions:
-  - shanewolf38
-  - MedicalJewel105
-  - TheItsNameless
-  - SmokeyStack
+    - shanewolf38
+    - MedicalJewel105
+    - TheItsNameless
+    - SmokeyStack
 description: The following tutorial provides a resource pack method to detect when the player is looking at an entity.
 ---
 

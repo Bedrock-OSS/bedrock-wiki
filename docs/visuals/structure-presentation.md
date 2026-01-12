@@ -40,14 +40,16 @@ By making [JSON UI](/json-ui/json-ui-intro) edits you can change the background 
 
 Or you can use the **Structure Presentation Pack** by @minato4743 to simplify the process. It includes some default colors and gradients as well as a toggle to hide the preview arrows.
 
-<Button link="/assets/packs/visuals/structure-presentation/structure_presentation_pack.mcpack" download>
+<Button
+    link="/assets/packs/visuals/structure-presentation/structure_presentation_pack.mcpack"
+    download
+>
     Download Pack
 </Button>
 
 ![](/assets/images/visuals/structure-presentation/structure_presentation_pack.png)
 
 ![](/assets/images/visuals/structure-presentation/pack_gradient_result.png)
-
 
 ### Rendered 3D Object
 

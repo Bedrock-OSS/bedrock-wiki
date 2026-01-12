@@ -111,7 +111,8 @@ The following sound events can be defined in the `interactive_sounds` section of
 The following are valid values for the `sound` parameter:
 
 <!-- page_dumper_start -->
-| *Last updated for 1.21.60* |
+
+| _Last updated for 1.21.60_ |
 | -------------------------- |
 | amethyst_block             |
 | amethyst_cluster           |
@@ -222,4 +223,5 @@ The following are valid values for the `sound` parameter:
 | weeping_vines              |
 | wet_sponge                 |
 | wood                       |
+
 <!-- page_dumper_end -->

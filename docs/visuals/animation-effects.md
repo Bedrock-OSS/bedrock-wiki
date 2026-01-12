@@ -11,8 +11,8 @@ description: Learn how to add particles and sounds to your animation.
 Sometimes it is much easier to use particles or sounds in animation rather than in animation controller.
 Animations can have effects in them, such as:
 
--	Particles
--	Sounds
+-   Particles
+-   Sounds
 
 ### Particles
 
@@ -104,44 +104,52 @@ You can call more than one particle at the same time:
 
 ```json
 {
-	"format_version" : "1.8.0",
-	"animations" : {
-		"animation.sheep.grazing" : {
-			"animation_length" : 2.0,
-			"loop" : true,
-			"particle_effects": {
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.sheep.grazing": {
+            "animation_length": 2.0,
+            "loop": true,
+            "particle_effects": {
                 "0.0": {
                     "effect": "flames",
                     "locator": "body"
                 }
             },
-			"sound_effects": {
-    			"0.0": {
-    			    "effect": "meow"
-				}
-			},
-			"bones" : {
-				"head" : {
-					"position" : {
-						"0" : [ 0.0, 0.0, 0.0 ],
-						"0.2" : [ 0.0, -9.0, 0.0 ],
-						"1.8" : [ 0.0, -9.0, 0.0 ],
-						"2" : [ 0.0, 0.0, 0.0 ]
-					},
-					"rotation" : {
-						"0.2" : {
-							"post" : [ "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ],
-							"pre" : [ 36.0, 0.0, 0.0 ]
-						},
-						"1.8" : {
-							"post" : [ 36.0, 0.0, 0.0 ],
-							"pre" : [ "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ]
-						}
-					}
-				}
-			}
-		}
-	}
+            "sound_effects": {
+                "0.0": {
+                    "effect": "meow"
+                }
+            },
+            "bones": {
+                "head": {
+                    "position": {
+                        "0": [0.0, 0.0, 0.0],
+                        "0.2": [0.0, -9.0, 0.0],
+                        "1.8": [0.0, -9.0, 0.0],
+                        "2": [0.0, 0.0, 0.0]
+                    },
+                    "rotation": {
+                        "0.2": {
+                            "post": [
+                                "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))",
+                                0.0,
+                                0.0
+                            ],
+                            "pre": [36.0, 0.0, 0.0]
+                        },
+                        "1.8": {
+                            "post": [36.0, 0.0, 0.0],
+                            "pre": [
+                                "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))",
+                                0.0,
+                                0.0
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 

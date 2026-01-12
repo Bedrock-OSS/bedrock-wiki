@@ -120,7 +120,6 @@ This can be achieved by using component groups!
 }
 ```
 
-
 ## Great Jump, Slow Fall
 
 While not exactly "flying", setting the entity's jumping power high and giving it slow falling & speed effects as it falls is probably the most straightforward method.

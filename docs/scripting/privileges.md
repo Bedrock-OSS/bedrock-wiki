@@ -38,27 +38,27 @@ import { MessageFormData } from "@minecraft/server-ui";
 // Subscribe to playerInteractWithBlock event to detect
 // if a player interacts with a block
 world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
-  // Check if player interacts with a crafter whilst holding diamonds
-  if (
-    event.block.typeId === "minecraft:crafter" &&
-    event.itemStack &&
-    event.itemStack.typeId === "minecraft:diamond"
-  ) {
-    // Cancel interaction
-    event.cancel = true;
+    // Check if player interacts with a crafter whilst holding diamonds
+    if (
+        event.block.typeId === "minecraft:crafter" &&
+        event.itemStack &&
+        event.itemStack.typeId === "minecraft:diamond"
+    ) {
+        // Cancel interaction
+        event.cancel = true;
 
-    const form = new MessageFormData()
-      .title("Crafter")
-      .body("This is a crafter!")
-      .button1("Close");
+        const form = new MessageFormData()
+            .title("Crafter")
+            .body("This is a crafter!")
+            .button1("Close");
 
-    // Error throws as .show() requires privileges.
-    form.show(event.player);
+        // Error throws as .show() requires privileges.
+        form.show(event.player);
 
-    // player.sendMessage is not limited by read-only mode,
-    // so this function can be called here.
-    player.sendMessage("Player is using the crafter.");
-  }
+        // player.sendMessage is not limited by read-only mode,
+        // so this function can be called here.
+        player.sendMessage("Player is using the crafter.");
+    }
 });
 ```
 
@@ -71,43 +71,43 @@ import { MessageFormData } from "@minecraft/server-ui";
 // Subscribe to playerInteractWithBlock event to detect
 // if a player interacts with a block
 world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
-  // Check if player interacts with a crafter whilst holding diamonds
-  if (
-    event.block.typeId === "minecraft:crafter" &&
-    event.itemStack &&
-    event.itemStack.typeId === "minecraft:diamond"
-  ) {
-    // Cancel interaction
-    event.cancel = true;
+    // Check if player interacts with a crafter whilst holding diamonds
+    if (
+        event.block.typeId === "minecraft:crafter" &&
+        event.itemStack &&
+        event.itemStack.typeId === "minecraft:diamond"
+    ) {
+        // Cancel interaction
+        event.cancel = true;
 
-    // Creating a new MessageFormData object, calling title,
-    // body, and button1 can be called within read-only mode.
-    // This means they can be called within this
-    // callback before script tick.
-    const form = new MessageFormData()
-      .title("Crafter")
-      .body("This is a crafter!")
-      .button1("Close");
+        // Creating a new MessageFormData object, calling title,
+        // body, and button1 can be called within read-only mode.
+        // This means they can be called within this
+        // callback before script tick.
+        const form = new MessageFormData()
+            .title("Crafter")
+            .body("This is a crafter!")
+            .button1("Close");
 
-    // If event.player is used during script tick, declare
-    // it in a variable, otherwise you can't retrieve the
-    // player object, as event object turns into null
-    // after read-only state ends.
-    const player = event.player;
+        // If event.player is used during script tick, declare
+        // it in a variable, otherwise you can't retrieve the
+        // player object, as event object turns into null
+        // after read-only state ends.
+        const player = event.player;
 
-    // Use system.run to queue for later in the current
-    // tick to bypass read-only state
-    system.run(() => {
-      // Show the player a message form in script tick.
-      // As MessageFormData.show() is marked so it can't
-      // be called in read-only mode
-      form.show(player);
-    });
+        // Use system.run to queue for later in the current
+        // tick to bypass read-only state
+        system.run(() => {
+            // Show the player a message form in script tick.
+            // As MessageFormData.show() is marked so it can't
+            // be called in read-only mode
+            form.show(player);
+        });
 
-    // player.sendMessage is not limited by read-only mode,
-    // so this function can be called here.
-    player.sendMessage("Player is using the crafter.");
-  }
+        // player.sendMessage is not limited by read-only mode,
+        // so this function can be called here.
+        player.sendMessage("Player is using the crafter.");
+    }
 });
 ```
 
@@ -133,8 +133,8 @@ Difference
 
 We highly recommend that you check the API reference to see if the method or property can be called in read-only state. Each property or method that can't be called in read-only mode is mentioned in the description with the following text:
 
-> *   This function **can't be called** in read-only mode.
-> *   This property **can't be edited** in read-only mode.
+> -   This function **can't be called** in read-only mode.
+> -   This property **can't be edited** in read-only mode.
 
 ## Early-Execution Mode
 
@@ -155,12 +155,12 @@ import { world } from "@minecraft/server";
 
 // This procedure is placed in root context of a script file.
 for (const player of world.getAllPlayers()) {
-  player.sendMessage(`Hello ${player.name}!`);
+    player.sendMessage(`Hello ${player.name}!`);
 }
 
 world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
-  if (!initialSpawn) return;
-  player.sendMessage(`Hello ${player.name}!`);
+    if (!initialSpawn) return;
+    player.sendMessage(`Hello ${player.name}!`);
 });
 ```
 
@@ -172,17 +172,17 @@ import { world } from "@minecraft/server";
 // Keep the event subscription function that was in root
 // context of a script file previously there.
 world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
-  if (!initialSpawn) return;
-  player.sendMessage(`Hello ${player.name}!`);
+    if (!initialSpawn) return;
+    player.sendMessage(`Hello ${player.name}!`);
 });
 
 world.afterEvents.worldLoad.subscribe(() => {
-  // This procedure is moved inside the worldLoad callback,
-  // since world.getAllPlayers() can't be called in
-  // early-execution mode.
-  for (const player of world.getAllPlayers()) {
-    player.sendMessage(`Hello ${player.name}!`);
-  }
+    // This procedure is moved inside the worldLoad callback,
+    // since world.getAllPlayers() can't be called in
+    // early-execution mode.
+    for (const player of world.getAllPlayers()) {
+        player.sendMessage(`Hello ${player.name}!`);
+    }
 });
 ```
 
@@ -206,25 +206,25 @@ Difference
 
 The following are the initial APIs available in early execution mode for scripting v2.0.0-beta:
 
-*   `world.beforeEvents.*.subscribe`
-*   `world.beforeEvents.*.unsubscribe`
-*   `world.afterEvents.*.subscribe`
-*   `world.afterEvents.*.unsubscribe`
-*   `system.afterEvents.*.subscribe`
-*   `system.afterEvents.*.unsubscribe`
-*   `system.beforeEvents.*.subscribe`
-*   `system.beforeEvents.*.unsubscribe`
-*   `system.clearJob`
-*   `system.clearRun`
-*   `system.run`
-*   `system.runInterval`
-*   `system.runJob`
-*   `system.runTimeout`
-*   `system.waitTicks`
-*   `BlockComponentRegistry.registerCustomComponent`
-*   `ItemComponentRegistry.registerCustomComponent`
+-   `world.beforeEvents.*.subscribe`
+-   `world.beforeEvents.*.unsubscribe`
+-   `world.afterEvents.*.subscribe`
+-   `world.afterEvents.*.unsubscribe`
+-   `system.afterEvents.*.subscribe`
+-   `system.afterEvents.*.unsubscribe`
+-   `system.beforeEvents.*.subscribe`
+-   `system.beforeEvents.*.unsubscribe`
+-   `system.clearJob`
+-   `system.clearRun`
+-   `system.run`
+-   `system.runInterval`
+-   `system.runJob`
+-   `system.runTimeout`
+-   `system.waitTicks`
+-   `BlockComponentRegistry.registerCustomComponent`
+-   `ItemComponentRegistry.registerCustomComponent`
 
 Again, please check the API reference to see if the method or property can be called in early-execution state. Each property or method that can be called in early-execution mode is mentioned in the description with one of the following text:
 
-> *   This property **can be read** in early-execution mode.
-> *   This function **can be called** in early-execution mode.
+> -   This property **can be read** in early-execution mode.
+> -   This function **can be called** in early-execution mode.

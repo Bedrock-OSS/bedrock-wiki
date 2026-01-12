@@ -21,11 +21,12 @@ A suitable namespace is short. You will be writing your namespace a **LOT**, so 
 It is recommended to use a convenient version of your player/company name, combined with the product name.
 
 Some good examples:
+
 -   `wiki_mobsplus`
 -   `cubeworld_mto`
 -   `bworks_ftp`
 
-**DO NOT ATTEMPT** to use  `minecraft` or `minecon` as a namespace.
+**DO NOT ATTEMPT** to use `minecraft` or `minecon` as a namespace.
 
 ## Where to use namespaces?
 
@@ -40,11 +41,11 @@ For example: `controller.animation.namespace.entity_name.action` is better than 
 The actual file structure does not need namespaces, unless it's the filepath is used in game. For example: `animations/namespace/my_entity/animation` is more confusing than `animations/my_entity/animation`.
 
 The following folders contain files that are referenced by path, and thus should contain a namespace: `functions`, `structures`, `loot_tables`, `trade_tables`, `sounds`, and `textures`.
-- **Example:** `BP/functions/namespace/test.mcfunction`
+
+-   **Example:** `BP/functions/namespace/test.mcfunction`
 
 You may also refer to the [Style Guide](/meta/style-guide) for information about namespaces.
 
 ## Namespace Registry
 
 The Bedrock OSS organization maintains a mapping betweeen namespaces, and the author/addon name. You can consider [registering your namespaces there.](https://github.com/Bedrock-OSS/add-on-registry)
-

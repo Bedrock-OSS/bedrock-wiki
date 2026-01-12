@@ -23,15 +23,15 @@ First we will define the single block feature. It will define the block that is 
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:single_block_feature": {
-		"description": {
-			"identifier": "wiki:stone_feature"
-		},
-		"places_block": "minecraft:stone",
-		"enforce_survivability_rules": false,
-		"enforce_placement_rules": false
-	}
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "wiki:stone_feature"
+        },
+        "places_block": "minecraft:stone",
+        "enforce_survivability_rules": false,
+        "enforce_placement_rules": false
+    }
 }
 ```
 
@@ -43,20 +43,20 @@ The scatter feature is the main feature which we'll be using to generate the ter
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:scatter_feature": {
-		"description": {
-			"identifier": "wiki:column"
-		},
-		"iterations": "t.height=64+(q.noise(v.originz/64,v.originx/64))*16; return t.height;",
-		"places_feature": "wiki:stone_feature",
-		"x": 0,
-		"z": 0,
-		"y": {
-			"extent": [-64, "t.height"],
-			"distribution": "fixed_grid"
-		}
-	}
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "wiki:column"
+        },
+        "iterations": "t.height=64+(q.noise(v.originz/64,v.originx/64))*16; return t.height;",
+        "places_feature": "wiki:stone_feature",
+        "x": 0,
+        "z": 0,
+        "y": {
+            "extent": [-64, "t.height"],
+            "distribution": "fixed_grid"
+        }
+    }
 }
 ```
 
@@ -74,40 +74,40 @@ So what's happening here is that we are getting values from the `t.height` temp 
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:feature_rules": {
-		"description": {
-			"identifier": "wiki:column_grid_placement",
-			"places_feature": "wiki:column"
-		},
-		"conditions": {
-			"placement_pass": "first_pass",
-			"minecraft:biome_filter": {
-				"any_of": [
-					{
-						"test": "has_biome_tag",
-						"value": "overworld"
-					},
-					{
-						"test": "has_biome_tag",
-						"value": "overworld_generation"
-					}
-				]
-			}
-		},
-		"distribution": {
-			"iterations": 256,
-			"x": {
-				"extent": [0, 15],
-				"distribution": "fixed_grid"
-			},
-			"y": 0,
-			"z": {
-				"extent": [0, 15],
-				"distribution": "fixed_grid"
-			}
-		}
-	}
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "wiki:column_grid_placement",
+            "places_feature": "wiki:column"
+        },
+        "conditions": {
+            "placement_pass": "first_pass",
+            "minecraft:biome_filter": {
+                "any_of": [
+                    {
+                        "test": "has_biome_tag",
+                        "value": "overworld"
+                    },
+                    {
+                        "test": "has_biome_tag",
+                        "value": "overworld_generation"
+                    }
+                ]
+            }
+        },
+        "distribution": {
+            "iterations": 256,
+            "x": {
+                "extent": [0, 15],
+                "distribution": "fixed_grid"
+            },
+            "y": 0,
+            "z": {
+                "extent": [0, 15],
+                "distribution": "fixed_grid"
+            }
+        }
+    }
 }
 ```
 

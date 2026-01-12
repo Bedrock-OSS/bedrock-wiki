@@ -72,16 +72,18 @@ It is often helpful for organizational purposes to not add many elements to the 
 },
 
 "root_panel": {
-	"modifications": [
-		{
-			"array_name": "controls",
-			"operation": "insert_front",
-			"value": [
-				{ "hud_elements_panel@hud.hud_elements_panel": {} }
-			]
-		}
-	]
+"modifications": [
+{
+"array_name": "controls",
+"operation": "insert_front",
+"value": [
+{ "hud_elements_panel@hud.hud_elements_panel": {} }
+]
+}
+]
 },
+
 ```
 
 The `hud_elements_panel` does not have its size parameter directly defined so that it will inherit its parent's (`root_panel`) size. This allows child anchoring, % size, etc. to work relative to the hud screen.
+```

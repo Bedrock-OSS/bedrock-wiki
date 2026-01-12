@@ -32,7 +32,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 ## Dummies
 
 | Type      | Query                                                         | Component                    | Notes                                                                                                                             |
-|-----------|---------------------------------------------------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Int**   | q.variant                                                     | minecraft:variant            |                                                                                                                                   |
 | **Int**   | q.mark_variant                                                | minecraft:mark_variant       |                                                                                                                                   |
 | **Int**   | q.skin_id                                                     | minecraft:skin_id            |                                                                                                                                   |
@@ -51,7 +51,8 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit       | q.can_power_jump                                              | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
 | Bit       | q.is_ignited                                                  | minecraft:is_ignited         |                                                                                                                                   |
 | Bit       | q.out_of_control                                              | minecraft:out_of_control     | New, used by code for hardcoded boat movement/particle stuff, and the Molang q. Probably safe                                     |
-| Bit   | q.has_any_family('monster')                            | minecraft:type_family         | Can use a family type and return a bit value from a family such as 'monster' as true or false.
+| Bit       | q.has_any_family('monster')                                   | minecraft:type_family        | Can use a family type and return a bit value from a family such as 'monster' as true or false.                                    |
+
 ### Colors for the color and color2 components
 
 -   black

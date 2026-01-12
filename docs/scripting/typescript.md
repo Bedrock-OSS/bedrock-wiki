@@ -2,14 +2,14 @@
 title: TypeScript
 category: Documentation
 mentions:
-  - BlueFrog130
-  - sermah
-  - SmokeyStack
-  - SirLich
-  - Fabrimat
-  - JaylyDev
-  - Herobrine643928
-  - ThomasOrs
+    - BlueFrog130
+    - sermah
+    - SmokeyStack
+    - SirLich
+    - Fabrimat
+    - JaylyDev
+    - Herobrine643928
+    - ThomasOrs
 description: TypeScript in MCBE add-on developing.
 ---
 
@@ -89,17 +89,17 @@ Now the project can be initialized. The next step is to create a TypeScript proj
 
 ```json
 {
-  "compilerOptions": {
-    "module": "ES2020",
-    "target": "ES2021",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "rootDir": "./src",
-    "outDir": "./scripts"
-  },
-  "exclude": [ "node_modules" ],
-  "include": [ "src" ]
+    "compilerOptions": {
+        "module": "ES2020",
+        "target": "ES2021",
+        "moduleResolution": "Node",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./src",
+        "rootDir": "./src",
+        "outDir": "./scripts"
+    },
+    "exclude": ["node_modules"],
+    "include": ["src"]
 }
 ```
 
@@ -126,17 +126,17 @@ Now write your first TypeScript code in `src` directory, for example below:
 <CodeHeader>BP/src/Main.ts</CodeHeader>
 
 ```ts
-import { Player, EntityQueryOptions, GameMode, Vector3, world } from '@minecraft/server';
+import { Player, EntityQueryOptions, GameMode, Vector3, world } from "@minecraft/server";
 
 // Example function that uses the provided types
 function findPlayersInSurvivalMode(location: Vector3): Player[] {
-  const options: EntityQueryOptions = {
-    gameMode: GameMode.survival,
-    location: location,
-  };
+    const options: EntityQueryOptions = {
+        gameMode: GameMode.survival,
+        location: location,
+    };
 
-  const players: Player[] = world.getPlayers(options);
-  return players;
+    const players: Player[] = world.getPlayers(options);
+    return players;
 }
 
 // Example usage
@@ -177,7 +177,7 @@ Now the `src/Main.ts` file should have been transpiled to `scripts/Main.js` with
 <CodeHeader>BP/scripts/Main.js</CodeHeader>
 
 ```js
-import { GameMode, world } from '@minecraft/server';
+import { GameMode, world } from "@minecraft/server";
 // Example function that uses the provided types
 function findPlayersInSurvivalMode(location) {
     const options = {

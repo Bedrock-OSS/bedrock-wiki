@@ -186,7 +186,12 @@ In command autocompletions, its syntax is the following:
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from "@minecraft/server";
+import {
+    CommandPermissionLevel,
+    CustomCommandParamType,
+    CustomCommandStatus,
+    system,
+} from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     // Register an enum for teleport locations
@@ -209,9 +214,10 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
         },
         (origin, teleportLocation) => {
             // Only run if executed by an entity
-            if (!origin.sourceEntity) return {
-                status: CustomCommandStatus.Failure,
-            };
+            if (!origin.sourceEntity)
+                return {
+                    status: CustomCommandStatus.Failure,
+                };
 
             let location;
 
@@ -231,7 +237,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
             return {
                 status: CustomCommandStatus.Success,
                 message: "Teleporting to " + teleportLocation,
-            }
+            };
         }
     );
 });
@@ -247,7 +253,13 @@ This command will restore the player's health back to full.
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system, Player } from "@minecraft/server";
+import {
+    CommandPermissionLevel,
+    CustomCommandParamType,
+    CustomCommandStatus,
+    system,
+    Player,
+} from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     customCommandRegistry.registerCommand(
@@ -255,7 +267,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
             name: "wiki:heal",
             description: "Restore your health to the default value.",
             permissionLevel: CommandPermissionLevel.Any,
-            cheatsRequired: false
+            cheatsRequired: false,
         },
         (origin) => {
             const source = origin.initiator ?? origin.sourceEntity;
