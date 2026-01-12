@@ -19,6 +19,44 @@ This page will discuss some of the ways that solid entities can be created.
 
 Not all techniques are ideal for all scenarios. Experiment, and figure out what works best for you.
 
+## minecraft:is_collidable
+
+```json
+{
+  "format_version": "1.21.130",
+  "minecraft:entity": {
+    "components": {
+      "minecraft:body_rotation_blocked": {},
+      "minecraft:collision_box": {
+        "height": 1,
+        "width": 1
+      },
+      "minecraft:health": {
+        "max": 1,
+        "value": 1
+      },
+      "minecraft:is_collidable": {},
+      "minecraft:renders_when_invisible": {},
+      "minecraft:rotation_axis_aligned": {},
+      "minecraft:spell_effects": {
+        "add_effects": [
+          {
+            "duration": "infinite",
+            "effect": "invisibility",
+            "visible": false
+          }
+        ]
+      }
+    },
+    "description": {
+      "identifier": "wiki:solid_block",
+      "is_spawnable": true,
+      "is_summonable": true
+    }
+  }
+}
+```
+
 ## Runtime Identifiers
 
 [Runtime identifiers](/entities/runtime-identifier) can be used to achieve solid entities, but currently only 2, each with a specific shape, and their own side effects. Neither collision shapes are possible to change or scale.
