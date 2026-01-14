@@ -4,8 +4,8 @@ category: Tutorials
 mentions:
     - DerpMcaddon
     - SirLich
+    - Supernova3695
 tags:
-    - experimental
 description: Add your structure to world generation.
 ---
 
@@ -22,11 +22,14 @@ This tutorial will show you how to make:
 
 -   Water surface structure
 
+:::warning
+As of 1.21.130 Android devices cannot export structure files.
+:::
 :::tip
-For exporting structure on android devices, use this [resource pack](https://mcpedl.com/export-structure-button-android-addon/)
+For more complex structures use [Jigsaw Structures](/world-generation/jigsaw-structures
 :::
 
-Make sure you put the `.mcstructure` file inside of `BP/structures/`!
+Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nest the file is a subfolder such as `BP/structures/houses/oak` the structure prefix will assume the name of the parent folder. If your structure is called house and it is in the oak subfolder it will be named `oak:house` in the `"structure_name"` field. 
 
 ## Surface Structure
 
