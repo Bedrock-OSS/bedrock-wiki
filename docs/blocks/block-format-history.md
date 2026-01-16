@@ -24,6 +24,8 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ### Traits
 
+<Label color="green">Versioned</Label>
+
 -   Released `minecraft:connection` from experimental
 -   Updated `minecraft:placement_direction`
     -   Released `blocks_to_corner_with` parameter from experimental
