@@ -2,8 +2,6 @@
 title: Item Catalog
 description: Learn how to specify where items appear in the creative menu and recipe book, as well as how to add your own expandable groups to the creative menu.
 category: General
-tags:
-    - guide
 license: true
 mentions:
     - Supernova3695
