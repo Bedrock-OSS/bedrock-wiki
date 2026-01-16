@@ -33,10 +33,10 @@ This determines which tab the items are under in the creative menu and recipe bo
 
 The four available categories are:
 
--    `"construction"`{lang=json}
--    `"equipment"`{lang=json}
--    `"items"`{lang=json}
--    `"nature"`{lang=json}
+-   `"construction"`{lang=json}
+-   `"equipment"`{lang=json}
+-   `"items"`{lang=json}
+-   `"nature"`{lang=json}
 
 For example, if we were adding items to the "Nature" tab, a new entry would be created in the `categories` array specifying `"nature"`{lang=json} as the `category_name`:
 
@@ -83,8 +83,8 @@ Note that custom groups in the item catalog will appear after vanilla groups.
 For creative mode players, you have the option to make groups of items expandable and collapsible.
 This can be achieved by adding the `group_identifier` parameter to the group.
 
--    `icon` determines the item to display as the group's icon.
--    `name` is the localization key to use as the name of the group. It can also be used to reference the group in the `menu_category` parameter of items and blocks.
+-   `icon` determines the item to display as the group's icon.
+-   `name` is the localization key to use as the name of the group. It can also be used to reference the group in the `menu_category` parameter of items and blocks.
 
 Let's use the `group_identifier` parameter to make our custom ore group take up less space in the creative menu!
 
