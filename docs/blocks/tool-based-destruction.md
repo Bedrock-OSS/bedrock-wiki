@@ -106,6 +106,9 @@ These tags can be applied to your block in its `components`:
 There is no proper way to specify which tools are required for a block to drop loot.
 The following section describes workarounds that can be used to replicate vanilla drop mechanics as well as possible.
 :::
+:::danger EXPLOSIONS
+The following workaround prevents block loot from dropping when destroyed by explosions, whereas vanilla blocks that require a tool will drop when exploded.
+:::
 :::danger SILK TOUCH
 It is impossible to prevent a block from dropping itself when mined using an item with the Silk Touch enchantment.
 :::
