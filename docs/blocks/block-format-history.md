@@ -810,9 +810,9 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `identifier`
     -   Defines the identifier of the block. Must have a namespace that isn't `minecraft`.
 -   Added `is_experimental`
-    -   Only registers the block if the `Use Experimental Gameplay` toggle is enabled in world settings.
+    -   Only registers the block if the "Use Experimental Gameplay" toggle is enabled in world settings.
 -   Added `register_to_creative_menu`
-    -   Causes the block to appear in the `Construction` category of the creative menu.
+    -   Causes the block to appear in the "Construction" category of the creative menu.
     -   Custom blocks cannot be added to the recipe book at this time.
 
 ### Components
@@ -833,6 +833,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Note that this is not a measure of resistance unlike in modern formats.
 -   Added `minecraft:loot`
     -   Determines the path of the loot table that will be dropped when this block is destroyed.
-    -   This component is ignored if the used tool has the `Silk Touch` enchantment.
+    -   This component is ignored if the used tool has the "Silk Touch" enchantment.
 -   Added `minecraft:map_color`
     -   Determines the color this block appears as on a map.
