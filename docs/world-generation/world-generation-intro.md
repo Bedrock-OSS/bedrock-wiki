@@ -1,10 +1,10 @@
 ---
 title: Intro to World Generation
+description: Learn about modifying world generation.
 category: General
 nav_order: 1
 tags:
     - guide
-    - experimental
 mentions:
     - SirLich
     - solvedDev
@@ -15,7 +15,6 @@ mentions:
     - retr0cube
     - SmokeyStack
     - Supernova3695
-description: Introduction to WorldGen.
 ---
 
 :::warning
@@ -111,13 +110,15 @@ _A non-smooth transition between the same biome, generated with noise_params as 
 
 -   `minecraft:replace_biomes` is the most important component of all. It tells the game where to place custom biomes in replacement of vanilla biomes at a percentage rate.
 
--   And, last but not least, BIOME TAGS! They're very simple, but useful. You can set however many of the vanilla or custom tags you want, by adding them in this format in `minecraft:tags` tags array:
+-   And, last but not least, BIOME TAGS! They're very simple, but useful. You can set however many of the vanilla or custom tags you want by adding them in this format in the `minecraft:tags` component:
 
-```
+<CodeHeader>minecraft:biome > components</CodeHeader>
+
+```json
 "minecraft:tags": {
     "tags": [
-        "customTag",
-        "anotherCustomTag"
+        "overworld",
+        "wiki:custom_tag"
     ]
 }
 ```
@@ -328,13 +329,13 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
 -   `structure_name` is the structure's identifier, the one you saved via a Structure Block.
 
 ### Jigsaw Structures
-As of preview 1.21.50.26 custom jigsaw structures are possible. They can be very small or very large, up to 256 blocks across! Jigsaws allow for large randomize structures like villages or trail ruins which can generate across the world and be located by `/locate` unlike structure features. They are very powerful and more info about them can be found on their [wiki page](/world-generation/jigsaw-structures). Jigsaws were stablized in 1.21.120.
+
+Jigsaw structures can be very small or very large, up to 256 blocks across!
+
+Jigsaws allow for large randomize structures like villages or trail ruins which can generate across the world and be located by `/locate` unlike structure features.
+They are very powerful and more information about them can be found [here](/world-generation/jigsaw-structures).
 
 That's pretty much it! Now you're able to generate your own custom Structures in the world.
-
----
-
----
 
 ## Your Progress So Far
 
