@@ -1,35 +1,32 @@
 ---
 title: Generating Custom Structures
+description: Learn how to add world generation features that place structures into your world.
 category: Tutorials
 mentions:
     - DerpMcaddon
     - SirLich
     - Supernova3695
-tags:
-description: Add your structure to world generation.
 ---
 
-Structure feature is one of the most basic feature. It places exported `.mcstructure` file in the world.
+The structure template feature is one of the most basic features, placing exported `.mcstructure` files into the world.
+
 This tutorial will show you how to make:
 
--   Surface structure,
-
--   Underground structure,
-
--   Floating structure,
-
--   Underwater structure, and
-
--   Water surface structure
+-   Surface structures
+-   Underground structures
+-   Floating structures
+-   Underwater structures
+-   Water surface structures
 
 :::warning
 As of 1.21.130 Android devices cannot export structure files.
 :::
 :::tip
-For more complex structures use [Jigsaw Structures](/world-generation/jigsaw-structures
+For more complex structures which are compatible with the `locate structure` command, use [jigsaw structures](/world-generation/jigsaw-structures).
 :::
 
-Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nest the file is a subfolder such as `BP/structures/houses/oak` the structure prefix will assume the name of the parent folder. If your structure is called house and it is in the oak subfolder it will be named `oak:house` in the `"structure_name"` field. 
+Make sure you put your `.mcstructure` files inside of the `BP/structures` folder!
+The first subfolder is used as the namespace for structure, meaning the structure name of `BP/structures/wiki/house.mcstructure` would be `wiki:house`.
 
 ## Surface Structure
 
@@ -44,7 +41,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
         "description": {
             "identifier": "wiki:house_feature"
         },
-        "structure_name": "mystructure:house",
+        "structure_name": "wiki:house",
         "adjustment_radius": 4,
         "facing_direction": "random",
         "constraints": {
@@ -52,7 +49,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
             "unburied": {},
             "block_intersection": {
                 "block_allowlist": [
-                    "minecraft:air" //The structure can only replace air
+                    "minecraft:air" // The structure can only replace air
                 ]
             }
         }
@@ -86,7 +83,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
                 "extent": [0, 16],
                 "distribution": "uniform"
             },
-            "y": "q.heightmap(v.worldx, v.worldz)", //Generates the feature on the highest block on the column
+            "y": "q.heightmap(v.worldx, v.worldz)", // Generates the feature on the highest block on the column
             "z": {
                 "extent": [0, 16],
                 "distribution": "uniform"
@@ -115,13 +112,13 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
         "description": {
             "identifier": "wiki:bunker_feature"
         },
-        "structure_name": "mystructure:bunker",
+        "structure_name": "wiki:bunker",
         "adjustment_radius": 4,
         "facing_direction": "random",
         "constraints": {
             "block_intersection": {
                 "block_allowlist": [
-                    "minecraft:air", //Makes the feature only replace air and stone
+                    "minecraft:air", // Makes the feature only replace air and stone
                     "minecraft:stone"
                 ]
             }
@@ -159,7 +156,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
             "y": {
                 "extent": [
                     11,
-                    50 //Makes the structure generate between y11 and y50
+                    50 // Makes the structure generate between y11 and y50
                 ],
                 "distribution": "uniform"
             },
@@ -191,13 +188,13 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
         "description": {
             "identifier": "wiki:balloon_feature"
         },
-        "structure_name": "mystructure:balloon",
+        "structure_name": "wiki:balloon",
         "adjustment_radius": 4,
         "facing_direction": "random",
         "constraints": {
             "block_intersection": {
                 "block_allowlist": [
-                    "minecraft:air" //Makes the structure only replace air
+                    "minecraft:air" // Makes the structure only replace air
                 ]
             }
         }
@@ -233,7 +230,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
             },
             "y": {
                 "extent": [
-                    100, //Makes the structure generate from y100 to y200
+                    100, // Makes the structure generate from y100 to y200
                     200
                 ],
                 "distribution": "uniform"
@@ -255,7 +252,7 @@ Make sure you put the `.mcstructure` file inside of `BP/structures/`! If you nes
 
 ## Underwater Structure
 
-::: tip
+:::tip
 For underwater structures, make sure you waterlogged the structure, because Minecraft won't waterlog them automatically!
 :::
 
@@ -270,13 +267,13 @@ For underwater structures, make sure you waterlogged the structure, because Mine
         "description": {
             "identifier": "wiki:aqua_temple_feature"
         },
-        "structure_name": "mystructure:aqua_temple",
+        "structure_name": "wiki:aqua_temple",
         "adjustment_radius": 4,
         "facing_direction": "random",
         "constraints": {
             "block_intersection": {
                 "block_allowlist": [
-                    "minecraft:water" //Makes the structure only replace water
+                    "minecraft:water" // Makes the structure only replace water
                 ]
             }
         }
@@ -310,7 +307,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
                 "extent": [0, 16],
                 "distribution": "uniform"
             },
-            "y": "q.above_top_solid(v.worldx, v.worldz)", //Places the feature on top of the highest solid block on the column, so it won't place it on the surface of the water
+            "y": "q.above_top_solid(v.worldx, v.worldz)", // Places the feature on top of the highest solid block on the column, so it won't place it on the surface of the water
             "z": {
                 "extent": [0, 16],
                 "distribution": "uniform"
@@ -339,13 +336,13 @@ For underwater structures, make sure you waterlogged the structure, because Mine
         "description": {
             "identifier": "wiki:raft_feature"
         },
-        "structure_name": "mystructure:raft",
+        "structure_name": "wiki:raft",
         "adjustment_radius": 4,
         "facing_direction": "random",
         "constraints": {
             "block_intersection": {
                 "block_allowlist": [
-                    "minecraft:water", //Makes the structure only replace air and water
+                    "minecraft:water", // Makes the structure only replace air and water
                     "minecraft:air"
                 ]
             }
@@ -380,7 +377,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
                 "extent": [0, 16],
                 "distribution": "uniform"
             },
-            "y": 62, //Makes the feature generate only on y62, which is Minecraft water level
+            "y": 62, // Makes the feature generate only on y62, which is Minecraft water level
             "z": {
                 "extent": [0, 16],
                 "distribution": "uniform"
