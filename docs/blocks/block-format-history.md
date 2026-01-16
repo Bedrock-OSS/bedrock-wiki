@@ -803,7 +803,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `transform` response
 -   Added `trigger` response
 
-## 1.10.0
+## 1.12.0
 
 ### Description
 
