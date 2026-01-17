@@ -124,6 +124,10 @@ If your project needs other module to run your code, add the other dependencies 
 
 **Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, and add many of experimental features in the API. These APIs can be changed, removed, or added to with very little warning, and are prone to breaking. Be warned!
 
+::: tip
+As of v1.21.120, you are now able to set the version property to `beta` to always choose the latest beta version of the module. This applies to `server`, `server-ui`, `server-admin`, `server-net`, `server-gametest`, and `debug-utilities`
+:::
+
 -   `@minecraft/server`:
 
     -   [`2.3.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0-beta.1.21.114-stable) (1.21.114)
