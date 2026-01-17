@@ -122,10 +122,10 @@ If your project needs other module to run your code, add the other dependencies 
     -   [`1.1.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.1.0) (Requires `@minecraft/server@1.2.0` or above)
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.0.0) (Requires `@minecraft/server@1.2.0`)
 
-**Beta API modules**, requires the Beta APIs experiment to be turned on in world settings, and add many of experimental features in the API. These APIs can be changed, removed, or added to with very little warning, and are prone to breaking. Be warned!
+**Beta API modules**, require the "Beta APIs" experiment to be turned on in world settings. These APIs can be changed, removed, or added to with very little warning, and are prone to breaking. Be warned!
 
 ::: tip
-As of v1.21.120, you are now able to set the version property to `beta` to always choose the latest beta version of the module. This applies to `server`, `server-ui`, `server-admin`, `server-net`, `server-gametest`, and `debug-utilities`
+As of v1.21.120, you are now able to set the dependency `version` property to `"beta"`{lang=json} to always choose the latest beta version of each native module.
 :::
 
 -   `@minecraft/server`:
