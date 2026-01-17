@@ -8,12 +8,16 @@ export default function useRedirect() {
   const router = useRouter();
 
   function redirect() {
-    const from = router.route.path.replace(".html", "");
+    let from = router.route.path.replace(".html", "");
+    let to = theme.value.redirects[from];
 
-    const to = theme.value.redirects[from];
-    if (to === undefined) return;
+    // Support redirects for specific sections of pages
+    if (to === undefined) {
+      from += window.location.hash;
+      to = theme.value.redirects[from];
+    }
 
-    router.go(to);
+    if (to) router.go(to);
   }
 
   onBeforeMount(redirect);

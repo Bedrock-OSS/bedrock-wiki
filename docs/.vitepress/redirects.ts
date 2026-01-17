@@ -5,6 +5,7 @@ export default {
   "/blocks/block-materials": "/blocks/block-components#render-methods",
   "/blocks/blocks-16": "/blocks/blocks-intro",
   "/blocks/blocks-stable": "/blocks/blocks-intro",
+  "/blocks/block-tags#list-of-vanilla-tags": "/blocks/vanilla-block-tags",
   "/blocks/custom-trapdoor": "/blocks/custom-trapdoors",
 
   "/commands/nbt-commands": "/commands/giving-nbt-items",
@@ -45,6 +46,7 @@ export default {
   "/items/3d-items": "/items/attachables",
   "/items/custom-pottery-sherd": "/items/custom-pottery-sherds",
   "/items/item-categories": "/documentation/menu-categories",
+  "/items/item-tags#list-of-vanilla-tags": "/items/vanilla-item-tags",
 
   "/json-ui/custom-buttons": "/json-ui/buttons-and-toggles",
 

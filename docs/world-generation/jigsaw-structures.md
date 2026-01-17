@@ -169,7 +169,7 @@ Protected blocks processors allow for specification of a block tag that will not
 
 A protected block processor allows for 1 field:
 
--   `value`: A [block tag](https://wiki.bedrock.dev/blocks/block-tags#list-of-vanilla-tags).
+-   `value`: A [block tag](https://wiki.bedrock.dev/blocks/vanilla-block-tags).
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
