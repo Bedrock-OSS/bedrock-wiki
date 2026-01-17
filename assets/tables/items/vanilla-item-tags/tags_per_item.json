@@ -1,0 +1,2183 @@
+{
+  "columns": {
+    "item": {
+      "name": "Item",
+      "sortable": true
+    },
+    "tags": {
+      "name": "Tags"
+    }
+  },
+  "rows": [
+    {
+      "item": "`minecraft:acacia_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:acacia_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:acacia_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:acacia_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:acacia_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:acacia_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:acacia_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:acacia_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:acacia_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:allay_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:amethyst_shard`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:angler_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:apple`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:archer_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:armadillo_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:arms_up_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:arrow`",
+      "tags": ["`minecraft:arrow`"]
+    },
+    {
+      "item": "`minecraft:axolotl_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:baked_potato`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:bamboo_chest_raft`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:bamboo_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:bamboo_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:bamboo_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:bamboo_raft`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:bamboo_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:bamboo_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:banner`",
+      "tags": ["`minecraft:banner`"]
+    },
+    {
+      "item": "`minecraft:bat_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:bee_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:beef`",
+      "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:beetroot`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:beetroot_soup`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:birch_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:birch_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:birch_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:birch_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:birch_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:birch_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:birch_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:birch_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:birch_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:black_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:black_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:black_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:blackstone`",
+      "tags": ["`minecraft:stone_crafting_materials`", "`minecraft:stone_tool_materials`"]
+    },
+    {
+      "item": "`minecraft:blade_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:blaze_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:blue_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:blue_egg`",
+      "tags": ["`minecraft:egg`"]
+    },
+    {
+      "item": "`minecraft:blue_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:blue_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:bogged_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:bolt_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:book`",
+      "tags": ["`minecraft:bookshelf_books`"]
+    },
+    {
+      "item": "`minecraft:bread`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:breeze_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:brewer_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:brick`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:brown_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:brown_egg`",
+      "tags": ["`minecraft:egg`"]
+    },
+    {
+      "item": "`minecraft:brown_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:brown_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:burn_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:camel_husk_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:camel_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:carrot`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:cat_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:cave_spider_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:chainmail_boots`",
+      "tags": ["`minecraft:chainmail_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:chainmail_chestplate`",
+      "tags": ["`minecraft:chainmail_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:chainmail_helmet`",
+      "tags": ["`minecraft:chainmail_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:chainmail_leggings`",
+      "tags": ["`minecraft:chainmail_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:charcoal`",
+      "tags": ["`minecraft:coals`"]
+    },
+    {
+      "item": "`minecraft:cherry_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:cherry_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:cherry_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:cherry_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:cherry_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:cherry_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:cherry_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:cherry_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:cherry_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:chest_minecart`",
+      "tags": ["`minecraft:is_minecart`"]
+    },
+    {
+      "item": "`minecraft:chicken`",
+      "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:chicken_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:chiseled_stone_bricks`",
+      "tags": ["`minecraft:stone_bricks`"]
+    },
+    {
+      "item": "`minecraft:chorus_fruit`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:coal`",
+      "tags": ["`minecraft:coals`"]
+    },
+    {
+      "item": "`minecraft:coast_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:cobbled_deepslate`",
+      "tags": ["`minecraft:stone_crafting_materials`", "`minecraft:stone_tool_materials`"]
+    },
+    {
+      "item": "`minecraft:cobblestone`",
+      "tags": ["`minecraft:stone_crafting_materials`", "`minecraft:stone_tool_materials`"]
+    },
+    {
+      "item": "`minecraft:cod`",
+      "tags": ["`minecraft:is_fish`", "`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:cod_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:command_block_minecart`",
+      "tags": ["`minecraft:is_minecart`"]
+    },
+    {
+      "item": "`minecraft:cooked_beef`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:cooked_chicken`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:cooked_cod`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_fish`", "`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:cooked_mutton`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:cooked_porkchop`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:cooked_rabbit`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:cooked_salmon`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_fish`", "`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:cookie`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:copper_axe`",
+      "tags": [
+        "`minecraft:copper_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:copper_boots`",
+      "tags": ["`minecraft:copper_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:copper_chestplate`",
+      "tags": ["`minecraft:copper_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:copper_golem_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:copper_helmet`",
+      "tags": ["`minecraft:copper_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:copper_hoe`",
+      "tags": [
+        "`minecraft:copper_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:copper_horse_armor`",
+      "tags": ["`minecraft:horse_armor`"]
+    },
+    {
+      "item": "`minecraft:copper_ingot`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:copper_leggings`",
+      "tags": ["`minecraft:copper_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:copper_nautilus_armor`",
+      "tags": ["`minecraft:nautilus_armor`"]
+    },
+    {
+      "item": "`minecraft:copper_nugget`",
+      "tags": ["`minecraft:metal_nuggets`"]
+    },
+    {
+      "item": "`minecraft:copper_pickaxe`",
+      "tags": [
+        "`minecraft:copper_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:copper_shovel`",
+      "tags": [
+        "`minecraft:copper_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:copper_spear`",
+      "tags": ["`minecraft:copper_tier`", "`minecraft:is_spear`"]
+    },
+    {
+      "item": "`minecraft:copper_sword`",
+      "tags": ["`minecraft:copper_tier`", "`minecraft:is_sword`", "`minecraft:is_tool`"]
+    },
+    {
+      "item": "`minecraft:cow_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:cracked_stone_bricks`",
+      "tags": ["`minecraft:stone_bricks`"]
+    },
+    {
+      "item": "`minecraft:creaking_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:creeper_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:crimson_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:crimson_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:crimson_hyphae`",
+      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+    },
+    {
+      "item": "`minecraft:crimson_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:crimson_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:crimson_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:crimson_stem`",
+      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+    },
+    {
+      "item": "`minecraft:cyan_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:cyan_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:cyan_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:danger_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:dark_oak_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:diamond`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:diamond_axe`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`",
+        "`minecraft:transformable_items`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_boots`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:is_armor`",
+        "`minecraft:transformable_items`",
+        "`minecraft:trimmable_armors`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_chestplate`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:is_armor`",
+        "`minecraft:transformable_items`",
+        "`minecraft:trimmable_armors`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_helmet`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:is_armor`",
+        "`minecraft:transformable_items`",
+        "`minecraft:trimmable_armors`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_hoe`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`",
+        "`minecraft:transformable_items`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_horse_armor`",
+      "tags": ["`minecraft:horse_armor`", "`minecraft:transformable_items`"]
+    },
+    {
+      "item": "`minecraft:diamond_leggings`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:is_armor`",
+        "`minecraft:transformable_items`",
+        "`minecraft:trimmable_armors`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_nautilus_armor`",
+      "tags": ["`minecraft:nautilus_armor`", "`minecraft:transformable_items`"]
+    },
+    {
+      "item": "`minecraft:diamond_pickaxe`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`",
+        "`minecraft:transformable_items`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_shovel`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:digger`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`",
+        "`minecraft:transformable_items`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_spear`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:is_spear`",
+        "`minecraft:transformable_items`"
+      ]
+    },
+    {
+      "item": "`minecraft:diamond_sword`",
+      "tags": [
+        "`minecraft:diamond_tier`",
+        "`minecraft:is_sword`",
+        "`minecraft:is_tool`",
+        "`minecraft:transformable_items`"
+      ]
+    },
+    {
+      "item": "`minecraft:dolphin_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:donkey_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:dried_kelp`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:drowned_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:dune_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:egg`",
+      "tags": ["`minecraft:egg`"]
+    },
+    {
+      "item": "`minecraft:elder_guardian_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:elytra`",
+      "tags": ["`minecraft:is_armor`"]
+    },
+    {
+      "item": "`minecraft:emerald`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:enchanted_book`",
+      "tags": ["`minecraft:bookshelf_books`"]
+    },
+    {
+      "item": "`minecraft:enchanted_golden_apple`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:ender_dragon_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:enderman_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:endermite_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:evoker_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:explorer_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:exposed_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:eye_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:flow_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:flow_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:fox_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:friend_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:frog_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:ghast_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:glow_squid_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:goat_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:gold_ingot`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:gold_nugget`",
+      "tags": ["`minecraft:metal_nuggets`"]
+    },
+    {
+      "item": "`minecraft:golden_apple`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:golden_axe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:golden_tier`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:golden_boots`",
+      "tags": [
+        "`minecraft:golden_tier`",
+        "`minecraft:is_armor`",
+        "`minecraft:transformable_items`",
+        "`minecraft:trimmable_armors`"
+      ]
+    },
+    {
+      "item": "`minecraft:golden_carrot`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:golden_chestplate`",
+      "tags": ["`minecraft:golden_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:golden_helmet`",
+      "tags": ["`minecraft:golden_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:golden_hoe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:golden_tier`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:golden_horse_armor`",
+      "tags": ["`minecraft:horse_armor`"]
+    },
+    {
+      "item": "`minecraft:golden_leggings`",
+      "tags": ["`minecraft:golden_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:golden_nautilus_armor`",
+      "tags": ["`minecraft:nautilus_armor`"]
+    },
+    {
+      "item": "`minecraft:golden_pickaxe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:golden_tier`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:golden_shovel`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:golden_tier`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:golden_spear`",
+      "tags": ["`minecraft:golden_tier`", "`minecraft:is_spear`"]
+    },
+    {
+      "item": "`minecraft:golden_sword`",
+      "tags": ["`minecraft:golden_tier`", "`minecraft:is_sword`", "`minecraft:is_tool`"]
+    },
+    {
+      "item": "`minecraft:gray_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:gray_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:gray_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:green_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:green_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:green_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:guardian_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:guster_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:happy_ghast_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:heart_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:heartbreak_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:hoglin_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:honey_bottle`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:hopper_minecart`",
+      "tags": ["`minecraft:is_minecart`"]
+    },
+    {
+      "item": "`minecraft:horse_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:host_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:howl_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:husk_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:iron_axe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:iron_tier`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:iron_boots`",
+      "tags": ["`minecraft:iron_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:iron_chestplate`",
+      "tags": ["`minecraft:iron_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:iron_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:iron_golem_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:iron_helmet`",
+      "tags": ["`minecraft:iron_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:iron_hoe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:iron_tier`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:iron_horse_armor`",
+      "tags": ["`minecraft:horse_armor`"]
+    },
+    {
+      "item": "`minecraft:iron_ingot`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:iron_leggings`",
+      "tags": ["`minecraft:iron_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:iron_nautilus_armor`",
+      "tags": ["`minecraft:nautilus_armor`"]
+    },
+    {
+      "item": "`minecraft:iron_nugget`",
+      "tags": ["`minecraft:metal_nuggets`"]
+    },
+    {
+      "item": "`minecraft:iron_pickaxe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:iron_tier`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:iron_shovel`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:iron_tier`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`"
+      ]
+    },
+    {
+      "item": "`minecraft:iron_spear`",
+      "tags": ["`minecraft:iron_tier`", "`minecraft:is_spear`"]
+    },
+    {
+      "item": "`minecraft:iron_sword`",
+      "tags": ["`minecraft:iron_tier`", "`minecraft:is_sword`", "`minecraft:is_tool`"]
+    },
+    {
+      "item": "`minecraft:jungle_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:jungle_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:jungle_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:jungle_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:jungle_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:jungle_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:jungle_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:jungle_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:jungle_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:lapis_lazuli`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:leather_boots`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:leather_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:leather_chestplate`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:leather_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:leather_helmet`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:leather_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:leather_horse_armor`",
+      "tags": ["`minecraft:horse_armor`"]
+    },
+    {
+      "item": "`minecraft:leather_leggings`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:leather_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:light_blue_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:light_blue_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:light_blue_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:light_gray_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:light_gray_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:light_gray_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:lime_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:lime_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:lime_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:llama_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:mace`",
+      "tags": ["`minecraft:diamond_tier`", "`minecraft:is_sword`", "`minecraft:is_tool`"]
+    },
+    {
+      "item": "`minecraft:magenta_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:magenta_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:magenta_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:magma_cube_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:mangrove_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:mangrove_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:mangrove_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:mangrove_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:mangrove_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+    },
+    {
+      "item": "`minecraft:mangrove_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:mangrove_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:mangrove_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:mangrove_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+    },
+    {
+      "item": "`minecraft:melon_slice`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:minecart`",
+      "tags": ["`minecraft:is_minecart`"]
+    },
+    {
+      "item": "`minecraft:miner_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:mooshroom_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:mossy_stone_bricks`",
+      "tags": ["`minecraft:stone_bricks`"]
+    },
+    {
+      "item": "`minecraft:mourner_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:mule_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:mushroom_stew`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:music_disc_11`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_13`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_5`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_blocks`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_cat`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_chirp`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_creator`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_creator_music_box`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_far`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_lava_chicken`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_mall`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_mellohi`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_otherside`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_pigstep`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_precipice`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_relic`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_stal`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_strad`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_tears`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_wait`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:music_disc_ward`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
+      "item": "`minecraft:mutton`",
+      "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:nautilus_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:netherite_axe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`",
+        "`minecraft:netherite_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:netherite_boots`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:netherite_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:netherite_chestplate`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:netherite_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:netherite_helmet`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:netherite_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:netherite_hoe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`",
+        "`minecraft:netherite_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:netherite_horse_armor`",
+      "tags": ["`minecraft:horse_armor`", "`minecraft:netherite_tier`"]
+    },
+    {
+      "item": "`minecraft:netherite_ingot`",
+      "tags": ["`minecraft:transform_materials`", "`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:netherite_leggings`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:netherite_tier`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:netherite_nautilus_armor`",
+      "tags": ["`minecraft:nautilus_armor`", "`minecraft:netherite_tier`"]
+    },
+    {
+      "item": "`minecraft:netherite_pickaxe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`",
+        "`minecraft:netherite_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:netherite_shovel`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`",
+        "`minecraft:netherite_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:netherite_spear`",
+      "tags": ["`minecraft:is_spear`", "`minecraft:netherite_tier`"]
+    },
+    {
+      "item": "`minecraft:netherite_sword`",
+      "tags": ["`minecraft:is_sword`", "`minecraft:is_tool`", "`minecraft:netherite_tier`"]
+    },
+    {
+      "item": "`minecraft:netherite_upgrade_smithing_template`",
+      "tags": ["`minecraft:transform_templates`"]
+    },
+    {
+      "item": "`minecraft:oak_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:oak_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:oak_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:oak_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:oak_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:oak_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:oak_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:oak_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:ocelot_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:orange_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:orange_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:orange_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:oxidized_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:painting`",
+      "tags": ["`minecraft:hanging_actor`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:pale_oak_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:panda_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:parched_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:parrot_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:phantom_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:pig_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:piglin_brute_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:piglin_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:pillager_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:pink_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:pink_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:pink_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:plenty_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:poisonous_potato`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:polar_bear_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:porkchop`",
+      "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:potato`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:prize_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:pufferfish`",
+      "tags": ["`minecraft:is_fish`", "`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:pufferfish_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:pumpkin_pie`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:purple_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:purple_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:purple_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:quartz`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:rabbit`",
+      "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:rabbit_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:rabbit_stew`",
+      "tags": ["`minecraft:is_cooked`", "`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:raiser_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:ravager_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:red_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:red_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:red_sand`",
+      "tags": ["`minecraft:sand`"]
+    },
+    {
+      "item": "`minecraft:red_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:redstone`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:resin_brick`",
+      "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:rib_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:rotten_flesh`",
+      "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
+    },
+    {
+      "item": "`minecraft:salmon`",
+      "tags": ["`minecraft:is_fish`", "`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:salmon_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:sand`",
+      "tags": ["`minecraft:sand`"]
+    },
+    {
+      "item": "`minecraft:scrape_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:sentry_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:shaper_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:sheaf_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:shears`",
+      "tags": ["`minecraft:is_shears`"]
+    },
+    {
+      "item": "`minecraft:sheep_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:shelter_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:shulker_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:silence_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:silverfish_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:skeleton_horse_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:skeleton_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:skull_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:slime_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:sniffer_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:snort_pottery_sherd`",
+      "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:snout_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:snow_golem_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:soul_sand`",
+      "tags": ["`minecraft:soul_fire_base_blocks`"]
+    },
+    {
+      "item": "`minecraft:soul_soil`",
+      "tags": ["`minecraft:soul_fire_base_blocks`"]
+    },
+    {
+      "item": "`minecraft:spider_eye`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:spider_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:spire_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:spruce_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:spruce_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:spruce_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:spruce_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:spruce_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:spruce_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:spruce_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:spruce_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:spruce_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:squid_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:stone_axe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`",
+        "`minecraft:stone_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:stone_bricks`",
+      "tags": ["`minecraft:stone_bricks`"]
+    },
+    {
+      "item": "`minecraft:stone_hoe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`",
+        "`minecraft:stone_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:stone_pickaxe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`",
+        "`minecraft:stone_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:stone_shovel`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`",
+        "`minecraft:stone_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:stone_spear`",
+      "tags": ["`minecraft:is_spear`", "`minecraft:stone_tier`"]
+    },
+    {
+      "item": "`minecraft:stone_sword`",
+      "tags": ["`minecraft:is_sword`", "`minecraft:is_tool`", "`minecraft:stone_tier`"]
+    },
+    {
+      "item": "`minecraft:stray_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:strider_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:stripped_acacia_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_acacia_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_birch_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_birch_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_cherry_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_cherry_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_crimson_hyphae`",
+      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+    },
+    {
+      "item": "`minecraft:stripped_crimson_stem`",
+      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+    },
+    {
+      "item": "`minecraft:stripped_dark_oak_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_dark_oak_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_jungle_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_jungle_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_mangrove_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+    },
+    {
+      "item": "`minecraft:stripped_mangrove_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+    },
+    {
+      "item": "`minecraft:stripped_oak_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_oak_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_pale_oak_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_pale_oak_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_spruce_log`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_spruce_wood`",
+      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+    },
+    {
+      "item": "`minecraft:stripped_warped_hyphae`",
+      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+    },
+    {
+      "item": "`minecraft:stripped_warped_stem`",
+      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+    },
+    {
+      "item": "`minecraft:suspicious_stew`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:sweet_berries`",
+      "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:tadpole_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:tide_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:tnt_minecart`",
+      "tags": ["`minecraft:is_minecart`"]
+    },
+    {
+      "item": "`minecraft:trader_llama_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:trident`",
+      "tags": ["`minecraft:is_trident`"]
+    },
+    {
+      "item": "`minecraft:tropical_fish`",
+      "tags": ["`minecraft:is_fish`", "`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:tropical_fish_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:turtle_helmet`",
+      "tags": ["`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:turtle_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:vex_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:vex_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:villager_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:vindicator_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:wandering_trader_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:ward_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:warden_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:warped_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:warped_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:warped_hyphae`",
+      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+    },
+    {
+      "item": "`minecraft:warped_planks`",
+      "tags": ["`minecraft:planks`"]
+    },
+    {
+      "item": "`minecraft:warped_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:warped_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:warped_stem`",
+      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+    },
+    {
+      "item": "`minecraft:waxed_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:waxed_exposed_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:waxed_oxidized_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:waxed_weathered_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:wayfinder_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:weathered_copper_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:white_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:white_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:white_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:wild_armor_trim_smithing_template`",
+      "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:witch_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:wither_skeleton_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:wither_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:wolf_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:wooden_axe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_axe`",
+        "`minecraft:is_tool`",
+        "`minecraft:wooden_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:wooden_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:wooden_hoe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_hoe`",
+        "`minecraft:is_tool`",
+        "`minecraft:wooden_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:wooden_pickaxe`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_pickaxe`",
+        "`minecraft:is_tool`",
+        "`minecraft:wooden_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:wooden_shovel`",
+      "tags": [
+        "`minecraft:digger`",
+        "`minecraft:is_shovel`",
+        "`minecraft:is_tool`",
+        "`minecraft:wooden_tier`"
+      ]
+    },
+    {
+      "item": "`minecraft:wooden_spear`",
+      "tags": ["`minecraft:is_spear`", "`minecraft:wooden_tier`"]
+    },
+    {
+      "item": "`minecraft:wooden_sword`",
+      "tags": ["`minecraft:is_sword`", "`minecraft:is_tool`", "`minecraft:wooden_tier`"]
+    },
+    {
+      "item": "`minecraft:writable_book`",
+      "tags": ["`minecraft:bookshelf_books`", "`minecraft:lectern_books`"]
+    },
+    {
+      "item": "`minecraft:yellow_carpet`",
+      "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:yellow_harness`",
+      "tags": ["`minecraft:harness`"]
+    },
+    {
+      "item": "`minecraft:yellow_wool`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:zoglin_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:zombie_horse_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:zombie_nautilus_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:zombie_pigman_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:zombie_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:zombie_villager_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
+    }
+  ]
+}
