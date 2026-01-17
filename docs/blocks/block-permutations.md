@@ -120,14 +120,14 @@ q.block_state('wiki:integer_state_example') < 6 || !q.block_state('wiki:boolean_
 
 As with all things blocks, some limitations have been put in place by Mojang to prevent undesirable behavior.
 
-### Maximum Amount Per Block
+### Maximum Amount per Block
 
 A block _cannot_ have more than 65,536 permutations (equivalent to 4 states with 16 values each).
 This is because a block permutation must be representable by 16 bits.
 
 Exceeding this limit will result in some states being absent from your block so that its permutation count is within the limit, along with a content log error.
 
-### Maximum Amount Per World
+### Maximum Amount per World
 
 A world _shouldn't_ have more than a total of 65,536 **custom** block permutations registered (not necessarily placed).
 
