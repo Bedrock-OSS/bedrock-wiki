@@ -30,11 +30,12 @@ export default {
   "/documentation/block-model-materials": "/blocks/block-components#render-methods",
   "/documentation/block-shapes": "/blocks/block-shapes",
   "/documentation/block-tags": "/blocks/block-tags",
-  "/documentation/creative-categories": "/documentation/menu-categories",
+  "/documentation/creative-categories": "/items/item-catalog",
   "/documentation/dummy-components": "/entities/dummy-components",
   "/documentation/emojis": "/text/emojis",
   "/documentation/item-groups": "/items/item-groups",
   "/documentation/json-ui": "/json-ui/json-ui-documentation",
+  "/documentation/menu-categories": "/items/item-catalog",
   "/documentation/projectiles": "/entities/projectiles",
   "/documentation/runtime-identifier": "/entities/runtime-identifier",
   "/documentation/subpacks": "/concepts/subpacks",
@@ -45,7 +46,7 @@ export default {
 
   "/items/3d-items": "/items/attachables",
   "/items/custom-pottery-sherd": "/items/custom-pottery-sherds",
-  "/items/item-categories": "/documentation/menu-categories",
+  "/items/item-groups": "/items/vanilla-item-groups",
   "/items/item-tags#list-of-vanilla-tags": "/items/vanilla-item-tags",
 
   "/json-ui/custom-buttons": "/json-ui/buttons-and-toggles",
