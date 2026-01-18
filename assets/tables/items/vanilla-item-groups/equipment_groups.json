@@ -1,0 +1,354 @@
+{
+  "columns": {
+    "group": {
+      "name": "Group",
+      "sortable": true
+    },
+    "icon": {
+      "name": "Icon"
+    },
+    "items": {
+      "name": "Items"
+    }
+  },
+  "rows": [
+    {
+      "group": "`minecraft:itemGroup.name.helmet`",
+      "icon": "`minecraft:leather_helmet`",
+      "items": [
+        "`minecraft:leather_helmet`",
+        "`minecraft:chainmail_helmet`",
+        "`minecraft:iron_helmet`",
+        "`minecraft:golden_helmet`",
+        "`minecraft:diamond_helmet`",
+        "`minecraft:netherite_helmet`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.chestplate`",
+      "icon": "`minecraft:leather_chestplate`",
+      "items": [
+        "`minecraft:leather_chestplate`",
+        "`minecraft:chainmail_chestplate`",
+        "`minecraft:iron_chestplate`",
+        "`minecraft:golden_chestplate`",
+        "`minecraft:diamond_chestplate`",
+        "`minecraft:netherite_chestplate`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.leggings`",
+      "icon": "`minecraft:leather_leggings`",
+      "items": [
+        "`minecraft:leather_leggings`",
+        "`minecraft:chainmail_leggings`",
+        "`minecraft:iron_leggings`",
+        "`minecraft:golden_leggings`",
+        "`minecraft:diamond_leggings`",
+        "`minecraft:netherite_leggings`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.boots`",
+      "icon": "`minecraft:leather_boots`",
+      "items": [
+        "`minecraft:leather_boots`",
+        "`minecraft:chainmail_boots`",
+        "`minecraft:iron_boots`",
+        "`minecraft:golden_boots`",
+        "`minecraft:diamond_boots`",
+        "`minecraft:netherite_boots`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.sword`",
+      "icon": "`minecraft:wooden_sword`",
+      "items": [
+        "`minecraft:wooden_sword`",
+        "`minecraft:stone_sword`",
+        "`minecraft:iron_sword`",
+        "`minecraft:golden_sword`",
+        "`minecraft:diamond_sword`",
+        "`minecraft:netherite_sword`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.axe`",
+      "icon": "`minecraft:wooden_axe`",
+      "items": [
+        "`minecraft:wooden_axe`",
+        "`minecraft:stone_axe`",
+        "`minecraft:iron_axe`",
+        "`minecraft:golden_axe`",
+        "`minecraft:diamond_axe`",
+        "`minecraft:netherite_axe`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.pickaxe`",
+      "icon": "`minecraft:wooden_pickaxe`",
+      "items": [
+        "`minecraft:wooden_pickaxe`",
+        "`minecraft:stone_pickaxe`",
+        "`minecraft:iron_pickaxe`",
+        "`minecraft:golden_pickaxe`",
+        "`minecraft:diamond_pickaxe`",
+        "`minecraft:netherite_pickaxe`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.shovel`",
+      "icon": "`minecraft:wooden_shovel`",
+      "items": [
+        "`minecraft:wooden_shovel`",
+        "`minecraft:stone_shovel`",
+        "`minecraft:iron_shovel`",
+        "`minecraft:golden_shovel`",
+        "`minecraft:diamond_shovel`",
+        "`minecraft:netherite_shovel`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.hoe`",
+      "icon": "`minecraft:wooden_hoe`",
+      "items": [
+        "`minecraft:wooden_hoe`",
+        "`minecraft:stone_hoe`",
+        "`minecraft:iron_hoe`",
+        "`minecraft:golden_hoe`",
+        "`minecraft:diamond_hoe`",
+        "`minecraft:netherite_hoe`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.arrow`",
+      "icon": "`minecraft:arrow`",
+      "items": [
+        "`minecraft:arrow`",
+        "`minecraft:arrow:6`",
+        "`minecraft:arrow:7`",
+        "`minecraft:arrow:8`",
+        "`minecraft:arrow:9`",
+        "`minecraft:arrow:10`",
+        "`minecraft:arrow:11`",
+        "`minecraft:arrow:12`",
+        "`minecraft:arrow:13`",
+        "`minecraft:arrow:14`",
+        "`minecraft:arrow:15`",
+        "`minecraft:arrow:16`",
+        "`minecraft:arrow:17`",
+        "`minecraft:arrow:18`",
+        "`minecraft:arrow:19`",
+        "`minecraft:arrow:20`",
+        "`minecraft:arrow:21`",
+        "`minecraft:arrow:22`",
+        "`minecraft:arrow:23`",
+        "`minecraft:arrow:24`",
+        "`minecraft:arrow:25`",
+        "`minecraft:arrow:26`",
+        "`minecraft:arrow:27`",
+        "`minecraft:arrow:28`",
+        "`minecraft:arrow:29`",
+        "`minecraft:arrow:30`",
+        "`minecraft:arrow:31`",
+        "`minecraft:arrow:32`",
+        "`minecraft:arrow:33`",
+        "`minecraft:arrow:34`",
+        "`minecraft:arrow:35`",
+        "`minecraft:arrow:36`",
+        "`minecraft:arrow:37`",
+        "`minecraft:arrow:38`",
+        "`minecraft:arrow:39`",
+        "`minecraft:arrow:40`",
+        "`minecraft:arrow:41`",
+        "`minecraft:arrow:42`",
+        "`minecraft:arrow:43`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.cookedFood`",
+      "icon": "`minecraft:cooked_chicken`",
+      "items": [
+        "`minecraft:cooked_chicken`",
+        "`minecraft:cooked_porkchop`",
+        "`minecraft:cooked_beef`",
+        "`minecraft:cooked_mutton`",
+        "`minecraft:cooked_rabbit`",
+        "`minecraft:cooked_cod`",
+        "`minecraft:cooked_salmon`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.miscFood`",
+      "icon": "`minecraft:bread`",
+      "items": [
+        "`minecraft:bread`",
+        "`minecraft:mushroom_stew`",
+        "`minecraft:beetroot_soup`",
+        "`minecraft:rabbit_stew`",
+        "`minecraft:baked_potato`",
+        "`minecraft:cookie`",
+        "`minecraft:pumpkin_pie`",
+        "`minecraft:cake`",
+        "`minecraft:dried_kelp`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.horseArmor`",
+      "icon": "`minecraft:leather_horse_armor`",
+      "items": [
+        "`minecraft:leather_horse_armor`",
+        "`minecraft:iron_horse_armor`",
+        "`minecraft:golden_horse_armor`",
+        "`minecraft:diamond_horse_armor`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.potion`",
+      "icon": "`minecraft:potion`",
+      "items": [
+        "`minecraft:potion`",
+        "`minecraft:potion:1`",
+        "`minecraft:potion:2`",
+        "`minecraft:potion:3`",
+        "`minecraft:potion:4`",
+        "`minecraft:potion:5`",
+        "`minecraft:potion:6`",
+        "`minecraft:potion:7`",
+        "`minecraft:potion:8`",
+        "`minecraft:potion:9`",
+        "`minecraft:potion:10`",
+        "`minecraft:potion:11`",
+        "`minecraft:potion:12`",
+        "`minecraft:potion:13`",
+        "`minecraft:potion:14`",
+        "`minecraft:potion:15`",
+        "`minecraft:potion:16`",
+        "`minecraft:potion:17`",
+        "`minecraft:potion:18`",
+        "`minecraft:potion:19`",
+        "`minecraft:potion:20`",
+        "`minecraft:potion:21`",
+        "`minecraft:potion:22`",
+        "`minecraft:potion:23`",
+        "`minecraft:potion:24`",
+        "`minecraft:potion:25`",
+        "`minecraft:potion:26`",
+        "`minecraft:potion:27`",
+        "`minecraft:potion:28`",
+        "`minecraft:potion:29`",
+        "`minecraft:potion:30`",
+        "`minecraft:potion:31`",
+        "`minecraft:potion:32`",
+        "`minecraft:potion:33`",
+        "`minecraft:potion:34`",
+        "`minecraft:potion:35`",
+        "`minecraft:potion:36`",
+        "`minecraft:potion:37`",
+        "`minecraft:potion:38`",
+        "`minecraft:potion:39`",
+        "`minecraft:potion:40`",
+        "`minecraft:potion:41`",
+        "`minecraft:potion:42`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.splashPotion`",
+      "icon": "`minecraft:splash_potion`",
+      "items": [
+        "`minecraft:splash_potion`",
+        "`minecraft:splash_potion:1`",
+        "`minecraft:splash_potion:2`",
+        "`minecraft:splash_potion:3`",
+        "`minecraft:splash_potion:4`",
+        "`minecraft:splash_potion:5`",
+        "`minecraft:splash_potion:6`",
+        "`minecraft:splash_potion:7`",
+        "`minecraft:splash_potion:8`",
+        "`minecraft:splash_potion:9`",
+        "`minecraft:splash_potion:10`",
+        "`minecraft:splash_potion:11`",
+        "`minecraft:splash_potion:12`",
+        "`minecraft:splash_potion:13`",
+        "`minecraft:splash_potion:14`",
+        "`minecraft:splash_potion:15`",
+        "`minecraft:splash_potion:16`",
+        "`minecraft:splash_potion:17`",
+        "`minecraft:splash_potion:18`",
+        "`minecraft:splash_potion:19`",
+        "`minecraft:splash_potion:20`",
+        "`minecraft:splash_potion:21`",
+        "`minecraft:splash_potion:22`",
+        "`minecraft:splash_potion:23`",
+        "`minecraft:splash_potion:24`",
+        "`minecraft:splash_potion:25`",
+        "`minecraft:splash_potion:26`",
+        "`minecraft:splash_potion:27`",
+        "`minecraft:splash_potion:28`",
+        "`minecraft:splash_potion:29`",
+        "`minecraft:splash_potion:30`",
+        "`minecraft:splash_potion:31`",
+        "`minecraft:splash_potion:32`",
+        "`minecraft:splash_potion:33`",
+        "`minecraft:splash_potion:34`",
+        "`minecraft:splash_potion:35`",
+        "`minecraft:splash_potion:36`",
+        "`minecraft:splash_potion:37`",
+        "`minecraft:splash_potion:38`",
+        "`minecraft:splash_potion:39`",
+        "`minecraft:splash_potion:40`",
+        "`minecraft:splash_potion:41`",
+        "`minecraft:splash_potion:42`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.lingeringPotion`",
+      "icon": "`minecraft:lingering_potion`",
+      "items": [
+        "`minecraft:lingering_potion`",
+        "`minecraft:lingering_potion:1`",
+        "`minecraft:lingering_potion:2`",
+        "`minecraft:lingering_potion:3`",
+        "`minecraft:lingering_potion:4`",
+        "`minecraft:lingering_potion:5`",
+        "`minecraft:lingering_potion:6`",
+        "`minecraft:lingering_potion:7`",
+        "`minecraft:lingering_potion:8`",
+        "`minecraft:lingering_potion:9`",
+        "`minecraft:lingering_potion:10`",
+        "`minecraft:lingering_potion:11`",
+        "`minecraft:lingering_potion:12`",
+        "`minecraft:lingering_potion:13`",
+        "`minecraft:lingering_potion:14`",
+        "`minecraft:lingering_potion:15`",
+        "`minecraft:lingering_potion:16`",
+        "`minecraft:lingering_potion:17`",
+        "`minecraft:lingering_potion:18`",
+        "`minecraft:lingering_potion:19`",
+        "`minecraft:lingering_potion:20`",
+        "`minecraft:lingering_potion:21`",
+        "`minecraft:lingering_potion:22`",
+        "`minecraft:lingering_potion:23`",
+        "`minecraft:lingering_potion:24`",
+        "`minecraft:lingering_potion:25`",
+        "`minecraft:lingering_potion:26`",
+        "`minecraft:lingering_potion:27`",
+        "`minecraft:lingering_potion:28`",
+        "`minecraft:lingering_potion:29`",
+        "`minecraft:lingering_potion:30`",
+        "`minecraft:lingering_potion:31`",
+        "`minecraft:lingering_potion:32`",
+        "`minecraft:lingering_potion:33`",
+        "`minecraft:lingering_potion:34`",
+        "`minecraft:lingering_potion:35`",
+        "`minecraft:lingering_potion:36`",
+        "`minecraft:lingering_potion:37`",
+        "`minecraft:lingering_potion:38`",
+        "`minecraft:lingering_potion:39`",
+        "`minecraft:lingering_potion:40`",
+        "`minecraft:lingering_potion:41`",
+        "`minecraft:lingering_potion:42`"
+      ]
+    }
+  ]
+}
