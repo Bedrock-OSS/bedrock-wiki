@@ -960,7 +960,7 @@ Determines the transformation of the block's [geometry](#geometry), [collision b
 _Requires format version [1.21.0](/blocks/block-format-history#_1-21-0) or later._
 
 :::tip
-Lean about [rotatable blocks](/blocks/rotatable-blocks) to apply rotation based on how the block is placed, just like furnaces and mob heads!
+Lean about [block orientation](/blocks/block-orientation) to apply rotation based on how the block is placed, just like furnaces and mob heads!
 :::
 
 #### Object Definition {#transformation-object}
