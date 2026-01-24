@@ -68,6 +68,10 @@ _Note that the block description does not have the `menu_category` parameter as 
             "minecraft:placement_filter": {
                 "conditions": [{ "allowed_faces": ["up", "side"] }]
             },
+            // Prevents snow from accumulating above the block
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
+            },
             // Destruction
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 5
@@ -542,6 +546,10 @@ Now, use the [`permutations`](/blocks/block-permutations) array to define the ro
             // Prevents the block from being placed on the bottom face of another block
             "minecraft:placement_filter": {
                 "conditions": [{ "allowed_faces": ["up", "side"] }]
+            },
+            // Prevents snow from accumulating above the block
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "none"
             },
             // Destruction
             "minecraft:destructible_by_explosion": {
