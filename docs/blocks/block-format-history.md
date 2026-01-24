@@ -569,11 +569,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Released `minecraft:geometry` from experimental
 -   Released `minecraft:material_instances` from experimental
 
-<Tag name="experimental" />
-<Label color="red">Holiday Creator Features</Label>
-
--   Removed `minecraft:breathability`
-
 ## 1.19.30
 
 ### Description
