@@ -88,7 +88,7 @@ Non-existent input keys (such as `:_input_key.fake:`) will always result in "Una
 | Look Down Smooth         | `:_input_key.lookDownSmooth:`        | Unassigned       | DOWN                   |
 | Look Left Smooth         | `:_input_key.lookLeftSmooth:`        | Unassigned       | LEFT                   |
 | Look Right Smooth        | `:_input_key.lookRightSmooth:`       | Unassigned       | RIGHT                  |
-| Menu Cancel              | `:_input_key.menuCancel:`            | Button5          | Button5                |
+| Menu Cancel              | `:_input_key.menuCancel:`            | Button5          | P                      |
 | Mob Effects              | `:_input_key.mobEffects:`            | Z                | TAB                    |
 | Open Command             | `:_input_key.command:`               | SLASH            | SLASH                  |
 | Open Notification        | `:_input_key.interactwithtoast:`     | N                | N                      |
