@@ -442,7 +442,7 @@ What you have created:
 
 ### Download Example Pack
 
-Template pack made according to this tutorial, adding a "shell" block into the "Nature" tab.
+Template pack made according to this tutorial, adding a "Mug" block into the "Items" tab of the creative menu.
 
 <Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/intercardinal_block_rotation.mcaddon">
     Download MCADDON
