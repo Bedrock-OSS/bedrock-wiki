@@ -783,6 +783,15 @@ world.afterEvents.entityDie.subscribe(
 );
 ```
 
+Remember to import the script into your entry file!
+
+<CodeHeader>BP/scripts/index.js</CodeHeader>
+
+```js
+import "./headDrops.js";
+import "./intercardinalOrientation.js";
+```
+
 ## Result
 
 What you have created:
