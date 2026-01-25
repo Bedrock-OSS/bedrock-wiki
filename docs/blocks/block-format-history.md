@@ -88,7 +88,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Added `minecraft:connection_rule`
     -   Determines whether other blocks such as fences and walls can connect to the block.
-    -   Contains `accepts_connection_from` which may be set to one of the following values:
+    -   Contains `accepts_connections_from` which may be set to one of the following values:
         -   `"all"`{lang=json} (default) allows any block to connect to the block.
         -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
         -   `"none"`{lang=json} prevents all blocks from connecting.
