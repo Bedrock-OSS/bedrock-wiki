@@ -108,6 +108,31 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 }
 ```
 
+### Connection Rule
+
+Determines whether other blocks such as fences and walls can connect to the block.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+#### Object Definition {#connection-rule-object}
+
+-   `accepts_connections_from` — String (optional)
+    -   `"all"`{lang=json} (default) allows any block to connect to the block.
+    -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
+    -   `"none"`{lang=json} prevents all blocks from connecting.
+-   `enabled_directions` — Array (optional)
+    -   Lists the cardinal directions from which other blocks can connect to the block.
+    -   By default, blocks can connect from any cardinal direction.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:connection_rule": {
+    "accepts_connections_from": "only_fences",
+    "enabled_directions": ["north", "east", "south", "west"]
+}
+```
+
 ### Crafting Table
 
 Turns your block into a crafting table, opening a functional crafting interface when interacted with.
