@@ -894,6 +894,27 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 }
 ```
 
+### Redstone Consumer
+
+Allows the block to respond to redstone power via custom components using the `onRedstoneUpdate()`{lang=js} event hook.
+
+#### Object Definition {#redstone-consumer-object}
+
+-   `min_power` — Integer (`0-15`{lang=js})
+    -   Determines the minimum power level required to trigger the `onRedstoneUpdate()`{lang=js} custom component event hook.
+-   `propagates_power` — Boolean (optional)
+    -   Determines whether this block conducts redstone power to adjacent blocks.
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
+        -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_conductivity": {
+    "min_power": 0
+}
+```
+
 ### Redstone Producer
 
 Causes the block to produce redstone power.
