@@ -16,6 +16,15 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.0
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:damage`
+    -   Now properly supports values over `255`{lang=json} up to a maximum of `32767`{lang=json}.
+
 ## 1.21.130
 
 ### Components
