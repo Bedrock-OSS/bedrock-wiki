@@ -97,7 +97,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 -   `size` — Vector `[X, Y, Z]`{lang=js}
     -   Size of each side of the collision box.
     -   Measured in pixels from the `origin` of the collision box.
-    -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 16, 8]`{lang=json}.
+    -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 24, 8]`{lang=json}.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -106,6 +106,26 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
 }
+```
+
+#### Array Definition {#collision-box-array}
+
+An array of up to 16 object collision box definitions.
+Setting this to an empty array results in a full block collision.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:collision_box": [
+    {
+        "origin": [-4, 8, -4],
+        "size": [8, 8, 8]
+    },
+    {
+        "origin": [-8, 0, -8],
+        "size": [16, 8, 16]
+    }
+]
 ```
 
 ### Connection Rule
