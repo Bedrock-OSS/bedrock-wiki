@@ -922,6 +922,10 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 
 ### Redstone Consumer
 
+:::tip ROOT ONLY
+This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
+:::
+
 Allows the block to respond to redstone power via custom components using the `onRedstoneUpdate()`{lang=js} event hook.
 
 #### Object Definition {#redstone-consumer-object}
