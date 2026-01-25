@@ -562,7 +562,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 
 Determines how this blocks behaves with different types of liquid.
 
-_Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or later._
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
 #### Object Definition {#liquid-detection-object}
 
@@ -580,6 +580,9 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
     -   `stops_liquid_flowing_from_direction` — Array (optional)
         -   Determines an array of directions that the liquid cannot flow out of this block from.
         -   If `on_liquid_touches` is set to `"no_reaction"`{lang=json}, this array also determines the directions that the liquid cannot flow into this block from.
+    -   `use_liquid_clipping` — Boolean (optional)
+        -   Determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](#collision-box)).
+        -   By default, liquid is not clipped.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
