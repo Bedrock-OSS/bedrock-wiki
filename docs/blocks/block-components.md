@@ -658,7 +658,6 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 **Known Issues:**
 
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks.
-    This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
 
 #### Object Definition {#material-instances-object}
