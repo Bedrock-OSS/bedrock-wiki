@@ -53,6 +53,9 @@ This guide will teach you how to create your own blocks resembling Glazed Terrac
                     "bottom_x": "q.block_state('minecraft:cardinal_direction') == 'west' || q.block_state('minecraft:cardinal_direction') == 'east'",
                     "bottom_z": "q.block_state('minecraft:cardinal_direction') == 'north' || q.block_state('minecraft:cardinal_direction') == 'south'"
                 }
+            },
+            "minecraft:redstone_conductivity": {
+                "redstone_conductor": true
             }
         },
         "permutations": [
