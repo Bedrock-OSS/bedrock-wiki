@@ -513,7 +513,7 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
 
 ### Leashable
 
-Allows leads to be attached to the block like fences.
+Allows leads and balloons to be attached to the block like fences.
 
 _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
