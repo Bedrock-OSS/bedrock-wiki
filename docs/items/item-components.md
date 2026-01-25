@@ -160,16 +160,11 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 
 ### Damage
 
-Determines how much extra damage the item does on attack. How much extra damage the item does on attack. Note that this must be a positive value.
+Determines how much extra damage (`0-32767`{lang=js}) the item deals on attack, displaying as "+X Attack Damage" in the item's tooltip.
 
-The actual damage the entity will receive is `value + 1` per the docs "extra damage" due to the hand/item having a default value of 1 damage.
-Damage value is `value % 256`.
-Uses signed 16-bit integer. 2’s complements creates negative range.
-`[32768-65536]` - gets treated as negative. The values given to the item will be `(-32768-0)`. So the negative ranges are `[256*(256x+128) - 256*(256(x+1)))`, where `x` is any arbitrary number.
+_Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
-https://bugs.mojang.com/browse/MCPE-180073
-
-Type: Integer
+### Integer Definition {#damage-integer}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
