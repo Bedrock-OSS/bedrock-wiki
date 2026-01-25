@@ -112,7 +112,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:align"

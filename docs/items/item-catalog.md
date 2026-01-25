@@ -17,7 +17,7 @@ Below is the basic JSON format which you should include in the file:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:crafting_items_catalog": {
         "categories": []
     }
@@ -42,7 +42,7 @@ For example, if we were adding items to the "Nature" tab, a new entry would be c
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:crafting_items_catalog": {
         "categories": [
             {
@@ -67,10 +67,7 @@ Note that custom groups in the item catalog will appear after vanilla groups.
     "category_name": "nature",
     "groups": [
         {
-            "items": [
-                "wiki:silver_ore",
-                "wiki:steel_ore"
-            ]
+            "items": ["wiki:silver_ore", "wiki:steel_ore"]
         }
     ]
 }
@@ -97,10 +94,7 @@ Let's use the `group_identifier` parameter to make our custom ore group take up 
                 "icon": "wiki:silver_ore",
                 "name": "wiki:itemGroup.name.ore"
             },
-            "items": [
-                "wiki:silver_ore",
-                "wiki:steel_ore"
-            ]
+            "items": ["wiki:silver_ore", "wiki:steel_ore"]
         }
     ]
 }
