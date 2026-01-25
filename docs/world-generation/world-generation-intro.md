@@ -40,7 +40,7 @@ However, bridge. is not required.
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.21.130",
     "minecraft:biome": {
         "description": {
             "identifier": "wiki:cold_biome"
@@ -65,19 +65,23 @@ However, bridge. is not required.
                         "amount": 0.5,
                         "noise_frequency_scale": 50,
                         "dimension": "minecraft:overworld",
-                        "targets": ["minecraft:plains"]
+                        "targets": [
+                            "minecraft:plains"
+                        ]
                     }
                 ]
             },
             "minecraft:tags": {
-                "tags": ["cold_biome"]
+                "tags": [
+                    "cold_biome"
+                ]
             }
         }
     }
 }
 ```
 
--   Set `format_version` to 1.26.0: it's the latest biome file version as of the current release.
+-   Set `format_version` to 1.21.130: it's the latest biome file version as of the current release.
 -   `description` takes only one value: `identifier`.
 -   `components` is just what you'd expect: something applied to the biome at default. let's look through them:
 -   `minecraft:climate` controls everything climate-wise.
@@ -287,8 +291,8 @@ It's a good idea to proceed checking out other feature and feature_rule vanilla 
 
 ## Custom Structures
 
-### Structure Template Features
 
+### Structure Template Features
 As of MCBE v1.16.20, **Custom Generated structures are possible**
 A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](/nbt/mcstructure).
 

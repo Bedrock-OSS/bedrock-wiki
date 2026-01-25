@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.21.130
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.0.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.130.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -463,25 +463,6 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
             "texture": "wiki:block_texture"
         }
     }
-}
-```
-
-### Leashable
-
-Allows leads to be attached to the block like fences.
-
-_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
-
-#### Object Definition {#leashable-object}
-
--   `offset` — Vector `[X, Y, Z]`{lang=js} (optional)
-    -   Determines the position of the middle of the knot relative to the bottom middle of the block.
-
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:leashable": {
-    "offset": [0, 12, 0]
 }
 ```
 

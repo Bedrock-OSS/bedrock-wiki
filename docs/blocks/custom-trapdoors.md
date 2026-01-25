@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.26.0
+::: tip FORMAT VERSION 1.21.130
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -27,7 +27,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -230,7 +230,7 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.21.130",
     "minecraft:geometry": [
         {
             "description": {

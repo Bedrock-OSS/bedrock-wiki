@@ -19,7 +19,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.21.130",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:example_item"

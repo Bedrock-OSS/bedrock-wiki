@@ -9,7 +9,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.21.130
 Before you learn about block permutations, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is 1.20.20 or higher.
@@ -66,7 +66,7 @@ _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or lat
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.21.130",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
