@@ -675,6 +675,10 @@ The `*` instance is the default instance for all cube faces, however it is not r
         -   By default, the `opaque` render method is used.
     -   `tint_method` — String (optional)
         -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
+    -   `alpha_masked_tint` — Boolean (optional)
+        -   Determines whether the intensity of the tint applied by tint methods should be based on the alpha channel of the texture.
+        -   When `true`{lang=json}, a `tint_method` must be specified (that is not `"none"`{lang=json}) and the `render_method` must be `"opaque"`{lang=json}.
+        -   By default, tinting from tint methods is not alpha-masked.
     -   `ambient_occlusion` — Boolean / Float (`0.0-10.0`{lang=json}) (optional)
         -   Determines whether "smooth lighting" is applied to faces using the material instance.
         -   Float values can be used to determine ambient occlusion intensity.
