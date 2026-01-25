@@ -994,6 +994,25 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 }
 ```
 
+### Support
+
+Defines the block's ability to support other blocks that are attached to it.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+#### Object Definition {#support-object}
+
+-   `shape` — String
+    -   Can be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:support": {
+    "shape": "fence"
+}
+```
+
 ### Tick
 
 Causes the block to tick after a random delay in the range specified by `interval_range`.
