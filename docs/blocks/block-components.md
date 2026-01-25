@@ -466,6 +466,25 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
 }
 ```
 
+### Leashable
+
+Allows leads to be attached to the block like fences.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+#### Object Definition {#leashable-object}
+
+-   `offset` — Vector `[X, Y, Z]`{lang=js} (optional)
+    -   Determines the position of the middle of the knot relative to the bottom middle of the block.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:leashable": {
+    "offset": [0, 12, 0]
+}
+```
+
 ### Light Dampening
 
 Determines the maximum number of light levels (`0-15`{lang=js}) that will be dampened when passing through the block, in a range.
