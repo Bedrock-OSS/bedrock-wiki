@@ -61,7 +61,7 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:your_item",

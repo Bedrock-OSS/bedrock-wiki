@@ -586,7 +586,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:jigsaw": {
         "description": {
             "identifier": "wiki:fortress"
@@ -641,7 +641,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:template_pool": {
         "description": {
             "identifier": "wiki:lone_fortress_courtyard"
@@ -667,7 +667,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:processor_list": {
         "description": {
             "identifier": "wiki:fortress_decay"
@@ -722,7 +722,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:structure_set": {
         "description": {
             "identifier": "wiki:fortress"
