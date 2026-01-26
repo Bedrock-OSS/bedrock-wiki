@@ -6,6 +6,7 @@ mentions:
     - MedicalJewel105
     - Misledwater79
     - SmokeyStack
+    - Robotics Modified
 description: About .mcstructure format.
 ---
 
@@ -17,6 +18,10 @@ description: About .mcstructure format.
 ## Saving and Loading Structures
 
 The **Export** button creates `.mcstructure` files in a structure block. The files must be placed in a behavior pack to load them in-game with a load structure block. The path determines the structure identifier, which is typed into the structure block to load the structure.
+
+:::warning MOBILE LIMITATION
+Currently, exporting structures in Bedrock mobile is **not possible**. Even with an export button resource pack, the game cannot export `.mcstructure`{lang=json} files.
+:::
 
 **Examples:**
 
