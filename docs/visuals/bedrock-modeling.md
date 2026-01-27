@@ -37,7 +37,7 @@ and in general, any on pixel art.
 Whether or no the transparency or emissive textures in your models work in-game, it's decided by the materials applied to them.
 
 | Material              | Description                                                                                              |
-|-----------------------|----------------------------------------------------------------------------------------------------------|
+| --------------------- | -------------------------------------------------------------------------------------------------------- |
 | entity                | basic opaque material                                                                                    |
 | entity_alphatest      | supports transparent pixels                                                                              |
 | entity_alphablend     | supports translucent pixels                                                                              |
@@ -83,7 +83,7 @@ Don't forget that for the animation to be a perfect loop. It would help if you c
 Here's a table with values to get a perfect loop, though there are more you can discover.
 
 | Speed | Time | Group |
-|-------|------|-------|
+| ----- | ---- | ----- |
 | 150   | 2.4  | 1     |
 | 100   | 3.6  | 2     |
 
@@ -91,7 +91,7 @@ These numbers can be multiplied but not divided, so these will also work
 But only multiples of the same option
 
 | Speed | Time | Group |
-|-------|------|-------|
+| ----- | ---- | ----- |
 | 150   | 4.8  | 1     |
 | 200   | 3.6  | 2     |
 | 300   | 2.4  | 1     |

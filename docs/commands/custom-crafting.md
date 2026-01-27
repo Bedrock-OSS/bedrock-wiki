@@ -27,12 +27,14 @@ For this system, you will require two droppers per custom recipe item you want t
 2. Dropper containing the Recipe Output.
 
 Example:
+
 <WikiImage
     src="/assets/images/commands/custom-crafter/recipe.png"
     alt="Custom Recipe"
     width="200"
     pixelated
-/> <WikiImage
+/>
+<WikiImage
     src="/assets/images/commands/custom-crafter/recipe-output.png"
     alt="Custom Recipe Output"
     width="200"
@@ -51,12 +53,14 @@ To complete the setup, place down one final dropper where you want players to be
 ## If Recipe Matches Crafter: Clone Recipe Output to Crafter
 execute if blocks <recipe> <recipe> <crafter> masked run clone <recipe_output> <recipe_output> <crafter>
 ```
+
 ![One repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
 **Definitions:**
-- `<crafter>` — input (x,y,z) coordinates for the dropper that will be used as the **crafter**.
-- `<recipe>` — input (x,y,z) coordinates for the dropper which contains your **recipe**.
-- `<recipe_output>` — input (x,y,z) coordinates for the dropper which contains the **output** for your recipe.
+
+-   `<crafter>` — input (x,y,z) coordinates for the dropper that will be used as the **crafter**.
+-   `<recipe>` — input (x,y,z) coordinates for the dropper which contains your **recipe**.
+-   `<recipe_output>` — input (x,y,z) coordinates for the dropper which contains the **output** for your recipe.
 
 For convenience, you may download the .mcstructure sample shared by @TwigYT:
 
@@ -84,6 +88,7 @@ execute if blocks <recipe> <recipe> <crafter> masked positioned <crafter> run pl
 ## If Recipe Matches Crafter: Clone Recipe Output to Crafter
 execute if blocks <recipe> <recipe> <crafter> masked run clone <recipe_out> <recipe_output> <crafter>
 ```
+
 ![commandChain of Two Command Blocks](/assets/images/commands/command-block-chain/2.png)
 
 To take it a step further, you may also use [MBE](/commands/block-entities) or [Fox MBE](/commands/display-entities) to give the dropper the texture of a crafting table or a smithing table as an overlay.

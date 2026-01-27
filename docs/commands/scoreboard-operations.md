@@ -14,6 +14,7 @@ Scoreboards can be used to perform complex operations, similar to [Molang](/conc
 ## Overview
 
 Operations are performed using the `/scoreboard players operation` command. The full syntax is laid out below:
+
 ```yaml
 /scoreboard players operation <targetScore> <objective> <operation> <sourceScore> <objective>
 ```
@@ -31,9 +32,11 @@ For each of the following examples below, assume that score holder `.A wiki:var`
 Operator: **+=**
 
 This operation adds the target score and source scores together, then stores the sum into the target score.
+
 ```yaml
 /scoreboard players operation .A wiki:var += .B wiki:var
 ```
+
 `.A = .A + .B`, and as such `25 + 10 = 35`.
 
 ### Subtraction
@@ -41,9 +44,11 @@ This operation adds the target score and source scores together, then stores the
 Operator: **-=**
 
 This operation subtracts the target score by the source score, then stores the difference into the target score.
+
 ```yaml
 /scoreboard players operation .A wiki:var -= .B wiki:var
 ```
+
 `.A = .A - .B`, and as such `25 - 10 = 15`.
 
 ### Multiplication
@@ -51,9 +56,11 @@ This operation subtracts the target score by the source score, then stores the d
 Operator: **\*=**
 
 This operation multiplies the target score by the source score, then stores the product into the target score.
+
 ```yaml
 /scoreboard players operation .A wiki:var *= .B wiki:var
 ```
+
 `.A = .A * .B`, and as such `25 * 10 = 250`.
 
 ### Floored Division
@@ -61,9 +68,11 @@ This operation multiplies the target score by the source score, then stores the 
 Operator: **/=**
 
 This operation divides the target score by the source score, then stores the quotient into the target score. Because score values can only be integers, the value is floored, or rounded down.
+
 ```yaml
 /scoreboard players operation .A wiki:var /= .B wiki:var
 ```
+
 `.A = floor(.A / .B)`, and as such `floor(25 / 10) = 2`.
 
 ### Floored Modulo Division
@@ -71,9 +80,11 @@ This operation divides the target score by the source score, then stores the quo
 Operator: **%=**
 
 This operation also divides the target score by the source score, but instead returns the remainder after the division into the target score. This is also floored.
+
 ```yaml
 /scoreboard players operation .A wiki:var %= .B wiki:var
 ```
+
 `.A = floor(mod(.A, .B))`, and as such `floor(mod(25, 10)) = 5`.
 
 ## Logical Operators
@@ -87,9 +98,11 @@ Similar to the above, assume that score holder `.A wiki:var` equals 25, and `.B 
 Operator: **=**
 
 This operation sets the target score equal to the source score.
+
 ```yaml
 /scoreboard players operation .A wiki:var = .B wiki:var
 ```
+
 `.A = .B`, and as such the result is `10`.
 
 ### Minimum Operator
@@ -97,9 +110,11 @@ This operation sets the target score equal to the source score.
 Operator: **<**
 
 This operation returns the smallest of the input scores, and stores it into the target score.
+
 ```yaml
 /scoreboard players operation .A wiki:var < .B wiki:var
 ```
+
 `.A = min(.A, .B)`, and as such `min(25, 10) = 10`.
 
 ### Maximum Operator
@@ -107,9 +122,11 @@ This operation returns the smallest of the input scores, and stores it into the 
 Operator: **>**
 
 This operation returns the largest of the input scores, and stores it into the target score.
+
 ```yaml
 /scoreboard players operation .A wiki:var > .B wiki:var
 ```
+
 `.A = max(.A, .B)`, and as such `max(25, 10) = 25`.
 
 ### Swap Operator
@@ -117,9 +134,11 @@ This operation returns the largest of the input scores, and stores it into the t
 Operator: **><**
 
 This operation swaps the target score and source scores with each other. This is the only operation that affects the source score.
+
 ```yaml
 /scoreboard players operation .A wiki:var >< .B wiki:var
 ```
+
 The above command would swap the values of .A and .B e.g.
 
 Before: .A = 10; .B = 25;

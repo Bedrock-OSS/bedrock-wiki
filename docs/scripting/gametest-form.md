@@ -217,6 +217,7 @@ Dropdown is a property that contains a list options. It has 3 arguments.
 3. Default Value Index (`Int`)[Optional], the index of the default value. Default is `0` (first item in the list).
 
 Dropdowns are also unique in that they don't return the value of whatever the option is, rather, they return the number of the option. For example, the first option will return "0", the second "1", etc. This way, options can be mapped to their respective values behind-the-scenes, and have different display text from values.
+
 ```js
 // Internal Options
 form.dropdown("Dropdown", ["Opt 1", "Opt 2", "Opt 3"], 1);
@@ -253,7 +254,7 @@ Toggle is a property that only has a true/false option. It has 2 arguments.
 
 ```js
 form.toggle("Toggle", {
-   defaultValue: true
+    defaultValue: true,
 });
 ```
 
@@ -268,10 +269,10 @@ form.title("Effect Generator");
 form.textField("Target", "Target of Effect");
 form.dropdown("Effect Type", effectList);
 form.slider("Effect Level", 0, 255, {
-    defaultValue: 1
+    defaultValue: 1,
 });
 form.toggle("Hide Effect Particle", {
-    defaultValue: true
+    defaultValue: true,
 });
 ```
 

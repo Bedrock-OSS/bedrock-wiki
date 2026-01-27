@@ -119,13 +119,13 @@ Call the file `manifest.json` and paste the following code into the file to begi
 
 ```json
 {
-    "format_version": 2,
+    "format_version": 3,
     "header": {
         "name": "pack.name",
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": [1, 21, 120]
+        "min_engine_version": "1.21.130"
     },
     "modules": [
         {
@@ -135,6 +135,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
         }
     ],
     "metadata": {
+        "authors": ["Your Name"],
         "product_type": "addon"
     }
 }
@@ -142,7 +143,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
 
 ### Manifest Explained
 
--   `format_version` defines what version of manifest JSON format you are using. Version 2 is the most recent stable version; use it.
+-   `format_version` defines what version of manifest JSON format you are using. Version 3 is the most recent stable version; use it.
 
 -   `name` is the name of your behavior pack. `description` will show up under it in-game.
 
@@ -186,13 +187,13 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 ```json
 {
-    "format_version": 2,
+    "format_version": 3,
     "header": {
         "name": "pack.name",
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": [1, 21, 120]
+        "min_engine_version": "1.21.130"
     },
     "modules": [
         {
@@ -202,8 +203,10 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
         }
     ],
     "metadata": {
+        "authors": ["Your Name"],
         "product_type": "addon"
-    }
+    },
+    "capabilities": ["pbr"] // Allows Vibrant Visuals to be enabled while this pack is activated.
 }
 ```
 

@@ -114,9 +114,11 @@ function initialize(userOptions: any) {
   --docsearch-text-color: rgb(245, 246, 247);
   --docsearch-logo-color: rgb(255, 255, 255);
 }
-.DocSearch-Modal {
-  border-radius: var(--border-radius);
-  border: var(--border);
+@media not (max-width: 768px) {
+  .DocSearch-Modal {
+    border-radius: var(--border-radius);
+    border: var(--border);
+  }
 }
 .DocSearch-Form {
   border-radius: var(--border-radius);

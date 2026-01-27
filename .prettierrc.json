@@ -4,6 +4,7 @@
   "singleQuote": false,
   "printWidth": 100,
   "embeddedLanguageFormatting": "auto",
+  "plugins": ["prettier-plugin-markdown-list-tabwidth"],
   "overrides": [
     {
       "files": "*.md",

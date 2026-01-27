@@ -22,7 +22,29 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ## 1.26.0
 
+### Traits
+
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:connection` from experimental
+-   Updated `minecraft:placement_direction`
+    -   Released `blocks_to_corner_with` parameter from experimental
+    -   Updated `enabled_states` parameter
+        -   Released `"minecraft:corner_and_cardinal_direction"`{lang=json} value from experimental
+
 ### Components
+
+-   Updated `minecraft:geometry`
+    -   Added backwards compatibility mapping for `"minecraft:geometry.full_block"`{lang=json} identifier.
+        -   In format versions prior to `1.26.0`, `"minecraft:geometry.full_block"`{lang=json} will be treated as `"minecraft:geometry.full_block_v1"`{lang=json}.
+-   Updated `minecraft:liquid_detection`
+    -   Added `use_liquid_clipping` detection rule parameter which determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](/blocks/block-components#collision-box)).
+        -   In format versions prior to `1.26.0`, the default value is `true`{lang=json}.
+        -   In format versions of `1.26.0` and higher, the default value is `false`{lang=json}.
+-   Updated `minecraft:material_instances`
+    -   Released `alpha_masked_tint` instance parameter from experimental
+-   Updated `minecraft:redstone_consumer`
+    -   Renamed `propogates_power` parameter to `propagates_power`
 
 <Label color="green">Versioned</Label>
 
@@ -30,8 +52,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Released `minecraft:leashable` from experimental
 -   Released `minecraft:support` from experimental
 -   Released `minecraft:redstone_consumer` from experimental
--   Updated `minecraft:redstone_consumer`
-    -   Renamed `propogates_power` parameter to `propagates_power`
 
 ## 1.21.130
 
@@ -53,10 +73,11 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 <Label color="yellow">Use Beta Features</Label>
 
 -   Updated `minecraft:placement_direction`
-    -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value for the `enabled_states` array, which can be used to replicate stair rotation and cornering, enabling the following states:
-        -   `minecraft:cardinal_direction`
-        -   `minecraft:corner`
-    -   Added `blocks_to_corner_with` property which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   Added `blocks_to_corner_with` parameter which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   Updated `enabled_states` parameter
+        -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value, which can be used to replicate stair rotation and cornering, enabling the following states:
+            -   `minecraft:cardinal_direction`
+            -   `minecraft:corner`
 
 ### Components
 
@@ -67,7 +88,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Added `minecraft:connection_rule`
     -   Determines whether other blocks such as fences and walls can connect to the block.
-    -   Contains `accepts_connection_from` which may be set to one of the following values:
+    -   Contains `accepts_connections_from` which may be set to one of the following values:
         -   `"all"`{lang=json} (default) allows any block to connect to the block.
         -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
         -   `"none"`{lang=json} prevents all blocks from connecting.
@@ -86,16 +107,11 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
     -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
--   Updated `minecraft:material_instances`
-    -   Removed redundant `emissive` instance parameter
-
-<Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
-<Label color="green">Versioned</Label>
-
 -   Updated `minecraft:collision_box`
     -   Can now be defined as an array of multiple boxes.
     -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
+-   Updated `minecraft:material_instances`
+    -   Removed redundant `emissive` instance parameter
 
 ## 1.21.120
 
@@ -443,7 +459,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Released `traits` from experimental
 
-#### Traits
+### Traits
 
 <Label color="green">Versioned</Label>
 
@@ -478,7 +494,10 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `traits`
     -   Block traits are shortcuts for creators to add vanilla states and value setters to data-driven blocks.
 
-#### Traits
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
 
 -   Added `minecraft:placement_direction`
     -   Can enable the states `minecraft:cardinal_direction` and `minecraft:facing_direction`.
@@ -549,11 +568,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Released `minecraft:geometry` from experimental
 -   Released `minecraft:material_instances` from experimental
-
-<Tag name="experimental" />
-<Label color="red">Holiday Creator Features</Label>
-
--   Removed `minecraft:breathability`
 
 ## 1.19.30
 
@@ -784,16 +798,16 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `transform` response
 -   Added `trigger` response
 
-## 1.10.0
+## 1.12.0
 
 ### Description
 
 -   Added `identifier`
     -   Defines the identifier of the block. Must have a namespace that isn't `minecraft`.
 -   Added `is_experimental`
-    -   Only registers the block if the `Use Experimental Gameplay` toggle is enabled in world settings.
+    -   Only registers the block if the "Use Experimental Gameplay" toggle is enabled in world settings.
 -   Added `register_to_creative_menu`
-    -   Causes the block to appear in the `Construction` category of the creative menu.
+    -   Causes the block to appear in the "Construction" category of the creative menu.
     -   Custom blocks cannot be added to the recipe book at this time.
 
 ### Components
@@ -814,6 +828,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Note that this is not a measure of resistance unlike in modern formats.
 -   Added `minecraft:loot`
     -   Determines the path of the loot table that will be dropped when this block is destroyed.
-    -   This component is ignored if the used tool has the `Silk Touch` enchantment.
+    -   This component is ignored if the used tool has the "Silk Touch" enchantment.
 -   Added `minecraft:map_color`
     -   Determines the color this block appears as on a map.

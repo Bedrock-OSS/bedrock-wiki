@@ -356,4 +356,3 @@ Are there any vanilla geos you think would be particularly useful to focus on?
     https://learn.microsoft.com/en-us/minecraft/creator/documents/loottableconditions?view=minecraft-bedrock-stable#match_tool
 
     On our short term roadmap is a way to change a vanilla block's loot table on destroy.
-

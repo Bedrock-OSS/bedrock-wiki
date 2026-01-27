@@ -28,44 +28,44 @@ You can learn how to make loot tables in [Beginner's Guide](/guide/loot-table)
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": {
-				"min": 8,
-				"max": 10
-			},
-			"entries": [
-				{
-					"type": "item",
-					"name": "minecraft:glass_bottle",
-					"functions": [
-						{
-							"function": "set_count",
-							"count": {
-								"min": 4,
-								"max": 6
-							}
-						}
-					],
-					"weight": 1
-				},
-				{
-					"type": "item",
-					"name": "minecraft:potion",
-					"functions": [
-						{
-							"function": "set_count",
-							"count": {
-								"min": 4,
-								"max": 6
-							}
-						}
-					],
-					"weight": 1
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": {
+                "min": 8,
+                "max": 10
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:glass_bottle",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 6
+                            }
+                        }
+                    ],
+                    "weight": 1
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 6
+                            }
+                        }
+                    ],
+                    "weight": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -76,6 +76,7 @@ Once you have created your loot table, export your structure into `BP/structures
 ![](/assets/images/tutorials/randomised-structure-loot/export_structure.png)
 
 ## NBT Studio (Executable)
+
 ### Software Preparation
 
 Download and launch [NBT Studio](https://github.com/tryashtar/nbt-studio/releases/download/v1.14.1/NbtStudio.exe)
@@ -129,7 +130,7 @@ Download your structure file and place it in `BP/structures`.
 This can be done using a `minecraft:rule` processor with a `block_entity_modifier` rule.
 The `type` field should be specified to `minecraft:append_loot` with the `loot_table` being set to the path to your loot table.
 
-Using that rule in combination with `blockstate_match` predicates will allow for blocks to be given loot tables. 
+Using that rule in combination with `blockstate_match` predicates will allow for blocks to be given loot tables.
 
 A processor setting a chest to have loot will set it to the default rotation unless `blockstate_match` is set to match the input chest with the loot table and then output a chest with the loot table and same rotation.
 A rule is needed for all permutations of the block you want to replace. For example, chests have 4 cardinal directions so 4 rules would be needed.
@@ -254,6 +255,6 @@ A example of a chest having a loot table applied to all rotations.
 
 ## Testing
 
-Load your structure and open the container. For jigsaws use `/place structure` or `/place jigsaw`. 
+Load your structure and open the container. For jigsaws use `/place structure` or `/place jigsaw`.
 
 ![](/assets/images/tutorials/randomised-structure-loot/test.png)

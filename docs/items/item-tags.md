@@ -1,6 +1,6 @@
 ---
 title: Item Tags
-description: Item tags can be used to ensure that an item meets certain conditions.
+description: Item tags are used when checking for multiple types of item and can enable vanilla functionality.
 category: General
 nav_order: 3
 license: true
@@ -10,7 +10,8 @@ mentions:
     - QuazChick
 ---
 
-Item tags can be used to ensure that an item meets certain conditions.
+Item tags are used when checking for multiple types of item and can enable vanilla functionality.
+For a list of vanilla item tags and their functionality, visit [this page](/items/vanilla-item-tags).
 
 ## Applying Tags
 
@@ -77,7 +78,3 @@ Item tags can be used to ensure that an item meets certain conditions.
     }
 ]
 ```
-
-## List of Vanilla Tags
-
-<Table data="vanilla_tags.json" />

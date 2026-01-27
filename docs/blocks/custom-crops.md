@@ -111,7 +111,7 @@ The events below do two important functions to make your crop work:
 -   The [`onRandomTick`](/blocks/block-events#random-tick) event hook is used to increment the `wiki:growth` state at a random interval.
 -   The [`onPlayerInteract`](/blocks/block-events#player-interact) event hook is for bone meal support, adding a random value to `wiki:growth` in survival mode or fully growing the crop in creative mode.
 
-<CodeHeader>BP/scripts/custom_crop.js</CodeHeader>
+<CodeHeader>BP/scripts/growable.js</CodeHeader>
 
 ```js
 import { EquipmentSlot, GameMode, system } from "@minecraft/server";
@@ -644,7 +644,8 @@ Your pack should now contain the following files:
     'BP/items/custom_food.json',
     'BP/items/custom_seeds.json',
     'BP/loot_tables/blocks/custom_crop_mature.json',
-    'BP/loot_tables/blocks/custom_crop_young.json'
+    'BP/loot_tables/blocks/custom_crop_young.json',
+    'BP/scripts/growable.js'
 ]" />
 
 With the help of this tutorial/template, you now have the knowledge and skills to create your own custom crop, as well as its seed and food items.

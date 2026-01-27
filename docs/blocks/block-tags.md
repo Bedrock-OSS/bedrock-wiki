@@ -1,6 +1,6 @@
 ---
 title: Block Tags
-description: Block tags can be used to ensure that a block meets certain conditions.
+description: Block tags are used when checking for multiple types of block and can enable vanilla functionality.
 category: General
 nav_order: 3
 license: true
@@ -19,7 +19,8 @@ mentions:
     - Xterionix
 ---
 
-Block tags can be used to ensure that a block meets certain conditions.
+Block tags are used when checking for multiple types of block and can enable vanilla functionality.
+For a list of vanilla block tags and their functionality, visit [this page](/blocks/vanilla-block-tags).
 
 ## Applying Tags
 
@@ -124,7 +125,3 @@ Example of an item querying a block's tags:
     }
 }
 ```
-
-## List of Vanilla Tags
-
-<Table data="vanilla_tags.json" />
