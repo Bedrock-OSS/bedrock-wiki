@@ -107,7 +107,7 @@ The `set_count` function sets the count for that item entry.
 }
 ```
 
-The `"count"` property determines how many of that item should be yielded; it can either be provided as an integer or a [range object](/loot/item-functions##definitions###range-object). Provided counts values may be larger than the stack size for that item. When this happens, the item will leak into other slots if in a container or separate into multiple different item stacks if dropped into the world. The count property actually defaults to `0`, so it should always be included.
+The `"count"` property determines how many of that item should be yielded; it can either be provided as an integer or a [range object](/loot/item-functions#functions##definitions###range-object). Provided counts values may be larger than the stack size for that item. When this happens, the item will leak into other slots if in a container or separate into multiple different item stacks if dropped into the world. The count property actually defaults to `0`, so it should always be included.
 
 ### Name
 
@@ -182,7 +182,7 @@ The `"lore"` property configures the lore. It can be represented as either a str
 }
 ```
 
-The `"data"` property sets the item's data. If not provided, it will default to `0`. `"data"` can either be provided as an integer or a [range object](/loot/item-functions##definitions###range-object).
+The `"data"` property sets the item's data. If not provided, it will default to `0`. `"data"` can either be provided as an integer or a [range object](/loot/item-functions#functions##definitions###range-object).
 
 As an integer:
 
@@ -229,7 +229,7 @@ Sets a block state for a block.
 
 `block_state`: Required string name of block state.
 
-`values`: Can be a number or a [range object](/loot/item-functions##definitions###range-object).
+`values`: Can be a number or a [range object](/loot/item-functions#functions##definitions###range-object).
 
 Defaults to 0… kinda required otherwise pointless? IDK…
 
@@ -261,7 +261,7 @@ Defaults to 0… kinda required otherwise pointless? IDK…
 
 Sets the auxiliary value of an item.
 
-`values`: Can be an integer or a [range object](/loot/item-functions##definitions###range-object).
+`values`: Can be an integer or a [range object](/loot/item-functions#functions##definitions###range-object).
 
 If using a range object, it will randomly choose the values uniformly(each value has the same chance of being chosen).
 
@@ -299,7 +299,7 @@ Item durability can be set using the `set_damage` function.
 
 Sets the damage value of this item.
 
-`damage`: Can either be a set number or a [range object](/loot/item-functions##definitions###range-object). Allowed values range from `0.0-1.0`.
+`damage`: Can either be a set number or a [range object](/loot/item-functions#functions##definitions###range-object). Allowed values range from `0.0-1.0`.
 
 Note that if this item has no durability component, this function will be ignored.
 
@@ -640,7 +640,7 @@ Level `99999` gives ludicrously powerful books… with pretty much every possib
 
 `treasure`: Enables treasure enchantments as possibilities for that item. **Boolean**, defaults to `false`. If `false`, curses can't appear as possibilities; if `true`, they can.
 
-`levels`: Can be a number or a [range object](/loot/item-functions##definitions###range-object). Defaults to `0`.
+`levels`: Can be a number or a [range object](/loot/item-functions#functions##definitions###range-object). Defaults to `0`.
 Can be negative, but will just be remapped as though `0`.
 
 ### Random Enchantments
@@ -730,7 +730,7 @@ Applies a specific set of enchantments.
 
 `enchants`:
 
-Can be a string array or object. Here is the list of all [Enchantment Types](/loot/item-functions#type-identifiers##enchantment-types).
+Can be a string array or object. Here is the list of all [Enchantment Types](/loot/item-functions#functions#type-identifiers##enchantment-types).
 
 For array, any mix of strings or objects (see below).
 
@@ -799,7 +799,7 @@ External conditions that affect item drops.
 
 Increases the number of items dropped based on the Looting Enchantment level used to kill the entity.
 
-Count can be an integer or a [range object](/loot/item-functions##definitions###range-object).
+Count can be an integer or a [range object](/loot/item-functions#functions##definitions###range-object).
 
 ### Explosion Decay
 
