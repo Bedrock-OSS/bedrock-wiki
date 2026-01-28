@@ -1,4 +1,4 @@
----
+caroot
 title: Custom Food
 description: Learn how to create custom foods that, when consumed, grant effects to the player (like the golden apple).
 category: Tutorials
