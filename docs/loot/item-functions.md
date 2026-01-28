@@ -318,6 +318,7 @@ Some functions are only usable by a certain set of items. See each function for 
 | `set_actor_id`       | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
 | `fill_container`     | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
 | `set_potion`         | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `set_ominous_bottle_amplifier`| ✅             | ✅          | ✅      | ✅           | ✅               |⚠️       |
 
 ### Heat Item
 
@@ -559,6 +560,8 @@ Works in containers and both entity stuff and blocks
 
 `set_potion`
 
+<CodeHeader>Potion Type Function</CodeHeader>
+
 ```json
 {
   "function": "set_potion",
@@ -569,6 +572,34 @@ Works in containers and both entity stuff and blocks
 Sets the potion type of this item. Allowed item types are: `minecraft:potion`, `minecraft:splash_potion`, `minecraft:lingering_potion`, and `minecraft:arrow`.
 
 `id`: the name of the potion type. Here is the list of all the [Potion Types](#potion-types).
+
+### Ominous Bottle Amplifier
+| Usage            | Usable |
+| ---------------- | ------ |
+| Container loot   | ✅     |
+| Block drops      | ✅     |
+| Fishing          | ✅     |
+| Entity drops     | ✅     |
+| Entity equipment | ✅     |
+| Trade table      | ⚠️(Have not been tested yet)    |
+
+`set_ominous_bottle_amplifier`
+
+<CodeHeader>Ominous Bottle Amplifier Function</CodeHeader>
+
+```json
+{
+  "function": "set_ominous_bottle_amplifier",
+  "amplifier": {
+  "min": 0,
+  "max": 4
+  }
+}
+```
+
+Sets the `minecraft:ominous_bottle` potion effect amplifier.
+
+`amplifier`: can be a set number or a [range object](#range-object). Allowed values are `0-4`.
 
 ## Enchanting
 
