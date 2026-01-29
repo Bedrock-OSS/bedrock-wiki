@@ -25,5 +25,6 @@ Here is list of NetherNet implementations
 | --------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------- |
 | [go-nethernet](https://github.com/df-mc/go-nethernet)                             | Go library implementing a basic version of the NetherNet protocol | Go       |
 | [bedrock-crustaceans/nethernet](https://github.com/bedrock-crustaceans/nethernet) | NetherNet implementation in Rust                                  | Rust     |
+| [node-nethernet](https://github.com/PrismarineJS/node-nethernet)                  | NetherNet implementation in NodeJS                                | Javascript, Typescript |
 
 This page is a WIP, feel free to contribute as it is still being worked on.
