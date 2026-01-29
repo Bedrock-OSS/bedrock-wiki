@@ -188,6 +188,7 @@ Here is list of RakNet Protocol implementations
 | [bedrock-crustaceans/raknet](https://github.com/bedrock-crustaceans/raknet)                     | RakNet implementation in Rust                                                       | Rust                   |
 | [NetrexMC/RakNet](https://github.com/NetrexMC/RakNet)                                           | RakNet implementation in Rust                                                       | Rust                   |
 | [rust-raknet](https://github.com/b23r0/rust-raknet)                                             | RakNet Protocol implementation by Rust                                              | Rust                   |
+| [tokio-raknet](https://github.com/iAldrich23xX/tokio-raknet)                                    | RakNet Implementation build around the tokio async ecosystem                        | Rust                   |
 | [transport-raknet](https://github.com/CloudburstMC/Network/tree/develop/transport-raknet)       | netty-transport-raknet                                                              | Java                   |
 | [RakLib](https://github.com/pmmp/RakLib)                                                        | RakNet server implementation written in PHP                                         | PHP                    |
 | [go-raknet](https://github.com/Sandertv/go-raknet)                                              | Go library implementing a basic version of the RakNet protocol                      | Go                     |
