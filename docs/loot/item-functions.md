@@ -7,7 +7,7 @@ mentions:
     - Ciosciaa
     - MedicalJewel105
     - ThomasOrs
-    - Robotics Modified
+    - Robotics-Modified
 ---
 
 Item functions modify the nature of an item in [loot tables](/loot/loot-tables) and [trade tables](/loot/trade-tables).
