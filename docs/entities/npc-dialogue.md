@@ -30,9 +30,9 @@ NPC dialogue data is stored in dialogue files, which are stored in the `dialogue
     "minecraft:npc_dialogue": {
         "scenes": [
             {
-                "scene_tag": "wiki:example",
-                "npc_name": "Steve",
-                "text": "Hello"
+                "scene_tag": "hp:example",
+                "npc_name": "hp_utama",
+                "text": ""
             }
         ]
     }
@@ -61,7 +61,7 @@ Array of command strings to be run when the dialogue is opened. Optional.
 
 ```json
 "on_open_commands": [
-    "/say Hello"
+    "/say welcome"
 ]
 ```
 
@@ -73,7 +73,7 @@ Array of command strings to be run when the dialogue is closed. Optional.
 
 ```json
 "on_close_commands": [
-    "/say Goodbye"
+    "/say off on"
 ]
 ```
 
@@ -86,15 +86,15 @@ An array of objects specifying the buttons to show in the dialogue. Optional.
 ```json
 "buttons": [
     {
-        "name": "Button One",
+        "name": "crome",
         "commands": [
-            "/say Button One Pressed!"
+            "/say maaf ini coba"
         ]
     },
     {
-        "name": "Button Two",
+        "name": "close",
         "commands": [
-            "/say Button Two Pressed!",
+            "/say @p belum bisa",
             "/say Secondary Command for Button Two"
         ]
     }
