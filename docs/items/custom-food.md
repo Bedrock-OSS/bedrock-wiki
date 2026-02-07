@@ -42,12 +42,13 @@ On this page, you will learn how to create custom foods that, when consumed, gra
             "minecraft:use_animation": "eat",
             "minecraft:use_modifiers": {
                 "use_duration": 1.6,
-                "movement_modifier": 0.33
+                "movement_modifier": 0.35
             },
             "minecraft:tags": {
                 "tags": [
                     "minecraft:is_food",
-                    "minecraft:is_meat", // Only include if the food is meat
+                    "minecraft:is_fish", // Only include if the food is fish
+                    "minecraft:is_meat", // Only include if the food is meat (not including fish)
                     "minecraft:is_cooked" // Only include if the food is cooked
                 ]
             }
