@@ -22,7 +22,6 @@ In the [terrain atlas file](/concepts/texture-atlases), the following parameters
 
 ```json
 {
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:tinted_texture": {
             "textures": {

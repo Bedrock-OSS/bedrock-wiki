@@ -96,8 +96,6 @@ We need to create a texture shortname to link it to an image in `RP/textures/ite
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:custom_item": {
             "textures": "textures/items/custom_item"

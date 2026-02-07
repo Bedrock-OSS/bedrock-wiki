@@ -45,8 +45,6 @@ Here is an example file to compare against:
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:your_item_icon": {
             "textures": "textures/items/your_item_icon"

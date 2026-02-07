@@ -75,8 +75,6 @@ So at a bare minimum that is enough to get a sword put into the game, we still n
 
 ```json
 {
-    "resource_pack_name": "custom-weapon",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:my_sword": {
             // Make sure you have put an icon texture called my_sword.png here

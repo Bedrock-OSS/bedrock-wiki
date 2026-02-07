@@ -65,7 +65,6 @@ We need to create an object named `wiki:custom_<thing>` in the `RP/textures/item
 
 ```json
 {
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:custom_food": {
             "textures": "textures/items/custom_food"
