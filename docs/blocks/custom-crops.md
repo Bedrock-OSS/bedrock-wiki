@@ -272,11 +272,11 @@ function isCrowded(crop) {
 We can now use the `getGrowthSpeed()`{lang=js} function to create another function which randomly returns `true`{lang=js} or `false`{lang=js} based on the calculated speed.
 
 ```js
-function randomInt(min: number, max: number) {
+function randomInt(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));
 }
 
-export function randomShouldCropGrow(crop: Block, growthParams: CropGrowthParams) {
+export function randomShouldCropGrow(crop, growthParams) {
     const growthSpeed = getGrowthSpeed(crop, growthParams);
     const growthChanceRange = Math.floor(25 / growthSpeed);
 
