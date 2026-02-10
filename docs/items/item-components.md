@@ -164,7 +164,7 @@ Determines how much extra damage (`0-32767`{lang=js}) the item deals on attack, 
 
 _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
-### Integer Definition {#damage-integer}
+#### Integer Definition {#damage-integer}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
