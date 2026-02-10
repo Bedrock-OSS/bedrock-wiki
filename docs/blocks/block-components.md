@@ -668,7 +668,7 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 Each key is the name of a material instance and each value is a material instance object.
 The `*` instance is the default instance for all cube faces, however it is not required if all faces have a material instance separately defined.
 
--   `<name>`{lang=xml}: Object
+-   `<name>`{lang=xml} — Object
     -   `texture` — String
         -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
     -   `render_method` — String (optional)
@@ -714,7 +714,7 @@ Render methods essentially control how a block appears in the world, much like e
 | `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Ladder, Monster Spawner, Vines |
 | `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Saplings, Trapdoors     |
 | `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
-| `double_sided`            |       ❌       |       ❌       |         ❌         |        ❌         | Powder Snow                    |
+| `double_sided`            |       ❌       |       ❌       |         ❌         |        ✔️         | Powder Snow                    |
 | `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
 
 -   **_Transparency_** - fully see-through areas.
