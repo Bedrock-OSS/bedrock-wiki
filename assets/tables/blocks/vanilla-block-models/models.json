@@ -1,0 +1,40 @@
+{
+  "columns": {
+    "preview": {
+      "name": "Preview"
+    },
+    "identifier": {
+      "name": "Identifier",
+      "sortable": true
+    },
+    "notes": {
+      "name": "Additional Notes"
+    }
+  },
+  "rows": [
+    {
+      "preview": "<img src='/assets/images/blocks/vanilla-block-models/cross.png' alt='' class='model-preview' />",
+      "identifier": "`minecraft:geometry.cross`",
+      "notes": [
+        "When used on a block, `ambient_occlusion` and `face_dimming` should be set to `false`{lang=json} in any [material instances](/blocks/block-components#material-instances).",
+        "This model should only be used in combination with render methods that apply backface culling (`\"alpha_test_single_sided\"`{lang=json}, `\"blend\"`{lang=json} and `\"opaque\"`{lang=json}) to avoid texture flickering."
+      ]
+    },
+    {
+      "preview": "<img src='/assets/images/blocks/vanilla-block-models/full_block.png' alt='' class='model-preview' />",
+      "identifier": "`minecraft:geometry.full_block`",
+      "notes": [
+        "When used by a block with the `\"opaque\"`{lang=json} render method, a shadow is cast onto surrounding blocks and adjacent block faces are culled.",
+        "This model cannot be used in format versions prior to [1.26.0](/blocks/block-format-history#_1-26-0) as backwards compatibility mapping results in `minecraft:geometry.full_block_v1` being used instead."
+      ]
+    },
+    {
+      "preview": "<img src='/assets/images/blocks/vanilla-block-models/full_block.png' alt='' class='model-preview' />",
+      "identifier": "`minecraft:geometry.full_block_v1`",
+      "notes": [
+        "**Deprecated** — the bottom face of this model is rotated 180 degrees compared to vanilla full blocks so `minecraft:geometry.full_block` should be used instead.",
+        "When used by a block with the `\"opaque\"`{lang=json} render method, a shadow is cast onto surrounding blocks and adjacent block faces are culled."
+      ]
+    }
+  ]
+}
