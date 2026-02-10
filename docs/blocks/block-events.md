@@ -22,9 +22,9 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.0
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.130.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.0.
 :::
 
 ## Registering Custom Components
@@ -196,6 +196,38 @@ Triggered on every random tick, allowing for behavior like random crop growth.
 onRandomTick(event) {
     event.block // Block impacted by this event.
     event.dimension // Dimension that contains the block.
+}
+```
+
+### Redstone Update
+
+:::tip DEPENDENCY
+The redstone update event requires the [`minecraft:redstone_consumer`](/blocks/block-components#redstone-consumer) component to be active on your block to trigger.
+:::
+
+Triggers every time the block receives a redstone update.
+
+This happens in the following situations:
+
+-   The block is placed
+-   The chunk containing the block is loaded
+-   The redstone power level of the block changes
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_consumer": {
+    "min_power": 5 // The minimum power level needed to trigger this event.
+}
+```
+
+<CodeHeader>Custom Component</CodeHeader>
+
+```js
+onRedstoneUpdate(event) {
+    event.block // Block impacted by this event.
+    event.dimension // Dimension that contains the block.
+    event.powerLevel // The redstone power level received by the block.
 }
 ```
 

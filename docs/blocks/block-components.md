@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.0
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.21.130.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.0.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -97,7 +97,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 -   `size` — Vector `[X, Y, Z]`{lang=js}
     -   Size of each side of the collision box.
     -   Measured in pixels from the `origin` of the collision box.
-    -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 16, 8]`{lang=json}.
+    -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 24, 8]`{lang=json}.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -105,6 +105,51 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 "minecraft:collision_box": {
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
+}
+```
+
+#### Array Definition {#collision-box-array}
+
+An array of up to 16 object collision box definitions.
+Setting this to an empty array results in a full block collision.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:collision_box": [
+    {
+        "origin": [-4, 8, -4],
+        "size": [8, 8, 8]
+    },
+    {
+        "origin": [-8, 0, -8],
+        "size": [16, 8, 16]
+    }
+]
+```
+
+### Connection Rule
+
+Determines whether other blocks such as fences and walls can connect to the block.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+#### Object Definition {#connection-rule-object}
+
+-   `accepts_connections_from` — String (optional)
+    -   `"all"`{lang=json} (default) allows any block to connect to the block.
+    -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
+    -   `"none"`{lang=json} prevents all blocks from connecting.
+-   `enabled_directions` — Array (optional)
+    -   Lists the cardinal directions from which other blocks can connect to the block.
+    -   By default, blocks can connect from any cardinal direction.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:connection_rule": {
+    "accepts_connections_from": "only_fences",
+    "enabled_directions": ["north", "east", "south", "west"]
 }
 ```
 
@@ -466,6 +511,25 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
 }
 ```
 
+### Leashable
+
+Allows leads and balloons to be attached to the block like fences.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+#### Object Definition {#leashable-object}
+
+-   `offset` — Vector `[X, Y, Z]`{lang=js} (optional)
+    -   Determines the position of the middle of the knot relative to the bottom middle of the block.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:leashable": {
+    "offset": [0, 12, 0]
+}
+```
+
 ### Light Dampening
 
 Determines the maximum number of light levels (`0-15`{lang=js}) that will be dampened when passing through the block, in a range.
@@ -498,7 +562,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 
 Determines how this blocks behaves with different types of liquid.
 
-_Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or later._
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
 #### Object Definition {#liquid-detection-object}
 
@@ -516,6 +580,9 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
     -   `stops_liquid_flowing_from_direction` — Array (optional)
         -   Determines an array of directions that the liquid cannot flow out of this block from.
         -   If `on_liquid_touches` is set to `"no_reaction"`{lang=json}, this array also determines the directions that the liquid cannot flow into this block from.
+    -   `use_liquid_clipping` — Boolean (optional)
+        -   Determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](#collision-box)).
+        -   By default, liquid is not clipped.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -594,7 +661,6 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 **Known Issues:**
 
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks.
-    This is especially noticeable when the block model intersects surrounding blocks, causing faces to become dark.
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
 
 #### Object Definition {#material-instances-object}
@@ -611,6 +677,10 @@ The `*` instance is the default instance for all cube faces, however it is not r
         -   By default, the `opaque` render method is used.
     -   `tint_method` — String (optional)
         -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
+    -   `alpha_masked_tint` — Boolean (optional)
+        -   Determines whether the intensity of the tint applied by tint methods should be based on the alpha channel of the texture.
+        -   When `true`{lang=json}, a `tint_method` must be specified (that is not `"none"`{lang=json}) and the `render_method` must be `"opaque"`{lang=json}.
+        -   By default, tinting from tint methods is not alpha-masked.
     -   `ambient_occlusion` — Boolean / Float (`0.0-10.0`{lang=json}) (optional)
         -   Determines whether "smooth lighting" is applied to faces using the material instance.
         -   Float values can be used to determine ambient occlusion intensity.
@@ -850,6 +920,31 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 }
 ```
 
+### Redstone Consumer
+
+:::tip ROOT ONLY
+This component may only be defined in the root `components` object of your block, so cannot be specified per permutation.
+:::
+
+Allows the block to respond to redstone power via custom components using the `onRedstoneUpdate()`{lang=js} event hook.
+
+#### Object Definition {#redstone-consumer-object}
+
+-   `min_power` — Integer (`0-15`{lang=js})
+    -   Determines the minimum power level required to trigger the `onRedstoneUpdate()`{lang=js} custom component event hook.
+-   `propagates_power` — Boolean (optional)
+    -   Determines whether this block conducts redstone power to adjacent blocks.
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](#redstone-conductivity) component.
+        -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:redstone_consumer": {
+    "min_power": 0
+}
+```
+
 ### Redstone Producer
 
 Causes the block to produce redstone power.
@@ -926,6 +1021,25 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 "minecraft:selection_box": {
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
+}
+```
+
+### Support
+
+Defines the block's ability to support other blocks that are attached to it.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+#### Object Definition {#support-object}
+
+-   `shape` — String
+    -   Can be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:support": {
+    "shape": "fence"
 }
 ```
 

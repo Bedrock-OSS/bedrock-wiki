@@ -37,8 +37,6 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:dirt_like": {
             "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
@@ -70,7 +68,7 @@ Dirt like block example:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:dirt_like"
@@ -92,7 +90,7 @@ Log like block example:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_log"
@@ -119,7 +117,7 @@ Grass-like block example:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_grass"
@@ -174,7 +172,7 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         ...
         "components": {

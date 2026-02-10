@@ -38,7 +38,7 @@ Below is the **minimum** behavior-side code to get a custom item into the creati
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -67,7 +67,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -96,8 +96,6 @@ We need to create a texture shortname to link it to an image in `RP/textures/ite
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:custom_item": {
             "textures": "textures/items/custom_item"
@@ -112,7 +110,7 @@ In our item file, we will add the `minecraft:icon` component to apply the textur
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",

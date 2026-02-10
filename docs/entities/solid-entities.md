@@ -19,41 +19,40 @@ This page will discuss some of the ways that solid entities can be created.
 
 Not all techniques are ideal for all scenarios. Experiment, and figure out what works best for you.
 
-## minecraft:is_collidable
+## Collidable Entities
 
 ```json
 {
-  "format_version": "1.21.130",
-  "minecraft:entity": {
-    "components": {
-      "minecraft:body_rotation_blocked": {},
-      "minecraft:collision_box": {
-        "height": 1,
-        "width": 1
-      },
-      "minecraft:health": {
-        "max": 1,
-        "value": 1
-      },
-      "minecraft:is_collidable": {},
-      "minecraft:renders_when_invisible": {},
-      "minecraft:rotation_axis_aligned": {},
-      "minecraft:spell_effects": {
-        "add_effects": [
-          {
-            "duration": "infinite",
-            "effect": "invisibility",
-            "visible": false
-          }
-        ]
-      }
-    },
-    "description": {
-      "identifier": "wiki:solid_block",
-      "is_spawnable": true,
-      "is_summonable": true
+    "format_version": "1.26.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:solid_block",
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "components": {
+            // Allows other entities to collide with this entity
+            "minecraft:is_collidable": {},
+            "minecraft:collision_box": {
+                "height": 1,
+                "width": 1
+            },
+            // Prevents rotation
+            "minecraft:body_rotation_blocked": {},
+            "minecraft:rotation_axis_aligned": {},
+            // Hides the entity's shadow
+            "minecraft:renders_when_invisible": {},
+            "minecraft:spell_effects": {
+                "add_effects": [
+                    {
+                        "duration": "infinite",
+                        "effect": "invisibility",
+                        "visible": false
+                    }
+                ]
+            }
+        }
     }
-  }
 }
 ```
 

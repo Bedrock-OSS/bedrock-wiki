@@ -26,7 +26,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.0
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger NOTE
@@ -49,7 +49,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -82,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -138,8 +138,6 @@ Now, we need to link the texture shortname to an image file path in `RP/textures
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         // Our texture shortname:
         "wiki:custom_block": {
@@ -230,8 +228,6 @@ With the following `terrain_texture.json` data:
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:compass_block_down": {
             "textures": "textures/blocks/compass_block_down"
