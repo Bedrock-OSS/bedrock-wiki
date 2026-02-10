@@ -7,6 +7,8 @@ export default {
   "/blocks/blocks-stable": "/blocks/blocks-intro",
   "/blocks/block-tags#list-of-vanilla-tags": "/blocks/vanilla-block-tags",
   "/blocks/custom-trapdoor": "/blocks/custom-trapdoors",
+  "/blocks/precise-rotation": "/blocks/intercardinal-orientation",
+  "/blocks/rotatable-blocks": "/blocks/block-orientation",
 
   "/commands/nbt-commands": "/commands/giving-nbt-items",
   "/commands/tellraw": "/text/rawtext",
