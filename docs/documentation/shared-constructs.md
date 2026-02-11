@@ -11,33 +11,68 @@ JSON constructs are expressible in multiple locations in the add-ons system.
 
 ## Block Descriptors
 
-Block descriptors can be used to check for blocks that match the specified properties.
+Block descriptors can be used to check for blocks that match the specified parameters.
 For example, block descriptors are used in the block [placement filter](/blocks/block-components#placement-filter) to determine which types of blocks a custom block can survive on.
 
-<CodeHeader>Identifier Object Example</CodeHeader>
+### Block Type Descriptor
+
+<CodeHeader>Block Descriptor</CodeHeader>
 
 ```json
 {
-    "name": "wiki:my_block"
+    "name": "wiki:custom_block"
 }
 ```
 
-<CodeHeader>Permutation Object Example</CodeHeader>
+### Block Permutation Descriptor
+
+<CodeHeader>Block Descriptor</CodeHeader>
 
 ```json
 {
-    "name": "wiki:my_block",
+    "name": "wiki:custom_block",
     "states": {
-        "wiki:my_state": 5
+        "wiki:custom_state": 5
     }
 }
 ```
 
-<CodeHeader>Tag Object Example</CodeHeader>
+### Block Tags Descriptor
+
+Only has access to the `q.all_tags()`{lang=molang} and `q.any_tag()`{lang=molang} query functions.
+
+<CodeHeader>Block Tags Descriptor</CodeHeader>
 
 ```json
 {
-    "tags": "q.any_tag('minecraft:is_axe_item_destructible', 'wiki:my_tag')"
+    "tags": "q.any_tag('minecraft:is_axe_item_destructible', 'wiki:custom_tag')"
+}
+```
+
+## Item Descriptors
+
+Item descriptors can be used to check for items that match the specified parameters.
+For example, item descriptors are used in the item [repairable](/blocks/block-components#placement-filter) component to determine which types of item can be used to repair the item.
+
+### Item Type Descriptor
+
+<CodeHeader>Item Descriptor</CodeHeader>
+
+```json
+{
+    "name": "wiki:custom_item"
+}
+```
+
+### Item Tags Descriptor
+
+Only has access to the `q.all_tags()`{lang=molang} and `q.any_tag()`{lang=molang} query functions.
+
+<CodeHeader>Item Tags Descriptor</CodeHeader>
+
+```json
+{
+    "tags": "q.any_tag('minecraft:is_axe', 'wiki:custom_tag')"
 }
 ```
 
