@@ -20,6 +20,21 @@ An experiment must be enabled in your world for experimental changes to take eff
 The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
 :::
 
+## 1.26.10
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:multi_block`
+    -   Causes the block to be treated as a multi-block made up of multiple parts.
+    -   Allows the `minecraft:multi_block_part` state to be enabled via the `enabled_states` array.
+    -   Contains `direction` which determines the direction in which parts of the multi-block are placed.
+        -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
+    -   Contains `parts` which determines the number of blocks (2-4) that make up the multi-block.
+        -   This determines how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
+
 ## 1.26.0
 
 ### Traits
