@@ -16,6 +16,17 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.10
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:block_placer`
+    -   Added `aligned_placement` parameter which determines whether the block should be placed on the block that was previously placed, on the face in the direction that the player started moving.
+        -   By default, this parameter is set to `false`{lang=json}.
+        -   Despite being introduced in version 1.26.10, this parameter is available in format versions 1.26.0 and higher.
+
 ## 1.26.0
 
 ### Components
