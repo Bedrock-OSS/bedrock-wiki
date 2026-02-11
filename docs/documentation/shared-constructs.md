@@ -52,7 +52,7 @@ Only has access to the `q.all_tags()`{lang=molang} and `q.any_tag()`{lang=molang
 ## Item Descriptors
 
 Item descriptors can be used to check for items that match the specified parameters.
-For example, item descriptors are used in the item [repairable](/blocks/block-components#placement-filter) component to determine which types of item can be used to repair the item.
+For example, item descriptors are used in the item [repairable](/items/item-components#repairable) component to determine which types of item can be used to repair the item.
 
 ### Item Type Descriptor
 
