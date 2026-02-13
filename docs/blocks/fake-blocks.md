@@ -47,7 +47,7 @@ Those components below are required to make the entity act as a block, and also 
     "minecraft:damage_sensor": {
         "triggers": [
             {
-                "deals_damage": false,
+                "deals_damage": "no",
                 "cause": "all"
             }
         ]
@@ -188,7 +188,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
             "minecraft:damage_sensor": {
                 "triggers": {
                     "cause": "all",
-                    "deals_damage": false
+                    "deals_damage": "no"
                 }
             }
         },
@@ -262,7 +262,7 @@ And now we have to add a new render controller. This is going to select differen
                     "texture.destroy_stage_2",
                     "texture.destroy_stage_1",
                     "texture.destroy_stage_0",
-                    "texture.normal"
+                    "texture.default"
                 ]
             }
         },
