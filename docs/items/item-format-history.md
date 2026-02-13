@@ -346,17 +346,51 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:interact_button`
     -   Enable and set text on a button that is displayed when using touch controls.
     -   If set to `true`, the button displays "Use Item".
+-   Released `minecraft:enchantable` from experimental
+-   Released `minecraft:food` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:mining_speed`
+
+## 1.20.20
+
+### Description
+
+<Label color="green">Versioned</Label>
+
+-   Added `menu_category`
+    -   Contains `category` which determines which tab the item is placed into.
+    -   Contains `group` which determines which other items the item is grouped with.
+    -   Contains `is_hidden_in_commands` which determines whether the item is treated as invalid when used in commands.
+
+### Components
+
+<Label color="green">Versioned</Label>
+
 -   Released `minecraft:allow_off_hand` from experimental
 -   Released `minecraft:damage` from experimental
 -   Released `minecraft:digger` from experimental
 -   Released `minecraft:enchantable` from experimental
--   Released `minecraft:food` from experimental
+-   Released `minecraft:glint` from experimental
 -   Released `minecraft:hand_equipped` from experimental
 -   Released `minecraft:liquid_clipped` from experimental
 -   Released `minecraft:should_despawn` from experimental
 -   Released `minecraft:stacked_by_data` from experimental
 -   Released `minecraft:use_animation` from experimental
 -   Released `minecraft:use_duration` from experimental
+-   Released `minecraft:wearable` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:creative_category`
+-   Renamed `minecraft:foil` to `minecraft:glint`
+-   Updated `minecraft:digger`
+    -   Removed `on_dig` trigger parameter
 
 ## 1.20.10
 
