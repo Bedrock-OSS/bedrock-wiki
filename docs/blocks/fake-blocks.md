@@ -161,13 +161,12 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ```json
 {
-    "format_version": "1.13.0",
+    "format_version": "1.26.0",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:dummy_align", // The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
             "is_spawnable": false,
-            "is_summonable": true,
-            "is_experimental": false
+            "is_summonable": true
         },
         "component_groups": {
             "transform": {
