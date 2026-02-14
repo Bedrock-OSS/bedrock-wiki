@@ -953,7 +953,7 @@ Causes the block to produce redstone power.
 
 -   `power` — Integer (`0-15`{lang=js})
     -   Determines the power level produced by the block as an integer.
--   `strongly_powered_face`
+-   `strongly_powered_face` — String
     -   Determines the direction where strong power is produced.
     -   If strong power is received by a [redstone conductor](#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
 -   `connected_faces` — Array (optional)
