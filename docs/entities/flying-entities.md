@@ -28,14 +28,18 @@ This is the recommended way to allow a flying entity to be controlled and is use
 By using the movement inputs on their device (such as WASD on Windows), the `minecraft:input_air_controlled` component causes the entity to move in 3D space in the direction the player is facing.
 This component requires the entity to have a `minecraft:movement.hover` component or that the entity doesn't have gravity.
 
-This currently also includes jumping to ascend.
+To make the entity ascend when the player holds down the jump button, you'll also need to add the `minecraft:vertical_movement_action` component to the entity.
+If the velocity defined in this component is negative, the entity will move downwards rather than upwards.
 
-<CodeHeader></CodeHeader>
+<CodeHeader>minecraft:entity > components</CodeHeader>
 
 ```json
 "minecraft:input_air_controlled": {
-  "strafe_speed_modifier": 1,
-  "backwards_movement_modifier": 0.5
+    "strafe_speed_modifier": 1,
+    "backwards_movement_modifier": 0.5
+},
+"minecraft:vertical_movement_action": {
+    "vertical_velocity": 0.5
 }
 ```
 
