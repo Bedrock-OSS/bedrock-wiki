@@ -339,8 +339,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ### Components
 
-<Label color="green">Versioned</Label>
-
 -   Updated `minecraft:destructible_by_mining`
     -   Released `item_specific_speeds` parameter from experimental
 
@@ -379,6 +377,11 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `minecraft:redstone_conductivity`
     -   Contains `redstone_conductor` which determines whether this block conducts redstone.
     -   Contains `allows_wire_to_step_down` which determines whether redstone wire can travel down the side of this block.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
 -   Updated `minecraft:destructible_by_mining`
     -   Added `item_specific_speeds` which determines the `destroy_speed` for each `item` descriptor in an array.
 
