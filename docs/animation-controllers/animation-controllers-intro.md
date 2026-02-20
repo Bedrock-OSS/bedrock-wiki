@@ -322,7 +322,7 @@ Here is an example BP animation controller, which exhibits some of this behavior
             "initial_state": "ground",
             "states": {
                 "ground": {
-                    "on_entry": ["/say I am now in the ground!"],
+                    "on_entry": ["/say I am now on the ground!"],
                     "transitions": [
                         {
                             "flying": "!q.is_on_ground"
