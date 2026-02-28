@@ -19,17 +19,17 @@ You might have encounted this error when running your scripts, about not having 
 
 There are two reasons this message occurs, one is that the method or property is called during read-only mode, or early-execution mode.
 
-## Read-Only Mode
+## Restricted-Execution Mode
 
-This means scripts that are in this state are not allowed to alter world state within these callbacks. The script is in read-only state when Minecraft simulation begins and before events are triggered, or before the start of the "script" tick.
+This means scripts that are in this state are not allowed to alter world state within these callbacks. The script is in restricted execution state when Minecraft simulation begins and before events are triggered, or before the start of the "script" tick.
 
 When the error above occurs, that means you attempted to run a function that tries to modify the state of the world on before events.
 
-### Escaping Read-Only Mode
+### Escaping Restricted-Execution Mode
 
-The easiest way to resolve this issue is to move code, which contains all native functions that can't be called in read-only mode, and all native properties that can't be edited in read-only mode into a `system.run` callback. Here is an example scenario where we're trying to modify the state of the world in a before event callback.
+The easiest way to resolve this issue is to move code, which contains all native functions that can't be called in restricted execution, and all native properties that can't be edited in restricted execution into a `system.run()`{lang=js} callback. Here is an example scenario where we're trying to modify the state of the world in a before event callback.
 
-The native function `MessageFormData.show()` cannot be called in read-only mode, so the following code will throw a ReferenceError explaining that function does not have required privileges.
+The native function `MessageFormData.show()`{lang=js} cannot be called in read-only mode, so the following code will throw a ReferenceError explaining that function does not have required privileges.
 
 ```javascript
 import { system, world } from "@minecraft/server";
@@ -144,9 +144,9 @@ When the privilege error occurs, that means you attempted to run a function or e
 
 ### Escaping Early-Execution Mode
 
-If you have code using an API that is being run in the root context of a script file, it will need to be deferred to run either during or after the `world.afterEvents.worldLoad` event, or the traditional `system.run` timed callback.
+If you have code using an API that is being run in the root context of a script file, it will need to be deferred to run either during or after the `world.afterEvents.worldLoad`{lang=js} event, or the traditional `system.run()`{lang=js} timed callback.
 
-You also need to move code that uses event the APIs below, if they were run in the root context of a script file previously, to root context instead of the `world.afterEvents.worldLoad` event, to avoid some events not being triggered, leading to script malfunction.
+You also need to move code that uses event the APIs below, if they were run in the root context of a script file previously, to root context instead of the `world.afterEvents.worldLoad`{lang=js} event, to avoid some events not being triggered, leading to script malfunction.
 
 The following is an example of sending a message when script loads. Before v2.0.0 breaking changes, the script used to look like this:
 
@@ -204,7 +204,7 @@ Difference
 
 #### Early-Execution APIs
 
-The following are the initial APIs available in early execution mode for scripting v2.0.0-beta:
+The following are the initial APIs available in early execution for scripting v2.0.0:
 
 -   `world.beforeEvents.*.subscribe`
 -   `world.beforeEvents.*.unsubscribe`
