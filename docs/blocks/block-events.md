@@ -38,7 +38,7 @@ _This example prevents the player from placing the block if they aren't in creat
 <CodeHeader>BP/scripts/creativeModeOnly.js</CodeHeader>
 
 ```js
-import { system, GameMode } from "@minecraft/server";
+import { system, GameMode } from "@minecraft/server"; // Must be version 2.0.0 or higher
 
 /** @type {import("@minecraft/server").BlockCustomComponent} */
 const BlockCreativeModeOnlyComponent = {
@@ -64,6 +64,8 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 To bind a custom component to a block, simply list it in the `components` of your block JSON.
 
 Like any normal component, custom components can be added and removed based on the block's [permutation](/blocks/block-permutations).
+
+_Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
 <CodeHeader>minecraft:block</CodeHeader>
 
