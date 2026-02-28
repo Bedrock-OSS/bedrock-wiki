@@ -77,7 +77,7 @@ Defines the area of the block that entities and particles collide with.
 
 _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
 
-#### Boolean Definition {#collision-box-boolean}
+#### Boolean Format {#collision-box-boolean}
 
 -   When `true`{lang=json} (default), a 16×16×16 collision box is used.
 -   When `false`{lang=json}, the block's collision with entities is disabled.
@@ -88,7 +88,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 "minecraft:collision_box": true
 ```
 
-#### Object Definition {#collision-box-object}
+#### Object Format {#collision-box-object}
 
 -   `origin` — Vector `[X, Y, Z]`{lang=js}
     -   Bottom north-western corner of the collision box.
@@ -108,7 +108,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 }
 ```
 
-#### Array Definition {#collision-box-array}
+#### Array Format {#collision-box-array}
 
 An array of up to 16 object collision box definitions.
 Setting this to an empty array results in a full block collision.
@@ -134,7 +134,7 @@ Determines whether other blocks such as fences and walls can connect to the bloc
 
 _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
-#### Object Definition {#connection-rule-object}
+#### Object Format {#connection-rule-object}
 
 -   `accepts_connections_from` — String (optional)
     -   `"all"`{lang=json} (default) allows any block to connect to the block.
@@ -159,7 +159,7 @@ Turns your block into a crafting table, opening a functional crafting interface 
 
 _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
 
-#### Object Definition {#crafting-table-object}
+#### Object Format {#crafting-table-object}
 
 -   `crafting_tags` — Array
     -   Determines which recipes can be used by this crafting table based on an array of tag strings.
@@ -189,7 +189,7 @@ Determines whether the block can be destroyed by explosions.
 
 _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
-#### Boolean Definition {#destructible-by-explosion-boolean}
+#### Boolean Format {#destructible-by-explosion-boolean}
 
 -   When `true`{lang=json} (default), the block has an explosion resistance of 0.
 -   When `false`{lang=json}, the block cannot be destroyed by explosions.
@@ -200,7 +200,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 "minecraft:destructible_by_explosion": false
 ```
 
-#### Object Definition {#destructible-by-explosion-object}
+#### Object Format {#destructible-by-explosion-object}
 
 -   `explosion_resistance` — Float
     -   Defines how resistant the block is to being destroyed by explosions.
@@ -220,7 +220,7 @@ Determines how long it takes for players to mine the block.
 
 _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
-#### Boolean Definition {#destructible-by-mining-boolean}
+#### Boolean Format {#destructible-by-mining-boolean}
 
 -   When `true`{lang=json} (default), the block will be destroyed instantly when mined.
 -   When `false`{lang=json}, the block cannot be destroyed by mining it.
@@ -231,7 +231,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 "minecraft:destructible_by_mining": false
 ```
 
-#### Object Definition {#destructible-by-mining-object}
+#### Object Format {#destructible-by-mining-object}
 
 -   `seconds_to_destroy` — Float
     -   Determines the "hardness" value of the block.
@@ -258,7 +258,7 @@ Determines the appearance of the particles created when hitting, destroying, ste
 
 _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
-#### Object Definition {#destruction-particles-object}
+#### Object Format {#destruction-particles-object}
 
 -   `particle_count` — Integer (optional)
     -   Determines how many particles are created when the block is destroyed (`0-255`{lang=json}).
@@ -287,7 +287,7 @@ The language file key that determines text that will be displayed when you hover
 
 _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
 
-#### String Definition {#display-name-string}
+#### String Format {#display-name-string}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -310,7 +310,7 @@ This component may only be defined in the root `components` object of your block
 Determines how this block is displayed when in a Flower Pot.
 For a block to be able to be placed in a Flower Pot, it must also have the [flower pottable](#flower-pottable) component applied.
 
-#### Object Definition {#embedded-visual-object}
+#### Object Format {#embedded-visual-object}
 
 -   `geometry` — String / Object
     -   The displayed [geometry](#geometry) component.
@@ -336,7 +336,7 @@ Causes an [entity fall on](/blocks/block-events#entity-fall-on) event to be trig
 
 _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
 
-#### Object Definition {#entity-fall-on-object}
+#### Object Format {#entity-fall-on-object}
 
 -   `min_fall_distance` — Float
     -   The minimum distance (in blocks) that an entity must fall in order to trigger the event.
@@ -355,7 +355,7 @@ Determines how flammable the block is.
 
 _Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or later._
 
-#### Boolean Definition {#flammable-boolean}
+#### Boolean Format {#flammable-boolean}
 
 When `true`, the block will be able to catch on fire naturally from neighbors.
 When `false` (default), the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.
@@ -366,7 +366,7 @@ When `false` (default), the block will not be able to catch on fire naturally fr
 "minecraft:flammable": true
 ```
 
-#### Object Definition {#flammable-object}
+#### Object Format {#flammable-object}
 
 -   `catch_chance_modifier` — Integer
     -   Affects chance that this block will catch flame when next to a fire.
@@ -394,7 +394,7 @@ This component may only be defined in the root `components` object of your block
 Allows the block to be placed in a Flower Pot.
 The [embedded visual](#embedded-visual) component can be used to change the appearance of the block when in a Flower Pot.
 
-#### Object Definition {#flower-pottable-object}
+#### Object Format {#flower-pottable-object}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -413,7 +413,7 @@ This component is somewhat broken. While it works correctly on boats, higher fri
 
 _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
-#### Float Definition {#friction-float}
+#### Float Format {#friction-float}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -437,7 +437,7 @@ The geometry of blocks can also be set to any of the [vanilla block models](/blo
 
 _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
-#### String Definition {#geometry-string}
+#### String Format {#geometry-string}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -445,7 +445,7 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 "minecraft:geometry": "geometry.example_block"
 ```
 
-#### Object Definition {#geometry-object}
+#### Object Format {#geometry-object}
 
 -   `identifier` — String
     -   The identifier of the geometry.
@@ -491,7 +491,7 @@ Determines how this block is displayed as an item.
 
 _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or later._
 
-#### Object Definition {#item-visual-object}
+#### Object Format {#item-visual-object}
 
 -   `geometry` — Object / String
     -   The displayed [geometry](#geometry) component.
@@ -517,7 +517,7 @@ Allows leads and balloons to be attached to the block like fences.
 
 _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
-#### Object Definition {#leashable-object}
+#### Object Format {#leashable-object}
 
 -   `offset` — Vector `[X, Y, Z]`{lang=js} (optional)
     -   Determines the position of the middle of the knot relative to the bottom middle of the block.
@@ -536,7 +536,7 @@ Determines the maximum number of light levels (`0-15`{lang=js}) that will be dam
 
 _Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or later._
 
-#### Integer Definition {#light-dampening-integer}
+#### Integer Format {#light-dampening-integer}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -550,7 +550,7 @@ Determines the integer light level (`0-15`{lang=js}) emitted by the block.
 
 _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
 
-#### Integer Definition {#light-emission-integer}
+#### Integer Format {#light-emission-integer}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -564,7 +564,7 @@ Determines how this blocks behaves with different types of liquid.
 
 _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
-#### Object Definition {#liquid-detection-object}
+#### Object Format {#liquid-detection-object}
 
 -   `detection_rules` — Array
     -   `liquid_type` — String
@@ -603,7 +603,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 The path of the loot table to drop when the block is destroyed (ignored when a tool with the "Silk Touch" enchantment is used).
 If omitted, the block is dropped as an item.
 
-#### String Definition {#loot-string}
+#### String Format {#loot-string}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -616,7 +616,7 @@ If omitted, the block is dropped as an item.
 Defines a block's appearance when viewed on maps.
 If omitted, the block is ignored by maps.
 
-#### String Definition {#map-color-string}
+#### String Format {#map-color-string}
 
 A hex string (starting with a `#`) defining the `#RRGGBB` color of the block on a map.
 
@@ -626,7 +626,7 @@ A hex string (starting with a `#`) defining the `#RRGGBB` color of the block on 
 "minecraft:map_color": "#FFFFFF"
 ```
 
-#### Array Definition {#map-color-array}
+#### Array Format {#map-color-array}
 
 An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} color of the block on a map.
 
@@ -636,7 +636,7 @@ An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} colo
 "minecraft:map_color": [255, 255, 255]
 ```
 
-#### Object Definition {#map-color-object}
+#### Object Format {#map-color-object}
 
 -   `color` — String
     -   A hex string (starting with a `#`) defining the `#RRGGBB` color of the block on a map.
@@ -663,7 +663,7 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 -   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks.
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
 
-#### Object Definition {#material-instances-object}
+#### Object Format {#material-instances-object}
 
 Each key is the name of a material instance and each value is a material instance object.
 The `*` instance is the default instance for all cube faces, however it is not required if all faces have a material instance separately defined.
@@ -772,7 +772,7 @@ Determines how a block can be moved by pistons.
 
 _Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
 
-#### Object Definition {#movable-object}
+#### Object Format {#movable-object}
 
 -   `movement_type` — String
     -   Can be one of the following values: `"immovable"`{lang=json}, `"popped"`{lang=json}, `"push"`{lang=json} or `"push_pull"`{lang=json} (default).
@@ -794,7 +794,7 @@ If none of the specified conditions are met, the block will not be placed; or if
 
 _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
 
-#### Object Definition {#placement-filter-object}
+#### Object Format {#placement-filter-object}
 
 -   `conditions` — Array
     -   List of condition objects specifying places where the block can be placed and survive without popping off as an item.
@@ -837,7 +837,7 @@ Determines how the block interacts with precipitation (rain and snow).
 
 _Requires format version [1.21.120](/blocks/block-format-history#_1-21-120) or later._
 
-#### Object Definition {#precipitation-interactions-object}
+#### Object Format {#precipitation-interactions-object}
 
 -   `precipitation_behavior`: String
     -   `"obstruct_rain_accumulate_snow"`{lang=json} (default) prevents rain from passing through the block, instead causing it to splash on top of it and causes snow layers to build up above the block while it is snowing.
@@ -860,7 +860,7 @@ Causes a random offset to be applied to the block based on its position in the w
 
 _Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or later._
 
-#### Object Definition {#random-offset-object}
+#### Object Format {#random-offset-object}
 
 -   `<axis>`{lang=xml}: Object (optional)
     -   The following offset parameters are separately defined for the `x`, `y` and `z` axes.
@@ -904,7 +904,7 @@ Defines a block's ability to conduct redstone power.
 
 _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or later._
 
-#### Object Definition {#redstone-conductivity-object}
+#### Object Format {#redstone-conductivity-object}
 
 -   `allows_wire_to_step_down` — Boolean (optional)
     -   Determines whether redstone wire can travel down the side of this block (if the block is not a conductor).
@@ -928,7 +928,7 @@ This component may only be defined in the root `components` object of your block
 
 Allows the block to respond to redstone power via custom components using the `onRedstoneUpdate()`{lang=js} event hook.
 
-#### Object Definition {#redstone-consumer-object}
+#### Object Format {#redstone-consumer-object}
 
 -   `min_power` — Integer (`0-15`{lang=js})
     -   Determines the minimum power level required to trigger the `onRedstoneUpdate()`{lang=js} custom component event hook.
@@ -949,7 +949,7 @@ Allows the block to respond to redstone power via custom components using the `o
 
 Causes the block to produce redstone power.
 
-#### Object Definition {#redstone-producer-object}
+#### Object Format {#redstone-producer-object}
 
 -   `power` — Integer (`0-15`{lang=js})
     -   Determines the power level produced by the block as an integer.
@@ -979,7 +979,7 @@ Causes the block to produce redstone power.
 Allows this block to be replaced by attempting to place another block in its position.
 Does not allow the block to be replaced by a block of the same permutation.
 
-#### Object Definition {#replaceable-object}
+#### Object Format {#replaceable-object}
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -993,7 +993,7 @@ Defines the area of the block that can be selected by players.
 
 _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
 
-#### Boolean Definition {#selection-box-boolean}
+#### Boolean Format {#selection-box-boolean}
 
 -   When `true`{lang=json} (default), a 16×16×16 selection box is used.
 -   When `false`{lang=json}, the block cannot be selected by players.
@@ -1004,7 +1004,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 "minecraft:selection_box": true
 ```
 
-#### Object Definition {#selection-box-object}
+#### Object Format {#selection-box-object}
 
 -   `origin` — Vector `[X, Y, Z]`{lang=js}
     -   Bottom north-western corner of the selection box.
@@ -1030,7 +1030,7 @@ Defines the block's ability to support other blocks that are attached to it.
 
 _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
-#### Object Definition {#support-object}
+#### Object Format {#support-object}
 
 -   `shape` — String
     -   Can be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
@@ -1049,7 +1049,7 @@ Causes the block to tick after a random delay in the range specified by `interva
 
 _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
 
-#### Object Definition {#tick-object}
+#### Object Format {#tick-object}
 
 -   `interval_range` — Range `[min, max]`{lang=js}
     -   Two durations (in ticks) which will be used as the minimum and maximum delays for randomness.
@@ -1077,7 +1077,7 @@ _Requires format version [1.21.0](/blocks/block-format-history#_1-21-0) or later
 Lean about [block orientation](/blocks/block-orientation) to apply rotation based on how the block is placed, just like furnaces and mob heads!
 :::
 
-#### Object Definition {#transformation-object}
+#### Object Format {#transformation-object}
 
 -   `rotation` — Vector `[X, Y, Z]`{lang=js} (optional)
     -   The number of degrees to rotate the geometry by on each axis.

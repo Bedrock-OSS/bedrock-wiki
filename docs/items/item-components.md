@@ -45,7 +45,7 @@ Determines whether an item can be equipped into the off-hand slot of the invento
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Boolean Definition {#allow-off-hand-boolean}
+#### Boolean Format {#allow-off-hand-boolean}
 
 -   When `true`{lang=json}, the item can be equipped into the off-hand slot.
 -   When `false`{lang=json} (default), the item cannot be equipped into the off-hand slot.
@@ -62,7 +62,7 @@ Allows the item to be used to place a block, decrementing the item stack when th
 
 _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later._
 
-#### Object Definition {#block-placer-object}
+#### Object Format {#block-placer-object}
 
 -   `block` — String / Object
     -   Defines the block that will be placed.
@@ -100,7 +100,7 @@ The item must have the `minecraft:storage_item` component for this component to 
 
 _Requires format version [1.21.40](/items/item-format-history#_1-21-40) or later._
 
-#### Object Definition {#bundle-interaction-object}
+#### Object Format {#bundle-interaction-object}
 
 -   `num_viewable_slots` — Integer (`1-64`{lang=js})
     -   Defines the maximum number of item stacks accessible from the top of the bundle.
@@ -120,7 +120,7 @@ Determines whether the item will break blocks when the player is attacking in cr
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Boolean Definition {#can-destroy-in-creative-boolean}
+#### Boolean Format {#can-destroy-in-creative-boolean}
 
 -   When `true`{lang=json} (default), the item can destroy blocks in creative mode.
 -   When `false`{lang=json}, the item cannot destroy blocks in creative mode.
@@ -137,7 +137,7 @@ Allows this item to be used on or siphoned into (using hoppers) a composter.
 
 _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later._
 
-#### Object Definition {#compostable-object}
+#### Object Format {#compostable-object}
 
 -   `composting_chance` — Float (`0-100`{lang=js})
     -   How likely the compost level is to increase as a percentage.
@@ -156,7 +156,7 @@ Determines how cooldowns are triggered for the item and how long each cooldown s
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Object Definition {#cooldown-object}
+#### Object Format {#cooldown-object}
 
 -   `category` — String
     -   The category of cooldown for this item.
@@ -185,7 +185,7 @@ Determines how much extra damage (`0-32767`{lang=js}) the item deals on attack, 
 
 _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
-#### Integer Definition {#damage-integer}
+#### Integer Format {#damage-integer}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -200,7 +200,7 @@ For this to happen, the item needs to have the durability component and be equip
 
 _Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later._
 
-#### Object Definition {#damage-absorption-object}
+#### Object Format {#damage-absorption-object}
 
 -   `absorbable_causes` — Array
     -   List of damage causes (such as `entity_attack` and `magma`) that can be absorbed by the item.
@@ -220,7 +220,7 @@ Determine how quickly an item can dig specific blocks.
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Object Definition {#digger-object}
+#### Object Format {#digger-object}
 
 -   `destroy_speeds` — Array
     -   `block` — [Block Descriptor](/documentation/shared-constructs#block-descriptors)
@@ -261,7 +261,7 @@ Determines the localization key used when displaying the item's name.
 
 _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 
-#### Object Definition {#display-name-object}
+#### Object Format {#display-name-object}
 
 -   `value` — String
     -   The localization key to associate with the item.
@@ -291,7 +291,7 @@ Allows the item to take damage and determines how much damage the item can take 
 -   When the item is [wearable](#wearable), hitting an entity will not damage the item.
     Instead, it implicitly increments the damage when worn and the entity is hurt.
 
-#### Object Definition {#durability-object}
+#### Object Format {#durability-object}
 
 -   `damage_chance` — Integer [Range](/documentation/shared-constructs#range-objects) (optional)
     -   Determines the percentage chance range of the item receiving damage when it has the "Unbreaking" enchantment.
@@ -309,7 +309,7 @@ Allows an item to trigger vanilla level events when it receives damage.
 
 _Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later._
 
-#### Object Definition {#durability-sensor-object}
+#### Object Format {#durability-sensor-object}
 
 -   `durability_thresholds` — Array
     -   Items define both the durability thresholds, and the effects emitted when each threshold is met.
@@ -346,7 +346,7 @@ Once dyed, the item will display the `dyed` [icon](#icon) texture rather than `d
 
 _Requires format version [1.21.30](/items/item-format-history#_1-21-30) or later._
 
-#### Object Definition {#dyeable-object}
+#### Object Format {#dyeable-object}
 
 -   `default_color` — String (optional)
     -   Determines the color to use by default before the player has dyed the item.
@@ -365,7 +365,7 @@ Allows the item to be enchanted in enchanting tables, anvils, loot tables and ot
 
 _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later._
 
-#### Object Definition {#enchantable-object}
+#### Object Format {#enchantable-object}
 
 -   `slot` — String
     -   Determines which enchantments can be applied to the item.
@@ -433,7 +433,7 @@ Allows the item to place specified entities into the world and spawner blocks.
 
 _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 
-#### Object Definition {#entity-placer-object}
+#### Object Format {#entity-placer-object}
 
 -   `entity` — String
     -   The entity to be placed in the world.
@@ -466,7 +466,7 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 
 Determines whether items should be able to withstand fire and lava when dropped rather than being destroyed.
 
-#### Object Definition {#fire-resistant-object}
+#### Object Format {#fire-resistant-object}
 
 -   `value` — Boolean
     -   Determines whether the item is fire resistant.
@@ -492,7 +492,7 @@ Custom items can always be eaten when the player is full even when `can_always_e
 
 _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later._
 
-#### Object Definition {#food-object}
+#### Object Format {#food-object}
 
 -   `can_always_eat` — Boolean (optional)
     -   Determines whether the item can be consumed even when the player is full.
@@ -522,7 +522,7 @@ Allows the item to be used as fuel in a furnace to smelt other items.
 
 _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 
-#### Object Definition {#fuel-object}
+#### Object Format {#fuel-object}
 
 -   `duration` — Float (`0.5-107374180.0`{lang=js})
     -   The time duration (in seconds) that this item fuels furnaces for.
@@ -542,7 +542,7 @@ Determines whether the item has the enchanted glint effect, even when not enchan
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Boolean Definition {#glint-boolean}
+#### Boolean Format {#glint-boolean}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -556,7 +556,7 @@ Determines whether the item is rendered like a tool while equipped in third pers
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Boolean Definition {#hand-equipped-boolean}
+#### Boolean Format {#hand-equipped-boolean}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -570,7 +570,7 @@ Determines the color of the item's name. Valid colors can be found on the [Minec
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### String Definition {#hover-text-color-string}
+#### String Format {#hover-text-color-string}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -584,7 +584,7 @@ Determines the icon to represent the item in the UI and elsewhere. Released from
 
 _Requires format version [1.20.60](/items/item-format-history#_1-20-60) or later._
 
-#### String Definition {#icon-string}
+#### String Format {#icon-string}
 
 A shorthand format for defining the `default` texture of the item icon.
 
@@ -594,7 +594,7 @@ A shorthand format for defining the `default` texture of the item icon.
 "minecraft:icon": "wiki:custom_item"
 ```
 
-#### Object Definition {#icon-object}
+#### Object Format {#icon-object}
 
 -   `textures` — Object
     -   Contains the different textures that can be used for the item's icon.
@@ -630,7 +630,7 @@ Determines whether the interact button is shown in touch controls when looking a
 
 _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later._
 
-#### Boolean Definition {#interact-button-boolean}
+#### Boolean Format {#interact-button-boolean}
 
 -   When `true`{lang=json}, the generic "Use Item" (`action.interact.use`) text will be displayed on the interact button.
 -   When `false`{lang=json} (default), the interact button will not be displayed.
@@ -641,7 +641,7 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 "minecraft:interact_button": true
 ```
 
-#### String Definition {#interact-button-string}
+#### String Format {#interact-button-string}
 
 Enables the interact button and determines the localization key of the text to display.
 
@@ -661,7 +661,7 @@ action.interact.wiki:launch=Launch
 
 Causes the item to damage (as well as dismount and apply knockback to) each entity that the player moves towards (or that move towards the player) while the item is being used.
 
-#### Object Definition {#kinetic-weapon-object}
+#### Object Format {#kinetic-weapon-object}
 
 -   `delay` — Integer
     -   Determines the duration (in ticks) before kinetic damage and effects start to be applied.
@@ -724,7 +724,7 @@ The interaction takes place inside the liquid block, not on its sides.
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Boolean Definition {#liquid-clipped-boolean}
+#### Boolean Format {#liquid-clipped-boolean}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -738,7 +738,7 @@ Determines the maximum number of this item that can be stacked together in conta
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Integer Definition {#max-stack-size-integer}
+#### Integer Format {#max-stack-size-integer}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -753,7 +753,7 @@ Causes the item to damage all entities in a straight line from the player's view
 -   If there are block collisions between the player and other entities, the damage will be blocked.
 -   Prevents the item from being used to mine blocks.
 
-#### Object Definition {#piercing-weapon-object}
+#### Object Format {#piercing-weapon-object}
 
 -   `hitbox_margin` — Float
     -   Determines how close (in blocks) each entity's collision needs to be to the player's view direction to receive damage.
@@ -787,7 +787,7 @@ Associates a projectile entity with this item, allowing it to be used as [shoote
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Object Definition {#projectile-object}
+#### Object Format {#projectile-object}
 
 -   `minimum_critical_power` — Float (optional)
     -   Determines the time (in seconds) that a projectile needs to charge in order to deal critical damage.
@@ -814,7 +814,7 @@ An `epic` rarity item will remain unchanged when enchanted.
 
 _Requires format version [1.21.30](/items/item-format-history#_1-21-30) or later._
 
-#### String Definition {#rarity-string}
+#### String Format {#rarity-string}
 
 -   `common` results in a white name.
 -   `uncommon` results in a yellow name.
@@ -833,7 +833,7 @@ Allows the item to be inserted into a Jukebox.
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Object Definition {#record-object}
+#### Object Format {#record-object}
 
 -   `comparator_signal` — Integer (`0-15`{lang=js})
     -   Redstone power level for comparators to produce when pointing from a Jukebox containing the item.
@@ -864,7 +864,7 @@ By default, items can be repaired by other items of the same type, combining the
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Object Definition {#repairable-object}
+#### Object Format {#repairable-object}
 
 -   `repair_items` — Array
     -   `items` — Array
@@ -920,7 +920,7 @@ Custom shooters can be used, applying use modifiers, even when no ammunition is 
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Object Definition {#shooter-object}
+#### Object Format {#shooter-object}
 
 -   `ammunition` — Array
     -   `item` — String
@@ -966,7 +966,7 @@ Determines whether stacks of the item that are floating on the ground should eve
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Boolean Definition {#should-despawn-boolean}
+#### Boolean Format {#should-despawn-boolean}
 
 -   When `true`{lang=json} (default), the item will despawn as an entity.
 -   When `false`{lang=json}, the item will not despawn as an entity.
@@ -983,7 +983,7 @@ Determines whether items of the same type with different data are stacked separa
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Boolean Definition {#stacked-by-data-boolean}
+#### Boolean Format {#stacked-by-data-boolean}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -998,7 +998,7 @@ The item must have a max stack size of 1 for this component to function.
 
 _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later._
 
-#### Object Definition {#storage-item-object}
+#### Object Format {#storage-item-object}
 
 -   `allow_nested_storage_items` — Boolean
     -   Determines whether other storage items can be placed into the container.
@@ -1034,7 +1034,7 @@ The item must have the `minecraft:storage_item` component for this component to 
 
 _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later._
 
-#### Object Definition {#storage-weight-limit-object}
+#### Object Format {#storage-weight-limit-object}
 
 -   `max_weight_limit` — Integer
 
@@ -1052,7 +1052,7 @@ Defines the additional weight the item adds when inside another storage item.
 
 _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later._
 
-#### Object Definition {#storage-weight-modifier-object}
+#### Object Format {#storage-weight-modifier-object}
 
 -   `weight_in_storage_item` — Integer (`0-64`{lang=js})
     -   When `0`{lang=json}, the item is not allowed inside another storage item.
@@ -1070,7 +1070,7 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
 Determines the base duration, in seconds, of the player's swing animation when mining, attacking or using the item.
 The actual swing duration may differ from this value due to effects such as Mining Fatigue.
 
-#### Float Definition {#swing-duration-float}
+#### Float Format {#swing-duration-float}
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -1084,7 +1084,7 @@ The actual swing duration may differ from this value due to effects such as Mini
 
 Determines the vanilla sound events triggered when a player attacks when holding the item.
 
-#### Object Definitions {#swing-sounds-object}
+#### Object Format {#swing-sounds-object}
 
 -   `attack_miss` — String (optional)
     -   Determines the _vanilla_ sound event triggered when no entity is hit or no damage is dealt.
@@ -1108,7 +1108,7 @@ Determines the list of tags that the item has.
 
 _Requires format version [1.20.50](/items/item-format-history#_1-20-50) or later._
 
-#### Object Definition {#tags-object}
+#### Object Format {#tags-object}
 
 -   `tags` — Array
     -   An array of tags to apply to the item.
@@ -1129,7 +1129,7 @@ Allows the item to be used to throw the projectile defined in the item's [`minec
 
 _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
 
-#### Object Definition {#throwable-object}
+#### Object Format {#throwable-object}
 
 -   `do_swing_animation` — Boolean
     -   Whether the item should use the swing animation when thrown.
@@ -1164,7 +1164,7 @@ Determines which animation plays when using a chargeable item, such as when eati
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### String Definition {#use-animation-string}
+#### String Format {#use-animation-string}
 
 | Value                   | Description                                                                                                                                                                 |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1191,7 +1191,7 @@ General configuration for effects applied when using a chargeable item, such as 
 
 _Requires format version [1.20.50](/items/item-format-history#_1-20-50) or later._
 
-#### Object Definition {#use-modifiers-object}
+#### Object Format {#use-modifiers-object}
 
 -   `emit_vibrations` — Boolean (optional)
     -   Determines whether the item emits vibrations when it starts and stops being used.
@@ -1217,7 +1217,7 @@ Allows the item to be worn by entities.
 
 _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later._
 
-#### Object Definition {#wearable-object}
+#### Object Format {#wearable-object}
 
 -   `hides_player_location` — Boolean (optional)
     -   Determines whether a player wearing the item will be hidden from the Locator Bar and Locator Maps.
