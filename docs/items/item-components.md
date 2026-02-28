@@ -384,6 +384,7 @@ Type: Object
 | `fishing_rod`   |
 | `flintsteel`    |
 | `hoe`           |
+| `melee_spear`   |
 | `pickaxe`       |
 | `shears`        |
 | `shield`        |
