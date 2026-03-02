@@ -95,7 +95,7 @@ Important links have a ⭐.
 -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
 -   [World Packager](https://mcbe-essentials.github.io/world-packager/)
--   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-.mcworld-Builder/)
+-   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
 
 ## Documentation
 
