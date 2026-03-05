@@ -374,27 +374,33 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 
 #### Enchantable Slots
 
-| Slot Name       |
-| --------------- |
-| `armor_feet`    |
-| `armor_torso`   |
-| `armor_head`    |
-| `armor_legs`    |
-| `axe`           |
-| `bow`           |
-| `cosmetic_head` |
-| `crossbow`      |
-| `elytra`        |
-| `fishing_rod`   |
-| `flintsteel`    |
-| `hoe`           |
-| `melee_spear`   |
-| `pickaxe`       |
-| `shears`        |
-| `shield`        |
-| `shovel`        |
-| `sword`         |
-| `all`           |
+| Slot Value                     |
+| ------------------------------ |
+| `"all"`{lang=json}             |
+| `"armor_feet"`{lang=json}      |
+| `"armor_torso"`{lang=json}     |
+| `"armor_head"`{lang=json}      |
+| `"armor_legs"`{lang=json}      |
+| `"axe"`{lang=json}             |
+| `"bow"`{lang=json}             |
+| `"carrot_stick"`{lang=json}    |
+| `"cosmetic_head"`{lang=json}   |
+| `"crossbow"`{lang=json}        |
+| `"elytra"`{lang=json}          |
+| `"fishing_rod"`{lang=json}     |
+| `"flintsteel"`{lang=json}      |
+| `"g_armor"`{lang=json}         |
+| `"g_digging"`{lang=json}       |
+| `"g_tool"`{lang=json}          |
+| `"hoe"`{lang=json}             |
+| `"melee_spear"`{lang=json}     |
+| `"none"`{lang=json}            |
+| `"pickaxe"`{lang=json}         |
+| `"shears"`{lang=json}          |
+| `"shield"`{lang=json}          |
+| `"shovel"`{lang=json}          |
+| `"spear"`{lang=json} (Trident) |
+| `"sword"`{lang=json}           |
 
 #### Enchantability Value
 
