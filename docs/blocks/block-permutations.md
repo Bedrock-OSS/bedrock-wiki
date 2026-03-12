@@ -49,7 +49,7 @@ For example, if you added a custom block with two boolean states…
 To calculate how many permutations your block has, multiply the amount of valid state values each state has together.
 For instance, the calculation for the example above would be 2 &times; 2, meaning this block has 4 permutations.
 
-### Misconceptions
+### Clearing Up Misconceptions
 
 -   All blocks have permutations, even blocks with no states have 1 permutation that is simply made up of the block identifier.
 -   The number of permutations your block has is based on the states it has, not the number of items in the `permutations` array.
