@@ -1015,7 +1015,6 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
     -   Defines the items that are not allowed in the container.
 -   `max_slots` — Integer (`1-64`{lang=js})
     -   Defines the number of slots in the container.
--   `max_weight_limit` — Integer
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
