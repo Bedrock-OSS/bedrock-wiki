@@ -84,6 +84,7 @@ Important links have a ⭐.
 -   [Textures to Glyph Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
 -   [MCBE Essentials](https://mcbe-essentials.github.io/)
 -   [.mcpack Generator](https://mcbe-essentials.github.io/instant-pack/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
@@ -95,7 +96,6 @@ Important links have a ⭐.
 -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
 -   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
 -   [World Packager](https://mcbe-essentials.github.io/world-packager/)
--   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
 
 ## Documentation
 
