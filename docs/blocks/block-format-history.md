@@ -34,6 +34,18 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
         -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
     -   Contains `parts` which determines the number of blocks (2-4) that make up the multi-block.
         -   This determines how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
+    -   Prevents the `minecraft:movable` and `minecraft:placement_filter` components from being defined within the `permutations` array.
+    -   Requires the `minecraft:movable` component to be defined with a `movement_type` of `"popped"`{lang=json} or `"immovable"`{lang=json}.
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:chest_obstruction`
+    -   Determines when the opening of chests placed below the block should be obstructed.
+    -   May be set to `"always"`{lang=json}, `"shape"`{lang=json} (default) or `"never"`{lang=json}.
+    -   Prior to format version 1.26.10, chest obstruction was based on whether a vanilla full block geometry was used with the `opaque` render method.
 
 ## 1.26.0
 
