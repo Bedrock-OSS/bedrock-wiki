@@ -80,6 +80,7 @@ Important links have a ⭐.
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
 -   [Foxynotail Tools](https://foxynotail.com/software)
+-   [Glyph Drawer](https://nhanaz.github.io/glyph-drawer/)
 -   [Glyph Tools](https://nhanaz.github.io/glyph/)
 -   [Textures to Glyph Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
