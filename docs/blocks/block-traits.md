@@ -53,22 +53,50 @@ q.block_state('minecraft:vertical_half')
 
 ## List of Traits
 
+### Connection
+
+Allows for fence-like connection permutations by updating cardinal connection states based on adjacent blocks.
+
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
+
+-   `enabled_states` — Array
+    -   May only contain `"minecraft:cardinal_connections"`{lang=json}, which enables _all_ of the following states.
+
+#### Provided States {#connection-states}
+
+| State                        | Values                                              | Description                                                        |
+| ---------------------------- | --------------------------------------------------- | ------------------------------------------------------------------ |
+| `minecraft:connection_north` | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the north. |
+| `minecraft:connection_south` | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the south. |
+| `minecraft:connection_west`  | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the west.  |
+| `minecraft:connection_east`  | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the east.  |
+
+<CodeHeader>minecraft:block > description > traits</CodeHeader>
+
+```json
+"minecraft:connection": {
+    "enabled_states": ["minecraft:cardinal_connections"]
+}
+```
+
 ### Placement Direction
 
 Contains information about the player's rotation when the block was placed.
 
 _Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
 
-#### Provided States
+-   `enabled_states` — Array
+    -   May contain any of the states from the table below, enabling only the states specified.
+-   `y_rotation_offset` — Integer
+    -   This rotation offset only applies to the horizontal state values (north, south, east, west).
+    -   Only axis-aligned angles may be specified (e.g. 90, 180).
+
+#### Provided States {#placement-direction-states}
 
 | State                          | Values                                                                                                                                             | Description                                      |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | `minecraft:cardinal_direction` | `"south"`{lang=json} _(default)_<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json}                                             | Cardinal facing direction of player when placed. |
 | `minecraft:facing_direction`   | `"down"`{lang=json} _(default)_<br>`"up"`{lang=json}<br>`"south"`{lang=json}<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json} | Overall direction of player when placed.         |
-
-#### Additional Parameters
-
--   `y_rotation_offset` - This rotation offset only applies to the horizontal state values (north, south, east, west) . Only axis-aligned angles may be specified (e.g. 90, 180, -90).
 
 <CodeHeader>minecraft:block > description > traits</CodeHeader>
 
@@ -85,7 +113,10 @@ Contains information about where the player placed the block.
 
 _Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
 
-#### Provided States
+-   `enabled_states` — Array
+    -   May contain any of the states from the table below, enabling only the states specified.
+
+#### Provided States {#placement-position-states}
 
 | State                     | Values                                                                                                                                             | Description                                   |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
