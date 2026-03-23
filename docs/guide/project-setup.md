@@ -125,7 +125,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": "1.26.0"
+        "min_engine_version": "1.26.10"
     },
     "modules": [
         {
@@ -193,7 +193,7 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": "1.26.0"
+        "min_engine_version": "1.26.10"
     },
     "modules": [
         {

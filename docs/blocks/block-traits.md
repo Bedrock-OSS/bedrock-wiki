@@ -9,7 +9,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.26.10
 Before you learn about block traits, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is 1.20.20 or higher.
@@ -23,7 +23,7 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_slab",

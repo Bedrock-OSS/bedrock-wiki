@@ -26,7 +26,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.26.10
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger NOTE
@@ -49,7 +49,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -82,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",

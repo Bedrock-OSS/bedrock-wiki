@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.26.10
 This tutorial assumes an advanced understanding of blocks, items and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -45,7 +45,7 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_head"
@@ -292,7 +292,7 @@ Here's the JSON code for a basic 8×8×8 head model, where each face of the bloc
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:geometry": [
         {
             "description": {
@@ -514,7 +514,7 @@ Now, use the [`permutations`](/blocks/block-permutations) array to define the ro
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_head",
@@ -699,7 +699,7 @@ In order to make our custom head wearable and enchantable, we'll need to replace
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_head", // Must be the same identifier as the block

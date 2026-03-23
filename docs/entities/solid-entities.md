@@ -28,7 +28,7 @@ This is generally the best option for creating entities with solid collisions, a
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:solid_entity",
@@ -86,7 +86,7 @@ You will also need to add `minecraft:push_through` and set its `value` parameter
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:solid_entity",
@@ -106,7 +106,7 @@ You will also need to add `minecraft:push_through` and set its `value` parameter
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:solid_entity",

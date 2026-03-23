@@ -11,8 +11,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.0
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.0.
+:::tip FORMAT VERSION 1.26.10
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.10.
 :::
 
 ## Registering Custom Components

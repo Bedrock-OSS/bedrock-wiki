@@ -87,7 +87,7 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 
 ```json
 {
-	"format_version": "1.26.0",
+	"format_version": "1.26.10",
 	"minecraft:item": {
 		"description": { ... },
 		"components": { ... }
@@ -96,7 +96,7 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 ```
 
 Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
-The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.26.0` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
+The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.26.10` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
 
 The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
@@ -133,7 +133,7 @@ With that, we have now fully defined our item's behavior. This is what your file
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
@@ -263,7 +263,7 @@ Your folder structure should look like this:
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
