@@ -341,6 +341,26 @@ The `texture` key takes the texture shortname of an image, defined in `item_text
 
 ## Additional Settings
 
-`enable_attachments` determines whether or not the entity can use attachments. For example, setting this to false means that the entity cannot hold weapons like swords or bows.
+`enable_attachables` determines whether or not attachables can be attached to the entity. For example, setting this to false means that the entity cannot hold weapons like swords or bows.
 
 `hide_armor` allows the entity to wear armor, but it will not be rendered.
+
+### Modifying the Player Client Entity
+
+In order to support persona skins (created in the Character Creator), the `min_engine_version` of the client entity definition cannot be greater than 1.13.0.
+Ensure that you include the following parameter in the player client entity file:
+
+<CodeHeader>RP/entity/player.entity.json</CodeHeader>
+
+```json
+{
+    "format_version": "1.26.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "min_engine_version": "1.13.0",
+            ...
+        }
+    }
+}
+```
