@@ -83,7 +83,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 
 Contains information about the player's rotation when the block was placed.
 
-_Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or later._
+_Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later._
 
 -   `enabled_states` — Array
     -   May contain any of the states from the table below (excluding `minecraft:corner`), enabling only the states specified.
