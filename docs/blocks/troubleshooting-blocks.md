@@ -68,7 +68,7 @@ Dirt like block example:
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:dirt_like"
@@ -90,7 +90,7 @@ Log like block example:
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_log"
@@ -117,7 +117,7 @@ Grass-like block example:
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_grass"
@@ -172,7 +172,7 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         ...
         "components": {

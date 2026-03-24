@@ -14,7 +14,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.26.10
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -60,7 +60,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -692,7 +692,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -961,7 +961,7 @@ Below is the JSON for a custom item that places your crop.
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID
@@ -991,7 +991,7 @@ Your crop can't only drop seeds! Create a custom food using the template below.
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food", // Make sure this is different from your crop and seeds' ID.

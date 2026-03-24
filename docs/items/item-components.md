@@ -9,9 +9,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.0
+:::tip FORMAT VERSION 1.26.10
 Using the latest format version when creating custom items provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.0.
+The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.10.
 :::
 
 ## Applying Components
@@ -22,7 +22,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.26.0",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -60,7 +60,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 
 Allows the item to be used to place a block, decrementing the item stack when the player is not in creative mode.
 
-_Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later._
+_Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
 #### Object Format {#block-placer-object}
 
@@ -68,6 +68,11 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
     -   Defines the block that will be placed.
 -   `replace_block_item` — Boolean (optional)
     -   Learn more about replacing block items [here](/blocks/blocks-as-items#replacing-block-items).
+-   `aligned_placement` — Boolean (optional)
+    -   Determines whether aligned placement is used when the player holds down the place input.
+    -   When enabled, the block will be placed on the block that was previously placed, on the face in the direction that the player started moving.
+    -   This is enabled for the majority of vanilla building blocks.
+    -   By default, aligned placement is disabled.
 -   `use_on` — Array (optional)
     -   Lists the blocks (as an array of [block descriptors](/documentation/shared-constructs#block-descriptors)) that this item can be used on to place the block.
     -   If empty or omitted, the item will be able to place on any block.
