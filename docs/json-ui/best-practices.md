@@ -21,6 +21,7 @@ This content of this article assumes that you are somewhat familiar with the JSO
 JSON-UI is different than all other add-on systems, as **JSON-UI is unversioned**. Any changes that you make to the UI are subject to become broken as Mojang updates and fixes the JSON-UI system. Fortunately, there are several things that you can do to prevent your UI from breaking as Mojang makes changes to the vanilla UI.
 
 ### Only Modify What is Necessary
+
 The most effective way to minimize the risk of your UI from breaking is to only make the changes that you are wanting to make. For example, if you only want to disable the XP bar shadow, you may think you should add this to the `hud_screen.json` file in your pack.
 
 ```json
@@ -62,6 +63,7 @@ Not only is this less prone to breaking in the future, but it is also cleaner to
 By only modifying what is necessary, you are reducing the number of potential points of failure in the UI which drastically helps to prevent breaking your custom UI as the vanilla UI gets updated. As a final point, **if you are including all the contents of a vanilla UI file in your pack with your changes, you are doing JSON-UI wrong**.
 
 ### Utilize the Modification Strategies
+
 Using the [modification strategies documented on the wiki](/json-ui/json-ui-intro#modifications) are another great way to reduce the chance of breaking changes when Mojang updates the UI. For example, many add-on creators add elements to the HUD to display gameplay related information. A common tactic is to merge custom UI (`custom_ui@namespace.custom_ui`) into the root panel of `hud_screen.json`.
 
 ```json
@@ -94,7 +96,7 @@ Using the [modification strategies documented on the wiki](/json-ui/json-ui-intr
 }
 ```
 
-By directly merging your custom controls with the vanilla root panel, you are drastically increasing the odds that the UI breaks in the future. For example, if Mojang changes the control names in the root panel in the future, your UI could reference UI elements that do not exist or are significantly changed, which *can* cause errors and/or crashing.
+By directly merging your custom controls with the vanilla root panel, you are drastically increasing the odds that the UI breaks in the future. For example, if Mojang changes the control names in the root panel in the future, your UI could reference UI elements that do not exist or are significantly changed, which _can_ cause errors and/or crashing.
 
 To avoid this, utilize the [modification strategies](/json-ui/json-ui-intro#modifications).
 
@@ -119,6 +121,7 @@ To avoid this, utilize the [modification strategies](/json-ui/json-ui-intro#modi
 Modifications using the modifications array are strategically merged with the vanilla UI, and any other packs you are using without altering the sibling controls in the root panel. This increases compatibility with other resource packs and decreases the chance of your UI breaking.
 
 ### Avoid Modifying Controls in Nested Trees
+
 Another common point of failure is modifying deeply nested controls. Here is an example UI element with nested controls.
 
 ```json
@@ -187,6 +190,7 @@ However, sometimes it is not feasible to avoid modifying trees. In this case, yo
 The `/` will target a child control of the specified element. Do note that if the specified target child control name does not exist, it will cause a resource pack error. Your UI will function as normal without issue, but it is preferred to avoid targeting controls in nested trees where possible due to that.
 
 ### Utilize a Single Entry Point
+
 In order to add custom UI to a particular screen, the UI needs to be merged with the vanilla UI at some point. This is called the entry point, and it is best practice to have your custom UI merged with the vanilla UI in a single point where possible to reduce the likelihood of the UI breaking. Here is an example that uses 2 entry points in `hud_screen.json`:
 
 ```json
@@ -243,9 +247,11 @@ We can reduce the number of entry points to one and consolidate `custom_ui_contr
     }
 }
 ```
+
 Using a single entry point reduces the likelihood of UI breaking because if Mojang updated the `hud_content` control name, some custom UI may have broken. Using a single entry point also makes your UI easier to debug since you only need to account for one entry point.
 
 ### Avoid Working in Vanilla Namespaces
+
 If you are modifying large parts of the UI or are adding a large amount of custom UI, you should avoid working in the vanilla namespaced files where possible. You can do this by adding your custom UI file with a unique [namespace](/json-ui/json-ui-intro#namespaces) to the [UI Definition File](/json-ui/json-ui-intro#ui-defs). Remember, you can reference other elements in other namespaces by using the `element@namespace.element` syntax in the control definition when you need to merge your UI into an entry point. By adding your custom UI in a custom namespace, you are reducing the likelihood of a vanilla control name collision, which can cause issues. Additionally, like most other add-on systems, a namespace can support a prefix, such as `wiki:namespace` that can be referenced as `element@wiki:namespace.element`. A prefix can also help to avoid collisions with vanilla namespaces.
 
 ## Maximizing Performance
@@ -257,9 +263,11 @@ In terms of FPS, JSON-UI is the second most costly add-on subsystem behind entit
 [Operators](/json-ui/json-ui-intro#using-operators) are used in the UI to evaluate conditions, perform math, and modify strings. These operators are useful for techniques such as [conditional rendering](/json-ui/json-ui-intro#conditional-rendering), but using these **add a lot of overhead**. For example, if you have a variable `"$var": "(2 * (-1 * $number))"`, it is significantly more performant to simplify to `"$var": "(-2 * $number)"`. It is best to simplify expressions as much as possible, and remove unneeded expressions in order to speed up evaluation times as much as possible.
 
 ### Minimize the Number of Bindings in the UI
+
 Similar to operators, using many [bindings](/json-ui/json-ui-intro#bindings) **can also add significant overhead**. Part of the reason why the settings screen takes so long to open is because all of the toggles and options are linked to specific bindings, in which there are many. Removing bindings that do not contribute to function, or can be simplified are another fantastic way to increase performance.
 
 ### Avoid Adding Unneeded Controls
+
 Perhaps the best way to increase performance in JSON-UI is to delete unused or unnecessary controls. In this example, the child control `panel` isn't needed because it is an empty panel.
 
 ```json
@@ -302,6 +310,7 @@ To fix this, you can either delete it from the UI tree or add `"ignored": true` 
     }
 }
 ```
+
 ```json
 {
     "element": {
@@ -370,6 +379,7 @@ Sometimes, you can simplify and consolidate multiple controls into a single elem
     }
 }
 ```
+
 Taking a more thoughtful approach, this can be significantly simplified into a single control with fewer operators, bindings, and controls overall.
 
 ```json

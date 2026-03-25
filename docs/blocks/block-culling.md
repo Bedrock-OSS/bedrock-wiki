@@ -97,12 +97,12 @@ However, they can also cull against other types of blocks based on the rule's `c
 
 ### Same Block
 
-When the `same_block` condition is used, the specified geometry part is also culled if the adjacent block has the same identifier as the block.
+When the `"same_block"`{lang=json} condition is used, the specified geometry part is also culled if the adjacent block has the same identifier as the block.
 
 ### Same Block Permutation
 
-When the `same_block_permutation` condition is used, the specified geometry part is also culled if the adjacent block has the same identifier and state values as the block.
+When the `"same_block_permutation"`{lang=json} condition is used, the specified geometry part is also culled if the adjacent block has the same identifier and state values as the block.
 
 ### Same Culling Layer
 
-When the `same_culling_layer` condition is used, the specified geometry part is also culled if the adjacent block has the same `culling_layer` identifier as the block.
+When the `"same_culling_layer"`{lang=json} condition is used, the specified geometry part is also culled if the adjacent block has the same `culling_layer` identifier as the block.

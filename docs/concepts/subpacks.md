@@ -55,33 +55,33 @@ Example:
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Pack Name",
-		"description": "Pack Description",
-		"uuid": "2fc2dd6f-86cb-4370-af70-21490a1ae471",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 13, 0]
-	},
-	"modules": [
-		{
-			"type": "resources",
-			"uuid": "f6821b4a-1854-44fc-a8a4-0c2847ffda46",
-			"version": [1, 0, 0]
-		}
-	],
-	"subpacks": [
-		{
-			"folder_name": "subpack_1",
-			"name": "First Subpack",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "subpack_2",
-			"name": "Second Subpack",
-			"memory_tier": 1
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "Pack Name",
+        "description": "Pack Description",
+        "uuid": "2fc2dd6f-86cb-4370-af70-21490a1ae471",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 13, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "f6821b4a-1854-44fc-a8a4-0c2847ffda46",
+            "version": [1, 0, 0]
+        }
+    ],
+    "subpacks": [
+        {
+            "folder_name": "subpack_1",
+            "name": "First Subpack",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "subpack_2",
+            "name": "Second Subpack",
+            "memory_tier": 1
+        }
+    ]
 }
 ```
 
@@ -93,4 +93,8 @@ Example:
 
 ## Known Things
 
-If you add only one subpack, there will be 2 options at the subpacks selection section, however second resolution (no subpack actually) does **not** make content in the root folder override subpacks.
+If you add only one subpack, there will be 2 options at the subpacks selection section, however the second resolution (no subpack) does **not** make content in the root folder override subpacks.
+
+The default subpack chosen on a device will be the subpack using the highest memory tier available for the device. If there are multiple subpacks of the same memory tier, the selected subpack will be the last subpack in the subpack array of that memory tier.
+
+To change the active subpack, go to resource pack settings and find the resource pack. Press the gear/settings icon and slide the slider to change the active subpack.

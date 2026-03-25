@@ -11,8 +11,8 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.21.90`
-Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version `1.21.90`.
+:::tip FORMAT VERSION 1.26.10
+Using the latest format version when creating custom items provides access to fresh features and improvements. The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.10.
 :::
 
 ## Registering Custom Components
@@ -26,7 +26,7 @@ _This example prevents the item from taking durability damage when hitting an en
 <CodeHeader>BP/scripts/unbreakable.js</CodeHeader>
 
 ```js
-import { system } from "@minecraft/server";
+import { system } from "@minecraft/server"; // Must be version 2.0.0 or higher
 
 /** @type {import("@minecraft/server").ItemCustomComponent} */
 const ItemUnbreakableComponent = {
@@ -43,6 +43,8 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
 ## Applying Custom Components
 
 To bind a custom component to an item, simply list it in the `components` of your item JSON.
+
+_Requires format version [1.21.90](/items/item-format-history#_1-21-90) or later._
 
 <CodeHeader>minecraft:item</CodeHeader>
 

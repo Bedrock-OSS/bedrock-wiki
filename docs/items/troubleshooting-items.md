@@ -45,8 +45,6 @@ Here is an example file to compare against:
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:your_item_icon": {
             "textures": "textures/items/your_item_icon"
@@ -61,7 +59,7 @@ Next, navigate to your items BP file. Place the `minecraft:icon` component in yo
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:your_item",

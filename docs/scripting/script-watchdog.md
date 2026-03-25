@@ -2,11 +2,11 @@
 title: Script Watchdog
 category: Documentation
 tags:
-  - experimental
+    - experimental
 mentions:
-  - JaylyDev
-  - SmokeyStack
-  - ThomasOrs
+    - JaylyDev
+    - SmokeyStack
+    - ThomasOrs
 description: Watchdog is a performance system for script engine that is enabled in Minecraft script plugins by default.
 ---
 
@@ -97,11 +97,11 @@ Using Minecraft's scripting API, you are able to connect to a callback that will
 This event allows you to cancel the termination of the script runtime to prevent from the watchdog from stopping the server from running. Note that depending on server configuration settings, cancellation of the termination may not be allowed.
 
 ```js
-import { system } from '@minecraft/server';
+import { system } from "@minecraft/server";
 
 system.events.beforeWatchdogTerminate.subscribe((event) => {
-  event.cancel = true;
-  console.warn(`[Watchdog] Canceled critical exception of type '${event.cancelationReason}`);
+    event.cancel = true;
+    console.warn(`[Watchdog] Canceled critical exception of type '${event.cancelationReason}`);
 });
 ```
 

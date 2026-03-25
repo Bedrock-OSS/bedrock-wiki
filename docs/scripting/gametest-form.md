@@ -34,7 +34,7 @@ Like other modules, you will need to add the dependency into your `manifest.json
     "dependencies": [
         {
             "module_name": "@minecraft/server-ui",
-            "version": "1.2.0-beta"
+            "version": "2.0.0"
         },
         {
             "module_name": "@minecraft/server",
@@ -216,6 +216,8 @@ Dropdown is a property that contains a list options. It has 3 arguments.
 2. Options (`List[String]`), the list of the options for the player to choose from.
 3. Default Value Index (`Int`)[Optional], the index of the default value. Default is `0` (first item in the list).
 
+Dropdowns are also unique in that they don't return the value of whatever the option is, rather, they return the number of the option. For example, the first option will return "0", the second "1", etc. This way, options can be mapped to their respective values behind-the-scenes, and have different display text from values.
+
 ```js
 // Internal Options
 form.dropdown("Dropdown", ["Opt 1", "Opt 2", "Opt 3"], 1);
@@ -248,13 +250,12 @@ form.slider("Slider", 0, 10, 2, 10);
 Toggle is a property that only has a true/false option. It has 2 arguments.
 
 1. Label (`Str`), the title for the toggle.
-2. Default Value (`Bool`), the default boolean value of the toggle. Default is `false`.
+2. Optional toggleOptions (`Dict`), which allows setting default value and tooltip
 
 ```js
-// Without default value
-form.toggle("Toggle");
-// With default value
-form.toggle("Toggle", true);
+form.toggle("Toggle", {
+    defaultValue: true,
+});
 ```
 
 #### Example
@@ -267,8 +268,12 @@ let effectList = ["Regeneration", "Protection", "Poison", "Wither"];
 form.title("Effect Generator");
 form.textField("Target", "Target of Effect");
 form.dropdown("Effect Type", effectList);
-form.slider("Effect Level", 0, 255, 1);
-form.toggle("Hide Effect Particle", true);
+form.slider("Effect Level", 0, 255, {
+    defaultValue: 1,
+});
+form.toggle("Hide Effect Particle", {
+    defaultValue: true,
+});
 ```
 
 ![image](/assets/images/gametest/gametest-form/modal-form.png)

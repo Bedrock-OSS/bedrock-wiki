@@ -10,6 +10,7 @@ mentions:
     - Hatchibombotar
     - SpacebarNinja
     - jeanmajid
+    - keyyard
 description: Understanding target selectors in commands.
 ---
 
@@ -18,6 +19,7 @@ Target selectors are used in commands to target who you want to execute a comman
 ## Selector Variables
 
 The selector variable defines the broad list of entities to select. There are six selector variables to choose from:
+
 -   `@a` - Target all players
 -   `@p` - Target the nearest player
 -   `@r` - Target a random player
@@ -39,9 +41,11 @@ Limits the selection of targets by their identifier. Negating the argument selec
 **Examples:**
 
 Affect all pigs with levitation:
+
 -   `/effect @e[type=pig] levitation`
 
 Kill all entities that are not arrows and snowballs:
+
 -   `/kill @e[type=!arrow,type=!snowball]`
 
 ### Count
@@ -55,9 +59,11 @@ The selectors `@a`, `@p`, and `@e` sort by increasing distance, while `@r` sorts
 **Examples:**
 
 Clear stone from the closest five players:
+
 -   `/clear @a[c=5] stone`
 
 Damage the furthest two skeletons:
+
 -   `/damage @e[type=skeleton,c=-2] 2`
 
 ### Position
@@ -71,6 +77,7 @@ Changes the position a selector starts its search at. It also modifies where the
 **Examples:**
 
 Teleport the closest player to (140, 64, -200) ten blocks up:
+
 -   `/teleport @p[x=140,y=64,z=-200] ~ ~10 ~`
 
 ### Distance
@@ -82,9 +89,11 @@ Limits the selection of targets by their spherical distance from the selector. T
 **Examples:**
 
 Kill all chickens between two and six blocks away:
+
 -   `/kill @e[type=chicken,rm=2,r=6]`
 
 Enchant the held item with Sharpness for all players within one block of (0, 100, 0):
+
 -   `/enchant @a[x=0,y=100,z=0,r=1] sharpness`
 
 ### Volume
@@ -92,6 +101,7 @@ Enchant the held item with Sharpness for all players within one block of (0, 100
 Limits the selection of targets to those within or intersecting a specified cuboid volume (bounding box). There are three arguments, each determining the size of the box along their respective axes. If at least one argument is defined, any remaining arguments left undefined are assumed to be 0. This selects entities by their hitbox.
 
 The general formula for calculating the volume between two positions can be viewed as:
+
 ```
 dx = x2 - x1
 dy = y2 - y1
@@ -103,12 +113,15 @@ dz = z2 - z1
 **Examples:**
 
 List all entities within a 12x30x2 box:
+
 -   `/say @e[dx=12,dz=30,dy=2]`
 
 Add the "wiki:lobby" tag to all players between (-400, 0, -350) and (-150, 256, 50):
+
 -   `/tag @a[x=-400,y=0,z=-350,dx=250,dy=256,dz=400] add wiki:lobby`
 
 Add the "wiki:warp" tag to all entities between (-1.5, 0, -2) and (1, 0, 1.5):
+
 -   `/tag @a[x=-1.5,y=0,z=-2,dx=2.5,dz=3.5] add wiki:warp`
 
 :::info NOTE:
@@ -122,6 +135,7 @@ In this visual representation, we can see that the horse with a larger hitbox is
 :::
 
 Considering the above note, if we want to detect players exactly at a certain Y level (e.g., Y=10) and not partially, we can use a command like this:
+
 -   `/execute as @a at @s if entity @s[y=10,r=1] unless entity @s[y=9,r=1] run say found player`
 
 ### Scores
@@ -131,6 +145,7 @@ Limits the selection of targets by their score value. This argument is represent
 -   `scores={<objective>=<value>}`—Selects entities whose score under the given objective matches the given value.
 
 The range syntax works as follows:
+
 -   `N..` is any number greater than or equal to N.
 -   `..N` is any number less than or equal to N.
 -   `N..M` is any number between N and M, inclusive.
@@ -138,9 +153,11 @@ The range syntax works as follows:
 **Examples:**
 
 Set the "points" score for all players with a "wiki:points" score of ten to 0:
+
 -   `/scoreboard players set @p[scores={wiki:points=10}] wiki:points 0`
 
 Add the "wiki:start" tag to armor stands with both a "wiki:started" score of one, and a "wiki:timer" score of 20 or less:
+
 -   `/tag @e[type=armor_stand,scores={wiki:started=1,wiki:timer=..20}] add wiki:start`
 
 ### Name
@@ -153,9 +170,11 @@ Limits the selection of targets by name. Negating the argument selects entities 
 **Examples:**
 
 List all zombies named Shadow:
+
 -   `/say @e[type=zombie,name="Shadow"]`
 
 Give one level to players both not named Steve and not named Alex:
+
 -   `/xp 1L @a[name=!"Steve",name=!"Alex"]`
 
 ### Tag
@@ -168,6 +187,7 @@ Limits the selection of targets by their tags. This argument can be repeated to 
 **Examples:**
 
 Kill all mobs with the tag "wiki:marked", and without the tag "wiki:exempt":
+
 -   `/kill @e[tag=wiki:marked,tag=!wiki:exempt]`
 
 ### Family
@@ -180,7 +200,19 @@ Limits the selection of targets by type family. This argument can be repeated to
 **Examples:**
 
 Affect all entities in the "monster" family with Regeneration:
+
 -   `/effect @e[family=monster] regeneration`
+
+### Property
+
+Limits the selection of targets by property. This argument can be repeated to test for multiple families, and all filters must pass for an entity to be selected. Negating this argument selects entities whose property does not match. Properties can be defined in the Entity Behavior file, and various from types (bool, int, enum,..etc based on behavior set-up)
+
+-   `has_property={key=value}` - Include only entities with the correct property
+-   `has_property=!{key=value}` - Excludes any entities with the correct property
+
+-   **Examples**
+    Kill all entities with wiki:property=true:
+-   `/kill @e[has_property={wiki:property=true}]`
 
 ### Rotation
 
@@ -200,23 +232,25 @@ _y-rotation diagram shared by @SpacebarNinja:_
 **Examples:**
 
 Affect all players looking at or above the horizon with Blindness for one second:
+
 -   `/effect @a[rx=0] blindness 1` (0 or less)
 
 Damage all players facing generally south:
+
 -   `/damage @a[rym=-45, ry=45] 1`
 
 **All Facing Directions:**
 
-| Facing Direction | Range (`ry`,`rym`)            |
-|------------------|--------------------------------|
-| North            | `[ry=-135,rym=135]`           |
-| South            | `[ry=45,rym=-45]`             |
-| East             | `[ry=-45,rym=-135]`           |
-| West             | `[ry=135,rym=45]`             |
-| North West       | `[ry=180,rym=90]`             |
-| North East       | `[ry=-90,rym=-180]`           |
-| South West       | `[ry=90,rym=0]`               |
-| South East       | `[ry=0,rym=-90]`              |
+| Facing Direction | Range (`ry`,`rym`)  |
+| ---------------- | ------------------- |
+| North            | `[ry=-135,rym=135]` |
+| South            | `[ry=45,rym=-45]`   |
+| East             | `[ry=-45,rym=-135]` |
+| West             | `[ry=135,rym=45]`   |
+| North West       | `[ry=180,rym=90]`   |
+| North East       | `[ry=-90,rym=-180]` |
+| South West       | `[ry=90,rym=0]`     |
+| South East       | `[ry=0,rym=-90]`    |
 
 **Useful Articles Related to the Rotation Arguments:**
 
@@ -232,12 +266,15 @@ Limits the selection of targets by experience levels. Only players can have EXP,
 **Examples:**
 
 Give all players who have nine or less levels a gold ingot:
+
 -   `/give @a[lm=9] gold_ingot`
- 
+
 Give all players who have ten or more levels a gold ingot:
+
 -   `/give @a[l=10] gold_ingot`
 
 Give all players who have between ten and twenty levels a diamond:
+
 -   `/give @a[lm=10, l=20] diamond`
 
 ### Game Mode
@@ -248,20 +285,22 @@ Limits the selection of targets by game mode. Only players can use game mode, so
 
 **All Game Mode Values:**
 
-| Game Mode      | Values                      |
-|----------------|-----------------------------|
-| Survival       | `0`, `s`, `survival`        |
-| Creative       | `1`, `c`, `creative`        |
-| Adventure      | `2`, `a`, `adventure`       |
-| Spectator      | `spectator`                 |
-| Default        | `d`, `default`              |
+| Game Mode | Values                |
+| --------- | --------------------- |
+| Survival  | `0`, `s`, `survival`  |
+| Creative  | `1`, `c`, `creative`  |
+| Adventure | `2`, `a`, `adventure` |
+| Spectator | `spectator`           |
+| Default   | `d`, `default`        |
 
 **Examples:**
 
 List all players in Creative mode:
+
 -   `/say @a[m=creative]`
 
 Set the game mode to Creative mode for players both not in Survival mode, and not in Adventure mode:
+
 -   `/gamemode creative @a[m=!survival,m=!adventure]`
 
 ### Items
@@ -277,13 +316,17 @@ Limits the selection of targets by what items they have in their inventory. This
 **Examples:**
 
 Checks for players who have a netherite sword in their inventory:
+
 -   `/testfor @a[hasitem={item=netherite_sword}]`
 
 Clears 2 apples for players that have four or more apples:
+
 -   `/clear @a[hasitem={item=apple,quantity=4..}] apple 2`
 
 Checks for players who have two sticks and two diamonds:
+
 -   `/testfor @a[hasitem=[{item=diamond,quantity=2},{item=stick,quantity=2}]]`
 
 Checks for players who doesn't have a stick:
+
 -   `/testfor @a[hasitem=[{item=stick,quantity=0}]`

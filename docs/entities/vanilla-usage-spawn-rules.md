@@ -7,7 +7,7 @@ description: Automatically generated list of spawn rules components used in vani
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.If you want to see full page, you can do it [here](/entities/vusr-full). *Last updated for 1.21.60*
+Note that not more than 8 examples are shown for each component to keep this page fast to load. Namespace `minecraft` was also removed.If you want to see full page, you can do it [here](/entities/vusr-full). _Last updated for 1.21.60_
 
 ## biome_filter
 
@@ -1474,4 +1474,3 @@ pillager_patrol
 ```
 
 </Spoiler>
-

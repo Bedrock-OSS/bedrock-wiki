@@ -438,11 +438,11 @@ The important information that we need is the `identifier` which we will use to 
 
 Our entity now has its shape, but it also needs a texture. This texture can also be created in Blockbench and is simply a `.png` file.
 
-`RP/textures/entity/ghost.png`
+`RP/textures/wiki/entity/ghost.png`
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/entity/ghost.png)
+![ghost.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/entity/ghost.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/entity/ghost.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/entity/ghost.png">
     Download texture here
 </Button>
 
@@ -785,7 +785,7 @@ For us to now use these resources, we need to define a reference to them with a 
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -850,7 +850,7 @@ With that our entity file should look like this.
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -935,7 +935,7 @@ With that, we have completed our entity client file.
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -985,8 +985,8 @@ Your folder structure should look like this:
 	'RP/entity/ghost.ce.json',
 	'RP/models/entity/ghost.geo.json',
 	'RP/render_controllers/ghost.rc.json',
-	'RP/textures/entity/ghost.png',
-	'RP/textures/items/ectoplasm.png',
+	'RP/textures/wiki/entity/ghost.png',
+	'RP/textures/wiki/items/ectoplasm.png',
 	'RP/textures/item_texture.json',
 	'RP/texts/en_US.lang',
 	'RP/texts/languages.json',
@@ -998,7 +998,7 @@ Your folder structure should look like this:
 	'BP/texts/languages.json',
 	'BP/manifest.json',
 	'BP/pack_icon.png',
-]"></FolderView>
+]" />
 
 <Spoiler title="Full ghost.se.json">
 
@@ -1043,7 +1043,6 @@ Your folder structure should look like this:
                 "can_pass_doors": true,
                 "can_open_doors": true
             },
-
             "minecraft:behavior.random_stroll": {
                 "priority": 6,
                 "speed_multiplier": 1
@@ -1110,7 +1109,7 @@ Your folder structure should look like this:
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/entity/wiki/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"

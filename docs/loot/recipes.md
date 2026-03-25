@@ -263,6 +263,10 @@ These identifiers are not usable in the object notation, only the string notatio
 -   `slow_falling`
 -   `turtle_master`
 -   `wither`
+-   `infested`
+-   `oozing`
+-   `weaving`
+-   `wind_charged`
 
 Where supported, `long_` and `strong_` prefixes may be used to designate modified potions, such as `minecraft:potion_type:strong_poison`.
 

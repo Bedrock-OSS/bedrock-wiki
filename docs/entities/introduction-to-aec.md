@@ -1,12 +1,13 @@
 ---
 title: Introduction to AOE Clouds
+description: Learn how to use and manipulate area-of-effect clouds.
 category: Tutorials
 tags:
     - intermediate
 mentions:
     - Sprunkles137
     - MedicalJewel105
-description: Introduction to area-of-effect clouds.
+    - Nytreon
 ---
 
 **Area-of-effect clouds**, also known as AOE clouds and `minecraft:area_effect_cloud` internally, are special entities that have many unique properties. Normally these entities are created through throwing lingering potions, but with structures and some NBT editing magic we can manipulate them in very powerful ways for map-making.
@@ -43,33 +44,33 @@ Refer to this article for editing structure files: [.mcstructure](/nbt/mcstructu
 
 ### NBT Format
 
-| Tag                  | Type    | Description                                                                                                          |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| Duration             | Integer | How long the cloud will exist for before expiring, in ticks. A value of 0 will cause the cloud to despawn instantly. |
-| DurationOnUse        | Integer | How much the duration should change when effects are applied.                                                        |
-| InitialRadius        | Float   | The size of this cloud's radius when created. Values below 0.5 cause the cloud to despawn instantly.                 |
-| RadiusChangeOnPickup | Float   | Unknown.                                                                                                             |
-| RadiusOnUse          | Float   | How much the radius should change when effects are applied.                                                          |
-| RadiusPerTick        | Float   | How much the radius changes every tick.                                                                              |
-| ParticleColor        | Integer | The color of the particle effect, stored in decimal.                                                                 |
-| ParticleId           | Integer | Legacy value for storing a component particle ID. Has no effect.                                                     |
-| PotionId             | Short   | This cloud's potion effect ID when created. Has no effect.                                                           |
-| ReapplicationDelay   | Integer | The interval at which effects can be applied, in ticks.                                                              |
-| mobEffects           | List    | Describes what potion effects should be applied.                                                                     |
+| Tag                  | Type    | Description                                                                                                                       |
+| -------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Duration             | Integer | How long the cloud will exist for before expiring, in ticks. A value of 0 will cause the cloud to despawn instantly.              |
+| DurationOnUse        | Integer | How much the duration should change when effects are applied.                                                                     |
+| InitialRadius        | Float   | The size of this cloud's radius when created. Values below 0.5 cause the cloud to despawn instantly.                              |
+| RadiusChangeOnPickup | Float   | Determines by how much the effect radius changes when picked up by a glass bottle. This is used in the ender dragon breath cloud. |
+| RadiusOnUse          | Float   | How much the radius should change when effects are applied.                                                                       |
+| RadiusPerTick        | Float   | How much the radius changes every tick.                                                                                           |
+| ParticleColor        | Integer | The color of the particle effect, stored in decimal.                                                                              |
+| ParticleId           | Integer | Legacy value for storing a component particle ID. Has no effect.                                                                  |
+| PotionId             | Short   | This cloud's potion effect ID when created. Has no effect.                                                                        |
+| ReapplicationDelay   | Integer | The interval at which effects can be applied, in ticks.                                                                           |
+| mobEffects           | List    | Describes what potion effects should be applied.                                                                                  |
 
 Below are the parameters for the `mobEffects` tag.
 
-| Tag                             | Type    | Description                                                           |
-| ------------------------------- | ------- | --------------------------------------------------------------------- |
-| Ambient                         | Byte    | Defines whether this effect's particles should be translucent or not. |
-| Amplifier                       | Byte    | The strength of this potion effect.                                   |
-| DisplayOnScreenTextureAnimation | Byte    | Unknown.                                                              |
-| Duration                        | Integer | The amount of time this effect is applied for, in ticks.              |
-| DurationEasy                    | Integer | Unknown, seemingly unused.                                            |
-| DurationNormal                  | Integer | Unknown, seemingly unused.                                            |
-| DurationHard                    | Integer | Unknown, seemingly unused.                                            |
-| Id                              | Byte    | The potion effect ID for this effect.                                 |
-| ShowParticles                   | Byte    | Defines whether this effect's particles should appear or not.         |
+| Tag                             | Type    | Description                                                                                                                                                                |
+| ------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ambient                         | Byte    | Defines whether this effect's particles should be translucent or not.                                                                                                      |
+| Amplifier                       | Byte    | The strength of this potion effect.                                                                                                                                        |
+| DisplayOnScreenTextureAnimation | Byte    | Displays a screen animation when an effect is applied. This is used in bad omen, totems, and the hero of the village to display the floating icon once you get the effect. |
+| Duration                        | Integer | The amount of time this effect is applied for, in ticks.                                                                                                                   |
+| DurationEasy                    | Integer | Number of ticks before the effect wears off for Easy mode.                                                                                                                 |
+| DurationNormal                  | Integer | Number of ticks before the effect wears off for Normal mode.                                                                                                               |
+| DurationHard                    | Integer | Number of ticks before the effect wears off for Hard mode.                                                                                                                 |
+| Id                              | Byte    | The potion effect ID for this effect.                                                                                                                                      |
+| ShowParticles                   | Byte    | Defines whether this effect's particles should appear or not.                                                                                                              |
 
 ## Using AOE Clouds
 
@@ -101,26 +102,18 @@ function spawnMarker(location) {
     const Structure_Location = {
         x: Math.floor(location.x),
         y: Math.floor(location.y),
-        z: Math.floor(location.z)
+        z: Math.floor(location.z),
     };
-    world.structureManager.place(
-        "mystructure:aec",
-        location.dimension,
-        Structure_Location,
-    );
-    registerOnEntityLoad(
-        "minecraft:area_effect_cloud",
-        function initializeMarker(entity) {
-            const Entity_Location = {
-                x: location.x,
-                y: location.y,
-                z: location.z
-            };
-            entity.teleport(Entity_Location);
-            entity.addTag("origin");
-            // etc.
-        }
-    );
+    world.structureManager.place("mystructure:aec", location.dimension, Structure_Location);
+    registerOnEntityLoad("minecraft:area_effect_cloud", function initializeMarker(entity) {
+        const Entity_Location = {
+            x: location.x,
+            y: location.y,
+            z: location.z,
+        };
+        entity.teleport(Entity_Location);
+        entity.addTag("origin");
+        // etc.
+    });
 }
-
 ```

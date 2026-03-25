@@ -1,0 +1,204 @@
+{
+  "columns": {
+    "group": {
+      "name": "Group",
+      "sortable": true
+    },
+    "icon": {
+      "name": "Icon"
+    },
+    "items": {
+      "name": "Items"
+    }
+  },
+  "rows": [
+    {
+      "group": "`minecraft:itemGroup.name.bed`",
+      "icon": "`minecraft:bed`",
+      "items": [
+        "`minecraft:bed`",
+        "`minecraft:bed:8`",
+        "`minecraft:bed:7`",
+        "`minecraft:bed:15`",
+        "`minecraft:bed:12`",
+        "`minecraft:bed:14`",
+        "`minecraft:bed:1`",
+        "`minecraft:bed:4`",
+        "`minecraft:bed:5`",
+        "`minecraft:bed:13`",
+        "`minecraft:bed:9`",
+        "`minecraft:bed:3`",
+        "`minecraft:bed:11`",
+        "`minecraft:bed:10`",
+        "`minecraft:bed:2`",
+        "`minecraft:bed:6`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.anvil`",
+      "icon": "`minecraft:anvil`",
+      "items": [
+        "`minecraft:anvil`",
+        "`minecraft:chipped_anvil`",
+        "`minecraft:damaged_anvil`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.chest`",
+      "icon": "`minecraft:chest`",
+      "items": [
+        "`minecraft:chest`",
+        "`minecraft:trapped_chest`",
+        "`minecraft:ender_chest`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.shulkerBox`",
+      "icon": "`minecraft:undyed_shulker_box`",
+      "items": [
+        "`minecraft:undyed_shulker_box`",
+        "`minecraft:white_shulker_box`",
+        "`minecraft:light_gray_shulker_box`",
+        "`minecraft:gray_shulker_box`",
+        "`minecraft:black_shulker_box`",
+        "`minecraft:brown_shulker_box`",
+        "`minecraft:red_shulker_box`",
+        "`minecraft:orange_shulker_box`",
+        "`minecraft:yellow_shulker_box`",
+        "`minecraft:lime_shulker_box`",
+        "`minecraft:green_shulker_box`",
+        "`minecraft:cyan_shulker_box`",
+        "`minecraft:light_blue_shulker_box`",
+        "`minecraft:blue_shulker_box`",
+        "`minecraft:purple_shulker_box`",
+        "`minecraft:magenta_shulker_box`",
+        "`minecraft:pink_shulker_box`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.record`",
+      "icon": "`minecraft:music_disc_13`",
+      "items": [
+        "`minecraft:music_disc_13`",
+        "`minecraft:music_disc_cat`",
+        "`minecraft:music_disc_blocks`",
+        "`minecraft:music_disc_chirp`",
+        "`minecraft:music_disc_far`",
+        "`minecraft:music_disc_mall`",
+        "`minecraft:music_disc_mellohi`",
+        "`minecraft:music_disc_stal`",
+        "`minecraft:music_disc_strad`",
+        "`minecraft:music_disc_ward`",
+        "`minecraft:music_disc_11`",
+        "`minecraft:music_disc_wait`",
+        "`minecraft:music_disc_pigstep`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.sign`",
+      "icon": "`minecraft:oak_sign`",
+      "items": [
+        "`minecraft:oak_sign`",
+        "`minecraft:spruce_sign`",
+        "`minecraft:birch_sign`",
+        "`minecraft:jungle_sign`",
+        "`minecraft:acacia_sign`",
+        "`minecraft:dark_oak_sign`",
+        "`minecraft:crimson_sign`",
+        "`minecraft:warped_sign`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.skull`",
+      "icon": "`minecraft:creeper_head`",
+      "items": [
+        "`minecraft:player_head`",
+        "`minecraft:zombie_head`",
+        "`minecraft:creeper_head`",
+        "`minecraft:dragon_head`",
+        "`minecraft:skeleton_skull`",
+        "`minecraft:wither_skeleton_skull`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.boat`",
+      "icon": "`minecraft:oak_boat`",
+      "items": [
+        "`minecraft:oak_boat`",
+        "`minecraft:spruce_boat`",
+        "`minecraft:birch_boat`",
+        "`minecraft:jungle_boat`",
+        "`minecraft:acacia_boat`",
+        "`minecraft:dark_oak_boat`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.rail`",
+      "icon": "`minecraft:rail`",
+      "items": [
+        "`minecraft:rail`",
+        "`minecraft:golden_rail`",
+        "`minecraft:detector_rail`",
+        "`minecraft:activator_rail`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.minecart`",
+      "icon": "`minecraft:minecart`",
+      "items": [
+        "`minecraft:minecart`",
+        "`minecraft:chest_minecart`",
+        "`minecraft:hopper_minecart`",
+        "`minecraft:tnt_minecart`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.buttons`",
+      "icon": "`minecraft:wooden_button`",
+      "items": [
+        "`minecraft:wooden_button`",
+        "`minecraft:spruce_button`",
+        "`minecraft:birch_button`",
+        "`minecraft:jungle_button`",
+        "`minecraft:acacia_button`",
+        "`minecraft:dark_oak_button`",
+        "`minecraft:stone_button`",
+        "`minecraft:crimson_button`",
+        "`minecraft:warped_button`",
+        "`minecraft:polished_blackstone_button`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.pressurePlate`",
+      "icon": "`minecraft:wooden_pressure_plate`",
+      "items": [
+        "`minecraft:wooden_pressure_plate`",
+        "`minecraft:spruce_pressure_plate`",
+        "`minecraft:birch_pressure_plate`",
+        "`minecraft:jungle_pressure_plate`",
+        "`minecraft:acacia_pressure_plate`",
+        "`minecraft:dark_oak_pressure_plate`",
+        "`minecraft:crimson_pressure_plate`",
+        "`minecraft:warped_pressure_plate`",
+        "`minecraft:stone_pressure_plate`",
+        "`minecraft:light_weighted_pressure_plate`",
+        "`minecraft:heavy_weighted_pressure_plate`",
+        "`minecraft:polished_blackstone_pressure_plate`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.banner_pattern`",
+      "icon": "`minecraft:creeper_banner_pattern`",
+      "items": [
+        "`minecraft:creeper_banner_pattern`",
+        "`minecraft:skull_banner_pattern`",
+        "`minecraft:flower_banner_pattern`",
+        "`minecraft:mojang_banner_pattern`",
+        "`minecraft:field_masoned_banner_pattern`",
+        "`minecraft:bordure_indented_banner_pattern`",
+        "`minecraft:piglin_banner_pattern`",
+        "`minecraft:globe_banner_pattern`"
+      ]
+    }
+  ]
+}

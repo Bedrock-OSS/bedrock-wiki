@@ -1,0 +1,32 @@
+{
+  "columns": {
+    "shape": {
+      "name": "Shape"
+    },
+    "identifier": {
+      "name": "Identifier",
+      "sortable": true
+    },
+    "notes": {
+      "name": "Additional Notes"
+    }
+  },
+  "rows": [
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/empty.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:empty`",
+      "notes": [
+        "An empty shape that contains no boxes.",
+        "The default culling shape for blocks not using the `minecraft:geometry.full_block` model."
+      ]
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/unit_cube.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:unit_cube`",
+      "notes": [
+        "A shape comprised of a single 16×16×16 pixel cube, taking up the space of the full block unit.",
+        "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling."
+      ]
+    }
+  ]
+}

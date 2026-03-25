@@ -68,7 +68,7 @@ _Last Updated for 1.21.50_
 | Attachable            | 1.10.0 ⭐   |    30 |
 | Attachable            | 1.10        |     1 |
 | Attachable            | 1.8.0       |    25 |
-| Blocks Catalog        | 1.20.40 ⭐  |     1 |
+| Blocks Catalog        | 1.21.40 ⭐  |     1 |
 | Client Entity         | 1.10.0 ⭐   |    88 |
 | Client Entity         | 1.8.0       |    84 |
 | Fog Settings          | 1.16.100 ⭐ |    73 |

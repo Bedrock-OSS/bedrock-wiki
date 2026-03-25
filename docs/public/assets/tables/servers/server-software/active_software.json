@@ -30,15 +30,15 @@
       "type": "Custom"
     },
     {
-      "name": "[Chorus](https://github.com/Chorus-OSS/Chorus)",
-      "description": "Minecraft: Bedrock server software, open source and written in Kotlin",
-      "languages": "Kotlin",
-      "type": "Custom"
-    },
-    {
       "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
       "description": "Nuclear-Powered Minecraft: Bedrock Edition Server Software.",
       "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[Dragonfly](https://github.com/df-mc/dragonfly)",
+      "description": "A heavily asynchronous server software for Minecraft: Bedrock Edition written in Go.",
+      "languages": "Go",
       "type": "Custom"
     },
     {

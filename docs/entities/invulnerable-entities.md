@@ -25,7 +25,7 @@ The best way to learn about this component is by using the vanilla examples for 
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "all",
-        "deals_damage": false
+        "deals_damage": "no"
     }
 }
 ```
@@ -44,7 +44,7 @@ The best way to learn about this component is by using the vanilla examples for 
                 "value": "player"
             }
         },
-        "deals_damage": false
+        "deals_damage": "no"
     }
 }
 ```

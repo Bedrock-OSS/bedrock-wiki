@@ -16,9 +16,10 @@ mentions:
     - conmaster2112
     - kumja1
     - modmaker101
-    - SimpleDevMCBE
+    - realfeatherdev
     - QuazChick
     - jeanmajid
+    - nperma
 ---
 
 Who doesn't want cool custom commands? In this tutorial, you will learn how to create your own commands that can be used in chat, command blocks and elsewhere using scripts.
@@ -94,6 +95,9 @@ Doing so will cause command blocks, functions, etc. to stop working if another a
 ### Command Description
 
 You also need to provide a description for the command which will appear next to the command's name in autocompletions.
+
+<!--
+
 This should be a translation key (preferably in the form `commands.<name>.description`) from a `.lang` file.
 
 <CodeHeader>RP/texts/en_US.lang</CodeHeader>
@@ -101,6 +105,8 @@ This should be a translation key (preferably in the form `commands.<name>.descri
 ```lang
 commands.wiki:goto.description=Teleport to a specific location.
 ```
+
+-->
 
 ### Command Permission Level
 
@@ -153,7 +159,8 @@ The number of parameters passed to the callback matches the number of parameters
 customCommandRegistry.registerCommand(
     {
         name: "wiki:command",
-        description: "commands.wiki:command.description",
+        description: "A very useful command.",
+        permissionLevel: CommandPermissionLevel.GameDirectors,
         mandatoryParameters: [
             { name: "param1", type: CustomCommandParamType.String },
             { name: "param2", type: CustomCommandParamType.Integer },
@@ -179,7 +186,12 @@ In command autocompletions, its syntax is the following:
 <CodeHeader>BP/scripts/main.js</CodeHeader>
 
 ```js
-import { CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, system } from "@minecraft/server";
+import {
+    CommandPermissionLevel,
+    CustomCommandParamType,
+    CustomCommandStatus,
+    system,
+} from "@minecraft/server";
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     // Register an enum for teleport locations
@@ -189,9 +201,9 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     customCommandRegistry.registerCommand(
         {
             name: "wiki:goto",
-            description: "commands.wiki:goto.description",
+            description: "Teleport to a specific location.",
             permissionLevel: CommandPermissionLevel.Any, // Allow all players to run the command
-            cheatsRequired: false // Allow the command to be ran without enabling cheats
+            cheatsRequired: false, // Allow the command to be ran without enabling cheats
             mandatoryParameters: [
                 {
                     // Use the enum by setting the name to the enum name
@@ -202,9 +214,10 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
         },
         (origin, teleportLocation) => {
             // Only run if executed by an entity
-            if (!origin.sourceEntity) return {
-                status: CustomCommandStatus.Failure,
-            };
+            if (!origin.sourceEntity)
+                return {
+                    status: CustomCommandStatus.Failure,
+                };
 
             let location;
 
@@ -224,7 +237,56 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
             return {
                 status: CustomCommandStatus.Success,
                 message: "Teleporting to " + teleportLocation,
+            };
+        }
+    );
+});
+```
+
+## Restricting Command Execution to Players
+
+By default, the "any" command permission level allows sources that are not players to run the command, which isn't suitable for commands that should only be ran by players.
+
+In this example, we will create a custom slash command `/wiki:heal` that can only be executed by players (not the server console or command blocks).
+This command will restore the player's health back to full.
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+import {
+    CommandPermissionLevel,
+    CustomCommandParamType,
+    CustomCommandStatus,
+    system,
+    Player,
+} from "@minecraft/server";
+
+system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
+    customCommandRegistry.registerCommand(
+        {
+            name: "wiki:heal",
+            description: "Restore your health to the default value.",
+            permissionLevel: CommandPermissionLevel.Any,
+            cheatsRequired: false,
+        },
+        (origin) => {
+            const source = origin.initiator ?? origin.sourceEntity;
+
+            // Only allow players to use this command (or NPCs, treating the initiator as the player executing the command)
+            if (!(source instanceof Player)) {
+                return {
+                    status: CustomCommandStatus.Failure,
+                    message: "This command can only be executed by players.",
+                };
             }
+
+            // Escape read-only mode to heal the player
+            system.run(() => source.getComponent("health").resetToDefaultValue());
+
+            return {
+                status: CustomCommandStatus.Success,
+                message: "You have been fully healed!",
+            };
         }
     );
 });

@@ -15,6 +15,7 @@ mentions:
     - MedicalJewel105
     - ChibiMango
     - fraysdev
+    - QuazChick
 ---
 
 Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:
@@ -126,20 +127,30 @@ And finally, as an introduction to recipes, we'll make the Ectoplasm craftable i
 
 ```json
 {
-    "format_version": "1.12.0",
+    "format_version": "1.20.10",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "wiki:ectoplasm_slime_block"
+            "identifier": "wiki:ectoplasm_block"
         },
         "tags": ["crafting_table"],
-        "pattern": ["###", "###", "###"],
+        "pattern": [
+            // 3×3 grid of Ectoplasm items
+            "###",
+            "###",
+            "###"
+        ],
         "key": {
             "#": {
                 "item": "wiki:ectoplasm"
             }
         },
+        "unlock": [
+            {
+                "item": "wiki:ectoplasm" // Unlock this recipe when the player acquires an Ectoplasm item
+            }
+        ],
         "result": {
-            "item": "minecraft:slime"
+            "item": "wiki:ectoplasm_block"
         }
     }
 }

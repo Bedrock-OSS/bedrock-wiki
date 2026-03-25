@@ -87,7 +87,7 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 
 ```json
 {
-	"format_version": "1.21.90",
+	"format_version": "1.26.10",
 	"minecraft:item": {
 		"description": { ... },
 		"components": { ... }
@@ -96,7 +96,7 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 ```
 
 Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
-The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.21.90` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
+The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.26.10` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
 
 The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
@@ -133,7 +133,7 @@ With that, we have now fully defined our item's behavior. This is what your file
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
@@ -162,20 +162,20 @@ Textures are stored in the resource pack under `RP/textures` as images. In order
 
 To start we need a texture for our item. For our ectoplasm, we will be using this image.
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/items/ectoplasm.png)
+![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/items/ectoplasm.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/items/ectoplasm.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/items/ectoplasm.png">
     Download texture here
 </Button>
 
-All item textures are stored in `RP/textures/items/`. From here, you can create any subdirectories you wish.
+All item textures are stored in `RP/textures/wiki/items/`, where `wiki` should be replaced by your own namespace. From here, you can create any subdirectories you wish.
 It's best to name your texture image files with the items' _id_, in our case it will be `ectoplasm.png`.
 It is recommended to have your images in `.png` format and be of size `16x16`, though Minecraft will accept other formats such as `.jpg` or `.tga`.
 
 Your folder layout should look like this:
 
 <FolderView :paths="[
-    'RP/textures/items/ectoplasm.png'
+    'RP/textures/wiki/items/ectoplasm.png'
 ]" />
 
 ### Shortname
@@ -188,14 +188,11 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 
 ```json
 {
-	"resource_pack_name": "Ghostly Guide",
-	"texture_name": "atlas.items",
 	"texture_data": { ... }
 }
 ```
 
-Here we have 3 top level definitions, `texture_data` is where we will define our shortnames, the other two define the type of file this is.
-The `resource_pack_name` is simply our resource pack's name and `texture_name` is what kind of texture file this is. Since this is for _items_, this will always be set to `atlas.items`.
+Here we have a top level definition, `texture_data`, which is where we will define our shortnames.
 
 Under `texture_data` will our list of item shortname definitions. An example definition looks like this:
 
@@ -247,10 +244,10 @@ Now your first custom item, Ectoplasm, is complete! If everything has been done 
 Your folder structure should look like this:
 
 <FolderView :paths="[
-	'RP/textures/item_texture.json',
-	'RP/textures/items/ectoplasm.png',
 	'RP/texts/en_US.lang',
 	'RP/texts/languages.json',
+	'RP/textures/wiki/items/ectoplasm.png',
+	'RP/textures/item_texture.json',
 	'RP/manifest.json',
 	'RP/pack_icon.png',
 	'BP/items/ectoplasm.json',
@@ -266,7 +263,7 @@ Your folder structure should look like this:
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
@@ -290,11 +287,9 @@ Your folder structure should look like this:
 
 ```json
 {
-    "resource_pack_name": "Ghostly Guide",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:ectoplasm": {
-            "textures": "textures/items/ectoplasm"
+            "textures": "textures/items/wiki/ectoplasm"
         }
     }
 }

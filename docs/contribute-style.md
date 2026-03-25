@@ -6,7 +6,7 @@ mentions:
     - TheItsNameless
     - MedicalJewel105
     - QuazChick
-    - Andexter8
+    - 8Crafter
 ---
 
 Now that you have the wiki set up locally, you can edit the files right on your device. If you don't know how to work with VSCode, there are some very good videos from Microsoft itself [here](https://code.visualstudio.com/docs).
@@ -751,7 +751,7 @@ Example:
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             // Describing an object with components.

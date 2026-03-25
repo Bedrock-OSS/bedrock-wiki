@@ -17,6 +17,7 @@ This method, developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/use
 To preserve credits to the creator, the community termed this method as "Max's Block Entity" or MBE for short.
 
 **Points to Note:**
+
 1. This method uses 1 armor stand per block entity. Therefore, too many armor stands (like any entity) can contribute to server lag.
 2. Players will still be able to pass through them, as well as interact with them (if not restricted).
 3. While the block entity may render in one spot, it's actual hitbox will have a slight offset.

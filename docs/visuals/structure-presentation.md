@@ -1,16 +1,14 @@
 ---
 title: Structure Presentation
+description: Learn how to capture in-game structures as images that can be shared elsewhere.
 category: Ideas
 mentions:
     - MedicalJewel105
     - LeGend077
     - ThomasOrs
-description: How to present your structure in a better way.
 ---
 
-## Why this page exists
-
-Presenting features of an add-on clearly has same importance in showcasing quality. If people can understand an add-on and it's features they might be more likely to try it. This page will demonstrate a way of presenting structures.
+This page demonstrates different methods of presenting structures, allowing you to showcase your add-on and its features.
 
 ## Presentation Methods
 
@@ -40,7 +38,10 @@ By making [JSON UI](/json-ui/json-ui-intro) edits you can change the background 
 
 Or you can use the **Structure Presentation Pack** by @minato4743 to simplify the process. It includes some default colors and gradients as well as a toggle to hide the preview arrows.
 
-<Button link="/assets/packs/visuals/structure-presentation/structure_presentation_pack.mcpack" download>
+<Button
+    link="/assets/packs/visuals/structure-presentation/structure_presentation_pack.mcpack"
+    download
+>
     Download Pack
 </Button>
 
@@ -48,21 +49,11 @@ Or you can use the **Structure Presentation Pack** by @minato4743 to simplify th
 
 ![](/assets/images/visuals/structure-presentation/pack_gradient_result.png)
 
-
 ### Rendered 3D Object
 
-Structures can be exported as a 3d model. If 3D export button is not working for you, you can try applying a 3d-export-fix pack.
-
-<Button link="/assets/packs/visuals/structure-presentation/3d-export-fix-v2.mcpack" download>
-    Download Pack
-</Button>
-
-<Button link="/assets/packs/visuals/structure-presentation/3d-export-fix.mcpack" download>
-    Download Pack (prior 1.19.30)
-</Button>
+Structures can be exported as a 3D model from the Structure Block UI.
 
 ![](/assets/images/visuals/structure-presentation/model-render.png)
 
-This method is mostly available for pc users. You can create a simple render in Paint 3D or a more advanced in blender. In this case we can represent our structure in a fast and easy way.
-
-⬇ If you have any other methods, contribute them below.
+This method is only available for Windows users.
+You can create a simple render in Paint 3D or a more advanced render in Blender.

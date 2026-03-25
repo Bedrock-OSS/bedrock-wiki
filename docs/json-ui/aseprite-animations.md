@@ -50,11 +50,14 @@ The `aseprite_flip_book` animation type can only be used for the `uv` property i
 		"uv": "@example_namespace.image_uv_animation"
 	},
 
-	"image_uv_animation": {
-		"anim_type": "aseprite_flip_book",
-		"initial_uv": [0, 0]
-	}
+    "image_uv_animation": {
+    	"anim_type": "aseprite_flip_book",
+    	"initial_uv": [0, 0]
+    }
+
 }
+
 ```
 
 Set the `texture` field to the path of the exported files without the extension. The `uv_size` field should be set to the width and height of a single frame.
+```

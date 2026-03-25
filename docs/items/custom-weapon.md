@@ -27,7 +27,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:my_sword",
@@ -75,8 +75,6 @@ So at a bare minimum that is enough to get a sword put into the game, we still n
 
 ```json
 {
-    "resource_pack_name": "custom-weapon",
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:my_sword": {
             // Make sure you have put an icon texture called my_sword.png here
@@ -144,7 +142,7 @@ You should probably make a recipe for it, which is covered in previous chapters,
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:recipe_shaped": {
         "description": {
             "identifier": "wiki:my_sword"

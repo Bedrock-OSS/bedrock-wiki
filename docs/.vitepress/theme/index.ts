@@ -15,6 +15,7 @@ import MolangGraph from "./components/content/MolangGraph.vue";
 import Spoiler from "./components/content/Spoiler.vue";
 import Table from "./components/content/Table.vue";
 import Tag from "./components/content/Tag.vue";
+import UnicodeCopyButton from "./components/content/UnicodeCopyButton.vue";
 import WikiImage from "./components/content/WikiImage.vue";
 import YouTubeEmbed from "./components/content/YouTubeEmbed.vue";
 
@@ -29,6 +30,7 @@ const contentComponents: Record<string, Component> = {
   Spoiler,
   Table,
   Tag,
+  UnicodeCopyButton,
   WikiImage,
   YouTubeEmbed,
 };

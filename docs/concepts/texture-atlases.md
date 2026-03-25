@@ -75,7 +75,6 @@ By default, block textures in `atlas.terrain` have 4 mip levels:
 
 ```json
 {
-    "resource_pack_name": "vanilla",
     "texture_name": "atlas.terrain",
     "num_mip_levels": 4,
     ...

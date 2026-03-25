@@ -32,8 +32,6 @@ export function transformHead({ pageData, siteConfig }: TransformContext) {
     "twitter:site": site,
   };
 
-  if (frontmatter.hidden) data.robots = "noindex";
-
   const out: HeadConfig[] = [];
 
   Object.entries(data).forEach(([name, content]) => {

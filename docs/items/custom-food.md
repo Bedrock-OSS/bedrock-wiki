@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION `1.21.90`
+:::tip FORMAT VERSION 1.26.10
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) before starting!
 :::
@@ -24,7 +24,7 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food",
@@ -42,12 +42,13 @@ On this page, you will learn how to create custom foods that, when consumed, gra
             "minecraft:use_animation": "eat",
             "minecraft:use_modifiers": {
                 "use_duration": 1.6,
-                "movement_modifier": 0.33
+                "movement_modifier": 0.35
             },
             "minecraft:tags": {
                 "tags": [
                     "minecraft:is_food",
-                    "minecraft:is_meat", // Only include if the food is meat
+                    "minecraft:is_fish", // Only include if the food is fish
+                    "minecraft:is_meat", // Only include if the food is meat (not including fish)
                     "minecraft:is_cooked" // Only include if the food is cooked
                 ]
             }
@@ -64,7 +65,6 @@ We need to create an object named `wiki:custom_<thing>` in the `RP/textures/item
 
 ```json
 {
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:custom_food": {
             "textures": "textures/items/custom_food"

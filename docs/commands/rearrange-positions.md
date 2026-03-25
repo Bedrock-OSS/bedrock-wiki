@@ -162,8 +162,8 @@ Now, for our functions to actually work, we will need to add the following objec
 <CodeHeader>BP/functions/wiki/scoreboard/objectives/add_all.mcfunction</CodeHeader>
 
 ```yaml
-scoreboard objectives add wiki:wiki:id dummy
-scoreboard objectives add wiki:wiki:count dummy
+scoreboard objectives add wiki:id dummy
+scoreboard objectives add wiki:count dummy
 ```
 
 <br>

@@ -297,7 +297,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:teleport_menu",

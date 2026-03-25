@@ -293,20 +293,20 @@ Own-line comments can be used for organizational purposes but should not store l
 
 ### Pack Types
 
-| Abbreviation | Pack Type                          |
-| ------------ | ---------------------------------- |
-| BP           | Behavior Pack                      |
-| RP           | Resource Pack                      |
-| SP           | Skin Pack                          |
+| Abbreviation | Pack Type     |
+| ------------ | ------------- |
+| BP           | Behavior Pack |
+| RP           | Resource Pack |
+| SP           | Skin Pack     |
 
 ### Languages
 
-| Abbreviation | Language                           |
-| ------------ | ---------------------------------- |
-| JS           | JavaScript                         |
-| JSON         | JavaScript Object Notation         |
-| NBT          | Named Binary Tag                   |
-| TS           | TypeScript                         |
+| Abbreviation | Language                   |
+| ------------ | -------------------------- |
+| JS           | JavaScript                 |
+| JSON         | JavaScript Object Notation |
+| NBT          | Named Binary Tag           |
+| TS           | TypeScript                 |
 
 ### Other
 

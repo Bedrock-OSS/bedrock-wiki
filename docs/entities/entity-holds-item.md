@@ -58,18 +58,18 @@ To have the entity always spawn with the same item, add the following loot table
 
 ```json
 {
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "dd:hammer",
-					"weight": 1
-				}
-			]
-		}
-	]
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dd:hammer",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -77,12 +77,8 @@ If everything went well, you'd have something looking like this:
 
 ![](/assets/images/tutorials/entity-holds-item/finished_result.png)
 
-
 ## Common Problems
 
-- Held item not displaying
+-   Held item not displaying
 
 Your entity contains multiple geometry variants.
-
-
-
