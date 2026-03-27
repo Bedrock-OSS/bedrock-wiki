@@ -28,8 +28,8 @@ In this tutorial we are going to learn how to create a simple "ectoplasm" item, 
 
 Conceptually, items are made up of two parts:
 
--   The visuals (texture, name)
--   The behaviors (how the item should behave)
+- The visuals (texture, name)
+- The behaviors (how the item should behave)
 
 First, we will learn how to create a new simple item & define its behaviors. In the next section we will assign a texture to this item, so you can see it in game.
 
@@ -66,8 +66,8 @@ In order for the game to apply the correct components to the correct item, we ne
 
 An identifier is a name unique to this item. For a vanilla minecraft egg it's identifier is `minecraft:egg`. An identifier is made of two parts,
 
--   The namespace (`minecraft`)
--   The id (`egg`)
+- The namespace (`minecraft`)
+- The id (`egg`)
 
 The namespace is unique to your add-on and you will use it throughout the project. This is to reduce issues if someone adds two packs to your game which both add an ectoplasm item; the namespace reduces the chance of the identifier being the same.
 The namespace that Minecraft use is `minecraft`. Your namespace should be unique to you, for example the authors initials or an abbreviation of the pack name. We will use the namespace `wiki` in our example; for more information on making a namespace check out our page [here](/concepts/namespaces).
@@ -87,11 +87,11 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 
 ```json
 {
-	"format_version": "1.26.10",
-	"minecraft:item": {
-		"description": { ... },
-		"components": { ... }
-	}
+ "format_version": "1.26.10",
+ "minecraft:item": {
+  "description": { ... },
+  "components": { ... }
+ }
 }
 ```
 
@@ -188,7 +188,7 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 
 ```json
 {
-	"texture_data": { ... }
+ "texture_data": { ... }
 }
 ```
 
@@ -200,7 +200,7 @@ Under `texture_data` will our list of item shortname definitions. An example def
 
 ```json
 "wiki:ectoplasm": {
-	"textures": "textures/items/ectoplasm"
+ "textures": "textures/items/ectoplasm"
 }
 ```
 
@@ -216,8 +216,8 @@ To finally apply our texture to our item, we add the `minecraft:icon` component 
 
 ```json
 "components": {
-	"minecraft:max_stack_size": 16,
-	"minecraft:icon": "wiki:ectoplasm"
+ "minecraft:max_stack_size": 16,
+ "minecraft:icon": "wiki:ectoplasm"
 }
 ```
 
@@ -244,17 +244,17 @@ Now your first custom item, Ectoplasm, is complete! If everything has been done 
 Your folder structure should look like this:
 
 <FolderView :paths="[
-	'RP/texts/en_US.lang',
-	'RP/texts/languages.json',
-	'RP/textures/wiki/items/ectoplasm.png',
-	'RP/textures/item_texture.json',
-	'RP/manifest.json',
-	'RP/pack_icon.png',
-	'BP/items/ectoplasm.json',
-	'BP/texts/en_US.lang',
-	'BP/texts/languages.json',
-	'BP/manifest.json',
-	'BP/pack_icon.png',
+ 'RP/texts/en_US.lang',
+ 'RP/texts/languages.json',
+ 'RP/textures/wiki/items/ectoplasm.png',
+ 'RP/textures/item_texture.json',
+ 'RP/manifest.json',
+ 'RP/pack_icon.png',
+ 'BP/items/ectoplasm.json',
+ 'BP/texts/en_US.lang',
+ 'BP/texts/languages.json',
+ 'BP/manifest.json',
+ 'BP/pack_icon.png',
 ]" />
 
 <Spoiler title="Full ectoplasm.json">
@@ -301,10 +301,16 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 ## Your Progress So Far
 
--   [x] Setup your pack
--   [x] Create a custom item
--   [x] How to format the behavior and resource files for an item
--   [x] What components are and how to use them
--   [x] How to set an items texture
--   [ ] Create a custom entity
--   [ ] Create the entity's loot, spawn rules, and a custom recipe
+:::tip What you have learned
+
+- [x] Setup your pack
+- [x] Create a custom item
+- [x] How to format the behavior and resource files for an item
+- [x] What components are and how to use them
+- [x] How to set an items texture
+- [ ] Create a custom entity
+- [ ] Create the entity's loot, spawn rules, and a custom recipe
+
+:::
+
+<Button link="/guide/custom-entity">Next: Custom Entity</Button>
