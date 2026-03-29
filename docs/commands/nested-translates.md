@@ -403,6 +403,8 @@ You may add additional `display_logic.set_xx.mcfunction` based on `display_logic
 No further modifications are needed to add an additional 81 text components into the titleraw.
 Just remember to create the scoreboard objectives.
 
+:::
+
 ## MNT Titleraw Template
 
 <CodeHeader>BP/wiki/display/actionbar/multiple_nested_translates.mcfunction</CodeHeader>
