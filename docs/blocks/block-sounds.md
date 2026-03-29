@@ -2,6 +2,7 @@
 title: Block Sounds
 description: Learn how to modify the sounds that blocks play after actions such as placement.
 category: Documentation
+license: true
 mentions:
     - MedicalJewel105
     - TheItsNameless
@@ -10,7 +11,7 @@ mentions:
 
 ## Applying Sounds
 
-The `sounds` parameter in `RP/blocks.json` is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound.
+The `sound` parameter in `RP/blocks.json` is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound.
 
 You can apply a set of sounds to your block using this parameter:
 
@@ -107,10 +108,11 @@ The following sound events can be defined in the `interactive_sounds` section of
 
 ## List of Vanilla Sounds
 
-The following are valid values for the sound property:
+The following are valid values for the `sound` parameter:
 
 <!-- page_dumper_start -->
-| *Last updated for 1.21.60* |
+
+| _Last updated for 1.21.60_ |
 | -------------------------- |
 | amethyst_block             |
 | amethyst_cluster           |
@@ -221,4 +223,5 @@ The following are valid values for the sound property:
 | weeping_vines              |
 | wet_sponge                 |
 | wood                       |
+
 <!-- page_dumper_end -->

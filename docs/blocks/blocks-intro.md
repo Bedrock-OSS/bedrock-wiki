@@ -19,14 +19,14 @@ mentions:
     - stirante
     - ChibiMango
     - Hatchibombotar
-    - FrankyRay
+    - fraysdev
     - Ciosciaa
     - Sprunkles137
     - ThomasOrs
     - QuazChick
 ---
 
-:::tip FORMAT & MIN ENGINE VERSION `1.21.90`
+:::tip FORMAT VERSION 1.26.10
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger NOTE
@@ -49,7 +49,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -66,7 +66,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ### Block Description
 
--   Defines the block's `identifier` - a unique ID in the format of `namespace:identifier`.
+-   Defines the block's `identifier` - a unique ID in the format of `<namespace>:<identifier>`{lang=xml}.
 -   Configures which `menu_category` the block is placed into.
     -   Also takes the optional parameters `group` and `is_hidden_in_commands`.
 
@@ -82,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -97,7 +97,6 @@ Let's configure our own functionality!
             "minecraft:destructible_by_explosion": {
                 "explosion_resistance": 3
             },
-            "minecraft:friction": 0.4,
             "minecraft:map_color": "#ffffff",
             "minecraft:light_dampening": 0,
             "minecraft:light_emission": 4,
@@ -109,8 +108,7 @@ Let's configure our own functionality!
 
 -   [`minecraft:destructible_by_mining`](/blocks/block-components#destructible-by-mining) defines how long the player will need to mine the block until it breaks. Currently, it isn't possible to set different destroy times for different tools.
 -   [`minecraft:destructible_by_explosion`](/blocks/block-components#destructible-by-explosion) defines the resistance to explosions. The higher the value, the lower the chance of destruction.
--   [`minecraft:friction`](/blocks/block-components#friction) defines how much friction the block has. For example, soul sand has a high value for friction, so it slows the players. Ice has a lower friction value, so it has a slippery effect. The friction of classic blocks such as wood or stone is `0.4`.
--   [`minecraft:map_color`](/blocks/block-components#map-color) is the hex color code that will be displayed on a Minecraft map to represent this block. `#ffffff` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker).
+-   [`minecraft:map_color`](/blocks/block-components#map-color) is the hex color code that will be displayed on a Minecraft map to represent this block. `"#ffffff"`{lang=json} means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker).
 -   [`minecraft:light_dampening`](/blocks/block-components#light-dampening) defines how much light will be blocked from passing through.
 -   [`minecraft:light_emission`](/blocks/block-components#light-emission) defines the light level the block will output.
 -   [`minecraft:loot`](/blocks/block-components#loot) defines a loot table path for the block to drop. If this is removed, then the block will drop itself. You can learn more about loot tables [here](/loot/loot-tables).
@@ -140,8 +138,6 @@ Now, we need to link the texture shortname to an image file path in `RP/textures
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         // Our texture shortname:
         "wiki:custom_block": {
@@ -232,8 +228,6 @@ With the following `terrain_texture.json` data:
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:compass_block_down": {
             "textures": "textures/blocks/compass_block_down"

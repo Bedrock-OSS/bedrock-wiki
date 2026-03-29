@@ -7,7 +7,7 @@ mentions:
     - MedicalJewel105
     - QuazChick
     - MaragiDev
-    - DarkGamerYT
+    - xKingDark
     - zheaEvyline
 ---
 
@@ -62,7 +62,7 @@ _Edited sample `glyph_E1.png` (CC0), shared by @zheaEvyline for free use:_
 
 ![](/assets/images/text/custom-emojis/glyph_E1_modified.png)
 
-If you'd like to add existing vanilla items to the glyph and use them as emojis in-game, you can easily do so with the **[Items to Glyph Web Tool](https://minato-mba.github.io/content/Items%20to%20Glyph.html)** created by @Minato
+If you'd like to add existing vanilla textures or custom ones to the glyph and use them as emojis in-game, you can easily do so with the **[Textures to Glyph Web Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)** created by @minato4743
 
 Your file paths should look like this:
 

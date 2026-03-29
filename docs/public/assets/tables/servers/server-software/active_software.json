@@ -30,15 +30,15 @@
       "type": "Custom"
     },
     {
-      "name": "[Chorus](https://github.com/Chorus-OSS/Chorus)",
-      "description": "Minecraft: Bedrock server software, open source and written in Kotlin",
-      "languages": "Kotlin",
-      "type": "Custom"
-    },
-    {
       "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
       "description": "Nuclear-Powered Minecraft: Bedrock Edition Server Software.",
       "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[Dragonfly](https://github.com/df-mc/dragonfly)",
+      "description": "A heavily asynchronous server software for Minecraft: Bedrock Edition written in Go.",
+      "languages": "Go",
       "type": "Custom"
     },
     {
@@ -48,22 +48,16 @@
       "type": "BDS-based"
     },
     {
-      "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
-      "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
-      "languages": "TypeScript",
-      "type": "Custom"
-    },
-    {
-      "name": "[JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)",
-      "description": "A Minecraft Bedrock Edition Server Software.",
-      "languages": "Java",
-      "type": "Custom"
-    },
-    {
       "name": "[LeviLamina](https://github.com/LiteLDev/LeviLamina)",
       "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
       "languages": "C++",
       "type": "BDS-based"
+    },
+    {
+      "name": "[Lumi](https://github.com/KoshakMineDev/Lumi)",
+      "description": "A Minecraft Bedrock server software with multiversion, custom (items, blocks, enchantments), and better API.",
+      "languages": "Java",
+      "type": "Custom"
     },
     {
       "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
@@ -96,16 +90,10 @@
       "type": "Custom"
     },
     {
-      "name": "[RAstra](https://github.com/bedrock-crustaceans/RAstra)",
-      "description": "Modern Minecraft Bedrock Server Software written in Rust.",
-      "languages": "Rust, JavaScript, TypeScript",
-      "type": "Custom"
-    },
-    {
-      "name": "[Sculk](https://github.com/sculkmp/Sculk)",
-      "description": "Sculk-Powered Minecraft: Bedrock Edition Server Software.",
-      "languages": "Java",
-      "type": "Custom"
+      "name": "[PumpkinMC](https://github.com/Pumpkin-MC/Pumpkin)",
+      "description": "A Minecraft server built entirely in Rust, offering a fast, efficient, and customizable experience.",
+      "languages": "Rust",
+      "type": "Java Edition cross-play"
     },
     {
       "name": "[Serenity](https://github.com/SerenityJS/serenity)",

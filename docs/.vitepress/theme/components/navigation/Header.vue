@@ -2,7 +2,6 @@
 import { useMediaQuery } from "@vueuse/core";
 
 import useSidebarVisibility from "../../composables/sidebarVisibility";
-import useIsMobile from "../../composables/isMobile";
 import useData from "../../composables/data";
 
 import MenuIcon from "../icons/MenuIcon.vue";
@@ -17,7 +16,6 @@ const { site, theme } = useData();
 const isAppearanceDropdownVisible = useMediaQuery("(min-width: 330px)");
 const isShortTitle = useMediaQuery("(max-width: 400px)");
 const isSidebarVisible = useSidebarVisibility();
-const isMobile = useIsMobile();
 
 function toggleSidebarVisibility() {
   isSidebarVisible.value = !isSidebarVisible.value;
@@ -40,7 +38,7 @@ function toggleSidebarVisibility() {
       <span>{{ isShortTitle ? "Wiki" : site.title }}</span>
     </a>
     <div class="header__content">
-      <ul v-if="!isMobile" class="header__links">
+      <ul class="header__links">
         <li v-for="(item, i) in theme.navigation" :key="i">
           <NavLink :link="item.link" :active-match="item.activeMatch">{{ item.text }}</NavLink>
         </li>
@@ -130,6 +128,12 @@ function toggleSidebarVisibility() {
 }
 
 @media (max-width: 900px) {
+  .header {
+    &__links {
+      display: none;
+    }
+  }
+
   .sidebar-visible {
     .header {
       background-color: var(--light-bg-color);

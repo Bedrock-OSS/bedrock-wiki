@@ -16,6 +16,192 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+:::info <Label color="yellow">Use Beta Features</Label> CHANGES
+The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
+:::
+
+## 1.26.10
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:multi_block`
+    -   Causes the block to be treated as a multi-block made up of multiple parts.
+    -   Allows the `minecraft:multi_block_part` state to be enabled via the `enabled_states` array.
+    -   Contains `direction` which determines the direction in which parts of the multi-block are placed.
+        -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
+    -   Contains `parts` which determines the number of blocks (2-4) that make up the multi-block.
+        -   This determines how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
+    -   Prevents the `minecraft:movable` and `minecraft:placement_filter` components from being defined within the `permutations` array.
+    -   Requires the `minecraft:movable` component to be defined with a `movement_type` of `"popped"`{lang=json} or `"immovable"`{lang=json}.
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:chest_obstruction`
+    -   Determines when the opening of chests placed below the block should be obstructed.
+    -   May be set to `"always"`{lang=json}, `"shape"`{lang=json} (default) or `"never"`{lang=json}.
+    -   Prior to format version 1.26.10, chest obstruction was based on whether a vanilla full block geometry was used with the `opaque` render method.
+
+## 1.26.0
+
+### Traits
+
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:connection` from experimental
+-   Updated `minecraft:placement_direction`
+    -   Released `blocks_to_corner_with` parameter from experimental
+    -   Updated `enabled_states` parameter
+        -   Released `"minecraft:corner_and_cardinal_direction"`{lang=json} value from experimental
+
+### Components
+
+-   Updated `minecraft:collision_box`
+    -   Released array support from experimental
+    -   Released extended bounds from experimental
+-   Updated `minecraft:geometry`
+    -   Added backwards compatibility mapping for `"minecraft:geometry.full_block"`{lang=json} identifier.
+        -   In format versions prior to `1.26.0`, `"minecraft:geometry.full_block"`{lang=json} will be treated as `"minecraft:geometry.full_block_v1"`{lang=json}.
+-   Updated `minecraft:liquid_detection`
+    -   Added `use_liquid_clipping` detection rule parameter which determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](/blocks/block-components#collision-box)).
+        -   In format versions prior to `1.26.0`, the default value is `true`{lang=json}.
+        -   In format versions of `1.26.0` and higher, the default value is `false`{lang=json}.
+-   Updated `minecraft:material_instances`
+    -   Released `alpha_masked_tint` instance parameter from experimental
+-   Updated `minecraft:redstone_consumer`
+    -   Renamed `propogates_power` parameter to `propagates_power`
+
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:connection_rule` from experimental
+-   Released `minecraft:leashable` from experimental
+-   Released `minecraft:support` from experimental
+-   Released `minecraft:redstone_consumer` from experimental
+
+## 1.21.130
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:connection`
+    -   Allows for fence-like connection permutations.
+    -   Can be used to enable the following boolean states by including `"minecraft:cardinal_connections"`{lang=json} in the `enabled_states` array:
+        -   `minecraft:connection_north`
+        -   `minecraft:connection_east`
+        -   `minecraft:connection_south`
+        -   `minecraft:connection_west`
+
+<Tag name="experimental" />
+<Label color="yellow">Beta APIs</Label>
+<Label color="yellow">Use Beta Features</Label>
+
+-   Updated `minecraft:placement_direction`
+    -   Added `blocks_to_corner_with` parameter which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   Updated `enabled_states` parameter
+        -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value, which can be used to replicate stair rotation and cornering, enabling the following states:
+            -   `minecraft:cardinal_direction`
+            -   `minecraft:corner`
+
+### Components
+
+-   Released `minecraft:precipitation_interactions` from experimental
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:connection_rule`
+    -   Determines whether other blocks such as fences and walls can connect to the block.
+    -   Contains `accepts_connections_from` which may be set to one of the following values:
+        -   `"all"`{lang=json} (default) allows any block to connect to the block.
+        -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
+        -   `"none"`{lang=json} prevents all blocks from connecting.
+    -   Contains `enabled_directions` which lists the cardinal directions from which other blocks can connect to the block.
+        -   By default, blocks can connect from any cardinal direction.
+-   Added `minecraft:leashable`
+    -   Allows leads to be attached to the block like fences.
+    -   Contains `offset` which determines the position of the middle of the knot relative to the bottom middle of the block.
+-   Added `minecraft:redstone_consumer`
+    -   Allows the block to respond to redstone power via custom components.
+    -   Contains `min_power` which determines the minimum power level (0-15) required to trigger the `onRedstoneUpdate` custom component event hook.
+    -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
+        -   Note that the spelling of this parameter is incorrect (it is corrected to `propagates_power` in 1.26.0).
+        -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
+            -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+-   Added `minecraft:support`
+    -   Defines the block's ability to support other blocks that are attached to it.
+    -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
+-   Updated `minecraft:collision_box`
+    -   Can now be defined as an array of multiple boxes.
+    -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
+-   Updated `minecraft:material_instances`
+    -   Removed redundant `emissive` instance parameter
+
+## 1.21.120
+
+### Components
+
+-   Released `minecraft:embedded_visual` from experimental
+-   Released `minecraft:flower_pottable` from experimental
+-   Released `minecraft:redstone_producer` from experimental
+-   Updated `minecraft:material_instances`
+    -   Released [texture variation](/blocks/block-texture-variation) support for `texture` instance parameter from experimental.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Added `minecraft:precipitation_interactions`
+    -   Determines how this block interacts with precipitation (rain and snow).
+    -   Contains `precipitation_behavior` which can be one of the following values:
+        -   `obstruct_rain_accumulate_snow` (default) prevents rain from passing through the block, instead splashing on top of it and causes snow layers to build up above the block if it is snowing.
+        -   `obstruct_rain` prevents rain from passing through the block, instead splashing on top of it.
+        -   `none` allows rain and snow to pass through the block.
+-   Updated `minecraft:material_instances`
+    -   Added `alpha_masked_tint` instance parameter which determines whether the intensity of the tint applied by [tint methods](/blocks/block-tinting#tint-methods) should be based on the alpha channel of the texture.
+        -   This requires a `tint_method` to be specified (that is not `none`) as well as a `render_method` of `opaque`.
+    -   Added `emissive` instance parameter which determines whether faces using the material instance should have no shading (disabling face dimming and ambient occlusion).
+        -   Note that this parameter does not cause faces to be displayed at full brightness at all times.
+
+## 1.21.110
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:embedded_visual`
+    -   Determines how this block is displayed when in a Flower Pot.
+    -   Contains `geometry` which determines the displayed geometry component.
+    -   Contains `material_instances` which determines the displayed material instances component.
+-   Added `minecraft:flower_pottable`
+    -   An empty object which allows this block to be placed in a Flower Pot.
+-   Added `minecraft:redstone_producer`
+    -   Causes the block to produce redstone power.
+    -   Contains `power` which determines the power level produced by the block as an integer (0-15).
+    -   Contains `connected_faces` which determines which directions power is produced in.
+        -   Defined as an array of faces which may include `down`, `up`, `north`, `south`, `west` and `east`.
+        -   By default, all faces are connected.
+    -   Contains `strongly_powered_face` which determines the direction where strong power is produced.
+        -   If strong power is received by a [redstone conductor](/blocks/block-components#redstone-conductivity), blocks surrounding the conductor will be powered (connected to the circuit).
+        -   By default, no face is strongly powered.
+    -   Contains `transform_relative` which determines whether face directions should be relative to the `rotation` value in the [transformation](/blocks/block-components#transformation) component.
+        -   By default, faces are not transform-relative.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:material_instances`
+    -   Updated `texture` instance parameter to support [texture variation](/blocks/block-texture-variation).
+    -   In previous format versions, the first variation of the referenced atlas entry would always be selected.
+
 ## 1.21.100
 
 ### Components
@@ -165,8 +351,6 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
-<Label color="green">Versioned</Label>
-
 -   Updated `minecraft:destructible_by_mining`
     -   Released `item_specific_speeds` parameter from experimental
 
@@ -205,6 +389,11 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:redstone_conductivity`
     -   Contains `redstone_conductor` which determines whether this block conducts redstone.
     -   Contains `allows_wire_to_step_down` which determines whether redstone wire can travel down the side of this block.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
 -   Updated `minecraft:destructible_by_mining`
     -   Added `item_specific_speeds` which determines the `destroy_speed` for each `item` descriptor in an array.
 
@@ -303,7 +492,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Released `traits` from experimental
 
-#### Traits
+### Traits
 
 <Label color="green">Versioned</Label>
 
@@ -338,7 +527,10 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `traits`
     -   Block traits are shortcuts for creators to add vanilla states and value setters to data-driven blocks.
 
-#### Traits
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
 
 -   Added `minecraft:placement_direction`
     -   Can enable the states `minecraft:cardinal_direction` and `minecraft:facing_direction`.
@@ -409,11 +601,6 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Released `minecraft:geometry` from experimental
 -   Released `minecraft:material_instances` from experimental
-
-<Tag name="experimental" />
-<Label color="red">Holiday Creator Features</Label>
-
--   Removed `minecraft:breathability`
 
 ## 1.19.30
 
@@ -644,16 +831,16 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `transform` response
 -   Added `trigger` response
 
-## 1.10.0
+## 1.12.0
 
 ### Description
 
 -   Added `identifier`
     -   Defines the identifier of the block. Must have a namespace that isn't `minecraft`.
 -   Added `is_experimental`
-    -   Only registers the block if the `Use Experimental Gameplay` toggle is enabled in world settings.
+    -   Only registers the block if the "Use Experimental Gameplay" toggle is enabled in world settings.
 -   Added `register_to_creative_menu`
-    -   Causes the block to appear in the `Construction` category of the creative menu.
+    -   Causes the block to appear in the "Construction" category of the creative menu.
     -   Custom blocks cannot be added to the recipe book at this time.
 
 ### Components
@@ -674,6 +861,6 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Note that this is not a measure of resistance unlike in modern formats.
 -   Added `minecraft:loot`
     -   Determines the path of the loot table that will be dropped when this block is destroyed.
-    -   This component is ignored if the used tool has the `Silk Touch` enchantment.
+    -   This component is ignored if the used tool has the "Silk Touch" enchantment.
 -   Added `minecraft:map_color`
     -   Determines the color this block appears as on a map.

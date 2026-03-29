@@ -263,6 +263,10 @@ These identifiers are not usable in the object notation, only the string notatio
 -   `slow_falling`
 -   `turtle_master`
 -   `wither`
+-   `infested`
+-   `oozing`
+-   `weaving`
+-   `wind_charged`
 
 Where supported, `long_` and `strong_` prefixes may be used to designate modified potions, such as `minecraft:potion_type:strong_poison`.
 
@@ -554,27 +558,6 @@ Any unicode character from `U+0020` to `U+07FF` may be used as a key name. If a 
 ::: warning
 If a character in the pattern is not present in the key map, it will be treated as though it were a space, a designated empty tile.
 :::
-
-### Recipe Unlocking
-
-Minecraft 1.20.30 added recipe unlocking to the game. In order to have your recipes use this function, you `manifest.json` must have a `min_engine_version` of 1.20.11 (1.20.30 is recommender). You also need to add the `unlock` array with its objects to your recipe.
-
-```json
-"unlock": [
-    {
-        "item": "wiki:cold_steel" //item to unlock recipe
-    },
-    {
-        "item": "minecraft:wool", //item to unlock recipe
-        "data":  3
-    },
-    {
-        "context": "PlayerInWater" //event to unlock recipe
-    }
-]
-```
-
-Each object in this array contains `"item"` and this tells the recipe what item the player needs in their inventory in order for this recipe to be unlocked. `"context"` is used to determine what event unlocks this recipe. `"PlayerInWater"` will unlock this recipe when the player enters water. This is also the only known context for recipes.
 
 #### Shaped Results
 

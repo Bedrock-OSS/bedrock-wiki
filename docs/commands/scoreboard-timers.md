@@ -96,10 +96,10 @@ _Note: All 3 are score holders in the objective._
 
 **`wiki:ticks`** — On this objective, we define all the intervals for our events and also run our scoreboard timer:
 
--   ` .2h ` interval (static score: 144000)
--   ` .10m ` interval (static score: 12000)
--   ` .30s ` interval (static score: 600)
--   ` .Timer ` clock (variable score: n+1)
+-   `.2h` interval (static score: 144000)
+-   `.10m` interval (static score: 12000)
+-   `.30s` interval (static score: 600)
+-   `.Timer` clock (variable score: n+1)
 
 _Note: All 4 are score holders in the objective._
 

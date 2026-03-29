@@ -1,10 +1,10 @@
 ---
 title: Intro to World Generation
+description: Learn about modifying world generation.
 category: General
 nav_order: 1
 tags:
     - guide
-    - experimental
 mentions:
     - SirLich
     - solvedDev
@@ -14,7 +14,7 @@ mentions:
     - aexer0e
     - retr0cube
     - SmokeyStack
-description: Introduction to WorldGen.
+    - Supernova3695
 ---
 
 :::warning
@@ -23,7 +23,7 @@ This page is somewhat out-dated, and contains limited information. For the most 
 
 You can change the world's generation via Add-ons. The needed folders in the Behavior pack for these are:
 
-`structures`, `features`, `feature_rules` and `biomes`. It's quite self-explanatory: you can store your .mcstructure files from (or for) structure blocks in `structures`, biome files in `biomes`, terrain features, like ores, in `features` and the rules for their generation in `feature_rules`. Let's go over adding a custom biome first.
+`structures`, `features`, `feature_rules`, `biomes`, and `worldgen`. It's quite self-explanatory: you can store your .mcstructure files from (or for) structure blocks in `structures`, biome files in `biomes`, jigsaw structure files in `worldgen` and its subfolders, terrain features, like ores, in `features` and the rules for their generation in `feature_rules`. Let's go over adding a custom biome first.
 
 _Note: it might be easier to create biomes using bridge., a Visual software for Add-on creation (also linked in Links and Contact), since the official Documentation is rather incomplete. You can also generate all example files of vanilla biomes, features and feature rules for reference, like shown here:_
 
@@ -40,19 +40,16 @@ However, bridge. is not required.
 
 ```json
 {
-    "format_version": "1.13.0",
+    "format_version": "1.26.10",
     "minecraft:biome": {
         "description": {
-            "identifier": "cold_biome"
+            "identifier": "wiki:cold_biome"
         },
         "components": {
             "minecraft:climate": {
                 "downfall": 0.7,
                 "snow_accumulation": [0.6, 0.9],
                 "temperature": 15.0
-            },
-            "minecraft:overworld_height": {
-                "noise_params": [0.6, 0.9]
             },
             "minecraft:surface_parameters": {
                 "sea_floor_depth": 7,
@@ -62,22 +59,26 @@ However, bridge. is not required.
                 "top_material": "minecraft:glass",
                 "sea_material": "minecraft:water"
             },
-            "minecraft:overworld_generation_rules": {
-                "generate_for_climates": [
-                    ["medium", 100],
-                    ["warm", 100],
-                    ["cold", 100]
+            "minecraft:replace_biomes": {
+                "replacements": [
+                    {
+                        "amount": 0.5,
+                        "noise_frequency_scale": 50,
+                        "dimension": "minecraft:overworld",
+                        "targets": ["minecraft:plains"]
+                    }
                 ]
             },
-            "cold_biome": {}
+            "minecraft:tags": {
+                "tags": ["cold_biome"]
+            }
         }
     }
 }
 ```
 
--   Set `format_version` to 1.13.0: it's the latest biome file version as of the current release.
--   `description` takes only one value: `identifier`. This requires **NO namespace** and **MUST** be the same as the **file's name**.
-    (If you do use a namespace, for example `wiki:cold_biome`, the file name needs to only match the id, so it has to remain as `cold_biome.json`.
+-   Set `format_version` to 1.26.10: it's the latest biome file version as of the current release.
+-   `description` takes only one value: `identifier`.
 -   `components` is just what you'd expect: something applied to the biome at default. let's look through them:
 -   `minecraft:climate` controls everything climate-wise.
 -   `downfall` is how often it'll be raining or snowing. 0.0 is for absolutely no rain (like a desert) and 1.0 should mean constant rain.
@@ -103,14 +104,19 @@ _A non-smooth transition between the same biome, generated with noise_params as 
 
 `beach, default, extreme, taiga, ocean, mountains, default_mutated, deep_ocean, lowlands, less_extreme, stone_beach, swamp, river, mushroom`.
 
--   `minecraft_world_generation_rules` is the most important component of all, especially the `generate_for_climates` array. Basically, there are three climates in the game: "warm", "medium" and "cold". They are randomly thrown around every world when it's created [hard-coded]. Now, you can choose how often your custom biome will generate in every specific climate. If you do not provide anything in here, the default value is 0 for every climate, and the biome won't generate. In the example, the **weight** (the smaller the number, the smaller the chance of this biome generating instead of a vanilla one in the climate) for every climate is set to 100 for testing purposes: that makes the biome generate almost everywhere in the Overworld. Once I'm done with testing, however, I'll balance the weight how it's supposed to be. For example, the Vanilla _desert_ has the weight of 3 for warm.
+-   `minecraft:replace_biomes` is the most important component of all. It tells the game where to place custom biomes in replacement of vanilla biomes at a percentage rate.
 
--   This component also takes Objects such as: `hills_transformation`, `mutate_transformation`, `shore_transformation`, `river_transformation`, but their meaning is unclear to me. Contributions are always appreciated. Same goes for the `surface_meaterial_adjustments` component.
+-   And, last but not least, BIOME TAGS! They're very simple, but useful. You can set however many of the vanilla or custom tags you want by adding them in this format in the `minecraft:tags` component:
 
--   And, last but not least, BIOME TAGS! They're very simple, but useful. You can set however many of the vanilla or custom tags you want, by adding them in this format in `components`:
+<CodeHeader>minecraft:biome > components</CodeHeader>
 
-```
-"tagName": {}
+```json
+"minecraft:tags": {
+    "tags": [
+        "overworld",
+        "wiki:custom_tag"
+    ]
+}
 ```
 
 Then, you can test for your tag in _environment_sensors_, _filters_, _has_biome_ tests, _spawn rules_, and more.
@@ -120,8 +126,6 @@ Your custom biome is now complete!
 ---
 
 ## Features and Feature Rules
-
-Note: in v.1.15Beta, it is possible to use `.mcstructures` from the `structures` folder instead of `features` to generate custom structures with `feature_rules`. More on that after the update arrives.
 
 Features and Feature Rules are used to generate everything from ores to grass and flowers, vegetation to granite or clay patches.
 It is even possible to create custom structures using those, but as it is very grindy and will be much easier after the mentioned update, we won't talk about it just yet.
@@ -283,7 +287,9 @@ It's a good idea to proceed checking out other feature and feature_rule vanilla 
 
 ## Custom Structures
 
-As of MCBE v1.16.20, **Custom Generated structures are possible**.
+### Structure Template Features
+
+As of MCBE v1.16.20, **Custom Generated structures are possible**
 A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](/nbt/mcstructure).
 
 ---
@@ -318,11 +324,14 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
 
 -   `structure_name` is the structure's identifier, the one you saved via a Structure Block.
 
+### Jigsaw Structures
+
+Jigsaw structures can be very small or very large, up to 256 blocks across!
+
+Jigsaws allow for large randomize structures like villages or trail ruins which can generate across the world and be located by `/locate` unlike structure features.
+They are very powerful and more information about them can be found [here](/world-generation/jigsaw-structures).
+
 That's pretty much it! Now you're able to generate your own custom Structures in the world.
-
----
-
----
 
 ## Your Progress So Far
 
@@ -332,4 +341,4 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 -   [x] Made your very first ore generate naturally.
 -   [x] Learned to use bridge. for vanilla files generation and referencing.
 -   [x] Learned about other Custom Generation methods.
--   [x] Created custom Structures
+-   [x] Created custom structures.

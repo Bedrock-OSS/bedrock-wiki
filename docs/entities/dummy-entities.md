@@ -32,46 +32,48 @@ You can use whatever behaviors you like, but here is a good template. The import
 
 ```json
 {
-	"format_version": "1.16.0",
-	"minecraft:entity": {
-		"description": {
-			"identifier": "wiki:dummy",
-			"is_summonable": true,
-			"is_spawnable": false,
-			"is_experimental": false
-		},
-		"components": {
-			"minecraft:breathable": { //Optional, allows the entity to breath underwater
-				"breathes_water": true
-			},
-			"minecraft:physics": { 
-				"has_gravity": false, //Optional, allows the entity to not be affected by gravity or water
-				"has_collision": false
-			},
-			"minecraft:custom_hit_test": {
-				"hitboxes": [
-					{
-						"pivot": [0, 100, 0],
-						"width": 0,
-						"height": 0
-					}
-				]
-			},
-			"minecraft:damage_sensor": {
-				"triggers": {
-					"deals_damage": false
-				}
-			},
-			"minecraft:pushable": {
-				"is_pushable": false,
-				"is_pushable_by_piston": false
-			},
-			"minecraft:collision_box": {
-				"width": 0.0001,
-				"height": 0.0001
-			}
-		}
-	}
+    "format_version": "1.21.50",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "wiki:dummy",
+            "is_summonable": true,
+            "is_spawnable": false,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:cannot_be_attacked": {}, //Optional, blocks entities from attacking the owner entity unless they have the "minecraft:ignore_cannot_be_attacked" component.
+            "minecraft:breathable": {
+                //Optional, allows the entity to breath underwater
+                "breathes_water": true
+            },
+            "minecraft:physics": {
+                "has_gravity": false, //Optional, allows the entity to not be affected by gravity or water
+                "has_collision": false
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "pivot": [0, 100, 0],
+                        "width": 0,
+                        "height": 0
+                    }
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "deals_damage": false
+                }
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:collision_box": {
+                "width": 0.0001,
+                "height": 0.0001
+            }
+        }
+    }
 }
 ```
 
@@ -83,22 +85,22 @@ If you want to disable collision at all (so you can place a block at it's positi
 
 ```json
 {
-	"format_version": "1.10.0",
-	"minecraft:client_entity": {
-		"description": {
-			"identifier": "wiki:dummy",
-			"materials": {
-				"default": "entity_alphatest"
-			},
-			"geometry": {
-				"default": "geometry.dummy"
-			},
-			"render_controllers": ["controller.render.dummy"],
-			"textures": {
-				"default": "textures/entity/dummy"
-			}
-		}
-	}
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:dummy",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "geometry": {
+                "default": "geometry.dummy"
+            },
+            "render_controllers": ["controller.render.dummy"],
+            "textures": {
+                "default": "textures/entity/dummy"
+            }
+        }
+    }
 }
 ```
 
@@ -108,16 +110,16 @@ If you want to disable collision at all (so you can place a block at it's positi
 
 ```json
 {
-	"format_version": "1.12.0",
-	"minecraft:geometry": [
-		{
-			"description": {
-				"identifier": "geometry.dummy",
-				"texture_width": 16,
-				"texture_height": 16
-			}
-		}
-	]
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.dummy",
+                "texture_width": 16,
+                "texture_height": 16
+            }
+        }
+    ]
 }
 ```
 
@@ -127,18 +129,18 @@ If you want to disable collision at all (so you can place a block at it's positi
 
 ```json
 {
-	"format_version": "1.10.0",
-	"render_controllers": {
-		"controller.render.dummy": {
-			"geometry": "Geometry.default",
-			"textures": ["Texture.default"],
-			"materials": [
-				{
-					"*": "Material.default"
-				}
-			]
-		}
-	}
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.dummy": {
+            "geometry": "Geometry.default",
+            "textures": ["Texture.default"],
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        }
+    }
 }
 ```
 

@@ -125,7 +125,7 @@ Property values are returned by the `property` query function.
 }
 ```
 
-### Command Selector Parmeter
+### Command Selector Parameter
 
 <CodeHeader>Command</CodeHeader>
 

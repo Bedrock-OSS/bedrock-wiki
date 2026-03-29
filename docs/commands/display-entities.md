@@ -26,16 +26,14 @@ In a traditional sense, you may refer to them as block display entities or simpl
 
 :::info NOTE
 
-- This method uses 1 fox per block display. Therefore, too many foxes (like any entity) can contribute to server lag.
-- Players will still be able to pass through them, as well as interact with them (if not restricted)
+-   This method uses 1 fox per block display. Therefore, too many foxes (like any entity) can contribute to server lag.
+-   Players will still be able to pass through them, as well as interact with them (if not restricted)
 
 :::
 
 ## Video Demonstration
 
-<YouTubeEmbed
-    id="FVRd2n7JX3k"
-/>
+<YouTubeEmbed id="FVRd2n7JX3k" />
 
 ## System
 
@@ -61,10 +59,12 @@ playanimation @e[tag=wiki:fmbe] animation.minecart.move.v1.0 none 0 "v.rail_offs
 ### Z Axis
 playanimation @e[tag=wiki:fmbe] animation.parrot.dance none 0 "v.dance.x=-v.zpos;v.dance.y=0;" wiki:zpos
 ```
+
 ![Chain of 8 Command Blocks](/assets/images/commands/command-block-chain/8.png)
 
 Note: Providing a controller name allows us to stack animations without overwriting the previous one. Example:
-- `wiki:scale` (where `wiki` is a namespace).
+
+-   `wiki:scale` (where `wiki` is a namespace).
 
 Please ensure the controller name in the first command is `controller.animation.fox.move`.
 
@@ -75,7 +75,8 @@ For rest of the commands, using the same controller names above isn't required. 
 Once you have the system above active, follow the steps and instructions given below:
 
 ### Setup
-*To be typed in chat:*
+
+_To be typed in chat:_
 
 1. Summon a fox and use the `/replaceitem` command to give it the item model you want in its main hand.
     - `/summon fox ~~~ ~ ~ minecraft:as_adult "wiki:fmbe"`
@@ -85,46 +86,51 @@ Once you have the system above active, follow the steps and instructions given b
     - `/tag @e[name="wiki:fmbe"] add wiki:fmbe`
 
 ### Variables
-With FMBE, you can edit the display position, size, angle, and more using client animations. The variables are as follows:  
-- For Position:
-    - `v.xpos`
-    - `v.ypos`
-    - `v.zpos`
-- For Rotation:
-    - `v.xrot`
-    - `v.yrot`
-    - `v.zrot`
-- For Scale:
-    - `v.scale` — adjusts overall size.
-    - `v.xzscale` — adjusts size along the XZ axis.
-    - `v.yscale` — adjusts size along the Y axis.
-- For Base Position:
-    - `v.xbasepos`
-    - `v.ybasepos`
-    - `v.zbasepos`
+
+With FMBE, you can edit the display position, size, angle, and more using client animations. The variables are as follows:
+
+-   For Position:
+    -   `v.xpos`
+    -   `v.ypos`
+    -   `v.zpos`
+-   For Rotation:
+    -   `v.xrot`
+    -   `v.yrot`
+    -   `v.zrot`
+-   For Scale:
+    -   `v.scale` — adjusts overall size.
+    -   `v.xzscale` — adjusts size along the XZ axis.
+    -   `v.yscale` — adjusts size along the Y axis.
+-   For Base Position:
+    -   `v.xbasepos`
+    -   `v.ybasepos`
+    -   `v.zbasepos`
 
 :::tip NOTE
 
-- `basepos` variables move the position without affecting the center of rotation, meaning they are dependent on angles. (e.g., `v.zbasepos=16` behaves like `^^^1` in relative coordinates).
-- `pos` and `basepos` values are measured in 1/16 block units (16 = 1 full block).
+-   `basepos` variables move the position without affecting the center of rotation, meaning they are dependent on angles. (e.g., `v.zbasepos=16` behaves like `^^^1` in relative coordinates).
+-   `pos` and `basepos` values are measured in 1/16 block units (16 = 1 full block).
 
 :::
 
 ### Editing Values
 
-To edit values, use the following command structure:  
-- `/playanimation @e[tag=wiki:fmbe] animation.player.attack.positions none 0 "" wiki:setvariable`
+To edit values, use the following command structure:
+
+-   `/playanimation @e[tag=wiki:fmbe] animation.player.attack.positions none 0 "" wiki:setvariable`
 
 Write the molang code for the variable you want to edit inside the double quotes and assign the value.
 
 Example, to set `xrot` to 35, `ypos` to 16, and `scale` to 1.5:
-- `/playanimation @e[tag=wiki:fmbe] animation.player.attack.positions none 0 "v.xrot=35;v.ypos=16;v.scale=1.5;" wiki:setvariable`
+
+-   `/playanimation @e[tag=wiki:fmbe] animation.player.attack.positions none 0 "v.xrot=35;v.ypos=16;v.scale=1.5;" wiki:setvariable`
 
 Molang also allows for more complex animations using various queries and operators. To learn more about Molang, refer to the **[Molang Documentation](https://bedrock.dev/docs/stable/Molang)**.
 
 ### Saving & Loading FMBE
 
 1. To save, run:
+
     - `/execute at @e[tag=wiki:fmbe,c=1] run structure save wiki:fmbe ~~~ ~~~ true disk false`
 
 2. To load, run:
@@ -150,6 +156,7 @@ stopsound @a mob.fox.bite
 stopsound @a mob.fox.ambient
 stopsound @a mob.fox.aggro
 ```
+
 ![Chain of 10 Command Blocks](/assets/images/commands/command-block-chain/10.png)
 
 ### Changing FMBE Block Display Dynamically
@@ -179,42 +186,38 @@ playanimation @e[tag=wiki:fmbe] animation.creeper.swelling none 0 "v.scale=1;v.a
 ## Define FMBE Position & Rotation
 playanimation @e[tag=wiki:fmbe] animation.ender_dragon.neck_head_movement none 0 "v.adjust_xz=8*v.adscaled+v.zbasepos/v.adscaled;v.adjust_y=(-5-v.ybasepos/v.adscaled/v.adscaled)*v.adscaled;v.x=v.xbasepos/v.adscaled;v.y=v.adjust_y;v.z=v.adjust_xz;v.ty=v.y*math.cos(v.xrot)-v.z*math.sin(v.xrot);v.tz=v.y*math.sin(v.xrot)+v.z*math.cos(v.xrot);v.y=v.ty;v.z=v.tz;v.tx=-v.x*math.cos(v.zrot)+v.y*math.sin(v.zrot);v.ty=v.x*math.sin(v.zrot)+v.y*math.cos(v.zrot);v.x=v.tx;v.y=v.ty;v.tx=v.x*math.cos(v.yrot)+v.z*math.sin(v.yrot);v.tz=-v.x*math.sin(v.yrot)+v.z*math.cos(v.yrot);v.x=v.tx;v.z=v.tz;v.head_position_x=v.x+v.xpos/v.adscaled;v.head_position_y=7.48/v.adscale+v.z+v.zpos/v.adscaled;v.head_position_z=v.y-v.ypos/v.adscaled;v.head_rotation_x=90+v.xrot;v.head_rotation_y=v.zrot;v.head_rotation_z=v.yrot;" wiki:posrot
 ```
+
 ![Chain of 3 Command Blocks](/assets/images/commands/command-block-chain/3.png)
 
 ## Video Guides
 
 **Part I:**
-<YouTubeEmbed
-    id="DdYq_nOFeKM"
-/>
+
+<YouTubeEmbed id="DdYq_nOFeKM" />
 
 **Part II:**
-<YouTubeEmbed
-    id="zwyGmxjBDDw"
-/>
+
+<YouTubeEmbed id="zwyGmxjBDDw" />
 
 **Part III:**
-<YouTubeEmbed
-    id="-5N8yVGR1MA"
-/>
+
+<YouTubeEmbed id="-5N8yVGR1MA" />
 
 ## Community Creations
 
 **FMBE Creation Tool by @Marmalade:**
 
-<YouTubeEmbed
-    id="d4HOGFrmxhs"
-/>
+<YouTubeEmbed id="d4HOGFrmxhs" />
 
 **Other Notable Creations:**
 
-- ⭐ **[Orbital Laser by @FantasyTheCommander](https://youtu.be/DRy0J6u1qvo)**
-- ⭐ **[Animated Waterfalls by @FantasyTheCommander](https://youtu.be/AELTWr7akOQ)**
-- ⭐ **[Wither Storm by @GuppyDuck](https://youtu.be/drf1wUN0Su4)**
+-   ⭐ **[Orbital Laser by @FantasyTheCommander](https://youtu.be/DRy0J6u1qvo)**
+-   ⭐ **[Animated Waterfalls by @FantasyTheCommander](https://youtu.be/AELTWr7akOQ)**
+-   ⭐ **[Wither Storm by @GuppyDuck](https://youtu.be/drf1wUN0Su4)**
 
 ## Advanced FMBE Diagonal Transformation - BETA
 
-This is the beta version of a new, slighlty more advanced FMBE, which reduces the total number of command blocks required to 5, while also allowing for more complex transformations.
+This is the beta version of a new, slightly more advanced FMBE, which reduces the total number of command blocks required to 5, while also allowing for more complex transformations.
 
 ![Advanced FMBE Diagonal Transformation Demo GIF](/assets/images/commands/display-entities/advanced-fmbe-diagonal-transformation.gif)
 
@@ -227,29 +230,29 @@ It is still under development and may change over time, so use it with caution.
 The way the fox holds an item slightly changes depending on the type of item, and the position where the model is displayed also varies.
 Please use the command that is best suited for the type of item you wish to display from the three available categories:
 
-- **3D Blocks** (e.g., stone, anvil)
-- **2D Blocks** (e.g., ladder, coral, flower)
-- **Items** (e.g., diamond, bone meal, door)
-    - **Exceptions**:
-        - Trident
-        - Spyglass
-        - Bow
-        - Player Head / Mob Head
-        - Banner
-        - Heavy Core
-        - Conduit
-        - Decorated Pot
-        - Button
-    - **Unsupported**:
-        - Shield
+-   **3D Blocks** (e.g., stone, anvil)
+-   **2D Blocks** (e.g., ladder, coral, flower)
+-   **Items** (e.g., diamond, bone meal, door)
+    -   **Exceptions**:
+        -   Trident
+        -   Spyglass
+        -   Bow
+        -   Player Head / Mob Head
+        -   Banner
+        -   Heavy Core
+        -   Conduit
+        -   Decorated Pot
+        -   Button
+    -   **Unsupported**:
+        -   Shield
 
 ### Advanced FMBE Variables
 
-| Variable         | Description                                           |
-|------------------|-------------------------------------------------------|
-| `v.extend_scale` | Extends the block in a specific direction             |
-| `v.extend_xrot`  | Direction of extension (x axis rotation)             |
-| `v.extend_yrot`  | Direction of extension (y axis rotation)             |
+| Variable         | Description                               |
+| ---------------- | ----------------------------------------- |
+| `v.extend_scale` | Extends the block in a specific direction |
+| `v.extend_xrot`  | Direction of extension (x axis rotation)  |
+| `v.extend_yrot`  | Direction of extension (y axis rotation)  |
 
 (v.xzscale and v.yscale have been removed)
 
@@ -266,6 +269,7 @@ Please use the command that is best suited for the type of item you wish to disp
 /playanimation @e[tag=wiki:fmbe] animation.warden.move _ 0 "v.body_x_rot=v.F.p5||v.F.p3?math.atan2(v.F.p5,-v.F.p3):math.atan2(-v.F.p0,-v.F.p2);v.body_z_rot=v.F.p5||v.F.p3?math.atan2(-v.F.p1,v.F.p7):0;" wiki:fmbe.3d_blocks.anim3
 /playanimation @e[tag=wiki:fmbe] animation.player.attack.rotations _ 0 "v.attack_body_rot_y=math.asin(-v.F.p4);" wiki:fmbe.3d_blocks.anim4
 ```
+
 ![Chain of 5 Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 </Spoiler>
@@ -281,6 +285,7 @@ Please use the command that is best suited for the type of item you wish to disp
 /playanimation @e[tag=wiki:fmbe] animation.warden.move _ 0 "v.body_x_rot=v.F.p5||v.F.p3*v.F.si+v.F.p4*v.F.co?math.atan2(v.F.p5,-v.F.p3*v.F.si-v.F.p4*v.F.co):math.atan2(-v.F.p0*v.F.si-v.F.p1*v.F.co,-v.F.p2);v.body_z_rot=v.F.p5||v.F.p3*v.F.si+v.F.p4*v.F.co?math.atan2(v.F.p0*v.F.co-v.F.p1*v.F.si,v.F.p7*v.F.si-v.F.p6*v.F.co):0;" wiki:fmbe.2d_blocks.anim3
 /playanimation @e[tag=wiki:fmbe] animation.player.attack.rotations _ 0 "v.attack_body_rot_y=math.asin(v.F.p3*v.F.co-v.F.p4*v.F.si);" wiki:fmbe.2d_blocks.anim4
 ```
+
 ![Chain of 5 Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 </Spoiler>
@@ -296,6 +301,7 @@ Please use the command that is best suited for the type of item you wish to disp
 /playanimation @e[tag=wiki:fmbe] animation.warden.move _ 0 "v.body_x_rot=v.F.p5||v.F.p3*v.F.si+v.F.p4*v.F.co?math.atan2(v.F.p5,-v.F.p3*v.F.si-v.F.p4*v.F.co):math.atan2(-v.F.p0*v.F.si-v.F.p1*v.F.co,-v.F.p2);v.body_z_rot=v.F.p5||v.F.p3*v.F.si+v.F.p4*v.F.co?math.atan2(v.F.p0*v.F.co-v.F.p1*v.F.si,v.F.p7*v.F.si-v.F.p6*v.F.co):0;" wiki:fmbe.items.anim3
 /playanimation @e[tag=wiki:fmbe] animation.player.attack.rotations _ 0 "v.attack_body_rot_y=math.asin(v.F.p3*v.F.co-v.F.p4*v.F.si);" wiki:fmbe.items.anim4
 ```
+
 ![Chain of 5 Command Blocks](/assets/images/commands/command-block-chain/5.png)
 
 </Spoiler>
@@ -307,7 +313,7 @@ You can preview and experiment with variables using the 3D simulator here (Note:
 
 ### Advanced FMBE Planned Additions
 
-- Allow rotation using matrix calculations
-- Create a version compatible with Nintendo Switch (split version)
-- Add a usage guide
-- Add technical explanations
+-   Allow rotation using matrix calculations
+-   Create a version compatible with Nintendo Switch (split version)
+-   Add a usage guide
+-   Add technical explanations

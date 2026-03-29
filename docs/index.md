@@ -18,7 +18,9 @@ This wiki is a knowledge-sharing website for technical features of Minecraft Bed
 <CardGrid>
 <Card title="Beginner's Guide" link="/guide/introduction" image="/assets/images/icons/crafting_table.png">
 
-Step-by-step tutorials intended as your first contact with add-ons.
+Our collection of step-by-step tutorials intended as your first contact with add-ons.
+
+Learn how to set up your own project and get started developing.
 
 </Card>
 <Card title="Discord" link="/discord" image="assets/images/icons/book.png">
@@ -71,8 +73,8 @@ Learn about the capabilities of custom items, such as durability.
 [Beginner's Guide](/scripting/scripting-intro) —
 Learn the basics of the Script APIs that Minecraft offers.
 
-[Custom Commands](/scripting/custom-command) —
-Learn how to listen to chat events to create your own custom commands!
+[Custom Commands](/scripting/custom-commands) —
+Learn how to use scripting to create your own commands!
 
 </Card>
 <Card title="World Generation" link="/world-generation/world-generation-intro" image="/assets/images/icons/structure.png">

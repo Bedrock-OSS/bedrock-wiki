@@ -2,14 +2,14 @@
 title: TypeScript
 category: Documentation
 mentions:
-  - BlueFrog130
-  - sermah
-  - SmokeyStack
-  - SirLich
-  - Fabrimat
-  - JaylyDev
-  - Herobrine643928
-  - ThomasOrs
+    - BlueFrog130
+    - sermah
+    - SmokeyStack
+    - SirLich
+    - Fabrimat
+    - JaylyDev
+    - Herobrine643928
+    - ThomasOrs
 description: TypeScript in MCBE add-on developing.
 ---
 
@@ -22,10 +22,6 @@ Typescript is very beneficial to use when developing scripts for Minecraft add-o
 TypeScript is a language which requires compilation into JavaScript. Minecraft has no idea what to do with a `.ts` file. Therefore some tooling needs to be set up in order to utilize TypeScript to build add-ons.
 
 First, the TypeScript files need to be compiled into JavaScript, which is all accomplished by utilizing the [TypeScript Compiler](https://www.npmjs.com/package/typescript). Then the files can be utilized by Minecraft's scripting system.
-
-Since there is already a build step, we might as well incorporate some other systems to allow for file separation and code sharing. Minecraft's scripting system will only act on the script files within their respective folders utilizing what is assumed to be, Mojang's own JavaScript interpreter. Therefore, any logic split across multiple files must be merged into a single large file. This is where tooling such as [webpack](https://webpack.js.org/) and [browserify](https://browserify.org/) come in handy.
-
-## Script API
 
 ## Prerequisites
 
@@ -93,17 +89,17 @@ Now the project can be initialized. The next step is to create a TypeScript proj
 
 ```json
 {
-  "compilerOptions": {
-    "module": "ES2020",
-    "target": "ES2021",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "rootDir": "./src",
-    "outDir": "./scripts"
-  },
-  "exclude": [ "node_modules" ],
-  "include": [ "src" ]
+    "compilerOptions": {
+        "module": "ES2020",
+        "target": "ES2021",
+        "moduleResolution": "Node",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./src",
+        "rootDir": "./src",
+        "outDir": "./scripts"
+    },
+    "exclude": ["node_modules"],
+    "include": ["src"]
 }
 ```
 
@@ -130,17 +126,17 @@ Now write your first TypeScript code in `src` directory, for example below:
 <CodeHeader>BP/src/Main.ts</CodeHeader>
 
 ```ts
-import { Player, EntityQueryOptions, GameMode, Vector3, world } from '@minecraft/server';
+import { Player, EntityQueryOptions, GameMode, Vector3, world } from "@minecraft/server";
 
 // Example function that uses the provided types
 function findPlayersInSurvivalMode(location: Vector3): Player[] {
-  const options: EntityQueryOptions = {
-    gameMode: GameMode.survival,
-    location: location,
-  };
+    const options: EntityQueryOptions = {
+        gameMode: GameMode.survival,
+        location: location,
+    };
 
-  const players: Player[] = world.getPlayers(options);
-  return players;
+    const players: Player[] = world.getPlayers(options);
+    return players;
 }
 
 // Example usage
@@ -181,7 +177,7 @@ Now the `src/Main.ts` file should have been transpiled to `scripts/Main.js` with
 <CodeHeader>BP/scripts/Main.js</CodeHeader>
 
 ```js
-import { GameMode, world } from '@minecraft/server';
+import { GameMode, world } from "@minecraft/server";
 // Example function that uses the provided types
 function findPlayersInSurvivalMode(location) {
     const options = {

@@ -10,13 +10,17 @@
     },
     "vanilla_usage": {
       "name": "Vanilla Usage"
+    },
+    "modification": {
+      "name": "Tint Modification"
     }
   },
   "rows": [
     {
       "tint_method": "`birch_foliage`",
       "default_color": "<div style='background: #80A755' class='color-preview'>#80A755</div>",
-      "vanilla_usage": ["`minecraft:birch_leaves`"]
+      "vanilla_usage": ["`minecraft:birch_leaves`"],
+      "modification": ["Texture tinting can be modified by overriding the `birch` colormap."]
     },
     {
       "tint_method": "`default_foliage`",
@@ -28,17 +32,25 @@
         "`minecraft:mangrove_leaves`",
         "`minecraft:oak_leaves`",
         "`minecraft:vines`"
+      ],
+      "modification": [
+        "Texture tinting can be modified by using the `minecraft:foliage_appearance` client biome component and by overriding the `foliage`, `mangrove_swamp_foliage` and `swamp_foliage` colormaps.",
+        "Map color tinting can be modified by using the `minecraft:map_tints` biome component."
       ]
     },
     {
       "tint_method": "`dry_foliage`",
       "default_color": "<div style='background: #A37546' class='color-preview'>#A37546</div>",
-      "vanilla_usage": ["`minecraft:leaf_litter`"]
+      "vanilla_usage": ["`minecraft:leaf_litter`"],
+      "modification": [
+        "Texture tinting can be modified by using the `minecraft:dry_foliage_color` client biome component and by overriding the `dry_foliage` colormap."
+      ]
     },
     {
       "tint_method": "`evergreen_foliage`",
       "default_color": "<div style='background: #619961' class='color-preview'>#619961</div>",
-      "vanilla_usage": ["`minecraft:spruce_leaves`"]
+      "vanilla_usage": ["`minecraft:spruce_leaves`"],
+      "modification": ["Texture tinting can be modified by overriding the `evergreen` colormap."]
     },
     {
       "tint_method": "`grass`",
@@ -52,6 +64,10 @@
         "`minecraft:short_grass`",
         "`minecraft:tall_grass`",
         "`minecraft:wildflowers` (stems)"
+      ],
+      "modification": [
+        "Texture tinting can be modified by using the `minecraft:grass_appearance` client biome component and by overriding the `grass` and `swamp_grass` colormaps.",
+        "Map color tinting can be modified by using the `minecraft:map_tints` biome component."
       ]
     },
     {
@@ -61,6 +77,9 @@
         "`minecraft:cauldron` (undyed water)",
         "`minecraft:flowing_water`",
         "`minecraft:water`"
+      ],
+      "modification": [
+        "Texture tinting can be modified by using the `minecraft:water_appearance` client biome component."
       ]
     }
   ]

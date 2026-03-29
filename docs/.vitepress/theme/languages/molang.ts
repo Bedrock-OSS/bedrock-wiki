@@ -101,7 +101,7 @@ const language: LanguageRegistration = {
     types: {
       patterns: [
         {
-          match: `(?i)\\b(${getTypeKeywords().join("|")})(?=\\.)`,
+          match: `(?i)\\b(${getTypeKeywords().join("|")})(?=$|\\.)`,
           name: "storage.type.molang",
         },
         {

@@ -50,36 +50,48 @@ Non-existent input keys (such as `:_input_key.fake:`) will always result in "Una
 
 ### Keyboard & Mouse Input Keys
 
-| Name              | Shortcode                        | Keyboard & Mouse | Full Keyboard Gameplay |
-| ----------------- | -------------------------------- | ---------------- | ---------------------- |
-| Hotbar Slot 1     | `:_input_key.hotbar.1:`          | 1                | 1                      |
-| Hotbar Slot 2     | `:_input_key.hotbar.2:`          | 2                | 2                      |
-| Hotbar Slot 3     | `:_input_key.hotbar.3:`          | 3                | 3                      |
-| Hotbar Slot 4     | `:_input_key.hotbar.4:`          | 4                | 4                      |
-| Hotbar Slot 5     | `:_input_key.hotbar.5:`          | 5                | 5                      |
-| Hotbar Slot 6     | `:_input_key.hotbar.6:`          | 6                | 6                      |
-| Hotbar Slot 7     | `:_input_key.hotbar.7:`          | 7                | 7                      |
-| Hotbar Slot 8     | `:_input_key.hotbar.8:`          | 8                | 8                      |
-| Hotbar Slot 9     | `:_input_key.hotbar.9:`          | 9                | 9                      |
-| Look Up Slight    | `:_input_key.lookUpSlight:`      | Unassigned       | SUBTRACT               |
-| Look Down Slight  | `:_input_key.lookDownSlight:`    | Unassigned       | ADD                    |
-| Look Down Left    | `:_input_key.lookDownLeft:`      | Unassigned       | NUMPAD1                |
-| Look Down         | `:_input_key.lookDown:`          | Unassigned       | NUMPAD2                |
-| Look Down Right   | `:_input_key.lookDownRight:`     | Unassigned       | NUMPAD3                |
-| Look Left         | `:_input_key.lookLeft:`          | Unassigned       | NUMPAD4                |
-| Look Center       | `:_input_key.lookCenter:`        | Unassigned       | NUMPAD5                |
-| Look Right        | `:_input_key.lookRight:`         | Unassigned       | NUMPAD6                |
-| Look Up Left      | `:_input_key.lookUpLeft:`        | Unassigned       | NUMPAD7                |
-| Look Up           | `:_input_key.lookUp:`            | Unassigned       | NUMPAD8                |
-| Look Up Right     | `:_input_key.lookUpRight:`       | Unassigned       | NUMPAD9                |
-| Look Up Smooth    | `:_input_key.lookUpSmooth:`      | Unassigned       | UP                     |
-| Look Down Smooth  | `:_input_key.lookDownSmooth:`    | Unassigned       | DOWN                   |
-| Look Left Smooth  | `:_input_key.lookLeftSmooth:`    | Unassigned       | LEFT                   |
-| Look Right Smooth | `:_input_key.lookRightSmooth:`   | Unassigned       | RIGHT                  |
-| Menu Cancel       | `:_input_key.menuCancel:`        | Button5          | Button5                |
-| Mob Effects       | `:_input_key.mobEffects:`        | Z                | TAB                    |
-| Open Command      | `:_input_key.command:`           | SLASH            | SLASH                  |
-| Open Notification | `:_input_key.interactwithtoast:` | N                | N                      |
+| Name                     | Shortcode                            | Keyboard & Mouse | Full Keyboard Gameplay |
+| ------------------------ | ------------------------------------ | ---------------- | ---------------------- |
+| Command Macro 1          | `:_input_key.commandmacro.0:`        | Unassigned       | Unassigned             |
+| Command Macro 2          | `:_input_key.commandmacro.1:`        | Unassigned       | Unassigned             |
+| Command Macro 3          | `:_input_key.commandmacro.2:`        | Unassigned       | Unassigned             |
+| Command Macro 4          | `:_input_key.commandmacro.3:`        | Unassigned       | Unassigned             |
+| Command Macro 5          | `:_input_key.commandmacro.4:`        | Unassigned       | Unassigned             |
+| Command Macro 6          | `:_input_key.commandmacro.5:`        | Unassigned       | Unassigned             |
+| Command Macro 7          | `:_input_key.commandmacro.6:`        | Unassigned       | Unassigned             |
+| Command Macro 8          | `:_input_key.commandmacro.7:`        | Unassigned       | Unassigned             |
+| Command Macro 9          | `:_input_key.commandmacro.8:`        | Unassigned       | Unassigned             |
+| Command Macro 10         | `:_input_key.commandmacro.9:`        | Unassigned       | Unassigned             |
+| Copy Co-ordinates        | `:_input_key.copyCoordinates:`       | Unassigned       | Unassigned             |
+| Copy Facing Co-ordinates | `:_input_key.copyFacingCoordinates:` | Unassigned       | Unassigned             |
+| Hotbar Slot 1            | `:_input_key.hotbar.1:`              | 1                | 1                      |
+| Hotbar Slot 2            | `:_input_key.hotbar.2:`              | 2                | 2                      |
+| Hotbar Slot 3            | `:_input_key.hotbar.3:`              | 3                | 3                      |
+| Hotbar Slot 4            | `:_input_key.hotbar.4:`              | 4                | 4                      |
+| Hotbar Slot 5            | `:_input_key.hotbar.5:`              | 5                | 5                      |
+| Hotbar Slot 6            | `:_input_key.hotbar.6:`              | 6                | 6                      |
+| Hotbar Slot 7            | `:_input_key.hotbar.7:`              | 7                | 7                      |
+| Hotbar Slot 8            | `:_input_key.hotbar.8:`              | 8                | 8                      |
+| Hotbar Slot 9            | `:_input_key.hotbar.9:`              | 9                | 9                      |
+| Look Up Slight           | `:_input_key.lookUpSlight:`          | Unassigned       | SUBTRACT               |
+| Look Down Slight         | `:_input_key.lookDownSlight:`        | Unassigned       | ADD                    |
+| Look Down Left           | `:_input_key.lookDownLeft:`          | Unassigned       | NUMPAD1                |
+| Look Down                | `:_input_key.lookDown:`              | Unassigned       | NUMPAD2                |
+| Look Down Right          | `:_input_key.lookDownRight:`         | Unassigned       | NUMPAD3                |
+| Look Left                | `:_input_key.lookLeft:`              | Unassigned       | NUMPAD4                |
+| Look Center              | `:_input_key.lookCenter:`            | Unassigned       | NUMPAD5                |
+| Look Right               | `:_input_key.lookRight:`             | Unassigned       | NUMPAD6                |
+| Look Up Left             | `:_input_key.lookUpLeft:`            | Unassigned       | NUMPAD7                |
+| Look Up                  | `:_input_key.lookUp:`                | Unassigned       | NUMPAD8                |
+| Look Up Right            | `:_input_key.lookUpRight:`           | Unassigned       | NUMPAD9                |
+| Look Up Smooth           | `:_input_key.lookUpSmooth:`          | Unassigned       | UP                     |
+| Look Down Smooth         | `:_input_key.lookDownSmooth:`        | Unassigned       | DOWN                   |
+| Look Left Smooth         | `:_input_key.lookLeftSmooth:`        | Unassigned       | LEFT                   |
+| Look Right Smooth        | `:_input_key.lookRightSmooth:`       | Unassigned       | RIGHT                  |
+| Menu Cancel              | `:_input_key.menuCancel:`            | Button5          | P                      |
+| Mob Effects              | `:_input_key.mobEffects:`            | Z                | TAB                    |
+| Open Command             | `:_input_key.command:`               | SLASH            | SLASH                  |
+| Open Notification        | `:_input_key.interactwithtoast:`     | N                | N                      |
 
 ### Controller Input Keys
 

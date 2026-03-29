@@ -18,10 +18,6 @@ In order to apply other components, such as a 2D icon for your block, you'll nee
 
 ## Replacing Block Items
 
-:::danger BLOCK PLACEMENT
-Replacing the default block item with a custom block placer will disable linear placement functionality for your block, resulting in fast bridging/placement being impossible ([see feedback post](https://discord.com/channels/1138536747932864532/1390648192865144966)).
-:::
-
 In order to replace a block item, you will need to create a new item JSON file that has the same identifier as the block.
 
 Your new item will also need the [block placer](/items/item-components#block-placer) component which will allow the item to place the block.
@@ -35,12 +31,13 @@ One example of a situation where replacing the block item is necessary is with f
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:daffodil"
         },
         "components": {
+            "minecraft:flower_pottable": {},
             "minecraft:geometry": "minecraft:geometry.cross",
             "minecraft:material_instances": {
                 "*": {
@@ -57,7 +54,7 @@ One example of a situation where replacing the block item is necessary is with f
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:daffodil", // Same as the block's ID
@@ -70,6 +67,7 @@ One example of a situation where replacing the block item is necessary is with f
             "minecraft:icon": "wiki:daffodil",
             "minecraft:block_placer": {
                 "block": "wiki:daffodil",
+                "aligned_placement": false, // This should be true for most building blocks and false for most plant blocks
                 "replace_block_item": true
             }
         }

@@ -1,10 +1,10 @@
 ---
 title: Material Configuration Description
 tags:
-  - expert
+    - expert
 mentions:
-  - MedicalJewel105
-  - SmokeyStack
+    - MedicalJewel105
+    - SmokeyStack
 description: This article will introduce the structure and configuration of the material file in detail.
 ---
 
@@ -26,12 +26,12 @@ Let's take a look at sad.json and fancy.json first. They are used to control the
 
 ```json
 [
-	{"path":"materials/sad.material"},
-	{"path":"materials/entity.material"},
-	{"path":"materials/terrain.material"},
-	{"path":"materials/portal.material"},
-	{"path":"materials/barrier.material"},
-	{"path":"materials/wireframe.material"}
+    { "path": "materials/sad.material" },
+    { "path": "materials/entity.material" },
+    { "path": "materials/terrain.material" },
+    { "path": "materials/portal.material" },
+    { "path": "materials/barrier.material" },
+    { "path": "materials/wireframe.material" }
 ]
 ```
 
@@ -39,13 +39,13 @@ Let's take a look at sad.json and fancy.json first. They are used to control the
 
 ```json
 [
-	{"path":"materials/fancy.material", "+defines":["FANCY"]},
-	{"path":"materials/entity.material", "+defines":["FANCY"]},
-	{"path":"materials/terrain.material", "+defines":["FANCY"]},
-	{"path":"materials/hologram.material"},
-	{"path":"materials/portal.material", "+defines":["FANCY"]},
-	{"path":"materials/barrier.material"},
-	{"path":"materials/wireframe.material"}
+    { "path": "materials/fancy.material", "+defines": ["FANCY"] },
+    { "path": "materials/entity.material", "+defines": ["FANCY"] },
+    { "path": "materials/terrain.material", "+defines": ["FANCY"] },
+    { "path": "materials/hologram.material" },
+    { "path": "materials/portal.material", "+defines": ["FANCY"] },
+    { "path": "materials/barrier.material" },
+    { "path": "materials/wireframe.material" }
 ]
 ```
 
@@ -57,14 +57,14 @@ In order to achieve better performance, the material files in fancy.json usually
 
 ```json
 [
-	{"path":"materials/particles.material"},
-	{"path":"materials/shadows.material"},
-	{"path":"materials/sky.material"},
-	{"path":"materials/ui.material"},
-	{"path":"materials/ui3D.material"},
-	{"path":"materials/portal.material"},
-	{"path":"materials/barrier.material"},
-	{"path":"materials/wireframe.material"}
+    { "path": "materials/particles.material" },
+    { "path": "materials/shadows.material" },
+    { "path": "materials/sky.material" },
+    { "path": "materials/ui.material" },
+    { "path": "materials/ui3D.material" },
+    { "path": "materials/portal.material" },
+    { "path": "materials/barrier.material" },
+    { "path": "materials/wireframe.material" }
 ]
 ```
 
@@ -106,30 +106,29 @@ The declaration with the symbol [ ] is a list, and then inside is the json defin
 
 Configure the rendering environment, which can have the following values:
 
-- `EnableAlphaToCoverage`：An order-independent rendering method for translucent objects. This switch is only useful in environments that support MSAA. When enabled, the edges of objects will be more accurately softened and transitioned according to the transparency. It can also be used for some complex scenes with a large number of meshes overlapping.
+-   `EnableAlphaToCoverage`：An order-independent rendering method for translucent objects. This switch is only useful in environments that support MSAA. When enabled, the edges of objects will be more accurately softened and transitioned according to the transparency. It can also be used for some complex scenes with a large number of meshes overlapping.
 
-- `Wireframe`： Draw wireframe mode
+-   `Wireframe`： Draw wireframe mode
 
-- `Blending`: Enables color blending mode, often used to render translucent objects. After declaring this, it is usually necessary to declare the blending factor blendSrc, blendDst
+-   `Blending`: Enables color blending mode, often used to render translucent objects. After declaring this, it is usually necessary to declare the blending factor blendSrc, blendDst
 
-- `DisableColorWrite`： Do not write color values to the color buffer, none of the RGBA channels are written
+-   `DisableColorWrite`： Do not write color values to the color buffer, none of the RGBA channels are written
 
-- `DisableAlphaWrite`： Do not write transparency alpha values to the color buffer, allow RGB values to be written
+-   `DisableAlphaWrite`： Do not write transparency alpha values to the color buffer, allow RGB values to be written
 
-- `DisableRGBWrite`： Do not write transparency RGB values to the color buffer, allow writing alpha values
+-   `DisableRGBWrite`： Do not write transparency RGB values to the color buffer, allow writing alpha values
 
-- `DisableDepthTest`： Turn off depth testing
+-   `DisableDepthTest`： Turn off depth testing
 
-- `DisableDepthWrite`： Turn off depth writing
+-   `DisableDepthWrite`： Turn off depth writing
 
-- `DisableCulling`: Render front and back simultaneously
+-   `DisableCulling`: Render front and back simultaneously
 
-- `InvertCulling`：Use front cropping. The default is back cropping. After declaring this, the back side is rendered and the front side is cropped.
+-   `InvertCulling`：Use front cropping. The default is back cropping. After declaring this, the back side is rendered and the front side is cropped.
 
-- `StencilWrite`: Enable stencil mask writing
+-   `StencilWrite`: Enable stencil mask writing
 
-- `EnableStencilTest`： Enable stencil mask testing
-
+-   `EnableStencilTest`： Enable stencil mask testing
 
 ### Shader path
 
@@ -199,25 +198,25 @@ Looking at the vertex shader entity.vertex, there will be #ifdef, #else, #endif 
 
 The depth detection pass function can use the following values:
 
-- `Always`: Always pass
+-   `Always`: Always pass
 
-- `Equal`： Passed when the depth value is equal to the buffer value
+-   `Equal`： Passed when the depth value is equal to the buffer value
 
-- `NotEqual`：Passed when the depth value is not equal to the buffer value
+-   `NotEqual`：Passed when the depth value is not equal to the buffer value
 
-- `Less`：Passed when the depth value is less than the buffer value
+-   `Less`：Passed when the depth value is less than the buffer value
 
-- `Greater`：Passed when the depth value is greater than the buffer value
+-   `Greater`：Passed when the depth value is greater than the buffer value
 
-- `GreaterEqual`：Pass when the depth value is greater than or equal to the buffer value
+-   `GreaterEqual`：Pass when the depth value is greater than or equal to the buffer value
 
-- `LessEqual`：Pass when the depth value is less than or equal to the buffer value
+-   `LessEqual`：Pass when the depth value is less than or equal to the buffer value
 
 Associated states rendering environment configuration:
 
-- `DisableDepthTest`： Turn off depth testing
+-   `DisableDepthTest`： Turn off depth testing
 
-- `DisableDepthWrite`： Turn off depth writing
+-   `DisableDepthWrite`： Turn off depth writing
 
 #### Stencil Mask Test
 
@@ -229,9 +228,9 @@ Value to compare with or to be written to the mask buffer
 
 Whether to use the buffer's current value as stencilRef, 0 or 1 is supported:
 
-- `1`： Use the configured stencilRef. If stencilRef is configured, stencilRefOverride will automatically take 1
+-   `1`： Use the configured stencilRef. If stencilRef is configured, stencilRefOverride will automatically take 1
 
-- `0`： Use the current value of the buffer as stencilRef, in this case do not configure stencilRef
+-   `0`： Use the current value of the buffer as stencilRef, in this case do not configure stencilRef
 
 ##### `stencilReadMask`
 
@@ -247,32 +246,35 @@ Configure which mask test function to use on the front or back of the grid. In a
 
 <!-- Test if this looks ok -->
 
-- `stencilFunc`: The method used when stencilRef is compared with the mask buffer, the following values are supported：
-    - `Always`: Always pass
-    -	`Equal`： Passed when stencilRef is equal to the buffer value
-    -	`NotEqual` ：Passed when stencilRef is not equal to the buffer value
-    -	`Less`：Passed when stencilRef is less than the buffer value
-    -	`Greater`：Passed when stencilRef is greater than the buffer value
-    -	`GreaterEqual`：Passed when stencilRef is greater than or equal to the buffer value
-    -	`LessEqual`：Passed when stencilRef is less than or equal to the buffer value
+-   `stencilFunc`: The method used when stencilRef is compared with the mask buffer, the following values are supported：
 
-- `stencilFailOp`：The processing performed when the stencilFunc comparison function fails to return, supports the following values：
-    -	`Keep`： Keep the original value of the buffer
-    -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+    -   `Always`: Always pass
+    -   `Equal`： Passed when stencilRef is equal to the buffer value
+    -   `NotEqual` ：Passed when stencilRef is not equal to the buffer value
+    -   `Less`：Passed when stencilRef is less than the buffer value
+    -   `Greater`：Passed when stencilRef is greater than the buffer value
+    -   `GreaterEqual`：Passed when stencilRef is greater than or equal to the buffer value
+    -   `LessEqual`：Passed when stencilRef is less than or equal to the buffer value
 
-- `stencilDepthFailOp` : The stencilFunc comparison function returns success, but the processing performed when the depth test fails, supports the following values：
-    -	`Keep`： Keep the original value of the buffer
-    -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+-   `stencilFailOp`：The processing performed when the stencilFunc comparison function fails to return, supports the following values：
 
-- `stencilPassOp`: The stencilFunc comparison function returns successfully, and the processing executed when the depth test is successful, supports the following values：
-    -	`Keep`： Keep the original value of the buffer
-    -	`Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+    -   `Keep`： Keep the original value of the buffer
+    -   `Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+
+-   `stencilDepthFailOp` : The stencilFunc comparison function returns success, but the processing performed when the depth test fails, supports the following values：
+
+    -   `Keep`： Keep the original value of the buffer
+    -   `Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
+
+-   `stencilPassOp`: The stencilFunc comparison function returns successfully, and the processing executed when the depth test is successful, supports the following values：
+    -   `Keep`： Keep the original value of the buffer
+    -   `Replace`： Writes the stencilRef bit and the value of stencilWriteMask to the buffer
 
 Associated states rendering environment configuration:
 
-- `StencilWrite`：Enable mask writing
+-   `StencilWrite`：Enable mask writing
 
-- `EnableStencilTest`: Enable mask testing
+-   `EnableStencilTest`: Enable mask testing
 
 Finally, let's look at an example:
 
@@ -319,7 +321,7 @@ In the example, StencilWrite represents the support for writing to the mask buff
 
 #### Blend translucent object color blend
 
-The rendering of translucent objects needs to configure the blending factor. The final output rgb color value = current color value * source blending factor + color value in buffer * destination blending factor
+The rendering of translucent objects needs to configure the blending factor. The final output rgb color value = current color value _ source blending factor + color value in buffer _ destination blending factor
 
 ##### `blendSrc`
 
@@ -339,43 +341,43 @@ The target blending factor when calculating alpha, usually not configured to tak
 
 In total, the blending factor can take on the following values:
 
-- `DestColor`： Buffer color value
+-   `DestColor`： Buffer color value
 
-- `SourceColor`： Current color value
+-   `SourceColor`： Current color value
 
-- `Zero`： (0,0,0)
+-   `Zero`： (0,0,0)
 
-- `One`： (1,1,1)
+-   `One`： (1,1,1)
 
-- `OneMinusDestColor`: (1,1,1) - buffer color value
+-   `OneMinusDestColor`: (1,1,1) - buffer color value
 
-- `OneMinusSrcColor`: (1,1,1) - current color value
+-   `OneMinusSrcColor`: (1,1,1) - current color value
 
-- `SourceAlpha`： The alpha value in the current color
+-   `SourceAlpha`： The alpha value in the current color
 
-- `DestAlpha`： Alpha value in buffer color
+-   `DestAlpha`： Alpha value in buffer color
 
-- `OneMinusSrcAlpha`： 1 - alpha value in the current color value
+-   `OneMinusSrcAlpha`： 1 - alpha value in the current color value
 
 In the engine, the default is:
 
-- `blendSrc`：SourceAlpha
+-   `blendSrc`：SourceAlpha
 
-- `blendDst`：OneMinusSrcAlpha
+-   `blendDst`：OneMinusSrcAlpha
 
-- `alphaSrc`：One
+-   `alphaSrc`：One
 
-- `alphaDst`：OneMinusSrcAlpha
+-   `alphaDst`：OneMinusSrcAlpha
 
 Associated states rendering environment configuration:
 
-- `Blending`: Enables color blending mode, often used to render translucent objects. After declaring this, it is usually necessary - to declare the blending factor blendSrc, blendDst
+-   `Blending`: Enables color blending mode, often used to render translucent objects. After declaring this, it is usually necessary - to declare the blending factor blendSrc, blendDst
 
-- `DisableColorWrite`： Do not write color values to the color buffer, none of the RGBA channels are written
+-   `DisableColorWrite`： Do not write color values to the color buffer, none of the RGBA channels are written
 
-- `DisableAlphaWrite`： Do not write transparency alpha values to the color buffer, allow RGB values to be written
+-   `DisableAlphaWrite`： Do not write transparency alpha values to the color buffer, allow RGB values to be written
 
-- `DisableRGBWrite`： Do not write transparency RGB values to the color buffer, allow writing alpha values
+-   `DisableRGBWrite`： Do not write transparency RGB values to the color buffer, allow writing alpha values
 
 #### Sample texture sample
 
@@ -385,9 +387,9 @@ Configure the sampling state, the value is a list, and configure each texture ac
 
 ```json
 {
-	"samplerIndex": 0,
-	"textureFilter": "Point",
-	"textureWrap": "Repeat"
+    "samplerIndex": 0,
+    "textureFilter": "Point",
+    "textureWrap": "Repeat"
 }
 ```
 
@@ -401,27 +403,25 @@ Number, representing the attribute of the texture that is currently being set, s
 
 Texture filtering mode (default is Point), when the actual displayed texture map is enlarged or reduced compared to the original image, the mapping relationship between the new resolution map and the pixels on the original resolution map can have the following values:
 
+-   `Point`： Point sampling
 
-- `Point`： Point sampling
+-   `Bilinear`: Bilinear sampling
 
-- `Bilinear`: Bilinear sampling
+-   `Trilinear`: Trilinear sampling
 
-- `Trilinear`: Trilinear sampling
+-   `MipMapBilinear`： MipMap bilinear sampling
 
-- `MipMapBilinear`： MipMap bilinear sampling
+-   `TexelAA`：Texel antialiasing (not supported on all devices, not recommended)
 
-- `TexelAA`：Texel antialiasing (not supported on all devices, not recommended)
-
-- `PCF`：Sampling by comparison function (not supported on all devices, not recommended)
+-   `PCF`：Sampling by comparison function (not supported on all devices, not recommended)
 
 ##### `textureWrap`
 
 Texture wrapping mode, which controls what kind of texture should be sampled when uv is outside [0,1]. It can have the following values:
 
-- `Repeat`： Repeat, that is, modulo the value to [0, 1] for sampling
+-   `Repeat`： Repeat, that is, modulo the value to [0, 1] for sampling
 
-- `Clamp`： Edge sampling, sampling the value of the closest edge, that is, if 1.1 is closer to 1, then take 1; if -0.1 is closer to 0, then take 0.
-
+-   `Clamp`： Edge sampling, sampling the value of the closest edge, that is, if 1.1 is closer to 1, then take 1; if -0.1 is closer to 0, then take 0.
 
 #### Vertex
 
@@ -429,19 +429,19 @@ Texture wrapping mode, which controls what kind of texture should be sampled whe
 
 Vertex attributes, which are used to declare what attributes each vertex of the mesh that is rendered using this material holds. It is determined when the art is producing resources. The following values ​​may be used:
 
-- `Position`： Model space coordinates
+-   `Position`： Model space coordinates
 
-- `Color`： Color
+-   `Color`： Color
 
-- `Normal`： Normal
+-   `Normal`： Normal
 
-- `UV0`: Texture sample coordinates
+-   `UV0`: Texture sample coordinates
 
-- `UV1`：Texture sample coordinates
+-   `UV1`：Texture sample coordinates
 
-- `UV2`：Texture sample coordinates
+-   `UV2`：Texture sample coordinates
 
-- `BoneId0`： Bone ID, used in the bone model
+-   `BoneId0`： Bone ID, used in the bone model
 
 #### Rasterizer environment configuration
 
@@ -449,24 +449,23 @@ Vertex attributes, which are used to declare what attributes each vertex of the 
 
 Configure MSAA (Multi-Sample Anti-Aliasing) support (the default in the engine is NonMSAA)
 
-- `NonMSAA`: Materials are allowed when MSAA is not enabled
+-   `NonMSAA`: Materials are allowed when MSAA is not enabled
 
-- `MSAA`: Materials are allowed when MSAA is enabled
+-   `MSAA`: Materials are allowed when MSAA is enabled
 
-- `Both`：Materials are allowed with or without MSAA enabled. Usually just use this value.
-
+-   `Both`：Materials are allowed with or without MSAA enabled. Usually just use this value.
 
 ##### `depth offset`
 
 Depth offset is mainly used to solve the z-fighting problem, that is, when two objects have similar depths, some frames may display this object and some frames display another object when rendering. The principle of depth offset is to offset one of the objects in the direction of large or small depth, so that their depths are no longer the same. The following four variables can be configured:
 
-- depthBias
+-   depthBias
 
-- slopeScaledDepthBias
+-   slopeScaledDepthBias
 
-- depthBiasOGL
+-   depthBiasOGL
 
-- slopeScaledDepthBiasOGL
+-   slopeScaledDepthBiasOGL
 
 The specific offset depth is:
 
@@ -480,11 +479,11 @@ m is the maximum value in the slope of the depth of the polygon (computed at the
 
 Associated states rendering environment configuration:
 
-- `Wireframe`： Draw wireframe mode
+-   `Wireframe`： Draw wireframe mode
 
-- `DisableCulling`: Render front and back simultaneously
+-   `DisableCulling`: Render front and back simultaneously
 
-- `InvertCulling`：Use front cropping. The default is back cropping. After declaring this, the back side is rendered and the front - side is cropped.
+-   `InvertCulling`：Use front cropping. The default is back cropping. After declaring this, the back side is rendered and the front - side is cropped.
 
 #### Primitive
 
@@ -492,17 +491,17 @@ Associated states rendering environment configuration:
 
 Primitive rendering mode (the default in the engine is TriangleList):
 
-- `None`： Do not render, normally not used
+-   `None`： Do not render, normally not used
 
-- `QuadList`：Quadrilateral pattern
+-   `QuadList`：Quadrilateral pattern
 
-- `TriangleList`: A pattern of drawing a triangle every three vertices, for example the first triangle uses vertices v0, v1, v2, and the second uses v3, v4, v5
+-   `TriangleList`: A pattern of drawing a triangle every three vertices, for example the first triangle uses vertices v0, v1, v2, and the second uses v3, v4, v5
 
-- `TriangleStrip`: Each vertex will form a triangle with the first two vertices, the structure is a bit more complicated, but it - will save the amount of data
+-   `TriangleStrip`: Each vertex will form a triangle with the first two vertices, the structure is a bit more complicated, but it - will save the amount of data
 
-- `LineList`: Draw a line segment every two vertices
+-   `LineList`: Draw a line segment every two vertices
 
-- `Line`: Each vertex forms a line segment with a vertex that appears before it.
+-   `Line`: Each vertex forms a line segment with a vertex that appears before it.
 
 ### Material variant
 
@@ -564,9 +563,9 @@ In addition, if there are other materials that inherit from entity_static, such 
 
 When the same material is declared in different directory files, it will be merged according to the following rules after loading: 1. Normally, the material fields of the files loaded later will overwrite the previously loaded ones. 2. The following fields are special. Operations to add attributes with "+" and delete attributes with "-" are supported:
 
-- defines
-- states
-- samplerStates
+-   defines
+-   states
+-   samplerStates
 
 As an example, for example, such a material is declared in the package body file (irrelevant code is omitted), and three macros are defined:
 

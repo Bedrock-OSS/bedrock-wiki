@@ -9,7 +9,7 @@ mentions:
     - Dreamedc2015
     - sermah
     - cda94581
-    - RedSmarty
+    - BluMonkie
     - TheItsNameless
     - MedicalJewel105
     - ChibiMango

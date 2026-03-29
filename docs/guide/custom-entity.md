@@ -50,11 +50,11 @@ This is a basic overview of the file:
 
 ```json
 {
-	"format_version": "1.21.70",
-	"minecraft:entity": {
-		"description": { ... },
-		"components": { ... }
-	}
+    "format_version": "1.21.70",
+    "minecraft:entity": {
+        "description": { ... },
+        "components": { ... }
+    }
 }
 ```
 
@@ -66,9 +66,9 @@ For entities we have a little bit more information under `description`:
 
 ```json
 "description": {
-	"identifier": "wiki:ghost",
-	"is_summonable": true,
-	"is_spawnable": true
+    "identifier": "wiki:ghost",
+    "is_summonable": true,
+    "is_spawnable": true
 }
 ```
 
@@ -94,24 +94,24 @@ These are the components that you will generally have on every entity. This defi
 
 ```json
 "minecraft:type_family": {
-	"family": ["ghost", "monster"]
+    "family": ["ghost", "monster"]
 },
 "minecraft:health": {
-	"value": 20,
-	"max": 20
+    "value": 20,
+    "max": 20
 },
 "minecraft:attack": {
-	"damage": 3
+    "damage": 3
 },
 "minecraft:movement": {
-	"value": 0.2
+    "value": 0.2
 },
 "minecraft:collision_box": {
-	"width": 0.8,
-	"height": 1.8
+    "width": 0.8,
+    "height": 1.8
 },
 "minecraft:loot": {
-	"table": "loot_tables/entities/ghost.json"
+    "table": "loot_tables/entities/ghost.json"
 },
 ```
 
@@ -134,10 +134,10 @@ You will always need a `movement` and `navigation` component if you want your en
 "minecraft:jump.static": {},
 "minecraft:movement.basic": {},
 "minecraft:navigation.walk": {
-	"can_walk": true,
-	"avoid_sun": true,
-	"can_pass_doors": true,
-	"can_open_doors": true
+    "can_walk": true,
+    "avoid_sun": true,
+    "can_pass_doors": true,
+    "can_open_doors": true
 }
 ```
 
@@ -186,49 +186,49 @@ Each of these behaviors have further settings to tweak the exact behavior we wan
 
 ```json
 "minecraft:behavior.random_stroll": {
-	"priority": 6,
-	"speed_multiplier": 1
+    "priority": 6,
+    "speed_multiplier": 1
 },
 "minecraft:behavior.random_look_around": {
-	"priority": 7
+    "priority": 7
 },
 "minecraft:behavior.look_at_player": {
-	"priority": 7,
-	"look_distance": 6,
-	"probability": 0.02
+    "priority": 7,
+    "look_distance": 6,
+    "probability": 0.02
 },
 "minecraft:behavior.hurt_by_target": {
-	"priority": 1
+    "priority": 1
 },
 "minecraft:behavior.nearest_attackable_target": {
-	"priority": 2,
-	"within_radius": 25,
-	"reselect_targets": true,
-	"entity_types": [
-		{
-			"filters": {
-				"any_of": [
-					{
-						"test": "is_family",
-						"subject": "other",
-						"value": "player"
-					}
-				]
-			},
-			"max_dist": 35
-		}
-	]
+    "priority": 2,
+    "within_radius": 25,
+    "reselect_targets": true,
+    "entity_types": [
+        {
+            "filters": {
+                "any_of": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    }
+                ]
+            },
+            "max_dist": 35
+        }
+    ]
 },
 "minecraft:behavior.delayed_attack": {
-	"priority": 0,
-	"attack_once": false,
-	"track_target": true,
-	"require_complete_path": false,
-	"random_stop_interval": 0,
-	"reach_multiplier": 1.5,
-	"speed_multiplier": 1,
-	"attack_duration": 0.75,
-	"hit_delay_pct": 0.5
+    "priority": 0,
+    "attack_once": false,
+    "track_target": true,
+    "require_complete_path": false,
+    "random_stop_interval": 0,
+    "reach_multiplier": 1.5,
+    "speed_multiplier": 1,
+    "attack_duration": 0.75,
+    "hit_delay_pct": 0.5
 }
 ```
 
@@ -438,11 +438,11 @@ The important information that we need is the `identifier` which we will use to 
 
 Our entity now has its shape, but it also needs a texture. This texture can also be created in Blockbench and is simply a `.png` file.
 
-`RP/textures/entity/ghost.png`
+`RP/textures/wiki/entity/ghost.png`
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/entity/ghost.png)
+![ghost.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/entity/ghost.png)
 
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/entity/ghost.png">
+<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/entity/ghost.png">
     Download texture here
 </Button>
 
@@ -460,12 +460,12 @@ An animation file can contain one or multiple animations within it. Our animatio
 
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.ghost.idle": {...},
-		"animation.ghost.attack": {...},
-		"animation.ghost.move": {...}
-	}
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ghost.idle": {...},
+        "animation.ghost.attack": {...},
+        "animation.ghost.move": {...}
+    }
 }
 ```
 
@@ -609,24 +609,24 @@ Let us look at our animation controller for attacking.
 
 ```json
 "controller.animation.ghost.attack": {
-	"states": {
-		"default": {
-			"transitions": [
-				{
-					"attacking": "q.is_delayed_attacking"
-				}
-			]
-		},
-		"attacking": {
-			"blend_transition": 0.2,
-			"animations": ["attack"],
-			"transitions": [
-				{
-					"default": "!q.is_delayed_attacking"
-				}
-			]
-		}
-	}
+    "states": {
+        "default": {
+            "transitions": [
+                {
+                    "attacking": "q.is_delayed_attacking"
+                }
+            ]
+        },
+        "attacking": {
+            "blend_transition": 0.2,
+            "animations": ["attack"],
+            "transitions": [
+                {
+                    "default": "!q.is_delayed_attacking"
+                }
+            ]
+        }
+    }
 }
 ```
 
@@ -656,27 +656,27 @@ We can also make a similar controller for our `move` and `idle` animation.
 
 ```json
 "controller.animation.ghost.walk": {
-	"initial_state": "standing",
-	"states": {
-		"standing": {
-			"blend_transition": 0.2,
-			"animations": ["idle"],
-			"transitions": [
-				{
-					"moving": "q.modified_move_speed > 0.1"
-				}
-			]
-		},
-		"moving": {
-			"blend_transition": 0.2,
-			"animations": ["move"],
-			"transitions": [
-				{
-					"standing": "q.modified_move_speed < 0.1"
-				}
-			]
-		}
-	}
+    "initial_state": "standing",
+    "states": {
+        "standing": {
+            "blend_transition": 0.2,
+            "animations": ["idle"],
+            "transitions": [
+                {
+                    "moving": "q.modified_move_speed > 0.1"
+                }
+            ]
+        },
+        "moving": {
+            "blend_transition": 0.2,
+            "animations": ["move"],
+            "transitions": [
+                {
+                    "standing": "q.modified_move_speed < 0.1"
+                }
+            ]
+        }
+    }
 }
 ```
 
@@ -785,7 +785,7 @@ For us to now use these resources, we need to define a reference to them with a 
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -850,7 +850,7 @@ With that our entity file should look like this.
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -871,11 +871,11 @@ Now let us add our animations. Like with our other resources, we need to define 
 
 ```json
 "animations": {
-	"walk_controller": "controller.animation.ghost.walk",
-	"attack_controller": "controller.animation.ghost.attack",
-	"attack": "animation.ghost.attack",
-	"idle": "animation.ghost.idle",
-	"move": "animation.ghost.move"
+    "walk_controller": "controller.animation.ghost.walk",
+    "attack_controller": "controller.animation.ghost.attack",
+    "attack": "animation.ghost.attack",
+    "idle": "animation.ghost.idle",
+    "move": "animation.ghost.move"
 }
 ```
 
@@ -887,10 +887,10 @@ Now that we have animations and animation controllers referenced, we need to dec
 
 ```json
 "scripts": {
-	"animate": [
-		"walk_controller",
-		"attack_controller"
-	]
+    "animate": [
+        "walk_controller",
+        "attack_controller"
+    ]
 }
 ```
 
@@ -906,8 +906,8 @@ The final step to finalise our entity client file, is to create a spawn egg for 
 
 ```json
 "spawn_egg": {
-	"overlay_color": "#bdd1d1",
-	"base_color": "#9fb3b3"
+    "overlay_color": "#bdd1d1",
+    "base_color": "#9fb3b3"
 }
 ```
 
@@ -915,7 +915,7 @@ This will generate a spawn egg which will summon our entity when used. It uses t
 
 ```json
 "spawn_egg": {
-	"texture": "texture_shortname"
+    "texture": "texture_shortname"
 }
 ```
 
@@ -935,7 +935,7 @@ With that, we have completed our entity client file.
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -980,25 +980,25 @@ Done! Your entity should now show up in Minecraft, complete with all behaviors a
 Your folder structure should look like this:
 
 <FolderView :paths="[
-	'RP/animations/ghost.a.json',
-	'RP/animation_controllers/ghost.ac.json',
-	'RP/entity/ghost.ce.json',
-	'RP/models/entity/ghost.geo.json',
-	'RP/render_controllers/ghost.rc.json',
-	'RP/textures/entity/ghost.png',
-	'RP/textures/items/ectoplasm.png',
-	'RP/textures/item_texture.json',
-	'RP/texts/en_US.lang',
-	'RP/texts/languages.json',
-	'RP/manifest.json',
-	'RP/pack_icon.png',
-	'BP/entities/ghost.se.json',
-	'BP/items/ectoplasm.json',
-	'BP/texts/en_US.lang',
-	'BP/texts/languages.json',
-	'BP/manifest.json',
-	'BP/pack_icon.png',
-]"></FolderView>
+    'RP/animations/ghost.a.json',
+    'RP/animation_controllers/ghost.ac.json',
+    'RP/entity/ghost.ce.json',
+    'RP/models/entity/ghost.geo.json',
+    'RP/render_controllers/ghost.rc.json',
+    'RP/textures/wiki/entity/ghost.png',
+    'RP/textures/wiki/items/ectoplasm.png',
+    'RP/textures/item_texture.json',
+    'RP/texts/en_US.lang',
+    'RP/texts/languages.json',
+    'RP/manifest.json',
+    'RP/pack_icon.png',
+    'BP/entities/ghost.se.json',
+    'BP/items/ectoplasm.json',
+    'BP/texts/en_US.lang',
+    'BP/texts/languages.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+]" />
 
 <Spoiler title="Full ghost.se.json">
 
@@ -1043,7 +1043,6 @@ Your folder structure should look like this:
                 "can_pass_doors": true,
                 "can_open_doors": true
             },
-
             "minecraft:behavior.random_stroll": {
                 "priority": 6,
                 "speed_multiplier": 1
@@ -1110,7 +1109,7 @@ Your folder structure should look like this:
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/ghost"
+                "default": "textures/entity/wiki/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"
@@ -1414,6 +1413,8 @@ Your folder structure should look like this:
 
 ## Your Progress So Far
 
+:::tip What you have learned
+
 -   [x] Set up your pack
 -   [x] Create a custom item
 -   [x] Create a custom entity
@@ -1421,3 +1422,7 @@ Your folder structure should look like this:
 -   [x] How to set an entities texture
 -   [x] How to use models, animations, and animation controllers to make your entity more exciting
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
+
+:::
+
+<Button link="/guide/loot-table">Next: Loot Table, Spawn Rules & Recipe</Button>

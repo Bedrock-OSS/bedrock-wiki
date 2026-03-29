@@ -2,10 +2,10 @@
 title: Compass Display
 category: Useful Creations
 tags:
-   - easy
+    - easy
 mentions:
-  - BedrockCommands
-  - fantasy9967
+    - BedrockCommands
+    - fantasy9967
 description: Create a compass display using commands.
 ---
 
@@ -27,10 +27,11 @@ title @a[rym=-22.5,ry=22.5] actionbar South (S)
 title @a[rym=-112.5,ry=-67.5] actionbar East (E)
 title @a[rym=67.5,ry=112.5] actionbar West (W)
 title @a[rym=-157.5,ry=-112.5] actionbar Northeast (NE)
-title @a[rym=112.5,ry=157.5] actionbar Northwest (NW) 
+title @a[rym=112.5,ry=157.5] actionbar Northwest (NW)
 title @a[rym=-67.5,ry=-22.5] actionbar Southeast (SE)
 title @a[rym=22.5,ry=67.5] actionbar Southwest (SW)
 ```
+
 ![Chain of 8 Command Blocks](/assets/images/commands/command-block-chain/8.png)
 
 To understand how rotation selector arguments 'ry' and 'rym' work, refer to this page **[here](/commands/selectors#rotation)**.

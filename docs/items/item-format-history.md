@@ -16,6 +16,92 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.10
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:block_placer`
+    -   Added `aligned_placement` parameter which determines whether the block should be placed on the block that was previously placed, on the face in the direction that the player started moving.
+        -   By default, this parameter is set to `false`{lang=json}.
+        -   Despite being introduced in version 1.26.10, this parameter is available in format versions 1.26.0 and higher.
+
+## 1.26.0
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:damage`
+    -   Now properly supports values over `255`{lang=json} up to a maximum of `32767`{lang=json}.
+
+## 1.21.130
+
+### Components
+
+-   Added `minecraft:kinetic_weapon`
+    -   Causes the item to damage (as well as dismount and apply knockback to) each entity that the player moves towards (or that move towards the player) while the item is being used.
+    -   Contains `delay` which determines the duration (in ticks) before kinetic damage and effects start to be applied.
+    -   Contains `hitbox_margin` which determines how close (in blocks) each target's collision needs to be to the player's view direction to be affected by the kinetic attack.
+        -   By default, there is no additional hitbox margin.
+    -   Contains `reach` which determines the range (in blocks) of how far away entities must be from the player in order to be affected by the kinetic attack.
+        -   By default, entities between 0 and 3 blocks away from the player will be affected by the kinetic attack.
+    -   Contains `creative_reach` which determines the `reach` applied when the player is in creative mode.
+        -   By default, players in creative mode will be restricted to the normal `reach` range.
+    -   Contains `damage_multiplier` which the base damage of the kinetic attack is multiplied by to obtain a multiplied damage value.
+    -   Contains `damage_modifier` which is added to the multiplied damage value to obtain a final damage value to be inflicted upon each target.
+    -   Contains `damage_conditions` which lists the conditions that need to be met for damage to be inflicted.
+    -   Contains `dismount_conditions` which lists the conditions that need to be met for each target to be dismounted from the entity it is riding by the kinetic attack.
+        -   By default, entities are never dismounted.
+    -   Contains `knockback_conditions` which lists the conditions that need to be met for each target to be receive knockback from the kinetic attack.
+        -   By default, knockback is never applied.
+-   Added `minecraft:piercing_weapon`
+    -   Causes the item to damage all entities in a straight line from the player's view direction when attacking.
+    -   If there are block collisions between the player and other entities, the damage will be blocked.
+    -   Prevents the item from being used to mine blocks.
+    -   Contains `hitbox_margin` which determines how close (in blocks) each entity's collision needs to be to the player's view direction to receive damage.
+        -   By default, there is no additional hitbox margin.
+    -   Contains `reach` which determines the range (in blocks) of how far away entities must be from the player in order to receive damage.
+        -   By default, entities between 0 and 3 blocks away from the player will receive damage.
+    -   Contains `creative_reach` which determines the `reach` applied when the player is in creative mode.
+        -   By default, players in creative mode will be restricted to the normal `reach` range.
+-   Added `minecraft:swing_sounds`
+    -   Determines the vanilla sound events triggered when a player attacks when holding the item.
+    -   Contains `attack_miss` which determines the sound event triggered when no entity is hit or no damage is dealt.
+    -   Contains `attack_hit` which determines the sound event triggered when an entity is hit and non-critical damage is dealt.
+    -   Contains `attack_critical_hit` which determines the sound event triggered when an entity is hit and critical damage is dealt.
+-   Updated `minecraft:cooldown`
+    -   Added `type` parameter which determines which of the following types of input the cooldown affects:
+        -   `use` (default) triggers when the item is used and prevents the item from being used while the cooldown is active.
+        -   `attack` triggers when the player attacks while holding the item and prevents the item from being used to attack while the cooldown is active.
+-   Updated `minecraft:use_modifiers`
+    -   Added `start_sound` parameter which determines the vanilla sound event that is triggered when the item starts to be used.
+
+## 1.21.120
+
+### Description
+
+<Label color="green">Versioned</Label>
+
+-   Updated `menu_category`
+    -   Items with no category can now be used in commands.
+    -   If `is_hidden_in_commands` is set to `true`, the item will still be invalid in commands.
+
+### Components
+
+-   Added `minecraft:swing_duration`
+    -   Determines the duration, in seconds, of the player's swing animation when mining, attacking or using the item.
+-   Updated `minecraft:use_modifiers`
+    -   Added `emit_vibrations` parameter which determines whether the item emits vibrations when it starts and stops being used.
+
+## 1.21.110
+
+### Components
+
+-   Added `minecraft:fire_resistant`
+    -   Determines whether the item cannot be destroyed by fire and lava.
+
 ## 1.21.90
 
 ### Components
@@ -260,17 +346,51 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:interact_button`
     -   Enable and set text on a button that is displayed when using touch controls.
     -   If set to `true`, the button displays "Use Item".
+-   Released `minecraft:enchantable` from experimental
+-   Released `minecraft:food` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:mining_speed`
+
+## 1.20.20
+
+### Description
+
+<Label color="green">Versioned</Label>
+
+-   Added `menu_category`
+    -   Contains `category` which determines which tab the item is placed into.
+    -   Contains `group` which determines which other items the item is grouped with.
+    -   Contains `is_hidden_in_commands` which determines whether the item is treated as invalid when used in commands.
+
+### Components
+
+<Label color="green">Versioned</Label>
+
 -   Released `minecraft:allow_off_hand` from experimental
 -   Released `minecraft:damage` from experimental
 -   Released `minecraft:digger` from experimental
 -   Released `minecraft:enchantable` from experimental
--   Released `minecraft:food` from experimental
+-   Released `minecraft:glint` from experimental
 -   Released `minecraft:hand_equipped` from experimental
 -   Released `minecraft:liquid_clipped` from experimental
 -   Released `minecraft:should_despawn` from experimental
 -   Released `minecraft:stacked_by_data` from experimental
 -   Released `minecraft:use_animation` from experimental
 -   Released `minecraft:use_duration` from experimental
+-   Released `minecraft:wearable` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:creative_category`
+-   Renamed `minecraft:foil` to `minecraft:glint`
+-   Updated `minecraft:digger`
+    -   Removed `on_dig` trigger parameter
 
 ## 1.20.10
 

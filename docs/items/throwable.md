@@ -1,5 +1,6 @@
 ---
 title: Throwable Items
+description: Learn how to create a custom item that can be thrown as a projectile.
 category: Tutorials
 tags:
     - intermediate
@@ -12,7 +13,7 @@ mentions:
     - TheItsNameless
     - SmokeyStack
     - ThomasOrs
-description: Recreate vanilla throwing mechanic.
+    - QuazChick
 ---
 
 ::: tip
@@ -21,7 +22,7 @@ This tutorial assumes you have a basic understanding of Molang, animation contro
 
 Items like the Splash Potion or the Trident are special items that can be thrown.
 
-### The Item
+## Item
 
 First, you'll want to make the actual item:
 
@@ -29,7 +30,7 @@ First, you'll want to make the actual item:
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:throwable_item"
@@ -48,7 +49,7 @@ First, you'll want to make the actual item:
 }
 ```
 
-### The Entity
+## Entity
 
 The entity will be the actual thrown item, and it will behave like a projectile.
 Make sure to add snowball runtime identifier to make your projectile to actually be shoot, not spawned. You can also experiment with other projectile runtime id's.
@@ -63,7 +64,6 @@ Make sure to add snowball runtime identifier to make your projectile to actually
             "identifier": "wiki:throwable_item_entity",
             "is_spawnable": false,
             "is_summonable": true,
-            "is_experimental": false,
             "runtime_identifier": "minecraft:snowball"
         },
         "components": {

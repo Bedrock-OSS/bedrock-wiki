@@ -371,10 +371,6 @@ This event is run when the entity is hit by a player or projectile. There is a 6
 
 Sets entity property values (each value can be set to the returned value of a Molang expression string).
 
-:::warning
-String values are evaluated as Molang. This means, to set a string property, you must wrap the value in `'`s (example below).
-:::
-
 <CodeHeader>minecraft:block > events</CodeHeader>
 
 ```json
@@ -382,7 +378,7 @@ String values are evaluated as Molang. This means, to set a string property, you
     "set_property": {
         "wiki:boolean_property_example": false,
         "wiki:integer_property_example": "q.property('wiki:integer_property_example') + 1",
-        "wiki:string_property_example": "'red'"
+        "wiki:string_property_example": "red"
     }
 }
 ```

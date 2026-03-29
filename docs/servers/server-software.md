@@ -28,6 +28,9 @@ mentions:
     - QuazChick
     - OmniacDev
     - Chorus-OSS
+    - KoshakMineDEV
+    - MEFRREEX
+    - Snowiiii
 description: Software for Bedrock servers.
 ---
 

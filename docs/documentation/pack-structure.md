@@ -42,6 +42,7 @@ mentions:
     'BP/worldgen/structure_sets/example.json',
     'BP/worldgen/structures/example.json',
     'BP/worldgen/template_pools/example.json',
+    'BP/contents.json',
     'BP/manifest.json',
     'BP/pack_icon.png',
     'RP/animation_controllers/example.ac.json',
@@ -95,7 +96,9 @@ mentions:
     'RP/water/example_water.json',
     'RP/blocks.json',
     'RP/contents.json',
+    'RP/loading_messages.json',
     'RP/manifest.json',
     'RP/pack_icon.png',
-    'RP/sounds.json'
+    'RP/sounds.json',
+    'RP/splashes.json'
 ]" />

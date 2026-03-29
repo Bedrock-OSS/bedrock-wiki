@@ -95,6 +95,12 @@
       "type": "Custom"
     },
     {
+      "name": "[Chorus](https://github.com/Chorus-OSS/Chorus)",
+      "description": "Minecraft: Bedrock server software, open source and written in Kotlin",
+      "languages": "Kotlin",
+      "type": "Custom"
+    },
+    {
       "name": "[ClearSky](https://github.com/ClearSkyTeam/ClearSky)",
       "description": "An fast, clean PM spoon, while having many features.",
       "languages": "PHP",
@@ -251,6 +257,18 @@
     {
       "name": "[Jenisys3](https://github.com/FrontierDevs/Jenisys3)",
       "description": "Genisys3 written in Java",
+      "languages": "Java",
+      "type": "Custom"
+    },
+    {
+      "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
+      "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
+      "languages": "TypeScript",
+      "type": "Custom"
+    },
+    {
+      "name": "[JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)",
+      "description": "A Minecraft Bedrock Edition Server Software.",
       "languages": "Java",
       "type": "Custom"
     },
@@ -421,6 +439,12 @@
       "type": "Custom"
     },
     {
+      "name": "[RAstra](https://github.com/bedrock-crustaceans/RAstra)",
+      "description": "Modern Minecraft Bedrock Server Software written in Rust.",
+      "languages": "Rust, JavaScript, TypeScript",
+      "type": "Custom"
+    },
+    {
       "name": "[Rockit-LMS](https://github.com/cr0sh/Rockit-LMS)",
       "description": "Lightweight MC:PE server.",
       "languages": "Go",
@@ -430,6 +454,12 @@
       "name": "[Saddle](https://github.com/saddlemc/saddle)",
       "description": "Modular server software for Minecraft Bedrock Edition written in Go",
       "languages": "Go",
+      "type": "Custom"
+    },
+    {
+      "name": "[Sculk](https://github.com/sculkmp/Sculk)",
+      "description": "Sculk-Powered Minecraft: Bedrock Edition Server Software.",
+      "languages": "Java",
       "type": "Custom"
     },
     {

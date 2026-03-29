@@ -1,6 +1,6 @@
 ---
 title: Item Tags
-description: Item tags can be used to ensure that an item meets certain conditions.
+description: Item tags are used when checking for multiple types of item and can enable vanilla functionality.
 category: General
 nav_order: 3
 license: true
@@ -10,7 +10,8 @@ mentions:
     - QuazChick
 ---
 
-Item tags can be used to ensure that an item meets certain conditions.
+Item tags are used when checking for multiple types of item and can enable vanilla functionality.
+For a list of vanilla item tags and their functionality, visit [this page](/items/vanilla-item-tags).
 
 ## Applying Tags
 
@@ -18,7 +19,7 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ```json
 {
-    "format_version": "1.21.90",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:example_item"
@@ -36,8 +37,10 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ### From Entities
 
--   `q.equipped_item_all_tags`
--   `q.equipped_item_any_tag`
+-   `q.equipped_item_all_tags(slot, ...tags)`{lang=molang}
+    -   Returns whether the item at the specified location has all of the listed tags.
+-   `q.equipped_item_any_tag(slot, ...tags)`{lang=molang}
+    -   Returns whether the item at the specified location has at least one of the listed tags.
 
 <CodeHeader>minecraft:client_entity > description</CodeHeader>
 
@@ -51,8 +54,10 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ### From Item Descriptors
 
--   `q.all_tags`
--   `q.any_tag`
+-   `q.all_tags(...tags)`{lang=molang}
+    -   Returns whether the item has all of the listed tags.
+-   `q.any_tag(...tags)`{lang=molang}
+    -   Returns whether the item has at least one of the listed tags.
 
 <CodeHeader>Item Descriptor</CodeHeader>
 
@@ -73,7 +78,3 @@ Item tags can be used to ensure that an item meets certain conditions.
     }
 ]
 ```
-
-## List of Vanilla Tags
-
-<Table data="vanilla_tags.json" />

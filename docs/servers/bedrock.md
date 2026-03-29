@@ -10,7 +10,7 @@ description: Bedrock Game protocol.
 ## Datatypes
 
 | Type                              | Size | Notes                                                        |
-|-----------------------------------|------|--------------------------------------------------------------|
+| --------------------------------- | ---- | ------------------------------------------------------------ |
 | i8 (byte)                         | 1    |                                                              |
 | u8 (unsigned byte)                | 1    |                                                              |
 | i16 (short)                       | 2    | Most often encoded as Little Endian, Sometimes as Big Endian |
@@ -29,11 +29,12 @@ description: Bedrock Game protocol.
 ## Encodings
 
 The Bedrock Protocol can use multiple different Encodings for integers, such as
-- Little Endian
-- Big Endian
-- Variable Length Integer (VarInts)
 
-These change how integers are written and read, both Little Endian and Big Endian are just Endianness. 
+-   Little Endian
+-   Big Endian
+-   Variable Length Integer (VarInts)
+
+These change how integers are written and read, both Little Endian and Big Endian are just Endianness.
 They basically determine the order in which bytes are read and interpreted, more can be read about them [here, on wikipedia](https://en.wikipedia.org/wiki/Endianness).
 
 On the other hand, VarInts are an encoding scheme used to represent integers of varying sizes using a minimal number of bytes.
@@ -48,11 +49,12 @@ It contains metadata about the packet, such as its length, type, and information
 The header is encoded into a compact format that reduces bandwidth usage by using variable-length integers for certain fields.
 
 The GamePacket header is composed of:
-- Gamepacket Length (varint u32), the total size of the packet, including the header and payload
-- GamePacket Header (14 bits encoded as varint u32), the header contains:
-    - Gamepacket ID (10 bits), identifies the specific Gamepacket type
-    - SubClient Sender ID (2 bits), identifies the sender client in multi-client scenarios
-    - SubClient Target ID (2 bits), identifies the target client in multi-client scenarios
+
+-   Gamepacket Length (varint u32), the total size of the packet, including the header and payload
+-   GamePacket Header (14 bits encoded as varint u32), the header contains:
+    -   Gamepacket ID (10 bits), identifies the specific Gamepacket type
+    -   SubClient Sender ID (2 bits), identifies the sender client in multi-client scenarios
+    -   SubClient Target ID (2 bits), identifies the target client in multi-client scenarios
 
 The Gamepacket ID is a maximum of 10 bits, which means that there are up to 2^10 (1024) possible gamepacket IDs.
 But IDs 200 through 299 are used for spin-offs, so they are free to use for custom packets etc.
@@ -68,16 +70,17 @@ The primary goal of compression is to minimize the data size while ensuring that
 
 Bedrock supports multiple compression algorithms that vary in terms of efficiency, speed, and size reduction.
 Each connection can negotiate which algorithm to use, and different compression methods are identified by unique identifiers during communication. The primary algorithms used include:
-- Zlib:
-  A widely-used compression technique that offers configurable levels of compression.
-  This algorithm provides a tradeoff between speed and the level of compression, with higher compression levels yielding smaller output but requiring more computational power.
-  It is effective for compressing large packets.
-- Snappy:
-  A compression algorithm designed for high-speed compression and decompression, focusing more on performance than achieving the highest compression ratios.
-  This algorithm is typically used when speed is critical, especially for smaller data packets.
-- No Compression:
-  In some cases, compression may not be necessary, especially for small data packets/debugging purposes.
-  If the size of a packet is below a certain threshold, compression may be skipped entirely to avoid unnecessary overhead.
+
+-   Zlib:
+    A widely-used compression technique that offers configurable levels of compression.
+    This algorithm provides a tradeoff between speed and the level of compression, with higher compression levels yielding smaller output but requiring more computational power.
+    It is effective for compressing large packets.
+-   Snappy:
+    A compression algorithm designed for high-speed compression and decompression, focusing more on performance than achieving the highest compression ratios.
+    This algorithm is typically used when speed is critical, especially for smaller data packets.
+-   No Compression:
+    In some cases, compression may not be necessary, especially for small data packets/debugging purposes.
+    If the size of a packet is below a certain threshold, compression may be skipped entirely to avoid unnecessary overhead.
 
 (Long story, short... Always use Zlib in production, since it is the best because the others either have problems or are not suited for production)
 
@@ -88,9 +91,10 @@ In Bedrock, the beginning of each packet contains a compression identifier, whic
 This identifier allows the receiving end to understand how to process the incoming data—whether it needs to be decompressed or can be read directly.
 
 The following identifiers are used for the available compression methods:
-- Zlib: 0x00
-- Snappy: 0x01
-- No Compression: 0xFF or 0xFFFF (in [NetworkSettings](#network-settings))
+
+-   Zlib: 0x00
+-   Snappy: 0x01
+-   No Compression: 0xFF or 0xFFFF (in [NetworkSettings](#network-settings))
 
 This compression ID is stored before every gamepacket as am u8 and in the [NetworkSettings](#network-settings), where it is an u16 and defines the default compression method to use.
 
@@ -105,12 +109,14 @@ To be documented...
 ## Login Process
 
 The Bedrock Protocol's login sequence is made up of multiple stages, these being:
-- PreLogin
-- Login
-- Spawn
-- Play
+
+-   PreLogin
+-   Login
+-   Spawn
+-   Play
 
 ### Network Settings Request
+
 (Client -> Server)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/RequestNetworkSettingsPacket.html)
@@ -121,6 +127,7 @@ The NetworkSettingsRequestPacket has one single field that being the current pro
 This is the first PreLoin packet.
 
 ### Network Settings
+
 (Server -> Client)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/NetworkSettingsPacket.html)
@@ -128,10 +135,10 @@ This is the first PreLoin packet.
 Used to set up information for the connection, this is where the compression is set and initialized.
 Refer to [Compression](#compression) to find out more about compression here.
 
-
 This is the last PreLoin packet.
 
 ### Login
+
 (Client -> Server)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/LoginPacket.html)
@@ -146,68 +153,70 @@ If the 2nd and 3rd JWT are missing then the player has not signed in to their Xb
 
 The LoginPacket also contains another JWT encoded as a String, that being the raw token.
 It contains information about the player such as:
-- SelfSignedId
-- ServerAddress = (unresolved url if applicable)
-- ClientRandomId
-- SkinId
-- SkinData
-- SkinImageWidth
-- SkinImageHeight
-- CapeData
-- CapeImageWidth
-- CapeImageHeight
-- SkinResourcePatch
-- SkinGeometryData
-- SkinGeometryDataEngineVersion
-- SkinAnimationData
-- PlayFabId
-- AnimatedImageData = Array of:
-  - Type
-  - Image
-  - ImageWidth
-  - ImageHeight
-  - Frames
-  - AnimationExpression
-- ArmSize
-- SkinColor
-- PersonaPieces = Array of:
-  - PackId
-  - PieceId
-  - IsDefault
-  - PieceType
-  - ProductId
-- PieceTintColors = Array of:
-  - PieceType
-  - Colors = Array of color hexstrings
-- IsEduMode (if edu mode)
-- TenantId (if edu mode)
-- ADRole (if edu mode)
-- IsEditorMode
-- GameVersion
-- DeviceModel
-- DeviceOS = (see enumeration: BuildPlatform)
-- DefaultInputMode = (see enumeration: InputMode)
-- CurrentInputMode = (see enumeration: InputMode)
-- UIProfile = (see enumeration: UIProfile)
-- GuiScale
-- LanguageCode
-- PlatformUserId
-- ThirdPartyName
-- ThirdPartyNameOnly
-- PlatformOnlineId
-- PlatformOfflineId
-- DeviceId
-- TrustedSkin
-- PremiumSkin
-- PersonaSkin
-- OverrideSkin
-- CapeOnClassicSkin
-- CapeId
-- CompatibleWithClientSideChunkGen
+
+-   SelfSignedId
+-   ServerAddress = (unresolved url if applicable)
+-   ClientRandomId
+-   SkinId
+-   SkinData
+-   SkinImageWidth
+-   SkinImageHeight
+-   CapeData
+-   CapeImageWidth
+-   CapeImageHeight
+-   SkinResourcePatch
+-   SkinGeometryData
+-   SkinGeometryDataEngineVersion
+-   SkinAnimationData
+-   PlayFabId
+-   AnimatedImageData = Array of:
+    -   Type
+    -   Image
+    -   ImageWidth
+    -   ImageHeight
+    -   Frames
+    -   AnimationExpression
+-   ArmSize
+-   SkinColor
+-   PersonaPieces = Array of:
+    -   PackId
+    -   PieceId
+    -   IsDefault
+    -   PieceType
+    -   ProductId
+-   PieceTintColors = Array of:
+    -   PieceType
+    -   Colors = Array of color hexstrings
+-   IsEduMode (if edu mode)
+-   TenantId (if edu mode)
+-   ADRole (if edu mode)
+-   IsEditorMode
+-   GameVersion
+-   DeviceModel
+-   DeviceOS = (see enumeration: BuildPlatform)
+-   DefaultInputMode = (see enumeration: InputMode)
+-   CurrentInputMode = (see enumeration: InputMode)
+-   UIProfile = (see enumeration: UIProfile)
+-   GuiScale
+-   LanguageCode
+-   PlatformUserId
+-   ThirdPartyName
+-   ThirdPartyNameOnly
+-   PlatformOnlineId
+-   PlatformOfflineId
+-   DeviceId
+-   TrustedSkin
+-   PremiumSkin
+-   PersonaSkin
+-   OverrideSkin
+-   CapeOnClassicSkin
+-   CapeId
+-   CompatibleWithClientSideChunkGen
 
 This is the first packet for the Login stage.
 
 ### HandshakeServerToClient (Optional)
+
 (Server -> Client)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ServerToClientHandshakePacket.html)
@@ -217,6 +226,7 @@ Optionally, if it is sent it initializes encryption. Read more about it in the [
 To be documented...
 
 ### HandshakeClientToServer (Optional)
+
 (Client -> Server)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ClientToServerHandshakePacket.html)
@@ -225,6 +235,7 @@ If the client has initialized Encryption correctly, it responds with this packet
 This packet is completely empty
 
 ### ResourcePacksInfo
+
 (Server -> Client)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ResourcePacksInfoPacket.html)
@@ -234,6 +245,7 @@ If both the ResourcePacksInfo and ResourcePacksStack are empty, these packets ca
 Then there is only one ClientCacheStatus (Optionally) and ResourcePackClientResponse.
 
 ### ClientCacheStatus (Optional)
+
 (Client -> Server)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ClientCacheStatusPacket.html)
@@ -242,6 +254,7 @@ If the client supports Caching then it sends this packet, containing one bool in
 Caching support enables certain possibilities in the protocol, read more about them in the [Caching Section](#caching).
 
 ### ResourcePackClientResponse
+
 (Client -> Server)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ResourcePackClientResponsePacket.html)
@@ -250,6 +263,7 @@ A Reply to the previous ResourcePacksInfoPacket, describing the current status o
 If you want to send any kind of packs, look into the [Sending Resource Packs Section](#sending-resource-packs).
 
 ### ResourcePacksStack
+
 (Server -> Client)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ResourcePackStackPacket.html)
@@ -257,6 +271,7 @@ If you want to send any kind of packs, look into the [Sending Resource Packs Sec
 Always replied to a ResourcePackClientResponse, until the client has downloaded all packs.
 
 ### ResourcePackClientResponse
+
 (Client -> Server)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ResourcePackClientResponsePacket.html)
@@ -266,6 +281,7 @@ If you want to send any kind of packs, look into the [Sending Resource Packs Sec
 If this packet indicates that the client has downloaded all required packs, the login process may continue.
 
 ### PlayStatus
+
 (Server -> Client)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ClientToServerHandshakePacket.html)
@@ -276,6 +292,7 @@ If the Login stage was successful, the enum should be set to `LoginSuccess`.
 This is the last packet for the Login stage.
 
 ### StartGamePacket
+
 (Server -> Client)
 
 [Reference in the Official Docs](https://mojang.github.io/bedrock-protocol-docs/html/ClientToServerHandshakePacket.html)
@@ -284,7 +301,7 @@ This is the first packet in the Spawn stage.
 
 ::: tip
 After this packet, you can already send [Inventory Contents](#sending-inventory-contents) or [Chunks](#sending-chunks).
-The client is ready and just waits until you allow it to spawn. 
+The client is ready and just waits until you allow it to spawn.
 :::
 
 ### PlayStatus
@@ -312,7 +329,7 @@ Not everything can be explained in great detail via documentation, that's why lo
 Here is list of Bedrock Protocol implementations
 
 | Name                                                              | Description                                                                  | Language |
-|-------------------------------------------------------------------|------------------------------------------------------------------------------|----------|
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------- |
 | [CloudburstMC/Protocol](https://github.com/CloudburstMC/Protocol) | A protocol library for Minecraft Bedrock Edition                             | Java     |
 | [PMMP/BedrockProtocol](https://github.com/pmmp/BedrockProtocol)   | An implementation of the Minecraft: Bedrock Edition protocol in PHP          | PHP      |
 | [gophertunnel](https://github.com/Sandertv/gophertunnel)          | General purpose library for Minecraft Bedrock Edition software written in Go | Go       |

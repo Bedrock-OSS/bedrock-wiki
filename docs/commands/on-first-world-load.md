@@ -15,8 +15,8 @@ description: This system will run your desired commands on the event that the wo
 [Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
 This system will run your desired commands on the event that the world is loaded for the first time after applying your pack.
-> Note: A [Function](/commands/mcfunctions) Pack is required to achieve this system, since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
 
+> Note: A [Function](/commands/mcfunctions) Pack is required to achieve this system, since it is the `tick.json` file which allows us to run commands as soon as the world is initialised.
 
 ## Tick JSON
 
@@ -32,18 +32,17 @@ This system will run your desired commands on the event that the world is loaded
 ## System
 
 <CodeHeader>BP/functions/wiki/event/worlds/on_initialise.mcfunction</CodeHeader>
-```yaml
-## Initialisation
-### Add objective
-scoreboard objectives add wiki:world dummy
-### Register to objective
-scoreboard players add .Initialised wiki:world 0
+```yaml ## Initialisation ### Add objective scoreboard objectives add wiki:world dummy ### Register
+to objective scoreboard players add .Initialised wiki:world 0
 
 ## Your Commands Here (Example)
+
 execute if score .Initialised wiki:world matches 0 run say World initialised! Pack loaded for the first time.
 
 ## Mark as Initialised
+
 scoreboard players set .Initialised wiki:world 1
+
 ```
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
@@ -76,3 +75,4 @@ Finally, the score for the score holder '.Initialised' is set to `1` after all t
     'BP/functions/tick.json'
 ]"
 ></FolderView>
+```
