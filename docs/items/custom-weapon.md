@@ -136,7 +136,7 @@ You can also mix and match other components like `minecraft:digger` to allow you
 
 ## Item Recipe
 
-You should probably make a recipe for it, which is covered in previous chapters, as there isn't anything really new in there, but incase you are unsure here is an example one to make the sword with ender eyes and ender pearls.
+You should probably make a recipe for it, which is covered in previous chapters, as there isn't anything really new in there, but in case you are unsure here is an example one to make the sword with ender eyes and ender pearls.
 
 <CodeHeader>BP/recipes/my_sword.json</CodeHeader>
 

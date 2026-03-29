@@ -20,7 +20,7 @@ This technique allows you to execute commands at the location of any block varia
 :::warning
 
 -   This system must be used with caution when a large number of blocks are involved, as it can cause a lag spike due to a temporary entity being generated for each block.
--   When used in areas containing fully-filled composter blocks, it could falsely replace it. If you have any such builds or blocks in your world that could be affected, please use the slightly tweaked version of it at the end of this page **[here](/commands/execute-at-block#system-modified)**, which involves **3 additonal commands**.
+-   When used in areas containing fully-filled composter blocks, it could falsely replace it. If you have any such builds or blocks in your world that could be affected, please use the slightly tweaked version of it at the end of this page **[here](/commands/execute-at-block#system-modified)**, which involves **3 additional commands**.
 
 :::
 

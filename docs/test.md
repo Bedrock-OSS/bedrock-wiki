@@ -73,14 +73,14 @@ scoreboard players reset * joined
 scoreboard players set @a joined 1
 
 scoreboard objectives add world dummy
-scoreboard players add initialised world 0
+scoreboard players add initialized world 0
 
 
 #Your Commands Here (example)
-execute if score initialised world matches 0 run say New world created!
+execute if score initialized world matches 0 run say New world created!
 
 
-scoreboard players set initialised world 1
+scoreboard players set initialized world 1
 ```
 
 ### No Line Numbers

@@ -13,7 +13,7 @@ mentions:
 Beta versions of the Script API are in active development and breaking changes are frequent. This page assumes the format of Minecraft 1.21.120.
 :::
 
-Have you ever needed to prevent a specific block from being placed? Sometimes players may aquire dangerous blocks so you can use this script to keep your world or server safe!
+Have you ever needed to prevent a specific block from being placed? Sometimes players may acquire dangerous blocks so you can use this script to keep your world or server safe!
 
 ## Setup
 
@@ -107,7 +107,7 @@ This is the main function to execute our code. `world.beforeEvents.playerPlaceBl
     -   `event.permutationToPlace.type.id === "minecraft:bedrock"`{lang=js} verifies that the block being placed is 'minecraft:bedrock'.
 -   `event.cancel = true`{lang=js} cancels the placement action that would be performed by this event.
 -   `system.run()`{lang=js} is a system call that tells minecraft to push the code being ran to the next tick.
-    This is neccessary as before events cannot modify the state of the world (in our case, sending a message to the player), and using system run makes the code unbound by this limitation.
+    This is necessary as before events cannot modify the state of the world (in our case, sending a message to the player), and using system run makes the code unbound by this limitation.
     More information on system callbacks & loops can be found [here](https://learn.microsoft.com/minecraft/creator/documents/scripting/system-run-guide).
 -   `player.sendMessage()`{lang=js} sends a message to the player letting them know that they cannot place that block.
 

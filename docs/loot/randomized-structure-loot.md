@@ -136,7 +136,7 @@ There is no way to have different loot in different chests in the same structure
 
 ### Example
 
-A example of a suspicius gravel having a loot table applied.
+A example of a suspicious gravel having a loot table applied.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 

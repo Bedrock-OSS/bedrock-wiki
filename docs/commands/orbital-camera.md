@@ -27,9 +27,9 @@ execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s se
 
 ![One Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
-**2D Visualisation:**
+**2D Visualization:**
 
-![Orbital Camera 2D Visualisation](/assets/images/commands/orbital-camera/2d-visualisation.gif)
+![Orbital Camera 2D Visualization](/assets/images/commands/orbital-camera/2d-vizualisation.gif)
 
 **Command Breakdown:**
 

@@ -69,7 +69,7 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
     -   `RegExp`{lang=js} - Standard function constructor for regex instance
     -   `JSON`{lang=js} - Standard object having stringify and parse methods for JSON interaction
     -   `Proxy`{lang=js} - Standard function constructor for build-in proxy handler
-    -   `Map`{lang=js}, `Set`{lang=js}, `WeakMap`{lang=js}, `WeakSet`{lang=js} - Standard function constructors for data organisation objects
+    -   `Map`{lang=js}, `Set`{lang=js}, `WeakMap`{lang=js}, `WeakSet`{lang=js} - Standard function constructors for data organization objects
     -   `DataView`{lang=js} - Standard function constructor for binary array interactions
     -   `Promise`{lang=js} - Standard function constructor for async interaction
     -   `console`{lang=js} - Standard object having base output methods (`log`{lang=js}, `warn`{lang=js}, `error`{lang=js}, `info`{lang=js})

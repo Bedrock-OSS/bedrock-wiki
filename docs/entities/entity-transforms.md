@@ -81,7 +81,7 @@ A_To_B = A_To_Something * Something_To_B
 
 the area denoted: `^` should always match. And combining it removing the middle gives you the natural name of what it does.
 
-Finally, moving on to Minecraft. At the time of this writing, Minecraft doesn't have Transforms you can multiply together, so they aren't inferring a colum or row major notation. You simply get a transform and it's up to you how to apply it. But, having chosen column-major above, we can write down how the operations work as a sequence, and as long as you apply them in order, you'll be ok.
+Finally, moving on to Minecraft. At the time of this writing, Minecraft doesn't have Transforms you can multiply together, so they aren't inferring a column or row major notation. You simply get a transform and it's up to you how to apply it. But, having chosen column-major above, we can write down how the operations work as a sequence, and as long as you apply them in order, you'll be ok.
 
 Also, whether we're using a TRS (Transform Rotation Scale combined object), Quaternions, Matrices, or Euler angles, when rotations are involved ORDER DOES MATTER. Rotate A then Rotate B, is not the same as rotate B and then rotate by A.
 
@@ -217,7 +217,7 @@ Which is happening right to left.
 
 #### 1: Inverse(Translation)
 
-If normally (in forward direction) you're going from ent to world, you'd take your Entity-relative position (like a joint position) and add the entity's. So in reverse, we subtract the entitie's location.
+If normally (in forward direction) you're going from ent to world, you'd take your Entity-relative position (like a joint position) and add the entity's. So in reverse, we subtract the entities' location.
 
 ```molang
 v.target_x = v.target_x - q.position(0);

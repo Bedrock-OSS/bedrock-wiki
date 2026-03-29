@@ -29,7 +29,7 @@ Before version 1.19.70, Bedrock Edition relied on Aux values (metadata) to defin
 /setblock ~ ~ ~ wool ["color"="orange"]
 ```
 
--   Commands using Aux values will function in older versions or in Behaviour Packs with `min_engine_version` set to 1.19.63 or below.
+-   Commands using Aux values will function in older versions or in Behavior Packs with `min_engine_version` set to 1.19.63 or below.
 -   Updating the `min_engine_version` to 1.19.70 or above requires transitioning to Block States.
 
 ## Syntax and Examples

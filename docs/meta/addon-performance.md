@@ -123,7 +123,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 
 #### Comparison Table
 
-|     Light Source | Score | Redstone Updates | Animted Texture | Light Updates | Tick Updates | Particles | Renders |
+|     Light Source | Score | Redstone Updates | Animated Texture | Light Updates | Tick Updates | Particles | Renders |
 | ---------------: | :---: | :--------------: | :-------------: | :-----------: | :----------: | :-------: | :-----: |
 |     Light Blocks |   1   |      False       |      False      |     True      |    False     |   False   |  False  |
 |         Lanterns |   4   |      False       |      True       |     True      |     True     |   False   |  True   |

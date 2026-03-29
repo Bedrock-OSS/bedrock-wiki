@@ -29,7 +29,7 @@ The style guide is a living, breathing document, which will evolve as add-on cre
 BP/functions/wiki/ability/ice_blast.mcfunction
 BP/functions/wiki/ability/fire_trail.mcfunction
 BP/functions/wiki/event/players/on_death.mcfunction
-BP/functions/wiki/event/worlds/on_initialise.mcfunction
+BP/functions/wiki/event/worlds/on_initialize.mcfunction
 ```
 
 -   All content folders `ability` and `event` are consistently singular.
@@ -41,7 +41,7 @@ BP/functions/wiki/event/worlds/on_initialise.mcfunction
 BP/functions/wiki/abilities/ice_blast.mcfunction
 BP/functions/wiki/abilities/fire_trail.mcfunction
 BP/functions/wiki/event/players/on_death.mcfunction
-BP/functions/wiki/event/world/on_initialise.mcfunction
+BP/functions/wiki/event/world/on_initialize.mcfunction
 ```
 
 -   Only `abilities` content folder is pluralized while `event` is singular.
@@ -82,7 +82,7 @@ The `minecraft` namespace is reserved for vanilla content so cannot be used unle
 
 For personal projects, use a convenient version of your player name, and for team projects, use a suitable version of your team name.
 
-When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `minetite.wiki:dragon`
+When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `ascent.wiki:dragon`
 
 Where to use namespaces:
 
@@ -219,7 +219,7 @@ This practice helps create a consistent format, making it easier for everyone to
 
 **Example Objectives:**
 
--   `wiki:blocks_travelled.overworld`
+-   `wiki:blocks_traveled.overworld`
 -   `wiki:q.is_sneaking`
 -   `wiki:q.is_armed_any`
 

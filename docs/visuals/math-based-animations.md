@@ -60,7 +60,7 @@ Common Queries include:
 -   `q.anim_time`
 -   `q.life_time`
 
-These are utilised in animations to draw things such as the attack-time or distance-moved from the game-world to provide a more dynamic and synced flow.
+These are utilized in animations to draw things such as the attack-time or distance-moved from the game-world to provide a more dynamic and synced flow.
 
 ### Avoiding Animation Controllers
 
@@ -68,7 +68,7 @@ By using queries, you can avoid the need to create animation controllers. If the
 
 ## Example
 
-A specific application example of a Math-Based animation may be found below. The example utilises the Molang Query, `"q.modified_distance_moved"`:
+A specific application example of a Math-Based animation may be found below. The example utilizes the Molang Query, `"q.modified_distance_moved"`:
 
 <CodeHeader></CodeHeader>
 

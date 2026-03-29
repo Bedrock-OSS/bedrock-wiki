@@ -35,7 +35,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 
 -   **Q**: Are there any plans on adding jit compilation to let scripting run more smoothly?
 -   **A**: The challenge is that even with JS engines which do support JIT (like V8), it is not supported on all of our target devices.
--   **A**: Mentioned elsewhere and in this thread but our Javascript engine doesn't support JIT-ing. If one day we move to a different JS engine we can look into JIT (on some platforms anyways, many of our platforms don't support JIT-ing unforunately).
+-   **A**: Mentioned elsewhere and in this thread but our Javascript engine doesn't support JIT-ing. If one day we move to a different JS engine we can look into JIT (on some platforms anyways, many of our platforms don't support JIT-ing unfortunately).
 -   **Q**: Are there any plans for moving away from QuickJS anytime soon?
 -   **A**: We currently don't have any plans to move away from QuickJS any time soon.
 -   **A**: We do aim to make scripting cover as many scenarios as possible, and yes getting the right performance baseline is an important part of that and something we hope to continue improving. There are two halves two this: ensuring the API paradigms we create are performant for the common use case and improvements to the fundamental QJS integration (and bedrock engine itself).
@@ -48,7 +48,7 @@ We are a sharp contrast to Java modding frameworks though, especially things lik
 -   **A**: Yeah, if you stick JSON files in your scripts folder, you can read them as an import, though were there questions about reading JSON from outside the scripts folder? It is very unlikely we'd support writing of the JSON though.
 -   **A**: If you want to have your own data file for your own usage and want to use .json as the format for authoring it, you should be able to do that by putting it into your scripts directory. But it's read-only data.
     You can't save arbitrary files (.json or otherwise) anywhere.
-    You can't directly load/parse .json file from elsewhere in the behavor_pack.
+    You can't directly load/parse .json file from elsewhere in the behavior_pack.
 -   **A**: I might chat with a few folks about this since I may have just been prototyping in the engine, i'll get back to you on this 😅 . But I totally get this targeted scenario within script itself, and I hear the feedback for outside of the scripts folder, but this is more complicated.
 
 ## Scripting replacing more than JSON events
@@ -147,7 +147,7 @@ I'll take a note of the realms UUID issue.
 ## Client Side Scripting
 
 -   **Q**: Are there ever going to be ways for use to make client side mods? or ways for scripts on realms/world to be able use client side? if that makes sense?
--   **A**: Client side scripting is something that comes up regularly, and we recognize the value of it. Creating a JS instance that runs on the client isn't difficult, but designing/creating/supporting a whole new client-side API is an enormous piece of work. It's difficult for API design (because we need to work through UI controls and input schemes across many form factors), but is also a burden for authoring script, because it brings the complexity of two different script contexts and the need to explictly synchronize between them
+-   **A**: Client side scripting is something that comes up regularly, and we recognize the value of it. Creating a JS instance that runs on the client isn't difficult, but designing/creating/supporting a whole new client-side API is an enormous piece of work. It's difficult for API design (because we need to work through UI controls and input schemes across many form factors), but is also a burden for authoring script, because it brings the complexity of two different script contexts and the need to explicitly synchronize between them
 -   **Q**: It is apparent that a number of Client side scripting modules are under development, but what exactly is the roadmap for them? The intentions and extent of their capabilities? Please tell us anything and everything about it!
 -   **A**: For the most part we've been focused on server-side scripting API, and honestly, where we can keep things simple for most developers we'd want to add APIs on the server side (e.g., /server-ui as an example).
 
@@ -214,7 +214,7 @@ I would definitely want to review websockets one more time to make sure there is
 ## Dynamic Properties
 
 -   **Q**: Can we expect some improvements to Dynamic Properties, with more complex types in the future such as:
-    Items: We are not able to serialize item to string properly because we dont have access to all data related to these types
+    Items: We are not able to serialize item to string properly because we don't have access to all data related to these types
     TypedArrays: Chance to save the byte array directly to Dynamic Properties as we are able to have bigger arrays then strings are allowed too.
     What TypedArrays? These: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 -   **A**: Great ideas!
@@ -240,7 +240,7 @@ While we're thinking about the above areas (scenarios and implementation), we tr
 
 Of course, discoveries during implementation sometimes raises further questions and concerns, causing us to further alter the design.
 
-The jist for methods vs properties is "is it simple (not complex to calculate/set)? Make it a property, else make it a method"
+The gist for methods vs properties is "is it simple (not complex to calculate/set)? Make it a property, else make it a method"
 
 -   **Q**: What qualities do you aim for when making the API?
 -   **A**: There are a bunch of things really, but I think it can be distilled to a few major points:
@@ -252,7 +252,7 @@ The jist for methods vs properties is "is it simple (not complex to calculate/se
 
 A really big aim of scripting is a super stable platform to build experiences off of, but we also know that scripting is a part the broader extensibility surfaces of the game. So the combination of usability + reliability and compatibility is hugely important.
 
--   **Q**: What is your least favourite part of implementing a new api? Is it hard/complicated integrating it into the existing code base?
+-   **Q**: What is your least favorite part of implementing a new api? Is it hard/complicated integrating it into the existing code base?
 -   **A**: As a non-dev, I enjoy the whole process of helping design an API. From deciding which APIs are the most important to the community to create or pull out of beta, to having design discussions to decide how to make the API just right, to shipping it out to you lovely folks and getting feedback on it. Maybe the most difficult part of that process is when implementation begins and we find caveats in our codebase that limit an API design that we had planned, causing us to pivot our design plans. But I think the challenge is part of the fun! 🤪
 -   **Q**: How do you decide how to design interfaces for systems that already exist in add-ons?
 -   **A**: We make a best effort to maintain parity between existing JSON components and scripting when it comes to naming, primarily for the sake of creator familiarity. However, there are occasionally cases where feel that the API could benefit from a divergence in naming and/or interface, so it's not a hard rule.
@@ -306,7 +306,7 @@ But typescript is great 😄
 -   **Q**: I Just Want Something Similar In Scripting That's Replicates The Minecraft Command "/tickingarea". So We Could Avoid Errors From Unloaded Chunks. And Maybe Have A Unload Chunk Function As Well
 -   **A**: I think we wanted to try to live on a world where scripters didn't have to think about chunks, but I don't think that's possible lol. So I expect we might come to some basic APIs for chunk loading/unloading. I would imagine a scripting equivalent to the tickingarea command will probably be the first step. All disclaimers around commitments, and I don't think we'd have anything short-termish, but probably maybe medium-termish.
 
-## Favourite Creation
+## Favorite Creation
 
 -   **Q**: What is your favorite thing you've seen created with the Scripting API?
 -   **A**: For me one of the weirder ones was a ChatGPT integration demo (https://github.com/microsoft/minecraftcodex) that was done about a year before ChatGPT was a thing. I'm not really an AI expert; that was my first walkthrough with ChatGPT-like stuff so it was me getting awed (and maybe a little freaked out) by AI stuff.
@@ -330,7 +330,7 @@ But nothing in the short or medium term "below" triggerEvent for entities. and B
 -   **A**: Right now, we try to keep a level of insulation around what comes in add-ons (.mcaddons, stuff from marketplace) etc. and so likely there won't be a capability any time soon for that for script that comes in those sources - i.e., within the game.
     (unless we can think of a clever way to keep it isolated.) Maybe as with browsers there could be some form of isolated indexed storage, but with dynamic properties (especially now with fewer limits) I might expect other folks will probably do a good wrapper.
 
-Dedicated server is a bit more of a playground there - it's where we have more stuff like server/net. I could see us adding disk access or other passthroughs there.. but, I don't think it's the top priority so probably won't see things in the short or medium term; (especially since there kinda-is a way to connect out with server/net)
+Dedicated server is a bit more of a playground there - it's where we have more stuff like server/net. I could see us adding disk access or other passthrough there.. but, I don't think it's the top priority so probably won't see things in the short or medium term; (especially since there kinda-is a way to connect out with server/net)
 
 ## Forms
 

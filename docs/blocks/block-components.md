@@ -404,7 +404,7 @@ The [embedded visual](#embedded-visual) component can be used to change the appe
 
 ### Friction
 
-Determines how slippery the block is for entities moving ontop (`0.0-0.9`{lang=js}).
+Determines how slippery the block is for entities moving on top (`0.0-0.9`{lang=js}).
 Lower values mean the block is more slippery.
 
 :::warning MOVEMENT SPEED
@@ -936,7 +936,7 @@ Allows the block to respond to redstone power via custom components using the `o
 -   `propagates_power` — Boolean (optional)
     -   Determines whether this block conducts redstone power to adjacent blocks.
         -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](#redstone-conductivity) component.
-        -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+        -   This allows the block to counterintuitively have properties of a redstone conductor while not actually conducting redstone.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 

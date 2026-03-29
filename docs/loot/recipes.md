@@ -109,7 +109,7 @@ It's strongly recommended to use a namespace. Namespaces are a standard in other
 
 ### Tags
 
-Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. These tags will make the recipe be shared across different blocks that uses the `minecraft:crafting_table` component. When the recipe does not inlcude the `crafting_table` tag, or any vanilla tag, but a tag from your custom block, the recipe will only be shared to that custom block and not the crafting table/stonecutter/etc. At least one tag must be provided.
+Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. These tags will make the recipe be shared across different blocks that uses the `minecraft:crafting_table` component. When the recipe does not include the `crafting_table` tag, or any vanilla tag, but a tag from your custom block, the recipe will only be shared to that custom block and not the crafting table/stonecutter/etc. At least one tag must be provided.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 

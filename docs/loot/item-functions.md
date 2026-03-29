@@ -346,7 +346,7 @@ Vanilla files use a function condition for this, but even removing that conditio
 
 Sets the data for a book.
 
-Can only be used on `minecrat:writable_book` or `minecraft:written_book`.
+Can only be used on `minecraft:writable_book` or `minecraft:written_book`.
 
 `author`: String name of the author.
 

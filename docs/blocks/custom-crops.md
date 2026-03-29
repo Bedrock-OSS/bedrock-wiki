@@ -123,7 +123,7 @@ This code example also includes the base components of our crop which will be ac
 
 ## Crop Growth Component
 
-Minecraft doesn't expose the vanilla crop growth functionlity for use in custom blocks, so we'll have to re-create the growth system from scratch using a custom component!
+Minecraft doesn't expose the vanilla crop growth functionality for use in custom blocks, so we'll have to re-create the growth system from scratch using a custom component!
 
 ### Parameters
 

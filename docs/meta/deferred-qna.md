@@ -40,12 +40,12 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 
 ## Optimization
 
--   **Q**: I wonder when optimization for deferred will begin aajabrams said it would be when y’all get all of deferreds features implemented but idk when that is.
+-   **Q**: I wonder when optimization for deferred will begin aajabrams said it would be when y’all get all of deferred features implemented but idk when that is.
 -   **A**: AJ is right, we're definitely working on getting all the features out before really hammering at optimizations. No timeline to share right now, but definitely on our roadmap!
 
 ## Pom Effects
 
--   **Q**: Will Pom Effects Such As Paralax Be Added?
+-   **Q**: Will Pom Effects Such As Parallax Be Added?
 -   **A**: We don't have anything to share on POM techniques at this time, but thank you for the suggestion!
 
 ## Deferred PBR
@@ -90,7 +90,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 
 ## Customizable Clouds
 
--   **Q**: As of right now, Clouds are not really customizeable for deferred, is there plans to add volumetric Clouds.
+-   **Q**: As of right now, Clouds are not really customizable for deferred, is there plans to add volumetric Clouds.
 -   **A**: No plans on clouds to share right now, but appreciate the suggestion here! Definitely lots to explore here.
 
 -   **Q**: Will deferred have a multiple clouds layers like SDGP as config? that's feels more like aesthetic things that might gonna fit well with some packs.
@@ -214,7 +214,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 
 -   **Q**: Similar to <https://discord.com/channels/523663022053392405/1210250265895243807>, I think it would be cool if blocks could have 3 pbr textures and config, one for each dimension. This would help enhance each dimension to be unique.
 
-    Having point light emit different colours based on dimension as one example
+    Having point light emit different colors based on dimension as one example
 
     This is similar to my Molang post, but currently there is no molang query to detect dimension as far as I know
 
