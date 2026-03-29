@@ -25,7 +25,7 @@ const filePage = useFilePage();
     />
     <Downloads
       :title="filePage.root.title"
-      :asset="filePage.root.path + '.zip'"
+      :asset="'/' + filePage.root.path + '.zip'"
       :types="filePage.example.type === 'zip' ? ['zip'] : ['zip', filePage.example.type]"
     />
   </div>
