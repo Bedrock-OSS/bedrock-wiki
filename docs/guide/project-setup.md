@@ -179,7 +179,9 @@ When you are finished, it should look something like this:
 
 ## RP Manifest
 
-The next step is to create the `manifest.json` for the RP. The format for a resource-pack manifest is nearly identical to a BP manifests except that the `type` is `resources`, which marks the pack as a _Resource Pack_.
+The next step is to create the `manifest.json` for the RP.
+The format for a resource pack manifest is nearly identical to a BP manifest except that the module `type` is `"resources"`{lang=json}, which marks the pack as a _resource pack_.
+Additionally, we specify a `pack_scope` of `"world"`{lang=json} which prevents the pack from being activated outside of worlds.
 
 Copy the following code into your newly created `RP/manifest.json` and insert your own UUIDs.
 
@@ -193,7 +195,8 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": "1.26.10"
+        "min_engine_version": "1.26.10",
+        "pack_scope": "world" // Can be "any" (default), "global" or "world"
     },
     "modules": [
         {
