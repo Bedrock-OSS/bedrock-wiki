@@ -2,6 +2,8 @@ import { extname } from "path";
 import { PNG } from "pngjs";
 import TGA from "tga";
 
+const fenceChar = "`";
+
 const imageTypes = ["jpg", "jpeg", "png", "tga"];
 const unsupportedTypes = ["mcstructure"];
 
@@ -36,14 +38,36 @@ function renderCodeFile(path: string, lang: string, code: string, link?: string)
   if (lang === "material") lang = "json";
   else if (lang === "mcfunction") lang = ""; // No syntax highlighting
 
+  const fence = getCodeFence(code);
+
   return [
     //
     "<CodeHeader>" + path + "</CodeHeader>",
     "",
-    "```" + lang,
+    fence + lang,
     code,
-    "```",
+    fence,
   ].join("\n");
+}
+
+function getCodeFence(code: string) {
+  let maxCount = 0;
+  let currentCount = 0;
+
+  for (const char of code) {
+    if (char === fenceChar) {
+      currentCount++;
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+      }
+    } else {
+      currentCount = 0;
+    }
+  }
+
+  const fenceLength = Math.max(3, maxCount + 1);
+
+  return fenceChar.repeat(fenceLength);
 }
 
 function renderImageFile(path: string, url: string, link?: string) {
