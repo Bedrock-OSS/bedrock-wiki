@@ -38,6 +38,6 @@ To understand how rotation selector arguments 'ry' and 'rym' work, refer to this
 
 :::tip
 
-You may use the above commands in combination with **[Crouch Detection](/commands/detect-movement#is-sneaking)** or the **[hasitem](/commands/selectors#items)** selector argument to apply additional conditions in order for the display to activate.
+You may use the above commands in combination with **[Crouch Detection](/commands/detect-movements#is-sneaking)** or the **[hasitem](/commands/selectors#items)** selector argument to apply additional conditions in order for the display to activate.
 
 :::
