@@ -51,7 +51,7 @@ Think of this system like a library: `wiki:array` picks the bookshelf (1-9), and
 :::warning
 
   - Only single-digit positive integers (1-9) are used in the format specifier `%%s`. When creating your system, make sure player scores are positive integers.
-  - This command block system covers a range of 1-81. For larger ranges, see the function setup **[here](/commands/nested-translates#function-setup)**.
+  - This command block system covers a range of 1-81. For larger ranges, see the function setup **[here](/commands/nested_translates#function-setup)**.
 
 :::
 
