@@ -1,5 +1,6 @@
 ---
 title: Block Models
+example: block_models
 description: Learn how to set up a custom model for your block.
 category: Visuals
 tags:
@@ -81,32 +82,13 @@ Textures can be created in Blockbench by clicking `Create Texture` and selecting
 
 The "paper_bag" model has multiple pre-made textures, listed below:
 
--   `textures/blocks/paper_bag.png`
+<div style="display: grid; grid-template-columns: repeat(auto-fill, 256px); column-gap: 1em;">
 
-    <WikiImage
-        src="/assets/images/blocks/block-models/paper_bag.png"
-        style="background-color: rgb(0,0,0,0.15);"
-        pixelated
-        width="128"
-    />
+<ExampleFile path="RP/textures/wiki/blocks/paper_bag.png" />
+<ExampleFile path="RP/textures/wiki/blocks/paper_bag_bottom_fold.png" />
+<ExampleFile path="RP/textures/wiki/blocks/paper_bag_side_gusset.png" />
 
--   `textures/blocks/paper_bag_bottom_fold.png`
-
-    <WikiImage
-        src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png"
-        style="background-color: rgb(0,0,0,0.15);"
-        pixelated
-        width="128"
-    />
-
--   `textures/blocks/paper_bag_side_gusset.png`
-
-    <WikiImage
-        src="/assets/images/blocks/block-models/paper_bag_side_gusset.png"
-        style="background-color: rgb(0,0,0,0.15);"
-        pixelated
-        width="128"
-    />
+</div>
 
 These can be imported into Blockbench and then dragged onto each appropriate block face, although they likely won't look quite right...
 
@@ -150,41 +132,19 @@ Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block w
 If you have textures for your block defined in that file, make sure you move them to [`minecraft:material_instances`](/blocks/block-components#material-instances) for them to appear.
 :::
 
-<CodeHeader>BP/blocks/paper_bag.json</CodeHeader>
+<ExampleFile path="BP/blocks/paper_bag.json" />
 
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:block": {
-        "description": {
-            "identifier": "wiki:paper_bag",
-            "menu_category": {
-                "category": "items"
-            }
-        },
-        "components": {
-            // Apply your model by referencing its identifier
-            "minecraft:geometry": "geometry.paper_bag",
-            // Apply textures and other rendering configuration
-            "minecraft:material_instances": {
-                "*": {
-                    "texture": "wiki:paper_bag",
-                    "render_method": "alpha_test" // Disable backface culling and allow transparency
-                },
-                "down": {
-                    "texture": "wiki:paper_bag_bottom_fold",
-                    "render_method": "alpha_test" // Must be the same in all instances
-                },
-                // Custom instance name used in model
-                "side_gusset": {
-                    "texture": "wiki:paper_bag_side_gusset",
-                    "render_method": "alpha_test" // Must be the same in all instances
-                }
-            }
-        }
-    }
-}
-```
+## Result
+
+You now know how to make a custom block that uses your own custom model!
+
+### Download Example Pack
+
+Download the template pack made according to this tutorial below!
+
+<Button link="block-models.zip" download="Block Models.mcaddon" color="green">
+    Download MCADDON
+</Button>
 
 ## What's Next?
 

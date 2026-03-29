@@ -1,5 +1,6 @@
 ---
 title: Intercardinal Orientation
+example: intercardinal_block_orientation
 description: Learn how to make a block that can face intercardinal directions, like mob heads and signs.
 category: Tutorials
 tags:
@@ -288,143 +289,19 @@ Your block JSON and script files after the above steps should look similar to th
 
 <Spoiler title="Mug Example Block JSON">
 
-<CodeHeader>BP/blocks/mug.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:block": {
-        "description": {
-            "identifier": "wiki:mug",
-            "menu_category": {
-                "category": "items"
-            },
-            "states": {
-                "wiki:intercardinal_direction": {
-                    "values": { "min": 0, "max": 15 }
-                }
-            }
-        },
-        "components": {
-            // Sets the "wiki:intercardinal_direction" state to the correct value before the block is placed
-            "wiki:intercardinal_orientation": {
-                "y_rotation_offset": 180 // Face towards the player
-            },
-            // Collision and selection boxes
-            "minecraft:collision_box": {
-                "origin": [-3, 0, -3],
-                "size": [6, 8, 6]
-            },
-            "minecraft:selection_box": {
-                "origin": [-3, 0, -3],
-                "size": [6, 8, 6]
-            },
-            // Visuals
-            "minecraft:destruction_particles": {
-                "particle_count": 48
-            },
-            "minecraft:geometry": {
-                "identifier": "geometry.mug",
-                "bone_visibility": {
-                    "0": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 0",
-                    "22.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 1",
-                    "45": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 2",
-                    "67.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 3"
-                }
-            },
-            "minecraft:material_instances": {
-                "*": { "texture": "wiki:mug" }
-            }
-        },
-        "permutations": [
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 0",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, 180, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 4",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, 90, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 8",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, 0, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 12",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, -90, 0] }
-                }
-            }
-        ]
-    }
-}
-```
+<ExampleFile path="BP/blocks/mug.json" />
 
 </Spoiler>
 
 <Spoiler title="Intercardinal Orientation Script">
 
-<CodeHeader>BP/scripts/intercardinalOrientation.js</CodeHeader>
-
-```js
-import { system } from "@minecraft/server";
-
-/** @param {number} yRotation */
-function getIntercardinalDirection(yRotation) {
-    // Converts the Y rotation into a positive angle below 360
-    yRotation %= 360;
-    if (yRotation < 0) yRotation += 360;
-
-    // Returns the Y rotation as an intercardinal direction below 16
-    return Math.round(yRotation / 22.5) % 16;
-}
-
-// Make sure you change "wiki" to your own namespace!
-const stateName = "wiki:intercardinal_direction";
-const componentName = "wiki:intercardinal_orientation";
-
-/** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockIntercardinalOrientationComponent = {
-    beforeOnPlayerPlace(event, { params }) {
-        const { player } = event;
-        if (!player) return;
-
-        // Get the "y_rotation_offset" value defined in the block JSON (default to 0) and add it to the player's Y rotation
-        const yRotationOffset = params.y_rotation_offset ?? 0;
-        const yRotation = player.getRotation().y + yRotationOffset;
-
-        // Get the intercardinal direction value (0-15) from the player's Y rotation
-        const direction = getIntercardinalDirection(yRotation);
-
-        // Update the block permutation being placed
-        event.permutationToPlace = event.permutationToPlace.withState(stateName, direction);
-    },
-};
-
-// Register the custom component with the name "wiki:intercardinal_orientation".
-system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent(
-        componentName,
-        BlockIntercardinalOrientationComponent
-    );
-});
-```
+<ExampleFile path="BP/scripts/intercardinalOrientation.js" />
 
 </Spoiler>
 
 Remember to import the script into your entry file!
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
-
-```js
-import "./intercardinalOrientation.js";
-```
+<ExampleFile path="BP/scripts/index.js" />
 
 ## Result
 
@@ -444,6 +321,10 @@ What you have created:
 
 Template pack made according to this tutorial, adding a "Mug" block into the "Items" tab of the creative menu.
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/intercardinal_block_rotation.mcaddon">
+<Button
+    link="intercardinal-orientation.zip"
+    download="Intercardinal Block Orientation.mcaddon"
+    color="green"
+>
     Download MCADDON
 </Button>

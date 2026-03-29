@@ -1,5 +1,6 @@
 ---
 title: Custom Heads
+example: custom_heads
 description: Learn how to create your own mob heads that can be worn, placed in different directions and dropped after charged creeper explosions!
 category: Vanilla Re-Creations
 tags:
@@ -169,61 +170,9 @@ Add the following script to your `BP/scripts` folder to register the `wiki:inter
 
 <Spoiler title="Intercardinal Orientation Script">
 
-<CodeHeader>BP/scripts/intercardinalOrientation.js</CodeHeader>
-
-```js
-import { system } from "@minecraft/server";
-
-/** @param {number} yRotation */
-function getIntercardinalDirection(yRotation) {
-    // Converts the Y rotation into a positive angle below 360
-    yRotation %= 360;
-    if (yRotation < 0) yRotation += 360;
-
-    // Returns the Y rotation as an intercardinal direction below 16
-    return Math.round(yRotation / 22.5) % 16;
-}
-
-// Make sure you change "wiki" to your own namespace!
-const stateName = "wiki:intercardinal_direction";
-const componentName = "wiki:intercardinal_orientation";
-
-/** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockIntercardinalOrientationComponent = {
-    beforeOnPlayerPlace(event, { params }) {
-        const { player } = event;
-        if (!player) return;
-
-        // Get the "y_rotation_offset" value defined in the block JSON (default to 0) and add it to the player's Y rotation
-        const yRotationOffset = params.y_rotation_offset ?? 0;
-        const yRotation = player.getRotation().y + yRotationOffset;
-
-        // Get the intercardinal direction value (0-15) from the player's Y rotation
-        const direction = getIntercardinalDirection(yRotation);
-
-        // Update the block permutation being placed
-        event.permutationToPlace = event.permutationToPlace.withState(stateName, direction);
-    },
-};
-
-// Register the custom component with the name "wiki:intercardinal_orientation".
-system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent(
-        componentName,
-        BlockIntercardinalOrientationComponent
-    );
-});
-```
+<ExampleFile path="BP/scripts/intercardinalOrientation.js" />
 
 </Spoiler>
-
-Remember to import the script into your entry file!
-
-<CodeHeader>BP/scripts/index.js</CodeHeader>
-
-```js
-import "./intercardinalOrientation.js";
-```
 
 Now we can apply the component to the block when it is being placed on the `up` face of another block using the block [`permutations`](/blocks/block-permutations#conditionally-applying-components) array.
 
@@ -288,128 +237,7 @@ Here's the JSON code for a basic 8×8×8 head model, where each face of the bloc
 
 <Spoiler title="Example Head Model">
 
-<CodeHeader>RP/models/blocks/custom_head.geo.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:geometry": [
-        {
-            "description": {
-                "identifier": "geometry.custom_head",
-                "texture_width": 8,
-                "texture_height": 8
-            },
-            "item_display_transforms": {
-                "gui": {
-                    "fit_to_frame": false,
-                    "rotation": [30, 225, 0],
-                    "scale": [1, 1, 1],
-                    "translation": [0, 3, 0]
-                },
-                "fixed": {
-                    "scale": [1, 1, 1],
-                    "translation": [0, 4, 0]
-                },
-                "ground": {
-                    "scale": [0.5, 0.5, 0.5],
-                    "translation": [0, 3, 0]
-                },
-                "firstperson_righthand": {
-                    "rotation": [0, 180, 0],
-                    "scale": [1, 1, 1]
-                },
-                "thirdperson_righthand": {
-                    "rotation": [45, 225, 0],
-                    "scale": [0.5, 0.5, 0.5],
-                    "translation": [0, 3, 0]
-                },
-                "head": {
-                    "scale": [1.9, 1.9, 1.9],
-                    "translation": [0, 8, 0]
-                }
-            },
-            "bones": [
-                {
-                    "name": "0",
-                    "pivot": [0, 0, 0],
-                    "cubes": [
-                        {
-                            "origin": [-4, 0, -4],
-                            "size": [8, 8, 8],
-                            "uv": {
-                                "north": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "east": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "south": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "west": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "up": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "down": { "uv": [0, 8], "uv_size": [8, -8] }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "22.5",
-                    "pivot": [0, 0, 0],
-                    "rotation": [0, 22.5, 0],
-                    "cubes": [
-                        {
-                            "origin": [-4, 0, -4],
-                            "size": [8, 8, 8],
-                            "uv": {
-                                "north": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "east": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "south": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "west": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "up": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "down": { "uv": [0, 8], "uv_size": [8, -8] }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "45",
-                    "pivot": [0, 0, 0],
-                    "rotation": [0, 45, 0],
-                    "cubes": [
-                        {
-                            "origin": [-4, 0, -4],
-                            "size": [8, 8, 8],
-                            "uv": {
-                                "north": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "east": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "south": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "west": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "up": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "down": { "uv": [0, 8], "uv_size": [8, -8] }
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "67.5",
-                    "pivot": [0, 0, 0],
-                    "rotation": [0, 67.5, 0],
-                    "cubes": [
-                        {
-                            "origin": [-4, 0, -4],
-                            "size": [8, 8, 8],
-                            "uv": {
-                                "north": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "east": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "south": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "west": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "up": { "uv": [0, 0], "uv_size": [8, 8] },
-                                "down": { "uv": [0, 8], "uv_size": [8, -8] }
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+<ExampleFile path="RP/models/blocks/custom_head.geo.json" />
 
 </Spoiler>
 
@@ -510,184 +338,7 @@ Now, use the [`permutations`](/blocks/block-permutations) array to define the ro
 
 <Spoiler title="Custom Head Block JSON">
 
-<CodeHeader>BP/blocks/custom_head.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:block": {
-        "description": {
-            "identifier": "wiki:custom_head",
-            "traits": {
-                "minecraft:placement_position": {
-                    "enabled_states": ["minecraft:block_face"]
-                }
-            },
-            "states": {
-                "wiki:intercardinal_direction": {
-                    "values": { "min": 0, "max": 15 }
-                }
-            }
-        },
-        "components": {
-            // Collision and selection boxes
-            "minecraft:collision_box": {
-                "origin": [-4, 0, -4],
-                "size": [8, 8, 8]
-            },
-            "minecraft:selection_box": {
-                "origin": [-4, 0, -4],
-                "size": [8, 8, 8]
-            },
-            // Prevents blocks (such as fences) from connecting to the block
-            "minecraft:connection_rule": {
-                "accepts_connections_from": "none"
-            },
-            // Prevents the block from being placed on the bottom face of another block
-            "minecraft:placement_filter": {
-                "conditions": [{ "allowed_faces": ["up", "side"] }]
-            },
-            // Prevents snow from accumulating above the block
-            "minecraft:precipitation_interactions": {
-                "precipitation_behavior": "none"
-            },
-            // Destruction
-            "minecraft:destructible_by_explosion": {
-                "explosion_resistance": 5
-            },
-            "minecraft:destructible_by_mining": {
-                "seconds_to_destroy": 1
-            },
-            "minecraft:destruction_particles": {
-                "particle_count": 48,
-                "texture": "soul_sand"
-            },
-            // Break and drop as an item when pushed by a piston
-            "minecraft:movable": {
-                "movement_type": "popped"
-            },
-            "minecraft:liquid_detection": {
-                "detection_rules": [
-                    {
-                        "liquid_type": "water",
-                        "can_contain_liquid": true, // Allows the block to be waterlogged
-                        "on_liquid_touches": "popped" // Break and drop as an item when water flows into the block
-                    }
-                ]
-            },
-            // Visuals
-            "minecraft:geometry": {
-                "identifier": "geometry.custom_head",
-                "bone_visibility": {
-                    "0": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 0",
-                    "22.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 1",
-                    "45": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 2",
-                    "67.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 3"
-                }
-            },
-            "minecraft:material_instances": {
-                "down": {
-                    "texture": "wiki:custom_head_bottom",
-                    "ambient_occlusion": false
-                },
-                "up": {
-                    "texture": "wiki:custom_head_top",
-                    "ambient_occlusion": false
-                },
-                "north": {
-                    "texture": "wiki:custom_head_front",
-                    "ambient_occlusion": false
-                },
-                "south": {
-                    "texture": "wiki:custom_head_back",
-                    "ambient_occlusion": false
-                },
-                "west": {
-                    "texture": "wiki:custom_head_left",
-                    "ambient_occlusion": false
-                },
-                "east": {
-                    "texture": "wiki:custom_head_right",
-                    "ambient_occlusion": false
-                }
-            }
-        },
-        "permutations": [
-            {
-                "condition": "q.block_state('minecraft:block_face') == 'up'",
-                "components": {
-                    // Sets the "wiki:intercardinal_direction" state to the correct value before the block is placed
-                    "wiki:intercardinal_orientation": {
-                        "y_rotation_offset": 180 // Face towards the player
-                    }
-                }
-            },
-            // Intercardinal directions
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 0",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, 180, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 4",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, 90, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 8",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, 0, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:intercardinal_direction') >= 12",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, -90, 0] }
-                }
-            },
-            // Block face attachments
-            {
-                "condition": "q.block_state('minecraft:block_face') == 'north'",
-                "components": {
-                    "minecraft:transformation": {
-                        "rotation": [0, 0, 0],
-                        "translation": [0, 0.25, 0.25]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:block_face') == 'west'",
-                "components": {
-                    "minecraft:transformation": {
-                        "rotation": [0, 90, 0],
-                        "translation": [0.25, 0.25, 0]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:block_face') == 'south'",
-                "components": {
-                    "minecraft:transformation": {
-                        "rotation": [0, 180, 0],
-                        "translation": [0, 0.25, -0.25]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:block_face') == 'east'",
-                "components": {
-                    "minecraft:transformation": {
-                        "rotation": [0, -90, 0],
-                        "translation": [-0.25, 0.25, 0]
-                    }
-                }
-            }
-        ]
-    }
-}
-```
+<ExampleFile path="BP/blocks/custom_head.json" />
 
 </Spoiler>
 
@@ -695,44 +346,7 @@ Now, use the [`permutations`](/blocks/block-permutations) array to define the ro
 
 In order to make our custom head wearable and enchantable, we'll need to replace its [block item](/blocks/blocks-as-items) by adding a new item definition to our pack:
 
-<CodeHeader>BP/items/custom_head.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_head", // Must be the same identifier as the block
-            "menu_category": {
-                "category": "items",
-                "group": "minecraft:itemGroup.name.skull"
-            }
-        },
-        "components": {
-            "minecraft:block_placer": {
-                "block": "wiki:custom_head", // Must be the same identifier as the block
-                "replace_block_item": true
-            },
-            // Use the same localization key as the block
-            "minecraft:display_name": {
-                "value": "tile.wiki:custom_head.name"
-            },
-            // Allows the head to be enchanted with "Curse of Binding" and "Curse of Vanishing"
-            "minecraft:enchantable": {
-                "slot": "cosmetic_head",
-                "value": 0
-            },
-            "minecraft:max_stack_size": 1, // Currently, custom wearable items cannot be stackable
-            "minecraft:rarity": "uncommon",
-            // Allows the item to be equipped into the head slot
-            "minecraft:wearable": {
-                "hides_player_location": true, // Hides the player from the locator bar and maps like vanilla heads
-                "slot": "slot.armor.head"
-            }
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_head.json" />
 
 Great! Now we're able to equip the block into the head slot:
 
@@ -744,61 +358,11 @@ If a vanilla mob has a mob head associated with it, that head will drop as an it
 
 You can use the following script to add drops for any custom heads.
 
-<CodeHeader>BP/scripts/headDrops.js</CodeHeader>
+<ExampleFile path="BP/scripts/headDrops.js" />
 
-```js
-import { ItemStack, system, world } from "@minecraft/server";
+Remember to import the scripts into your entry file!
 
-// Object where keys are entity types and values are the item to drop when exploded by a charged creeper
-const heads = {
-    "minecraft:husk": "wiki:custom_head",
-};
-
-// Set containing the unique IDs of charged creepers that have exploded within the last tick
-const explodingChargedCreepers = new Set();
-
-world.beforeEvents.explosion.subscribe(({ source }) => {
-    if (!source) return;
-
-    const isCreeper = source.typeId === "minecraft:creeper";
-    const isCharged = source.hasComponent("minecraft:is_charged");
-
-    if (isCreeper && isCharged) {
-        // Add the charged creeper's ID to the set
-        explodingChargedCreepers.add(source.id);
-
-        // Remove the ID after the next tick
-        system.runTimeout(() => explodingChargedCreepers.delete(source.id), 1);
-    }
-});
-
-world.afterEvents.entityDie.subscribe(
-    (event) => {
-        const { damagingEntity } = event.damageSource;
-        if (!damagingEntity || !world.gameRules.doMobLoot) return;
-
-        // Check whether the damaging entity is one of the charged creepers that exploded within the last tick
-        const explodedByChargedCreeper = explodingChargedCreepers.has(damagingEntity.id);
-
-        if (explodedByChargedCreeper) {
-            const { dimension, location, typeId } = event.deadEntity;
-            const head = heads[typeId];
-
-            dimension.spawnItem(new ItemStack(head), location);
-        }
-    },
-    { entityTypes: Object.keys(heads) } // Only subscribe to the deaths of entities that should drop heads
-);
-```
-
-Remember to import the script into your entry file!
-
-<CodeHeader>BP/scripts/index.js</CodeHeader>
-
-```js
-import "./headDrops.js";
-import "./intercardinalOrientation.js";
-```
+<ExampleFile path="BP/scripts/index.js" />
 
 ## Result
 
@@ -820,6 +384,6 @@ What you have created:
 
 Template pack made according to this tutorial, adding a "Custom Head" block that is dropped when husks are exploded by charged creepers.
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/custom_heads.mcaddon">
+<Button link="custom-heads.zip" download="Custom Heads.mcaddon" color="green">
     Download MCADDON
 </Button>

@@ -1,5 +1,6 @@
 ---
 title: Custom Armor
+example: custom_armor
 description: Learn how to make a custom armor set.
 category: Tutorials
 license: true
@@ -33,140 +34,25 @@ The first armor model texture (named `custom_1.png` here) is applied to the helm
 
 <div style="display: grid; grid-template-columns: repeat(auto-fill, 256px); column-gap: 1em;">
 
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_helmet.png"
-    caption="RP/textures/wiki/items/custom_helmet.png"
-    alt=""
-    pixelated
-/>
-
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_chestplate.png"
-    caption="RP/textures/wiki/items/custom_chestplate.png"
-    alt=""
-    pixelated
-/>
-
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_leggings.png"
-    caption="RP/textures/wiki/items/custom_leggings.png"
-    alt=""
-    pixelated
-/>
-
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_boots.png"
-    caption="RP/textures/wiki/items/custom_boots.png"
-    alt=""
-    pixelated
-/>
-
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_baby.png"
-    caption="RP/textures/wiki/models/armor/custom_baby.png"
-    alt=""
-    pixelated
-/>
-
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_1.png"
-    caption="RP/textures/wiki/models/armor/custom_1.png"
-    alt=""
-    pixelated
-/>
-
-<WikiImage
-    src="/assets/images/items/custom-armor/custom_2.png"
-    caption="RP/textures/wiki/models/armor/custom_2.png"
-    alt=""
-    pixelated
-/>
+<ExampleFile path="RP/textures/wiki/items/custom_helmet.png" />
+<ExampleFile path="RP/textures/wiki/items/custom_chestplate.png" />
+<ExampleFile path="RP/textures/wiki/items/custom_leggings.png" />
+<ExampleFile path="RP/textures/wiki/items/custom_boots.png" />
+<ExampleFile path="RP/textures/wiki/models/armor/custom_baby.png" />
+<ExampleFile path="RP/textures/wiki/models/armor/custom_1.png" />
+<ExampleFile path="RP/textures/wiki/models/armor/custom_2.png" />
 
 </div>
 
 You'll also need to add each item icon to the [items texture atlas](/concepts/texture-atlases#items) using the `item_texture.json` file:
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
-
-```json
-{
-    "texture_data": {
-        "wiki:custom_helmet": {
-            "textures": "textures/wiki/items/custom_helmet"
-        },
-        "wiki:custom_chestplate": {
-            "textures": "textures/wiki/items/custom_chestplate"
-        },
-        "wiki:custom_leggings": {
-            "textures": "textures/wiki/items/custom_leggings"
-        },
-        "wiki:custom_boots": {
-            "textures": "textures/wiki/items/custom_boots"
-        }
-    }
-}
-```
+<ExampleFile path="RP/textures/item_texture.json" />
 
 ## Custom Helmet
 
 ### Item JSON
 
-<CodeHeader>BP/items/custom_helmet.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_helmet",
-            // Places the item into the "Helmets" group in the creative menu
-            "menu_category": {
-                "category": "equipment",
-                "group": "minecraft:itemGroup.name.helmet"
-            }
-        },
-        "components": {
-            // Defines the texture from "item_texture.json" that will be displayed as the item's 2D icon
-            "minecraft:icon": "wiki:custom_helmet",
-            // Prevents the item from stacking with itself like vanilla armor
-            "minecraft:max_stack_size": 1,
-            // Allows the armor to receive enchantments specific to its type
-            "minecraft:enchantable": {
-                "slot": "armor_head",
-                "value": 10
-            },
-            // Allows the item to be worn in the head slot, displaying the attachable defined in the RP
-            "minecraft:wearable": {
-                "slot": "slot.armor.head",
-                "protection": 3
-            },
-            // Allows the item to take damage when worn
-            "minecraft:durability": {
-                "damage_chance": {
-                    "min": 60,
-                    "max": 100
-                },
-                "max_durability": 363
-            },
-            // Allows the item to be repaired after it has taken damage
-            "minecraft:repairable": {
-                "repair_items": [
-                    {
-                        "items": ["minecraft:stick"], // The items that can be used to repair this item
-                        "repair_amount": "q.max_durability * 0.25" // Increases the durability by 25%
-                    }
-                ]
-            },
-            "minecraft:tags": {
-                "tags": [
-                    "minecraft:is_armor",
-                    "minecraft:trimmable_armors" // Allows the armor to be trimmed in a Smithing Table
-                ]
-            }
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_helmet.json" />
 
 ### Attachable JSON
 
@@ -177,40 +63,7 @@ To start with, you'll need to create an `attachables` folder in your resource pa
 
 The attachable samples in this guide are largely based on the vanilla armor attachables, which have support for armor trims, enchantment glint and dedicated models for baby mobs.
 
-<CodeHeader>RP/attachables/custom_helmet.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.8.0",
-    "minecraft:attachable": {
-        "description": {
-            "identifier": "wiki:custom_helmet",
-            "materials": {
-                "default": "armor",
-                "enchanted": "armor_enchanted"
-            },
-            "textures": {
-                "default": "textures/wiki/models/armor/custom_1",
-                "enchanted": "textures/misc/enchanted_actor_glint",
-                "baby": "textures/wiki/models/armor/custom_baby"
-            },
-            "geometry": {
-                "default": "geometry.humanoid.armor.helmet",
-                "baby": "geometry.humanoid.baby.armor.helmet"
-            },
-            "scripts": {
-                // Prevents parts of the player's skin from sticking through the armor
-                "parent_setup": "v.helmet_layer_visible = false;",
-                "pre_animation": [
-                    // Variable used by the render controller to determine whether the "baby" geometry and texture should be used
-                    "v.use_baby_geo = q.is_baby && c.owning_entity->v.use_dedicated_baby_armor;"
-                ]
-            },
-            "render_controllers": ["controller.render.armor.v2"]
-        }
-    }
-}
-```
+<ExampleFile path="RP/attachables/custom_helmet.json" />
 
 ### Item Name
 
@@ -230,99 +83,11 @@ If you now go into the game and check what you have produced you should be able 
 
 ### Item JSON
 
-<CodeHeader>BP/items/custom_chestplate.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_chestplate",
-            // Places the item into the "Chestplates" group in the creative menu
-            "menu_category": {
-                "category": "equipment",
-                "group": "minecraft:itemGroup.name.chestplate"
-            }
-        },
-        "components": {
-            // Defines the texture from "item_texture.json" that will be displayed as the item's 2D icon
-            "minecraft:icon": "wiki:custom_chestplate",
-            // Prevents the item from stacking with itself like vanilla armor
-            "minecraft:max_stack_size": 1,
-            // Allows the armor to receive enchantments specific to its type
-            "minecraft:enchantable": {
-                "slot": "armor_torso",
-                "value": 10
-            },
-            // Allows the item to be worn in the chest slot, displaying the attachable defined in the RP
-            "minecraft:wearable": {
-                "slot": "slot.armor.chest",
-                "protection": 8
-            },
-            // Allows the item to take damage when worn
-            "minecraft:durability": {
-                "damage_chance": {
-                    "min": 60,
-                    "max": 100
-                },
-                "max_durability": 528
-            },
-            // Allows the item to be repaired after it has taken damage
-            "minecraft:repairable": {
-                "repair_items": [
-                    {
-                        "items": ["minecraft:stick"], // The items that can be used to repair this item
-                        "repair_amount": "q.max_durability * 0.25" // Increases the durability by 25%
-                    }
-                ]
-            },
-            "minecraft:tags": {
-                "tags": [
-                    "minecraft:is_armor",
-                    "minecraft:trimmable_armors" // Allows the armor to be trimmed in a Smithing Table
-                ]
-            }
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_chestplate.json" />
 
 ### Attachable JSON
 
-<CodeHeader>RP/attachables/custom_chestplate.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.8.0",
-    "minecraft:attachable": {
-        "description": {
-            "identifier": "wiki:custom_chestplate",
-            "materials": {
-                "default": "armor",
-                "enchanted": "armor_enchanted"
-            },
-            "textures": {
-                "default": "textures/wiki/models/armor/custom_1",
-                "enchanted": "textures/misc/enchanted_actor_glint",
-                "baby": "textures/wiki/models/armor/custom_baby"
-            },
-            "geometry": {
-                "default": "geometry.humanoid.armor.chestplate",
-                "baby": "geometry.humanoid.baby.armor.chestplate"
-            },
-            "scripts": {
-                // Prevents parts of the player's skin from sticking through the armor
-                "parent_setup": "v.chest_layer_visible = false;",
-                "pre_animation": [
-                    // Variable used by the render controller to determine whether the "baby" geometry and texture should be used
-                    "v.use_baby_geo = q.is_baby && c.owning_entity->v.use_dedicated_baby_armor;"
-                ]
-            },
-            "render_controllers": ["controller.render.armor.v2"]
-        }
-    }
-}
-```
+<ExampleFile path="RP/attachables/custom_chestplate.json" />
 
 ### Item Name
 
@@ -336,99 +101,11 @@ item.wiki:custom_chestplate=Custom Chestplate
 
 ### Item JSON
 
-<CodeHeader>BP/items/custom_leggings.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_leggings",
-            // Places the item into the "Leggings" group in the creative menu
-            "menu_category": {
-                "category": "equipment",
-                "group": "minecraft:itemGroup.name.leggings"
-            }
-        },
-        "components": {
-            // Defines the texture from "item_texture.json" that will be displayed as the item's 2D icon
-            "minecraft:icon": "wiki:custom_leggings",
-            // Prevents the item from stacking with itself like vanilla armor
-            "minecraft:max_stack_size": 1,
-            // Allows the armor to receive enchantments specific to its type
-            "minecraft:enchantable": {
-                "slot": "armor_legs",
-                "value": 10
-            },
-            // Allows the item to be worn in the legs slot, displaying the attachable defined in the RP
-            "minecraft:wearable": {
-                "slot": "slot.armor.legs",
-                "protection": 6
-            },
-            // Allows the item to take damage when worn
-            "minecraft:durability": {
-                "damage_chance": {
-                    "min": 60,
-                    "max": 100
-                },
-                "max_durability": 495
-            },
-            // Allows the item to be repaired after it has taken damage
-            "minecraft:repairable": {
-                "repair_items": [
-                    {
-                        "items": ["minecraft:stick"], // The items that can be used to repair this item
-                        "repair_amount": "q.max_durability * 0.25" // Increases the durability by 25%
-                    }
-                ]
-            },
-            "minecraft:tags": {
-                "tags": [
-                    "minecraft:is_armor",
-                    "minecraft:trimmable_armors" // Allows the armor to be trimmed in a Smithing Table
-                ]
-            }
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_leggings.json" />
 
 ### Attachable JSON
 
-<CodeHeader>RP/attachables/custom_leggings.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.8.0",
-    "minecraft:attachable": {
-        "description": {
-            "identifier": "wiki:custom_leggings",
-            "materials": {
-                "default": "armor",
-                "enchanted": "armor_enchanted"
-            },
-            "textures": {
-                "default": "textures/wiki/models/armor/custom_2",
-                "enchanted": "textures/misc/enchanted_actor_glint",
-                "baby": "textures/wiki/models/armor/custom_baby"
-            },
-            "geometry": {
-                "default": "geometry.humanoid.armor.leggings",
-                "baby": "geometry.humanoid.baby.armor.leggings"
-            },
-            "scripts": {
-                // Prevents parts of the player's skin from sticking through the armor
-                "parent_setup": "v.leg_layer_visible = false;",
-                "pre_animation": [
-                    // Variable used by the render controller to determine whether the "baby" geometry and texture should be used
-                    "v.use_baby_geo = q.is_baby && c.owning_entity->v.use_dedicated_baby_armor;"
-                ]
-            },
-            "render_controllers": ["controller.render.armor.v2"]
-        }
-    }
-}
-```
+<ExampleFile path="RP/attachables/custom_leggings.json" />
 
 ### Item Name
 
@@ -442,99 +119,11 @@ item.wiki:custom_leggings=Custom Leggings
 
 ### Item JSON
 
-<CodeHeader>BP/items/custom_boots.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_boots",
-            // Places the item into the "Boots" group in the creative menu
-            "menu_category": {
-                "category": "equipment",
-                "group": "minecraft:itemGroup.name.boots"
-            }
-        },
-        "components": {
-            // Defines the texture from "item_texture.json" that will be displayed as the item's 2D icon
-            "minecraft:icon": "wiki:custom_boots",
-            // Prevents the item from stacking with itself like vanilla armor
-            "minecraft:max_stack_size": 1,
-            // Allows the armor to receive enchantments specific to its type
-            "minecraft:enchantable": {
-                "slot": "armor_feet",
-                "value": 10
-            },
-            // Allows the item to be worn in the feet slot, displaying the attachable defined in the RP
-            "minecraft:wearable": {
-                "slot": "slot.armor.feet",
-                "protection": 3
-            },
-            // Allows the item to take damage when worn
-            "minecraft:durability": {
-                "damage_chance": {
-                    "min": 60,
-                    "max": 100
-                },
-                "max_durability": 429
-            },
-            // Allows the item to be repaired after it has taken damage
-            "minecraft:repairable": {
-                "repair_items": [
-                    {
-                        "items": ["minecraft:stick"], // The items that can be used to repair this item
-                        "repair_amount": "q.max_durability * 0.25" // Increases the durability by 25%
-                    }
-                ]
-            },
-            "minecraft:tags": {
-                "tags": [
-                    "minecraft:is_armor",
-                    "minecraft:trimmable_armors" // Allows the armor to be trimmed in a Smithing Table
-                ]
-            }
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_boots.json" />
 
 ### Attachable JSON
 
-<CodeHeader>RP/attachables/custom_boots.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.8.0",
-    "minecraft:attachable": {
-        "description": {
-            "identifier": "wiki:custom_boots",
-            "materials": {
-                "default": "armor",
-                "enchanted": "armor_enchanted"
-            },
-            "textures": {
-                "default": "textures/wiki/models/armor/custom_1",
-                "enchanted": "textures/misc/enchanted_actor_glint",
-                "baby": "textures/wiki/models/armor/custom_baby"
-            },
-            "geometry": {
-                "default": "geometry.humanoid.armor.boots",
-                "baby": "geometry.humanoid.baby.armor.boots"
-            },
-            "scripts": {
-                // Prevents parts of the player's skin from sticking through the armor
-                "parent_setup": "v.boot_layer_visible = false;",
-                "pre_animation": [
-                    // Variable used by the render controller to determine whether the "baby" geometry and texture should be used
-                    "v.use_baby_geo = q.is_baby && c.owning_entity->v.use_dedicated_baby_armor;"
-                ]
-            },
-            "render_controllers": ["controller.render.armor.v2"]
-        }
-    }
-}
-```
+<ExampleFile path="RP/attachables/custom_boots.json" />
 
 ### Item Name
 
@@ -555,7 +144,7 @@ You can use this as a basis to make whatever other armor you want in the game.
 
 Download the template pack made according to this tutorial below!
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/custom_armor.mcaddon">
+<Button link="custom-armor.zip" download="Custom Armor.mcaddon" color="green">
     Download MCADDON
 </Button>
 

@@ -1,5 +1,6 @@
 ---
 title: Custom Crops
+example: custom_crops
 description: Learn how to create your own crop blocks that grow just like vanilla crops!
 category: Vanilla Re-Creations
 tags:
@@ -46,9 +47,11 @@ Here is a template model for the crop:
 
 ![](/assets/images/blocks/custom-crops/model.png)
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-examples/blob/main/resources/custom_crops/rp/models/blocks/crop.geo.json">
-    Download Custom Crop Geometry
-</Button>
+<Spoiler title="Example Crop Model">
+
+<ExampleFile path="RP/models/blocks/custom_crop.geo.json" />
+
+</Spoiler>
 
 ## Initial Block JSON
 
@@ -382,169 +385,7 @@ onPlayerInteract({ block, dimension, player }, { params }) {
 
 <Spoiler title="Crop Growth Script">
 
-<CodeHeader>BP/scripts/cropGrowth.js</CodeHeader>
-
-```js
-import { system, EquipmentSlot, GameMode } from "@minecraft/server";
-
-export const cropGrowthComponentName = "wiki:crop_growth";
-
-/** @type {import("@minecraft/server").BlockCustomComponent} */
-const BlockCropGrowthComponent = {
-    onRandomTick({ block }, { params }) {
-        // Growth parameters
-        const growthState = params.growth_state;
-        const maxGrowth = params.max_growth;
-        const minLightLevel = params.min_light_level;
-
-        // Ensure that the minimum light level is met
-        if (block.getLightLevel() < minLightLevel) return;
-
-        const { permutation } = block;
-
-        // Get the current growth of the crop
-        const growth = permutation.getState(growthState) ?? maxGrowth;
-
-        // Ensure that the crop is not already fully grown
-        if (growth === maxGrowth) return;
-
-        // Only grow on some random ticks
-        if (!randomShouldCropGrow(block, params)) return;
-
-        // Increment the growth state
-        block.setPermutation(permutation.withState(growthState, growth + 1));
-    },
-    onPlayerInteract({ block, dimension, player }, { params }) {
-        if (!player) return;
-
-        const equippable = player.getComponent("minecraft:equippable");
-        if (!equippable) return;
-
-        const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
-        if (!mainhand.hasItem()) return;
-
-        const hasBoneMeal = mainhand.typeId === "minecraft:bone_meal"; // Whether the player is holding Bone Meal
-        const hasRapidFertilizer = mainhand.typeId === "minecraft:rapid_fertilizer"; // Whether the player is holding Super Fertilizer (from Minecraft Eduction)
-
-        // Exit if the player is not holding Bone Meal or Super Fertilizer
-        if (!hasBoneMeal && !hasRapidFertilizer) return;
-
-        const isCreative = player.getGameMode() === GameMode.Creative; // Whether the player is in creative mode
-
-        // Growth parameters
-        const growthState = params.growth_state;
-        const growthRange = params.growth_on_fertilize;
-        const maxGrowth = params.max_growth;
-
-        const { permutation } = block;
-
-        if (hasRapidFertilizer || isCreative) {
-            // Grow the crop fully when the player is holding Super Fertilizer or is in creative mode
-            block.setPermutation(permutation.withState(growthState, maxGrowth));
-        } else {
-            // Add a random amount of growth when the player is using Bone Meal and is not in creative mode
-            let growth = permutation.getState(growthState);
-
-            growth += randomInt(...growthRange); // Add a random amount of growth in the "growth_on_fertilize" range
-            growth = Math.min(growth, maxGrowth); // Prevent the new growth from being over the maximum
-
-            block.setPermutation(permutation.withState(growthState, growth));
-        }
-
-        // Decrement the item stack when the player is not in creative mode
-        if (!isCreative) {
-            if (mainhand.amount > 1) mainhand.amount--;
-            else mainhand.setItem(undefined);
-        }
-
-        // Play effects
-        const effectLocation = block.center();
-        dimension.playSound("item.bone_meal.use", effectLocation);
-        dimension.spawnParticle("minecraft:crop_growth_emitter", effectLocation);
-    },
-};
-
-system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
-    blockComponentRegistry.registerCustomComponent(
-        cropGrowthComponentName,
-        BlockCropGrowthComponent
-    );
-});
-
-function randomInt(min, max) {
-    return min + Math.floor(Math.random() * (max - min + 1));
-}
-
-export function randomShouldCropGrow(crop, growthParams) {
-    const growthSpeed = getGrowthSpeed(crop, growthParams);
-    const growthChanceRange = Math.floor(25 / growthSpeed);
-
-    return randomInt(0, growthChanceRange) === 0;
-}
-
-function getGrowthSpeed(crop, growthParams) {
-    let speed = 1;
-
-    // Increase growth speed based on nearby farmland blocks and their moisture
-    for (const farmland of getFarmlandIterator(crop, growthParams.farmland_search_range)) {
-        let speedModifier = growthParams.farmland_speed_modifier;
-
-        const moisture = farmland.permutation.getState("moisturized_amount");
-        if (moisture > 0) {
-            speedModifier += growthParams.farmland_moisture_speed_modifier;
-        }
-
-        const isDirectlyBelowCrop = farmland.x === crop.x && farmland.z === crop.z;
-        if (!isDirectlyBelowCrop) {
-            speedModifier *= growthParams.neighboring_farmland_speed_multiplier;
-        }
-
-        speed += speedModifier;
-    }
-
-    // Halves the growth speed if there are surrounding crops of the same type in vanilla (where "crowding_speed_multiplier" is 0.5)
-    if (isCrowded(crop)) {
-        speed *= growthParams.crowding_speed_multiplier;
-    }
-
-    return speed;
-}
-
-function* getFarmlandIterator(crop, searchRange) {
-    for (let x = -searchRange; x <= searchRange; x++) {
-        for (let z = -searchRange; z <= searchRange; z++) {
-            const block = crop.offset({ x, y: -1, z });
-
-            // Yield the block if it is farmland
-            const isFarmland = block?.typeId === "minecraft:farmland";
-            if (isFarmland) yield block;
-        }
-    }
-}
-
-function isCrowded(crop) {
-    const northBlock = crop.north();
-    const southBlock = crop.south();
-    const westBlock = crop.west();
-    const eastBlock = crop.east();
-
-    const isEnclosed =
-        (westBlock?.typeId === crop.typeId || eastBlock?.typeId === crop.typeId) &&
-        (northBlock?.typeId === crop.typeId || southBlock?.typeId === crop.typeId);
-
-    if (isEnclosed) return true;
-
-    const isCropDiagonallyAdjacent =
-        northBlock?.west()?.typeId === crop.typeId ||
-        northBlock?.east()?.typeId === crop.typeId ||
-        southBlock?.west()?.typeId === crop.typeId ||
-        southBlock?.east()?.typeId === crop.typeId;
-
-    if (isCropDiagonallyAdjacent) return true;
-
-    return false;
-}
-```
+<ExampleFile path="BP/scripts/cropGrowth.js" />
 
 </Spoiler>
 
@@ -688,202 +529,7 @@ Here is the entire `wiki:custom_crop` file for reference.
 
 <Spoiler title="Custom Crop Block JSON">
 
-<CodeHeader>BP/blocks/custom_crop.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:block": {
-        "description": {
-            "identifier": "wiki:custom_crop",
-            "states": {
-                "wiki:growth": {
-                    "values": { "min": 0, "max": 7 }
-                }
-            }
-        },
-        "components": {
-            "tag:minecraft:crop": {},
-            "minecraft:collision_box": false,
-            // Trigger growth on random ticks and when interacting with Bone Meal
-            "wiki:crop_growth": {
-                "growth_state": "wiki:growth",
-                "max_growth": 7,
-                // Require a light level of 9 or above in order to grow on random ticks
-                "min_light_level": 9,
-                // Match the growth speed of vanilla crops
-                "farmland_search_range": 1,
-                "farmland_speed_modifier": 1,
-                "farmland_moisture_speed_modifier": 2,
-                "neighboring_farmland_speed_multiplier": 0.25,
-                "crowding_speed_multiplier": 0.5,
-                // Add 2-5 growth stages at random when a non-creative mode player uses Bone Meal on the crop
-                "growth_on_fertilize": [2, 5]
-            },
-            // Visuals
-            "minecraft:destruction_particles": {
-                "particle_count": 48
-            },
-            "minecraft:geometry": "geometry.custom_crop",
-            "minecraft:material_instances": {
-                "*": {
-                    "texture": "wiki:custom_crop_0",
-                    "render_method": "alpha_test_single_sided",
-                    "ambient_occlusion": false,
-                    "face_dimming": false
-                }
-            },
-            // Break the crop if it isn't placed on farmland
-            "minecraft:placement_filter": {
-                "conditions": [
-                    {
-                        "allowed_faces": ["up"],
-                        "block_filter": ["minecraft:farmland"]
-                    }
-                ]
-            },
-            // Prevent rain from splashing and snow from accumulating on top of the block
-            "minecraft:precipitation_interactions": {
-                "precipitation_behavior": "none"
-            },
-            // Break the crop when water flows into it
-            "minecraft:liquid_detection": {
-                "detection_rules": [
-                    {
-                        "liquid_type": "water",
-                        "on_liquid_touches": "popped"
-                    }
-                ]
-            },
-            // Break the crop when it is pushed by a piston
-            "minecraft:movable": {
-                "movement_type": "popped"
-            },
-            // Prevent blocks such as fences and glass panes from connecting
-            "minecraft:connection_rule": {
-                "accepts_connections_from": "none"
-            }
-        },
-        "permutations": [
-            {
-                "condition": "q.block_state('wiki:growth') < 7",
-                "components": {
-                    // Loot table for when the crop is not fully grown; vanilla crops only drop seeds when young
-                    "minecraft:loot": "loot_tables/wiki/blocks/custom_crop_young.json"
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 0",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 1.6, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 1",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 3.2, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') >= 2",
-                "components": {
-                    "minecraft:material_instances": {
-                        "*": {
-                            "texture": "wiki:custom_crop_1",
-                            "render_method": "alpha_test_single_sided",
-                            "ambient_occlusion": false,
-                            "face_dimming": false
-                        }
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 2",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 4.8, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 3",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 6.4, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') >= 4",
-                "components": {
-                    "minecraft:material_instances": {
-                        "*": {
-                            "texture": "wiki:custom_crop_2",
-                            "render_method": "alpha_test_single_sided",
-                            "ambient_occlusion": false,
-                            "face_dimming": false
-                        }
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 4",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 8, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 5",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 9.6, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 6",
-                "components": {
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 11.2, 16]
-                    }
-                }
-            },
-            {
-                "condition": "q.block_state('wiki:growth') == 7",
-                "components": {
-                    "minecraft:material_instances": {
-                        "*": {
-                            "texture": "wiki:custom_crop_3",
-                            "render_method": "alpha_test_single_sided",
-                            "ambient_occlusion": false,
-                            "face_dimming": false
-                        }
-                    },
-                    "minecraft:selection_box": {
-                        "origin": [-8, 0, -8],
-                        "size": [16, 12.8, 16]
-                    },
-                    // Drop different loot when fully grown
-                    "minecraft:loot": "loot_tables/wiki/blocks/custom_crop_mature.json"
-                }
-            }
-        ]
-    }
-}
-```
+<ExampleFile path="BP/blocks/custom_crop.json" />
 
 </Spoiler>
 
@@ -893,134 +539,24 @@ Below are some example loot tables that your custom crop could use:
 
 ### Young Crop Loot Table
 
-<CodeHeader>BP/loot_tables/wiki/blocks/custom_crop_young.json</CodeHeader>
-
-```json
-{
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "wiki:custom_seeds"
-                }
-            ]
-        }
-    ]
-}
-```
+<ExampleFile path="BP/loot_tables/wiki/blocks/custom_crop_young.json" />
 
 ### Mature Crop Loot Table
 
-<CodeHeader>BP/loot_tables/wiki/blocks/custom_crop_mature.json</CodeHeader>
-
-```json
-{
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "wiki:custom_food",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": { "min": 2, "max": 5 }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "wiki:custom_seeds",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": { "min": 0, "max": 3 }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+<ExampleFile path="BP/loot_tables/wiki/blocks/custom_crop_mature.json" />
 
 ## Custom Seeds
 
 Holding a crop block in your hand wouldn't look right, so we place the crop with seeds!
 Below is the JSON for a custom item that places your crop.
 
-<CodeHeader>BP/items/custom_seeds.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_seeds", // Make sure this is different from your crop's ID
-            "menu_category": {
-                "category": "nature",
-                "group": "minecraft:itemGroup.name.seed"
-            }
-        },
-        "components": {
-            "minecraft:block_placer": {
-                "block": "wiki:custom_crop"
-            },
-            "minecraft:compostable": {
-                "composting_chance": 30 // 30% chance to increment the compost level
-            },
-            "minecraft:icon": "wiki:custom_seeds"
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_seeds.json" />
 
 ## Custom Food
 
 Your crop can't only drop seeds! Create a custom food using the template below.
 
-<CodeHeader>BP/items/custom_food.json</CodeHeader>
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:custom_food", // Make sure this is different from your crop and seeds' ID.
-            "menu_category": {
-                "category": "nature",
-                "group": "minecraft:itemGroup.name.crop"
-            }
-        },
-        "components": {
-            "minecraft:icon": "wiki:custom_food",
-            "minecraft:compostable": {
-                "composting_chance": 65 // 65% chance to increment the compost level
-            },
-            "minecraft:food": {
-                "nutrition": 4,
-                "saturation_modifier": 0.6
-            },
-            "minecraft:use_animation": "eat",
-            "minecraft:use_modifiers": {
-                "use_duration": 1.6,
-                "movement_modifier": 0.35
-            },
-            "minecraft:tags": {
-                "tags": ["minecraft:is_food"]
-            }
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/custom_food.json" />
 
 ## Result
 
@@ -1041,6 +577,6 @@ With the help of this tutorial/template, you now have the knowledge and skills t
 
 If you require further assistance or would like to access the complete template files, please use the download button provided below. Happy designing!
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/custom_crops.mcaddon">
+<Button link="custom-crops.zip" download="Custom Crops.mcaddon" color="green">
     Download MCADDON
 </Button>
