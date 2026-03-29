@@ -1047,7 +1047,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 ### Tick
 
 Causes the block to "tick" after a random delay in the range specified by `interval_range`.
-Queued ticks can be handled by using the [`onTick()`](/blocks/block-events#tick) even hook in a custom component.
+Queued ticks can be handled by using the [`onTick()`{lang=js}](/blocks/block-events#tick) event hook in a custom component.
 
 Note that a maximum of 100 queued ticks can be executed in a given chunk every tick, meaning the actual time it takes for the block to tick may be delayed to take slightly longer than specified here if the chunk that the block is placed in contains many ticking blocks.
 
