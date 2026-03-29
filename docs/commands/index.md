@@ -9,6 +9,8 @@ categories:
       color: blue
     - title: Scoreboard Systems
       color: blue
+    - title: Detection Systems
+      color: blue
     - title: Techniques
       color: orange
     - title: Useful Creations

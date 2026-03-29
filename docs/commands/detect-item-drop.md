@@ -1,6 +1,6 @@
 ---
 title: Item Drop Detection
-category: Techniques
+category: Detection Systems
 tags:
     - easy
 mentions:
@@ -17,7 +17,7 @@ This technique allows you to differentiate player dropped items from other dropp
 
 ## Commands
 
-<CodeHeader>BP/functions/wiki/detect_state/item/is_dropped_by.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/item/is_dropped_by.mcfunction</CodeHeader>
 
 ```yaml
 ## Tag Items From Other

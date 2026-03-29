@@ -9,6 +9,7 @@ mentions:
     - Plagiatus
     - zheaEvyline
     - GobbleCrow
+nav_order: 6
 description: This command-technique allows you to detect when a target looks at a player/entity/coordinate and subsequently run your desired commands.
 ---
 
@@ -28,7 +29,7 @@ This technique does not account for obstructions in the view direction, such as 
 
 ## Command
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_looking_at.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_looking_at.mcfunction</CodeHeader>
 
 ```yaml
 execute as <target> at @s anchored eyes facing <entity | coordinate> positioned ^^^1 positioned ~~-1.62~ rotated as @s positioned ^^^-1 if entity @s[r=0.2] run <command>
@@ -77,7 +78,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 1. Run a `/say` command when looking at the eyes of cows or sheeps tagged 'target':
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_looking_at/target.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_looking_at/target.mcfunction</CodeHeader>
 
 ```yaml
 execute as @a at @s anchored eyes facing entity @e[type=cow,tag=wiki:target] eyes positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s[r=0.2] run say hello cow!
@@ -88,7 +89,7 @@ execute as @a at @s anchored eyes facing entity @e[type=sheep,tag=wiki:target] e
 
 2. Run a `/say` command when looking at the position `(10, 20, 30)` or `(6, 7, 8)`:
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_looking_at/position.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_looking_at/position.mcfunction</CodeHeader>
 
 ```yaml
 execute as @a at @s anchored eyes facing 10 20 30 positioned ~~-1.62~ positioned ^^^1 rotated as @s positioned ^^^-1 if entity @s[r=0.2] run say hello block!
@@ -99,7 +100,7 @@ execute as @a at @s anchored eyes facing 6 7 8 positioned ~~-1.62~ positioned ^^
 
 **Alternative Structure:**
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_looking_at.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_looking_at.mcfunction</CodeHeader>
 
 ```yaml
 execute as <target> at <coordinate | entity> facing entity @s eyes positioned as @s positioned ^^^1 rotated as @s positioned ^^^1 if entity @s[r=0.02] run <command>
@@ -135,7 +136,7 @@ With the above calculation, the example value of `r=0.2` leaves us with roughly 
 
 If you need higher precision for detecting where a player is looking—ideal for fine-tuned mechanics—you can use the following command which uses a very similar logic:
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_precisely_looking_at.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_precisely_looking_at.mcfunction</CodeHeader>
 
 ```yaml
 execute as @a at @s anchored eyes positioned ~~-0.5~ facing entity @e[type=armor_stand,rm=0.0001] feet positioned ^^^10 rotated as @s positioned ^^^10 facing entity @s eyes positioned as @s positioned ^^^-1 rotated as @s positioned ^^^-1 if entity @s[r=0.766] positioned as @s anchored eyes positioned as @e[type=armor_stand,rm=0.0001] anchored feet positioned ~~0.5~ positioned ^^^100000 facing entity @s eyes positioned as @s positioned ^^^10 rotated as @s positioned ^^^10 run title @s[r=0.00005] actionbar §aFound Armor Stand!

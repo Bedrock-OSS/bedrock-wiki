@@ -71,12 +71,15 @@ If using functions, your pack folder structure will be as follows:
     'BP',
     'BP/functions',
     'BP/functions/wiki',
+    'BP/functions/wiki/main.mcfunction',
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/wiki/execute_at_blocks',
     'BP/functions/wiki/execute_at_blocks/diamond_block.mcfunction'
 ]"
 ></FolderView>
+
+In this setup, the `diamond_block` function is called by `main.mcfunction`, which is executed every tick via `tick.json`.
 
 ## System - Modified
 

@@ -1,6 +1,6 @@
 ---
 title: Movement Detections
-category: Techniques
+category: Detection Systems
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -34,7 +34,7 @@ This technique allows you to detect when your target is/isn't moving, accounting
 -   Make sure you add the `wiki:q.is_moving` scoreboard objective:
     -   `/scoreboard objectives add wiki:q.is_moving dummy`
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_moving.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_moving.mcfunction</CodeHeader>
 
 ```yaml
 ## Movement Detection
@@ -84,7 +84,7 @@ If you desperately need to detect walking and sprinting separately **solely usin
 Walk/Sprint Detection may not work as intended with effects & enchantments.
 :::
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_moving.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_moving.mcfunction</CodeHeader>
 
 ```yaml
 ## Movement Detection
@@ -151,7 +151,7 @@ Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 -   Make sure you add the `wiki:q.is_sleeping` scoreboard objective:
     -   `/scoreboard objectives add wiki:wiki:q.is_sleeping dummy`
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_sleeping.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_sleeping.mcfunction</CodeHeader>
 
 ```yaml
 ## Sleep Detection
@@ -196,7 +196,7 @@ Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the
 -   Make sure you add the `wiki:q.is_sneaking` scoreboard objective:
     -   `/scoreboard objectives add wiki:wiki:q.is_sneaking dummy`
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_sneaking.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_sneaking.mcfunction</CodeHeader>
 
 ```yaml
 ## Sneak Detection
@@ -246,7 +246,7 @@ Swimming in water or gliding with Elytra will be detected as crawling.
 -   Make sure you add the `wiki:q.is_crawling` scoreboard objective:
     -   `/scoreboard objectives add wiki:wiki:q.is_crawling dummy`
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_crawling.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
 ## Crawl Detection
@@ -293,7 +293,7 @@ If you desperately need to detect all three states separately **solely using com
 
 :::
 
-<CodeHeader>BP/functions/wiki/detect_state/player/is_crawling.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/detect/player/is_crawling.mcfunction</CodeHeader>
 
 ```yaml
 ## Set Player States
@@ -341,11 +341,14 @@ If you are working with functions, your folder structure may look something like
     'BP/manifest.json',
     'BP/pack_icon.png',
     'BP/functions/wiki',
-    'BP/functions/wiki/detect_state',
-    'BP/functions/wiki/detect_state/player',
-    'BP/functions/wiki/detect_state/player/is_moving.mcfunction',
-    'BP/functions/wiki/detect_state/player/is_sleeping.mcfunction',
-    'BP/functions/wiki/detect_state/player/is_crawling.mcfunction',
+    'BP/functions/wiki/main.mcfunction',
+    'BP/functions/wiki/detect',
+    'BP/functions/wiki/detect/player',
+    'BP/functions/wiki/detect/player/is_moving.mcfunction',
+    'BP/functions/wiki/detect/player/is_sleeping.mcfunction',
+    'BP/functions/wiki/detect/player/is_crawling.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
+
+In this setup, all functions inside the `/detect/player/` folder is called by `main.mcfunction`, which is executed every tick via `tick.json`.

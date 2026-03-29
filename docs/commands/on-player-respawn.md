@@ -16,7 +16,7 @@ This system will run your desired commands on the event that a player respawns f
 
 ## Setup
 
-_To be typed in Chat:_
+_Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:respawn dummy`
 

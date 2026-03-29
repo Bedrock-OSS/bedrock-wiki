@@ -11,6 +11,7 @@ mentions:
     - SpacebarNinja
     - jeanmajid
     - keyyard
+nav_order: 2
 description: Understanding target selectors in commands.
 ---
 

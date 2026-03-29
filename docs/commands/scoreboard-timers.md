@@ -26,7 +26,7 @@ It is recommended to use this system while working with command blocks, as well 
 
 ## Setup
 
-_To be typed in chat:_
+_Type the following commands in Chat:_
 
 <CodeHeader></CodeHeader>
 
