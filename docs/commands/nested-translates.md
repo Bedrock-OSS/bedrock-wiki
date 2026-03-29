@@ -107,9 +107,9 @@ execute as @a unless score @s wiki:delta.var = @s wiki:var run scoreboard player
 
 ![Chain of Nine Command Blocks](/assets/images/commands/command-block-chain/9.png)
 
-:::tip NOTE
+:::tip
 
-Place the titleraw command last in the command block chain if you are planning on having the command run continuously.
+Place the titleraw command last in the command block chain if you plan to run the command continuously.
 
 :::
 
@@ -123,7 +123,7 @@ titleraw @a actionbar {"rawtext":[{"translate":"%%%%s", "with":{"rawtext":[{"sco
 
 ## Function Setup
 
-:::info NOTE:
+:::info NOTE
 
 This method uses nested translates to allow scores greater than 81. It uses a slightly modified `display_logic.mcfunction` and an additional fakeplayer score is set to 81.
 
@@ -232,7 +232,8 @@ titleraw @a actionbar {"rawtext":[{"translate":"%%%%s", "with":{"rawtext":[{"sco
 
 :::warning
 
-It is unknown how many characters can exist in a single titleraw before the game engine lags. It is also more difficult to edit and manage. 
+It is unknown how many characters can exist in a single titleraw before the game engine lags. It is also more difficult to edit and manage.
+
 Therefore, it is recommended to use the function setup **[here](/commands/nested-translates#function-setup)**
 
 :::
@@ -354,6 +355,7 @@ execute unless score @s wiki:delta.var = @s wiki:var run scoreboard players oper
 :::warning
 
 `display_logic.set_02.mcfunction` is slightly modified from `display_logic.set_01.mcfunction`.
+
 This modification allows for scores above 81 to become normalized and introduces a logic fix for the empty text components.
 
 :::
@@ -400,6 +402,7 @@ execute unless score @s wiki:delta.var = @s wiki:var run scoreboard players oper
 :::tip
 
 You may add additional `display_logic.set_xx.mcfunction` based on `display_logic.set_02.mcfunction`.
+
 No further modifications are needed to add an additional 81 text components into the titleraw.
 Just remember to create the scoreboard objectives.
 
