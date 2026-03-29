@@ -660,8 +660,9 @@ _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or lat
 
 **Known Issues:**
 
--   Ambient occlusion from surrounding blocks causes unnatural lighting on custom blocks.
--   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model.
+-   Ambient occlusion does not perfectly match vanilla blocks, meaning custom blocks may appear darker/lighter than surrounding vanilla blocks ([MCPE-237493](https://bugs.mojang.com/browse/MCPE-237493)).
+-   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model ([MCPE-235788](https://bugs.mojang.com/browse/MCPE-235788)).
+-   PBR textures are not supported by custom blocks when rendered as entities (when held, in item frames, on ground, etc.) ([MCPE-237517](https://bugs.mojang.com/browse/MCPE-237517)).
 
 #### Object Format {#material-instances-object}
 
@@ -1045,7 +1046,10 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 
 ### Tick
 
-Causes the block to tick after a random delay in the range specified by `interval_range`.
+Causes the block to "tick" after a random delay in the range specified by `interval_range`.
+Queued ticks can be handled by using the [`onTick()`{lang=js}](/blocks/block-events#tick) event hook in a custom component.
+
+Note that a maximum of 100 queued ticks can be executed in a given chunk every tick, meaning the actual time it takes for the block to tick may be delayed to take slightly longer than specified here if the chunk that the block is placed in contains many ticking blocks.
 
 _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or later._
 

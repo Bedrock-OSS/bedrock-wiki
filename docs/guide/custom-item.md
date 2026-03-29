@@ -87,11 +87,11 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 
 ```json
 {
-	"format_version": "1.26.10",
-	"minecraft:item": {
-		"description": { ... },
-		"components": { ... }
-	}
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": { ... },
+        "components": { ... }
+    }
 }
 ```
 
@@ -188,7 +188,7 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 
 ```json
 {
-	"texture_data": { ... }
+    "texture_data": { ... }
 }
 ```
 
@@ -200,7 +200,7 @@ Under `texture_data` will our list of item shortname definitions. An example def
 
 ```json
 "wiki:ectoplasm": {
-	"textures": "textures/items/ectoplasm"
+    "textures": "textures/items/ectoplasm"
 }
 ```
 
@@ -216,8 +216,8 @@ To finally apply our texture to our item, we add the `minecraft:icon` component 
 
 ```json
 "components": {
-	"minecraft:max_stack_size": 16,
-	"minecraft:icon": "wiki:ectoplasm"
+    "minecraft:max_stack_size": 16,
+    "minecraft:icon": "wiki:ectoplasm"
 }
 ```
 
@@ -244,17 +244,17 @@ Now your first custom item, Ectoplasm, is complete! If everything has been done 
 Your folder structure should look like this:
 
 <FolderView :paths="[
-	'RP/texts/en_US.lang',
-	'RP/texts/languages.json',
-	'RP/textures/wiki/items/ectoplasm.png',
-	'RP/textures/item_texture.json',
-	'RP/manifest.json',
-	'RP/pack_icon.png',
-	'BP/items/ectoplasm.json',
-	'BP/texts/en_US.lang',
-	'BP/texts/languages.json',
-	'BP/manifest.json',
-	'BP/pack_icon.png',
+    'RP/texts/en_US.lang',
+    'RP/texts/languages.json',
+    'RP/textures/wiki/items/ectoplasm.png',
+    'RP/textures/item_texture.json',
+    'RP/manifest.json',
+    'RP/pack_icon.png',
+    'BP/items/ectoplasm.json',
+    'BP/texts/en_US.lang',
+    'BP/texts/languages.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
 ]" />
 
 <Spoiler title="Full ectoplasm.json">
@@ -301,6 +301,8 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 ## Your Progress So Far
 
+:::tip What you have learned
+
 -   [x] Setup your pack
 -   [x] Create a custom item
 -   [x] How to format the behavior and resource files for an item
@@ -308,3 +310,7 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 -   [x] How to set an items texture
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
+
+:::
+
+<Button link="/guide/custom-entity">Next: Custom Entity</Button>
