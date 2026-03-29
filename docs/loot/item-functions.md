@@ -15,26 +15,25 @@ Item functions modify the nature of an item in [loot tables](/loot/loot-tables) 
 TODO
 can enchantments be prefixed with minecraft:/whatever?
 
-# Functions
+<CodeHeader>Loot Entry</CodeHeader>
 
-<CodeHeader>Example Entry with a function</CodeHeader>
-
-```Json
+```json
 {
-  "type": "item",
-  "name": "minecraft:diamond",
-  "weight": 1,
-  "functions": [
-    {
-      "function": "set_count",
-      "count": {
-        "min": 1,
-        "max": 3
-      }
-    }
-  ]
+    "type": "item",
+    "name": "minecraft:diamond",
+    "weight": 1,
+    "functions": [
+        {
+            "function": "set_count",
+            "count": {
+                "min": 1,
+                "max": 3
+            }
+        }
+    ]
 }
 ```
+
 Most of the functions here were tested in trade tables only.
 
 These functions are usable in trade tables and **loot tables only**.
@@ -46,22 +45,6 @@ None accept Molang.
 No Java additional functions or properties were successful.
 
 All may be prefixed with any sequence of text followed by a colon, like `minecraft:exploration_map` or `d1245436576u:fio2ejfoijfiowejf::::::exploration_map`
-
-## Definitions
-
-### Range Object
-
-```Json
-{
-  "min": 1,
-  "max": 2
-}//Choose any value from 1-2
-```
-
-Range Objects are numberic values that chooses any value from a given range. If the function allows decimal values, they are included as valid values.
-
-`min`: the minimum value(inclusive).
-`max`: the maximum value(exclusive).
 
 ## General
 
@@ -99,7 +82,6 @@ The `set_count` function sets the count for that item entry.
 ```json
 {
     "function": "set_count",
-
     "count": {
         "min": 2,
         "max": 4
@@ -107,7 +89,7 @@ The `set_count` function sets the count for that item entry.
 }
 ```
 
-The `"count"` property determines how many of that item should be yielded; it can either be provided as an integer or a [range object](#range-object). Provided counts values may be larger than the stack size for that item. When this happens, the item will leak into other slots if in a container or separate into multiple different item stacks if dropped into the world. The count property actually defaults to `0`, so it should always be included.
+The `"count"` property determines how many of that item should be yielded; it can either be provided as an integer or a [range object](/documentation/shared-constructs#range-objects). Provided counts values may be larger than the stack size for that item. When this happens, the item will leak into other slots if in a container or separate into multiple different item stacks if dropped into the world. The count property actually defaults to `0`, so it should always be included.
 
 ### Name
 
@@ -127,7 +109,6 @@ The name of an item can be set using the `set_name` function. Names are visible 
 ```json
 {
     "function": "set_name",
-    
     "name": "Cursed Bow"
 }
 ```
@@ -152,7 +133,6 @@ The `set_lore` function sets the lore for an item.
 ```json
 {
     "function": "set_lore",
-
     "lore": ["", ""]
 }
 ```
@@ -177,12 +157,11 @@ The `"lore"` property configures the lore. It can be represented as either a str
 ```json
 {
     "function": "set_data",
-
     "data": 2
 }
 ```
 
-The `"data"` property sets the item's data. If not provided, it will default to `0`. `"data"` can either be provided as an integer or a [range object](#range-object).
+The `"data"` property sets the item's data. If not provided, it will default to `0`. `"data"` can either be provided as an integer or a [range object](/documentation/shared-constructs#range-objects).
 
 As an integer:
 
@@ -219,7 +198,6 @@ The object form will randomly select a data value inclusively between the provid
 ```json
 {
     "function": "random_block_state",
-
     "block_state": "wiki:color",
     "values": 3
 }
@@ -229,7 +207,7 @@ Sets a block state for a block.
 
 `block_state`: Required string name of block state.
 
-`values`: Can be a number or a [range object](#range-object).
+`values`: Can be a number or a [range object](/documentation/shared-constructs#range-objects).
 
 Defaults to 0… kinda required otherwise pointless? IDK…
 
@@ -251,7 +229,6 @@ Defaults to 0… kinda required otherwise pointless? IDK…
 ```json
 {
     "function": "random_aux_value",
-
     "values": {
         "min": 2,
         "max": 4
@@ -261,7 +238,7 @@ Defaults to 0… kinda required otherwise pointless? IDK…
 
 Sets the auxiliary value of an item.
 
-`values`: Can be an integer or a [range object](#range-object).
+`values`: Can be an integer or a [range object](/documentation/shared-constructs#range-objects).
 
 If using a range object, it will randomly choose the values uniformly(each value has the same chance of being chosen).
 
@@ -289,7 +266,6 @@ Item durability can be set using the `set_damage` function.
 ```json
 {
     "function": "set_damage",
-
     "damage": {
         "min": 0.5,
         "max": 1
@@ -299,7 +275,7 @@ Item durability can be set using the `set_damage` function.
 
 Sets the damage value of this item.
 
-`damage`: Can either be a set number or a [range object](#range-object). Allowed values range from `0.0-1.0`.
+`damage`: Can either be a set number or a [range object](/documentation/shared-constructs#range-objects). Allowed values range from `0.0-1.0`.
 
 Note that if this item has no durability component, this function will be ignored.
 
@@ -308,17 +284,17 @@ Note that if this item has no durability component, this function will be ignore
 
 Some functions are only usable by a certain set of items. See each function for which items are relevant.
 
-| Function             | Container Loot | Block Drops | Fishing | Entity Drops | Entity Equipment | Trade Tables |
-| -------------------- | -------------- | ----------- | ------- | ------------ | ---------------- | ------------ |
-| `furnace_smelt`      | ❌             | ❌          | ❌      | ✅           | ❌               | ❌           |
-| `set_book_contents`  | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
-| `exploration_map`    | ✅             | ✅          | ✅      | ✅           | ✅               | ⚠️           |
-| `set_banner_details` | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
-| `random_dye`         | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
-| `set_actor_id`       | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
-| `fill_container`     | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
-| `set_potion`         | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
-| `set_ominous_bottle_amplifier`| ✅             | ✅          | ✅      | ✅           | ✅               |⚠️       |
+| Function                       | Container Loot | Block Drops | Fishing | Entity Drops | Entity Equipment | Trade Tables |
+| ------------------------------ | -------------- | ----------- | ------- | ------------ | ---------------- | ------------ |
+| `furnace_smelt`                | ❌             | ❌          | ❌      | ✅           | ❌               | ❌           |
+| `set_book_contents`            | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `exploration_map`              | ✅             | ✅          | ✅      | ✅           | ✅               | ⚠️           |
+| `set_banner_details`           | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `random_dye`                   | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `set_actor_id`                 | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `fill_container`               | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `set_potion`                   | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
+| `set_ominous_bottle_amplifier` | ✅             | ✅          | ✅      | ✅           | ✅               | ⚠️           |
 
 ### Heat Item
 
@@ -362,10 +338,8 @@ Vanilla files use a function condition for this, but even removing that conditio
 ```json
 {
     "function": "set_book_contents",
-
     "title": "Wiki Book",
     "author": "Bedrock Wiki",
-
     "pages": ["Example page number one", "Example page number 2"]
 }
 ```
@@ -406,7 +380,6 @@ Can use color codes; Each different page string resets the color codes each time
 ```json
 {
     "function": "exploration_map",
-
     "destination": "village"
 }
 ```
@@ -453,7 +426,7 @@ Keep in mind how **only 2 locations** worked from traders.
 ```json
 {
     "function": "set_banner_details",
-    "type": 1 //Illager Banner
+    "type": 1 // Ominous Banner
 }
 ```
 
@@ -462,7 +435,7 @@ Sets type of a `minecraft:banner` (only usable on this).
 `type`: Can only be `0` or `1`.
 
 - `0` is just a White Banner.
-- `1` is an Illager Banner.
+- `1` is an Ominous Banner.
 
 ### Random Dyeing
 
@@ -564,8 +537,8 @@ Works in containers and both entity stuff and blocks
 
 ```json
 {
-  "function": "set_potion",
-  "id": "poison"
+    "function": "set_potion",
+    "id": "poison"
 }
 ```
 
@@ -574,14 +547,15 @@ Sets the potion type of this item. Allowed item types are: `minecraft:potion`, `
 `id`: the name of the potion type. Here is the list of all the [Potion Types](#potion-types).
 
 ### Ominous Bottle Amplifier
-| Usage            | Usable |
-| ---------------- | ------ |
-| Container loot   | ✅     |
-| Block drops      | ✅     |
-| Fishing          | ✅     |
-| Entity drops     | ✅     |
-| Entity equipment | ✅     |
-| Trade table      | ⚠️(Have not been tested yet)    |
+
+| Usage            | Usable                       |
+| ---------------- | ---------------------------- |
+| Container loot   | ✅                           |
+| Block drops      | ✅                           |
+| Fishing          | ✅                           |
+| Entity drops     | ✅                           |
+| Entity equipment | ✅                           |
+| Trade table      | ⚠️ (has not been tested yet) |
 
 `set_ominous_bottle_amplifier`
 
@@ -589,17 +563,17 @@ Sets the potion type of this item. Allowed item types are: `minecraft:potion`, `
 
 ```json
 {
-  "function": "set_ominous_bottle_amplifier",
-  "amplifier": {
-  "min": 0,
-  "max": 4
-  }
+    "function": "set_ominous_bottle_amplifier",
+    "amplifier": {
+        "min": 0,
+        "max": 4
+    }
 }
 ```
 
 Sets the `minecraft:ominous_bottle` potion effect amplifier.
 
-`amplifier`: can be a set number or a [range object](#range-object). Allowed values are `0-4`.
+`amplifier`: can be a set number or a [range object](/documentation/shared-constructs#range-objects). Allowed values are `0-4`.
 
 ## Enchanting
 
@@ -654,7 +628,6 @@ These functions control whether an item has an enchantment.
 ```json
 {
     "function": "enchant_with_levels",
-
     "levels": {
         "min": 15,
         "max": 21
@@ -671,7 +644,7 @@ Level `99999` gives ludicrously powerful books… with pretty much every possib
 
 `treasure`: Enables treasure enchantments as possibilities for that item. **Boolean**, defaults to `false`. If `false`, curses can't appear as possibilities; if `true`, they can.
 
-`levels`: Can be a number or a [range object](#range-object). Defaults to `0`.
+`levels`: Can be a number or a [range object](/documentation/shared-constructs#range-objects). Defaults to `0`.
 Can be negative, but will just be remapped as though `0`.
 
 ### Random Enchantments
@@ -717,7 +690,7 @@ Randomly picks a count of enchantments and their strengths for the given item.
 ```json
 {
     "function": "enchant_random_gear",
-    "chance": 0.5 //50% chance of being enchanted
+    "chance": 0.5 // 50% chance of being enchanted
 }
 ```
 
@@ -749,10 +722,10 @@ Note that going over `1.0` doesn't make it more "enchanted".
 {
     "function": "specific_enchants",
     "enchants": [
-      {
-        "id": "unbreaking",
-        "level": [1, 3]
-      }
+        {
+            "id": "unbreaking",
+            "level": [1, 3]
+        }
     ]
 }
 ```
@@ -778,16 +751,16 @@ Can be an exact number or a 2-valued array, representing `min` and `max`, inclus
 
 Example:
 
-```Json
+```json
 {
-  "function": "specific_enchants",
-  "enchants": [ 
-    "mending",//string value
-    {
-      "id": "fortune",
-      "level": [1, 3]
-    }//object value
-  ]
+    "function": "specific_enchants",
+    "enchants": [ 
+        "mending",
+        {
+            "id": "fortune",
+            "level": [1, 3]
+        }
+    ]
 }
 ```
 
@@ -820,7 +793,6 @@ External conditions that affect item drops.
 ```json
 {
     "function": "looting_enchant",
-
     "count": {
         "min": 0,
         "max": 1
@@ -830,7 +802,7 @@ External conditions that affect item drops.
 
 Increases the number of items dropped based on the Looting Enchantment level used to kill the entity.
 
-Count can be an integer or a [range object](#range-object).
+Count can be an integer or a [range object](/documentation/shared-constructs#range-objects).
 
 ### Explosion Decay
 
