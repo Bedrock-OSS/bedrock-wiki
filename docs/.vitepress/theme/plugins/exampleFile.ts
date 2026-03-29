@@ -3,6 +3,7 @@ import { PluginSimple } from "markdown-it";
 import { join } from "path";
 
 import { examplesCacheDirectory, renderExampleFile, rootMapFilePath } from "../examples";
+import filePageLink from "../utils/filePageLink";
 
 const exampleFilePattern = /^<ExampleFile\s+path="(?<path>[^"]*)"\s*\/>$/;
 
@@ -39,7 +40,7 @@ export const exampleFilePlugin: PluginSimple = (md) => {
       }
 
       const buffer = readFileSync(cacheFilePath);
-      const link = `/${rootPath}/files/${props.path}.html`;
+      const link = filePageLink(rootPath, props.path);
 
       const markdown = renderExampleFile(props.path, buffer, link);
       const newTokens = md.parse(markdown, env);

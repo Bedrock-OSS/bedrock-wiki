@@ -2,6 +2,8 @@ import { readFileSync, mkdirSync, copyFileSync } from "fs";
 import { join, dirname, basename, relative } from "path";
 import { Archiver } from "archiver";
 
+import filePageLink from "../utils/filePageLink";
+
 import { createExampleArchive } from "./archive";
 import { examplesCacheDirectory } from "./data";
 import { transformFilePath } from "./filePaths";
@@ -86,7 +88,7 @@ export function* getFilePageIterator({
     ].join("\n");
 
     const params: FilePageParams = {
-      file: `${root.path}/files/${transformedFilePath}`,
+      file: filePageLink(root.path, transformedFilePath).substring(1),
       name: basename(transformedFilePath),
       path: transformedFilePath,
       sourcePath: filePath,

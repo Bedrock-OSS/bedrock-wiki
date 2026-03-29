@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import filePageLink from "../../utils/filePageLink";
+
 import useFilePage from "../../composables/filePage";
 import useData from "../../composables/data";
 
@@ -18,7 +20,7 @@ const filePage = useFilePage();
     <div v-else class="outline__title">{{ filePage.root.title }}</div>
     <FolderView
       :paths="filePage.example.files"
-      :links="(path) => `/${filePage!.root.path}/files/${path}.html`"
+      :links="(path) => filePageLink(filePage!.root.path, path)"
       collapsed
     />
     <Downloads

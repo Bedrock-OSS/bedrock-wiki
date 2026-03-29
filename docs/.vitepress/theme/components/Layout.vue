@@ -2,6 +2,7 @@
 import { computed } from "vue";
 
 import useSidebarVisibility from "../composables/sidebarVisibility";
+import useFilePageRouter from "../composables/filePageRouter";
 import useFilePage from "../composables/filePage";
 import useIsMobile from "../composables/isMobile";
 import useRedirect from "../composables/redirect";
@@ -23,6 +24,7 @@ const isOutlineVisible = computed(() => frontmatter.value?.show_outline ?? !page
 
 const filePage = useFilePage();
 
+useFilePageRouter();
 useRedirect();
 </script>
 
