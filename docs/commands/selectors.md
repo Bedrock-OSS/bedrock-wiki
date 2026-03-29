@@ -256,7 +256,7 @@ Damage all players facing generally south:
 **Useful Articles Related to the Rotation Arguments:**
 
 1. **[Compass Display](/commands/compass-display.md)**
-2. **[Item Drop Detection](/commands/item-drop-detection.md)**
+2. **[Item Drop Detection](/commands/detect-item-drop.md)**
 
 ### Level
 
