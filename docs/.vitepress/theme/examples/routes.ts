@@ -4,13 +4,14 @@ import { join, relative } from "path";
 import { globIterate } from "glob";
 import matter from "gray-matter";
 
-import { FilePage, FilePageParams, getFilePageIterator } from "./filePage";
 import { getFilePaths, transformFilePath } from "./filePaths";
+import { FilePage, getFilePageIterator } from "./filePage";
+import { Example, FilePageParams } from "../types";
 import {
   examplesSourceDirectory,
   archivesCacheDirectory,
   examplesCacheDirectory,
-  rootMapFilePath,
+  exampleMapFilePath,
 } from "./data";
 
 const metaFileName = "meta.json";
@@ -27,7 +28,7 @@ export async function paths() {
 
   mkdirSync(examplesCacheDirectory, { recursive: true });
 
-  const rootMap: Record<string, string> = {};
+  const exampleMap: Record<string, Example> = {};
 
   const pages: FilePage[] = [];
 
@@ -63,19 +64,21 @@ export async function paths() {
       .replace(/\.md$/, "")
       .replace(/(^|\/)index$/, "");
 
-    rootMap[rootPath] = exampleId;
-
     const filePaths = getFilePaths(filesDirectory, {
       ignored: metaFileName,
       sort: true,
     });
 
-    const example: FilePageParams["example"] = {
+    const example: Example = {
       id: exampleId,
       files: filePaths.map(transformFilePath),
-      type: metadata.type,
-      archiveRoot: transformFilePath(metadata.archive_root ?? ""),
+      archive: {
+        root: transformFilePath(metadata.archive_root ?? ""),
+        type: metadata.type,
+      },
     };
+
+    exampleMap[rootPath] = example;
 
     const root: FilePageParams["root"] = {
       title: frontmatter.data.title,
@@ -93,7 +96,7 @@ export async function paths() {
     pages.push(...pageIterator);
   }
 
-  writeFileSync(rootMapFilePath, JSON.stringify(rootMap));
+  writeFileSync(exampleMapFilePath, JSON.stringify(exampleMap, null, 2));
 
   return pages;
 }

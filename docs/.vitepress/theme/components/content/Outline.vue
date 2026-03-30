@@ -7,9 +7,12 @@ import useData from "../../composables/data";
 import OutlineLevel from "./OutlineLevel.vue";
 import FolderView from "./FolderView.vue";
 import Downloads from "./Downloads.vue";
+import { useRoute } from "vitepress";
 
-const { page } = useData();
+const { page, params } = useData();
 const filePage = useFilePage();
+
+const route = useRoute();
 </script>
 
 <template>
@@ -26,17 +29,38 @@ const filePage = useFilePage();
     <Downloads
       :title="filePage.root.title"
       :asset="'/' + filePage.root.path + '.zip'"
-      :types="filePage.example.type === 'zip' ? ['zip'] : ['zip', filePage.example.type]"
+      :types="
+        filePage.example.archive.type === 'zip' ? ['zip'] : ['zip', filePage.example.archive.type]
+      "
     />
   </div>
   <div v-else class="outline">
     <a class="outline__title" href="#">{{ page.title }}</a>
     <OutlineLevel v-if="page.headers.length > 0" :headers="page.headers" />
+    <template v-if="params?.example">
+      <div class="outline__title">Download Example</div>
+      <Downloads
+        v-if="params?.example"
+        :title="page.title"
+        :asset="route.path + '.zip'"
+        :types="
+          params.example.archive.type === 'zip' ? ['zip'] : ['zip', params.example.archive.type]
+        "
+      />
+    </template>
   </div>
 </template>
 
 <style lang="scss">
 .outline {
+  &__title {
+    font-weight: 700;
+
+    &:not(:first-child) {
+      margin-top: 0.5em;
+    }
+  }
+
   & > .button {
     text-align: center;
     display: block;
@@ -50,7 +74,7 @@ const filePage = useFilePage();
 
 @media (max-width: 1300px) {
   .outline {
-    &__title {
+    &__title:first-child {
       display: none;
     }
 
@@ -91,10 +115,6 @@ const filePage = useFilePage();
         color: var(--accent-color);
         text-decoration: none;
       }
-    }
-
-    &__title {
-      font-weight: 700;
     }
 
     & > ul {

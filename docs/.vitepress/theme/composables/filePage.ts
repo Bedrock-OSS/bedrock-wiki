@@ -1,6 +1,6 @@
 import { computed } from "vue";
+import { FilePageParams } from "../types";
 
-import { FilePageParams } from "../examples/filePage";
 import useData from "./data";
 
 export default function useFilePage() {

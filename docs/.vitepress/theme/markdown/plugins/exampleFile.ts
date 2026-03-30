@@ -1,15 +1,13 @@
-import { existsSync, readFileSync } from "fs";
 import { PluginSimple } from "markdown-it";
+import { readFileSync } from "fs";
 import { join } from "path";
 
-import { examplesCacheDirectory, renderExampleFile, rootMapFilePath } from "../examples";
-import filePageLink from "../utils/filePageLink";
+import { examplesCacheDirectory, renderExampleFile, getExampleForPage } from "../../examples";
+import filePageLink from "../../utils/filePageLink";
 
 const exampleFilePattern = /^<ExampleFile\s+path="(?<path>[^"]*)"\s*\/>$/;
 
 export const exampleFilePlugin: PluginSimple = (md) => {
-  const rootMap: Record<string, string> = JSON.parse(readFileSync(rootMapFilePath, "utf-8"));
-
   md.core.ruler.after("block", "example_file", ({ env, tokens, md, inlineMode }) => {
     if (inlineMode) return;
 
@@ -22,25 +20,16 @@ export const exampleFilePlugin: PluginSimple = (md) => {
 
       const props = match.groups!;
 
-      // Path that requested the example, can either be a section ("blocks") or a page ("blocks/blocks-intro")
-      let rootPath: string = env.relativePath.replace(/\.md$/, "");
-      if (!rootMap[rootPath]) rootPath = rootPath.substring(0, rootPath.indexOf("/"));
+      const example = getExampleForPage(env.relativePath);
 
-      // Name of the "examples/resources" subfolder to use
-      const exampleId = rootMap[rootPath];
-
-      if (!exampleId) {
-        throw new Error(`No example files are available for page "${env.relativePath}".`);
-      }
-
-      const cacheFilePath = join(examplesCacheDirectory, exampleId, props.path);
-
-      if (!existsSync(cacheFilePath)) {
+      if (!example.files.includes(props.path)) {
         throw new Error(`Example file "${props.path}" does not exist.`);
       }
 
+      const cacheFilePath = join(examplesCacheDirectory, example.id, props.path);
+
       const buffer = readFileSync(cacheFilePath);
-      const link = filePageLink(rootPath, props.path);
+      const link = filePageLink(env.relativePath.replace(/\.md$/, ""), props.path);
 
       const markdown = renderExampleFile(props.path, buffer, link);
       const newTokens = md.parse(markdown, env);

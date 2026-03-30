@@ -3,6 +3,7 @@ import { join, dirname, basename, relative } from "path";
 import { Archiver } from "archiver";
 
 import filePageLink from "../utils/filePageLink";
+import { Example, FilePageParams } from "../types";
 
 import { createExampleArchive } from "./archive";
 import { examplesCacheDirectory } from "./data";
@@ -12,28 +13,6 @@ import { renderExampleFile } from "./markdown";
 export interface FilePage {
   content: string;
   params: FilePageParams;
-}
-
-export interface FilePageParams {
-  /** Route path of the file page. */
-  file: string;
-  /** Name of the file. */
-  name: string;
-  /** Path of the file. */
-  path: string;
-  /** Source path of the file in the examples repository. */
-  sourcePath: string;
-  example: {
-    id: string;
-    type: string;
-    files: string[];
-    archiveRoot: string;
-  };
-  root: {
-    title: string;
-    path: string;
-    type: "section" | "page";
-  };
 }
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -46,7 +25,7 @@ export function* getFilePageIterator({
 }: {
   filesDirectory: string;
   filePaths: string[];
-  example: FilePageParams["example"];
+  example: Example;
   root: FilePageParams["root"];
 }) {
   // Set up archive (download links will not work in development builds)
@@ -68,7 +47,7 @@ export function* getFilePageIterator({
     mkdirSync(dirname(cachePath), { recursive: true });
     copyFileSync(fullPath, cachePath);
 
-    const archiveFilePath = transformFilePath(relative(example.archiveRoot, transformedFilePath));
+    const archiveFilePath = transformFilePath(relative(example.archive.root, transformedFilePath));
 
     if (!archiveFilePath.startsWith("../")) {
       archive?.append(buffer, { name: archiveFilePath });
