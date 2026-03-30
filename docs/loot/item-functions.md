@@ -430,7 +430,7 @@ Keep in mind how **only 2 locations** worked from traders.
 }
 ```
 
-Sets type of a `minecraft:banner` (only usable on this).
+Sets type of a `minecraft:banner` or the banner on a `minecraft:shield` (only usable on these).
 
 `type`: Can only be `0` or `1`.
 
