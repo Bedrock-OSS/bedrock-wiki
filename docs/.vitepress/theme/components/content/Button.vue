@@ -25,6 +25,8 @@ const { link, color } = defineProps<{
   color: var(--accent-color);
   background-color: var(--light-bg-color);
 
+  outline-offset: -2px;
+
   &:hover {
     background-color: var(--bg-color);
     border-color: var(--accent-color);

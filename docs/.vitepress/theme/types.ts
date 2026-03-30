@@ -3,6 +3,8 @@ import { DefaultTheme } from "vitepress";
 export interface WikiConfig {
   url: string;
   repository: string;
+  branch: string;
+  examples?: ExamplesOptions;
   algolia: DefaultTheme.AlgoliaSearchOptions;
   navigation: NavigationItem[];
   redirects: Redirects;
@@ -19,10 +21,17 @@ export interface ThemeConfig {
   longTitle: string;
   url: string;
   repository: string;
+  branch: string;
+  examples?: ExamplesOptions;
   algolia: DefaultTheme.AlgoliaSearchOptions;
   navigation: NavigationItem[];
   redirects: Redirects;
   tags: Tags;
+}
+
+export interface ExamplesOptions {
+  repository: string;
+  branch: string;
 }
 
 export type AccentColor = "red" | "orange" | "yellow" | "green" | "blue" | "purple";
@@ -31,6 +40,42 @@ export interface NavigationItem {
   text: string;
   link: string;
   activeMatch?: string;
+}
+
+export interface Example {
+  id: string;
+  files: string[];
+  archive: {
+    root: string;
+    type: string;
+  };
+}
+
+export interface License {
+  title: string;
+  link: string;
+}
+
+export interface PageParams {
+  example?: Example;
+  [param: string]: any;
+}
+
+export interface FilePageParams extends PageParams {
+  example: Example;
+  /** Route path of the file page. */
+  file: string;
+  /** Name of the file. */
+  name: string;
+  /** Path of the file. */
+  path: string;
+  /** Source path of the file in the examples repository. */
+  sourcePath: string;
+  root: {
+    title: string;
+    path: string;
+    type: "section" | "page";
+  };
 }
 
 export interface Sidebar {
@@ -58,11 +103,6 @@ export interface SidebarLink {
   link: string;
   tags?: string[];
   data: Record<string, any>;
-}
-
-export interface License {
-  title: string;
-  link: string;
 }
 
 export interface Tag {

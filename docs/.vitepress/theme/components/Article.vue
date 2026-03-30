@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useMediaQuery } from "@vueuse/core";
-import useData from "../composables/data";
 
-import Tag from "./content/Tag.vue";
+import useFilePage from "../composables/filePage";
+import useData from "../composables/data";
 
 import Contributors from "./content/Contributors.vue";
 import ExternalIcon from "./icons/ExternalIcon.vue";
@@ -12,17 +12,19 @@ import Outline from "./content/Outline.vue";
 import Spoiler from "./content/Spoiler.vue";
 import License from "./content/License.vue";
 import Button from "./content/Button.vue";
+import Tag from "./content/Tag.vue";
 
 const { frontmatter, page } = useData();
 
 const isMobileOutline = useMediaQuery("(max-width: 1300px)");
 
 const isLicensePage = computed(() => page.value.relativePath.startsWith("licenses/"));
+const filePage = useFilePage();
 </script>
 
 <template>
   <article>
-    <h1>{{ frontmatter.title }}</h1>
+    <h1>{{ filePage ? filePage.root.title : frontmatter.title }}</h1>
 
     <div v-if="frontmatter.tags !== undefined" style="margin-block: 1em">
       <Tag v-for="name in frontmatter.tags" :key="name" :name />
@@ -31,14 +33,19 @@ const isLicensePage = computed(() => page.value.relativePath.startsWith("license
     <Button v-if="isLicensePage" :link="frontmatter.source">View Source <ExternalIcon /></Button>
 
     <div v-if="frontmatter.show_outline ?? true">
-      <Spoiler v-if="isMobileOutline" title="Contents" open>
+      <Spoiler
+        v-if="isMobileOutline"
+        :key="filePage?.file"
+        :title="filePage ? 'Example Files' : 'Contents'"
+        :open="!filePage"
+      >
         <Outline />
       </Spoiler>
 
       <Outline v-else />
     </div>
 
-    <Content />
+    <Content id="content" />
 
     <Contributors v-if="frontmatter.show_contributors ?? !isLicensePage" />
 

@@ -1,9 +1,10 @@
 import { defineConfigWithTheme } from "vitepress";
 
+import { copyExampleArchives, getExampleForPage } from "./examples";
 import { ThemeConfig, WikiConfig } from "./types";
 import head, { transformHead } from "./head";
-import languages from "./languages";
-import plugins from "./plugins";
+import languages from "./markdown/languages";
+import plugins from "./markdown/plugins";
 
 const isFastBuild = process.env.FAST_BUILD?.trim() === "true";
 
@@ -14,6 +15,8 @@ export function defineWikiConfig(config: WikiConfig) {
     description,
     url,
     repository,
+    branch,
+    examples,
     algolia,
     navigation,
     fastBuild,
@@ -52,6 +55,9 @@ export function defineWikiConfig(config: WikiConfig) {
 
       url,
       repository,
+      branch,
+
+      examples,
 
       algolia: {
         placeholder: `Search ${title}…`,
@@ -80,6 +86,19 @@ export function defineWikiConfig(config: WikiConfig) {
       config(md) {
         for (const plugin of plugins) md.use(plugin);
       },
+    },
+
+    transformPageData(pageData) {
+      if (!pageData.frontmatter.example) return;
+
+      const example = getExampleForPage(pageData.relativePath);
+
+      pageData.params ??= {};
+      pageData.params.example = example;
+    },
+
+    async buildEnd({ outDir }) {
+      await copyExampleArchives(outDir);
     },
 
     vite: {

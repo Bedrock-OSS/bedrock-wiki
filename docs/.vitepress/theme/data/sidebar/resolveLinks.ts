@@ -25,8 +25,13 @@ export default function resolveLinks(
 
     // Handle the normal files
     if (stats.isFile()) {
-      // Don't include non-markdown files, or the section index page
-      if (!entry.endsWith(".md") || (isInSection && basename(entry) === "index.md")) continue;
+      // Don't include non-markdown files, dynamic routes, or the section index page
+      if (
+        !entry.endsWith(".md") ||
+        entry.includes("[") ||
+        (isInSection && basename(entry) === "index.md")
+      )
+        continue;
 
       const path = relative(config.srcDir, joinedPath);
       const link = formatLink(path);

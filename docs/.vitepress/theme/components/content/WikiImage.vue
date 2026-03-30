@@ -9,23 +9,26 @@ const props = defineProps<{
   pixelated?: boolean;
   width?: string;
   height?: string;
+  link?: string;
 }>();
 
 const style = computed<StyleValue>(() => ({
   imageRendering: props.pixelated ? "pixelated" : undefined,
   objectFit: "contain",
 }));
+
+const T = computed(() => (props.link ? "a" : "div"));
 </script>
 
 <template>
-  <div class="wiki-image" :data-captioned="caption ? '' : undefined">
+  <T class="wiki-image" :data-captioned="caption ? '' : undefined" :href="link">
     <img v-if="typeof src === 'string'" :src="withBase(src)" :alt :width :height :style />
     <template v-else>
       <img :src="withBase(src.dark)" :alt :width :height :style data-theme="dark" />
       <img :src="withBase(src.light)" :alt :width :height :style data-theme="light" />
     </template>
     <div v-if="caption" class="caption">{{ caption }}</div>
-  </div>
+  </T>
 </template>
 
 <style lang="scss" scoped>
@@ -68,5 +71,12 @@ img[data-theme="dark"] {
   img[data-theme="dark"] {
     display: block;
   }
+}
+
+.example-file main .wiki-image {
+  display: block;
+  margin-block: 4em;
+  margin-inline: auto;
+  width: 512px;
 }
 </style>
