@@ -209,7 +209,7 @@ _Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later
 
 -   `absorbable_causes` — Array
     -   List of damage causes (such as `entity_attack` and `magma`) that can be absorbed by the item.
-    -   See the autocompletions for the `/damage` command for a list of available damage causes.
+    -   See the autocompletion for the `/damage` command for a list of available damage causes.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 

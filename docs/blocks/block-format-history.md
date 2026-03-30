@@ -133,7 +133,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
         -   Note that the spelling of this parameter is incorrect (it is corrected to `propagates_power` in 1.26.0).
         -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
-            -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+            -   This allows the block to counterintuitively have properties of a redstone conductor while not actually conducting redstone.
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
     -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.

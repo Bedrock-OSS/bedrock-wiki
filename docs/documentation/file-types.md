@@ -100,7 +100,7 @@ World templates are installed to the `world_templates` directory under `com.moja
 
 Composite archives are used to import up to _one_ level archive and any number or combination of asset archives in a single import action. In general, contents to a composite must be packaged. Directories can also be given _on the top level_ of a composite archive for importing asset types (behavior packs, resource packs, skin packs, and world templates) without needing to pre-package them. Nested sub-directories for organization may not be used.
 
-Composite contents are treated as usual. For example, importing a `mcaddon` contianing a `mcworld` while in Editor mode will import the world as a project.
+Composite contents are treated as usual. For example, importing a `mcaddon` containing a `mcworld` while in Editor mode will import the world as a project.
 
 Composite archives may also contain any number or nesting of other composite archives, even across _Minecraft_ modes. Nested composite archives cannot be used to get around the singular world import restriction.
 

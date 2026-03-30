@@ -43,7 +43,7 @@ Let's get started.
     -   You can see many tools here: move, resize, rotate, etc.
     -   You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
 
-5.  Now, you are ready to create your model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Studio below.
+5.  Now, you are ready to create your model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Games below.
 
 <YouTubeEmbed id="XqzxL_-XjA0" />
 

@@ -142,7 +142,7 @@ We can indicate this by giving them a material instance.
 
 Once exported from `File > Export > Export Bedrock Geometry` into your `RP/models/blocks` folder, you can reference a model in your block JSON.
 
-Then, textures can be applied by material instances through their `RP/textures/terrian_texture.json` shortname.
+Then, textures can be applied by material instances through their `RP/textures/terrain_texture.json` shortname.
 
 :::warning BLOCKS.JSON
 Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block will cause the game to ignore texture definitions in `RP/blocks.json`.

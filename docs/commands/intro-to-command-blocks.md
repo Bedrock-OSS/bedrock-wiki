@@ -45,7 +45,7 @@ They can only be placed or destroyed by a player with the Operator permission in
 > -   ![Chain Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain-conditional.png) Chain Conditional Command Block
 > -   ![Repeat Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat-conditional.png) Repeating Conditional Command Block
 
-**Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was succesful (`true`) or failed (`false`) the command block will still run the command.
+**Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was successful (`true`) or failed (`false`) the command block will still run the command.
 
 ## Command Block Redstone States
 

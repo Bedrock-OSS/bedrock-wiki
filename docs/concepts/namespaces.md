@@ -48,4 +48,4 @@ You may also refer to the [Style Guide](/meta/style-guide) for information about
 
 ## Namespace Registry
 
-The Bedrock OSS organization maintains a mapping betweeen namespaces, and the author/addon name. You can consider [registering your namespaces there.](https://github.com/Bedrock-OSS/add-on-registry)
+The Bedrock OSS organization maintains a mapping between namespaces, and the author/addon name. You can consider [registering your namespaces there.](https://github.com/Bedrock-OSS/add-on-registry)

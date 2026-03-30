@@ -61,7 +61,7 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 **Example Visualization:**
 
-![Position of Five Players Being Deranged](/assets/images/commands/rearrange-positions/2d-visualisation.gif)
+![Position of Five Players Being Deranged](/assets/images/commands/rearrange-positions/2d-visualization.gif)
 
 ## Functions
 
@@ -170,20 +170,20 @@ scoreboard objectives add wiki:count dummy
 
 If you wish to add the objectives automatically as soon as you load the world, you may create the function file below:
 
-<CodeHeader>BP/functions/wiki/event/worlds/on_initialise.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/event/worlds/on_initialize.mcfunction</CodeHeader>
 
 ```yaml
-## Initialisation
+## Initialization
 ### Add objective
 scoreboard objectives add wiki:world dummy
 ### Register to objective
-scoreboard players add .Initialised wiki:world 0
+scoreboard players add .Initialized wiki:world 0
 
 ## Commands to Execute
-execute if score .Initialised wiki:world matches 0 run function wiki/scoreboard/objectives/add_all
+execute if score .Initialized wiki:world matches 0 run function wiki/scoreboard/objectives/add_all
 
-## Mark As Initialised
-scoreboard players set .Initialised wiki:world 1
+## Mark As Initialized
+scoreboard players set .Initialized wiki:world 1
 ```
 
 ## Tick JSON
@@ -194,7 +194,7 @@ Finally, create your `tick.json` file:
 
 ```json
 {
-    "values": ["wiki/event/worlds/on_initialise", "wiki/scoreboard/players/id"]
+    "values": ["wiki/event/worlds/on_initialize", "wiki/scoreboard/players/id"]
 }
 ```
 
@@ -204,7 +204,7 @@ Finally, create your `tick.json` file:
     'BP/functions/wiki/derange_position/initiate.mcfunction',
     'BP/functions/wiki/derange_position/process.mcfunction',
     'BP/functions/wiki/derange_position/teleport.mcfunction',
-    'BP/functions/wiki/event/worlds/on_initialise.mcfunction',
+    'BP/functions/wiki/event/worlds/on_initialize.mcfunction',
     'BP/functions/wiki/scoreboard/objectives/add_all.mcfunction',
     'BP/functions/wiki/scoreboard/players/id.mcfunction',
     'BP/functions/tick.json',

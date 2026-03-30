@@ -138,7 +138,7 @@ Molang also allows for more complex animations using various queries and operato
 
 Note: The structure name `wiki:fmbe` can be changed to your preference.
 
-### Stoping FMBE Sounds
+### Stopping FMBE Sounds
 
 To remove fox sounds from the FMBE, you may use these commands:
 
@@ -174,7 +174,7 @@ stopsound @a mob.fox.aggro
 
 ## Simplified FMBE
 
-This is a compressed three-command version of the system above. If you do not wish to alter the FMBE `xzscale` and `yscale`, this could be a slight optimisation.
+This is a compressed three-command version of the system above. If you do not wish to alter the FMBE `xzscale` and `yscale`, this could be a slight optimization.
 
 <CodeHeader>BP/functions/wiki/fmbe/render.compressed.mcfunction</CodeHeader>
 

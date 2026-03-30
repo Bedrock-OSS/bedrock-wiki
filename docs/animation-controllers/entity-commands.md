@@ -269,7 +269,7 @@ This component will trigger the example command every 10 seconds:
 }
 ```
 
-By adding these (and similar!) components to our entity, we can control when the `skin_id` changes, and therefor which events run.
+By adding these (and similar!) components to our entity, we can control when the `skin_id` changes, and therefore which events run.
 
 ## Review:
 

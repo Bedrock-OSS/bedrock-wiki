@@ -94,7 +94,7 @@ Doing so will cause command blocks, functions, etc. to stop working if another a
 
 ### Command Description
 
-You also need to provide a description for the command which will appear next to the command's name in autocompletions.
+You also need to provide a description for the command which will appear next to the command's name in autocompletion.
 
 <!--
 
@@ -177,7 +177,7 @@ customCommandRegistry.registerCommand(
 
 In this example, we will create a custom slash command `/wiki:goto` that allows players to teleport to predefined locations: `spawn`, `shop`, or `arena`.
 
-In command autocompletions, its syntax is the following:
+In command autocompletion, its syntax is the following:
 
 ```
 /wiki:goto <teleportLocation: string>

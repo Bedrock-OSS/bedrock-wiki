@@ -84,7 +84,7 @@ Animation Controller:
 {
     "format_version": "1.10.0",
     "animation_controllers": {
-        "controller.animation.player.cancel_death_animaton": {
+        "controller.animation.player.cancel_death_animation": {
             "initial_state": "default",
             "states": {
                 "default": {
@@ -177,7 +177,7 @@ Here's another example in which the damage color overlay becomes pink.
 
 You can use the damage_sensor component to trigger an event upon fatal damage; this event adds a particular despawning component group containing the spawn_entity and instant_despawn components. Spawn_entity with 0 wait time will drop an item just before the entity is despawned. For simple entities like furniture, which only need one item, this is very convenient.
 
-When an entity recieves fatal damage, an event is triggered that adds a dummy component. We can then use this dummy component to play the animation and using `minecraft:timer` we can have it despawn.
+When an entity receives fatal damage, an event is triggered that adds a dummy component. We can then use this dummy component to play the animation and using `minecraft:timer` we can have it despawn.
 
 Please note that you will have to find another work for entities with an inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event. If you have a entity that performs other actions (movement and attacks) you will likely want to remove those components as well.
 
