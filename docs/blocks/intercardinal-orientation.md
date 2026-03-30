@@ -316,15 +316,3 @@ What you have created:
     alt="Custom mug blocks in a square formation, each pointing towards the middle"
     width="500"
 />
-
-### Download Example Pack
-
-Template pack made according to this tutorial, adding a "Mug" block into the "Items" tab of the creative menu.
-
-<Button
-    link="intercardinal-orientation.zip"
-    download="Intercardinal Block Orientation.mcaddon"
-    color="green"
->
-    Download MCADDON
-</Button>

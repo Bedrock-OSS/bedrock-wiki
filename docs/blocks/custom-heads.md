@@ -379,11 +379,3 @@ What you have created:
     alt="Custom head blocks in a square formation, each pointing towards the middle"
     width="500"
 />
-
-### Download Example Pack
-
-Template pack made according to this tutorial, adding a "Custom Head" block that is dropped when husks are exploded by charged creepers.
-
-<Button link="custom-heads.zip" download="Custom Heads.mcaddon" color="green">
-    Download MCADDON
-</Button>

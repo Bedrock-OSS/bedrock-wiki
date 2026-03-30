@@ -138,14 +138,6 @@ If you have textures for your block defined in that file, make sure you move the
 
 You now know how to make a custom block that uses your own custom model!
 
-### Download Example Pack
-
-Download the template pack made according to this tutorial below!
-
-<Button link="block-models.zip" download="Block Models.mcaddon" color="green">
-    Download MCADDON
-</Button>
-
 ## What's Next?
 
 <CardGrid>

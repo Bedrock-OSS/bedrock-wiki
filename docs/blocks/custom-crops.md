@@ -572,11 +572,3 @@ Your pack should now contain the following files:
 ]" />
 
 With the help of this tutorial/template, you now have the knowledge and skills to create your own custom crop, as well as its seed and food items.
-
-## Download Example Pack
-
-If you require further assistance or would like to access the complete template files, please use the download button provided below. Happy designing!
-
-<Button link="custom-crops.zip" download="Custom Crops.mcaddon" color="green">
-    Download MCADDON
-</Button>

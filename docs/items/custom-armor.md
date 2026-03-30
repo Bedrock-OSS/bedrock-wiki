@@ -140,14 +140,6 @@ You can use this as a basis to make whatever other armor you want in the game.
 
 ![An armor stand and a baby zombie both equipped with a full set of custom armor.](/assets/images/items/custom-armor/armor_stand.png)
 
-### Download Example Pack
-
-Download the template pack made according to this tutorial below!
-
-<Button link="custom-armor.zip" download="Custom Armor.mcaddon" color="green">
-    Download MCADDON
-</Button>
-
 ## Bonus - Making Set Effects
 
 This is a bit more advanced but lets say you want your custom armor to act like it's a set from an RPG game. We can add some code to check if we have the set equipped and do some great stuff with it.
