@@ -38,7 +38,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 **Visualization:**
 
-![Alex Looking at a Pig's Head](/assets/images/commands/look-detection/vizualisation.gif)
+![Alex Looking at a Pig's Head](/assets/images/commands/look-detection/visualization.gif)
 
 > _Note: This is a rough visual representation, not precise measurements._
 

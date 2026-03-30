@@ -138,7 +138,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 
 **Visualization:**
 
-![Getting Matching Scores 2D Visualization](/assets/images/commands/comparing-scores/2d-vizualisation.gif)
+![Getting Matching Scores 2D Visualization](/assets/images/commands/comparing-scores/2d-visualization.gif)
 
 **Example 1:** Teleport pet to owner if farther than 6 blocks:
 
