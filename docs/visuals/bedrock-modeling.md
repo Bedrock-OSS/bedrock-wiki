@@ -42,7 +42,7 @@ Whether or no the transparency or emissive textures in your models work in-game,
 | entity_alphatest      | supports transparent pixels                                                                              |
 | entity_alphablend     | supports translucent pixels                                                                              |
 | entity_emissive       | solid, alpha channel is used as the emissive channel                                                     |
-| entity_emissive_alpha | alpha channel is used for emissiveness, completely black + transparent pixels are rendered transparently |
+| entity_emissive_alpha | alpha channel is used for emissive textures, completely black + transparent pixels are rendered transparently |
 
 ## Z-fighting
 
@@ -111,10 +111,10 @@ You can learn more about queries & functions [here](https://bedrock.dev/docs/sta
 
 To easily change the speed of an animation you can simply multiply the default value of `anim_time_update` (defaults to `q.delta_time + q.anim_time`) inside our animation:
 
-<CodeHeader>RP/animations/myentity.animation.json#animations</CodeHeader>
+<CodeHeader>RP/animations/my_entity.a.json#animations</CodeHeader>
 
 ```json
-"animation.myentity.myanimation": {
+"animation.my_entity.my_animation": {
     "anim_time_update":"2 * q.delta_time + q.anim_time"
     //Your animation goes here!
 }

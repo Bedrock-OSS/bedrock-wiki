@@ -55,7 +55,7 @@ To help create a consistent format, make it easier for everyone to follow, and t
 BP/functions/wiki/ability/ice_blast.mcfunction
 BP/functions/wiki/ability/fire_trail.mcfunction
 BP/functions/wiki/event/players/on_death.mcfunction
-BP/functions/wiki/event/worlds/on_initialise.mcfunction
+BP/functions/wiki/event/worlds/on_initialize.mcfunction
 ```
 
 -   All content folders `ability` and `event` are consistently singular.
@@ -67,7 +67,7 @@ BP/functions/wiki/event/worlds/on_initialise.mcfunction
 BP/functions/wiki/abilities/ice_blast.mcfunction
 BP/functions/wiki/abilities/fire_trail.mcfunction
 BP/functions/wiki/event/players/on_death.mcfunction
-BP/functions/wiki/event/world/on_initialise.mcfunction
+BP/functions/wiki/event/world/on_initialize.mcfunction
 ```
 
 -   Only `abilities` content folder is pluralized while `event` is singular.

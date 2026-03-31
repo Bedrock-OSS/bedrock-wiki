@@ -71,6 +71,6 @@ You can use the `/playsound` command to play sound effects to players present an
 /execute as @a at @s playsound random.orb @s ~ ~ ~ 10000
 ```
 
-Note: Since the `/playsound` command is positonal, it is helpful to play the sound effect at their position with a large volume like shown in the second example above. This prevents the sound effect from cutting off in certian situations, such as after teleporting to a far away distance.
+Note: Since the `/playsound` command is positional, it is helpful to play the sound effect at their position with a large volume like shown in the second example above. This prevents the sound effect from cutting off in certain situations, such as after teleporting to a far away distance.
 
 **(Recommended) Read Next: [Sounds](/concepts/sounds)**

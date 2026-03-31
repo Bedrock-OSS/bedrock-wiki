@@ -346,7 +346,7 @@ Vanilla files use a function condition for this, but even removing that conditio
 
 Sets the data for a book.
 
-Can only be used on `minecrat:writable_book` or `minecraft:written_book`.
+Can only be used on `minecraft:writable_book` or `minecraft:written_book`.
 
 `author`: String name of the author.
 
@@ -430,7 +430,7 @@ Keep in mind how **only 2 locations** worked from traders.
 }
 ```
 
-Sets type of a `minecraft:banner` (only usable on this).
+Sets type of a `minecraft:banner` or the banner on a `minecraft:shield` (only usable on these).
 
 `type`: Can only be `0` or `1`.
 

@@ -20,7 +20,7 @@ _Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:respawn dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
+If you are working with functions and prefer to have the objective added automatically on world initialization, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 

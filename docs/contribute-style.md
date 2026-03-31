@@ -37,6 +37,7 @@ Lots and lots of content!
 | ------------------- | :------: | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`             |    ✔️    | None    | The title of the page which will be displayed as a level 1 heading before the main content and in link embeds when posted somewhere.                                                                                                                                                                                                  |
 | `description`       |    ✔️    | None    | The description of the page which will be displayed in link embeds when posted somewhere. `:`, `"` symbols are **not** allowed here.                                                                                                                                                                                                  |
+| `example`           |    ❌    | None    | Associates a collection of example files from the [bedrock-examples](https://github.com/Bedrock-OSS/bedrock-examples) repository with this page. The value should be the name of a folder in "resources".                                                                                                                             |
 | `category`          |    ❌    | None    | The sidebar category in which the link for this page will be displayed. Available categories are listed in the section's `index.md` file.                                                                                                                                                                                             |
 | `tags`              |    ❌    | `[]`    | A list of tags that will be displayed at the top of the page. Some will be displayed on the sidebar, such as "guide" or "info". If a page is in a section or category that makes the tag redundant, it should not be included in the tags list. For example, if a page is in the "Tutorials" category, the "guide" tag is not needed. |
 | `nav_order`         |    ❌    | None    | The order in which the article will appear in the sidebar. Lower number will be higher. All nav_order pages will appear above pages without a nav_order.                                                                                                                                                                              |
@@ -347,8 +348,8 @@ A list where each item is either checked or unchecked. An `x` between the square
 
 Our wiki uses special Vue-Components, which you can use to add things like Buttons, Spoilers, CodeBlocks, etc.
 
-:::tip Snippets
-We have snippets for our components. To see them, start typing `wiki.` in Markdown file and then press `Ctrl + Space`.
+:::tip SNIPPETS
+We have snippets for our components. To see them, press `Ctrl + Space` when editing a page.
 
 ![](/assets/images/contribute/snippets/snippets.png)
 :::
@@ -641,7 +642,7 @@ Note that images go in `docs/public/assets/images/` folder, but their path is de
 
 ### YouTubeEmbed
 
-Embeds a YouTube video into thepage based on a video ID.
+Embeds a YouTube video into the page based on a video ID.
 
 ```md
 <YouTubeEmbed id="dQw4w9WgXcQ" />
@@ -689,7 +690,7 @@ Correct:
 
 Everyone likes to read wikis that are perfectly and consistently formatted.
 
-Well, its hard to realise that. And we don't want perfectly and consistently formatted wikis. But if everyone tries to follow these simple rules, all users will have a better time reading our wikis!
+Well, its hard to realize that. And we don't want perfectly and consistently formatted wikis. But if everyone tries to follow these simple rules, all users will have a better time reading our wikis!
 
 ### General Rules
 
@@ -699,8 +700,8 @@ Well, its hard to realise that. And we don't want perfectly and consistently for
 
 Title case is a casing style that must be used in page titles and headings.
 
-1. Most words should be capitalised regardless of length.
-2. Articles (a, an, the), coordinating conjunctions (and, but, or), and prepositions (in, on, at, of, to) should not be capitalised unless any of the following are true:
+1. Most words should be capitalized regardless of length.
+2. Articles (a, an, the), coordinating conjunctions (and, but, or), and prepositions (in, on, at, of, to) should not be capitalized unless any of the following are true:
     - They're the first or last word of the title.
     - They make up a noun (such as add-**_on_**).
 

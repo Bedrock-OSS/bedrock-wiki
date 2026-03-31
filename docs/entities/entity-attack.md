@@ -289,7 +289,7 @@ Once `minecraft:behavior.charge_held_item` has been achieved, the entity will be
 
 ### Area
 
-These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesn’t actually require a target. Regardless of the entities behaviour, _all_ entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar manner, though dealing damage at a constant rate.
+These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesn’t actually require a target. Regardless of the entities behavior, _all_ entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar manner, though dealing damage at a constant rate.
 
 <CodeHeader></CodeHeader>
 
@@ -534,9 +534,9 @@ You aren't limited to just 2 attack types, you can have as many as you want! Jus
 
 Attacks and animations go hand in hand. Within resource packs, the following 3 directories are required:
 
--   animations (entityname.animation.json)
--   animation_controllers (entityname.animation_controller.json)
--   entity (entityname.json)
+-   animations (entity_name.a.json)
+-   animation_controllers (entity_name.ac.json)
+-   entity (entity_name.ce.json)
 
 Or as long as you know the names of vanilla animations and animation controllers, you can define them in the latter directory and folder.
 

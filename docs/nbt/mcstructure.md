@@ -144,7 +144,7 @@ Here are a few main differences:
 | Root Is Property Or Value (Whether NBT starts as property) | NoName Property                                               | NoName Property                                                 |
 | `.mcstructure` Compatible                                  | Yes                                                           | No                                                              |
 | `.nbt` Compatible                                          | No                                                            | Yes                                                             |
-| Structure Compact Size (Lower better)                      | (Better) Order of blocks harcoded, only pallete indexes saved | Each block is stored as (location, palette index, optional NBT) |
+| Structure Compact Size (Lower better)                      | (Better) Order of blocks hardcoded, only palette indexes saved | Each block is stored as (location, palette index, optional NBT) |
 | After All File Size (Lower better)                         | No Compression used                                           | GZip compression outperforms the compact `.mcstructure` format. |
 
 ## NBT Editors

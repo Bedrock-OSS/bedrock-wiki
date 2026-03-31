@@ -213,7 +213,7 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Defines the base rarity of the item (displayed by the color of the item name).
     -   Accepts the following rarity levels: `common`, `uncommon`,`rare` and `epic`.
     -   When an item is enchanted, its rarity will increase to the next level if possible.
-    -   This component has no functional effect and can be overrided with `minecraft:hover_text_color`.
+    -   This component has no functional effect and can be overwritten with `minecraft:hover_text_color`.
 
 <Tag name="experimental" />
 <Label color="orange">Bundles</Label>
@@ -224,7 +224,7 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Requires the `minecraft:storage_item` component to be applied.
 -   Added `minecraft:storage_item`
     -   Allows this item to contain other items.
-    -   Contains `allow_nesed_storage_items` which determines whether other storage items can be placed into the container.
+    -   Contains `allow_nested_storage_items` which determines whether other storage items can be placed into the container.
     -   Contains `allowed_items` which defines the items that are exclusively allowed in the container.
         -   If empty all items are allowed in the container.
     -   Contains `banned_items` which defines the items that are not allowed in the container.

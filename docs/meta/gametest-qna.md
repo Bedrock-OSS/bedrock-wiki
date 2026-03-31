@@ -38,7 +38,7 @@ _warning:_ Not all messages were copied over, and some were copy-edited. If you 
 
 ## Slash Commands
 
--   **Q:** when are we able to registrate custom slash commands?
+-   **Q:** when are we able to register custom slash commands?
 
 -   **A:** While we don't have a concrete timeline, this is high up in our list of things to build.
 
@@ -62,11 +62,11 @@ _warning:_ Not all messages were copied over, and some were copy-edited. If you 
 
 ## Politics of GameTests
 
--   **Q:** What technical, structural, or political reasons has allowed GameTests API to flourish, while the original Scripting API has not? Can you talk about "what you did different" this time? Additionally, what needs to happen for GameTest to be considered "successful" (and therefor not abandoned). Is there anything we can do to help with that?
+-   **Q:** What technical, structural, or political reasons has allowed GameTests API to flourish, while the original Scripting API has not? Can you talk about "what you did different" this time? Additionally, what needs to happen for GameTest to be considered "successful" (and therefore not abandoned). Is there anything we can do to help with that?
 
 -   **A:** In general we're trying to be pretty focused on the scenarios we're targeting, starting with content testing and validation which we can always use more of not just for core Minecraft but also for custom content in Minecraft. We really want to make it simpler for folks to scaffold and build tests around their content. That scenario also has more limited requirements (e.g., we can be on fewer platforms, perf is not as much an issue, etc.) So, we are focused on GameTest and for that to be successful we'd want to see that it's easy for content creators to test their stuff.
 
--   **A:** Of course, we do see the potential for more scenarios down the road - including gameplay - but we really don't want to get anyones expectations high (or have people take a bet on scripting/gametest APIs for gameplay) until we have a bit more validation on things like perf, and getting support for more platforms, and responding to your feedback as well.
+-   **A:** Of course, we do see the potential for more scenarios down the road - including gameplay - but we really don't want to get anyone's expectations high (or have people take a bet on scripting/gametest APIs for gameplay) until we have a bit more validation on things like perf, and getting support for more platforms, and responding to your feedback as well.
 
 -   **A:** RE: Is there anything we can do to help with that? - Keep engaging with us on improving and adding new stuff! 🙂 The creator community is the driver for all of this.
 
@@ -110,7 +110,7 @@ _warning:_ Not all messages were copied over, and some were copy-edited. If you 
 
 -   **A:** Another thing that I'd love to expose that is super hard is custom shaders. PlayStation requires that shaders are built into the submission. So we'll have to approach this by providing a physically based materials system where we hard code very flexible shaders.
 
--   **Q:** with said "persistent storage" are we gonna have a method to write and read simple int variables in a instance-indipendent manner? or is it still gonna be in the instance and deleted when runtime ends?
+-   **Q:** with said "persistent storage" are we gonna have a method to write and read simple int variables in a instance-independent manner? or is it still gonna be in the instance and deleted when runtime ends?
 
 -   **A:** Yes we have plans to add key value pair storage maybe Json storage. One would be with a Javascript Api for accessing tags and scoreboards. but going further would be to allow for generic read write storage (still not direct File system access). There are some security issues we'd want to work through around ensuring storage is sand boxed per pack.
 
@@ -269,11 +269,11 @@ _warning:_ Not all messages were copied over, and some were copy-edited. If you 
 
 ## Efficiency of Platforms
 
--   **Q:** How compatible will it be with other platforms/generally efficent?
+-   **Q:** How compatible will it be with other platforms/generally efficient?
 
 -   **A:** We expect to enable it on all platforms. Re: performance, we do have to work across both platforms that support Just in Time compilation and platforms that don't. So that is a big area of known analysis and performance tuning for us.
 
--   **Q:** By generally efficent i mean how "close to the metal" the api is
+-   **Q:** By generally efficient i mean how "close to the metal" the api is
 
 -   **A:** Thanks for the clarification on efficient: Our API will attempt to "play well" with data driven systems to start out. And therefore operate at a Minecraft entity, item, block, chunk, etc. level of abstraction. If you're familiar with Bukkit we're attempting to have a similar level of abstraction to that (plus client side additions also within our ambitions).
 
@@ -369,6 +369,6 @@ _warning:_ Not all messages were copied over, and some were copy-edited. If you 
 
 -   **A:** And yes, we're tracking parity issues that were discovered through game test with bugs.
 
--   **Q:** If gametests are open for contribution in this way, is there any way we could contribute to the actual Vannila Behavior/Resource packs?
+-   **Q:** If gametests are open for contribution in this way, is there any way we could contribute to the actual Vanilla Behavior/Resource packs?
 
 -   **A:** We're currently discussing whether or not we should move the "built in" game tests to the same repository and make it easier to get the open source behavior pack package(s)

@@ -20,7 +20,7 @@ _Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:q.is_alive dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
+If you are working with functions and prefer to have the objective added automatically on world initialization, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
@@ -134,5 +134,5 @@ execute as @a[scores={wiki:q.is_dead=1..}] run say I died and haven't respawned 
 
 1. **Command 1:** All alive players are marked as _not_ dead (0)
 2. **Command 2:** If there is no alive player within a 0.01 block radius of a player, they will be marked as dead (1)
-    - The logic is that only the player themself can be present within such a small radius from them. The probability of two or more players to precisely stand at the same point by themselves (without `/tp` command) is close to zero.
+    - The logic is that only the player themselves can be present within such a small radius from them. The probability of two or more players to precisely stand at the same point by themselves (without `/tp` command) is close to zero.
 3. **Command 3, 4:** These are example commands (for each state) which can be modified / expanded.

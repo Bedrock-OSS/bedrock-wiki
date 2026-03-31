@@ -9,7 +9,14 @@ export default defineWikiConfig({
   description: "A knowledge-sharing website for technical features of Minecraft Bedrock.",
 
   url: "https://wiki.bedrock.dev",
+
   repository: "https://github.com/Bedrock-OSS/bedrock-wiki",
+  branch: "wiki",
+
+  examples: {
+    repository: "https://github.com/Bedrock-OSS/bedrock-examples",
+    branch: "main",
+  },
 
   algolia: {
     appId: "N9ZHAYJQII",

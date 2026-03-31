@@ -68,10 +68,10 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 **Purpose of Each Command:**
 
 -   **Command 1:** If there is a Leash Knot above them, it means they have not moved from their "point" from the previous game-tick. Marking them as _not_ moving (0)
-    -   Leash Knot is a Vanilla entity with anti-gravity behaviour which serves as a static entity for this system.
+    -   Leash Knot is a Vanilla entity with anti-gravity behavior which serves as a static entity for this system.
 -   **Command 2:** If there _isn't_ a Leash Knot above them, it means they have displaced from their "point" from the previous game-tick. Marking them as _moving_ (1) by adding a score.
     -   The score will keep incrementing if they keep moving without pause. Allowing us to use single-execution commands each time they start moving.
--   **Command 3:** We need to delete all previous "points" (kill old Leash Knots) to minimise entity lag. We will also avoid affecting any Leash Knots below the ~10000 height not involved in this system.
+-   **Command 3:** We need to delete all previous "points" (kill old Leash Knots) to minimize entity lag. We will also avoid affecting any Leash Knots below the ~10000 height not involved in this system.
     -   we are using the volume filter instead of a simple name filter to do that, because Leash Knots cannot be named.
 -   **Command 4:** We will summon a new Leash Knot ~10000 blocks above the player to mark the point they are currently at, which we will test-for in command 1 & 2, in the next game tick. (when this command block chain loops/repeats)
 -   **Command 5, 6, 7:** These are example commands (for each state) which can be modified / expanded.
@@ -323,7 +323,7 @@ execute as @a[scores={wiki:q.is_gliding=1..}] run say I'm still gliding
 **Purpose of Each Command:**
 
 -   **Command 1, 2, 3:** If the player's hitbox is higher than 0.6 blocks, we mark them as _not_ gliding/crawling/swimming (0)
--   **Command 4:** If the player's hitbox is _not_ higher than 0.6 blocks, has equiped an elytra, and has no blocks above/below their head/chest/feet, we mark them as gliding (1) by adding a score.
+-   **Command 4:** If the player's hitbox is _not_ higher than 0.6 blocks, has equipped an elytra, and has no blocks above/below their head/chest/feet, we mark them as gliding (1) by adding a score.
     -   The score will keep incrementing if they don't stop gliding. Allowing us to use single-execution commands each time they start gliding. We will employ the same for crawling/gliding.
     -   To prevent false-triggers when sleeping, we will also require their hitbox to be higher than 0.2 blocks. We will employ the same for crawling/gliding.
 -   **Command 5:** If the player's hitbox is _not_ higher than 0.6 blocks, is not gliding, and has no water above/below them, we mark them as crawling (1) by adding a score.

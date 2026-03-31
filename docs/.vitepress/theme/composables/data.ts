@@ -1,4 +1,11 @@
-import { ThemeConfig } from "../types";
-import { useData } from "vitepress";
+import { Ref } from "vue";
+import { PageParams, ThemeConfig } from "../types";
+import { useData as useVPData, VitePressData } from "vitepress";
 
-export default useData<ThemeConfig>;
+interface WikiData extends VitePressData<ThemeConfig> {
+  params: Ref<PageParams>;
+}
+
+export default function useData(): WikiData {
+  return useVPData() as WikiData;
+}

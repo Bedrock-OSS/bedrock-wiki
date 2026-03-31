@@ -13,7 +13,7 @@ mentions:
 
 This is a guide on understanding what Script API privileges are. This includes going through what read-only mode, and the new early-execution mode implemented in Scripting v2.0.0 are about.
 
-You might have encounted this error when running your scripts, about not having required privileges when calling a native function or a property such as the following mesasge:
+You might have encountered this error when running your scripts, about not having required privileges when calling a native function or a property such as the following message:
 
 > ReferenceError: Native function \[Class::method\] does not have required privileges.
 

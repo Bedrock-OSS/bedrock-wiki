@@ -900,7 +900,7 @@ With this our animations should be working correctly.
 
 #### Spawn Egg
 
-The final step to finalise our entity client file, is to create a spawn egg for our entity. Luckily, our file can generate one for us with the key `spawn_egg`.
+The final step to finalize our entity client file, is to create a spawn egg for our entity. Luckily, our file can generate one for us with the key `spawn_egg`.
 
 <CodeHeader>RP/entity/ghost.ce.json#description</CodeHeader>
 

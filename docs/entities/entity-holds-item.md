@@ -25,8 +25,8 @@ In this tutorial, you will learn to have an entity spawn with an item in its han
 
 ## Model
 
-First of all, you'll need to have a model in Blockbench that has a map called `rightArm`. Within this map, there needs to be a submap called 'rightItem'.
-Now set the position of the pivot point of this submap, so it sits in the place you want the entity to hold the item at.
+First of all, you'll need to have a model in Blockbench that has a map called `rightArm`. Within this map, there needs to be a subfolder called 'rightItem'.
+Now set the position of the pivot point of this subfolder, so it sits in the place you want the entity to hold the item at.
 
 ![](/assets/images/tutorials/entity-holds-item/blockbench.png)
 
@@ -36,17 +36,17 @@ Now you'll need to add a `minecraft:equipment` component in the component list f
 
 In our example it will look like this:
 
-<CodeHeader>BP/entity/mandolorian.json#components</CodeHeader>
+<CodeHeader>BP/entity/mandalorian.json#components</CodeHeader>
 
 ```json
 "minecraft:equipment": {
-    "table": "loot_tables/entities/gear/mandolorian.json"
+    "table": "loot_tables/entities/gear/mandalorian.json"
 }
 ```
 
 ## Loot Table
 
-Finally, add the loot table for your entity. It needs to be in `loot_tables/entities/<your_loot_table_name>.json` in the behavior pack. In our case, it's called `mandolorian.json`.
+Finally, add the loot table for your entity. It needs to be in `loot_tables/entities/<your_loot_table_name>.json` in the behavior pack. In our case, it's called `mandalorian.json`.
 
 :::warning
 This isn't the same loot table as what it drops on death. So make sure it has a different name.
@@ -54,7 +54,7 @@ This isn't the same loot table as what it drops on death. So make sure it has a 
 
 To have the entity always spawn with the same item, add the following loot table:
 
-<CodeHeader>BP/loot_tables/entities/gear/mandolorian.json</CodeHeader>
+<CodeHeader>BP/loot_tables/entities/gear/mandalorian.json</CodeHeader>
 
 ```json
 {

@@ -37,9 +37,9 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 ![A Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
-**Visualisation:**
+**Visualization:**
 
-![Alex Looking at a Pig's Head](/assets/images/commands/look-detection/visualisation.gif)
+![Alex Looking at a Pig's Head](/assets/images/commands/look-detection/visualization.gif)
 
 > _Note: This is a rough visual representation, not precise measurements._
 
@@ -76,7 +76,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 **Examples:**
 
-1. Run a `/say` command when looking at the eyes of cows or sheeps tagged 'target':
+1. Run a `/say` command when looking at the eyes of cows or sheep tagged 'target':
 
 <CodeHeader>BP/functions/wiki/detect/player/is_looking_at/target.mcfunction</CodeHeader>
 

@@ -15,7 +15,7 @@ description: Logic gates are devices that take one or more binary inputs and, as
 
 Logic gates are devices that take one or more binary inputs and, as the name suggests, performs logical boolean operations to give a single binary output (either `true` or `false`).
 
-They are what a computer uses to perform any function. These devices are very helpful for programming, and using them is a crucial step in creating optimized command systems. In this page you will learn how you can utilise any of the logic gates in your systems with the help of the `/execute` command!
+They are what a computer uses to perform any function. These devices are very helpful for programming, and using them is a crucial step in creating optimized command systems. In this page you will learn how you can utilize any of the logic gates in your systems with the help of the `/execute` command!
 
 ## Logic Gates
 

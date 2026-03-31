@@ -202,4 +202,4 @@ We'll also need to hook it up to our entity as so:
 }
 ```
 
-Now, we should have a mechanic at least resemblant of flying. You can change the values like jump_strength and speed, but the entity will always fall using this method.
+Now, we should have a mechanic that resembles flying. You can change values like jump_strength and speed, but the entity will always fall using this method.

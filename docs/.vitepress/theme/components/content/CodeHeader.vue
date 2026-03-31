@@ -18,7 +18,7 @@ import FileIcon from "../icons/FileIcon.vue";
   background-color: var(--bg-color);
   margin-top: 0.5em;
   padding: 0.5em;
-  padding-right: 4em;
+  padding-right: 6em;
   gap: 0.4em;
 
   border: var(--border);

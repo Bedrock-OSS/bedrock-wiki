@@ -16,7 +16,7 @@ description: Learn how to modify your world through the use of JavaScript files.
 ---
 
 ::: tip
-This script API page assumes basic knowledge of pack setup for add-ons. For information on how to set up behaviour packs, please see the [Introduction to Add-Ons](/guide/introduction) page.
+This script API page assumes basic knowledge of pack setup for add-ons. For information on how to set up behavior packs, please see the [Introduction to Add-Ons](/guide/introduction) page.
 :::
 
 ::: warning
@@ -71,7 +71,7 @@ Additionally, dependencies will need to be set based on modules used. To import 
             "entry": "scripts/main.js"
         }
     ],
-    // Uncomment to use eval() and Function() inside your code (unrecommended), remove if not neccessary
+    // Uncomment to use eval() and Function() inside your code (unrecommended), remove if not necessary
     // "capabilities": ["script_eval"],
     "dependencies": [
         {

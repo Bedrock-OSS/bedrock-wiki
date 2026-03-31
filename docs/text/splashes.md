@@ -36,8 +36,8 @@ It's very easy to create custom splash texts. All you have to do is to create a 
 />
 
 The `canMerge` parameter determines whether the game will show vanilla splash texts alongside custom splash texts.
-If you set this parameter to `true`{lang=json}, the splash text will be choosen from both vanilla splash texts and custom splash texts.
-If you omit this parameter or set it to `false`{lang=json}, the splash text will be choosen only from custom splash texts.
+If you set this parameter to `true`{lang=json}, the splash text will be chosen from both vanilla splash texts and custom splash texts.
+If you omit this parameter or set it to `false`{lang=json}, the splash text will be chosen only from custom splash texts.
 
 If you leave the `splashes` array empty with `canMerge` set to `false`, the game will not show any splash text at all.
 
