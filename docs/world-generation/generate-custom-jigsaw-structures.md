@@ -158,5 +158,7 @@ This structure set will place a giant grid of 50 chunk by 50 chunk squares where
 
 And thats it! Your structure should now be generating in the world.
 
+Next you can check out the [Jigsaw Structures](https://wiki.bedrock.dev/world-generation/jigsaw-structures) to learn more about more complicated jigsaw features.
+
 
 
