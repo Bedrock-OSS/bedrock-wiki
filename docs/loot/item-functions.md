@@ -8,6 +8,7 @@ mentions:
     - MedicalJewel105
     - ThomasOrs
     - Robotics-Modified
+    - Supernova3695
 ---
 
 Item functions modify the nature of an item in [loot tables](/loot/loot-tables) and [trade tables](/loot/trade-tables).
