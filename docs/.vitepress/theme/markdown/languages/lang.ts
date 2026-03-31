@@ -22,7 +22,7 @@ const language: LanguageRegistration = {
       match: "^([^#=]+)(=)([^\\t#]+)",
       captures: {
         1: {
-          name: "support.type.property-name.lang",
+          name: "support.type.property-name.json.lang",
         },
         2: {
           name: "punctuation.separator.key-value.lang",
