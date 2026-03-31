@@ -110,7 +110,7 @@ If the jigsaw is set to "aligned" then the 2 white bars on the side of the block
 
 ## Template Pools
 
-Template pools are lists of structure files and how they will adapt to the terrain and what processors they will use.
+Template pools are lists of structure files and/or features and how they will adapt to the terrain and what processors they will use.
 They are the files whose identifiers are used in the target pool of the jigsaw blocks.
 
 When you put a pool into the target pool you are telling the jigsaw block to look for a jigsaw in that template pool which has a name field value matching the value of the parent jigsaw's target name field.
@@ -120,7 +120,7 @@ A jigsaw that is facing up (the direction the arrows are facing) can only match 
 
 ### Elements
 
-For now there are only two types of element available for creators to use: `minecraft:empty_pool_element` and `minecraft:single_pool_element`.
+For now there are three types of element available for creators to use: `minecraft:empty_pool_element`, `minecraft:single_pool_element`, and `minecraft:feature_pool_element`.
 
 -   `weight` is a number applied to entries on a pool that tells the jigsaw block how often it should pick this element. Higher values are higher likelihood.
 
@@ -139,6 +139,12 @@ This element places a structure template and then applies a processor and projec
 
 -   `location`: tells the game where the file to generate is.
 -   `processors`: (optional) the ID of a processor to apply to the piece.
+
+#### Feature Pool Element
+
+This element places a feature, custom, vanilla, or hardcoded. A jigsaw block placing a feature pool element must be facing upwards and doesn't need a target name, just a target pool with the feature pool element in it.
+
+- `feature`: The feature to place. Can be any custom or vanilla feature including hardcoded ones such as `minecraft:desert_well_feature`.
 
 ## Processors
 
