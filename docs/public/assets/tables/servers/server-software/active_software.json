@@ -86,7 +86,7 @@
     {
       "name": "[PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)",
       "description": "Feature-rich, highly customizable third-party server software for Minecraft: Bedrock Edition.",
-      "languages": "Java, JavaScript",
+      "languages": "Java",
       "type": "Custom"
     },
     {
