@@ -295,6 +295,7 @@ Some functions are only usable by a certain set of items. See each function for 
 | `fill_container`               | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
 | `set_potion`                   | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
 | `set_ominous_bottle_amplifier` | ✅             | ✅          | ✅      | ✅           | ✅               | ⚠️           |
+| `set_stew_effect`              | ✅             | ✅          | ✅      | ✅           | ✅               | ✅           |
 
 ### Heat Item
 
@@ -437,6 +438,9 @@ Sets type of a `minecraft:banner` or the banner on a `minecraft:shield` (only us
 - `0` is just a White Banner.
 - `1` is an Ominous Banner.
 
+`base_color`: Can be set for banners of type 0 and sets the color of the banner.
+`patterns`: Is a array of banner patterns and colors to be applied to the banner. Up to 6 patterns can be applied.
+
 ### Random Dyeing
 
 | Usage            | Usable |
@@ -574,6 +578,38 @@ Sets the potion type of this item. Allowed item types are: `minecraft:potion`, `
 Sets the `minecraft:ominous_bottle` potion effect amplifier.
 
 `amplifier`: can be a set number or a [range object](/documentation/shared-constructs#range-objects). Allowed values are `0-4`.
+
+### Suspicous Stew Effect
+
+| Usage            | Usable                       |
+| ---------------- | ---------------------------- |
+| Container loot   | ✅                           |
+| Block drops      | ✅                           |
+| Fishing          | ⚠️ (has not been tested yet) |
+| Entity drops     | ✅                           |
+| Entity equipment | ⚠️ (has not been tested yet) |
+| Trade table      | ⚠️ (has not been tested yet) |
+
+`set_ominous_bottle_amplifier`
+
+<CodeHeader>Set Stew Effect Function</CodeHeader>
+
+```json
+{
+    "function": "minecraft:set_stew_effect",
+    "effects": [
+        {
+            "id": 0 // night vision
+        },
+        {
+            "id": 3 // blindness
+        }
+    ]
+}
+```
+Sets the effect of `minecraft:suspicious_stew`.
+
+`id` can be set to any value from 0 to 12. 
 
 ## Enchanting
 
