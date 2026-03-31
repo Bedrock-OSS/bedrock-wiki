@@ -85,7 +85,7 @@
     },
     {
       "name": "[PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)",
-      "description": "Feature-rich, highly customizable third-party server software for Minecraft: Bedrock Edition.",
+      "description": "Open-source, feature-rich Minecraft: Bedrock Edition server written in Java. Supports custom items, blocks, entities, full vanilla commands, advanced mob AI, and world generation. Highly customizable for server owners and developers.",
       "languages": "Java",
       "type": "Custom"
     },
