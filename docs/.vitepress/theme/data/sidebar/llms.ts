@@ -16,9 +16,12 @@ export default function generateLlmsFile(sidebar: Sidebar) {
   // Top-level pages
   if (sidebar.links.length > 0) {
     lines.push("## General");
+    lines.push("");
+
     for (const page of sidebar.links) {
       lines.push(`- [${page.title}](${page.link})`);
     }
+
     lines.push("");
   }
 
@@ -32,7 +35,7 @@ export default function generateLlmsFile(sidebar: Sidebar) {
       lines.push(`- [${page.title}](${page.link})`);
     }
 
-    if (section.links.length > 0) lines.push("");
+    lines.push("");
 
     // Categorized pages
     for (const category of section.categories) {
