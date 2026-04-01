@@ -13,19 +13,81 @@
   },
   "rows": [
     {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x1x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x1x16`",
+      "notes": "A single 16×1×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x2x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x2x16`",
+      "notes": "A single 16×2×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x4x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x4x16`",
+      "notes": "A single 16×4×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x6x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x6x16`",
+      "notes": "A single 16×6×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x8x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x8x16`",
+      "notes": "A single 16×8×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x9x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x9x16`",
+      "notes": "A single 16×9×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x10x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x10x16`",
+      "notes": "A single 16×10×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x12x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x12x16`",
+      "notes": "A single 16×12×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x13x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x13x16`",
+      "notes": "A single 16×13×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x14x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x14x16`",
+      "notes": "A single 16×14×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/box_16x15x16.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:box_16x15x16`",
+      "notes": "A single 16×15×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
       "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/empty.png' alt='' class='voxel-shape-preview' />",
       "identifier": "`minecraft:empty`",
       "notes": [
         "An empty shape that contains no boxes.",
-        "The default culling shape for blocks not using the `minecraft:geometry.full_block` model."
+        "The default culling shape for blocks not using the `minecraft:geometry.full_block` model.",
+        "**Hardcoded** — this voxel shape is not data-driven so cannot be modified nor found as a JSON file in the vanilla behavior pack."
       ]
+    },
+    {
+      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/slab_type_top.png' alt='' class='voxel-shape-preview' />",
+      "identifier": "`minecraft:slab_type_top`",
+      "notes": "A single 16×8×16 pixel box, taking up space from the top of the block unit."
     },
     {
       "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/unit_cube.png' alt='' class='voxel-shape-preview' />",
       "identifier": "`minecraft:unit_cube`",
       "notes": [
-        "A shape comprised of a single 16×16×16 pixel cube, taking up the space of the full block unit.",
-        "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling."
+        "A single 16×16×16 pixel cube, taking up the space of the full block unit.",
+        "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling.",
+        "**Hardcoded** — this voxel shape is not data-driven so cannot be modified nor found as a JSON file in the vanilla behavior pack."
       ]
     }
   ]
