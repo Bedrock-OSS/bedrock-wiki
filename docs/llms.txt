@@ -16,6 +16,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 3. Append `.md` to the path
 
 **Examples:**
+
 - Page URL: https://wiki.bedrock.dev/blocks/blocks-intro
   Source URL: https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/refs/heads/wiki/docs/blocks/blocks-intro.md
 
@@ -29,4 +30,4 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 # Table of Contents
 
-@replace-table-of-content
+<!-- @content -->
