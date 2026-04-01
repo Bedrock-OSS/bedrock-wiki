@@ -16,6 +16,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 3. Append `.md` to the path
 
 **Examples:**
+
 - Page URL: https://wiki.bedrock.dev/blocks/blocks-intro
   Source URL: https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/refs/heads/wiki/docs/blocks/blocks-intro.md
 
@@ -30,7 +31,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 # Table of Contents
 
 ## Beginner's Guide
+
 ### Guide
+
 - [Introduction](/guide/introduction)
 - [Add-Ons Explained](/guide/addons)
 - [Software & Preparation](/guide/software-preparation)
@@ -39,7 +42,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Create a Custom Entity](/guide/custom-entity)
 - [Blockbench: Modeling, Texturing & Animating](/guide/blockbench)
 - [Adding a Loot Table, Spawn Rule & Crafting Recipe](/guide/loot-table)
+
 ### Extra
+
 - [Understanding JSON](/guide/understanding-json)
 - [Download Example Packs](/guide/download-packs)
 - [Troubleshooting](/guide/troubleshooting)
@@ -48,6 +53,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Project Setup Android](/guide/project-setup-android)
 
 ## Animation Controllers
+
 - [Intro to Animation Controllers](/animation-controllers/animation-controllers-intro)
 - [Entity Commands](/animation-controllers/entity-commands)
 - [AFK Detector](/animation-controllers/afk-animation-controller)
@@ -56,7 +62,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Respawn Commands](/animation-controllers/respawn-commands)
 
 ## Blocks
+
 ### General
+
 - [Intro to Blocks](/blocks/blocks-intro)
 - [Block Components](/blocks/block-components)
 - [Block Tags](/blocks/block-tags)
@@ -67,13 +75,17 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Block Event Migration](/blocks/block-event-migration)
 - [Blocks as Items](/blocks/blocks-as-items)
 - [Troubleshooting Blocks](/blocks/troubleshooting-blocks)
+
 ### Visuals
+
 - [Block Culling](/blocks/block-culling)
 - [Block Models](/blocks/block-models)
 - [Block Texture Animation](/blocks/flipbook-textures)
 - [Block Texture Variation](/blocks/block-texture-variation)
 - [Block Tinting](/blocks/block-tinting)
+
 ### Tutorials
+
 - [Applying Effects](/blocks/applying-effects)
 - [Avoiding State Limit](/blocks/avoiding-state-limit)
 - [Block Orientation](/blocks/block-orientation)
@@ -81,13 +93,17 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Intercardinal Orientation](/blocks/intercardinal-orientation)
 - [Ore Loot Tables](/blocks/ore-loot-tables)
 - [Tool-Based Destruction](/blocks/tool-based-destruction)
+
 ### Vanilla Re-Creations
+
 - [Custom Crops](/blocks/custom-crops)
 - [Custom Glass](/blocks/custom-glass-blocks)
 - [Custom Glazed Terracotta](/blocks/custom-glazed-terracotta)
 - [Custom Heads](/blocks/custom-heads)
 - [Custom Trapdoors](/blocks/custom-trapdoors)
+
 ### Documentation
+
 - [Block Format History](/blocks/block-format-history)
 - [Block Shapes](/blocks/block-shapes)
 - [Block Sounds](/blocks/block-sounds)
@@ -97,7 +113,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Vanilla Voxel Shapes](/blocks/vanilla-voxel-shapes)
 
 ## Commands
+
 ### General
+
 - [Intro to Command Blocks](/commands/intro-to-command-blocks)
 - [Functions](/commands/mcfunctions)
 - [Block States](/commands/block-states)
@@ -105,23 +123,31 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Giving NBT Items](/commands/giving-nbt-items)
 - [Scoreboard Operations](/commands/scoreboard-operations)
 - [Understanding Selectors](/commands/selectors)
+
 ### Commands
+
 - [Damage](/commands/damage)
 - [Execute](/commands/new-execute)
 - [Playanimation](/commands/playanimation)
 - [Playsound](/commands/playsound)
+
 ### On Event Systems
+
 - [On First World Load](/commands/on-first-world-load)
 - [On Player First Join](/commands/on-first-join)
 - [On Player Join](/commands/on-player-join)
 - [On Player Leave](/commands/on-player-leave)
 - [On Player Death](/commands/on-player-death)
 - [On Player Respawn](/commands/on-player-respawn)
+
 ### Scoreboard Systems
+
 - [Entity Counter](/commands/entity-counter)
 - [Scoreboard Timers](/commands/scoreboard-timers)
 - [Comparing And Retrieving Scores](/commands/comparing-scores)
+
 ### Techniques
+
 - [Execute Logic Gates](/commands/logic-gates)
 - [Execute at Block Variant](/commands/execute-at-block)
 - [MBE - Max's Block Entity](/commands/block-entities)
@@ -130,12 +156,15 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Look Detection](/commands/look-detection)
 - [Movement Detections](/commands/movement-detections)
 - [Orbital Camera](/commands/orbital-camera)
+
 ### Useful Creations
+
 - [Compass Display](/commands/compass-display)
 - [Custom Crafter](/commands/custom-crafting)
 - [Multiplayer Position Rearrangement](/commands/rearrange-positions)
 
 ## Concepts
+
 - [contents.json](/concepts/contents)
 - [Molang](/concepts/molang)
 - [Namespaces](/concepts/namespaces)
@@ -147,6 +176,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [textures_list.json](/concepts/textures-list)
 
 ## Documentation
+
 - [Advanced Molang](/documentation/advanced-molang)
 - [File Types](/documentation/file-types)
 - [Fog IDs](/documentation/fog-ids)
@@ -158,7 +188,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Vanilla Materials](/documentation/materials)
 
 ## Entities
+
 ### General
+
 - [Intro to Entities BP](/entities/entity-intro-bp)
 - [Intro to Entities RP](/entities/entity-intro-rp)
 - [Troubleshooting Entities](/entities/troubleshooting-entities)
@@ -167,7 +199,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [NPC Dialogue](/entities/npc-dialogue)
 - [Render Controllers](/entities/render-controllers)
 - [Spawn Rules](/entities/spawn-rules)
+
 ### Tutorials
+
 - [Convert Points Between Any Space (World, Entity, Bones)](/entities/entity-transforms)
 - [Creating Boats](/entities/boat-entities)
 - [Detecting Other Entities](/entities/detecting-other-entities)
@@ -185,7 +219,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Solid Entities](/entities/solid-entities)
 - [Spawning Tamed Entities](/entities/spawning-tamed-entities)
 - [Village Mechanic](/entities/village-mechanic)
+
 ### Documentation
+
 - [Dummy Components](/entities/dummy-components)
 - [Non-Mob Runtime Identifiers](/entities/non-mob-runtime-identifiers)
 - [Projectiles](/entities/projectiles)
@@ -194,7 +230,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Vanilla Usage Spawn Rules](/entities/vanilla-usage-spawn-rules)
 
 ## Items
+
 ### General
+
 - [Intro to Items](/items/items-intro)
 - [Item Components](/items/item-components)
 - [Item Tags](/items/item-tags)
@@ -202,7 +240,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Item Event Migration](/items/item-event-migration)
 - [Item Catalog](/items/item-catalog)
 - [Troubleshooting Items](/items/troubleshooting-items)
+
 ### Tutorials
+
 - [Custom Armor](/items/custom-armor)
 - [Custom Food](/items/custom-food)
 - [Custom Pottery Sherds](/items/custom-pottery-sherds)
@@ -210,7 +250,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Equipment-Based Commands](/items/equipped-item-commands)
 - [Spawning Items](/items/spawning-items)
 - [Throwable Items](/items/throwable)
+
 ### Documentation
+
 - [Enchantments](/items/enchantments)
 - [Attachables](/items/attachables)
 - [Item Format History](/items/item-format-history)
@@ -220,37 +262,52 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Vanilla Usage Components](/items/vanilla-usage-items)
 
 ## JSON UI
+
 ### General
+
 - [Intro to JSON UI](/json-ui/json-ui-intro)
 - [Best Practices](/json-ui/best-practices)
+
 ### Tutorials
+
 - [Adding HUD Elements](/json-ui/add-hud-elements)
 - [Aseprite Animations](/json-ui/aseprite-animations)
 - [Buttons and Toggles](/json-ui/buttons-and-toggles)
 - [Modifying Server Forms](/json-ui/modifying-server-forms)
 - [Preserve Title Texts](/json-ui/preserve-title-texts)
 - [String to Number](/json-ui/string-to-number)
+
 ### Documentation
+
 - [JSON UI Documentation](/json-ui/json-ui-documentation)
 
 ## Loot, Recipes & Trading
+
 ### General
+
 - [Trading Behavior](/loot/trading-behavior)
+
 ### Documentation
+
 - [Loot Tables](/loot/loot-tables)
 - [Trade Tables](/loot/trade-tables)
 - [Recipes](/loot/recipes)
 - [Item Functions](/loot/item-functions)
+
 ### Tutorials
+
 - [Randomized Structure Loot](/loot/randomized-structure-loot)
 
 ## Meta
+
 - [Add-On Performance](/meta/addon-performance)
 - [Style Guide](/meta/style-guide)
 - [Useful Links](/meta/useful-links)
 - [Using Schemas](/meta/using-schemas)
 - [Version Control](/meta/version-control)
+
 ### Q&A
+
 - [Blocks and Items Q&A 2024/08/30](/meta/blocks-items-qna)
 - [Deferred Technical Preview Q&A 2024/02/23](/meta/deferred-qna)
 - [GameTest Q&A 2021/08/06](/meta/gametest-qna)
@@ -258,30 +315,46 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [World Generation Q&A 2024/11/15](/meta/world-gen-qna)
 
 ## NBT
+
 ### General
+
 - [.mcstructure](/nbt/mcstructure)
+
 ### Tutorials
+
 - [Enabling Experiments by Editing NBT](/nbt/experimental-education-edition)
 - [Extending Structure Limits](/nbt/structure-limits)
+
 ### NBT in Depth
+
 - [About NBT (Named Binary Tag)](/nbt/nbt-in-depth)
 - [NBT Libraries](/nbt/libraries)
 - [Reading NBT Example](/nbt/step-by-step-example)
 
 ## Particles
+
 ### General
+
 - [Intro to Particles](/particles/particles)
+
 ### Tutorials
+
 - [Disabling Particles](/particles/disabling-particles)
+
 ### Documentation
+
 - [Vanilla Particles](/particles/vanilla-particles)
 
 ## Scripting
+
 ### General
+
 - [Intro to Scripting](/scripting/scripting-intro)
 - [What is Script API?](/scripting/what-is-script)
 - [API Modules](/scripting/api-modules)
+
 ### Tutorials
+
 - [Block Placement Prevention](/scripting/placement-prevention)
 - [Custom Commands](/scripting/custom-commands)
 - [GameTests](/scripting/game-tests)
@@ -289,7 +362,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Script Forms](/scripting/gametest-form)
 - [Script Privileges](/scripting/privileges)
 - [Script Requests API](/scripting/script-net)
+
 ### Documentation
+
 - [Engine Environment](/scripting/api-environment)
 - [Script Resources](/scripting/resources)
 - [Script Watchdog](/scripting/script-watchdog)
@@ -297,26 +372,36 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [TypeScript](/scripting/typescript)
 
 ## Servers
+
 ### Software
+
 - [Bedrock Server Software](/servers/server-software)
+
 ### Protocols
+
 - [Bedrock Protocol](/servers/bedrock)
 - [NetherNet Protocol](/servers/nethernet)
 - [RakNet Protocol](/servers/raknet)
 
 ## Text & Localization
+
 ### General
+
 - [Intro to Text & Localization](/text/text-intro)
 - [Raw Text](/text/rawtext)
 - [Splashes](/text/splashes)
+
 ### Emojis & Symbols
+
 - [Fonts](/text/fonts)
 - [Intro to Emojis](/text/emojis)
 - [Custom Emojis](/text/custom-emojis)
 - [Input Keys](/text/input-keys)
 
 ## Visuals
+
 ### General
+
 - [Introduction to Entity Visuals](/visuals/introduction)
 - [Bedrock Modeling](/visuals/bedrock-modeling)
 - [Custom Death Animations](/visuals/death-animations)
@@ -325,7 +410,9 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Materials](/visuals/materials)
 - [Math-Based Animations](/visuals/math-based-animations)
 - [Skin Packs](/visuals/custom-skin-packs)
+
 ### Tutorials
+
 - [Entity Texture Animation](/visuals/animated-entity-texture)
 - [Glowing Entity Texture](/visuals/glowing-texture)
 - [Hurt Animations](/visuals/custom-hurt-animations)
@@ -333,20 +420,28 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Player Geometry](/visuals/player-geometry)
 - [Remove Entity Shadows](/visuals/remove-shadows)
 - [Retexturing Spawn Eggs](/visuals/retexturing-spawn-eggs)
+
 ### Ideas
+
 - [Structure Presentation](/visuals/structure-presentation)
 
 ## World Generation
+
 ### General
+
 - [Intro to World Generation](/world-generation/world-generation-intro)
 - [Biomes](/world-generation/biomes)
 - [Feature Types](/world-generation/feature-types)
 - [Jigsaw Structures](/world-generation/jigsaw-structures)
+
 ### Tutorials
+
 - [Block Conditions for Features](/world-generation/feature-block-conditions)
 - [Generating Custom Ores](/world-generation/custom-ores)
 - [Generating Custom Structures](/world-generation/structure-features)
 - [Generating Patches](/world-generation/surface-builder)
 - [Heightmap Noise](/world-generation/heightmap-noise)
+
 ### Documentation
+
 - [Biome Tags](/world-generation/biome-tags)
