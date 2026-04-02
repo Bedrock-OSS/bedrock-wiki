@@ -436,11 +436,11 @@ Sets type of a `minecraft:banner` or the banner on a `minecraft:shield` (only us
 
 `type`: Can only be `0` or `1`.
 
-- `0` is just a White Banner.
+- `0` is a White Banner.
 - `1` is an Ominous Banner.
 
 `base_color`: Can be set for banners of type 0 and sets the color of the banner.
-`patterns`: Is a array of banner patterns and colors to be applied to the banner. Up to 6 patterns can be applied.
+`patterns`: Is an array of banner patterns and colors to be applied to the banner. Up to 6 patterns can be applied.
 
 ### Random Dyeing
 
@@ -608,9 +608,10 @@ Sets the `minecraft:ominous_bottle` potion effect amplifier.
     ]
 }
 ```
-Sets the effect of `minecraft:suspicious_stew`.
 
-`id` can be set to any value from 0 to 12. 
+Sets the effect of a `minecraft:suspicious_stew` item.
+
+`id` can be set to any integer from 0 to 12. 
 
 ## Enchanting
 
