@@ -2,6 +2,8 @@
 title: Vanilla Item Groups
 description: Learn about the expandable item catalog groups included in each category of the vanilla creative menu.
 category: Documentation
+related:
+    - /items/item-catalog
 license: true
 mentions:
     - QuazChick

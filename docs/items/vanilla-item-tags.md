@@ -2,6 +2,8 @@
 title: Vanilla Item Tags
 description: Learn about item tags that are built into the game and applied to vanilla items.
 category: Documentation
+related:
+    - /items/item-tags
 license: true
 mentions:
     - QuazChick

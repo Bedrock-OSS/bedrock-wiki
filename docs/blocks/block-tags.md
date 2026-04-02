@@ -3,6 +3,8 @@ title: Block Tags
 description: Block tags are used when checking for multiple types of block and can enable vanilla functionality.
 category: General
 nav_order: 3
+related:
+    - /blocks/vanilla-block-tags
 license: true
 mentions:
     - SirLich
