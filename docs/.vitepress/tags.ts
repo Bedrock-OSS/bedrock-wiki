@@ -8,6 +8,10 @@ export default {
   beta: {
     color: "yellow",
   },
+  concept: {
+    color: "blue",
+  sidebar: true,
+  },
   deprecated: {
     color: "red",
   },

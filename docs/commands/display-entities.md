@@ -8,7 +8,7 @@ mentions:
     - PipiSpamton
     - zheaEvyline
     - szea-ll14
-nav_order: 4
+nav_order: 5
 description: A guide to creating block display entities on Bedrock purely using commands.
 ---
 

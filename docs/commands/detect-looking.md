@@ -1,6 +1,6 @@
 ---
 title: Look Detection
-category: Techniques
+category: Detection Systems
 tags:
     - intermediate
 mentions:

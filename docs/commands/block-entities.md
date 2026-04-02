@@ -4,7 +4,8 @@ category: Techniques
 mentions:
     - BedrockCommands
     - zheaEvyline
-nav_order: 3
+    - MaxedOut4826
+nav_order: 4
 description: Max's Block Entity system using commands.
 ---
 
