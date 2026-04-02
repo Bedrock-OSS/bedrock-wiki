@@ -1,0 +1,33 @@
+# Bedrock Wiki - AI Readable Documentation
+
+This file provides an overview of the Bedrock Wiki documentation structure for AI consumption.
+
+The Bedrock Wiki is a knowledge-sharing website for technical features of Minecraft Bedrock, containing documentation, tutorials, and general how-to information.
+
+- Website: https://wiki.bedrock.dev
+- Repository: https://github.com/Bedrock-OSS/bedrock-wiki (branch: wiki)
+
+## URL Transformation Recipe
+
+To access the raw Markdown source of any page (which is easier to process), transform the page URL using this formula:
+
+1. Take the page URL (e.g., https://wiki.bedrock.dev/blocks/blocks-intro)
+2. Replace the base URL `https://wiki.bedrock.dev/` with `https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/refs/heads/wiki/docs/`
+3. Append `.md` to the path
+
+**Examples:**
+
+- Page URL: https://wiki.bedrock.dev/blocks/blocks-intro
+  Source URL: https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/refs/heads/wiki/docs/blocks/blocks-intro.md
+
+- Page URL: https://wiki.bedrock.dev/guide/introduction
+  Source URL: https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/refs/heads/wiki/docs/guide/introduction.md
+
+- Page URL: https://wiki.bedrock.dev/entities/entity-intro-bp
+  Source URL: https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/refs/heads/wiki/docs/entities/entity-intro-bp.md
+
+---
+
+# Table of Contents
+
+<!-- @content -->
