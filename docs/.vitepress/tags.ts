@@ -10,7 +10,7 @@ export default {
   },
   concept: {
     color: "blue",
-  sidebar: true,
+    sidebar: true,
   },
   deprecated: {
     color: "red",
