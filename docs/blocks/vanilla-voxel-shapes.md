@@ -13,9 +13,6 @@ mentions:
 :::warning EXPERIMENTAL
 Voxel shapes are experimental and require the "Experimental Voxel Shape Features" toggle to be enabled in order to function.
 :::
-:::danger HARDCODED
-Currently, vanilla voxel shapes are not data-driven, so cannot be modified nor found as JSON files in the vanilla behavior pack.
-:::
 
 <Table data="shapes.json" />
 

@@ -7,6 +7,8 @@ import config from "../config";
 import resolveLinks from "./resolveLinks";
 import resolveSections from "./resolveSections";
 
+import generateLlmsFile from "./llms";
+
 declare const data: Sidebar;
 export { data };
 
@@ -20,6 +22,8 @@ export default defineLoader({
 
     resolveLinks(sidebar);
     resolveSections(sidebar);
+
+    generateLlmsFile(sidebar);
 
     return sidebar;
   },
