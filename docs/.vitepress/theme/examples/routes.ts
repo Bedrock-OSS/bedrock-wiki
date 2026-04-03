@@ -1,5 +1,4 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
-import { minimatch } from "minimatch";
 import { basename, join, relative } from "path";
 import { globIterate } from "glob";
 import matter from "gray-matter";
