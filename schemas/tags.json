@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "patternProperties": {
+    "[a-z-]+": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["color"],
+      "properties": {
+        "color": {
+          "$ref": "./color.json"
+        },
+        "text": {
+          "type": "string"
+        },
+        "sidebar": {
+          "default": false,
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "color": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

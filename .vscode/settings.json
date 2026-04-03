@@ -10,5 +10,10 @@
       "fileMatch": ["docs/public/assets/tables/**/*.json"],
       "url": "./schemas/table.json"
     }
-  ]
+  ],
+  "yaml.schemas": {
+    "./schemas/redirects.json": ["docs/redirects.yaml"],
+    "./schemas/section.json": ["docs/*/section.yaml"],
+    "./schemas/tags.json": ["docs/tags.yaml"]
+  }
 }
