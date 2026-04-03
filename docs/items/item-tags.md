@@ -2,6 +2,8 @@
 title: Item Tags
 description: Item tags are used when checking for multiple types of item and can enable vanilla functionality.
 category: General
+related:
+    - /items/vanilla-item-tags
 nav_order: 3
 license: true
 mentions:

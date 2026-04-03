@@ -1,15 +1,17 @@
 <script setup lang="ts">
+import { useRoute } from "vitepress";
+
 import filePageLink from "../../utils/filePageLink";
 
 import useFilePage from "../../composables/filePage";
 import useData from "../../composables/data";
 
 import OutlineLevel from "./OutlineLevel.vue";
+import RelatedPages from "./RelatedPages.vue";
 import FolderView from "./FolderView.vue";
 import Downloads from "./Downloads.vue";
-import { useRoute } from "vitepress";
 
-const { page, params } = useData();
+const { frontmatter, page, params } = useData();
 const filePage = useFilePage();
 
 const route = useRoute();
@@ -48,6 +50,7 @@ const route = useRoute();
         "
       />
     </template>
+    <RelatedPages v-if="frontmatter.related !== undefined" />
   </div>
 </template>
 
@@ -69,6 +72,10 @@ const route = useRoute();
 
   a.active {
     font-weight: 600;
+  }
+
+  li {
+    margin-block: 0.4em;
   }
 }
 

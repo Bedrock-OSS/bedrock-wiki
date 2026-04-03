@@ -4,6 +4,8 @@ description: Block culling rules allow you to remove parts of a model based on t
 category: Visuals
 tags:
     - intermediate
+related:
+    - /blocks/block-models
 license: true
 mentions:
     - legopitstop

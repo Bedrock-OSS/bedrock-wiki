@@ -4,6 +4,8 @@ description: Blocks have a limit of 16 valid values per state that cannot be exc
 category: Tutorials
 tags:
     - expert
+related:
+    - /blocks/block-states
 mentions:
     - Kaioga5
     - QuazChick
