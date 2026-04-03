@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { computed } from "vue";
+
 import displayError from "../../utils/displayError";
-import useData from "../../composables/data";
+import { data as tags } from "../../data/tags.data";
 
 import Label from "./Label.vue";
-
-const { theme } = useData();
 
 const { name, sidebar } = defineProps<{
   name: string;
@@ -13,12 +12,12 @@ const { name, sidebar } = defineProps<{
 }>();
 
 const tag = computed(() => {
-  const tag = theme.value.tags[name];
+  const tag = tags[name];
 
   if (!tag) {
     displayError(
       new TypeError(
-        `No tag with the name "${name}" exists. If you would like to add a tag, you can do so in ".vitepress/tags.ts".`
+        `No tag with the name "${name}" exists. If you would like to add a tag, you can do so in "docs/tags.yaml".`
       )
     );
   }

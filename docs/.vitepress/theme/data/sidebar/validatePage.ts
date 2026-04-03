@@ -1,7 +1,4 @@
 import { GrayMatterFile } from "gray-matter";
-import config from "../config";
-
-const { tags } = config.userConfig.themeConfig;
 
 export default function validatePage(path: string, { data }: GrayMatterFile<string>) {
   const errors: string[] = [];
@@ -12,12 +9,7 @@ export default function validatePage(path: string, { data }: GrayMatterFile<stri
   }
 
   if (data.tags) {
-    if (Array.isArray(data.tags)) {
-      for (const name of data.tags) {
-        if (name in tags) continue;
-        errors.push(`Tag with name "${name}" does not exist.`);
-      }
-    } else {
+    if (!Array.isArray(data.tags) || data.tags.some((tag) => typeof tag !== "string")) {
       errors.push(`Page tags must be an array of string tag names.`);
     }
   }

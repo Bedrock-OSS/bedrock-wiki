@@ -7,8 +7,6 @@ export interface WikiConfig {
   examples?: ExamplesOptions;
   algolia: DefaultTheme.AlgoliaSearchOptions;
   navigation: NavigationItem[];
-  redirects: Redirects;
-  tags: Tags;
   title: string;
   longTitle?: string;
   description: string;
@@ -25,8 +23,6 @@ export interface ThemeConfig {
   examples?: ExamplesOptions;
   algolia: DefaultTheme.AlgoliaSearchOptions;
   navigation: NavigationItem[];
-  redirects: Redirects;
-  tags: Tags;
 }
 
 export interface ExamplesOptions {
@@ -87,7 +83,7 @@ export interface Sidebar {
 export interface SidebarSection {
   id: string;
   title: string;
-  data: Record<string, any>;
+  order?: number;
   links: SidebarLink[];
   categories: SidebarCategory[];
 }
@@ -101,9 +97,9 @@ export interface SidebarCategory {
 export interface SidebarLink {
   prefix?: string;
   title: string;
+  order?: number;
   link: string;
   tags?: string[];
-  data: Record<string, any>;
 }
 
 export interface Tag {
@@ -111,10 +107,6 @@ export interface Tag {
   text?: string;
   sidebar?: boolean | { text: string };
 }
-
-export type Tags = Record<string, Tag>;
-
-export type Redirects = Record<string, string>;
 
 export interface Table {
   columns: {

@@ -13,7 +13,7 @@ declare const data: Sidebar;
 export { data };
 
 export default defineLoader({
-  watch: join(config.srcDir, "**/*.md"),
+  watch: [join(config.srcDir, "**/*.md"), join(config.srcDir, "*/section.yaml")],
   load() {
     const sidebar: Sidebar = {
       links: [],

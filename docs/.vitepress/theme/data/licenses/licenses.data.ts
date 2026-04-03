@@ -28,8 +28,8 @@ export default defineLoader({
       const joinedPath = join(licensesDirectory, entry);
       const stats = statSync(joinedPath);
 
-      // Don't include non-markdown files, or the section index page
-      if (!stats.isFile() || !entry.endsWith(".md") || entry === "index.md") continue;
+      // Don't include non-markdown files
+      if (!stats.isFile() || !entry.endsWith(".md")) continue;
 
       const licenseId = entry.replace(/\.md$/, "");
 

@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
 import { minimatch } from "minimatch";
-import { join, relative } from "path";
+import { basename, join, relative } from "path";
 import { globIterate } from "glob";
 import matter from "gray-matter";
 
@@ -13,6 +13,7 @@ import {
   examplesCacheDirectory,
   exampleMapFilePath,
 } from "./data";
+import { load } from "js-yaml";
 
 const metaFileName = "meta.json";
 
@@ -32,15 +33,30 @@ export async function paths() {
 
   const pages: FilePage[] = [];
 
-  const pathIterator = globIterate("docs/**/*.md", {
+  const pathIterator = globIterate(["docs/**/*.md", "docs/*/section.yaml"], {
     ignore: ["docs/**/*[*.md", "docs/public/*"],
   });
 
   for await (const path of pathIterator) {
-    const pageMarkdown = readFileSync(path, "utf-8");
-    const frontmatter = matter(pageMarkdown);
+    const fileContent = readFileSync(path, "utf-8");
 
-    const exampleId = frontmatter.data.example;
+    let title: string;
+    let exampleId: string;
+
+    const isSection = basename(path) === "section.yaml";
+
+    if (isSection) {
+      const section: any = load(fileContent);
+
+      title = section.title;
+      exampleId = section.example;
+    } else {
+      const frontmatter = matter(fileContent);
+
+      title = frontmatter.data.title;
+      exampleId = frontmatter.data.example;
+    }
+
     if (!exampleId) continue;
 
     const filesDirectory = join(examplesSourceDirectory, exampleId);
@@ -62,7 +78,7 @@ export async function paths() {
     const rootPath = relative("docs", path)
       .replaceAll("\\", "/")
       .replace(/\.md$/, "")
-      .replace(/(^|\/)index$/, "");
+      .replace(/\/section\.yaml$/, "");
 
     const filePaths = getFilePaths(filesDirectory, {
       ignored: metaFileName,
@@ -81,9 +97,9 @@ export async function paths() {
     exampleMap[rootPath] = example;
 
     const root: FilePageParams["root"] = {
-      title: frontmatter.data.title,
+      title,
       path: rootPath,
-      type: minimatch(path, "docs/*/index.md") ? "section" : "page",
+      type: isSection ? "section" : "page",
     };
 
     const pageIterator = getFilePageIterator({

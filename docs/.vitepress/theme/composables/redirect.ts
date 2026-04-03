@@ -1,20 +1,19 @@
 import { onBeforeMount } from "vue";
 import { useRouter } from "vitepress";
-import useData from "./data";
+
+import { data as redirects } from "../data/redirects.data";
 
 export default function useRedirect() {
-  const { theme } = useData();
-
   const router = useRouter();
 
   function redirect() {
     let from = router.route.path.replace(".html", "");
-    let to = theme.value.redirects[from];
+    let to = redirects[from];
 
     // Support redirects for specific sections of pages
     if (to === undefined) {
       from += window.location.hash;
-      to = theme.value.redirects[from];
+      to = redirects[from];
     }
 
     if (to) router.go(to);

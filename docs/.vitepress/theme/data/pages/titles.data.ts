@@ -10,7 +10,7 @@ export default createContentLoader("**/*.md", {
   transform(data) {
     return Object.fromEntries(
       data
-        .filter(({ url, frontmatter }) => !url.endsWith("/") && frontmatter.title !== undefined)
+        .filter(({ frontmatter }) => frontmatter.title !== undefined)
         .map(({ url, frontmatter }) => [url, frontmatter.title])
     );
   },

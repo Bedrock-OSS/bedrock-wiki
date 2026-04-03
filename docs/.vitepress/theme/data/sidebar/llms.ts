@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from "fs";
-import { Sidebar } from "../../types";
 import { resolve } from "path";
+
+import { Sidebar } from "../../types";
 import config from "../config";
 
 const templatePath = resolve(config.srcDir, "llms.txt");

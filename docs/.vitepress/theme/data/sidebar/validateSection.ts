@@ -1,9 +1,7 @@
-import { GrayMatterFile } from "gray-matter";
-
-export default function validateSection(id: string, { data }: GrayMatterFile<string>) {
+export default function validateSection(id: string, definition: any) {
   const errors: string[] = [];
 
-  if (data.title === undefined) {
+  if (definition.title === undefined) {
     errors.push("A section title must be defined but none was found.");
   }
 

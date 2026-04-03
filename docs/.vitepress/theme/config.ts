@@ -20,13 +20,9 @@ export function defineWikiConfig(config: WikiConfig) {
     algolia,
     navigation,
     fastBuild,
-    redirects,
-    tags,
   } = config;
 
-  const srcExclude = [
-    "*/index.md", // Do not include section definition files
-  ];
+  const srcExclude = ["public/*"];
 
   if (fastBuild && isFastBuild) {
     console.log(
@@ -65,8 +61,6 @@ export function defineWikiConfig(config: WikiConfig) {
       },
 
       navigation,
-      redirects,
-      tags,
     },
 
     markdown: {

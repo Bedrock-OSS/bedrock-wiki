@@ -1,6 +1,6 @@
-import matter from "gray-matter";
-import path from "path";
-import fs from "fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "fs";
+import { basename, join } from "path";
+import { load } from "js-yaml";
 
 import { Sidebar, SidebarSection } from "../../types";
 import config from "../config";
@@ -12,30 +12,29 @@ import resolveCategories from "./resolveCategories";
 import resolveLinks from "./resolveLinks";
 
 export default function resolveSections(sidebar: Sidebar) {
-  const entries = fs.readdirSync(config.srcDir);
+  const entries = readdirSync(config.srcDir);
 
   for (const entry of entries) {
-    const joinedPath = path.join(config.srcDir, entry);
-    const stats = fs.statSync(joinedPath);
-    const indexPath = path.join(joinedPath, "index.md");
+    const joinedPath = join(config.srcDir, entry);
+    const stats = statSync(joinedPath);
+    const sectionDefinitionPath = join(joinedPath, "section.yaml");
 
     // Handle top level directories - these make up the expandable sections in the sidebar
-    if (stats.isDirectory() && fs.existsSync(indexPath)) {
-      const id = path.basename(entry);
+    if (stats.isDirectory() && existsSync(sectionDefinitionPath)) {
+      const id = basename(entry);
 
-      const sectionIndex = fs.readFileSync(indexPath, "utf-8");
-      const sectionFrontmatter = matter(sectionIndex);
-      validateSection(id, sectionFrontmatter);
+      const sectionDefinition: any = load(readFileSync(sectionDefinitionPath, "utf-8"));
+      validateSection(id, sectionDefinition);
 
       const section: SidebarSection = {
         id,
-        title: sectionFrontmatter.data.title,
-        data: sectionFrontmatter.data,
+        title: sectionDefinition.title,
+        order: sectionDefinition.nav_order,
         links: [],
         categories: [],
       };
 
-      resolveCategories(section);
+      resolveCategories(section, sectionDefinition.categories);
       resolveLinks(section, joinedPath);
 
       sidebar.sections.push(section);

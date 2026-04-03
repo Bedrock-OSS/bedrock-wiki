@@ -1,5 +1,4 @@
----
-title: Items
+title: JSON UI
 categories:
     - title: General
       color: blue
@@ -7,4 +6,3 @@ categories:
       color: green
     - title: Documentation
       color: red
----

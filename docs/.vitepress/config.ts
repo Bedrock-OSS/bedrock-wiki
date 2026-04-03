@@ -1,8 +1,5 @@
 import { defineWikiConfig } from "./theme/config";
 
-import redirects from "./redirects";
-import tags from "./tags";
-
 export default defineWikiConfig({
   title: "Bedrock Wiki",
   longTitle: "The Bedrock Wiki",
@@ -51,7 +48,4 @@ export default defineWikiConfig({
       "/entities/vusr-full",
     ],
   },
-
-  redirects,
-  tags,
 });

@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, statSync } from "fs";
-import { basename, join, relative } from "path";
+import { join, relative } from "path";
 import matter from "gray-matter";
 
 import { Sidebar, SidebarSection } from "../../types";
@@ -25,13 +25,8 @@ export default function resolveLinks(
 
     // Handle the normal files
     if (stats.isFile()) {
-      // Don't include non-markdown files, dynamic routes, or the section index page
-      if (
-        !entry.endsWith(".md") ||
-        entry.includes("[") ||
-        (isInSection && basename(entry) === "index.md")
-      )
-        continue;
+      // Don't include non-markdown files or dynamic routes
+      if (!entry.endsWith(".md") || entry.includes("[")) continue;
 
       const path = relative(config.srcDir, joinedPath);
       const link = formatLink(path);
@@ -57,7 +52,7 @@ export default function resolveLinks(
 
           throw new TypeError(
             `Page "${link}" is in a non-existent category: "${category}".\n` +
-              `Available categories are listed in the section's "index.md" file, which currently includes: ${availableCategories}`
+              `Available categories are listed in the section's "section.yaml" file, which currently includes: ${availableCategories}`
           );
         }
       }
@@ -65,9 +60,9 @@ export default function resolveLinks(
       links.push({
         prefix,
         title: frontMatter.data.title,
+        order: frontMatter.data.nav_order,
         link,
         tags,
-        data: frontMatter.data,
       });
 
       sort(links);
