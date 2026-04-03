@@ -1,4 +1,4 @@
-import { TableRow, TableValue } from "../../types";
+import { TableRow, TableValue } from "../types";
 
 export interface TableSorting {
   column: string;

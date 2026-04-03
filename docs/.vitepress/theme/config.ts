@@ -89,12 +89,19 @@ export function defineWikiConfig(config: WikiConfig) {
     },
 
     transformPageData(pageData) {
-      if (!pageData.frontmatter.example) return;
+      if (pageData.frontmatter.__tables) {
+        pageData.params ??= {};
+        pageData.params.tables = pageData.frontmatter.__tables;
 
-      const example = getExampleForPage(pageData.relativePath);
+        delete pageData.frontmatter.__tables;
+      }
 
-      pageData.params ??= {};
-      pageData.params.example = example;
+      if (pageData.frontmatter.example) {
+        const example = getExampleForPage(pageData.relativePath);
+
+        pageData.params ??= {};
+        pageData.params.example = example;
+      }
     },
 
     async buildEnd({ outDir }) {

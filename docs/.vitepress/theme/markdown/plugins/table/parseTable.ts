@@ -1,10 +1,12 @@
-import isObject from "../../utils/isObject";
-import { Table } from "../../types";
+import MarkdownIt from "markdown-it";
+
+import isObject from "../../../utils/isObject";
+import { Table } from "../../../types";
 
 import parseTableColumn from "./parseTableColumn";
 import parseTableRow from "./parseTableRow";
 
-export default function parseTable(data: unknown) {
+export function parseTable(data: unknown, md: MarkdownIt) {
   const table: Table = {
     columns: {},
     rows: [],
@@ -23,7 +25,7 @@ export default function parseTable(data: unknown) {
     for (const columnId in data.columns) {
       const column = data.columns[columnId];
 
-      table.columns[columnId] = parseTableColumn(columnId, column);
+      table.columns[columnId] = parseTableColumn(columnId, column, md);
     }
   }
 
@@ -36,7 +38,7 @@ export default function parseTable(data: unknown) {
     for (let index = 0; index < data.rows.length; index++) {
       const row = data.rows[index];
 
-      table.rows.push(parseTableRow(index, row, table.columns));
+      table.rows.push(parseTableRow(index, row, table.columns, md));
     }
   }
 

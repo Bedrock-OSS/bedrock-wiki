@@ -1,9 +1,16 @@
-import isObject from "../../utils/isObject";
-import { Table, TableRow } from "../../types";
+import MarkdownIt from "markdown-it";
+
+import isObject from "../../../utils/isObject";
+import { Table, TableRow } from "../../../types";
 
 import parseTableValue from "./parseTableValue";
 
-export default function parseTableRow(index: number, data: unknown, columns: Table["columns"]) {
+export default function parseTableRow(
+  index: number,
+  data: unknown,
+  columns: Table["columns"],
+  md: MarkdownIt
+) {
   const row: TableRow = {};
 
   if (!isObject(data)) {
@@ -19,7 +26,7 @@ export default function parseTableRow(index: number, data: unknown, columns: Tab
       );
     }
 
-    const value = parseTableValue(data[columnId]);
+    const value = parseTableValue(data[columnId], md);
 
     if (column.sortable && Array.isArray(value)) {
       throw new TypeError(

@@ -2,7 +2,7 @@
 import { computed } from "vue";
 import { TableColumn } from "../../types";
 
-import { TableSorting } from "../../data/tables/sortTableRows";
+import { TableSorting } from "../../utils/sortTableRows";
 import SortIcon from "../icons/SortIcon.vue";
 
 const props = defineProps<{

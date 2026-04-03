@@ -1,14 +1,14 @@
-import { TableValue } from "../../types";
+import MarkdownIt from "markdown-it";
 
-import markdown from "../markdown";
+import { TableValue } from "../../../types";
 
-export default function parseTableValue(value: unknown) {
+export default function parseTableValue(value: unknown, md: MarkdownIt) {
   if (typeof value === "boolean") {
     return value;
   }
 
   if (typeof value === "string") {
-    return markdown.renderInline(value);
+    return md.renderInline(value);
   }
 
   if (typeof value === "number") {
@@ -23,7 +23,7 @@ export default function parseTableValue(value: unknown) {
         throw new TypeError(`Table list items must be strings.`);
       }
 
-      list.push(markdown.renderInline(item));
+      list.push(md.renderInline(item));
     }
 
     return list;
