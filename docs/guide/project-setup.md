@@ -19,9 +19,8 @@ mentions:
     - stirante
     - ChibiMango
     - Etanarvazac
-    - retr0cube
+    - aym-i
     - ThomasOrs
-    - lescx
     - QuazChick
 ---
 

@@ -8,7 +8,7 @@ mentions:
     - Fabrimat
     - TheItsNameless
     - QuazChick
-    - roman-emerald
+    - romanemerald
 ---
 
 [structure]: /assets/images/nbt/structure.png

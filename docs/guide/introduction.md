@@ -16,7 +16,7 @@ mentions:
     - MedicalJewel105
     - smell-of-curry
     - Hatchibombotar
-    - retr0cube
+    - aym-i
     - QuazChick
 ---
 

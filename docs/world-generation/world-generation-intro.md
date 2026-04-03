@@ -12,7 +12,7 @@ mentions:
     - destruc7ion
     - MedicalJewel105
     - aexer0e
-    - retr0cube
+    - aym-i
     - SmokeyStack
     - Supernova3695
 ---
