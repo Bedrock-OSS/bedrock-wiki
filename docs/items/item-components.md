@@ -64,8 +64,8 @@ _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
 #### Object Format {#block-placer-object}
 
--   `block` — String / Object
-    -   Defines the block that will be placed.
+-   `block` — String
+    -   Defines the identifier of the block that will be placed.
 -   `replace_block_item` — Boolean (optional)
     -   Learn more about replacing block items [here](/blocks/blocks-as-items#replacing-block-items).
 -   `aligned_placement` — Boolean (optional)
@@ -75,7 +75,7 @@ _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
     -   By default, aligned placement is disabled.
 -   `use_on` — Array (optional)
     -   Lists the blocks (as an array of [block descriptors](/documentation/shared-constructs#block-descriptors)) that this item can be used on to place the block.
-    -   If empty or omitted, the item will be able to place on any block.
+    -   If empty or omitted, the item will be able to place onto any block.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
