@@ -4,6 +4,8 @@ description: Learn how to create blocks that can face different directions.
 category: Tutorials
 tags:
     - easy
+related:
+    - /blocks/intercardinal-orientation
 license: true
 mentions:
     - Ultr4Anubis

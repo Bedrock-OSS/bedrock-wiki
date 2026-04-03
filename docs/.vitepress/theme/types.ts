@@ -58,6 +58,7 @@ export interface License {
 
 export interface PageParams {
   example?: Example;
+  tables?: Record<string, Table>;
   [param: string]: any;
 }
 

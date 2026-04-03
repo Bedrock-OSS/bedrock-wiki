@@ -1,10 +1,11 @@
-import isObject from "../../utils/isObject";
-import { TableColumn } from "../../types";
+import MarkdownIt from "markdown-it";
 
-import markdown from "../markdown";
+import isObject from "../../../utils/isObject";
+import { TableColumn } from "../../../types";
+
 import parseTableValue from "./parseTableValue";
 
-export default function parseTableColumn(id: string, data: unknown) {
+export default function parseTableColumn(id: string, data: unknown, md: MarkdownIt) {
   const column: Partial<TableColumn> = {};
 
   if (!isObject(data)) {
@@ -18,11 +19,11 @@ export default function parseTableColumn(id: string, data: unknown) {
     throw new TypeError(`The "name" field of column "${id}" must be a string.`);
   }
 
-  column.name = markdown.renderInline(data.name);
+  column.name = md.renderInline(data.name);
 
   // Default Value
   if ("default" in data) {
-    column.default = parseTableValue(data.default);
+    column.default = parseTableValue(data.default, md);
   }
 
   // Sortable

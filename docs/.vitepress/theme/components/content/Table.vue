@@ -3,19 +3,17 @@ import { computed, ref, watch } from "vue";
 import TableHeader from "./TableHeader.vue";
 import TableCell from "./TableCell.vue";
 
-import sortTableRows, { TableSorting } from "../../data/tables/sortTableRows";
-import { data as tables } from "../../data/tables/tables.data";
-import displayError from "../../utils/displayError";
+import sortTableRows, { TableSorting } from "../../utils/sortTableRows";
 import useData from "../../composables/data";
 
-const { page } = useData();
+const { page, params } = useData();
 
 const props = defineProps<{
   data: string;
 }>();
 
 const table = computed(() => {
-  let path = "public";
+  let path = "";
 
   if (props.data[0] !== "/") {
     path += "/assets/tables/" + page.value.relativePath.replace(/\.md$/, "/");
@@ -23,13 +21,7 @@ const table = computed(() => {
 
   path += props.data;
 
-  const table = tables[path];
-
-  if (!table) {
-    displayError(new TypeError(`No table with the path "${path}" exists.`));
-  }
-
-  return table;
+  return params.value.tables![path];
 });
 
 const sorting = ref<TableSorting | null>(null);

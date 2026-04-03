@@ -8,7 +8,7 @@ import filePageLink from "../../utils/filePageLink";
 const exampleFilePattern = /^<ExampleFile\s+path="(?<path>[^"]*)"\s*\/>$/;
 
 export const exampleFilePlugin: PluginSimple = (md) => {
-  md.core.ruler.after("block", "example_file", ({ env, tokens, md, inlineMode }) => {
+  md.core.ruler.after("block", "example_file", ({ env, tokens, inlineMode }) => {
     if (inlineMode) return;
 
     for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex++) {
