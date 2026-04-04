@@ -39,6 +39,9 @@ export function defineWikiConfig(config: WikiConfig) {
     ignoreDeadLinks: isFastBuild ? fastBuild.excludedPages : undefined,
 
     cleanUrls: true,
+    sitemap: {
+      hostname: config.url,
+    },
 
     async buildEnd({ outDir }) {
       await copyExampleArchives(outDir);
