@@ -44,7 +44,7 @@ Run the following commands in chat:
 
 ### Best Practices
 
-- **Keep Loaded:** Ensure these boats are in a **tickingarea** or the world spawn chunk so the command works globally.
+- **Keep Loaded:** Ensure these boats are in a ticking area or a chunk that remains loaded at all times so the command works globally.
 - **Safety:** Place the boats in a secure location where players or explosions cannot move or destroy them.
 
 ## Command
@@ -101,7 +101,7 @@ To turn a circle into a sphere, the command forks the vertical vectors.
     pixelated
 />
 
-This creates 8 vertical vectors with equal central angles, effectively forming the "ribs" or rings of the sphere.
+This creates 8 vertical vectors with equal central angles, which form the "ribs" or rings of the sphere.
 
 <WikiImage
     src="/public/assets/images/commands/sphere-command/segment-3.1.png"
