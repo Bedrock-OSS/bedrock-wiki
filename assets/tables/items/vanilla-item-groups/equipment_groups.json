@@ -17,6 +17,7 @@
       "icon": "`minecraft:leather_helmet`",
       "items": [
         "`minecraft:leather_helmet`",
+        "`minecraft:copper_helmet`",
         "`minecraft:chainmail_helmet`",
         "`minecraft:iron_helmet`",
         "`minecraft:golden_helmet`",
@@ -29,6 +30,7 @@
       "icon": "`minecraft:leather_chestplate`",
       "items": [
         "`minecraft:leather_chestplate`",
+        "`minecraft:copper_chestplate`",
         "`minecraft:chainmail_chestplate`",
         "`minecraft:iron_chestplate`",
         "`minecraft:golden_chestplate`",
@@ -41,6 +43,7 @@
       "icon": "`minecraft:leather_leggings`",
       "items": [
         "`minecraft:leather_leggings`",
+        "`minecraft:copper_leggings`",
         "`minecraft:chainmail_leggings`",
         "`minecraft:iron_leggings`",
         "`minecraft:golden_leggings`",
@@ -53,6 +56,7 @@
       "icon": "`minecraft:leather_boots`",
       "items": [
         "`minecraft:leather_boots`",
+        "`minecraft:copper_boots`",
         "`minecraft:chainmail_boots`",
         "`minecraft:iron_boots`",
         "`minecraft:golden_boots`",
@@ -66,10 +70,24 @@
       "items": [
         "`minecraft:wooden_sword`",
         "`minecraft:stone_sword`",
+        "`minecraft:copper_sword`",
         "`minecraft:iron_sword`",
         "`minecraft:golden_sword`",
         "`minecraft:diamond_sword`",
         "`minecraft:netherite_sword`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.spear`",
+      "icon": "`minecraft:wooden_spear`",
+      "items": [
+        "`minecraft:wooden_spear`",
+        "`minecraft:stone_spear`",
+        "`minecraft:copper_spear`",
+        "`minecraft:iron_spear`",
+        "`minecraft:golden_spear`",
+        "`minecraft:diamond_spear`",
+        "`minecraft:netherite_spear`"
       ]
     },
     {
@@ -78,6 +96,7 @@
       "items": [
         "`minecraft:wooden_axe`",
         "`minecraft:stone_axe`",
+        "`minecraft:copper_axe`",
         "`minecraft:iron_axe`",
         "`minecraft:golden_axe`",
         "`minecraft:diamond_axe`",
@@ -90,6 +109,7 @@
       "items": [
         "`minecraft:wooden_pickaxe`",
         "`minecraft:stone_pickaxe`",
+        "`minecraft:copper_pickaxe`",
         "`minecraft:iron_pickaxe`",
         "`minecraft:golden_pickaxe`",
         "`minecraft:diamond_pickaxe`",
@@ -102,6 +122,7 @@
       "items": [
         "`minecraft:wooden_shovel`",
         "`minecraft:stone_shovel`",
+        "`minecraft:copper_shovel`",
         "`minecraft:iron_shovel`",
         "`minecraft:golden_shovel`",
         "`minecraft:diamond_shovel`",
@@ -114,6 +135,7 @@
       "items": [
         "`minecraft:wooden_hoe`",
         "`minecraft:stone_hoe`",
+        "`minecraft:copper_hoe`",
         "`minecraft:iron_hoe`",
         "`minecraft:golden_hoe`",
         "`minecraft:diamond_hoe`",
@@ -162,7 +184,11 @@
         "`minecraft:arrow:40`",
         "`minecraft:arrow:41`",
         "`minecraft:arrow:42`",
-        "`minecraft:arrow:43`"
+        "`minecraft:arrow:43`",
+        "`minecraft:arrow:44`",
+        "`minecraft:arrow:45`",
+        "`minecraft:arrow:46`",
+        "`minecraft:arrow:47`"
       ]
     },
     {
@@ -186,6 +212,19 @@
         "`minecraft:mushroom_stew`",
         "`minecraft:beetroot_soup`",
         "`minecraft:rabbit_stew`",
+        "`minecraft:suspicious_stew:0`",
+        "`minecraft:suspicious_stew:1`",
+        "`minecraft:suspicious_stew:2`",
+        "`minecraft:suspicious_stew:3`",
+        "`minecraft:suspicious_stew:4`",
+        "`minecraft:suspicious_stew:5`",
+        "`minecraft:suspicious_stew:6`",
+        "`minecraft:suspicious_stew:7`",
+        "`minecraft:suspicious_stew:8`",
+        "`minecraft:suspicious_stew:9`",
+        "`minecraft:suspicious_stew:10`",
+        "`minecraft:suspicious_stew:11`",
+        "`minecraft:suspicious_stew:12`",
         "`minecraft:baked_potato`",
         "`minecraft:cookie`",
         "`minecraft:pumpkin_pie`",
@@ -194,13 +233,85 @@
       ]
     },
     {
+      "group": "`minecraft:itemGroup.name.goatHorn`",
+      "icon": "`minecraft:goat_horn`",
+      "items": [
+        "`minecraft:goat_horn`",
+        "`minecraft:goat_horn:1`",
+        "`minecraft:goat_horn:2`",
+        "`minecraft:goat_horn:3`",
+        "`minecraft:goat_horn:4`",
+        "`minecraft:goat_horn:5`",
+        "`minecraft:goat_horn:6`",
+        "`minecraft:goat_horn:7`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.harnesses`",
+      "icon": "`minecraft:white_harness`",
+      "items": [
+        "`minecraft:white_harness`",
+        "`minecraft:light_gray_harness`",
+        "`minecraft:gray_harness`",
+        "`minecraft:black_harness`",
+        "`minecraft:brown_harness`",
+        "`minecraft:red_harness`",
+        "`minecraft:orange_harness`",
+        "`minecraft:yellow_harness`",
+        "`minecraft:lime_harness`",
+        "`minecraft:green_harness`",
+        "`minecraft:cyan_harness`",
+        "`minecraft:light_blue_harness`",
+        "`minecraft:blue_harness`",
+        "`minecraft:purple_harness`",
+        "`minecraft:magenta_harness`",
+        "`minecraft:pink_harness`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.bundles`",
+      "icon": "`minecraft:bundle`",
+      "items": [
+        "`minecraft:bundle`",
+        "`minecraft:white_bundle`",
+        "`minecraft:light_gray_bundle`",
+        "`minecraft:gray_bundle`",
+        "`minecraft:black_bundle`",
+        "`minecraft:brown_bundle`",
+        "`minecraft:red_bundle`",
+        "`minecraft:orange_bundle`",
+        "`minecraft:yellow_bundle`",
+        "`minecraft:lime_bundle`",
+        "`minecraft:green_bundle`",
+        "`minecraft:cyan_bundle`",
+        "`minecraft:light_blue_bundle`",
+        "`minecraft:blue_bundle`",
+        "`minecraft:purple_bundle`",
+        "`minecraft:magenta_bundle`",
+        "`minecraft:pink_bundle`"
+      ]
+    },
+    {
       "group": "`minecraft:itemGroup.name.horseArmor`",
       "icon": "`minecraft:leather_horse_armor`",
       "items": [
         "`minecraft:leather_horse_armor`",
+        "`minecraft:copper_horse_armor`",
         "`minecraft:iron_horse_armor`",
         "`minecraft:golden_horse_armor`",
-        "`minecraft:diamond_horse_armor`"
+        "`minecraft:diamond_horse_armor`",
+        "`minecraft:netherite_horse_armor`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.nautilus_armor`",
+      "icon": "`minecraft:copper_nautilus_armor`",
+      "items": [
+        "`minecraft:copper_nautilus_armor`",
+        "`minecraft:iron_nautilus_armor`",
+        "`minecraft:golden_nautilus_armor`",
+        "`minecraft:diamond_nautilus_armor`",
+        "`minecraft:netherite_nautilus_armor`"
       ]
     },
     {
@@ -226,6 +337,7 @@
         "`minecraft:potion:16`",
         "`minecraft:potion:17`",
         "`minecraft:potion:18`",
+        "`minecraft:potion:42`",
         "`minecraft:potion:19`",
         "`minecraft:potion:20`",
         "`minecraft:potion:21`",
@@ -249,7 +361,10 @@
         "`minecraft:potion:39`",
         "`minecraft:potion:40`",
         "`minecraft:potion:41`",
-        "`minecraft:potion:42`"
+        "`minecraft:potion:43`",
+        "`minecraft:potion:44`",
+        "`minecraft:potion:45`",
+        "`minecraft:potion:46`"
       ]
     },
     {
@@ -275,6 +390,7 @@
         "`minecraft:splash_potion:16`",
         "`minecraft:splash_potion:17`",
         "`minecraft:splash_potion:18`",
+        "`minecraft:splash_potion:42`",
         "`minecraft:splash_potion:19`",
         "`minecraft:splash_potion:20`",
         "`minecraft:splash_potion:21`",
@@ -298,7 +414,10 @@
         "`minecraft:splash_potion:39`",
         "`minecraft:splash_potion:40`",
         "`minecraft:splash_potion:41`",
-        "`minecraft:splash_potion:42`"
+        "`minecraft:splash_potion:43`",
+        "`minecraft:splash_potion:44`",
+        "`minecraft:splash_potion:45`",
+        "`minecraft:splash_potion:46`"
       ]
     },
     {
@@ -324,6 +443,7 @@
         "`minecraft:lingering_potion:16`",
         "`minecraft:lingering_potion:17`",
         "`minecraft:lingering_potion:18`",
+        "`minecraft:lingering_potion:42`",
         "`minecraft:lingering_potion:19`",
         "`minecraft:lingering_potion:20`",
         "`minecraft:lingering_potion:21`",
@@ -347,7 +467,21 @@
         "`minecraft:lingering_potion:39`",
         "`minecraft:lingering_potion:40`",
         "`minecraft:lingering_potion:41`",
-        "`minecraft:lingering_potion:42`"
+        "`minecraft:lingering_potion:43`",
+        "`minecraft:lingering_potion:44`",
+        "`minecraft:lingering_potion:45`",
+        "`minecraft:lingering_potion:46`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.ominousBottle`",
+      "icon": "`minecraft:ominous_bottle`",
+      "items": [
+        "`minecraft:ominous_bottle`",
+        "`minecraft:ominous_bottle:1`",
+        "`minecraft:ominous_bottle:2`",
+        "`minecraft:ominous_bottle:3`",
+        "`minecraft:ominous_bottle:4`"
       ]
     }
   ]
