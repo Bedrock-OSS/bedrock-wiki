@@ -1,4 +1,4 @@
-import { defineWikiConfig } from "./theme/config";
+import { defineWikiConfig } from "./theme/node/config";
 
 export default defineWikiConfig({
   title: "Bedrock Wiki",
