@@ -19,12 +19,13 @@ Target selectors are used in commands to target who you want to execute a comman
 
 ## Selector Variables
 
-The selector variable defines the broad list of entities to select. There are six selector variables to choose from:
+The selector variable defines the broad list of entities to select. There are seven selector variables to choose from:
 
 -   `@a` - Target all players
 -   `@p` - Target the nearest player
 -   `@r` - Target a random player
 -   `@e` - Target all entities
+-   `@n` - Target the nearest entity
 -   `@s` - Target the executor
 -   `@initiator` - Target the player interacting with an NPC
 
