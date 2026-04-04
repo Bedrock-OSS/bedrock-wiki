@@ -1,12 +1,10 @@
-import { GrayMatterFile } from "gray-matter";
-
-export default function validateLicense(id: string, { data }: GrayMatterFile<string>) {
+export default function validateLicense(id: string, frontmatter: Record<string, any>) {
   const errors: string[] = [];
 
-  if (data.title === undefined) {
+  if (frontmatter.title === undefined) {
     errors.push("A license title must be defined but none was found.");
   }
-  if (data.source === undefined) {
+  if (frontmatter.source === undefined) {
     errors.push("A license source link must be defined but none was found.");
   }
 

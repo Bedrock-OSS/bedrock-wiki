@@ -1,10 +1,7 @@
-import { readdirSync, statSync, readFileSync } from "fs";
-import { defineLoader } from "vitepress";
-import matter from "gray-matter";
-import { join } from "path";
+import { createContentLoader } from "vitepress";
+import { basename } from "path";
 
 import { License } from "../../../types";
-import config from "../config";
 
 import validateLicense from "./validateLicense";
 
@@ -15,34 +12,18 @@ export interface Licenses {
 declare const data: Licenses;
 export { data };
 
-const licensesDirectory = join(config.srcDir, "licenses");
-
-export default defineLoader({
-  watch: join(licensesDirectory, "*.md"),
-  load() {
+export default createContentLoader("licenses/*.md", {
+  transform(data) {
     const licenses: Licenses = {};
 
-    const entries = readdirSync(licensesDirectory);
+    for (const { frontmatter, url } of data) {
+      const id = basename(url);
 
-    for (const entry of entries) {
-      const joinedPath = join(licensesDirectory, entry);
-      const stats = statSync(joinedPath);
+      validateLicense(id, frontmatter);
 
-      // Don't include non-markdown files
-      if (!stats.isFile() || !entry.endsWith(".md")) continue;
-
-      const licenseId = entry.replace(/\.md$/, "");
-
-      const licenseMarkdown = readFileSync(joinedPath, "utf-8");
-      const frontMatter = matter(licenseMarkdown);
-
-      validateLicense(licenseId, frontMatter);
-
-      const { data } = frontMatter;
-
-      licenses[licenseId] = {
-        link: "/licenses/" + licenseId,
-        title: data.title,
+      licenses[id] = {
+        title: frontmatter.title,
+        link: url,
       };
     }
 
