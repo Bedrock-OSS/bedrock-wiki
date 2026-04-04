@@ -26,7 +26,7 @@ _Type the following command in Chat:_
 If you are using functions and prefer the objective to be added automatically during world initialization, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 **Next Steps:**
-1. Choose a coordinate in the Overworld located within a ticking area or a chunk that remains permanently loaded.
+1. Choose a coordinate in the Overworld located within a ticking area or a chunk that remains loaded at all times.
 2. Ensure there are no blocks above this coordinate obstructing it from the sky.
 3. Secure the area so players cannot interfere with the detection block (fire).
 

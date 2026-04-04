@@ -67,14 +67,17 @@ _Type the following commands in Chat:_
 
 ```yaml
 ## Add Objectives
+### Query / State Machine
+/scoreboard objectives add wiki:q.var_changed dummy
+### Math
+/scoreboard objectives add wiki:const dummy
 /scoreboard objectives add wiki:array dummy
 /scoreboard objectives add wiki:element dummy
 /scoreboard objectives add wiki:var dummy
 /scoreboard objectives add wiki:delta_var dummy
-/scoreboard objectives add wiki:q.var_changed dummy
-/scoreboard objectives add wiki:const dummy
 
-## Set Constant Scores
+## Initialize Scores
+### Constants
 /scoreboard players set .1 wiki:const 1
 /scoreboard players set .8 wiki:const 8
 /scoreboard players set .9 wiki:const 9
@@ -266,22 +269,39 @@ For convenience, work with this file provided below. Once you have finalized you
 This method uses nested translates to allow scores greater than 81. It uses a slightly modified `display_logic.mcfunction` and an additional score holder is set to 81.
 
 ### Function Setup
+
+<CodeHeader>BP/functions/scoreboard/objectives/add_all.mcfunction</CodeHeader>
+
+```yaml
+## Query / State Machine
+scoreboard objectives add wiki:q.is_initialised dummy
+
+## Math
+scoreboard objectives add wiki:const dummy
+scoreboard objectives add wiki:array dummy
+scoreboard objectives add wiki:element dummy
+scoreboard objectives add wiki:var dummy
+scoreboard objectives add wiki:delta_var dummy
+```
+
+<CodeHeader>BP/functions/scoreboard/players/set_all.mcfunction</CodeHeader>
+
+```yaml
+## Constants
+scoreboard players set .1 wiki:const 1
+scoreboard players set .8 wiki:const 8
+scoreboard players set .9 wiki:const 9
+scoreboard players set .81 wiki:const 81
+```
+
 <CodeHeader>BP/functions/wiki/event/world/on_initalise.mcfunction</CodeHeader>
 
 ```yaml
 ## Add Objectives
-scoreboard objectives add wiki:q.is_initialised dummy
-/scoreboard objectives add wiki:array dummy
-/scoreboard objectives add wiki:element dummy
-/scoreboard objectives add wiki:var dummy
-/scoreboard objectives add wiki:delta_var dummy
-/scoreboard objectives add wiki:const dummy
+function wiki/scoreboard/objectives/add_all
 
-## Set Constant Scores
-/scoreboard players set .1 wiki:const 1
-/scoreboard players set .8 wiki:const 8
-/scoreboard players set .9 wiki:const 9
-scoreboard players set .81 wiki:const 81
+## Initialize All Constant & Variable Scores
+function wiki/scoreboard/players/set_all
 
 ## Mark World as Initialized
 scoreboard players set .World wiki:q.is_initialised 1
@@ -294,7 +314,7 @@ scoreboard players set .World wiki:q.is_initialised 1
 execute unless score .World wiki:q.is_initialised matches 1 run function wiki/event/world/on_initialise
 
 
-# DYNAMIC DISPLAY
+# DYNAMIC DISPLAY LOGIC
 execute as @a unless score @s wiki:delta_var = @s wiki:var run function wiki/rawtext/display_logic
 ```
 
@@ -385,25 +405,41 @@ Therefore, it is recommended to use the function setup **[here](/commands/dynami
 
 ### MNT Setup
 
-<CodeHeader>BP/functions/wiki/event/world/on_initalise.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/scoreboard/objectives/add_all.mcfunction</CodeHeader>
 
 ```yaml
-## Add Objectives
+## Query / State Machine
 scoreboard objectives add wiki:q.is_initialised dummy
+
+## Math
+scoreboard objectives add wiki:const dummy
 scoreboard objectives add wiki:var dummy
 scoreboard objectives add wiki:delta_var dummy
 scoreboard objectives add wiki:mapped_var dummy
-scoreboard objectives add wiki:const dummy
 scoreboard objectives add wiki:array.3d dummy
 scoreboard objectives add wiki:array dummy
 scoreboard objectives add wiki:element dummy
+```
 
-## Set Constant Scores
+<CodeHeader>BP/functions/scoreboard/players/set_all.mcfunction</CodeHeader>
+
+```yaml
+## Constants
 scoreboard players set .1 wiki:const 1
 scoreboard players set .8 wiki:const 8
 scoreboard players set .9 wiki:const 9
 scoreboard players set .80 wiki:const 80
 scoreboard players set .81 wiki:const 81
+```
+
+<CodeHeader>BP/functions/wiki/event/world/on_initalise.mcfunction</CodeHeader>
+
+```yaml
+## Add Objectives
+function wiki/scoreboard/objectives/add_all
+
+## Initialize All Constant & Variable Scores
+function wiki/scoreboard/players/set_all
 
 ## Mark World as Initialized
 scoreboard players set .World wiki:q.is_initialised 1
@@ -416,13 +452,8 @@ scoreboard players set .World wiki:q.is_initialised 1
 execute unless score .World wiki:q.is_initialised matches 1 run function wiki/event/world/on_initialise
 
 
-# DYNAMIC DISPLAY
-
-## Display Logic
+# DYNAMIC DISPLAY LOGIC
 execute as @a unless score @s wiki:delta_var = @s wiki:var run function wiki/rawtext/display_logic
-
-## Titleraw
-execute as @a[scores=(wiki:var=1..}] run function wiki/rawtext/display/1
 ```
 
 ### MNT TICK.JSON
