@@ -6,7 +6,7 @@ import { head, transformHead, transformPageData } from "./page";
 import { markdownConfig as markdown } from "./markdown";
 import { copyExampleArchives } from "./examples";
 
-const isFastBuild = process.env.FAST_BUILD?.trim() === "true";
+const isFastBuild = process.env.FAST_BUILD === "true";
 
 export function defineWikiConfig(config: WikiConfig) {
   const { title, description, fastBuild, ...themeConfig } = config;
