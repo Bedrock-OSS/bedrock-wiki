@@ -270,7 +270,7 @@ This method uses nested translates to allow scores greater than 81. It uses a sl
 
 ### Function Setup
 
-<CodeHeader>BP/functions/scoreboard/objectives/add_all.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/scoreboard/objectives/add_all.mcfunction</CodeHeader>
 
 ```yaml
 ## Query / State Machine
@@ -284,7 +284,7 @@ scoreboard objectives add wiki:var dummy
 scoreboard objectives add wiki:delta_var dummy
 ```
 
-<CodeHeader>BP/functions/scoreboard/players/set_all.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/scoreboard/players/set_all.mcfunction</CodeHeader>
 
 ```yaml
 ## Constants
@@ -294,7 +294,7 @@ scoreboard players set .9 wiki:const 9
 scoreboard players set .81 wiki:const 81
 ```
 
-<CodeHeader>BP/functions/wiki/event/world/on_initalise.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/event/world/on_initialise.mcfunction</CodeHeader>
 
 ```yaml
 ## Add Objectives
@@ -345,7 +345,7 @@ execute if score @s wiki:delta_var matches 0 run scoreboard players set @s wiki:
 
 ## Calculate Element Index
 ### Determine the element, or which "book" should be chosen
-scoreboard players operation @s wiki:element = @s wiki:var
+scoreboard players operation @s wiki:element = @s wiki:delta_var
 ### Subtract by 1 to prevent remainder 0 for 9th position
 scoreboard players operation @s wiki:element -= .1 wiki:const
 ### Perform modulo (%) operation and add 1 back to get its specific position (1-9)
@@ -354,7 +354,7 @@ scoreboard players operation @s wiki:element += .1 wiki:const
 
 ## Calculate Array Index
 ### Determine the array, or which "shelf" the book belongs to
-scoreboard players operation @s wiki:array = @s wiki:var
+scoreboard players operation @s wiki:array = @s wiki:delta_var
 ### Add 8 (divisor-1) to ensure it correctly moves to the next "shelf" even when value isn't a multiple of 9
 scoreboard players operation @s wiki:array += .8 wiki:const
 ### Divide by 9 to get its specific position (1-9)
@@ -405,7 +405,7 @@ Therefore, it is recommended to use the function setup **[here](/commands/dynami
 
 ### MNT Setup
 
-<CodeHeader>BP/functions/scoreboard/objectives/add_all.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/scoreboard/objectives/add_all.mcfunction</CodeHeader>
 
 ```yaml
 ## Query / State Machine
@@ -421,7 +421,7 @@ scoreboard objectives add wiki:array dummy
 scoreboard objectives add wiki:element dummy
 ```
 
-<CodeHeader>BP/functions/scoreboard/players/set_all.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/scoreboard/players/set_all.mcfunction</CodeHeader>
 
 ```yaml
 ## Constants
@@ -432,7 +432,7 @@ scoreboard players set .80 wiki:const 80
 scoreboard players set .81 wiki:const 81
 ```
 
-<CodeHeader>BP/functions/wiki/event/world/on_initalise.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/wiki/event/world/on_initialise.mcfunction</CodeHeader>
 
 ```yaml
 ## Add Objectives
@@ -520,7 +520,7 @@ scoreboard players operation @s wiki:mapped_var %= .729 wiki:const
 scoreboard players operation @s wiki:mapped_var += .1 wiki:const
 
 ## Calculate 3D Array Index
-scoreboard players operation @s wiki:array.3d = @s wiki:var
+scoreboard players operation @s wiki:array.3d = @s wiki:mapped_var
 scoreboard players operation @s wiki:array.3d += .80 wiki:const
 scoreboard players operation @s wiki:array.3d /= .81 wiki:const
 
