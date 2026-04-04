@@ -37,11 +37,3 @@ Vanilla block models are applied in the same way as [custom block models](/block
 ## List of Vanilla Models
 
 <Table data="models.json" />
-
-<style>
-.model-preview {
-    display: block;
-    margin-block: 0.5em;
-    max-width: 100px;
-}
-</style>
