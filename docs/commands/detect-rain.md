@@ -42,7 +42,7 @@ execute unless block 0 0 0 fire unless score .Weather wiki:q.is_raining matches 
 execute if block 0 0 0 fire run scoreboard players set .Weather wiki:q.is_raining 0
 
 ## Maintain Fire
-### Place new fire block at the coordinate for check, next game tick
+### Place new fire block at the coordinate to check next game tick
 setblock 0 0 0 fire
 
 ## Your Commands Here (Examples):
@@ -51,7 +51,7 @@ execute if score .Weather wiki:q.is_raining matches 1.. run title @a actionbar I
 ### Runs only once when the rain first starts
 execute if score .Weather wiki:q.is_raining matches 1 run say It has started raining.
 ### Runs every tick when it is not raining
-execute if score .Weather wiki:q.is_raining matches 0 run title @a actionbar It's not raining.
+execute if score .Weather wiki:q.is_raining matches 0 run title @a actionbar It is not raining.
 
 ## Update State
 ### Move from state 1 to state 2 to stop the "once" command from looping
