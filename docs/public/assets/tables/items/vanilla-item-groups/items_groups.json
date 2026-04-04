@@ -35,12 +35,65 @@
       ]
     },
     {
+      "group": "`minecraft:itemGroup.name.lanterns`",
+      "icon": "`minecraft:lantern`",
+      "items": [
+        "`minecraft:lantern`",
+        "`minecraft:soul_lantern`",
+        "`minecraft:copper_lantern`",
+        "`minecraft:exposed_copper_lantern`",
+        "`minecraft:weathered_copper_lantern`",
+        "`minecraft:oxidized_copper_lantern`",
+        "`minecraft:waxed_copper_lantern`",
+        "`minecraft:waxed_exposed_copper_lantern`",
+        "`minecraft:waxed_weathered_copper_lantern`",
+        "`minecraft:waxed_oxidized_copper_lantern`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.candles`",
+      "icon": "`minecraft:candle`",
+      "items": [
+        "`minecraft:candle`",
+        "`minecraft:white_candle`",
+        "`minecraft:orange_candle`",
+        "`minecraft:magenta_candle`",
+        "`minecraft:light_blue_candle`",
+        "`minecraft:yellow_candle`",
+        "`minecraft:lime_candle`",
+        "`minecraft:pink_candle`",
+        "`minecraft:gray_candle`",
+        "`minecraft:light_gray_candle`",
+        "`minecraft:cyan_candle`",
+        "`minecraft:purple_candle`",
+        "`minecraft:blue_candle`",
+        "`minecraft:brown_candle`",
+        "`minecraft:green_candle`",
+        "`minecraft:red_candle`",
+        "`minecraft:black_candle`"
+      ]
+    },
+    {
       "group": "`minecraft:itemGroup.name.anvil`",
       "icon": "`minecraft:anvil`",
+      "items": ["`minecraft:anvil`", "`minecraft:chipped_anvil`", "`minecraft:damaged_anvil`"]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.shelf`",
+      "icon": "`minecraft:oak_shelf`",
       "items": [
-        "`minecraft:anvil`",
-        "`minecraft:chipped_anvil`",
-        "`minecraft:damaged_anvil`"
+        "`minecraft:oak_shelf`",
+        "`minecraft:spruce_shelf`",
+        "`minecraft:birch_shelf`",
+        "`minecraft:jungle_shelf`",
+        "`minecraft:acacia_shelf`",
+        "`minecraft:dark_oak_shelf`",
+        "`minecraft:mangrove_shelf`",
+        "`minecraft:cherry_shelf`",
+        "`minecraft:pale_oak_shelf`",
+        "`minecraft:bamboo_shelf`",
+        "`minecraft:crimson_shelf`",
+        "`minecraft:warped_shelf`"
       ]
     },
     {
@@ -49,7 +102,15 @@
       "items": [
         "`minecraft:chest`",
         "`minecraft:trapped_chest`",
-        "`minecraft:ender_chest`"
+        "`minecraft:ender_chest`",
+        "`minecraft:copper_chest`",
+        "`minecraft:exposed_copper_chest`",
+        "`minecraft:weathered_copper_chest`",
+        "`minecraft:oxidized_copper_chest`",
+        "`minecraft:waxed_copper_chest`",
+        "`minecraft:waxed_exposed_copper_chest`",
+        "`minecraft:waxed_weathered_copper_chest`",
+        "`minecraft:waxed_oxidized_copper_chest`"
       ]
     },
     {
@@ -76,6 +137,20 @@
       ]
     },
     {
+      "group": "`minecraft:itemGroup.name.copper_golem_statue`",
+      "icon": "`minecraft:copper_golem_statue`",
+      "items": [
+        "`minecraft:copper_golem_statue`",
+        "`minecraft:exposed_copper_golem_statue`",
+        "`minecraft:weathered_copper_golem_statue`",
+        "`minecraft:oxidized_copper_golem_statue`",
+        "`minecraft:waxed_copper_golem_statue`",
+        "`minecraft:waxed_exposed_copper_golem_statue`",
+        "`minecraft:waxed_weathered_copper_golem_statue`",
+        "`minecraft:waxed_oxidized_copper_golem_statue`"
+      ]
+    },
+    {
       "group": "`minecraft:itemGroup.name.record`",
       "icon": "`minecraft:music_disc_13`",
       "items": [
@@ -91,7 +166,15 @@
         "`minecraft:music_disc_ward`",
         "`minecraft:music_disc_11`",
         "`minecraft:music_disc_wait`",
-        "`minecraft:music_disc_pigstep`"
+        "`minecraft:music_disc_otherside`",
+        "`minecraft:music_disc_5`",
+        "`minecraft:music_disc_pigstep`",
+        "`minecraft:music_disc_relic`",
+        "`minecraft:music_disc_creator`",
+        "`minecraft:music_disc_creator_music_box`",
+        "`minecraft:music_disc_precipice`",
+        "`minecraft:music_disc_tears`",
+        "`minecraft:music_disc_lava_chicken`"
       ]
     },
     {
@@ -104,8 +187,30 @@
         "`minecraft:jungle_sign`",
         "`minecraft:acacia_sign`",
         "`minecraft:dark_oak_sign`",
+        "`minecraft:mangrove_sign`",
+        "`minecraft:cherry_sign`",
+        "`minecraft:pale_oak_sign`",
+        "`minecraft:bamboo_sign`",
         "`minecraft:crimson_sign`",
         "`minecraft:warped_sign`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.hanging_sign`",
+      "icon": "`minecraft:oak_hanging_sign`",
+      "items": [
+        "`minecraft:oak_hanging_sign`",
+        "`minecraft:spruce_hanging_sign`",
+        "`minecraft:birch_hanging_sign`",
+        "`minecraft:jungle_hanging_sign`",
+        "`minecraft:acacia_hanging_sign`",
+        "`minecraft:dark_oak_hanging_sign`",
+        "`minecraft:mangrove_hanging_sign`",
+        "`minecraft:cherry_hanging_sign`",
+        "`minecraft:pale_oak_hanging_sign`",
+        "`minecraft:bamboo_hanging_sign`",
+        "`minecraft:crimson_hanging_sign`",
+        "`minecraft:warped_hanging_sign`"
       ]
     },
     {
@@ -117,7 +222,22 @@
         "`minecraft:creeper_head`",
         "`minecraft:dragon_head`",
         "`minecraft:skeleton_skull`",
-        "`minecraft:wither_skeleton_skull`"
+        "`minecraft:wither_skeleton_skull`",
+        "`minecraft:piglin_head`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.lightning_rod`",
+      "icon": "`minecraft:lightning_rod`",
+      "items": [
+        "`minecraft:lightning_rod`",
+        "`minecraft:exposed_lightning_rod`",
+        "`minecraft:weathered_lightning_rod`",
+        "`minecraft:oxidized_lightning_rod`",
+        "`minecraft:waxed_lightning_rod`",
+        "`minecraft:waxed_exposed_lightning_rod`",
+        "`minecraft:waxed_weathered_lightning_rod`",
+        "`minecraft:waxed_oxidized_lightning_rod`"
       ]
     },
     {
@@ -129,7 +249,27 @@
         "`minecraft:birch_boat`",
         "`minecraft:jungle_boat`",
         "`minecraft:acacia_boat`",
-        "`minecraft:dark_oak_boat`"
+        "`minecraft:dark_oak_boat`",
+        "`minecraft:mangrove_boat`",
+        "`minecraft:cherry_boat`",
+        "`minecraft:pale_oak_boat`",
+        "`minecraft:bamboo_raft`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.chestboat`",
+      "icon": "`minecraft:oak_chest_boat`",
+      "items": [
+        "`minecraft:oak_chest_boat`",
+        "`minecraft:spruce_chest_boat`",
+        "`minecraft:birch_chest_boat`",
+        "`minecraft:jungle_chest_boat`",
+        "`minecraft:acacia_chest_boat`",
+        "`minecraft:dark_oak_chest_boat`",
+        "`minecraft:mangrove_chest_boat`",
+        "`minecraft:cherry_chest_boat`",
+        "`minecraft:pale_oak_chest_boat`",
+        "`minecraft:bamboo_chest_raft`"
       ]
     },
     {
@@ -162,6 +302,10 @@
         "`minecraft:jungle_button`",
         "`minecraft:acacia_button`",
         "`minecraft:dark_oak_button`",
+        "`minecraft:mangrove_button`",
+        "`minecraft:cherry_button`",
+        "`minecraft:pale_oak_button`",
+        "`minecraft:bamboo_button`",
         "`minecraft:stone_button`",
         "`minecraft:crimson_button`",
         "`minecraft:warped_button`",
@@ -178,6 +322,10 @@
         "`minecraft:jungle_pressure_plate`",
         "`minecraft:acacia_pressure_plate`",
         "`minecraft:dark_oak_pressure_plate`",
+        "`minecraft:mangrove_pressure_plate`",
+        "`minecraft:cherry_pressure_plate`",
+        "`minecraft:pale_oak_pressure_plate`",
+        "`minecraft:bamboo_pressure_plate`",
         "`minecraft:crimson_pressure_plate`",
         "`minecraft:warped_pressure_plate`",
         "`minecraft:stone_pressure_plate`",
@@ -197,7 +345,78 @@
         "`minecraft:field_masoned_banner_pattern`",
         "`minecraft:bordure_indented_banner_pattern`",
         "`minecraft:piglin_banner_pattern`",
-        "`minecraft:globe_banner_pattern`"
+        "`minecraft:globe_banner_pattern`",
+        "`minecraft:flow_banner_pattern`",
+        "`minecraft:guster_banner_pattern`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.potterySherds`",
+      "icon": "`minecraft:archer_pottery_sherd`",
+      "items": [
+        "`minecraft:angler_pottery_sherd`",
+        "`minecraft:archer_pottery_sherd`",
+        "`minecraft:arms_up_pottery_sherd`",
+        "`minecraft:blade_pottery_sherd`",
+        "`minecraft:brewer_pottery_sherd`",
+        "`minecraft:burn_pottery_sherd`",
+        "`minecraft:danger_pottery_sherd`",
+        "`minecraft:explorer_pottery_sherd`",
+        "`minecraft:flow_pottery_sherd`",
+        "`minecraft:friend_pottery_sherd`",
+        "`minecraft:guster_pottery_sherd`",
+        "`minecraft:heart_pottery_sherd`",
+        "`minecraft:heartbreak_pottery_sherd`",
+        "`minecraft:howl_pottery_sherd`",
+        "`minecraft:miner_pottery_sherd`",
+        "`minecraft:mourner_pottery_sherd`",
+        "`minecraft:plenty_pottery_sherd`",
+        "`minecraft:prize_pottery_sherd`",
+        "`minecraft:scrape_pottery_sherd`",
+        "`minecraft:sheaf_pottery_sherd`",
+        "`minecraft:shelter_pottery_sherd`",
+        "`minecraft:skull_pottery_sherd`",
+        "`minecraft:snort_pottery_sherd`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.smithing_templates`",
+      "icon": "`minecraft:netherite_upgrade_smithing_template`",
+      "items": [
+        "`minecraft:netherite_upgrade_smithing_template`",
+        "`minecraft:sentry_armor_trim_smithing_template`",
+        "`minecraft:vex_armor_trim_smithing_template`",
+        "`minecraft:wild_armor_trim_smithing_template`",
+        "`minecraft:coast_armor_trim_smithing_template`",
+        "`minecraft:dune_armor_trim_smithing_template`",
+        "`minecraft:wayfinder_armor_trim_smithing_template`",
+        "`minecraft:shaper_armor_trim_smithing_template`",
+        "`minecraft:raiser_armor_trim_smithing_template`",
+        "`minecraft:host_armor_trim_smithing_template`",
+        "`minecraft:ward_armor_trim_smithing_template`",
+        "`minecraft:silence_armor_trim_smithing_template`",
+        "`minecraft:tide_armor_trim_smithing_template`",
+        "`minecraft:snout_armor_trim_smithing_template`",
+        "`minecraft:rib_armor_trim_smithing_template`",
+        "`minecraft:eye_armor_trim_smithing_template`",
+        "`minecraft:spire_armor_trim_smithing_template`",
+        "`minecraft:flow_armor_trim_smithing_template`",
+        "`minecraft:bolt_armor_trim_smithing_template`"
+      ]
+    },
+    {
+      "group": "`minecraft:itemGroup.name.chains`",
+      "icon": "`minecraft:iron_chain`",
+      "items": [
+        "`minecraft:iron_chain`",
+        "`minecraft:copper_chain`",
+        "`minecraft:exposed_copper_chain`",
+        "`minecraft:weathered_copper_chain`",
+        "`minecraft:oxidized_copper_chain`",
+        "`minecraft:waxed_copper_chain`",
+        "`minecraft:waxed_exposed_copper_chain`",
+        "`minecraft:waxed_weathered_copper_chain`",
+        "`minecraft:waxed_oxidized_copper_chain`"
       ]
     }
   ]
