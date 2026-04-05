@@ -141,7 +141,7 @@ Now, we need to link the texture shortname to an image file path in `RP/textures
     "texture_data": {
         // Our texture shortname:
         "wiki:custom_block": {
-            "textures": "textures/blocks/custom_block" // Link to an image file name
+            "textures": "textures/wiki/blocks/custom_block" // Link to an image file name
         }
     }
 }
@@ -151,29 +151,46 @@ Now, we need to link the texture shortname to an image file path in `RP/textures
 
 Textures can also be applied per face. For example, a custom "compass block" could use the following ✨stunning✨ textures:
 
--   `textures/blocks/compass_block_down.png`
+<div style="display: grid; grid-template-columns: repeat(auto-fill, 192px); column-gap: 1em;">
 
-    <WikiImage src="compass_block_down.png" pixelated width="64" />
+<WikiImage
+    caption="RP/textures/wiki/blocks/compass_block_down.png"
+    src="compass_block_down.png"
+    pixelated
+    width="512"
+/>
+<WikiImage
+    caption="RP/textures/wiki/blocks/compass_block_up.png"
+    src="compass_block_up.png"
+    pixelated
+    width="512"
+/>
+<WikiImage
+    caption="RP/textures/wiki/blocks/compass_block_north.png"
+    src="compass_block_north.png"
+    pixelated
+    width="512"
+/>
+<WikiImage
+    caption="RP/textures/wiki/blocks/compass_block_east.png"
+    src="compass_block_east.png"
+    pixelated
+    width="512"
+/>
+<WikiImage
+    caption="RP/textures/wiki/blocks/compass_block_south.png"
+    src="compass_block_south.png"
+    pixelated
+    width="512"
+/>
+<WikiImage
+    caption="RP/textures/wiki/blocks/compass_block_west.png"
+    src="compass_block_west.png"
+    pixelated
+    width="512"
+/>
 
--   `textures/blocks/compass_block_up.png`
-
-    <WikiImage src="compass_block_up.png" pixelated width="64" />
-
--   `textures/blocks/compass_block_north.png`
-
-    <WikiImage src="compass_block_north.png" pixelated width="64" />
-
--   `textures/blocks/compass_block_east.png`
-
-    <WikiImage src="compass_block_east.png" pixelated width="64" />
-
--   `textures/blocks/compass_block_south.png`
-
-    <WikiImage src="compass_block_south.png" pixelated width="64" />
-
--   `textures/blocks/compass_block_west.png`
-
-    <WikiImage src="compass_block_west.png" pixelated width="64" />
+</div>
 
 The [material instances](/blocks/block-components#material-instances) should look like this:
 
@@ -210,22 +227,22 @@ With the following `terrain_texture.json` data:
 {
     "texture_data": {
         "wiki:compass_block_down": {
-            "textures": "textures/blocks/compass_block_down"
+            "textures": "textures/wiki/blocks/compass_block_down"
         },
         "wiki:compass_block_up": {
-            "textures": "textures/blocks/compass_block_up"
+            "textures": "textures/wiki/blocks/compass_block_up"
         },
         "wiki:compass_block_north": {
-            "textures": "textures/blocks/compass_block_north"
+            "textures": "textures/wiki/blocks/compass_block_north"
         },
         "wiki:compass_block_east": {
-            "textures": "textures/blocks/compass_block_east"
+            "textures": "textures/wiki/blocks/compass_block_east"
         },
         "wiki:compass_block_west": {
-            "textures": "textures/blocks/compass_block_west"
+            "textures": "textures/wiki/blocks/compass_block_west"
         },
         "wiki:compass_block_south": {
-            "textures": "textures/blocks/compass_block_south"
+            "textures": "textures/wiki/blocks/compass_block_south"
         }
     }
 }
