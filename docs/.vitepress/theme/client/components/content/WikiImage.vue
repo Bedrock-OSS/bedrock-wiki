@@ -2,6 +2,9 @@
 import { computed, StyleValue } from "vue";
 import { withBase } from "vitepress";
 
+import assetPath from "../../../shared/assetPath";
+import useData from "../../composables/data";
+
 const props = defineProps<{
   alt?: string;
   caption?: string;
@@ -11,6 +14,10 @@ const props = defineProps<{
   height?: string;
   link?: string;
 }>();
+
+const { page } = useData();
+
+const imageSource = (src: string) => withBase(assetPath("images", page.value.relativePath, src));
 
 const style = computed<StyleValue>(() => ({
   imageRendering: props.pixelated ? "pixelated" : undefined,
@@ -22,10 +29,10 @@ const T = computed(() => (props.link ? "a" : "div"));
 
 <template>
   <T class="wiki-image" :data-captioned="caption ? '' : undefined" :href="link">
-    <img v-if="typeof src === 'string'" :src="withBase(src)" :alt :width :height :style />
+    <img v-if="typeof src === 'string'" :src="imageSource(src)" :alt :width :height :style />
     <template v-else>
-      <img :src="withBase(src.dark)" :alt :width :height :style data-theme="dark" />
-      <img :src="withBase(src.light)" :alt :width :height :style data-theme="light" />
+      <img :src="imageSource(src.dark)" :alt :width :height :style data-theme="dark" />
+      <img :src="imageSource(src.light)" :alt :width :height :style data-theme="light" />
     </template>
     <div v-if="caption" class="caption">{{ caption }}</div>
   </T>

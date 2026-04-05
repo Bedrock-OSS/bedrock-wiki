@@ -3,6 +3,8 @@ import { computed, ref, watch } from "vue";
 import TableHeader from "./TableHeader.vue";
 import TableCell from "./TableCell.vue";
 
+import assetPath from "../../../shared/assetPath";
+
 import sortTableRows, { TableSorting } from "../../utils/sortTableRows";
 import useData from "../../composables/data";
 
@@ -13,13 +15,7 @@ const props = defineProps<{
 }>();
 
 const table = computed(() => {
-  let path = "";
-
-  if (props.data[0] !== "/") {
-    path += "/assets/tables/" + page.value.relativePath.replace(/\.md$/, "/");
-  }
-
-  path += props.data;
+  const path = assetPath("tables", page.value.relativePath, props.data);
 
   return params.value.tables![path];
 });
