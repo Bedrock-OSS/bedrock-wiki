@@ -57,8 +57,16 @@ img {
 
 .caption {
   background-color: var(--light-bg-color);
-  padding: 0.5em 0.8em;
+
   width: 100%;
+  height: 2.7em;
+
+  padding-top: 0.5em;
+  padding-inline: 0.8em;
+
+  white-space: nowrap;
+  overflow: auto;
+  scrollbar-width: thin;
 
   border: var(--border);
   border-top: none;
