@@ -1,17 +1,17 @@
 ---
 title: Sleeping Entities
+description: Learn how to make entities sleep in beds or take naps.
 category: Tutorials
 tags:
     - intermediate
 mentions:
     - MedicalJewel105
     - SirLich
-description: This tutorial will explain how to make entity sleep.
 ---
 
 This tutorial will explain how to make entity sleep.
 
-## Sleeping in beds
+## Sleeping in Beds
 
 This behavior is inspired from villagers.
 
@@ -270,9 +270,9 @@ Note that you will need to define animation in client entity like this:
 
 ### Result
 
-![](/assets/images/tutorials/sleeping-entities/result.png)
+![](result.png)
 
-## Taking naps
+## Napping
 
 This behavior is inspired from foxes.
 

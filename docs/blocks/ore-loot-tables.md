@@ -192,4 +192,4 @@ Here you need to do two things:
 
 ## Result
 
-![](/assets/images/blocks/ore-loot/result.gif)
+![](result.gif)

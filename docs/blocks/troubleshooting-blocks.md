@@ -29,7 +29,7 @@ Fix issues related to block textures.
 
 ## 1.1 - Texture is Black and Magenta
 
-I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](/assets/images/blocks/block_tr/tr_dirt.png), Log-like ![](/assets/images/blocks/block_tr/tr_log.png), Grass-like ![](/assets/images/blocks/block_tr/tr_grass.png)
+I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](dirt.png), Log-like ![](log.png), Grass-like ![](grass.png)
 
 Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is properly named.
 
@@ -145,12 +145,7 @@ If you followed this properly, your block should now have correct texture.
 
 Problem: My custom block has turned into a dirt block with a question mark on it.
 
-<WikiImage
-    src="/assets/images/blocks/block_tr/unknown.png"
-    pixelated="true"
-    width="128"
-    class="my-4"
-/>
+<WikiImage src="unknown.png" pixelated="true" width="128" class="my-4" />
 
 This an `unknown` block, which appears when the block identifier is changed or if your block JSON invalid.
 

@@ -233,7 +233,17 @@ More information on all the system methods can be found on the [Game Loops & Tim
 
 With the `@minecraft/server` module, developers can define their own custom properties, known as dynamic properties, that can be used and stored within Minecraft. This data is stored specifically in the world's `db` folder using the behavior pack header UUID.
 
-![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
+[byte]: /assets/images/nbt/byte.png
+[compound]: /assets/images/nbt/compound.png
+[string]: /assets/images/nbt/string.png
+
+![Compound][compound] `DynamicProperties`
+
+> ![Compound][compound] `8a121475-6f9f-4780-a746-2bf25f732204` — Header UUID of the behavior pack
+>
+> > ![String][string] `myColorProperty: "orange"`{lang=js}
+>
+> > ![Byte][byte] `hasOwnerDied: false`{lang=js}
 
 In order to save data, the property must first be initialized. There are multiple ways to declare dynamic properties, either on an entity, world, or item. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited amount of data per dynamic property.
 

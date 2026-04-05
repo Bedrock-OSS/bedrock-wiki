@@ -42,10 +42,14 @@
 /documentation/tellraw: /text/rawtext
 
 /entities/entities-intro: /entities/entity-intro-bp
+/entities/entity-holds-item: /entities/holding-items
+/entities/entity-transforms: /entities/coordinate-space-conversion
+/entities/introduction-to-aec: /entities/area-effect-clouds
 /entities/npc-dialogs: /entities/npc-dialogue
 
 /items/3d-items: /items/attachables
 /items/custom-pottery-sherd: /items/custom-pottery-sherds
+/items/custom-weapon: /items/custom-weapons
 /items/item-groups: /items/vanilla-item-groups
 /items/item-tags#list-of-vanilla-tags: /items/vanilla-item-tags
 
@@ -61,7 +65,10 @@
 /knowledge/using-schemas: /meta/using-schemas
 /knowledge/version-control: /meta/version-control
 
+/nbt/experimental-education-edition: /nbt/enabling-experiments
+
 /scripting/custom-command: /scripting/custom-commands
+/scripting/gametest-form: /scripting/server-forms
 /scripting/gametest-qna: /meta/gametest-qna
 /scripting/scripting-editor-qna: /meta/scripting-editor-qna
 /scripting/starting-scripts: /scripting/scripting-intro
@@ -81,7 +88,7 @@
 /tutorials/egg-drops: /loot/egg-drops
 /tutorials/entity-commands: /commands/animation-controllers
 /tutorials/entity-events: /entities/entity-events
-/tutorials/entity-holds-item: /entities/entity-holds-item
+/tutorials/entity-holds-item: /entities/holding-items
 /tutorials/fake_blocks: /blocks/fake-blocks
 /tutorials/invulnerable-entities: /entities/invulnerable-entities
 /tutorials/item-models: /items/attachables
@@ -93,7 +100,7 @@
 /tutorials/retexturing-spawn-eggs: /visuals/retexturing-spawn-eggs
 /tutorials/solid-entities: /entities/solid-entities
 /tutorials/spawning-items: /items/spawning-items
-/tutorials/text-localization: /concepts/text-localization
+/tutorials/text-localization: /text/text-intro
 /tutorials/timers: /entities/timers
 
 /vanilla-usage/items: /items/vanilla-usage-items
@@ -103,5 +110,7 @@
 /visuals/deferred-qna: /meta/deferred-qna
 /visuals/entity-visuals-intro: /entities/render-controllers
 /visuals/render-controllers: /entities/render-controllers
+/visuals/custom-skin-packs: /visuals/skin-packs
 
+/world-generation/custom-ores: /loot/generating-custom-ores
 /world-generation/randomized-structure-loot: /loot/randomized-structure-loot
