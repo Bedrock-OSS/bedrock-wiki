@@ -187,7 +187,7 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 
 Sample A:
 
-![pack_icon.png](/assets/images/commands/mcfunctions/pack_icon.png)
+![pack_icon.png](pack_icon.png)
 
 Sample B:
 
@@ -247,6 +247,6 @@ Enabling the [Content Log](/guide/troubleshooting#content-log) in the creator se
 
 The list of errors will be generated every time you load a world or run `/reload` to reflect changes after editing files. The list can be viewed on-screen for a few seconds, as well as in the content log history in settings.
 
-![contentLogToggles](/assets/images/commands/mcfunctions/content-log-toggles.png)
+![contentLogToggles](content-log-toggles.png)
 
-![contentLogHistory](/assets/images/commands/mcfunctions/content-log-history.png)
+![contentLogHistory](content-log-history.png)

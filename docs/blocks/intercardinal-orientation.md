@@ -20,7 +20,7 @@ Check out the [blocks guide](/blocks/blocks-intro) before starting.
 This tutorial guides you through making a block that can face any of 16 intercardinal directions, like mob heads and signs, providing examples of a "mug" block with this type of [block orientation](/blocks/block-orientation).
 
 <WikiImage
-    src="/assets/images/blocks/intercardinal-orientation/showcase.png"
+    src="showcase.png"
     alt="Custom mug blocks placed in different directions on a table"
     width="500"
 />
@@ -209,7 +209,7 @@ In this tutorial, each bone will be named after its Y rotation, meaning this bon
 This is the bone that will be visible when the block is facing a cardinal direction (when `wiki:intercardinal_direction` is `0`{lang=json}, `4`{lang=json}, `8`{lang=json} or `12`{lang=json}).
 At this stage, all cubes of your model must be direct children of this bone and cannot be contained in child bones.
 
-![](/assets/images/blocks/intercardinal-orientation/model_bone_0.png)
+![](model_bone_0.png)
 
 ### Intercardinal Bones
 
@@ -224,7 +224,7 @@ Keep each bone's pivot point set to `[0, 0, 0]`{lang=json} so that its rotation 
 
 For reference, here's how the final model looks for the "mug" block. Be warned, it isn't a pretty sight just yet!
 
-![](/assets/images/blocks/intercardinal-orientation/model_bones.png)
+![](model_bones.png)
 
 ## Applying Block Rotation
 
@@ -312,7 +312,7 @@ What you have created:
 -   [x] A custom component that can be used to set the direction state
 
 <WikiImage
-    src="/assets/images/blocks/intercardinal-orientation/directions.png"
+    src="directions.png"
     alt="Custom mug blocks in a square formation, each pointing towards the middle"
     width="500"
 />

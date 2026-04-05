@@ -19,7 +19,7 @@ The full atlas contains many more textures, including custom item textures!
 
 <WikiImage
     alt="A collection of vanilla item textures."
-    src="/assets/images/concepts/texture-atlases/item_atlas_sample.png"
+    src="item_atlas_sample.png"
     width="496"
     pixelated
 />
@@ -83,45 +83,25 @@ By default, block textures in `atlas.terrain` have 4 mip levels:
 
 For a 16&times;16 texture, this would produce textures similar to the following:
 
-<WikiImage
-    alt="A 16 by 16 log texture"
-    src="/assets/images/concepts/texture-atlases/log_oak_top_1.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="A 16 by 16 log texture" src="log_oak_top_1.png" width="64" pixelated />
 
-<WikiImage
-    alt="An 8 by 8 log texture"
-    src="/assets/images/concepts/texture-atlases/log_oak_top_2.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="An 8 by 8 log texture" src="log_oak_top_2.png" width="64" pixelated />
 
-<WikiImage
-    alt="A 4 by 4 log texture"
-    src="/assets/images/concepts/texture-atlases/log_oak_top_3.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="A 4 by 4 log texture" src="log_oak_top_3.png" width="64" pixelated />
 
-<WikiImage
-    alt="A 2 by 2 log texture"
-    src="/assets/images/concepts/texture-atlases/log_oak_top_4.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="A 2 by 2 log texture" src="log_oak_top_4.png" width="64" pixelated />
 
 ### Comparison
 
 <WikiImage
-    src="/assets/images/concepts/texture-atlases/screenshot_with_mipmapping.jpeg"
+    src="screenshot_with_mipmapping.jpeg"
     caption="Screenshot of a world with 4 mip levels."
     width="516"
     style="margin-right: 1em"
 />
 
 <WikiImage
-    src="/assets/images/concepts/texture-atlases/screenshot_without_mipmapping.jpeg"
+    src="screenshot_without_mipmapping.jpeg"
     caption="Screenshot of a world without mipmapping."
     width="516"
 />
@@ -134,12 +114,7 @@ The width of the padding can be adjusted using the `padding` parameter. The valu
 
 By default, there are 8 texels of padding around each block texture:
 
-<WikiImage
-    alt="A padded Oak Log texture"
-    src="/assets/images/concepts/texture-atlases/log_oak_top_padded.png"
-    width="128"
-    pixelated
-/>
+<WikiImage alt="A padded Oak Log texture" src="log_oak_top_padded.png" width="128" pixelated />
 
 ## Textures
 
@@ -187,19 +162,9 @@ Only the first frame of textures containing multiple frames will be added to the
 
 In vanilla, `tint_color` is used to apply a green tint to the Lily Pad texture.
 
-<WikiImage
-    alt="Grey Lily Pad"
-    src="/assets/images/concepts/texture-atlases/waterlily.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="Grey Lily Pad" src="waterlily.png" width="64" pixelated />
 
-<WikiImage
-    alt="Green-tinted Lily Pad"
-    src="/assets/images/concepts/texture-atlases/waterlily_tinted.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="Green-tinted Lily Pad" src="waterlily_tinted.png" width="64" pixelated />
 
 #### Tint Blending
 
@@ -230,26 +195,16 @@ In vanilla, `overlay_color` is used to apply a green tint to part of the Grass B
 
 Below you can see the original grass side texture, a version of it without an alpha channel (revealing the hidden dirt texture) and a version with `overlay_color` applied.
 
-<WikiImage
-    alt="Vanilla grass side texture"
-    src="/assets/images/concepts/texture-atlases/grass_side.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="Vanilla grass side texture" src="grass_side.png" width="64" pixelated />
 
 <WikiImage
     alt="Grass side texture without an alpha channel"
-    src="/assets/images/concepts/texture-atlases/grass_side_without_alpha.png"
+    src="grass_side_without_alpha.png"
     width="64"
     pixelated
 />
 
-<WikiImage
-    alt="Tinted grass side texture"
-    src="/assets/images/concepts/texture-atlases/grass_side_tinted.png"
-    width="64"
-    pixelated
-/>
+<WikiImage alt="Tinted grass side texture" src="grass_side_tinted.png" width="64" pixelated />
 
 :::danger TRANSPARENT PIXELS
 
@@ -258,7 +213,7 @@ In order to created untinted areas of a texture, you'll need these values to be 
 
 Here's how to ensure that they are saved in GIMP:
 
-![GIMP 'save color values from transparent pixels' export setting.](/assets/images/concepts/texture-atlases/gimp_export_settings.png)
+![GIMP 'save color values from transparent pixels' export setting.](gimp_export_settings.png)
 
 :::
 

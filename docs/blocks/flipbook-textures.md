@@ -52,7 +52,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 }
 ```
 
-![](/assets/images/blocks/flipbook-textures/animated_texture_1.gif)
+![](animated_texture_1.gif)
 
 Now it has animated texture!
 
@@ -159,6 +159,6 @@ Changes size of the peace of used texture. Can only take values that are multipl
 
 ## Result
 
-![](/assets/images/blocks/flipbook-textures/animated_texture_2.gif)
+![](animated_texture_2.gif)
 
 Now you can modify vanilla flipbook textures or create your own ones!

@@ -159,23 +159,23 @@ You can call more than one particle at the same time:
 
 First let's add a locator for our particle. Go to "Edit" section, select a group, right-click and choose "Add Locator":
 
-![](/assets/images/visuals/animation-effects/add-locator.png)
+![](add-locator.png)
 
 Rename it and move where you want.
 
 Then go to "Animate" section, choose an animation and click on a magic stick icon:
 
-![](/assets/images/visuals/animation-effects/add-effect.png)
+![](add-effect.png)
 
 Now click "+" to open menu and specify the data:
 
-![](/assets/images/visuals/animation-effects/specify-data.png)
+![](specify-data.png)
 
 You can attach a sound to animation the same way.
 
 Now save your animation and launch the game!
 
-![](/assets/images/visuals/animation-effects/showcase.png)
+![](showcase.png)
 
 :::warning Warning!
 Currently (1.21.1) locators are broken for attachables.

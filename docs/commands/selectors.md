@@ -128,7 +128,7 @@ Add the "wiki:warp" tag to all entities between (-1.5, 0, -2) and (1, 0, 1.5):
 
 The target will still be selected even if their hitbox is only partially contained within the volume.
 
-![](/assets/images/commands/selectors/volume.png)
+![](volume.png)
 
 In this visual representation, we can see that the horse with a larger hitbox is selected, while the player with a smaller hitbox is not selected, despite standing at the same point.
 
@@ -223,11 +223,11 @@ Limits the selection of targets by their rotation. There are two types of rotati
 
 _x-rotation diagram shared by @SpacebarNinja:_
 
-<img src="/assets/images/commands/selectors/x-rotation.png" width="400">
+<WikiImage src="x-rotation.png" width="400" />
 
 _y-rotation diagram shared by @SpacebarNinja:_
 
-<img src="/assets/images/commands/selectors/y-rotation.png" width="400">
+<WikiImage src="y-rotation.png" width="400" />
 
 **Examples:**
 

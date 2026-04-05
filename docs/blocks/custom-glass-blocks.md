@@ -23,7 +23,7 @@ This page will show you how to use [material instances](/blocks/block-components
 
 By the end you should be able to create something like this!
 
-![A collection of custom glass blocks](/assets/images/blocks/custom-glass-blocks/showcase.png)
+![A collection of custom glass blocks](showcase.png)
 
 ## Block Model
 
@@ -78,7 +78,7 @@ Currently, our custom glass doesn't have any culling applied.
 
 This means that, when multiple glass blocks are next to each other, there will be faces separating them:
 
-![A collection of custom glass blocks without culling](/assets/images/blocks/custom-glass-blocks/without_culling.png)
+![A collection of custom glass blocks without culling](without_culling.png)
 
 ### Block Culling JSON
 

@@ -21,7 +21,7 @@ These command-techniques allow you to detect certain player/entity 'states' and 
 
 This technique allows you to detect when your target is/isn't moving, accounting for even subtle movements.
 
-![](/assets/images/commands/movement-detections/moving.gif)
+![](moving.gif)
 
 :::warning Known Issues:
 
@@ -142,7 +142,7 @@ Calculation for the values are given below:
 
 This technique allows you to detect when the player is/isn't sleeping.
 
-![](/assets/images/commands/movement-detections/sleeping.jpg)
+![](sleeping.jpg)
 
 Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 
@@ -187,7 +187,7 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 
 This technique allows you to detect when the player is/isn't sneaking.
 
-![](/assets/images/commands/movement-detections/sneaking.png)
+![](sneaking.png)
 
 Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the player hitbox to 1.5 blocks when sneaking, making a proper sneak-detection using just commands is now possible which previously required add-on assistance.
 
@@ -233,7 +233,7 @@ It is a requirement to follow this same sequence and properly apply the `scores`
 
 This technique allows you to detect when the player is/isn't crawling.
 
-![](/assets/images/commands/movement-detections/crawling.png)
+![](crawling.png)
 
 Note: When crawling, the player's hitbox is reduced to 0.6 blocks.
 
@@ -287,9 +287,9 @@ If you desperately need to detect all three states separately **solely using com
 
 1. Gliding while touching the ground/ceiling or crashing straight into a wall will be detected as crawling.
 2. Crawling from absolute corner of a block while wearing an Elytra, with no adjacent blocks above or below, will be detected as gliding.
-    - ![issue2](/assets/images/commands/movement-detections/issue2.png)
+    - ![issue2](issue2.png)
 3. Swimming in a waterlogged block under another waterlogged block will be detected as crawling.
-    - ![issue3](/assets/images/commands/movement-detections/issue3.png)
+    - ![issue3](issue3.png)
 
 :::
 

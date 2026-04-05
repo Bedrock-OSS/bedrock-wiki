@@ -15,7 +15,7 @@ description: Learn how to dynamically execute commands at the location of any bl
 
 This technique allows you to execute commands at the location of any block variant without explicitly specifying each coordinate.
 
-![Demonstration GIF](/assets/images/commands/execute-at-block/demo_1.gif)
+![Demonstration GIF](demo_1.gif)
 
 :::warning
 
@@ -82,7 +82,7 @@ If using functions, your pack folder structure will be as follows:
 
 This is a slightly modified version of the system that will not affect any existing fully-filled composters in your world.
 
-![Demonstration GIF](/assets/images/commands/execute-at-block/demo_2.gif)
+![Demonstration GIF](demo_2.gif)
 
 <CodeHeader>BP/functions/wiki/execute_at_blocks/diamond_block.mcfunction</CodeHeader>
 

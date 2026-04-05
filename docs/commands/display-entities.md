@@ -161,7 +161,7 @@ stopsound @a mob.fox.aggro
 
 ### Changing FMBE Block Display Dynamically
 
-![Demonstration GIF](/assets/images/commands/display-entities/change-fmbe-block-dynamically.gif)
+![Demonstration GIF](change-fmbe-block-dynamically.gif)
 
 1. Summon an armor stand named "`wiki:fmbe_pickaxe`" in a secure area accessible only to operators and place a silk touch pickaxe in it's main hand.
 2. Ensure this area remains loaded at all times using a **[ticking area](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand)**.
@@ -219,7 +219,7 @@ playanimation @e[tag=wiki:fmbe] animation.ender_dragon.neck_head_movement none 0
 
 This is the beta version of a new, slightly more advanced FMBE, which reduces the total number of command blocks required to 5, while also allowing for more complex transformations.
 
-![Advanced FMBE Diagonal Transformation Demo GIF](/assets/images/commands/display-entities/advanced-fmbe-diagonal-transformation.gif)
+![Advanced FMBE Diagonal Transformation Demo GIF](advanced-fmbe-diagonal-transformation.gif)
 
 It is still under development and may change over time, so use it with caution.
 

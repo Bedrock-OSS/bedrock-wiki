@@ -15,7 +15,7 @@ description: Create a compass display using commands.
 
 Create a compass display on the actionbar using commands.
 
-![Demonstration GIF](/assets/images/commands/compass-display/demo.gif)
+![Demonstration GIF](demo.gif)
 
 ## Commands
 
