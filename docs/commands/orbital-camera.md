@@ -29,7 +29,7 @@ execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s se
 
 **2D Visualization:**
 
-![Orbital Camera 2D Visualization](/assets/images/commands/orbital-camera/2d-visualization.gif)
+![Orbital Camera 2D Visualization](2d-visualization.gif)
 
 **Command Breakdown:**
 

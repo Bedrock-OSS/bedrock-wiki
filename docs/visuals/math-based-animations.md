@@ -30,7 +30,7 @@ As you can see, math-based animations can be quite complicated and difficult to 
 
 This is the cost of the smooth and ideal loop of the animation.
 
-![](/assets/images/visuals/math-based-animations/animation-1.gif)
+![](animation-1.gif)
 
 ## Writing Math-Animations
 

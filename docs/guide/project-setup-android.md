@@ -212,7 +212,7 @@ Now that your add-on has all of the required content, we need to import it to Mi
 1. Open your preferred file manager and navigate to the folder containing your behavior and resource packs.
 2. Using multi-select, select both packs and create a ZIP file.
 3. When asked for the name of the file, ensure that `.zip` is changed to `.mcaddon`.
-   ![](/assets/images/guide/project-setup-android/zip-addon.png)
+   ![](zip-addon.png)
 4. When your file manager finishes, it should be a `MCADDON` file with Minecraft as it's icon. Tapping on this file should launch Minecraft.
 
 If done correctly, Minecraft will display a banner for both packs. First is `Importing...`. After should be `Successfully imported "<your pack name>"`. You can also go to `Settings > Storage` if you don't see the import messages to verify your packs were imported. If you do not see either pack, check out our [troubleshooting guide](/guide/troubleshooting).

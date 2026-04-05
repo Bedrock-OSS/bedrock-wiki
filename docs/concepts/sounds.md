@@ -69,7 +69,7 @@ If `"max_distance"`is not given in the sound's definition, it is equivalent to `
 
 Approximate sound attenuation by distance. The actual graph might not be linear.
 
-![](/assets/images/concepts/sounds/sound_graph.png)
+![](sound_graph.png)
 
 Shown above is the approximate sound attenuation factor by distance **for playing sounds with a volume parameter greater than or equal to 1**. Notice how the playsound `<volume>` limits the sound's audible range.
 The axis `distance` is the distance of the sound listener (player) to the sound source. The corresponding `volume` axis' value is the factor for the playsound volume capped to 1, multiplied by the sound definition's volume to get the final volume of the sound you hear. As an expression this could be written as: `final_volume = min(playsound_volume, 1) * graph_volume * sound_definition_volume`.

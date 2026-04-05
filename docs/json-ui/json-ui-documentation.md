@@ -139,7 +139,7 @@ Data Binding allows to bind hardcoded values/variables to an element property.
 | binding_collection_prefix | string  |               |                                                                                                                                                                                                                                                                  |
 | binding_condition         |  enum   |               | Condition for the data binding to happen. <br> Possible values: <br> `always` <br> `always_when_visible` <br> `visible` <br> `once` <br> `none` <br> `visibility_changed`                                                                                        |
 | source_control_name       | string  |               | Name of the UI element to observe its property values                                                                                                                                                                                                            |
-| source_property_name      | string  |               | Store the value of the property value of the UI element referred in `source_control_name`                                                                                                                                                                         |
+| source_property_name      | string  |               | Store the value of the property value of the UI element referred in `source_control_name`                                                                                                                                                                        |
 | target_property_name      | string  |               | The UI element property that the stored value in `source_property_name` will be applied to                                                                                                                                                                       |
 | resolve_sibling_scope     | boolean |               | If `true`, only allows the selection of a sibling element in the same control and blocks all the control names outside the sibling scope, for `source_control_name`. If both sibling and parent have the same name, the parent is given priority even if `true`. |
 
@@ -481,43 +481,43 @@ For example,in setting that is accessibility and in inventory,the construction,e
 
 #### Renderers
 
-| Renderer Name                 | Description                                                                                                    |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `flying_item_renderer`        | The flying item when you change an item from a slot to another                                                 |
+| Renderer Name                 | Description                                                                                                     |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `flying_item_renderer`        | The flying item when you change an item from a slot to another                                                  |
 | `inventory_item_renderer`     | Renders an item icon. It only work in screens when in-game                                                      |
-| `credits_renderer`            | The credits and end poem                                                                                       |
-| `vignette_renderer`           | A vignette                                                                                                     |
+| `credits_renderer`            | The credits and end poem                                                                                        |
+| `vignette_renderer`           | A vignette                                                                                                      |
 | `name_tag_renderer`           | It's something like the player name above the player head or the name above animals when used a nametag on them |
-| `paper_doll_renderer`         | A skin model                                                                                                   |
-| `debug_screen_renderer`       | The debug text that appears on the beta/preview versions                                                       |
-| `enchanting_book_renderer`    | The enchantment table book. It opens when there's an item to be enchanted                                      |
-| `gradient_renderer`           | Draws a gradient                                                                                               |
-| `live_horse_renderer`         | The horse/donkey/llama... model                                                                                |
-| `live_player_renderer`        | The player model                                                                                               |
-| `hud_player_renderer`         | The player model that imitates what the player is doing                                                        |
-| `hotbar_renderer`             | Gets the hotbar slot image for each slot                                                                       |
-| `hotbar_cooldown_renderer`    | Draws the item cooldown                                                                                        |
-| `heart_renderer`              | Draws the player health                                                                                        |
-| `horse_heart_renderer`        | Draws the horse/donkey/... health                                                                              |
-| `armor_renderer`              | Draws the player armor                                                                                         |
-| `horse_jump_renderer`         | Draws the horse jumping progress bar                                                                           |
-| `hunger_renderer`             | Draws the player hunger                                                                                        |
-| `bubbles_renderer`            | Draws the respiration bubbles                                                                                  |
-| `mob_effects_renderer`        | Draws the effects that are applied to the player                                                               |
-| `cursor_renderer`             | Draws the crosshair in the center of the screen                                                                |
-| `equipment_preview_renderer`  | Draws armor stand                                                                                              |
-| `progress_indicator_renderer` | Not used                                                                                                       |
-| `camera_renderer`             | Used for the camera item                                                                                       |
-| `web_view_renderer`           | Shows a website view                                                                                           |
-| `banner_pattern_renderer`     | Renders a banner                                                                                               |
-| `actor_portrait_renderer`     | Draws an portrait                                                                                              |
-| `trial_time_renderer`         | In the trial version of the game it renders the time left to be able to use the world                          |
-| `progress_bar_renderer`       | Draws a progress bar. It has more than one type                                                                |
-| `3d_structure_renderer`       | Renders the structure block structure                                                                          |
-| `splash_text_renderer`        | Gets and renders a random splash text from the `splashes.json` file                                            |
-| `hover_text_renderer`         | Draws a tooltip                                                                                                |
-| `ui_holo_cursor`              |                                                                                                                |
-| `panorama_renderer`           | It's not the panoramas that appear behind the menus. It's the panorama of the worlds on the store.             |
+| `paper_doll_renderer`         | A skin model                                                                                                    |
+| `debug_screen_renderer`       | The debug text that appears on the beta/preview versions                                                        |
+| `enchanting_book_renderer`    | The enchantment table book. It opens when there's an item to be enchanted                                       |
+| `gradient_renderer`           | Draws a gradient                                                                                                |
+| `live_horse_renderer`         | The horse/donkey/llama... model                                                                                 |
+| `live_player_renderer`        | The player model                                                                                                |
+| `hud_player_renderer`         | The player model that imitates what the player is doing                                                         |
+| `hotbar_renderer`             | Gets the hotbar slot image for each slot                                                                        |
+| `hotbar_cooldown_renderer`    | Draws the item cooldown                                                                                         |
+| `heart_renderer`              | Draws the player health                                                                                         |
+| `horse_heart_renderer`        | Draws the horse/donkey/... health                                                                               |
+| `armor_renderer`              | Draws the player armor                                                                                          |
+| `horse_jump_renderer`         | Draws the horse jumping progress bar                                                                            |
+| `hunger_renderer`             | Draws the player hunger                                                                                         |
+| `bubbles_renderer`            | Draws the respiration bubbles                                                                                   |
+| `mob_effects_renderer`        | Draws the effects that are applied to the player                                                                |
+| `cursor_renderer`             | Draws the crosshair in the center of the screen                                                                 |
+| `equipment_preview_renderer`  | Draws armor stand                                                                                               |
+| `progress_indicator_renderer` | Not used                                                                                                        |
+| `camera_renderer`             | Used for the camera item                                                                                        |
+| `web_view_renderer`           | Shows a website view                                                                                            |
+| `banner_pattern_renderer`     | Renders a banner                                                                                                |
+| `actor_portrait_renderer`     | Draws an portrait                                                                                               |
+| `trial_time_renderer`         | In the trial version of the game it renders the time left to be able to use the world                           |
+| `progress_bar_renderer`       | Draws a progress bar. It has more than one type                                                                 |
+| `3d_structure_renderer`       | Renders the structure block structure                                                                           |
+| `splash_text_renderer`        | Gets and renders a random splash text from the `splashes.json` file                                             |
+| `hover_text_renderer`         | Draws a tooltip                                                                                                 |
+| `ui_holo_cursor`              |                                                                                                                 |
+| `panorama_renderer`           | It's not the panoramas that appear behind the menus. It's the panorama of the worlds on the store.              |
 
 #### Specific Properties
 
@@ -644,7 +644,7 @@ Most people use them by giving them the same value:
 ```
 
 <WikiImage
-	src="/assets/images/json-ui/json-ui-documentation/anchor_same_value.png"
+	src="anchor_same_value.png"
 	alt="Anchors with the same value"
 	pixelated
 	width=782
@@ -664,7 +664,7 @@ However, what happens when they have different values? Let's look at what happen
 ```
 
 <WikiImage
-	src="/assets/images/json-ui/json-ui-documentation/anchor_center_top_left.png"
+	src="anchor_center_top_left.png"
 	alt="Anchor from center to top left"
 	pixelated
 	width=782
@@ -675,7 +675,7 @@ The top left point of the element is in the center point of the parent element.
 Another example:
 
 <WikiImage
-	src="/assets/images/json-ui/json-ui-documentation/anchor_ce_rm_tm_tl.png"
+	src="anchor_ce_rm_tm_tl.png"
 	alt="Anchor from center to right middle and anchor from top middle to top left"
 	pixelated
 	width=782

@@ -70,9 +70,9 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 ## Weirdest Bugs
 
 -   **Q**: What is the weirdest rendering bug you have seen while developing the Deferred Rendering Pipeline?
--   **A**: Early experiments with indirect specular ended up lighting the whole scene! ![](/assets/images/visuals/deferred-qna/deferred-qna-media1.gif)
--   **A**: We also see NaNs that get seeded and sometimes spread through the world. Don't divide by zero, friends. 😉 ![](/assets/images/visuals/deferred-qna/deferred-qna-media2.png)
--   **A**: Who's that ~~Pokemon~~ Minecraft mob? ![](/assets/images/visuals/deferred-qna/deferred-qna-media3.png)
+-   **A**: Early experiments with indirect specular ended up lighting the whole scene! ![](deferred-qna-media1.gif)
+-   **A**: We also see NaNs that get seeded and sometimes spread through the world. Don't divide by zero, friends. 😉 ![](deferred-qna-media2.png)
+-   **A**: Who's that ~~Pokemon~~ Minecraft mob? ![](deferred-qna-media3.png)
 -   **A**: No screenshot, but another was when we had phantom shadows from mobs on the other side of the world! At first we thought they were mobs with invisibility status and their shadow just needed to be hidden, but the corresponding mob was sometimes 1000s of blocks away with no invisibility! Ended up being a transform-inversion issue. That was a fun one to track down.
 
 ## Light Contrast and Saturation For the Sun/Moon and Pointlight

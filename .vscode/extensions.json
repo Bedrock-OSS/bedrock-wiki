@@ -1,7 +1,8 @@
 {
-	"recommendations": [
+  "recommendations": [
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
+    "redhat.vscode-yaml",
     "Vue.volar"
   ]
 }

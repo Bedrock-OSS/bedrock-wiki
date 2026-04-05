@@ -97,7 +97,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 }
 ```
 
-![](/assets/images/world-generation/structure-features/house.png)
+![](house.png)
 
 ## Underground Structure
 
@@ -173,7 +173,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 }
 ```
 
-![](/assets/images/world-generation/structure-features/bunker.png)
+![](bunker.png)
 
 ## Floating Feature
 
@@ -248,7 +248,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 }
 ```
 
-![](/assets/images/world-generation/structure-features/balloon.png)
+![](balloon.png)
 
 ## Underwater Structure
 
@@ -321,7 +321,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 }
 ```
 
-![](/assets/images/world-generation/structure-features/aqua_temple.png)
+![](aqua_temple.png)
 
 ## Water Surface Structure
 
@@ -391,4 +391,4 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 }
 ```
 
-![](/assets/images/world-generation/structure-features/raft.png)
+![](raft.png)

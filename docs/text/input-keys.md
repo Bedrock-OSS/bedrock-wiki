@@ -17,7 +17,7 @@ Input keys can be used to automatically detect the input of the player and displ
 action.hint.exit.rollercoaster=Press :_input_key.sneak: to end the ride
 ```
 
-![Press B to end the ride](/assets/images/text/input-keys/exit_rollercoaster_action_hint.png)
+![Press B to end the ride](exit_rollercoaster_action_hint.png)
 
 ## List of Input Keys
 

@@ -61,7 +61,7 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 **Example Visualization:**
 
-![Position of Five Players Being Deranged](/assets/images/commands/rearrange-positions/2d-visualization.gif)
+![Position of Five Players Being Deranged](2d-visualization.gif)
 
 ## Functions
 

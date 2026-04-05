@@ -119,7 +119,7 @@ This is the actual feature we want to be conditionally placed. It is `ore_featur
 ```
 
 :::tip
-If you want to learn more about ore features, you can visit [Generating Custom Ores](/world-generation/custom-ores) tutorial.
+If you want to learn more about ore features, you can visit [Generating Custom Ores](/world-generation/generating-custom-ores) tutorial.
 :::
 
 ### Feature Rule
@@ -182,4 +182,4 @@ Like that we have made a rock feature that can only be placed in air blocks and 
 
 Generation screenshot:
 
-![](/assets/images/world-generation/rock_feature.png)
+![](rock_feature.png)

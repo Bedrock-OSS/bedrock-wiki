@@ -189,7 +189,7 @@ Note that the uuid field needs to be replaced with an actual uuid, and the two g
 
 Sample A:
 
-![pack_icon.png](/assets/images/commands/mcfunctions/pack_icon.png)
+![pack_icon.png](pack_icon.png)
 
 Sample B:
 

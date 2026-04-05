@@ -19,17 +19,17 @@ _Don't mind strange bones rotation, Mojang likes to render models correctly thro
 
 -   Find the **Eraser** tool and set its opacity/alpha to something low like 71 or 23.
 
-![](/assets/images/visuals/glowing-texture/eraser.png)
+![](eraser.png)
 
-![](/assets/images/visuals/glowing-texture/opacity.png)
+![](opacity.png)
 
 -   Then, erase the part of the texture you want it to glow. The less visible a pixel is the more it glows, but be sure it is not 100% erased.
 
-![](/assets/images/visuals/glowing-texture/erase-pixels.png)
+![](erase-pixels.png)
 
 Example Pig texture:
 
-![](/assets/images/visuals/glowing-texture/pig.png)
+![](pig.png)
 
 ## Material
 
@@ -98,4 +98,4 @@ We need to modify the `RP/entity/my_entity.entity.json` file of the mob we want 
 
 Now, load up Minecraft and open a word with this resource pack enabled. Set the time to _midnight_ or find a nearby cave and test it out. The entity should glow as expected.
 
-![](/assets/images/visuals/glowing-texture/result.png)
+![](result.png)

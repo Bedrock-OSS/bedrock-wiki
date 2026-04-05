@@ -1,7 +1,4 @@
-import { defineWikiConfig } from "./theme/config";
-
-import redirects from "./redirects";
-import tags from "./tags";
+import { defineWikiConfig } from "./theme/node/config";
 
 export default defineWikiConfig({
   title: "Bedrock Wiki",
@@ -49,9 +46,7 @@ export default defineWikiConfig({
       "/entities/vanilla-usage-spawn-rules",
       "/entities/vuc-full",
       "/entities/vusr-full",
+      "/text/fonts",
     ],
   },
-
-  redirects,
-  tags,
 });

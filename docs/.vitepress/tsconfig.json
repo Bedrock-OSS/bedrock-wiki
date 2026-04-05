@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "module": "esnext",
+    "types": ["vite/client"]
+  },
+  "exclude": ["dist", "cache"]
+}

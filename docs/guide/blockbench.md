@@ -29,7 +29,7 @@ Let's get started.
 2.  Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
 3.  A screen like this will have popped up.
 
-    ![](/assets/images/guide/create_entity_project_menu.png)
+    ![](create_entity_project_menu.png)
 
     -   `"File name:"` is self-explanatory. My file will generate as "skele_yaklin.geo.json".
     -   `"Model Identifier:"` is the model identifier (namespace not required), a short name for this ID will be defined later.
@@ -38,7 +38,7 @@ Let's get started.
 
 4.  Press confirm. You'll see a screen like this:
 
-    ![](/assets/images/guide/create_entity_workspace.png)
+    ![](create_entity_workspace.png)
 
     -   You can see many tools here: move, resize, rotate, etc.
     -   You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
@@ -58,11 +58,11 @@ Now that you have your model in place let's start texturing!
 2.  Write down your image file name under "Name:". Mine will export as `ghost.png`.
     Check "Template:" to make a template texture - it'll be easier to work with.
 
-    ![](/assets/images/guide/create_entity_texture_1.png)
+    ![](create_entity_texture_1.png)
 
 3.  Check everything and change your resolution to the one you set in the very first step.
 
-    ![](/assets/images/guide/create_entity_texture_2.png)
+    ![](create_entity_texture_2.png)
 
 4.  Go to "Paint" in the upper right corner and paint your texture.
 
@@ -71,21 +71,21 @@ Now that you have your model in place let's start texturing!
 Once your model and texture are done, you can start animating. Go to "Animate" in the upper right corner.
 
 You might want to adjust one of the toolbars by adding "Export Animations" and "Import Animations" like this:
-![](/assets/images/guide/create_entity_animation_1.png)
+![](create_entity_animation_1.png)
 
 1.  Click "Add Animation" [the plus icon on the top right side] and name it `animation.{yourEntityName}.move`.
     Create the first frame of your walking animation under 0 on the timeline by moving the legs.
 
-    ![](/assets/images/guide/create_entity_animation_2.png)
+    ![](create_entity_animation_2.png)
 
 2.  Create the second frame under 0.5 on the timeline.
 
-    ![](/assets/images/guide/create_entity_animation_3.png)
+    ![](create_entity_animation_3.png)
 
 3.  Finally, copy the first frame to the third frame by placing your timeline cursor on 1.0 and selecting the first frame, then ctrl+c, ctrl+v.
 
 4.  Right-click the animation and tick "Loop" for the animation to loop.
-    ![](/assets/images/guide/create_entity_animation_4.png)
+    ![](create_entity_animation_4.png)
 
 ## Saving Your Work
 

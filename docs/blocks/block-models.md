@@ -23,7 +23,7 @@ You should learn the main features of Minecraft geometry tailored towards creati
 
 Open Blockbench and create a new `Bedrock Block` project.
 
-![New project panel with Bedrock Block selected](/assets/images/blocks/block-models/new_project.png)
+![New project panel with Bedrock Block selected](new_project.png)
 
 Now you can give your model an identifier! Your file name can be decided here, or changed later.
 
@@ -34,7 +34,7 @@ Model identifiers are **not namespaced and cannot contain colons**.
 Colons were previously used for model inheritance and are invalid in modern geometry formats.
 :::
 
-![](/assets/images/blocks/block-models/project_settings.png)
+![](project_settings.png)
 
 ## Adding Cubes
 
@@ -44,17 +44,17 @@ All cubes must be contained within **bones**, which act as groups.
 First, let's create a root bone for our model from the outliner by clicking on `Add Group`.
 Bones can be renamed by pressing `F2`.
 
-![](/assets/images/blocks/block-models/root_bone.png)
+![](root_bone.png)
 
 The "paper bag" model will need two cubes: one for the handle, and one for the main bag.
 These can be added by selecting your root bone and clicking `Add Cube`.
 
-<WikiImage src="/assets/images/blocks/block-models/new_cube.png" alt width="600" class="my-4" />
+<WikiImage src="new_cube.png" alt width="600" class="my-4" />
 
 Cubes can be moved, resized and rotated from the top toolbar.
 Below are the two cubes my "paper_bag" model will use.
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_cubes.png" alt="" width="300" />
+<WikiImage src="paper_bag_cubes.png" alt="" width="300" />
 
 ## Removing Faces
 
@@ -63,16 +63,12 @@ In my example, the top face of the paper_bag should be removed so that you can s
 
 To remove a face, click on it in the preview and remove its UV.
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_top_removed.png" alt="" width="600" />
+<WikiImage src="paper_bag_top_removed.png" alt="" width="600" />
 
 Additionally, only the north and south faces of the handle should be visible.
 You can select multiple faces by holding Ctrl while clicking on the face names in the UV panel.
 
-<WikiImage
-    src="/assets/images/blocks/block-models/paper_bag_handle_faces_removed.png"
-    alt=""
-    width="600"
-/>
+<WikiImage src="paper_bag_handle_faces_removed.png" alt="" width="600" />
 
 ## Previewing Textures
 
@@ -92,20 +88,16 @@ The "paper_bag" model has multiple pre-made textures, listed below:
 
 These can be imported into Blockbench and then dragged onto each appropriate block face, although they likely won't look quite right...
 
-<WikiImage
-    src="/assets/images/blocks/block-models/preview_textures_applied.png"
-    alt=""
-    width="300"
-/>
+<WikiImage src="preview_textures_applied.png" alt="" width="300" />
 
 ## Rearranging UVs
 
 To get textures into the right positions, you may need to reposition/resize your faces' UV mapping.
 This can be done by selecting the affected face and using the UV panel.
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_handle_uv.png" alt="" width="300" />
+<WikiImage src="paper_bag_handle_uv.png" alt="" width="300" />
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_final.png" alt="" width="300" />
+<WikiImage src="paper_bag_final.png" alt="" width="300" />
 
 ## Changing Material Instances
 
@@ -113,12 +105,12 @@ Applying custom material instance names can be used to easily define how certain
 
 They can be edited by right-clicking on a cube and opening `Edit Material Instances`
 
-![](/assets/images/blocks/block-models/select_edit_material_instances.png)
+![](select_edit_material_instances.png)
 
 For the "paper_bag" model, the east and west faces should have their own texture.
 We can indicate this by giving them a material instance.
 
-![](/assets/images/blocks/block-models/edit_material_instances.png)
+![](edit_material_instances.png)
 
 ## Applying Geometry & Textures
 

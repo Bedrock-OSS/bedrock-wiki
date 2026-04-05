@@ -23,7 +23,7 @@ They are what a computer uses to perform any function. These devices are very he
 
 **Chart:**
 
-![Logic Gates Table with Diagram](/assets/images/commands/logic-gates/table-with-diagram.jpg)
+![Logic Gates Table with Diagram](table-with-diagram.jpg)
 
 **Converted to Commands:**
 

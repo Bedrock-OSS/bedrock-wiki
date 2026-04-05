@@ -39,7 +39,7 @@ execute as <target> at @s anchored eyes facing <entity | coordinate> positioned 
 
 **Visualization:**
 
-![Alex Looking at a Pig's Head](/assets/images/commands/look-detection/visualization.gif)
+![Alex Looking at a Pig's Head](visualization.gif)
 
 > _Note: This is a rough visual representation, not precise measurements._
 
@@ -132,7 +132,7 @@ With the above calculation, the example value of `r=0.2` leaves us with roughly 
 
 **Credits:** _@GobbleCrow_
 
-![Demonstration GIF: Player Looking at an Armor Stand](/assets/images/commands/look-detection/v2-demo.gif)
+![Demonstration GIF: Player Looking at an Armor Stand](v2-demo.gif)
 
 If you need higher precision for detecting where a player is looking—ideal for fine-tuned mechanics—you can use the following command which uses a very similar logic:
 

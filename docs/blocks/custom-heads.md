@@ -33,7 +33,7 @@ In this tutorial you will learn how to create your own mob head blocks.
 By the end of this tutorial, you should have created something like this:
 
 <WikiImage
-    src="/assets/images/blocks/custom-heads/showcase.png"
+    src="showcase.png"
     alt="A charged creeper, surrounded by husk heads, waiting eagerly outside a desert villager's house"
     width="500"
 />
@@ -214,7 +214,7 @@ In this tutorial, each bone will be named after its Y rotation, meaning this bon
 This is the bone that will be visible when the block is facing a cardinal direction (when `wiki:intercardinal_direction` is `0`{lang=json}, `4`{lang=json}, `8`{lang=json} or `12`{lang=json}) or when the head is attached to the side of an adjacent block.
 At this stage, all cubes of your model must be direct children of this bone and cannot be contained in child bones.
 
-![](/assets/images/blocks/custom-heads/model_bone_0.png)
+![](model_bone_0.png)
 
 ### Intercardinal Bones
 
@@ -229,7 +229,7 @@ Keep each bone's pivot point set to `[0, 0, 0]`{lang=json} so that its rotation 
 
 For reference, here's how the final model looks for a basic custom head. Be warned, it isn't a pretty sight just yet!
 
-![](/assets/images/blocks/custom-heads/model_bones.png)
+![](model_bones.png)
 
 ### Example Model
 
@@ -350,7 +350,7 @@ In order to make our custom head wearable and enchantable, we'll need to replace
 
 Great! Now we're able to equip the block into the head slot:
 
-![](/assets/images/blocks/custom-heads/inventory.png)
+![](inventory.png)
 
 ## Charged Creeper Drops
 
@@ -375,7 +375,7 @@ What you have created:
 -   [x] A custom head drop system for charged creeper explosions
 
 <WikiImage
-    src="/assets/images/blocks/custom-heads/directions.png"
+    src="directions.png"
     alt="Custom head blocks in a square formation, each pointing towards the middle"
     width="500"
 />
