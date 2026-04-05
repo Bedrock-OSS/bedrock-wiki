@@ -260,32 +260,32 @@ Example:
 {
     "format_version": "1.8.0",
     "animations": {
-        "animation.dragon.sit": {...},
-        "animation.dragon.fly": {...},
-        "animation.dragon.roar": {...},
+        "animation.dragon.sit": { ... },
+        "animation.dragon.fly": { ... },
+        "animation.dragon.roar": { ... },
   }
 }
 ```
 
 ## Split Textures by Path, Not Name
 
-✔️ `textures/dragon/red`
+✔️ `RP/textures/wiki/dragon/red`
 
-❌ `textures/dragon_red_skin`
+❌ `RP/textures/wiki/dragon_red_skin`
 
-✔️ `textures/npc/dragon_hunter/archer`
+✔️ `RP/textures/wiki/npc/dragon_hunter/archer`
 
-❌ `textures/npc/dragon_hunter_archer`
+❌ `RP/textures/wiki/npc/dragon_hunter_archer`
 
 ## .lang File Comments
 
 Comments intended for the localizer should always be in-line, in the following format:
 
 ```lang
-the.key=The string<\t>## Comment, intended for the one localizing.
+the.key=The string	## Comment, intended for the one localizing.
 ```
 
-`<\t>` should be replaced by a tab (`	`) character in your lang files.
+**Note that the whitespace preceding inline comments must be a tab character, not spaces.**
 
 Own-line comments can be used for organizational purposes but should not store localization-critical information.
 

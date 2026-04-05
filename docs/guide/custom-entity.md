@@ -1109,7 +1109,7 @@ Your folder structure should look like this:
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/wiki/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"

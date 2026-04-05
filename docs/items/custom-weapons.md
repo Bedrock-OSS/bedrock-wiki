@@ -78,19 +78,21 @@ So at a bare minimum that is enough to get a sword put into the game, we still n
     "texture_data": {
         "wiki:my_sword": {
             // Make sure you have put an icon texture called my_sword.png here
-            "textures": "textures/items/my_sword"
+            "textures": "textures/wiki/items/my_sword"
         }
     }
 }
 ```
 
-Here is an example texture if you do not have your own to use, just `Save As` and plop it in the `RP/textures/items` directory.
+Here is an example texture if you do not have your own to use, just "Save As" and plop it in the `RP/textures/items` directory.
 
-<WikiImage src="my_sword.png" alt="Sword texture" pixelated="true" width="128" class="my-4 mr-4" />
-
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-wiki/wiki/docs/publicmy_sword.png">
-    Download Texture
-</Button>
+<WikiImage
+    src="my_sword.png"
+    alt=""
+    caption="RP/textures/wiki/items/my_sword"
+    width="128"
+    pixelated
+/>
 
 ## In-game
 

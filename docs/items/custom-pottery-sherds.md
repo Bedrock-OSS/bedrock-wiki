@@ -75,7 +75,7 @@ Here's an example pottery pattern texture that we will use for this tutorial:
 
 <WikiImage
     src="custom_pottery_pattern.png"
-    caption="RP/textures/blocks/custom_pottery_pattern.png"
+    caption="RP/textures/wiki/blocks/custom_pottery_pattern.png"
     pixelated
 />
 
@@ -92,7 +92,7 @@ Add the following JSON file to your resource pack:
             "identifier": "minecraft:decorated_pot",
             "textures": {
                 // Each shortname listed here should be the identifier of your item without its namespace.
-                "custom_pottery_sherd": "textures/blocks/custom_pottery_pattern" // Path to custom pot texture
+                "custom_pottery_sherd": "textures/wiki/blocks/custom_pottery_pattern" // Path to custom pot texture
             }
         }
     }

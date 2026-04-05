@@ -489,7 +489,7 @@ If you need a more complete set of animations, consider copying the default play
             },
             "render_controllers": ["controller.render.single_texture"],
             "textures": {
-                "default": "textures/entity/npc/introduction"
+                "default": "textures/wiki/entity/npc/introduction"
             },
             "scripts": {
                 "scale": "0.9375",

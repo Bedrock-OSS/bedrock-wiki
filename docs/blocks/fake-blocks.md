@@ -213,7 +213,7 @@ First, we have to add some textures to your entity file, make sure that you are 
 ```json
 {
     "textures": {
-        "default": "textures/entity/your_texture",
+        "default": "textures/wiki/entity/custom_entity",
         "destroy_stage_0": "textures/environment/destroy_stage_0",
         "destroy_stage_1": "textures/environment/destroy_stage_1",
         "destroy_stage_2": "textures/environment/destroy_stage_2",

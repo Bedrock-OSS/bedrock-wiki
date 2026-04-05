@@ -39,22 +39,22 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 {
     "texture_data": {
         "wiki:dirt_like": {
-            "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/dirt_like" // You can replace this with anything, just remember the name
         },
         "wiki:custom_log_top": {
-            "textures": "textures/blocks/custom_log_top" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_log_top" // You can replace this with anything, just remember the name
         },
         "wiki:custom_log_side": {
-            "textures": "textures/blocks/custom_log_side" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_log_side" // You can replace this with anything, just remember the name
         },
         "wiki:custom_grass_top": {
-            "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_grass_top" // You can replace this with anything, just remember the name
         },
         "wiki:custom_grass_bottom": {
-            "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
         },
         "wiki:custom_grass_side": {
-            "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_grass_side" // You can replace this with anything, just remember the name
         }
     }
 }

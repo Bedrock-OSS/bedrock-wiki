@@ -88,7 +88,7 @@ form.button("Button 1");
 // With vanilla texture
 form.button("Button 2", "textures/items/compass");
 // With custom texture
-form.button("Button 3", "textures/icon/btn_icon_3.png");
+form.button("Button 3", "textures/wiki/icons/btn_icon_3");
 ```
 
 :::warning
@@ -105,7 +105,7 @@ form.title("Minigames");
 form.body("Choose the games");
 form.button("Spleef", "textures/items/diamond_shovel");
 form.button("Murder Mystery", "textures/items/iron_sword");
-form.button("Bedwars", "textures/minigames/bedwars.png");
+form.button("Bedwars", "textures/wiki/minigames/bedwars");
 ```
 
 ![image](action-form.png)

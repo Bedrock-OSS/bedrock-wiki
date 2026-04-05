@@ -200,7 +200,7 @@ Under `texture_data` will our list of item shortname definitions. An example def
 
 ```json
 "wiki:ectoplasm": {
-    "textures": "textures/items/ectoplasm"
+    "textures": "textures/wiki/items/ectoplasm"
 }
 ```
 
@@ -289,7 +289,7 @@ Your folder structure should look like this:
 {
     "texture_data": {
         "wiki:ectoplasm": {
-            "textures": "textures/items/wiki/ectoplasm"
+            "textures": "textures/wiki/items/ectoplasm"
         }
     }
 }
