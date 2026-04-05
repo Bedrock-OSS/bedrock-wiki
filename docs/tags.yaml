@@ -9,6 +9,10 @@ beta:
 deprecated:
     color: red
 
+concept:
+    color: blue
+    sidebar: true
+
 easy:
     color: blue
 

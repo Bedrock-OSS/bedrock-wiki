@@ -15,6 +15,8 @@ description: Learn how to dynamically execute commands at the location of any bl
 
 This technique allows you to execute commands at the location of any block variant without explicitly specifying each coordinate.
 
+**Credits:** *@oyakodon10*
+
 ![Demonstration GIF](demo_1.gif)
 
 :::warning
