@@ -46,6 +46,7 @@ export default defineWikiConfig({
       "/entities/vanilla-usage-spawn-rules",
       "/entities/vuc-full",
       "/entities/vusr-full",
+      "/text/fonts",
     ],
   },
 });
