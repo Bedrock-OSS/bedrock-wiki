@@ -54,7 +54,7 @@ import{_ as t,I as p,m as h,p as r,aa as i,E as n,M as e,N as l}from"./chunks/fr
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">            },</span></span>
 <span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">            &quot;render_controllers&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: [</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515;">&quot;controller.render.dummy&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">],</span></span>
 <span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">            &quot;textures&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: {</span></span>
-<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">                &quot;default&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515;">&quot;textures/entity/dummy&quot;</span></span>
+<span class="line"><span style="--shiki-dark:#9CDCFE;--shiki-light:#0451A5;">                &quot;default&quot;</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">: </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515;">&quot;textures/wiki/entity/dummy&quot;</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">            }</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">        }</span></span>
 <span class="line"><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000;">    }</span></span>
