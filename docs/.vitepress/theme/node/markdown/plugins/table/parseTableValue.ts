@@ -2,13 +2,13 @@ import MarkdownIt from "markdown-it";
 
 import { TableValue } from "../../../../types";
 
-export default function parseTableValue(value: unknown, md: MarkdownIt) {
+export default function parseTableValue(value: unknown, md: MarkdownIt, env: any) {
   if (typeof value === "boolean") {
     return value;
   }
 
   if (typeof value === "string") {
-    return md.renderInline(value);
+    return md.renderInline(value, env);
   }
 
   if (typeof value === "number") {
@@ -23,7 +23,7 @@ export default function parseTableValue(value: unknown, md: MarkdownIt) {
         throw new TypeError(`Table list items must be strings.`);
       }
 
-      list.push(md.renderInline(item));
+      list.push(md.renderInline(item, env));
     }
 
     return list;

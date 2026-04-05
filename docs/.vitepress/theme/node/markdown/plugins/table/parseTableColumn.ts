@@ -5,7 +5,7 @@ import { TableColumn } from "../../../../types";
 
 import parseTableValue from "./parseTableValue";
 
-export default function parseTableColumn(id: string, data: unknown, md: MarkdownIt) {
+export default function parseTableColumn(id: string, data: unknown, md: MarkdownIt, env: any) {
   const column: Partial<TableColumn> = {};
 
   if (!isObject(data)) {
@@ -19,11 +19,11 @@ export default function parseTableColumn(id: string, data: unknown, md: Markdown
     throw new TypeError(`The "name" field of column "${id}" must be a string.`);
   }
 
-  column.name = md.renderInline(data.name);
+  column.name = md.renderInline(data.name, env);
 
   // Default Value
   if ("default" in data) {
-    column.default = parseTableValue(data.default, md);
+    column.default = parseTableValue(data.default, md, env);
   }
 
   // Sortable

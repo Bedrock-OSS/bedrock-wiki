@@ -2,6 +2,8 @@ import { PluginSimple } from "markdown-it";
 import { readFileSync } from "fs";
 import { join } from "path";
 
+import assetPath from "../../../../shared/assetPath";
+
 import { parseTable } from "./parseTable";
 
 const publicDir = "docs/public";
@@ -20,18 +22,12 @@ export const dataDrivenTablePlugin: PluginSimple = (md) => {
 
       const props = match.groups!;
 
-      let path = "";
-
-      if (props.data[0] !== "/") {
-        path += "/assets/tables/" + env.relativePath.replace(/\.md$/, "/");
-      }
-
-      path += props.data;
+      const path = assetPath("tables", env.relativePath, props.data);
 
       const table = JSON.parse(readFileSync(join(publicDir, path), "utf-8"));
 
       env.frontmatter.__tables ??= {};
-      env.frontmatter.__tables[path] = parseTable(table, md);
+      env.frontmatter.__tables[path] = parseTable(table, md, env);
     }
   });
 };

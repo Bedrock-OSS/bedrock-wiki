@@ -6,7 +6,7 @@ import { Table } from "../../../../types";
 import parseTableColumn from "./parseTableColumn";
 import parseTableRow from "./parseTableRow";
 
-export function parseTable(data: unknown, md: MarkdownIt) {
+export function parseTable(data: unknown, md: MarkdownIt, env: any) {
   const table: Table = {
     columns: {},
     rows: [],
@@ -25,7 +25,7 @@ export function parseTable(data: unknown, md: MarkdownIt) {
     for (const columnId in data.columns) {
       const column = data.columns[columnId];
 
-      table.columns[columnId] = parseTableColumn(columnId, column, md);
+      table.columns[columnId] = parseTableColumn(columnId, column, md, env);
     }
   }
 
@@ -38,7 +38,7 @@ export function parseTable(data: unknown, md: MarkdownIt) {
     for (let index = 0; index < data.rows.length; index++) {
       const row = data.rows[index];
 
-      table.rows.push(parseTableRow(index, row, table.columns, md));
+      table.rows.push(parseTableRow(index, row, table.columns, md, env));
     }
   }
 

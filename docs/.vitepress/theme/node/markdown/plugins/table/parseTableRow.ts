@@ -9,7 +9,8 @@ export default function parseTableRow(
   index: number,
   data: unknown,
   columns: Table["columns"],
-  md: MarkdownIt
+  md: MarkdownIt,
+  env: any
 ) {
   const row: TableRow = {};
 
@@ -26,7 +27,7 @@ export default function parseTableRow(
       );
     }
 
-    const value = parseTableValue(data[columnId], md);
+    const value = parseTableValue(data[columnId], md, env);
 
     if (column.sortable && Array.isArray(value)) {
       throw new TypeError(
