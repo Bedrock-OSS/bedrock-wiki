@@ -1,6 +1,8 @@
 ---
 title: On Player Respawn
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline

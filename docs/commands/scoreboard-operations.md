@@ -1,6 +1,8 @@
 ---
 title: Scoreboard Operations
 category: General
+tags:
+    - easy
 mentions:
     - Sprunkles137
     - Lufurrius

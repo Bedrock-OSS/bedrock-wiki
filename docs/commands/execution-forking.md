@@ -59,6 +59,13 @@ In this example, the command will say `hi` **8 times** in a single tick:
 2.  **Second Fork:** Those 2 instances each target 2 more entities $\rightarrow$ **4 instances**.
 3.  **Third Fork:** Those 4 instances each target 2 more entities $\rightarrow$ **8 instances**.
 
+<br>
+<Card title="Execute Visualizer" link="https://komaramune.github.io/execute-visualizer/" image="/assets/images/icons/levers.png">
+
+For convenience, you can use this interactive web-tool developed by **@komaramune** to visualise MEF and command context trees.
+
+</Card>
+
 ### Common Use Cases
 
 * **Raycasting:** Forcing a "bullet" or "laser" to move forward multiple steps in one tick to prevent clipping through walls.

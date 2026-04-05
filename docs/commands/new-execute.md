@@ -285,4 +285,10 @@ Learn to dynamically compare and retrieve scores for multiple targets.
 Learn how to dynamically execute commands at the location of any block variant.
 
 </Card>
+
+<Card title="Execution Forking" link="/commands/execution-forking" image="/assets/images/icons/command_block.png">
+
+Learn how to utilize Multiplicative Execution Forking (MEF) to instance commands and increase execution frequency.
+
+</Card>
 </CardGrid>

@@ -2,6 +2,8 @@
 title: Damage
 description: /damage command explained.
 category: Commands
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - cda94581

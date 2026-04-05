@@ -1,6 +1,8 @@
 ---
 title: On Player Leave
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline

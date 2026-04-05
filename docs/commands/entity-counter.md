@@ -1,6 +1,8 @@
 ---
 title: Entity Counter
 category: Scoreboard Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline

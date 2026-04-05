@@ -1,6 +1,8 @@
 ---
 title: Rain Detection
 category: Detection Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -51,7 +53,7 @@ execute if score .Weather wiki:q.is_raining matches 1.. run title @a actionbar I
 ### Runs only once when the rain first starts
 execute if score .Weather wiki:q.is_raining matches 1 run say It has started raining.
 ### Runs every tick when it is not raining
-execute if score .Weather wiki:q.is_raining matches 0 run title @a actionbar It is not raining.
+execute if score .Weather wiki:q.is_raining matches 0 run title @a actionbar It's not raining.
 
 ## Update State
 ### Move from state 1 to state 2 to stop the "once" command from looping

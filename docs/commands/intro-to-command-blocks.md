@@ -1,6 +1,8 @@
 ---
 title: Intro to Command Blocks
 category: General
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline

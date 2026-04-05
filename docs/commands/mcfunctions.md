@@ -1,6 +1,8 @@
 ---
 title: Functions
 category: General
+tags:
+    - guide
 mentions:
     - BedrockCommands
     - cda94581
@@ -250,3 +252,71 @@ The list of errors will be generated every time you load a world or run `/reload
 ![contentLogToggles](/assets/images/commands/mcfunctions/content-log-toggles.png)
 
 ![contentLogHistory](/assets/images/commands/mcfunctions/content-log-history.png)
+
+## Professional Workspace Setup (Optional)
+
+Setting up a dedicated workspace is the final step in developing function packs or add-ons like a pro. While you can write functions in a basic text editor, the following tools will help you catch errors instantly, collaborate with others, and sync your changes directly into Minecraft.
+
+### 1. Visual Studio Code (VS Code)
+
+Think of **VS Code** as your command center. It is a powerful, free code editor that makes writing `.mcfunction` files much easier than using Notepad.
+
+- **Download:** Get it from the [Official VS Code Site](https://code.visualstudio.com/Download).
+- **The Essential Plugin:** Once installed, click the **Extensions** icon (the four squares) on the left sidebar and search for **MCBE Command Checker**.
+- **Why use it?**
+    - **Syntax Highlighting:** Commands change color based on their type, making them easier to read.
+    - **Auto-Complete:** As you type, the editor will suggest valid arguments, targets, and block names.
+    - **Error Detection:** It will highlight typos or invalid syntax with a red underline before you even open the game.
+
+Example screenshot:
+
+![Editing a .mcfunction file in VSCode](/public/assets/images/commands/mcfunctions/mcfunction-file-vscode.png)
+
+### 2. Version Control with GitHub
+
+**GitHub** is a cloud-based service that acts as a "save point" for your projects.
+
+- **Create an Account:** Sign up at [GitHub.com](https://github.com/).
+- **The Benefits:**
+    - **Cloud Backup:** You’ll never lose your work if your computer crashes.
+    - **Collaboration:** You can share a link to your code so others can review it or help you fix bugs without sending files back and forth.
+    - **History:** You can see exactly what changes you made today versus a week ago.
+    - **Releases:** Once your pack is ready for the public, you can create a "Release." This allows you to host specific versions (like v1.0 or v2.1) as downloadable `.mcpack` files, making it easy for players to find the most stable version of your work.
+
+### 3. GitHub Desktop
+
+While GitHub lives in the cloud, **GitHub Desktop** is the app on your computer that talks to it. It’s the easiest way for beginners to manage their files without learning complex "Git" commands.
+
+- **Download:** Get it at [desktop.github.com](https://desktop.github.com).
+- **The Workflow:** After you finish writing code in VS Code, you use GitHub Desktop to "Commit" (save) and "Push" (upload) your changes to the cloud.
+
+### 4. Linking Your Folders
+
+The biggest hurdle in Bedrock development is moving files from your "Work" folder to the Minecraft "Behavior Pack" folder. You can skip this manual step by creating a **Directory Junction** (a shortcut that acts like a real folder).
+
+By linking your `\GitHub\ProjectName` folder to Minecraft's `\development_behavior_packs\ProjectName` folder, any change you save in VS Code is **instantly updated** in your Minecraft files.
+
+**How to Link Folders (Windows):**
+
+1.  Locate your project in your GitHub folder.
+> Example:
+> ```
+> C:\Github\YOUR_PROJECT_NAME
+> ```
+2.  Locate your Minecraft development folder.
+> Example:
+> ```
+> C:\Users\YOUR_NAME\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\YOUR_PROJECT_NAME
+> ```
+3.  Open **Command Prompt** as Administrator.
+4.  Use the `mklink /J` command to link them.
+> Example:
+> ```
+> mklink /J "Path\To\Minecraft\Folder" "Path\To\GitHub\Folder"`
+> ```
+
+:::tip
+Once these folders are linked, you don’t need to restart Minecraft or even re-enter the world to test your work. Simply save your file in VS Code and run the `/reload` command in-game to apply your changes immediately. 
+
+**Bonus Tip:** Enable **Auto Save** in VS Code (**File > Auto Save**) to make this process even faster—just tab back into Minecraft and run `/reload`!
+:::

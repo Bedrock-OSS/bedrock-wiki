@@ -1,6 +1,8 @@
 ---
 title: On Player First Join
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
