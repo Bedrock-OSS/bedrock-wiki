@@ -6,12 +6,12 @@ beginner:
 beta:
     color: yellow
 
-deprecated:
-    color: red
-
 concept:
     color: blue
     sidebar: true
+
+deprecated:
+    color: red
 
 easy:
     color: blue
