@@ -117,12 +117,12 @@ To access the raw Markdown source of any page (which is easier to process), tran
 ### General
 
 - [Intro to Command Blocks](/commands/intro-to-command-blocks)
+- [Understanding Selectors](/commands/selectors)
 - [Functions](/commands/mcfunctions)
 - [Block States](/commands/block-states)
 - [Coordinate System](/commands/relative-coordinates)
 - [Giving NBT Items](/commands/giving-nbt-items)
 - [Scoreboard Operations](/commands/scoreboard-operations)
-- [Understanding Selectors](/commands/selectors)
 
 ### Commands
 
@@ -146,19 +146,27 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Scoreboard Timers](/commands/scoreboard-timers)
 - [Comparing And Retrieving Scores](/commands/comparing-scores)
 
+### Detection Systems
+
+- [Look Detection](/commands/detect-looking)
+- [Item Drop Detection](/commands/detect-item-drop)
+- [Movement Detections](/commands/detect-movements)
+- [Rain Detection](/commands/detect-rain)
+
 ### Techniques
 
 - [Execute Logic Gates](/commands/logic-gates)
 - [Execute at Block Variant](/commands/execute-at-block)
+- [Execution Forking](/commands/execution-forking)
+- [Binary in Commands](/commands/binary-logic)
 - [MBE - Max's Block Entity](/commands/block-entities)
 - [FMBE - A New Way to Create Display Entities](/commands/display-entities)
-- [Item Drop Detection](/commands/item-drop-detection)
-- [Look Detection](/commands/look-detection)
-- [Movement Detections](/commands/movement-detections)
+- [Dynamic Displays](/commands/dynamic-displays)
 - [Orbital Camera](/commands/orbital-camera)
 
 ### Useful Creations
 
+- [Sphere Command](/commands/sphere-command)
 - [Compass Display](/commands/compass-display)
 - [Custom Crafting](/commands/custom-crafting)
 - [Multiplayer Position Rearrangement](/commands/rearrange-positions)
