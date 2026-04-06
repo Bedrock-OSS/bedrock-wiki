@@ -51,7 +51,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ## Testing for Tags
 
-### From Block Descriptors
+### Block Descriptor
 
 -   `q.all_tags(...tags)`{lang=molang}
     -   Returns whether the block has all of the listed tags.
@@ -66,7 +66,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 }
 ```
 
-### From Entities
+### Entity Molang
 
 -   `q.block_has_all_tags(x, y, z, ...tags)`{lang=molang}
     -   Returns whether the block at the specified coordinates has all of the listed tags.

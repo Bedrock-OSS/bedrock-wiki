@@ -2,9 +2,9 @@
 title: Item Tags
 description: Item tags are used when checking for multiple types of item and can enable vanilla functionality.
 category: General
+nav_order: 3
 related:
     - /items/vanilla-item-tags
-nav_order: 3
 license: true
 mentions:
     - Xterionix
@@ -37,7 +37,20 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ## Testing for Tags
 
-### From Entities
+### Entity Filter
+
+<CodeHeader>Entity Filter</CodeHeader>
+
+```json
+{
+    "test": "has_equipment_tag",
+    "domain": "hand",
+    "operator": "==",
+    "value": "wiki:example_tag"
+}
+```
+
+### Entity Molang
 
 -   `q.equipped_item_all_tags(slot, ...tags)`{lang=molang}
     -   Returns whether the item at the specified location has all of the listed tags.
@@ -54,7 +67,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 }
 ```
 
-### From Item Descriptors
+### Item Descriptor
 
 -   `q.all_tags(...tags)`{lang=molang}
     -   Returns whether the item has all of the listed tags.
@@ -69,7 +82,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 }
 ```
 
-### From Recipes
+### Recipe Ingredient
 
 <CodeHeader>minecraft:recipe_shapeless</CodeHeader>
 
