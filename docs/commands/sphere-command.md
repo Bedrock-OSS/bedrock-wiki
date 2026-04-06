@@ -35,11 +35,11 @@ Run the following commands in chat:
 
 ```yaml
 # Summon helper boats with specific vertical rotations
-/summon boat ~~1~ 0 -90 none "wiki:sphere_gen"
-/summon boat ~~1~ 180 90 none "wiki:sphere_gen"
+/summon boat ~~1~ 0 -90
+/summon boat ~~1~ 180 90 none
 
 # Apply a tag for targeting
-/tag @e[name="wiki:sphere_gen"] add wiki:r
+/tag @e[type=boat,c=2] add wiki:r
 ```
 
 ### Best Practices
