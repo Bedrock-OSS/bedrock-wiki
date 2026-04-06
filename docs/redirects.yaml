@@ -8,6 +8,9 @@
 /blocks/precise-rotation: /blocks/intercardinal-orientation
 /blocks/rotatable-blocks: /blocks/block-orientation
 
+/commands/item-drop-detection: /commands/detect-item-drop
+/commands/look-detection: /commands/detect-looking
+/commands/movement-detections: /commands/detect-movements
 /commands/nbt-commands: /commands/giving-nbt-items
 /commands/tellraw: /text/rawtext
 
