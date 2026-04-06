@@ -18,12 +18,12 @@ description: This technique allows you to create a sphere in one command, with t
 Creating a sphere traditionally requires multiple command blocks or complex functions. This method uses a single `execute` chain that forks the execution context based on the rotations of two helper entities (Boats).
 
 :::info NOTE:
-This guide requires a baseline understanding of **[Execution Forking](https://www.google.com/search?q=/commands/execution-forking)**.
+This guide requires a baseline understanding of **[Execution Forking](/commands/execution-forking)**.
 :::
 
 **Credits:** *@1309boy*
 
-![Sphere Command Demo](/public/assets/images/commands/sphere-command/sphere-command-demo.png)
+![Sphere Command Demo](sphere-command-demo.png)
 
 ## Setup
 
@@ -72,7 +72,7 @@ This first segment of the command focuses on horizontal distribution.
 - **Boats vs. Armor Stands:** Boats are used here because their vertical rotation (`rx`) allows vertical vector copying compared to armor stands.
 
 <WikiImage
-    src="/public/assets/images/commands/sphere-command/segment-1.png"
+    src="segment-1.png"
     alt="Segment 1 Visualization"
     width="500"
     pixelated
@@ -87,7 +87,7 @@ To turn a circle into a sphere, the command forks the vertical vectors.
 > `rotated as @e[tag=wiki:r] positioned ^^^1`
 
 <WikiImage
-    src="/public/assets/images/commands/sphere-command/segment-2.png"
+    src="segment-2.png"
     alt="Segment 2 Visualization"
     width="500"
     pixelated
@@ -95,7 +95,7 @@ To turn a circle into a sphere, the command forks the vertical vectors.
 
 > `rotated as @e[tag=wiki:r] positioned ^^^1.414`
 <WikiImage
-    src="/public/assets/images/commands/sphere-command/segment-3.png"
+    src="segment-3.png"
     alt="Segment 3 Visualization"
     width="500"
     pixelated
@@ -104,7 +104,7 @@ To turn a circle into a sphere, the command forks the vertical vectors.
 This creates 8 vertical vectors with equal central angles, which form the "ribs" or rings of the sphere.
 
 <WikiImage
-    src="/public/assets/images/commands/sphere-command/segment-3.1.png"
+    src="segment-3.1.png"
     alt="Segment 3.1 Visualization"
     width="500"
     pixelated
@@ -115,7 +115,7 @@ This creates 8 vertical vectors with equal central angles, which form the "ribs"
 The `facing 0 0 0` and `positioned 0 0 0` segments reset the orientation toward the center of the sphere. This ensures that the final `run` command is always relative to the intended radius ($R$).
 
 <WikiImage
-    src="/public/assets/images/commands/sphere-command/segment-4.png"
+    src="segment-4.png"
     alt="Segment 4 Visualization"
     width="500"
     pixelated
