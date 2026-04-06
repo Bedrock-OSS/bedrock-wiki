@@ -11,6 +11,7 @@ mentions:
     - SpacebarNinja
     - jeanmajid
     - keyyard
+nav_order: 2
 description: Understanding target selectors in commands.
 ---
 
@@ -18,12 +19,13 @@ Target selectors are used in commands to target who you want to execute a comman
 
 ## Selector Variables
 
-The selector variable defines the broad list of entities to select. There are six selector variables to choose from:
+The selector variable defines the broad list of entities to select. There are seven selector variables to choose from:
 
 -   `@a` - Target all players
 -   `@p` - Target the nearest player
 -   `@r` - Target a random player
 -   `@e` - Target all entities
+-   `@n` - Target the nearest entity
 -   `@s` - Target the executor
 -   `@initiator` - Target the player interacting with an NPC
 
@@ -255,7 +257,7 @@ Damage all players facing generally south:
 **Useful Articles Related to the Rotation Arguments:**
 
 1. **[Compass Display](/commands/compass-display.md)**
-2. **[Item Drop Detection](/commands/item-drop-detection.md)**
+2. **[Item Drop Detection](/commands/detect-item-drop.md)**
 
 ### Level
 

@@ -6,6 +6,8 @@ mentions:
     - zheaEvyline
     - hatfluppyclouds
 nav_order: 1
+tags:
+    - concept
 description: Logic gates are devices that take one or more binary inputs and, as the name suggests, performs logical boolean operations to give a single binary output (either 'true' or 'false').
 ---
 

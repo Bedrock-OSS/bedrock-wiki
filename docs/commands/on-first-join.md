@@ -1,6 +1,8 @@
 ---
 title: On Player First Join
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -44,18 +46,7 @@ Once we run our desired commands for players without the tag, they will be given
 
 <br>`/tag <player> remove wiki:joined`
 
-## Tick JSON
-
-If you are using functions instead of command blocks, the `on_first_join` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
-
-<CodeHeader>BP/functions/tick.json</CodeHeader>
-```json
-{
-  "values": [
-    "wiki/event/players/on_first_join"
-  ]
-}
-```
+## Folder Structure
 
 If using functions, your pack folder structure will be as follows:
 
@@ -64,6 +55,7 @@ If using functions, your pack folder structure will be as follows:
     'BP',
     'BP/functions',
     'BP/functions/wiki',
+    'BP/functions/wiki/main.mcfunction',
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/wiki/event',
@@ -72,3 +64,5 @@ If using functions, your pack folder structure will be as follows:
     'BP/functions/tick.json'
 ]"
 ></FolderView>
+
+In this setup, the `on_first_join` function is called by `main.mcfunction`, which is executed every tick via `tick.json`.

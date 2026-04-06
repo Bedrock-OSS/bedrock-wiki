@@ -7,16 +7,18 @@ mentions:
     - SmokeyStack
     - cda94581
 nav_order: 0
-description: This system will run your desired commands on the event that the world is loaded for the first time after applying your pack.
+tags:
+    - function
+description: This system executes specific commands when a world is loaded for the first time after applying your pack.
 ---
 
 ## Introduction
 
 [Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
-This system will run your desired commands on the event that the world is loaded for the first time after applying your pack.
+This system allows you to run specific commands the very first time a world is loaded after your pack has been applied.
 
-> Note: A [Function](/commands/mcfunctions) Pack is required to achieve this system, since it is the `tick.json` file which allows us to run commands as soon as the world is initialized.
+> **Note:** A [Function](/commands/mcfunctions) Pack is required for this system. The `tick.json` file is necessary to trigger the logic as soon as the world initializes.
 
 ## Tick JSON
 
@@ -24,41 +26,37 @@ This system will run your desired commands on the event that the world is loaded
 ```json
 {
   "values": [
-    "wiki/event/worlds/on_initialize"
+    "wiki/main"
   ]
 }
+````
+
+## Main MCFUNCTION
+
+<CodeHeader>BP/functions/wiki/main.mcfunction</CodeHeader>
+
+```yaml
+# ON FIRST WORLD LOAD
+## Execute Function if World Not Initialized
+execute unless score .World wiki:q.is_initialised matches 1 run function wiki/event/worlds/on_initialise
 ```
 
 ## System
 
-<CodeHeader>BP/functions/wiki/event/worlds/on_initialize.mcfunction</CodeHeader>
-```yaml ## Initialization ### Add objective scoreboard objectives add wiki:world dummy ### Register
-to objective scoreboard players add .Initialized wiki:world 0
+<CodeHeader>BP/functions/wiki/event/worlds/on_initialise.mcfunction</CodeHeader>
 
+```yaml
 ## Your Commands Here (Example)
+say World initialized! Pack loaded for the first time.
 
-execute if score .Initialized wiki:world matches 0 run say World initialized! Pack loaded for the first time.
-
-## Mark as Initialized
-
-scoreboard players set .Initialized wiki:world 1
-
+## Initialization
+### Add objective
+scoreboard objectives add wiki:q.is_initialised dummy
+### Mark as Initialized
+scoreboard players set .World wiki:q.is_initialised 1
 ```
 
-Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
-
-Just make sure to follow the given order and properly apply the `/execute if score` condition as shown for your desired commands.
-
-## Explanation
-
-- **` .Initialized=0 `** world has just initialized and we are yet to run the initialization commands we need.
-- **` .Initialized=1 `** world has been initialized and we have executed the initialization commands.
-
-An objective of the name `wiki:world` is added for us to save scores to it so that we can track whether the world has been initialized or not. This also allows us to structure our commands to only execute at world initialization.
-
-Following the creation of the objective, a score of `0` is added to the score holder '.Initialized'. This will register it to the objective and enable us to use the `/execute if score` condition to run our desired commands.
-
-Finally, the score for the score holder '.Initialized' is set to `1` after all the commands are executed. This prevents it from executing more than once.
+Once your desired commands have been executed, the system creates a scoreboard objective titled `wiki:q.is_initialised`. This objective tracks the world's initialization state via a specific score holder named `.World`. By immediately setting the score for `.World` to `1`, the system ensures the initialization logic is "locked," preventing it from re-running during subsequent ticks or world reloads.
 
 ## Folder Structure
 
@@ -67,12 +65,14 @@ Finally, the score for the score holder '.Initialized' is set to `1` after all t
     'BP',
     'BP/functions',
     'BP/functions/wiki',
+    'BP/functions/wiki/main.mcfunction',
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/wiki/event',
     'BP/functions/wiki/event/worlds',
-    'BP/functions/wiki/event/worlds/on_initialize.mcfunction',
+    'BP/functions/wiki/event/worlds/on_initialise.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
-```
+
+In this setup, the `on_initialise` function is called by `main.mcfunction`, which is executed every tick via `tick.json`.
