@@ -69,7 +69,7 @@ Once your desired commands have been executed, the system creates a scoreboard o
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/wiki/event',
-    'BP/functions/wiki/event/wolrds',
+    'BP/functions/wiki/event/worlds',
     'BP/functions/wiki/event/worlds/on_initialise.mcfunction',
     'BP/functions/tick.json'
 ]"
