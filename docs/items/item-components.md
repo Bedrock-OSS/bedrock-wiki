@@ -377,6 +377,15 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 -   `value` — Integer (`0-255`{lang=js}) ([MCPE-180331](https://bugs.mojang.com/browse/MCPE-180331))
     -   Determines the quality and quantity of enchantments available when enchanting the item using an Enchanting Table.
 
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:enchantable": {
+    "slot": "sword",
+    "value": 10
+}
+```
+
 #### Enchantable Slots
 
 | Slot Value                     |
@@ -428,15 +437,6 @@ The table below details enchantability scores across different materials, showca
 | Other     | 1                    | 1                          |
 
 For an in-depth exploration of enchantability and its impact on the game, refer to the [Minecraft Wiki](https://minecraft.wiki/w/Enchanting_table_mechanics#Enchantability).
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:enchantable": {
-    "slot": "sword",
-    "value": 10
-}
-```
 
 ### Entity Placer
 
