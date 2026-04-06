@@ -93,4 +93,4 @@ By checking if a player is within a volume of 32,768 blocks, then 16,384, and so
 
 ### Implementation With MEF
 
-You can also incorporate a binary tree into **[Multiplicative Execution Forking (MEF)](https://www.google.com/search?q=/commands/execution-forking)** to create complex geometries, terrain, or custom generations, such as a village or backrooms, **with a single command!**
+You can also incorporate a binary tree into **[Multiplicative Execution Forking (MEF)](/commands/execution-forking)** to create complex geometries, terrain, or custom generations, such as a village or backrooms, **with a single command!**
