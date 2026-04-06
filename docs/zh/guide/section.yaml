@@ -1,0 +1,7 @@
+title: 入门指南
+nav_order: 1
+categories:
+    - title: 指南
+      color: green
+    - title: 额外
+      color: blue

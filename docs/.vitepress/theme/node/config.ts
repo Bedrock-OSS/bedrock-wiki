@@ -9,7 +9,7 @@ import { copyExampleArchives } from "./examples";
 const isFastBuild = process.env.FAST_BUILD === "true";
 
 export function defineWikiConfig(config: WikiConfig) {
-  const { title, description, fastBuild, ...themeConfig } = config;
+  const { title, description, fastBuild, locales, ...themeConfig } = config;
 
   const srcExclude = ["public/*"];
 
@@ -29,6 +29,7 @@ export function defineWikiConfig(config: WikiConfig) {
     title,
     description,
     themeConfig,
+    locales,
     markdown,
 
     head,

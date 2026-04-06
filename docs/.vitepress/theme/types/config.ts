@@ -1,9 +1,10 @@
-import { DefaultTheme } from "vitepress";
+import { DefaultTheme, LocaleConfig } from "vitepress";
 
 export interface WikiConfig extends ThemeConfig {
   title: string;
   description: string;
   fastBuild: FastBuildOptions;
+  locales?: LocaleConfig;
 }
 
 export interface ThemeConfig {

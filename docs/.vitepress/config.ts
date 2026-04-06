@@ -7,6 +7,8 @@ export default defineWikiConfig({
 
   url: "https://wiki.bedrock.dev",
 
+  ignoreDeadLinks: true,
+
   repository: "https://github.com/Bedrock-OSS/bedrock-wiki",
   branch: "wiki",
 
@@ -19,6 +21,19 @@ export default defineWikiConfig({
     appId: "N9ZHAYJQII",
     apiKey: "a664f5a5da631810a08e1a48554fe523",
     indexName: "wiki-bedrock",
+  },
+
+  locales: {
+    root: {
+      label: "English",
+      lang: "en",
+      link: "/",
+    },
+    zh: {
+      label: "中文",
+      lang: "zh-CN",
+      link: "/zh/",
+    },
   },
 
   navigation: [

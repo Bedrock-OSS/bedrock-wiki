@@ -10,6 +10,7 @@ import MenuOpenIcon from "../icons/MenuOpenIcon.vue";
 import NavLink from "./NavLink.vue";
 import AppearanceDropdown from "./AppearanceDropdown.vue";
 import AlgoliaSearch from "./AlgoliaSearch.vue";
+import LanguageSwitcher from "./LanguageSwitcher.vue";
 
 const { site, theme } = useData();
 
@@ -44,6 +45,7 @@ function toggleSidebarVisibility() {
         </li>
       </ul>
       <ClientOnly>
+        <LanguageSwitcher />
         <AppearanceDropdown v-if="isAppearanceDropdownVisible" />
         <AlgoliaSearch />
       </ClientOnly>

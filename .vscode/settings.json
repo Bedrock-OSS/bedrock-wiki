@@ -17,5 +17,8 @@
     "./schemas/redirects.json": ["docs/redirects.yaml"],
     "./schemas/section.json": ["docs/*/section.yaml"],
     "./schemas/tags.json": ["docs/tags.yaml"]
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
   }
 }

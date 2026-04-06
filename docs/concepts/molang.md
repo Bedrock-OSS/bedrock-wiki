@@ -38,15 +38,15 @@ Queries can either return a value directly, or accept arguments to return contex
 
 Examples without arguments:
 
--   `query.is_sneaking`{lang=molang}
--   `query.time_of_day`{lang=molang}
--   `query.health`{lang=molang}
+- `query.is_sneaking`{lang=molang}
+- `query.time_of_day`{lang=molang}
+- `query.health`{lang=molang}
 
 Examples with arguments:
 
--   `query.position(0)`{lang=molang}
--   `query.is_item_name_any('slot.weapon.offhand', 'minecraft:dirt')`{lang=molang}
--   `query.in_range(5, 0, 10)`{lang=molang}
+- `query.position(0)`{lang=molang}
+- `query.is_item_name_any('slot.weapon.offhand', 'minecraft:dirt')`{lang=molang}
+- `query.in_range(5, 0, 10)`{lang=molang}
 
 ### 2. Variables (`variable.`{lang=molang} or `v.`{lang=molang})
 
@@ -54,8 +54,8 @@ Examples with arguments:
 
 Examples:
 
--   `variable.buff_timer`{lang=molang}
--   `variable.has_effect`{lang=molang}
+- `variable.buff_timer`{lang=molang}
+- `variable.has_effect`{lang=molang}
 
 ```molang
 v.buff_timer = (v.buff_timer ?? 0) + q.delta_time;
@@ -164,8 +164,8 @@ q.is_sneaking && q.is_using_item
 
 Use `?`{lang=molang} and `:`{lang=molang} like if-else:
 
--   Binary: `condition ? result`{lang=molang}
--   Ternary: `condition ? true : false`{lang=molang}
+- Binary: `condition ? result`{lang=molang}
+- Ternary: `condition ? true : false`{lang=molang}
 
 ```molang
 q.is_jumping ? 3 : 0
@@ -173,7 +173,7 @@ q.is_jumping ? 3 : 0
 
 You can also use the **null coalescing operator** (`??`{lang=molang}) to provide a fallback when a variable might not be initialized:
 
--   `fallback = value ?? default`{lang=molang}
+- `fallback = value ?? default`{lang=molang}
 
 ```molang
 v.timer = (v.timer ?? 0) + q.delta_time
@@ -255,8 +255,8 @@ loop(10, {
 
 ### `break`{lang=molang} and `continue`{lang=molang}
 
--   `break;`{lang=molang} exits the current loop early
--   `continue;`{lang=molang} skips to the next iteration
+- `break;`{lang=molang} exits the current loop early
+- `continue;`{lang=molang} skips to the next iteration
 
 ```molang
 loop(10, {
@@ -267,13 +267,13 @@ loop(10, {
 
 ## Simple vs Complex Expressions
 
--   **Simple**: a single expression that returns a value
+- **Simple**: a single expression that returns a value
 
 ```molang
 math.sin(q.anim_time * 10)
 ```
 
--   **Complex**: multiple statements with `;` and an explicit `return`{lang=molang}
+- **Complex**: multiple statements with `;` and an explicit `return`{lang=molang}
 
 ```molang
 t.a = math.sin(q.anim_time * 10);

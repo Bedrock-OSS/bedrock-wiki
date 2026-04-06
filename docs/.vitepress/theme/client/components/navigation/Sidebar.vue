@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 
-import { data as sidebar } from "../../../node/data/sidebar/sidebar.data";
+import { data as sidebarEn } from "../../../node/data/sidebar/sidebar.data";
+import { data as sidebarZh } from "../../../node/data/sidebar/sidebar-zh.data";
 
 import useData from "../../composables/data";
 import useIsMobile from "../../composables/isMobile";
@@ -10,10 +11,17 @@ import NavLink from "./NavLink.vue";
 import SidebarSection from "./SidebarSection.vue";
 import SidebarLink from "./SidebarLink.vue";
 
-const { page, theme } = useData();
-const { links, sections } = sidebar;
+const { page, theme, localeIndex } = useData();
 
 const isMobile = useIsMobile();
+
+// Select sidebar based on current locale
+const sidebar = computed(() => {
+  return localeIndex.value === "zh" ? sidebarZh : sidebarEn;
+});
+
+const links = computed(() => sidebar.value.links);
+const sections = computed(() => sidebar.value.sections);
 
 const activeSection = computed(() => page.value.relativePath.match(/^[^/]+/)?.[0]);
 const openSection = ref<string>();

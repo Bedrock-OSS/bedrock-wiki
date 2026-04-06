@@ -1,0 +1,16 @@
+title: 命令
+categories:
+    - title: 通用
+      color: green
+    - title: 命令
+      color: green
+    - title: 事件系统
+      color: blue
+    - title: 记分板系统
+      color: blue
+    - title: 检测系统
+      color: blue
+    - title: 技术
+      color: orange
+    - title: 实用创作
+      color: yellow

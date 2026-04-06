@@ -1,0 +1,54 @@
+# Alphabetical order please :)
+
+beginner:
+    color: blue
+
+beta:
+    color: yellow
+
+deprecated:
+    color: red
+
+concept:
+    color: blue
+    sidebar: true
+
+easy:
+    color: blue
+
+experimental:
+    color: orange
+
+expert:
+    color: red
+
+function:
+    color: blue
+    sidebar: true
+
+guide:
+    color: green
+    sidebar: true
+
+help:
+    color: blue
+    sidebar: true
+
+info:
+    color: blue
+    sidebar: true
+
+intermediate:
+    color: orange
+
+method:
+    color: orange
+
+outdated:
+    color: red
+    sidebar: true
+
+scripting:
+    color: yellow
+    sidebar:
+        text: 脚本
