@@ -68,6 +68,70 @@
       "notes": "A single 16×15×16 pixel box, taking up space from the bottom of the block unit."
     },
     {
+      "shape": "![](cake_bites_0.png)",
+      "identifier": "`minecraft:cake_bites_0`"
+    },
+    {
+      "shape": "![](cake_bites_1.png)",
+      "identifier": "`minecraft:cake_bites_1`"
+    },
+    {
+      "shape": "![](cake_bites_2.png)",
+      "identifier": "`minecraft:cake_bites_2`"
+    },
+    {
+      "shape": "![](cake_bites_3.png)",
+      "identifier": "`minecraft:cake_bites_3`"
+    },
+    {
+      "shape": "![](cake_bites_4.png)",
+      "identifier": "`minecraft:cake_bites_4`"
+    },
+    {
+      "shape": "![](cake_bites_5.png)",
+      "identifier": "`minecraft:cake_bites_5`"
+    },
+    {
+      "shape": "![](cake_bites_6.png)",
+      "identifier": "`minecraft:cake_bites_6`"
+    },
+    {
+      "shape": "![](candle_cake.png)",
+      "identifier": "`minecraft:candle_cake`"
+    },
+    {
+      "shape": "![](composter.png)",
+      "identifier": "`minecraft:composter`"
+    },
+    {
+      "shape": "![](composter_level_1.png)",
+      "identifier": "`minecraft:composter_level_1`"
+    },
+    {
+      "shape": "![](composter_level_2.png)",
+      "identifier": "`minecraft:composter_level_2`"
+    },
+    {
+      "shape": "![](composter_level_3.png)",
+      "identifier": "`minecraft:composter_level_3`"
+    },
+    {
+      "shape": "![](composter_level_4.png)",
+      "identifier": "`minecraft:composter_level_4`"
+    },
+    {
+      "shape": "![](composter_level_5.png)",
+      "identifier": "`minecraft:composter_level_5`"
+    },
+    {
+      "shape": "![](composter_level_6.png)",
+      "identifier": "`minecraft:composter_level_6`"
+    },
+    {
+      "shape": "![](composter_level_7.png)",
+      "identifier": "`minecraft:composter_level_7`"
+    },
+    {
       "shape": "![](empty.png)",
       "identifier": "`minecraft:empty`",
       "notes": [
