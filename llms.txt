@@ -109,6 +109,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Block Sounds](/blocks/block-sounds)
 - [Redstone Components](/blocks/redstone-components)
 - [Vanilla Block Models](/blocks/vanilla-block-models)
+- [Vanilla Block Sounds](/blocks/vanilla-block-sounds)
 - [Vanilla Block Tags](/blocks/vanilla-block-tags)
 - [Vanilla Voxel Shapes](/blocks/vanilla-voxel-shapes)
 
