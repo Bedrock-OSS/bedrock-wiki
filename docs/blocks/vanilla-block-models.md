@@ -36,4 +36,6 @@ Vanilla block models are applied in the same way as [custom block models](/block
 
 ## List of Vanilla Models
 
+_This documentation is up to date as of release 1.26.10._
+
 <Table data="models.json" />

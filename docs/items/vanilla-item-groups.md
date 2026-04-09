@@ -12,6 +12,8 @@ mentions:
 Under each heading on this page, you will find a list of the expandable item groups included in that category of the vanilla creative menu.
 By default, the groups are sorted in the order that they appear in-game.
 
+_This documentation is up to date as of Preview 1.26.20.26._
+
 ## Construction
 
 <Table data="construction_groups.json" />
