@@ -296,6 +296,8 @@ Allows the item to take damage and determines how much damage the item can take 
 -   When the item is [wearable](#wearable), hitting an entity will not damage the item.
     Instead, it implicitly increments the damage when worn and the entity is hurt.
 
+_Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
+
 #### Object Format {#durability-object}
 
 -   `damage_chance` — Integer [Range](/documentation/shared-constructs#range-objects) (optional)
@@ -307,6 +309,18 @@ Allows the item to take damage and determines how much damage the item can take 
         -   Unbreaking III — 25% of the range.
 -   `max_durability` — Integer (`0-32767`{lang=js}) ([MCPE-180112](https://bugs.mojang.com/browse/MCPE-180112))
     -   The amount of damage that the item can take before breaking.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:durability": {
+    "damage_chance": {
+        "min": 0,
+        "max": 100
+    },
+    "max_durability": 238
+}
+```
 
 ### Durability Sensor
 
