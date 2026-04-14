@@ -190,7 +190,7 @@ Most vanilla multi-blocks are popped off as items when a piston attempts to push
 ### Snowlogging
 
 For technical reasons, multi-blocks do not support snowlogging.
-Therefore, the [`minecraft:precipitation_interations`](/blocks/block-components#precipitation-interactions) component cannot be defined with a `precipitation_behavior` of `"snowlogging"`{lang=json}.
+Therefore, the [`minecraft:precipitation_interations`](/blocks/block-components#precipitation-interactions) component cannot be defined with a `precipitation_behavior` of `"snow_log_no_collision"`{lang=json}.
 
 ### State Equality
 
