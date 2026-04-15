@@ -638,7 +638,8 @@ An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} colo
 
 #### Object Format {#map-color-object}
 
--   `color` — String
+-   `color` — Array / String
+    -   An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} color of the block on a map.
     -   A hex string (starting with a `#`) defining the `#RRGGBB` color of the block on a map.
 -   `tint_method` — String (optional)
     -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `color` based on the biome the block is placed in.
