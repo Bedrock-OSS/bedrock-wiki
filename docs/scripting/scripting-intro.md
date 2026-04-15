@@ -77,7 +77,7 @@ Additionally, dependencies will need to be set based on modules used. To import 
         {
             // Enables the use of @minecraft/server module, with a version of 2.2.0 (the latest stable version available).
             "module_name": "@minecraft/server",
-            "version": "2.3.0"
+            "version": "2.6.0"
         }
     ]
 }
@@ -88,8 +88,11 @@ If your project needs other module to run your code, add the other dependencies 
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. Most features are included in stable APIs, and will not break or be changed when Minecraft is updated.
 
 -   `@minecraft/server`:
-
-    -   [`2.3.0`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0) (Latest version)
+ 
+    -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0) (Latest version)
+    -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0) 
+    -   [`2.4.0`](https://www.npmjs.com/package/@minecraft/server/v/2.4.0) 
+    -   [`2.3.0`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0) 
     -   [`2.2.0`](https://www.npmjs.com/package/@minecraft/server/v/2.2.0)
     -   [`2.1.0`](https://www.npmjs.com/package/@minecraft/server/v/2.1.0)
     -   [`2.0.0`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0)
@@ -130,6 +133,10 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
 
 -   `@minecraft/server`:
 
+    -   [`2.7.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0-beta.1.26.14-stable) (1.26.14)
+    -   [`2.6.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0-beta.1.26.0-stable) (1.26.0)
+    -   [`2.5.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0-beta.1.21.130-stable) (1.21.130)
+    -   [`2.4.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.4.0-beta.1.21.120-stable) (1.21.120)
     -   [`2.3.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0-beta.1.21.114-stable) (1.21.114)
     -   [`2.2.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.2.0-beta.1.21.102-stable) (1.21.102)
     -   [`2.1.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.1.0-beta.1.21.95-stable) (1.21.95)
