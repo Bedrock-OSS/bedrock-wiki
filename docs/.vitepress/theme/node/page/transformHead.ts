@@ -4,7 +4,7 @@ export function transformHead({ pageData, siteConfig }: TransformContext) {
   const config = siteConfig.site;
   const site = config.title;
 
-  const { frontmatter, relativePath } = pageData;
+  const { frontmatter, params, relativePath } = pageData;
 
   const title = frontmatter.title ?? config.themeConfig.longTitle ?? config.title;
   const description = frontmatter.description ?? config.description;
@@ -31,6 +31,8 @@ export function transformHead({ pageData, siteConfig }: TransformContext) {
     "twitter:image": image,
     "twitter:site": site,
   };
+
+  if (params?.file) data.robots = "noindex";
 
   const out: HeadConfig[] = [];
 
