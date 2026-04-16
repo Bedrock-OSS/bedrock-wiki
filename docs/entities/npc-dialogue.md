@@ -59,7 +59,7 @@ The text to display in the speech bubble. Optional.
 Array of command strings to be run when the dialogue is opened. Optional.
 
 :::tip
-In the in-game NPC visual editor, this corresponds to the **"on enter"** button mode.
+In the NPC's in-game Advanced Settings, this corresponds to the **"on enter"** button mode.
 :::
 
 <CodeHeader></CodeHeader>
@@ -75,7 +75,7 @@ In the in-game NPC visual editor, this corresponds to the **"on enter"** button 
 Array of command strings to be run when the dialogue is closed. Optional.
 
 :::tip
-In the in-game NPC visual editor, this corresponds to the **"on exit"** button mode.
+In the NPC's in-game Advanced Settings, this corresponds to the **"on exit"** button mode.
 :::
 
 <CodeHeader></CodeHeader>
