@@ -1,4 +1,5 @@
 .home {
+  margin-top: 2.5em;
   margin-inline: auto;
   max-width: 1100px;
 
@@ -8,7 +9,7 @@
     grid-template-rows: auto auto;
     align-items: center;
     gap: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
 
     grid-template-areas:
       "icon title"

@@ -31,11 +31,9 @@ Minecraft uses Version 4: Variant 1, which is completely random. This is what cr
 
 You can use online sites such as [UUID Generator](https://www.uuidgenerator.net/version4/) and [UUID Tools](https://www.uuidtools.com/generate/v4) to generate the correct version required for Minecraft.
 
-##
-
 ### UUID FAQ
 
--   **Are UUIDs Case-sensitive?**
+-   **Are UUIDs case-sensitive?**
 
     -   _No, UUIDs are written in base 16 which uses numbers 0-9 and characters a-f. There is no distinction between upper and lowercase letters._
 

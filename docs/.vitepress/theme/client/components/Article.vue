@@ -20,11 +20,13 @@ const isMobileOutline = useMediaQuery("(max-width: 1300px)");
 
 const isLicensePage = computed(() => page.value.relativePath.startsWith("licenses/"));
 const filePage = useFilePage();
+
+const title = computed(() => filePage.value?.root.title ?? frontmatter.value.title);
 </script>
 
 <template>
   <article>
-    <h1>{{ filePage ? filePage.root.title : frontmatter.title }}</h1>
+    <h1 v-if="title !== undefined">{{ title }}</h1>
 
     <div v-if="frontmatter.tags !== undefined" style="margin-block: 1em">
       <Tag v-for="name in frontmatter.tags" :key="name" :name />
