@@ -1,7 +1,7 @@
 ---
 title: Custom Pottery Sherds
 description: Learn how to make custom pottery sherds.
-category: Tutorials
+category: Vanilla Re-Creations
 tags:
     - easy
 license: true

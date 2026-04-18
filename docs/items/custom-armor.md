@@ -2,7 +2,7 @@
 title: Custom Armor
 example: custom_armor
 description: Learn how to make a custom armor set.
-category: Tutorials
+category: Vanilla Re-Creations
 license: true
 mentions:
     - SirLich

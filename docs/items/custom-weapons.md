@@ -1,7 +1,7 @@
 ---
 title: Custom Weapons
 description: Learn how to make custom weapons.
-category: Tutorials
+category: Vanilla Re-Creations
 tags:
     - easy
 mentions:
