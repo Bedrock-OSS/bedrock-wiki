@@ -76,10 +76,11 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Blocks as Items](/blocks/blocks-as-items)
 - [Troubleshooting Blocks](/blocks/troubleshooting-blocks)
 
-### Visuals
+### Sound & Visuals
 
 - [Block Culling](/blocks/block-culling)
 - [Block Models](/blocks/block-models)
+- [Block Sounds](/blocks/block-sounds)
 - [Block Texture Animation](/blocks/flipbook-textures)
 - [Block Texture Variation](/blocks/block-texture-variation)
 - [Block Tinting](/blocks/block-tinting)
@@ -106,7 +107,6 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 - [Block Format History](/blocks/block-format-history)
 - [Block Shapes](/blocks/block-shapes)
-- [Block Sounds](/blocks/block-sounds)
 - [Redstone Components](/blocks/redstone-components)
 - [Vanilla Block Models](/blocks/vanilla-block-models)
 - [Vanilla Block Sounds](/blocks/vanilla-block-sounds)
@@ -252,13 +252,16 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 ### Tutorials
 
+- [Equipment-Based Commands](/items/equipped-item-commands)
+- [Spawning Items](/items/spawning-items)
+- [Throwable Items](/items/throwable)
+
+### Vanilla Re-Creations
+
 - [Custom Armor](/items/custom-armor)
 - [Custom Food](/items/custom-food)
 - [Custom Pottery Sherds](/items/custom-pottery-sherds)
 - [Custom Weapons](/items/custom-weapons)
-- [Equipment-Based Commands](/items/equipped-item-commands)
-- [Spawning Items](/items/spawning-items)
-- [Throwable Items](/items/throwable)
 
 ### Documentation
 
