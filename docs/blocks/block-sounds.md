@@ -1,7 +1,7 @@
 ---
 title: Block Sounds
 description: Learn how to modify the sounds that blocks play after actions such as placement.
-category: Documentation
+category: Sound & Visuals
 related:
     - /blocks/vanilla-block-sounds
 license: true

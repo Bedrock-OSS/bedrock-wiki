@@ -1,7 +1,7 @@
 ---
 title: Block Texture Animation
 description: Learn how to create flipbook (animated) textures for blocks.
-category: Visuals
+category: Sound & Visuals
 tags:
     - intermediate
 mentions:

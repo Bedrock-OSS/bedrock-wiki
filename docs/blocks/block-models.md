@@ -2,7 +2,7 @@
 title: Block Models
 example: block_models
 description: Learn how to set up a custom model for your block.
-category: Visuals
+category: Sound & Visuals
 tags:
     - guide
     - beginner

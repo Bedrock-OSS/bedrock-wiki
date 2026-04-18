@@ -1,7 +1,7 @@
 ---
 title: Block Texture Variation
 description: Block texture variation is when a block type can have multiple textures that are randomly applied to the block based on its position in the world.
-category: Visuals
+category: Sound & Visuals
 tags:
     - intermediate
 mentions:

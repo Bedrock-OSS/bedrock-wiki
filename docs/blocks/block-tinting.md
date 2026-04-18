@@ -1,7 +1,7 @@
 ---
 title: Block Tinting
 description: Learn how to apply a color tint to your block's texture and map color.
-category: Visuals
+category: Sound & Visuals
 tags:
     - easy
 license: true
