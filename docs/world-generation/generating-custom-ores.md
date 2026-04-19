@@ -106,7 +106,7 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 
 You can look for the ore by exploring caves, but if your ores are rare, you can use commands instead to check if they're generating. Simply place this command into a repeating command block, then fly around:
 
--   `execute @a ~ ~ ~ fill ~8 ~8 ~8 ~-8 ~-8 ~-8 air 0 replace wiki:titanite_ore`
+-   `execute at @a run fill ~8 ~8 ~8 ~-8 ~-8 ~-8 air replace wiki:titanite_ore`
 
 Stone ores:
 
