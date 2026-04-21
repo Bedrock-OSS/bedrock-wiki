@@ -3411,6 +3411,10 @@
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
+      "block": "`minecraft:sulfur_spike`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
       "block": "`minecraft:sulfur_stairs`",
       "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
     },

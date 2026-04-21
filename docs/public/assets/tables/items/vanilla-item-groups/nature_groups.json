@@ -56,7 +56,12 @@
         "`minecraft:polished_deepslate`",
         "`minecraft:polished_tuff`",
         "`minecraft:polished_basalt`",
-        "`minecraft:smooth_basalt`"
+        "`minecraft:smooth_basalt`",
+        "`minecraft:cinnabar`",
+        "`minecraft:polished_cinnabar`",
+        "`minecraft:sulfur`",
+        "`minecraft:polished_sulfur`",
+        "`minecraft:potent_sulfur`"
       ]
     },
     {
@@ -386,6 +391,7 @@
         "`minecraft:phantom_spawn_egg`",
         "`minecraft:silverfish_spawn_egg`",
         "`minecraft:slime_spawn_egg`",
+        "`minecraft:sulfur_cube_spawn_egg`",
         "`minecraft:warden_spawn_egg`",
         "`minecraft:witch_spawn_egg`",
         "`minecraft:evoker_spawn_egg`",

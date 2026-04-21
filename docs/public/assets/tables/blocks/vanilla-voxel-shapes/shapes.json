@@ -13,6 +13,26 @@
   },
   "rows": [
     {
+      "shape": "![](anvil.png)",
+      "identifier": "`minecraft:anvil`"
+    },
+    {
+      "shape": "![](bell_attachment_ceiling.png)",
+      "identifier": "`minecraft:bell_attachment_ceiling`"
+    },
+    {
+      "shape": "![](bell_attachment_double_wall.png)",
+      "identifier": "`minecraft:bell_attachment_double_wall`"
+    },
+    {
+      "shape": "![](bell_attachment_floor.png)",
+      "identifier": "`minecraft:bell_attachment_floor`"
+    },
+    {
+      "shape": "![](bell_attachment_single_wall.png)",
+      "identifier": "`minecraft:bell_attachment_single_wall`"
+    },
+    {
       "shape": "![](box_16x1x16.png)",
       "identifier": "`minecraft:box_16x1x16`",
       "notes": "A single 16×1×16 pixel box, taking up space from the bottom of the block unit."
@@ -68,6 +88,10 @@
       "notes": "A single 16×15×16 pixel box, taking up space from the bottom of the block unit."
     },
     {
+      "shape": "![](cactus.png)",
+      "identifier": "`minecraft:cactus`"
+    },
+    {
       "shape": "![](cake_bites_0.png)",
       "identifier": "`minecraft:cake_bites_0`"
     },
@@ -98,6 +122,10 @@
     {
       "shape": "![](candle_cake.png)",
       "identifier": "`minecraft:candle_cake`"
+    },
+    {
+      "shape": "![](chest_type_single.png)",
+      "identifier": "`minecraft:chest_type_single`"
     },
     {
       "shape": "![](composter.png)",
@@ -137,8 +165,40 @@
       "notes": [
         "An empty shape that contains no boxes.",
         "The default culling shape for blocks not using the `minecraft:geometry.full_block` model.",
-        "**Hardcoded** — this voxel shape is not data-driven so cannot be modified nor found as a JSON file in the vanilla behavior pack."
+        "**Hardcoded** — this voxel shape is not data-driven so cannot be found as a JSON file in the vanilla behavior pack."
       ]
+    },
+    {
+      "shape": "![](end_portal_frame_eye.png)",
+      "identifier": "`minecraft:end_portal_frame_eye`"
+    },
+    {
+      "shape": "![](grindstone.png)",
+      "identifier": "`minecraft:grindstone`"
+    },
+    {
+      "shape": "![](heavy_core.png)",
+      "identifier": "`minecraft:heavy_core`"
+    },
+    {
+      "shape": "![](lectern.png)",
+      "identifier": "`minecraft:lectern`"
+    },
+    {
+      "shape": "![](shelf_facing_east.png)",
+      "identifier": "`minecraft:shelf_facing_east`"
+    },
+    {
+      "shape": "![](shelf_facing_north.png)",
+      "identifier": "`minecraft:shelf_facing_north`"
+    },
+    {
+      "shape": "![](shelf_facing_south.png)",
+      "identifier": "`minecraft:shelf_facing_south`"
+    },
+    {
+      "shape": "![](shelf_facing_west.png)",
+      "identifier": "`minecraft:shelf_facing_west`"
     },
     {
       "shape": "![](slab_type_top.png)",
@@ -151,7 +211,7 @@
       "notes": [
         "A single 16×16×16 pixel cube, taking up the space of the full block unit.",
         "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling.",
-        "**Hardcoded** — this voxel shape is not data-driven so cannot be modified nor found as a JSON file in the vanilla behavior pack."
+        "**Hardcoded** — this voxel shape is not data-driven so cannot be found as a JSON file in the vanilla behavior pack."
       ]
     }
   ]

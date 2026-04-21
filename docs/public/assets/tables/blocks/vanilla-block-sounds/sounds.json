@@ -11,22 +11,15 @@
   "rows": [
     {
       "sound": "`amethyst_block`",
-      "blocks": [
-        "`minecraft:amethyst_block`",
-        "`minecraft:budding_amethyst`"
-      ]
+      "blocks": ["`minecraft:amethyst_block`", "`minecraft:budding_amethyst`"]
     },
     {
       "sound": "`amethyst_cluster`",
-      "blocks": [
-        "`minecraft:amethyst_cluster`"
-      ]
+      "blocks": ["`minecraft:amethyst_cluster`"]
     },
     {
       "sound": "`ancient_debris`",
-      "blocks": [
-        "`minecraft:ancient_debris`"
-      ]
+      "blocks": ["`minecraft:ancient_debris`"]
     },
     {
       "sound": "`anvil`",
@@ -39,30 +32,19 @@
     },
     {
       "sound": "`azalea`",
-      "blocks": [
-        "`minecraft:azalea`",
-        "`minecraft:flowering_azalea`"
-      ]
+      "blocks": ["`minecraft:azalea`", "`minecraft:flowering_azalea`"]
     },
     {
       "sound": "`azalea_leaves`",
-      "blocks": [
-        "`minecraft:azalea_leaves`",
-        "`minecraft:azalea_leaves_flowered`"
-      ]
+      "blocks": ["`minecraft:azalea_leaves`", "`minecraft:azalea_leaves_flowered`"]
     },
     {
       "sound": "`bamboo`",
-      "blocks": [
-        "`minecraft:bamboo`"
-      ]
+      "blocks": ["`minecraft:bamboo`"]
     },
     {
       "sound": "`bamboo_sapling`",
-      "blocks": [
-        "`minecraft:bamboo_sapling`",
-        "`minecraft:cherry_sapling`"
-      ]
+      "blocks": ["`minecraft:bamboo_sapling`", "`minecraft:cherry_sapling`"]
     },
     {
       "sound": "`bamboo_wood`",
@@ -89,42 +71,27 @@
     },
     {
       "sound": "`bamboo_wood_hanging_sign`",
-      "blocks": [
-        "`minecraft:bamboo_hanging_sign`"
-      ]
+      "blocks": ["`minecraft:bamboo_hanging_sign`"]
     },
     {
       "sound": "`basalt`",
-      "blocks": [
-        "`minecraft:basalt`",
-        "`minecraft:polished_basalt`",
-        "`minecraft:smooth_basalt`"
-      ]
+      "blocks": ["`minecraft:basalt`", "`minecraft:polished_basalt`", "`minecraft:smooth_basalt`"]
     },
     {
       "sound": "`big_dripleaf`",
-      "blocks": [
-        "`minecraft:big_dripleaf`",
-        "`minecraft:small_dripleaf_block`"
-      ]
+      "blocks": ["`minecraft:big_dripleaf`", "`minecraft:small_dripleaf_block`"]
     },
     {
       "sound": "`bone_block`",
-      "blocks": [
-        "`minecraft:bone_block`"
-      ]
+      "blocks": ["`minecraft:bone_block`"]
     },
     {
       "sound": "`cactus_flower`",
-      "blocks": [
-        "`minecraft:cactus_flower`"
-      ]
+      "blocks": ["`minecraft:cactus_flower`"]
     },
     {
       "sound": "`calcite`",
-      "blocks": [
-        "`minecraft:calcite`"
-      ]
+      "blocks": ["`minecraft:calcite`"]
     },
     {
       "sound": "`candle`",
@@ -172,9 +139,7 @@
     },
     {
       "sound": "`cherry_leaves`",
-      "blocks": [
-        "`minecraft:cherry_leaves`"
-      ]
+      "blocks": ["`minecraft:cherry_leaves`"]
     },
     {
       "sound": "`cherry_wood`",
@@ -199,14 +164,31 @@
     },
     {
       "sound": "`cherry_wood_hanging_sign`",
-      "blocks": [
-        "`minecraft:cherry_hanging_sign`"
-      ]
+      "blocks": ["`minecraft:cherry_hanging_sign`"]
     },
     {
       "sound": "`chiseled_bookshelf`",
+      "blocks": ["`minecraft:chiseled_bookshelf`"]
+    },
+    {
+      "sound": "`cinnabar`",
       "blocks": [
-        "`minecraft:chiseled_bookshelf`"
+        "`minecraft:chiseled_cinnabar`",
+        "`minecraft:cinnabar`",
+        "`minecraft:cinnabar_brick_double_slab`",
+        "`minecraft:cinnabar_brick_slab`",
+        "`minecraft:cinnabar_brick_stairs`",
+        "`minecraft:cinnabar_brick_wall`",
+        "`minecraft:cinnabar_bricks`",
+        "`minecraft:cinnabar_double_slab`",
+        "`minecraft:cinnabar_slab`",
+        "`minecraft:cinnabar_stairs`",
+        "`minecraft:cinnabar_wall`",
+        "`minecraft:polished_cinnabar`",
+        "`minecraft:polished_cinnabar_double_slab`",
+        "`minecraft:polished_cinnabar_slab`",
+        "`minecraft:polished_cinnabar_stairs`",
+        "`minecraft:polished_cinnabar_wall`"
       ]
     },
     {
@@ -267,9 +249,7 @@
     },
     {
       "sound": "`comparator`",
-      "blocks": [
-        "`minecraft:unpowered_comparator`"
-      ]
+      "blocks": ["`minecraft:unpowered_comparator`"]
     },
     {
       "sound": "`copper`",
@@ -380,17 +360,11 @@
     },
     {
       "sound": "`copper_chest_oxidized`",
-      "blocks": [
-        "`minecraft:oxidized_copper_chest`",
-        "`minecraft:waxed_oxidized_copper_chest`"
-      ]
+      "blocks": ["`minecraft:oxidized_copper_chest`", "`minecraft:waxed_oxidized_copper_chest`"]
     },
     {
       "sound": "`copper_chest_weathered`",
-      "blocks": [
-        "`minecraft:waxed_weathered_copper_chest`",
-        "`minecraft:weathered_copper_chest`"
-      ]
+      "blocks": ["`minecraft:waxed_weathered_copper_chest`", "`minecraft:weathered_copper_chest`"]
     },
     {
       "sound": "`copper_golem_statue`",
@@ -420,27 +394,19 @@
     },
     {
       "sound": "`coral`",
-      "blocks": [
-        "`minecraft:honeycomb_block`"
-      ]
+      "blocks": ["`minecraft:honeycomb_block`"]
     },
     {
       "sound": "`creaking_heart`",
-      "blocks": [
-        "`minecraft:creaking_heart`"
-      ]
+      "blocks": ["`minecraft:creaking_heart`"]
     },
     {
       "sound": "`deadbush`",
-      "blocks": [
-        "`minecraft:deadbush`"
-      ]
+      "blocks": ["`minecraft:deadbush`"]
     },
     {
       "sound": "`decorated_pot`",
-      "blocks": [
-        "`minecraft:decorated_pot`"
-      ]
+      "blocks": ["`minecraft:decorated_pot`"]
     },
     {
       "sound": "`deepslate`",
@@ -530,40 +496,27 @@
     },
     {
       "sound": "`dirt_with_roots`",
-      "blocks": [
-        "`minecraft:dirt_with_roots`"
-      ]
+      "blocks": ["`minecraft:dirt_with_roots`"]
     },
     {
       "sound": "`dried_ghast`",
-      "blocks": [
-        "`minecraft:dried_ghast`"
-      ]
+      "blocks": ["`minecraft:dried_ghast`"]
     },
     {
       "sound": "`dripstone_block`",
-      "blocks": [
-        "`minecraft:dripstone_block`"
-      ]
+      "blocks": ["`minecraft:dripstone_block`"]
     },
     {
       "sound": "`eyeblossom`",
-      "blocks": [
-        "`minecraft:closed_eyeblossom`",
-        "`minecraft:open_eyeblossom`"
-      ]
+      "blocks": ["`minecraft:closed_eyeblossom`", "`minecraft:open_eyeblossom`"]
     },
     {
       "sound": "`firefly_bush`",
-      "blocks": [
-        "`minecraft:firefly_bush`"
-      ]
+      "blocks": ["`minecraft:firefly_bush`"]
     },
     {
       "sound": "`frog_spawn`",
-      "blocks": [
-        "`minecraft:frog_spawn`"
-      ]
+      "blocks": ["`minecraft:frog_spawn`"]
     },
     {
       "sound": "`froglight`",
@@ -575,10 +528,7 @@
     },
     {
       "sound": "`fungus`",
-      "blocks": [
-        "`minecraft:crimson_fungus`",
-        "`minecraft:warped_fungus`"
-      ]
+      "blocks": ["`minecraft:crimson_fungus`", "`minecraft:warped_fungus`"]
     },
     {
       "sound": "`glass`",
@@ -633,9 +583,7 @@
     },
     {
       "sound": "`glow_lichen`",
-      "blocks": [
-        "`minecraft:glow_lichen`"
-      ]
+      "blocks": ["`minecraft:glow_lichen`"]
     },
     {
       "sound": "`grass`",
@@ -718,9 +666,7 @@
     },
     {
       "sound": "`hanging_roots`",
-      "blocks": [
-        "`minecraft:hanging_roots`"
-      ]
+      "blocks": ["`minecraft:hanging_roots`"]
     },
     {
       "sound": "`hanging_sign`",
@@ -737,15 +683,11 @@
     },
     {
       "sound": "`heavy_core`",
-      "blocks": [
-        "`minecraft:heavy_core`"
-      ]
+      "blocks": ["`minecraft:heavy_core`"]
     },
     {
       "sound": "`honey_block`",
-      "blocks": [
-        "`minecraft:honey_block`"
-      ]
+      "blocks": ["`minecraft:honey_block`"]
     },
     {
       "sound": "`iron`",
@@ -759,16 +701,11 @@
     },
     {
       "sound": "`itemframe`",
-      "blocks": [
-        "`minecraft:frame`",
-        "`minecraft:glow_frame`"
-      ]
+      "blocks": ["`minecraft:frame`", "`minecraft:glow_frame`"]
     },
     {
       "sound": "`ladder`",
-      "blocks": [
-        "`minecraft:ladder`"
-      ]
+      "blocks": ["`minecraft:ladder`"]
     },
     {
       "sound": "`lantern`",
@@ -787,39 +724,27 @@
     },
     {
       "sound": "`large_amethyst_bud`",
-      "blocks": [
-        "`minecraft:large_amethyst_bud`"
-      ]
+      "blocks": ["`minecraft:large_amethyst_bud`"]
     },
     {
       "sound": "`leaf_litter`",
-      "blocks": [
-        "`minecraft:leaf_litter`"
-      ]
+      "blocks": ["`minecraft:leaf_litter`"]
     },
     {
       "sound": "`lever`",
-      "blocks": [
-        "`minecraft:lever`"
-      ]
+      "blocks": ["`minecraft:lever`"]
     },
     {
       "sound": "`lodestone`",
-      "blocks": [
-        "`minecraft:lodestone`"
-      ]
+      "blocks": ["`minecraft:lodestone`"]
     },
     {
       "sound": "`mangrove_roots`",
-      "blocks": [
-        "`minecraft:mangrove_roots`"
-      ]
+      "blocks": ["`minecraft:mangrove_roots`"]
     },
     {
       "sound": "`medium_amethyst_bud`",
-      "blocks": [
-        "`minecraft:medium_amethyst_bud`"
-      ]
+      "blocks": ["`minecraft:medium_amethyst_bud`"]
     },
     {
       "sound": "`metal`",
@@ -845,29 +770,19 @@
     },
     {
       "sound": "`mob_spawner`",
-      "blocks": [
-        "`minecraft:mob_spawner`"
-      ]
+      "blocks": ["`minecraft:mob_spawner`"]
     },
     {
       "sound": "`moss_block`",
-      "blocks": [
-        "`minecraft:moss_block`",
-        "`minecraft:pale_moss_block`"
-      ]
+      "blocks": ["`minecraft:moss_block`", "`minecraft:pale_moss_block`"]
     },
     {
       "sound": "`moss_carpet`",
-      "blocks": [
-        "`minecraft:moss_carpet`",
-        "`minecraft:pale_moss_carpet`"
-      ]
+      "blocks": ["`minecraft:moss_carpet`", "`minecraft:pale_moss_carpet`"]
     },
     {
       "sound": "`mud`",
-      "blocks": [
-        "`minecraft:mud`"
-      ]
+      "blocks": ["`minecraft:mud`"]
     },
     {
       "sound": "`mud_bricks`",
@@ -881,9 +796,7 @@
     },
     {
       "sound": "`muddy_mangrove_roots`",
-      "blocks": [
-        "`minecraft:muddy_mangrove_roots`"
-      ]
+      "blocks": ["`minecraft:muddy_mangrove_roots`"]
     },
     {
       "sound": "`nether_brick`",
@@ -903,16 +816,11 @@
     },
     {
       "sound": "`nether_gold_ore`",
-      "blocks": [
-        "`minecraft:nether_gold_ore`",
-        "`minecraft:quartz_ore`"
-      ]
+      "blocks": ["`minecraft:nether_gold_ore`", "`minecraft:quartz_ore`"]
     },
     {
       "sound": "`nether_sprouts`",
-      "blocks": [
-        "`minecraft:nether_sprouts`"
-      ]
+      "blocks": ["`minecraft:nether_sprouts`"]
     },
     {
       "sound": "`nether_wart`",
@@ -953,54 +861,35 @@
     },
     {
       "sound": "`nether_wood_hanging_sign`",
-      "blocks": [
-        "`minecraft:crimson_hanging_sign`",
-        "`minecraft:warped_hanging_sign`"
-      ]
+      "blocks": ["`minecraft:crimson_hanging_sign`", "`minecraft:warped_hanging_sign`"]
     },
     {
       "sound": "`netherite`",
-      "blocks": [
-        "`minecraft:netherite_block`"
-      ]
+      "blocks": ["`minecraft:netherite_block`"]
     },
     {
       "sound": "`netherrack`",
-      "blocks": [
-        "`minecraft:netherrack`"
-      ]
+      "blocks": ["`minecraft:netherrack`"]
     },
     {
       "sound": "`nylium`",
-      "blocks": [
-        "`minecraft:crimson_nylium`",
-        "`minecraft:warped_nylium`"
-      ]
+      "blocks": ["`minecraft:crimson_nylium`", "`minecraft:warped_nylium`"]
     },
     {
       "sound": "`packed_mud`",
-      "blocks": [
-        "`minecraft:packed_mud`"
-      ]
+      "blocks": ["`minecraft:packed_mud`"]
     },
     {
       "sound": "`pale_hanging_moss`",
-      "blocks": [
-        "`minecraft:pale_hanging_moss`"
-      ]
+      "blocks": ["`minecraft:pale_hanging_moss`"]
     },
     {
       "sound": "`pink_petals`",
-      "blocks": [
-        "`minecraft:pink_petals`",
-        "`minecraft:wildflowers`"
-      ]
+      "blocks": ["`minecraft:pink_petals`", "`minecraft:wildflowers`"]
     },
     {
       "sound": "`pointed_dripstone`",
-      "blocks": [
-        "`minecraft:pointed_dripstone`"
-      ]
+      "blocks": ["`minecraft:pointed_dripstone`"]
     },
     {
       "sound": "`polished_tuff`",
@@ -1013,17 +902,16 @@
       ]
     },
     {
+      "sound": "`potent_sulfur`",
+      "blocks": ["`minecraft:potent_sulfur`"]
+    },
+    {
       "sound": "`powder_snow`",
-      "blocks": [
-        "`minecraft:powder_snow`"
-      ]
+      "blocks": ["`minecraft:powder_snow`"]
     },
     {
       "sound": "`resin`",
-      "blocks": [
-        "`minecraft:resin_block`",
-        "`minecraft:resin_clump`"
-      ]
+      "blocks": ["`minecraft:resin_block`", "`minecraft:resin_clump`"]
     },
     {
       "sound": "`resin_brick`",
@@ -1038,10 +926,7 @@
     },
     {
       "sound": "`roots`",
-      "blocks": [
-        "`minecraft:crimson_roots`",
-        "`minecraft:warped_roots`"
-      ]
+      "blocks": ["`minecraft:crimson_roots`", "`minecraft:warped_roots`"]
     },
     {
       "sound": "`sand`",
@@ -1069,40 +954,27 @@
     },
     {
       "sound": "`scaffolding`",
-      "blocks": [
-        "`minecraft:scaffolding`"
-      ]
+      "blocks": ["`minecraft:scaffolding`"]
     },
     {
       "sound": "`sculk`",
-      "blocks": [
-        "`minecraft:sculk`"
-      ]
+      "blocks": ["`minecraft:sculk`"]
     },
     {
       "sound": "`sculk_catalyst`",
-      "blocks": [
-        "`minecraft:sculk_catalyst`"
-      ]
+      "blocks": ["`minecraft:sculk_catalyst`"]
     },
     {
       "sound": "`sculk_sensor`",
-      "blocks": [
-        "`minecraft:calibrated_sculk_sensor`",
-        "`minecraft:sculk_sensor`"
-      ]
+      "blocks": ["`minecraft:calibrated_sculk_sensor`", "`minecraft:sculk_sensor`"]
     },
     {
       "sound": "`sculk_shrieker`",
-      "blocks": [
-        "`minecraft:sculk_shrieker`"
-      ]
+      "blocks": ["`minecraft:sculk_shrieker`"]
     },
     {
       "sound": "`sculk_vein`",
-      "blocks": [
-        "`minecraft:sculk_vein`"
-      ]
+      "blocks": ["`minecraft:sculk_vein`"]
     },
     {
       "sound": "`shelf`",
@@ -1123,53 +995,35 @@
     },
     {
       "sound": "`shroomlight`",
-      "blocks": [
-        "`minecraft:shroomlight`"
-      ]
+      "blocks": ["`minecraft:shroomlight`"]
     },
     {
       "sound": "`slime`",
-      "blocks": [
-        "`minecraft:sea_pickle`",
-        "`minecraft:slime`"
-      ]
+      "blocks": ["`minecraft:sea_pickle`", "`minecraft:slime`"]
     },
     {
       "sound": "`small_amethyst_bud`",
-      "blocks": [
-        "`minecraft:small_amethyst_bud`"
-      ]
+      "blocks": ["`minecraft:small_amethyst_bud`"]
     },
     {
       "sound": "`snow`",
-      "blocks": [
-        "`minecraft:snow`",
-        "`minecraft:snow_layer`"
-      ]
+      "blocks": ["`minecraft:snow`", "`minecraft:snow_layer`"]
     },
     {
       "sound": "`soul_sand`",
-      "blocks": [
-        "`minecraft:soul_sand`"
-      ]
+      "blocks": ["`minecraft:soul_sand`"]
     },
     {
       "sound": "`soul_soil`",
-      "blocks": [
-        "`minecraft:soul_soil`"
-      ]
+      "blocks": ["`minecraft:soul_soil`"]
     },
     {
       "sound": "`sponge`",
-      "blocks": [
-        "`minecraft:sponge`"
-      ]
+      "blocks": ["`minecraft:sponge`"]
     },
     {
       "sound": "`spore_blossom`",
-      "blocks": [
-        "`minecraft:spore_blossom`"
-      ]
+      "blocks": ["`minecraft:spore_blossom`"]
     },
     {
       "sound": "`stem`",
@@ -1501,22 +1355,38 @@
       ]
     },
     {
-      "sound": "`suspicious_gravel`",
+      "sound": "`sulfur`",
       "blocks": [
-        "`minecraft:suspicious_gravel`"
+        "`minecraft:chiseled_sulfur`",
+        "`minecraft:polished_sulfur`",
+        "`minecraft:polished_sulfur_double_slab`",
+        "`minecraft:polished_sulfur_slab`",
+        "`minecraft:polished_sulfur_stairs`",
+        "`minecraft:polished_sulfur_wall`",
+        "`minecraft:sulfur`",
+        "`minecraft:sulfur_brick_double_slab`",
+        "`minecraft:sulfur_brick_slab`",
+        "`minecraft:sulfur_brick_stairs`",
+        "`minecraft:sulfur_brick_wall`",
+        "`minecraft:sulfur_bricks`",
+        "`minecraft:sulfur_double_slab`",
+        "`minecraft:sulfur_slab`",
+        "`minecraft:sulfur_spike`",
+        "`minecraft:sulfur_stairs`",
+        "`minecraft:sulfur_wall`"
       ]
+    },
+    {
+      "sound": "`suspicious_gravel`",
+      "blocks": ["`minecraft:suspicious_gravel`"]
     },
     {
       "sound": "`suspicious_sand`",
-      "blocks": [
-        "`minecraft:suspicious_sand`"
-      ]
+      "blocks": ["`minecraft:suspicious_sand`"]
     },
     {
       "sound": "`sweet_berry_bush`",
-      "blocks": [
-        "`minecraft:sweet_berry_bush`"
-      ]
+      "blocks": ["`minecraft:sweet_berry_bush`"]
     },
     {
       "sound": "`terracotta`",
@@ -1542,9 +1412,7 @@
     },
     {
       "sound": "`trial_spawner`",
-      "blocks": [
-        "`minecraft:trial_spawner`"
-      ]
+      "blocks": ["`minecraft:trial_spawner`"]
     },
     {
       "sound": "`tuff`",
@@ -1570,40 +1438,27 @@
     },
     {
       "sound": "`turtle_egg`",
-      "blocks": [
-        "`minecraft:turtle_egg`"
-      ]
+      "blocks": ["`minecraft:turtle_egg`"]
     },
     {
       "sound": "`vault`",
-      "blocks": [
-        "`minecraft:vault`"
-      ]
+      "blocks": ["`minecraft:vault`"]
     },
     {
       "sound": "`vines`",
-      "blocks": [
-        "`minecraft:vine`"
-      ]
+      "blocks": ["`minecraft:vine`"]
     },
     {
       "sound": "`web`",
-      "blocks": [
-        "`minecraft:web`"
-      ]
+      "blocks": ["`minecraft:web`"]
     },
     {
       "sound": "`weeping_vines`",
-      "blocks": [
-        "`minecraft:twisting_vines`",
-        "`minecraft:weeping_vines`"
-      ]
+      "blocks": ["`minecraft:twisting_vines`", "`minecraft:weeping_vines`"]
     },
     {
       "sound": "`wet_sponge`",
-      "blocks": [
-        "`minecraft:wet_sponge`"
-      ]
+      "blocks": ["`minecraft:wet_sponge`"]
     },
     {
       "sound": "`wood`",
