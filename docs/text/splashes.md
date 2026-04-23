@@ -21,8 +21,8 @@ It's very easy to create custom splash texts. All you have to do is to create a 
 {
     "canMerge": true,
     "splashes": [
-        "my custom splash text",
-        "and my second custom splash text!",
+        "Pogi si sunkenlace",
+        "pogi ako!",
         "§4red §rand §agreen §rsplash text",
         "§l§kblablabla"
     ]
