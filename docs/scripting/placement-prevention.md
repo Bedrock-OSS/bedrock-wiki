@@ -87,27 +87,24 @@ After we have added the module, we will add the preventative measure for block p
 
 ```js
 world.beforeEvents.playerPlaceBlock.subscribe((event) => {
-    const player = event.source;
-
     if (event.permutationToPlace.type.id === "minecraft:bedrock") {
         event.cancel = true;
         system.run(() => {
-            player.sendMessage("You cannot place Bedrock");
+            event.player.sendMessage("You cannot place Bedrock");
         });
     }
 });
 ```
 
-This is the main function to execute our code. `world.beforeEvents.playerPlaceBlock.subscribe()` will run before any block is placed.
+This is the main function to execute our code. The callback passed to `world.beforeEvents.playerPlaceBlock.subscribe()`{lang=js} will run before any block is placed.
 
--   `const player = event.source`{lang=js} defines the variable `player` as whatever the source of the event is (the one who is placing the block). `const` is used over `var` or `let` to say that the source _cannot_ be changed, and is constant.
 -   The `if` statement requires the criteria to evaluate to true in order for the code within the brackets to run.
     -   `event.permutationToPlace.type.id === "minecraft:bedrock"`{lang=js} verifies that the block being placed is 'minecraft:bedrock'.
 -   `event.cancel = true`{lang=js} cancels the placement action that would be performed by this event.
 -   `system.run()`{lang=js} is a system call that tells minecraft to push the code being ran to the next tick.
     This is necessary as before events cannot modify the state of the world (in our case, sending a message to the player), and using system run makes the code unbound by this limitation.
     More information on system callbacks & loops can be found [here](https://learn.microsoft.com/minecraft/creator/documents/scripting/system-run-guide).
--   `player.sendMessage()`{lang=js} sends a message to the player letting them know that they cannot place that block.
+-   `event.player.sendMessage()`{lang=js} sends a message to the player letting them know that they cannot place that block.
 
 ## Conclusion
 
