@@ -205,6 +205,13 @@
       "functionality": "Allows Bamboo to be placed on the block."
     },
     {
+      "tag": "`minecraft:has_fence_connections`",
+      "functionality": [
+        "Used to identify a custom block as a block that creates connections like a fence; this tag is required to create connections between custom and vanilla fences.",
+        "Unused by vanilla blocks, but wooden fences _behave_ as if they have this tag."
+      ]
+    },
+    {
       "tag": "`iron_pick_diggable`",
       "vanilla_usage": [
         "`minecraft:coal_ore`",
