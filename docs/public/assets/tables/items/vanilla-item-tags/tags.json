@@ -1001,6 +1001,10 @@
       ]
     },
     {
+      "tag": "`minecraft:sulfur_cube_archetype_explosive`",
+      "vanilla_usage": ["`minecraft:tnt`"]
+    },
+    {
       "tag": "`minecraft:sulfur_cube_archetype_fast_flat`",
       "vanilla_usage": [
         "`minecraft:brain_coral_block`",
