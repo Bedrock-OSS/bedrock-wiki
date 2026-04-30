@@ -33,6 +33,18 @@
       "identifier": "`minecraft:bell_attachment_single_wall`"
     },
     {
+      "shape": "![](big_dripleaf.png)",
+      "identifier": "`minecraft:big_dripleaf`"
+    },
+    {
+      "shape": "![](big_dripleaf_tilt_full.png)",
+      "identifier": "`minecraft:big_dripleaf_tilt_full`"
+    },
+    {
+      "shape": "![](big_dripleaf_tilt_partial.png)",
+      "identifier": "`minecraft:big_dripleaf_tilt_partial`"
+    },
+    {
       "shape": "![](box_16x1x16.png)",
       "identifier": "`minecraft:box_16x1x16`",
       "notes": "A single 16×1×16 pixel box, taking up space from the bottom of the block unit."
@@ -171,6 +183,18 @@
     {
       "shape": "![](end_portal_frame_eye.png)",
       "identifier": "`minecraft:end_portal_frame_eye`"
+    },
+    {
+      "shape": "![](fence.png)",
+      "identifier": "`minecraft:fence`"
+    },
+    {
+      "shape": "![](fence_gate_in_wall_occlusion.png)",
+      "identifier": "`minecraft:fence_gate_in_wall_occlusion`"
+    },
+    {
+      "shape": "![](fence_gate_occlusion.png)",
+      "identifier": "`minecraft:fence_gate_occlusion`"
     },
     {
       "shape": "![](grindstone.png)",

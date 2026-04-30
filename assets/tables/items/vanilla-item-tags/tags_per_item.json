@@ -3090,6 +3090,10 @@
       "tags": ["`minecraft:trim_templates`"]
     },
     {
+      "item": "`minecraft:tnt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_explosive`"]
+    },
+    {
       "item": "`minecraft:tnt_minecart`",
       "tags": ["`minecraft:is_minecart`"]
     },
