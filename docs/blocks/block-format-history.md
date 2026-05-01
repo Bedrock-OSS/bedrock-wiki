@@ -16,6 +16,17 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.30
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:precipitation_interactions`
+    -   Updated `precipitation_behavior` parameter
+        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`
+
 ## 1.26.20
 
 ### Traits
