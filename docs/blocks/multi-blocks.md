@@ -189,8 +189,16 @@ Most vanilla multi-blocks are popped off as items when a piston attempts to push
 
 ### Snowlogging
 
-For technical reasons, multi-blocks do not support snowlogging.
-Therefore, the [`minecraft:precipitation_interations`](/blocks/block-components#precipitation-interactions) component cannot be defined with a `precipitation_behavior` of `"snow_log_no_collision"`{lang=json}.
+:::warning REQUIRES 1.26.30
+Prior to version 1.26.30, snowlogging is not supported by multi-blocks.
+Attempting to submerge part of a multi-block in snow instead results in the multi-block being destroyed.
+:::
+
+Attempting to place snow in part of a snowloggable multi-block will result in the multi-block being submerged in snow from its bottom part upwards, rather than the snow always being placed in the part that was selected.
+
+Targeting part of a multi-block that contains snow will select the snow layer rather than the multi-block.
+This means that attempting to break a snowlogged part will break the snow layer, leaving the multi-block.
+However, attempting to break a part that is not snowlogged will break the multi-block, leaving any snow layers.
 
 ### State Equality
 
@@ -232,7 +240,7 @@ function setMultiBlockColor(block, color) {
 
 -   The [`onBreak()`{lang=js}](/blocks/block-events#break) hook is only called for the part of a multi-block that was originally broken, not for the other parts that are broken as a result.
 
--   The [`onPlayerBreak()`{lang=js}](/blocks/block-events#player-break) hook is not supported for multi-blocks so will never be called.
+-   The [`onPlayerBreak()`{lang=js}](/blocks/block-events#player-break) hook is not supported by multi-blocks so will never be called.
     Consider using the [`onBreak()`{lang=js}](/blocks/block-events#break) hook instead:
 
     <CodeHeader>Custom Component</CodeHeader>
