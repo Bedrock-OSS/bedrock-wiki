@@ -32,6 +32,7 @@ mentions:
     'BP/loot_tables/example.loot.json',
     'BP/recipes/example.recipe.json',
     'BP/scripts/example.js',
+    'BP/shapes/example.json',
     'BP/spawn_rules/example.spawn.json',
     'BP/structures/<namespace>/example.mcstructure',
     'BP/texts/languages.json',
