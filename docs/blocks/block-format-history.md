@@ -20,6 +20,9 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   The `minecraft:geometry` and `minecraft:material_instances` components can once again be defined individually within `permutations` entries.
+    -   This change resolves [MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086).
+
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 
@@ -54,7 +57,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:redstone_producer`
     -   May no longer be defined in the `permutations` array without also being defined in the root `components` object.
 -   The `minecraft:geometry` and `minecraft:material_instances` components can no longer be defined individually within `permutations` entries.
-    -   This change was not intentional and will be reverted in a later update ([MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086)).
+    -   This change was not intentional and has been reverted in 1.26.30 ([MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086)).
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
