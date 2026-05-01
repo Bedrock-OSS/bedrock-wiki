@@ -28,7 +28,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:precipitation_interactions`
     -   Updated `precipitation_behavior` parameter
-        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`
+        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`{lang=json}
 
 ## 1.26.20
 
