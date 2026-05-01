@@ -207,23 +207,17 @@ For example, doors have a `minecraft:cardinal_direction` state that determines w
 By requiring this state to be equal across parts, the top and bottom of the door will never be facing different directions.
 
 To change the value of a multi-block state, the state must be updated on every part simultaneously.
-This can be achieved by setting the permutation of the first part, which will automatically update the permutations of all other parts to match.
-Attempting to change the permutation of any other part will result in the multi-block being destroyed.
 
-In scripts, you can get the first part of any multi-block by calling the `getParts()`{lang=js} method and accessing index 0, as demonstrated below:
+Using scripts, this can be achieved by getting all parts associated with a given block using the `getParts()`{lang=js} method.
+This method returns an array of the individual blocks that make up the multi-block in part index order.
+We can then set the permutation of every part at the same time, preventing the multi-block from breaking due to unequal states across parts.
 
 <CodeHeader>Script</CodeHeader>
 
 ```js
-/**
- * @param block {Block} Any part of the multi-block
- * @param color {string} The value to set the "wiki:color" state to
- */
-function setMultiBlockColor(block, color) {
-    const parts = block.getParts();
-    const firstPart = parts[0];
-
-    firstPart.setPermutation(firstPart.permutation.withState("wiki:color", color));
+// Assume we have ensured that "block" is a part of the multi-block
+for (const part of block.getParts()) {
+    part.setPermutation(part.permutation.withState("wiki:color", "red"));
 }
 ```
 
