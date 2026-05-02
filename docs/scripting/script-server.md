@@ -290,6 +290,28 @@ world.setDynamicProperty("player_score", 100); // set a property with a number v
 const playerScore = world.getDynamicProperty("player_score"); // get the previously set property- will return 100.
 ```
 
+## Removing Entities
+
+The Script API provides two ways to remove an entity, which behave differently:
+
+- `entity.kill()` — triggers the entity's death sequence. It fires the `entityDie` event, causes drops, plays the death animation, and counts as a kill for scoreboard objectives.
+- `entity.remove()` — removes the entity immediately and silently. No death event, no drops, no animation.
+
+```js
+// Use kill() when you want the full death behavior (drops, events, kill credit)
+zombie.kill();
+
+// Use remove() when you want silent cleanup with no side effects
+// For example, removing dropped item entities from the ground
+for (const item of dimension.getEntities({ type: "minecraft:item" })) {
+    item.remove();
+}
+```
+
+:::tip
+Using `kill()` on dropped item entities will fire `entityDie` for each one and may trigger unintended listeners. Always use `remove()` for item cleanup.
+:::
+
 ## Running Commands
 
 `Entity.runCommandAsync()` or `Dimension.runCommandAsync()` allows the API to run a particular command asynchronously from the context of the broader dimension.
