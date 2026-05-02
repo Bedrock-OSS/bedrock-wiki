@@ -14,6 +14,7 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - kumja1
+    - MindfulLearner
 description: Create form UIs without the need for JSON UI-wrangling.
 ---
 
@@ -292,6 +293,25 @@ These forms will only open when no other UI is open. If you want to open the for
 
 Inside the if statement is where our form will be shown. Using `.show()`, the form will open. Inside the show function, you will need a player class as an argument. After we show the form, we can use `.then()` to save the response of player.
 
+:::warning
+When opening a form from a `scriptEventReceive` handler or from `world.afterEvents.itemUse`, calling `form.show(player)` directly may cause the form not to appear. Wrap it in `system.runTimeout(() => form.show(player).then(...), 1)` to defer the call by one tick.
+
+```js
+system.afterEvents.scriptEventReceive.subscribe((event) => {
+    const player = event.initiator;
+    if (!player) return;
+    system.runTimeout(() => {
+        new ActionFormData()
+            .title("Menu")
+            .button("Option 1")
+            .show(player)
+            .then((r) => { if (r.canceled) return; })
+            .catch(() => {});
+    }, 1);
+});
+```
+:::
+
 ```js
 form.show(event.source)
     .then((r) => {
@@ -410,3 +430,47 @@ form.show(event.source).then(r => {
 	console.error(e, e.stack);
 });
 ```
+
+## Persistent Menus
+
+You can create menus that stay open after an action by re-calling the open function inside `.then()`. This is useful for shops or admin panels where the player should be able to perform multiple actions without reopening the menu.
+
+```js
+function openShop(player) {
+    new ActionFormData()
+        .title("Shop")
+        .button("Buy Iron Sword — 5 gems")
+        .button("Buy Bow — 8 gems")
+        .button("Close")
+        .show(player)
+        .then((r) => {
+            if (r.canceled || r.selection === 2) return;
+
+            if (r.selection === 0) {
+                // handle iron sword purchase...
+            } else if (r.selection === 1) {
+                // handle bow purchase...
+            }
+
+            // reopen the shop after the action
+            system.runTimeout(() => openShop(player), 1);
+        })
+        .catch(() => {});
+}
+```
+
+:::tip
+The `.body()` text is computed each time the function is called. This means you can display live data such as a player's current balance by building the body string at call time rather than once at startup.
+
+```js
+function openShop(player) {
+    const gems = countGems(player);
+    new ActionFormData()
+        .title("Shop")
+        .body(`Your balance: ${gems} gems`)
+        .button("Buy Iron Sword — 5 gems")
+        // ...
+        .show(player).then(...).catch(() => {});
+}
+```
+:::
