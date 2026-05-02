@@ -29,18 +29,23 @@ In this guide you will learn how to extend structure box size for structure bloc
 If the only block you have in your structure is structure block, you will find its data here:
 
 ![][structure] extending_structure_block.mcstructure
+
 > ![][compound] structure
+>
 > > ![][compound] palette
+> >
 > > > ![][compound] default
+> > >
 > > > > ![][compound] block_position_data
+> > > >
 > > > > > ![][compound] 0
 
-![](/assets/images/nbt/structure-limits/nbt-screenshot-1.png)
+![](nbt-screenshot-1.png)
 
 3. Set `xStructureSize`, `yStructureSize` and `zStructureSize` values to what you want.
 4. Save the structure and load it in game.
 
-![](/assets/images/nbt/structure-limits/result.png)
+![](result.png)
 
 ## Tips
 

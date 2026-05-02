@@ -11,8 +11,8 @@ description: Learn how to add particles and sounds to your animation.
 Sometimes it is much easier to use particles or sounds in animation rather than in animation controller.
 Animations can have effects in them, such as:
 
--	Particles
--	Sounds
+-   Particles
+-   Sounds
 
 ### Particles
 
@@ -104,44 +104,52 @@ You can call more than one particle at the same time:
 
 ```json
 {
-	"format_version" : "1.8.0",
-	"animations" : {
-		"animation.sheep.grazing" : {
-			"animation_length" : 2.0,
-			"loop" : true,
-			"particle_effects": {
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.sheep.grazing": {
+            "animation_length": 2.0,
+            "loop": true,
+            "particle_effects": {
                 "0.0": {
                     "effect": "flames",
                     "locator": "body"
                 }
             },
-			"sound_effects": {
-    			"0.0": {
-    			    "effect": "meow"
-				}
-			},
-			"bones" : {
-				"head" : {
-					"position" : {
-						"0" : [ 0.0, 0.0, 0.0 ],
-						"0.2" : [ 0.0, -9.0, 0.0 ],
-						"1.8" : [ 0.0, -9.0, 0.0 ],
-						"2" : [ 0.0, 0.0, 0.0 ]
-					},
-					"rotation" : {
-						"0.2" : {
-							"post" : [ "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ],
-							"pre" : [ 36.0, 0.0, 0.0 ]
-						},
-						"1.8" : {
-							"post" : [ 36.0, 0.0, 0.0 ],
-							"pre" : [ "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ]
-						}
-					}
-				}
-			}
-		}
-	}
+            "sound_effects": {
+                "0.0": {
+                    "effect": "meow"
+                }
+            },
+            "bones": {
+                "head": {
+                    "position": {
+                        "0": [0.0, 0.0, 0.0],
+                        "0.2": [0.0, -9.0, 0.0],
+                        "1.8": [0.0, -9.0, 0.0],
+                        "2": [0.0, 0.0, 0.0]
+                    },
+                    "rotation": {
+                        "0.2": {
+                            "post": [
+                                "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))",
+                                0.0,
+                                0.0
+                            ],
+                            "pre": [36.0, 0.0, 0.0]
+                        },
+                        "1.8": {
+                            "post": [36.0, 0.0, 0.0],
+                            "pre": [
+                                "180.0 * (0.2 + 0.07 * math.sin(q.key_frame_lerp_time * 1644.39))",
+                                0.0,
+                                0.0
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -151,23 +159,23 @@ You can call more than one particle at the same time:
 
 First let's add a locator for our particle. Go to "Edit" section, select a group, right-click and choose "Add Locator":
 
-![](/assets/images/visuals/animation-effects/add-locator.png)
+![](add-locator.png)
 
 Rename it and move where you want.
 
 Then go to "Animate" section, choose an animation and click on a magic stick icon:
 
-![](/assets/images/visuals/animation-effects/add-effect.png)
+![](add-effect.png)
 
 Now click "+" to open menu and specify the data:
 
-![](/assets/images/visuals/animation-effects/specify-data.png)
+![](specify-data.png)
 
 You can attach a sound to animation the same way.
 
 Now save your animation and launch the game!
 
-![](/assets/images/visuals/animation-effects/showcase.png)
+![](showcase.png)
 
 :::warning Warning!
 Currently (1.21.1) locators are broken for attachables.

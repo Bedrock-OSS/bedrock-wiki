@@ -1,7 +1,8 @@
 ---
 title: Block Models
+example: block_models
 description: Learn how to set up a custom model for your block.
-category: Visuals
+category: Sound & Visuals
 tags:
     - guide
     - beginner
@@ -22,7 +23,7 @@ You should learn the main features of Minecraft geometry tailored towards creati
 
 Open Blockbench and create a new `Bedrock Block` project.
 
-![New project panel with Bedrock Block selected](/assets/images/blocks/block-models/new_project.png)
+![New project panel with Bedrock Block selected](new_project.png)
 
 Now you can give your model an identifier! Your file name can be decided here, or changed later.
 
@@ -33,7 +34,7 @@ Model identifiers are **not namespaced and cannot contain colons**.
 Colons were previously used for model inheritance and are invalid in modern geometry formats.
 :::
 
-![](/assets/images/blocks/block-models/project_settings.png)
+![](project_settings.png)
 
 ## Adding Cubes
 
@@ -43,17 +44,17 @@ All cubes must be contained within **bones**, which act as groups.
 First, let's create a root bone for our model from the outliner by clicking on `Add Group`.
 Bones can be renamed by pressing `F2`.
 
-![](/assets/images/blocks/block-models/root_bone.png)
+![](root_bone.png)
 
 The "paper bag" model will need two cubes: one for the handle, and one for the main bag.
 These can be added by selecting your root bone and clicking `Add Cube`.
 
-<WikiImage src="/assets/images/blocks/block-models/new_cube.png" alt width="600" class="my-4" />
+<WikiImage src="new_cube.png" alt width="600" class="my-4" />
 
 Cubes can be moved, resized and rotated from the top toolbar.
 Below are the two cubes my "paper_bag" model will use.
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_cubes.png" alt="" width="300" />
+<WikiImage src="paper_bag_cubes.png" alt="" width="300" />
 
 ## Removing Faces
 
@@ -62,16 +63,12 @@ In my example, the top face of the paper_bag should be removed so that you can s
 
 To remove a face, click on it in the preview and remove its UV.
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_top_removed.png" alt="" width="600" />
+<WikiImage src="paper_bag_top_removed.png" alt="" width="600" />
 
 Additionally, only the north and south faces of the handle should be visible.
 You can select multiple faces by holding Ctrl while clicking on the face names in the UV panel.
 
-<WikiImage
-    src="/assets/images/blocks/block-models/paper_bag_handle_faces_removed.png"
-    alt=""
-    width="600"
-/>
+<WikiImage src="paper_bag_handle_faces_removed.png" alt="" width="600" />
 
 ## Previewing Textures
 
@@ -81,49 +78,26 @@ Textures can be created in Blockbench by clicking `Create Texture` and selecting
 
 The "paper_bag" model has multiple pre-made textures, listed below:
 
--   `textures/blocks/paper_bag.png`
+<div style="display: grid; grid-template-columns: repeat(auto-fill, 256px); column-gap: 1em;">
 
-    <WikiImage
-        src="/assets/images/blocks/block-models/paper_bag.png"
-        style="background-color: rgb(0,0,0,0.15);"
-        pixelated
-        width="128"
-    />
+<ExampleFile path="RP/textures/wiki/blocks/paper_bag.png" />
+<ExampleFile path="RP/textures/wiki/blocks/paper_bag_bottom_fold.png" />
+<ExampleFile path="RP/textures/wiki/blocks/paper_bag_side_gusset.png" />
 
--   `textures/blocks/paper_bag_bottom_fold.png`
-
-    <WikiImage
-        src="/assets/images/blocks/block-models/paper_bag_bottom_fold.png"
-        style="background-color: rgb(0,0,0,0.15);"
-        pixelated
-        width="128"
-    />
-
--   `textures/blocks/paper_bag_side_gusset.png`
-
-    <WikiImage
-        src="/assets/images/blocks/block-models/paper_bag_side_gusset.png"
-        style="background-color: rgb(0,0,0,0.15);"
-        pixelated
-        width="128"
-    />
+</div>
 
 These can be imported into Blockbench and then dragged onto each appropriate block face, although they likely won't look quite right...
 
-<WikiImage
-    src="/assets/images/blocks/block-models/preview_textures_applied.png"
-    alt=""
-    width="300"
-/>
+<WikiImage src="preview_textures_applied.png" alt="" width="300" />
 
 ## Rearranging UVs
 
 To get textures into the right positions, you may need to reposition/resize your faces' UV mapping.
 This can be done by selecting the affected face and using the UV panel.
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_handle_uv.png" alt="" width="300" />
+<WikiImage src="paper_bag_handle_uv.png" alt="" width="300" />
 
-<WikiImage src="/assets/images/blocks/block-models/paper_bag_final.png" alt="" width="300" />
+<WikiImage src="paper_bag_final.png" alt="" width="300" />
 
 ## Changing Material Instances
 
@@ -131,18 +105,18 @@ Applying custom material instance names can be used to easily define how certain
 
 They can be edited by right-clicking on a cube and opening `Edit Material Instances`
 
-![](/assets/images/blocks/block-models/select_edit_material_instances.png)
+![](select_edit_material_instances.png)
 
 For the "paper_bag" model, the east and west faces should have their own texture.
 We can indicate this by giving them a material instance.
 
-![](/assets/images/blocks/block-models/edit_material_instances.png)
+![](edit_material_instances.png)
 
 ## Applying Geometry & Textures
 
 Once exported from `File > Export > Export Bedrock Geometry` into your `RP/models/blocks` folder, you can reference a model in your block JSON.
 
-Then, textures can be applied by material instances through their `RP/textures/terrian_texture.json` shortname.
+Then, textures can be applied by material instances through their `RP/textures/terrain_texture.json` shortname.
 
 :::warning BLOCKS.JSON
 Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block will cause the game to ignore texture definitions in `RP/blocks.json`.
@@ -150,41 +124,11 @@ Adding [`minecraft:geometry`](/blocks/block-components#geometry) to your block w
 If you have textures for your block defined in that file, make sure you move them to [`minecraft:material_instances`](/blocks/block-components#material-instances) for them to appear.
 :::
 
-<CodeHeader>BP/blocks/paper_bag.json</CodeHeader>
+<ExampleFile path="BP/blocks/paper_bag.json" />
 
-```json
-{
-    "format_version": "1.21.130",
-    "minecraft:block": {
-        "description": {
-            "identifier": "wiki:paper_bag",
-            "menu_category": {
-                "category": "items"
-            }
-        },
-        "components": {
-            // Apply your model by referencing its identifier
-            "minecraft:geometry": "geometry.paper_bag",
-            // Apply textures and other rendering configuration
-            "minecraft:material_instances": {
-                "*": {
-                    "texture": "wiki:paper_bag",
-                    "render_method": "alpha_test" // Disable backface culling and allow transparency
-                },
-                "down": {
-                    "texture": "wiki:paper_bag_bottom_fold",
-                    "render_method": "alpha_test" // Must be the same in all instances
-                },
-                // Custom instance name used in model
-                "side_gusset": {
-                    "texture": "wiki:paper_bag_side_gusset",
-                    "render_method": "alpha_test" // Must be the same in all instances
-                }
-            }
-        }
-    }
-}
-```
+## Result
+
+You now know how to make a custom block that uses your own custom model!
 
 ## What's Next?
 

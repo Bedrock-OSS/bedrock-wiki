@@ -19,11 +19,11 @@ To get the validation working, you'll need a validator. You have many options he
 Many schemas exist, with many minor differences. Try out different schemas and see which one works best for you:
 
 | Author                                                                | Supports                                                                                                       | Note                                             |
-|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | [Assassin](https://github.com/aexer0e/bedrock-schema)                 | Behavior pack entity file                                                                                      | The original Schema this article was written for |
 | [Tschrock's](https://github.com/bedrock-studio/bedrock-json-schemas/) | Manifest, Actor Animation Controller, Actor Animations, Actor Resource Definition, Render Controller, Geometry |                                                  |
 | [stirante](https://github.com/stirante/bedrock-shader-schema/)        | Shaders                                                                                                        |                                                  |
-| [KalmeMarq](https://github.com/KalmeMarq/Bugrock-JSON-UI-Schemas/)    | JSON UI files (including _ui_defs.json and _global_variables.json)                                             |                                                  |
+| [KalmeMarq](https://github.com/KalmeMarq/Bugrock-JSON-UI-Schemas/)    | JSON UI files (including \_ui_defs.json and \_global_variables.json)                                           |                                                  |
 
 ## VSCode
 

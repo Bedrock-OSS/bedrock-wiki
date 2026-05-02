@@ -1,8 +1,10 @@
 ---
 title: Item Tags
-description: Item tags can be used to ensure that an item meets certain conditions.
+description: Item tags are used when checking for multiple types of item and can enable vanilla functionality.
 category: General
 nav_order: 3
+related:
+    - /items/vanilla-item-tags
 license: true
 mentions:
     - Xterionix
@@ -10,7 +12,8 @@ mentions:
     - QuazChick
 ---
 
-Item tags can be used to ensure that an item meets certain conditions.
+Item tags are used when checking for multiple types of item and can enable vanilla functionality.
+For a list of vanilla item tags and their functionality, visit [this page](/items/vanilla-item-tags).
 
 ## Applying Tags
 
@@ -18,7 +21,7 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:example_item"
@@ -34,7 +37,20 @@ Item tags can be used to ensure that an item meets certain conditions.
 
 ## Testing for Tags
 
-### From Entities
+### Entity Filter
+
+<CodeHeader>Entity Filter</CodeHeader>
+
+```json
+{
+    "test": "has_equipment_tag",
+    "domain": "hand",
+    "operator": "==",
+    "value": "wiki:example_tag"
+}
+```
+
+### Entity Molang
 
 -   `q.equipped_item_all_tags(slot, ...tags)`{lang=molang}
     -   Returns whether the item at the specified location has all of the listed tags.
@@ -51,7 +67,7 @@ Item tags can be used to ensure that an item meets certain conditions.
 }
 ```
 
-### From Item Descriptors
+### Item Descriptor
 
 -   `q.all_tags(...tags)`{lang=molang}
     -   Returns whether the item has all of the listed tags.
@@ -66,7 +82,7 @@ Item tags can be used to ensure that an item meets certain conditions.
 }
 ```
 
-### From Recipes
+### Recipe Ingredient
 
 <CodeHeader>minecraft:recipe_shapeless</CodeHeader>
 
@@ -77,7 +93,3 @@ Item tags can be used to ensure that an item meets certain conditions.
     }
 ]
 ```
-
-## List of Vanilla Tags
-
-<Table data="vanilla_tags.json" />

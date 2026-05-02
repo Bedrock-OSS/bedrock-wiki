@@ -17,7 +17,7 @@ mentions:
     - Keyyard
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.10
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -170,7 +170,7 @@ Here you need to do two things:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:silver_ore",
@@ -192,4 +192,4 @@ Here you need to do two things:
 
 ## Result
 
-![](/assets/images/blocks/ore-loot/result.gif)
+![](result.gif)

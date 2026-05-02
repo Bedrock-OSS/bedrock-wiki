@@ -1,7 +1,7 @@
 ---
 title: Software & Preparation
 category: Guide
-description: How to setup your developement environment
+description: How to setup your development environment
 nav_order: 3
 prefix: "3. "
 mentions:
@@ -16,7 +16,7 @@ mentions:
     - ChibiMango
     - profeplaysminecraft
     - solvedDev
-    - retr0cube
+    - aym-i
     - SmokeyStack
     - ThomasOrs
     - QuazChick
@@ -91,7 +91,7 @@ bridge. includes a regular text editor for experienced add-on creators and a tre
 
 ## Image Editors
 
-When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixelart. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn.
+When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixel art. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn.
 
 :::tip
 Choose a program that feels comfortable and easy for you to use. Many Add-on creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you!
@@ -102,7 +102,7 @@ Choose a program that feels comfortable and easy for you to use. Many Add-on cre
 Krita is a powerful open-source art programed with the goal of giving free powerful digital art tools to artists. Krita has more than enough features to cover your Minecraft needs and works on a MAC or PC.
 
 -   **+ Pros:** Plenty of features including a pixel brush with an intuitive user interface.
--   **- Cons:** Requires a little time to become familar with the tools.
+-   **- Cons:** Requires a little time to become familiar with the tools.
 
 [Download Krita](https://krita.org/en/)
 
@@ -126,7 +126,7 @@ Paint.NET is a simple yet powerful image editing and art software. Paint.NET may
 
 ### Pixilart
 
-Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixelart details.
+Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixel art details.
 
 -   **+ Pros:** Easy to use and learn. Curated specifically for pixel art.
 -   **- Cons:** Must have internet connection. May be missing tools you want.
@@ -144,7 +144,7 @@ Piskel is a web-based pixel art software with a focus of making pixelated sprite
 
 ### Libresprite
 
-LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of aseprite.
+LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of Aseprite.
 
 -   **+ Pros**: Basic & easy to use, customizable and curated for pixel artists.
 -   **- Cons**: May not work on Mac, maintained only by a small community.

@@ -1,6 +1,8 @@
 ---
 title: On Player Death
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -16,41 +18,45 @@ This system will run your desired commands on the event that a player dies.
 
 ## Setup
 
-_To be typed in Chat:_
+_Type the following command in Chat:_
 
-`/scoreboard objectives add wiki:alive dummy`
+`/scoreboard objectives add wiki:q.is_alive dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
+If you are working with functions and prefer to have the objective added automatically on world initialization, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
 <CodeHeader>BP/functions/wiki/events/player/on_death.mcfunction</CodeHeader>
 
 ```yaml
-## Set Player States
-### Not alive
-scoreboard players set @a[scores={wiki:alive=!2}] wiki:alive 0
-### Alive
-scoreboard players set @e[type=player] wiki:alive 1
+## State Machine
+### Mark all players (@a) as 'dead' (State 0) if not marked already (State -1)
+scoreboard players set @a[scores={wiki:q.is_alive=!-1}] wiki:q.is_alive 0
+### Mark all alive players (@e[type=player]) as 'alive' (State 1)
+scoreboard players set @e[type=player] wiki:q.is_alive 1
 
-## Your Commands Here (Example)
-execute as @a[scores={wiki:alive=0}] run say I died
+## Your Commands Here (Example):
+### Runs only once when player enters 'dead' state
+execute as @a[scores={wiki:q.is_alive=0}] run say I died
+### Runs every tick after player is dead
+execute as @a[scores={wiki:q.is_alive=..0}] at @s run particle minecraft:soul_particle ~~~
 
-## Mark that Commands for Dead Players Have Been Executed
-scoreboard players set @a[scores={wiki:alive=0}] wiki:alive 2
+## Update State
+### Move from state 0 to state -1 for dead players to stop the "once" command from looping
+scoreboard players set @a[scores={wiki:q.is_alive=0}] wiki:q.is_alive -1
 ```
 
-![Chain of Four Command Blocks](/assets/images/commands/command-block-chain/4.png)
+![Chain of 5 Command Blocks](/assets/images/commands/command-block-chain/4.png)
 
 Here, we have used an `/execute - say` command as an example, but you can use any command you prefer and as many as you need.
 
-Just make sure to follow the given order and properly apply the `scores={wiki:alive=0}` selector argument as shown for your desired commands.
+Just make sure to follow the given order and properly apply the `scores={wiki:q.is_alive=0}` selector argument as shown for your desired commands.
 
 ## Explanation
 
--   **`wiki:alive=0`** player is _not_ alive (dead).
--   **`wiki:alive=1`** player is alive.
--   **`wiki:alive=2`** player is dead and we have executed our desired commands on/from them.
+-   **`wiki:q.is_alive=0`** player is _not_ alive (dead).
+-   **`wiki:q.is_alive=1`** player is alive.
+-   **`wiki:q.is_alive=2`** player is dead and we have executed our desired commands on/from them.
 
 **Purpose of Each Command:**
 
@@ -102,7 +108,7 @@ If two or more players are teleported to the same point and one of them dies but
 -   Make sure you add the `wiki:q.is_dead` scoreboard objective:
     -   `/scoreboard objectives add wiki:q.is_dead dummy`
 
-<CodeHeader>BP/functions/detect_state/player/is_dead.mcfunction</CodeHeader>
+<CodeHeader>BP/functions/detect/player/is_dead.mcfunction</CodeHeader>
 
 ```yaml
 ## Set Player States
@@ -130,5 +136,5 @@ execute as @a[scores={wiki:q.is_dead=1..}] run say I died and haven't respawned 
 
 1. **Command 1:** All alive players are marked as _not_ dead (0)
 2. **Command 2:** If there is no alive player within a 0.01 block radius of a player, they will be marked as dead (1)
-    - The logic is that only the player themself can be present within such a small radius from them. The probability of two or more players to precisely stand at the same point by themselves (without `/tp` command) is close to zero.
+    - The logic is that only the player themselves can be present within such a small radius from them. The probability of two or more players to precisely stand at the same point by themselves (without `/tp` command) is close to zero.
 3. **Command 3, 4:** These are example commands (for each state) which can be modified / expanded.

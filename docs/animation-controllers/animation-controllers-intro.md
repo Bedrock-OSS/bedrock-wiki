@@ -49,13 +49,13 @@ We can annotate these states with the two pieces of information described above:
 
 Here is the state-machine, visualized as a flow-chart:
 
-![](/assets/images/concepts/animation-controllers/two_state_FSM.png)
+![](two_state_FSM.png)
 
 In this flowchart, states are represented by rectangles, and arrows represent _transitions_ from one state to another.
 
 Flowcharts are a nice way to visualize multi-state finite-state-machines, is it allows you to follow the logical _flow_ of the animation. Let us look at a more detailed example, which adds a third `explode` state:
 
-![](/assets/images/concepts/animation-controllers/three_state_FSM.png)
+![](three_state_FSM.png)
 
 As you can see, states can go to more than one state at once. States can also be dead-ends (since the helicopter is dead, and doesn't need further animation). The branching flow of animation-controllers is a large part of what makes them powerful.
 
@@ -322,7 +322,7 @@ Here is an example BP animation controller, which exhibits some of this behavior
             "initial_state": "ground",
             "states": {
                 "ground": {
-                    "on_entry": ["/say I am now in the ground!"],
+                    "on_entry": ["/say I am now on the ground!"],
                     "transitions": [
                         {
                             "flying": "!q.is_on_ground"

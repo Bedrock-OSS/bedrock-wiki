@@ -1,7 +1,7 @@
 ---
 title: Block Texture Animation
 description: Learn how to create flipbook (animated) textures for blocks.
-category: Visuals
+category: Sound & Visuals
 tags:
     - intermediate
 mentions:
@@ -32,7 +32,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:flipbook_block",
@@ -52,7 +52,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 }
 ```
 
-![](/assets/images/blocks/flipbook-textures/animated_texture_1.gif)
+![](animated_texture_1.gif)
 
 Now it has animated texture!
 
@@ -66,8 +66,6 @@ After making block have animated texture, it is time to figure out how it all wo
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "magma": {
             "textures": "textures/blocks/magma"
@@ -161,6 +159,6 @@ Changes size of the peace of used texture. Can only take values that are multipl
 
 ## Result
 
-![](/assets/images/blocks/flipbook-textures/animated_texture_2.gif)
+![](animated_texture_2.gif)
 
 Now you can modify vanilla flipbook textures or create your own ones!

@@ -36,11 +36,9 @@ An 'emitter' or 'particle emitter' is a system that can spawn many particles, ei
 
 To create a particle, you need a resource pack, a texture, and a particle definition file:
 
-<FolderView
-:paths="[
+<FolderView :paths="[
     'RP/particles/snowflake.json',
-    'RP/textures/particles/snowflake.png'
-]"
-> </FolderView>
+    'RP/textures/wiki/particles/snowflake.png'
+]" />
  
 You can use [Snowstorm](https://jannisx11.github.io/snowstorm/) to create particles.

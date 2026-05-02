@@ -44,13 +44,13 @@ Sound files themselves are added inside of the `sounds` folder, and can be any o
 
 ```json
 {
-	"format_version": "1.14.0",
-	"sound_definitions": {
-		"example.toot": {
-			"category": "neutral",
-			"sounds": ["sounds/trumpet"]
-		}
-	}
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "example.toot": {
+            "category": "neutral",
+            "sounds": ["sounds/trumpet"]
+        }
+    }
 }
 ```
 
@@ -69,7 +69,7 @@ If `"max_distance"`is not given in the sound's definition, it is equivalent to `
 
 Approximate sound attenuation by distance. The actual graph might not be linear.
 
-![](/assets/images/concepts/sounds/sound_graph.png)
+![](sound_graph.png)
 
 Shown above is the approximate sound attenuation factor by distance **for playing sounds with a volume parameter greater than or equal to 1**. Notice how the playsound `<volume>` limits the sound's audible range.
 The axis `distance` is the distance of the sound listener (player) to the sound source. The corresponding `volume` axis' value is the factor for the playsound volume capped to 1, multiplied by the sound definition's volume to get the final volume of the sound you hear. As an expression this could be written as: `final_volume = min(playsound_volume, 1) * graph_volume * sound_definition_volume`.
@@ -89,7 +89,7 @@ In the example above, I showed two `top-level` fields: `category` and `sounds`. 
 Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get other effects.
 
 | Category | Note                                            |
-|----------|-------------------------------------------------|
+| -------- | ----------------------------------------------- |
 | block    |                                                 |
 | bottle   |                                                 |
 | bucket   |                                                 |
@@ -117,17 +117,13 @@ In the example above, I showed `sounds` as simply a list with a single path. Thi
 
 ```json
 {
-	"format_version": "1.14.0",
-	"sound_definitions": {
-		"example.toot": {
-			"category": "neutral",
-			"sounds": [
-				"sounds/trumpet",
-				"sounds/trumpet2",
-				"sounds/trumpet3"
-			]
-		}
-	}
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "example.toot": {
+            "category": "neutral",
+            "sounds": ["sounds/trumpet", "sounds/trumpet2", "sounds/trumpet3"]
+        }
+    }
 }
 ```
 
@@ -195,7 +191,7 @@ If we want our sounds to run automatically, we can add them into the `sounds.jso
 Sounds can be added into various categories:
 
 | Category                | Note                                                                             |
-|-------------------------|----------------------------------------------------------------------------------|
+| ----------------------- | -------------------------------------------------------------------------------- |
 | block_sounds            | Contains hit, step, and break sounds for blocks                                  |
 | entity_sounds           | Contains death, ambient, hurt, etc. sounds for entities (Including custom ones!) |
 | individual_event_sounds | Contains sounds like beacon activation, chest-close, or explode                  |
@@ -208,7 +204,7 @@ I assume that sounds can be added in other categories, but I personally only hav
 Common events:
 
 | Events         | Note                                                     |
-|----------------|----------------------------------------------------------|
+| -------------- | -------------------------------------------------------- |
 | ambient        | Played randomly, such as grunts, clucks, or ghast noises |
 | attack         | For melee attacking                                      |
 | attack.strong  | For attacking with behavior.delayed_attack               |
@@ -226,7 +222,7 @@ Common events:
 There are also many sound events, which _most likely_ trigger automatically, but which I don't have details for, such as:
 
 | Unknown Categories |
-|--------------------|
+| ------------------ |
 | ambient.in.water   |
 | breathe            |
 | death.in.water     |
@@ -249,26 +245,26 @@ There are also many sound events, which _most likely_ trigger automatically, but
 
 ```json
 {
-	"entity_sounds": {
-		"entities": {
-			"wiki:elephant": {
-				"volume": 1,
-				"pitch": [0.9, 1.0],
-				"events": {
-					"step": {
-						"sound": "elephant.step",
-						"volume": 0.18,
-						"pitch": 1.1
-					},
-					"ambient": {
-						"sound": "elephant.trumpet",
-						"volume": 0.11,
-						"pitch": 0.9
-					}
-				}
-			}
-		}
-	}
+    "entity_sounds": {
+        "entities": {
+            "wiki:elephant": {
+                "volume": 1,
+                "pitch": [0.9, 1.0],
+                "events": {
+                    "step": {
+                        "sound": "elephant.step",
+                        "volume": 0.18,
+                        "pitch": 1.1
+                    },
+                    "ambient": {
+                        "sound": "elephant.trumpet",
+                        "volume": 0.11,
+                        "pitch": 0.9
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -310,7 +306,9 @@ This example shows playing an explosion sound, synced using an animation control
 }
 ```
 
-<CodeHeader>RP/animation_controllers/custom_tnt.animation_controllers.json#controller.animation.custom_tnt</CodeHeader>
+<CodeHeader>
+    RP/animation_controllers/custom_tnt.animation_controllers.json#controller.animation.custom_tnt
+</CodeHeader>
 
 ```json
 "states":{

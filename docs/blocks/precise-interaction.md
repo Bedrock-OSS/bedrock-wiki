@@ -12,7 +12,7 @@ mentions:
 hidden: true
 ---
 
-::: tip FORMAT VERSION 1.21.130
+::: tip FORMAT VERSION 1.26.10
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
@@ -214,7 +214,7 @@ This could be used in a [custom component](/blocks/block-events) to get the sele
 const BlockQuadrantInteractionComponent = {
     onPlayerInteract({ block, face, faceLocation }) {
         // Returns the selected area's index (0, 1, 2 or 3), or name if provided (e.g. "top_left").
-        // If no plain was selected, `undefined` is retured.
+        // If no plain was selected, `undefined` is returned.
         const selectedQuadrant = quadrants.getSelected({
             face,
             faceLocation,
@@ -415,7 +415,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -627,7 +627,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",

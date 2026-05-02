@@ -1,7 +1,7 @@
 ---
 title: Custom Pottery Sherds
 description: Learn how to make custom pottery sherds.
-category: Tutorials
+category: Vanilla Re-Creations
 tags:
     - easy
 license: true
@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.10
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) and [item tags](/items/item-tags) before starting!
 :::
@@ -40,7 +40,7 @@ item.wiki:custom_pottery_sherd.name=Custom Pottery Sherd
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_pottery_sherd",
@@ -65,7 +65,7 @@ item.wiki:custom_pottery_sherd.name=Custom Pottery Sherd
 Now that we have registered our sherd, we can test it by putting the sherd in a crafting table.
 If you applied the tag correctly, the crafting table should output a decorated pot!
 
-![Custom pottery sherd item being used to craft a Decorated Pot](/assets/images/items/custom-pottery-sherds/crafting.png)
+![Custom pottery sherd item being used to craft a Decorated Pot](crafting.png)
 
 However, the decorated pot still will not display the sherd itself. This is because we haven't told the decorated pot what image to display!
 
@@ -74,8 +74,8 @@ However, the decorated pot still will not display the sherd itself. This is beca
 Here's an example pottery pattern texture that we will use for this tutorial:
 
 <WikiImage
-    src="/assets/images/items/custom-pottery-sherds/custom_pottery_pattern.png"
-    caption="RP/textures/blocks/custom_pottery_pattern.png"
+    src="custom_pottery_pattern.png"
+    caption="RP/textures/wiki/blocks/custom_pottery_pattern.png"
     pixelated
 />
 
@@ -92,7 +92,7 @@ Add the following JSON file to your resource pack:
             "identifier": "minecraft:decorated_pot",
             "textures": {
                 // Each shortname listed here should be the identifier of your item without its namespace.
-                "custom_pottery_sherd": "textures/blocks/custom_pottery_pattern" // Path to custom pot texture
+                "custom_pottery_sherd": "textures/wiki/blocks/custom_pottery_pattern" // Path to custom pot texture
             }
         }
     }
@@ -101,7 +101,7 @@ Add the following JSON file to your resource pack:
 
 If you've done everything right, your decorated pot will now display your sherd instead of being a blank pot!
 
-![Decorated Pot with a custom pattern on one face](/assets/images/items/custom-pottery-sherds/decorated_pot.png)
+![Decorated Pot with a custom pattern on one face](decorated_pot.png)
 
 ## Additional Notes
 

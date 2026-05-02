@@ -24,7 +24,7 @@ In Minecraft, we can create custom items, which can be dropped, traded, crafted,
 
 In this tutorial we are going to learn how to create a simple "ectoplasm" item, which we will later use as a loot-table drop for our ghost entity.
 
-<WikiImage src="/assets/images/guide/custom_item/ectoplasm_view.png" width="150" />
+<WikiImage src="ectoplasm_view.png" width="150" />
 
 Conceptually, items are made up of two parts:
 
@@ -56,7 +56,7 @@ We are able to define how our custom item will behave by using behavior componen
 </Spoiler>
 
 Components contain information which tells the game what our item should do. For example the component [`"minecraft:glint"`](/items/item-components#glint) determines whether the item should have an enchanted glint to it, so setting it to `true` will apply it.
-All components have a `value` attached to it which we can edit to get the behaviour we want.
+All components have a `value` attached to it which we can edit to get the behavior we want.
 
 For our ectoplasm, we will set it to have a stack size of 16, similar to eggs. To do this we use the component [`"minecraft:max_stack_size"`](/items/item-components#max-stack-size) and set its value to `16`.
 
@@ -87,16 +87,16 @@ We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of
 
 ```json
 {
-	"format_version": "1.21.130",
-	"minecraft:item": {
-		"description": { ... },
-		"components": { ... }
-	}
+    "format_version": "1.26.10",
+    "minecraft:item": {
+        "description": { ... },
+        "components": { ... }
+    }
 }
 ```
 
 Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
-The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.21.130` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
+The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.26.10` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
 
 The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
 
@@ -133,7 +133,7 @@ With that, we have now fully defined our item's behavior. This is what your file
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
@@ -188,7 +188,7 @@ All item shortnames are stored in one file called `item_texture.json` which is i
 
 ```json
 {
-	"texture_data": { ... }
+    "texture_data": { ... }
 }
 ```
 
@@ -200,7 +200,7 @@ Under `texture_data` will our list of item shortname definitions. An example def
 
 ```json
 "wiki:ectoplasm": {
-	"textures": "textures/items/ectoplasm"
+    "textures": "textures/wiki/items/ectoplasm"
 }
 ```
 
@@ -216,8 +216,8 @@ To finally apply our texture to our item, we add the `minecraft:icon` component 
 
 ```json
 "components": {
-	"minecraft:max_stack_size": 16,
-	"minecraft:icon": "wiki:ectoplasm"
+    "minecraft:max_stack_size": 16,
+    "minecraft:icon": "wiki:ectoplasm"
 }
 ```
 
@@ -244,17 +244,17 @@ Now your first custom item, Ectoplasm, is complete! If everything has been done 
 Your folder structure should look like this:
 
 <FolderView :paths="[
-	'RP/texts/en_US.lang',
-	'RP/texts/languages.json',
-	'RP/textures/wiki/items/ectoplasm.png',
-	'RP/textures/item_texture.json',
-	'RP/manifest.json',
-	'RP/pack_icon.png',
-	'BP/items/ectoplasm.json',
-	'BP/texts/en_US.lang',
-	'BP/texts/languages.json',
-	'BP/manifest.json',
-	'BP/pack_icon.png',
+    'RP/texts/en_US.lang',
+    'RP/texts/languages.json',
+    'RP/textures/wiki/items/ectoplasm.png',
+    'RP/textures/item_texture.json',
+    'RP/manifest.json',
+    'RP/pack_icon.png',
+    'BP/items/ectoplasm.json',
+    'BP/texts/en_US.lang',
+    'BP/texts/languages.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
 ]" />
 
 <Spoiler title="Full ectoplasm.json">
@@ -263,7 +263,7 @@ Your folder structure should look like this:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:ectoplasm",
@@ -289,7 +289,7 @@ Your folder structure should look like this:
 {
     "texture_data": {
         "wiki:ectoplasm": {
-            "textures": "textures/items/wiki/ectoplasm"
+            "textures": "textures/wiki/items/ectoplasm"
         }
     }
 }
@@ -301,6 +301,8 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 
 ## Your Progress So Far
 
+:::tip What you have learned
+
 -   [x] Setup your pack
 -   [x] Create a custom item
 -   [x] How to format the behavior and resource files for an item
@@ -308,3 +310,7 @@ If you're having some trouble, check the [Troubleshooting page](/items/troublesh
 -   [x] How to set an items texture
 -   [ ] Create a custom entity
 -   [ ] Create the entity's loot, spawn rules, and a custom recipe
+
+:::
+
+<Button link="/guide/custom-entity">Next: Custom Entity</Button>

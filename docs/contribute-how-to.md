@@ -41,7 +41,7 @@ If you want to edit the wiki more frequently, you might want to start using Git,
 
 ### Visual Studio Code
 
-[Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) is a great environment to edit all your files, code something, etc. You can use other editors too, but in this tutorial we will guide you trough the installation of VSCode.
+[Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) is a great environment to edit all your files, code something, etc. You can use other editors too, but in this tutorial we will guide you through the installation of VSCode.
 
 ![](/assets/images/contribute/setting_up_software/vscode/vsc_download.png)
 

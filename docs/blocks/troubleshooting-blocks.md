@@ -29,7 +29,7 @@ Fix issues related to block textures.
 
 ## 1.1 - Texture is Black and Magenta
 
-I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](/assets/images/blocks/block_tr/tr_dirt.png), Log-like ![](/assets/images/blocks/block_tr/tr_log.png), Grass-like ![](/assets/images/blocks/block_tr/tr_grass.png)
+I will be reviewing three different types of blocks that have different layouts: Dirt-like ![](dirt.png), Log-like ![](log.png), Grass-like ![](grass.png)
 
 Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is properly named.
 
@@ -37,26 +37,24 @@ Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is pro
 
 ```json
 {
-    "resource_pack_name": "wiki",
-    "texture_name": "atlas.terrain",
     "texture_data": {
         "wiki:dirt_like": {
-            "textures": "textures/blocks/dirt_like" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/dirt_like" // You can replace this with anything, just remember the name
         },
         "wiki:custom_log_top": {
-            "textures": "textures/blocks/custom_log_top" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_log_top" // You can replace this with anything, just remember the name
         },
         "wiki:custom_log_side": {
-            "textures": "textures/blocks/custom_log_side" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_log_side" // You can replace this with anything, just remember the name
         },
         "wiki:custom_grass_top": {
-            "textures": "textures/blocks/custom_grass_top" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_grass_top" // You can replace this with anything, just remember the name
         },
         "wiki:custom_grass_bottom": {
-            "textures": "textures/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_grass_bottom" // You can replace this with anything, just remember the name
         },
         "wiki:custom_grass_side": {
-            "textures": "textures/blocks/custom_grass_side" // You can replace this with anything, just remember the name
+            "textures": "textures/wiki/blocks/custom_grass_side" // You can replace this with anything, just remember the name
         }
     }
 }
@@ -70,7 +68,7 @@ Dirt like block example:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:dirt_like"
@@ -92,7 +90,7 @@ Log like block example:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_log"
@@ -119,7 +117,7 @@ Grass-like block example:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_grass"
@@ -147,12 +145,7 @@ If you followed this properly, your block should now have correct texture.
 
 Problem: My custom block has turned into a dirt block with a question mark on it.
 
-<WikiImage
-    src="/assets/images/blocks/block_tr/unknown.png"
-    pixelated="true"
-    width="128"
-    class="my-4"
-/>
+<WikiImage src="unknown.png" pixelated="true" width="128" class="my-4" />
 
 This an `unknown` block, which appears when the block identifier is changed or if your block JSON invalid.
 
@@ -174,7 +167,7 @@ Solution: Navigate to your block file. Navigate to your `material_instances` com
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         ...
         "components": {

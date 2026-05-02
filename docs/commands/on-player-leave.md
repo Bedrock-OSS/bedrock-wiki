@@ -1,6 +1,8 @@
 ---
 title: On Player Leave
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -14,11 +16,11 @@ description: This system will run your desired commands on the event that a play
 
 This system will run your desired commands on the event that a player leaves the world.
 
-> **Note:** You cannot execute commands on *players* that leave using target selectors. However, you can use the [On Player Join](/commands/on-player-join) system to execute commands when they rejoin.
+> **Note:** You cannot execute commands on _players_ that leave using target selectors. However, you can use the [On Player Join](/commands/on-player-join) system to execute commands when they rejoin.
 
 ## Setup
 
-*To be typed in chat:*
+_Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:player_count dummy`
 
@@ -32,7 +34,7 @@ If you are working with functions and prefer to have the objective added automat
 ## Get Current Tick Player Count
 ### Reset score
 scoreboard players reset .CurrentTick wiki:player_count
-### Tally score 
+### Tally score
 execute as @a run scoreboard players add .CurrentTick wiki:player_count 1
 
 ## Get Difference (Current - Previous)
@@ -62,17 +64,20 @@ Since `.PreviousTick` score is updated at the end of the command loop, it can be
 The player count is obtained using the [Entity Counter](/commands/entity-counter) system. Reading that page is recommended to better understand this system.
 
 By subtracting `.PreviousTick` score from `.CurrentTick` score, we can determine if the player count has:
-- Decreased (`..-1`)
-- Increased (`1..`)
-- Remains unchanged (`0`)
+
+-   Decreased (`..-1`)
+-   Increased (`1..`)
+-   Remains unchanged (`0`)
 
 If it has decreased, it means one or more players have left the game.
 Using this, we can execute commands when `.CurrentTick` is `-1` or lower.
-- For example, if there were 10 players and one leaves:
-    - `.CurrentTick - .PreviousTick = 9 - 10 = -1`
-    - We detect this using `..-1`
 
-- `.CurrentTick` is obtained first, subtraction is performed next, commands are executed based on the result, and finally, `.PreviousTick` is updated to be used in the next game tick.
+-   For example, if there were 10 players and one leaves:
+
+    -   `.CurrentTick - .PreviousTick = 9 - 10 = -1`
+    -   We detect this using `..-1`
+
+-   `.CurrentTick` is obtained first, subtraction is performed next, commands are executed based on the result, and finally, `.PreviousTick` is updated to be used in the next game tick.
 
 :::tip
 All commands in a command-block chain or function will execute sequentially but within the same game tick, regardless of the number of commands involved. This system works because commands execute at the end of a game tick after all events (such as player join, leave, death, etc.) occur.

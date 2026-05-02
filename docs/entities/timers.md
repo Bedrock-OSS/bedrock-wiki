@@ -2,15 +2,15 @@
 title: Entity Timers
 category: Tutorials
 tags:
-  - intermediate
+    - intermediate
 mentions:
-  - SirLich
-  - Joelant05
-  - MedicalJewel105
-  - aexer0e
-  - Justash01
-  - TheItsNameless
-  - zheaEvyline
+    - SirLich
+    - Joelant05
+    - MedicalJewel105
+    - aexer0e
+    - Justash01
+    - TheItsNameless
+    - zheaEvyline
 description: This article hopes to provide an extensive list which details the many ways which entity timers can be made.
 ---
 
@@ -178,27 +178,24 @@ You can set up timelines like this:
 
 ```json
 {
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.command.example_timeline": {
-			"timeline": {
-				"0.0": "/say this will trigger instantly",
-				"3.0": "/say this will trigger after 3 seconds"
-			},
-			"animation_length": 3.1
-		},
-		"animation.command.example_timeline_2": {
-			"timeline": {
-				"100": "/say this will trigger after 100 seconds",
-				"0.0": [
-					"/say you can trigger multiple events at once",
-					"/say by using timelines."
-				],
-				"55.55": "/say this will trigger after 55.55 seconds."
-			},
-			"animation_length": 100.1
-		}
-	}
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.command.example_timeline": {
+            "timeline": {
+                "0.0": "/say this will trigger instantly",
+                "3.0": "/say this will trigger after 3 seconds"
+            },
+            "animation_length": 3.1
+        },
+        "animation.command.example_timeline_2": {
+            "timeline": {
+                "100": "/say this will trigger after 100 seconds",
+                "0.0": ["/say you can trigger multiple events at once", "/say by using timelines."],
+                "55.55": "/say this will trigger after 55.55 seconds."
+            },
+            "animation_length": 100.1
+        }
+    }
 }
 ```
 
@@ -252,6 +249,7 @@ A very useful feature of the timer component is its ability to define a random i
 Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 2 and 7. The animation finishes when the current animation time is greater than or equal to the value of this v.
 
 **Notes**:
+
 -   The animation length can be set to any value greater than the maximum end of the time range (100 is used as a general template)
 -   math.random(a, b) is used to trigger an event in the range [a, b]
 -   math.floor(math.random(a, b.99)) may be used to end the timer at integer values (0.99 must be added to b)
@@ -313,6 +311,7 @@ Another useful feature of the timer component is its ability to trigger events a
 Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 0 and 100 (sum of the weights). The transitions are laid out with the list of values ordered from the smallest time to the largest time. This is done so multiple && operators are not required in the latter transitions to define the variable's range (the query for the smallest times return true first and have their weights checked before the others--flipping 2 and 5 would result in 2 mistakenly having a weight of 90 instead of 30). The animation finishes when the current animation time is greater than or equal to a time in the list and the value of the random variable falls within that time's defined weight range.
 
 **Notes**:
+
 -   The animation length can be set to any value greater than the maximum end of the time range (100 is used as a general template)
 -   For this particular format to work, order the list of valid times from smallest to largest
 -   To assign a weight to a time in the list, add the weight to the value the randomized variable must be less than in the list's previous entry (e.g. 5 seconds has a weight of 90 - 30 = 60)

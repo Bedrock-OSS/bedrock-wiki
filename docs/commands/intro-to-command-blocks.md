@@ -1,6 +1,8 @@
 ---
 title: Intro to Command Blocks
 category: General
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -25,15 +27,15 @@ They can only be placed or destroyed by a player with the Operator permission in
 
 ## Command Block UI
 
-![Command Block Ui](/assets/images/commands/intro-to-command-blocks/command-block-ui.png)
+![Command Block Ui](command-block-ui.png)
 
 ## Command Block Types
 
-![impulse Command Block](/assets/images/commands/intro-to-command-blocks/command-block.impulse.png) **Impulse** runs the command **once** each time it is powered.
+![impulse Command Block](command-block.impulse.png) **Impulse** runs the command **once** each time it is powered.
 
-![Chain Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain.png) **Chain** runs the command in a sequence, ie., only after the previous command block it is connecting from was run.
+![Chain Command Block](command-block.chain.png) **Chain** runs the command in a sequence, ie., only after the previous command block it is connecting from was run.
 
-![Repeat Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat.png) **Repeat** runs the command every game-tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/commands/intro-to-command-blocks#command-block-tick-delay).
+![Repeat Command Block](command-block.repeat.png) **Repeat** runs the command every game-tick. There are approximately 20 ticks per second. A delay can be applied to adjust how often the command is executed, explained [below](/commands/intro-to-command-blocks#command-block-tick-delay).
 
 ## Command Block Conditions
 
@@ -41,11 +43,11 @@ They can only be placed or destroyed by a player with the Operator permission in
 
 > Conditional command block states are shown by a small indent into the command block's arrow texture, as shown below:
 >
-> -   ![Impulse Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.impulse-conditional.png) Impulse Conditional Command Block
-> -   ![Chain Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain-conditional.png) Chain Conditional Command Block
-> -   ![Repeat Conditional Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat-conditional.png) Repeating Conditional Command Block
+> -   ![Impulse Conditional Command Block](command-block.impulse-conditional.png) Impulse Conditional Command Block
+> -   ![Chain Conditional Command Block](command-block.chain-conditional.png) Chain Conditional Command Block
+> -   ![Repeat Conditional Command Block](command-block.repeat-conditional.png) Repeating Conditional Command Block
 
-**Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was succesful (`true`) or failed (`false`) the command block will still run the command.
+**Unconditional** command blocks will run the command regardless of the outcome. Whether the previous command block it was connecting from had an output that was successful (`true`) or failed (`false`) the command block will still run the command.
 
 ## Command Block Redstone States
 
@@ -60,7 +62,7 @@ In this option, you may specify how much delay there should be before the comman
 The ticks refer to Minecraft game-ticks. A **tick** is simply a unit of measure for time, in games. 1 second in real life is approximately 20 game-ticks in Minecraft.
 
 :::tip
-![Approximately Where Commands Run in a Game Tick](/assets/images/commands/intro-to-command-blocks/game-tick.png)
+![Approximately Where Commands Run in a Game Tick](game-tick.png)
 :::
 
 ## Command Block Hover Note
@@ -68,11 +70,11 @@ The ticks refer to Minecraft game-ticks. A **tick** is simply a unit of measure 
 This option allows you to put a hovering text over your command blocks. It's useful for giving short-names for easy identification when working with multiple command-blocks-chains.
 
 When a command is run, the hover note will be displayed along with the output in chat if gamerule `commandblockoutput` is enabled.
-![Command Block Hover Note](/assets/images/commands/intro-to-command-blocks/command-block-hover-note.png)
+![Command Block Hover Note](command-block-hover-note.png)
 
 ## Paste Button
 
-![Command Block Paste Button](/assets/images/commands/intro-to-command-blocks/command-block-paste-button.png)
+![Command Block Paste Button](command-block-paste-button.png)
 
 The paste button allows you to paste previously copied coordinates into the 'Command Input' box.
 
@@ -102,10 +104,10 @@ When placing command blocks in a chain (arranged to work in sequence) for any sy
 The arrow/facing direction can be observed from the command block texture on the sides.
 
 **✅ Correct Placement**
-![Correct Command Block Placement](/assets/images/commands/intro-to-command-blocks/command-block-placement.correct.png)
+![Correct Command Block Placement](command-block-placement.correct.png)
 
 **❌ Incorrect Placement**
-![Incorrect Command Block Placement](/assets/images/commands/intro-to-command-blocks/command-block-placement.incorrect.png)
+![Incorrect Command Block Placement](command-block-placement.incorrect.png)
 
 ## Troubleshooting Command Blocks
 
@@ -136,7 +138,7 @@ If nothing seems to work, simply break and replace that command block.
 
 :::
 
-> When setting up command block systems following codeblock/mcfunction, always keep in mind that the first command block will be ![Repeat Command Block](/assets/images/commands/intro-to-command-blocks/command-block.repeat.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![Chain Command Block](/assets/images/commands/intro-to-command-blocks/command-block.chain.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
+> When setting up command block systems following codeblock/mcfunction, always keep in mind that the first command block will be ![Repeat Command Block](command-block.repeat.png) **`Unconditional Always Active`** and the rest of the command blocks will be ![Chain Command Block](command-block.chain.png) **`Unconditional Always Active`**. All set to 0 ticks delay, unless specified otherwise.
 >
 > ![Chain of Four Command Blocks](/assets/images/commands/command-block-chain/4.png)
 

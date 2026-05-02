@@ -80,7 +80,7 @@ Check the Microsoft docs to see what system events are available within Minecraf
 
 :::
 
-Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceedes a performance boundary, depending on the configuration of the script environment.
+Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceeds a performance boundary, depending on the configuration of the script environment.
 
 ```js
 import { system } from "@minecraft/server";
@@ -94,7 +94,7 @@ system.beforeEvents.watchdogTerminate.subscribe((event) => {
 
 **ScriptEvents**
 
-ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering the `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block. More information on this event can be found on the [Script Event Documentaion](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/scripteventcommandmessageafterevent) page.
+ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering the `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block. More information on this event can be found on the [Script Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/scripteventcommandmessageafterevent) page.
 
 ```
 /scriptevent <messageId: string> <message: string>
@@ -233,7 +233,17 @@ More information on all the system methods can be found on the [Game Loops & Tim
 
 With the `@minecraft/server` module, developers can define their own custom properties, known as dynamic properties, that can be used and stored within Minecraft. This data is stored specifically in the world's `db` folder using the behavior pack header UUID.
 
-![dynamic_properties](/assets/images/gametest/script-server/dynamic_properties.png)
+[byte]: /assets/images/nbt/byte.png
+[compound]: /assets/images/nbt/compound.png
+[string]: /assets/images/nbt/string.png
+
+![Compound][compound] `DynamicProperties`
+
+> ![Compound][compound] `8a121475-6f9f-4780-a746-2bf25f732204` — Header UUID of the behavior pack
+>
+> > ![String][string] `myColorProperty: "orange"`{lang=js}
+>
+> > ![Byte][byte] `hasOwnerDied: false`{lang=js}
 
 In order to save data, the property must first be initialized. There are multiple ways to declare dynamic properties, either on an entity, world, or item. You can define as many numbers and booleans as you would like, however Minecraft API only allows each - behavior pack to save a limited amount of data per dynamic property.
 

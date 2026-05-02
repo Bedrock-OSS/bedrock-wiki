@@ -47,7 +47,7 @@ Those components below are required to make the entity act as a block, and also 
     "minecraft:damage_sensor": {
         "triggers": [
             {
-                "deals_damage": false,
+                "deals_damage": "no",
                 "cause": "all"
             }
         ]
@@ -112,7 +112,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:align"
@@ -161,13 +161,12 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ```json
 {
-    "format_version": "1.13.0",
+    "format_version": "1.26.10",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:dummy_align", // The dummy entity is used to avoid triggering the entity_spawned event in the original entity.
             "is_spawnable": false,
-            "is_summonable": true,
-            "is_experimental": false
+            "is_summonable": true
         },
         "component_groups": {
             "transform": {
@@ -188,7 +187,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
             "minecraft:damage_sensor": {
                 "triggers": {
                     "cause": "all",
-                    "deals_damage": false
+                    "deals_damage": "no"
                 }
             }
         },
@@ -214,7 +213,7 @@ First, we have to add some textures to your entity file, make sure that you are 
 ```json
 {
     "textures": {
-        "default": "textures/entity/your_texture",
+        "default": "textures/wiki/entity/custom_entity",
         "destroy_stage_0": "textures/environment/destroy_stage_0",
         "destroy_stage_1": "textures/environment/destroy_stage_1",
         "destroy_stage_2": "textures/environment/destroy_stage_2",
@@ -262,7 +261,7 @@ And now we have to add a new render controller. This is going to select differen
                     "texture.destroy_stage_2",
                     "texture.destroy_stage_1",
                     "texture.destroy_stage_0",
-                    "texture.normal"
+                    "texture.default"
                 ]
             }
         },

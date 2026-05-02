@@ -2,9 +2,9 @@
 title: Modifying Server Forms
 category: Tutorials
 tags:
-  - intermediate
+    - intermediate
 mentions:
-  - TheoristMC
+    - TheoristMC
 description: In this tutorial, you will learn how to efficiently modify server forms.
 ---
 
@@ -35,7 +35,7 @@ First we need to modify the controls of `main_screen_content` in order to add ou
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel"
                 }
@@ -64,7 +64,7 @@ You can do this multiple times but it's advised to do it once since we can just 
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel"
                 }
@@ -75,7 +75,7 @@ You can do this multiple times but it's advised to do it once since we can just 
             "wiki_server_form_factory_2": { // Name can be anything but cannot be the same as "server_form_factory" or same as the sibling element
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel_2"
                 }
@@ -98,7 +98,7 @@ Now we need to define the element `"our_long_form_panel"` which contains our all
     "type": "panel", // We can use any types but we will use panels for simplicity
     "bindings": [
       {
-        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it everytime we use it
+        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it every time we use it
       }
     ],
     "controls": [
@@ -134,7 +134,7 @@ Now we need to define the element `"our_long_form_panel"` which contains our all
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel"
                 }
@@ -176,7 +176,7 @@ If you've tried this, you might notice it overlaps with the normal action form. 
     "type": "panel", // We can use any types but we will use panels for simplicity
     "bindings": [
       {
-        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it everytime we use it
+        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it every time we use it
       }
     ],
     "controls": [
@@ -212,7 +212,7 @@ If you've tried this, you might notice it overlaps with the normal action form. 
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel"
                 }
@@ -247,7 +247,7 @@ First we need to modify the controls of `main_screen_content` in order to add ou
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form and custom_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form and custom_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel",
                   "custom_form": "@server_form.our_custom_form_panel"
@@ -277,7 +277,7 @@ You can do this multiple times but it's advised to do it once since we can just 
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form and custom_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form and custom_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel",
                   "custom_form": "@server_form.our_custom_form_panel"
@@ -289,7 +289,7 @@ You can do this multiple times but it's advised to do it once since we can just 
             "wiki_server_form_factory_2": { // Name can be anything but cannot be the same as "server_form_factory" or same as the sibling element
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form and custom_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form and custom_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel_2",
                   "custom_form": "@server_form.our_custom_form_panel_2"
@@ -313,7 +313,7 @@ Now we need to define the element `"our_custom_form_panel"` which contains our a
     "type": "panel", // We can use any types but we will use panels for simplicity
     "bindings": [
       {
-        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it everytime we use it
+        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it every time we use it
       }
     ],
     "controls": [
@@ -349,7 +349,7 @@ Now we need to define the element `"our_custom_form_panel"` which contains our a
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form and custom_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form and custom_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel",
                   "custom_form": "@server_form.our_custom_form_panel"
@@ -392,7 +392,7 @@ If you've tried this, you might notice it overlaps with the normal modal form. T
     "type": "panel", // We can use any types but we will use panels for simplicity
     "bindings": [
       {
-        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it everytime we use it
+        "binding_name": "#title_text" // We define the title text inside the parent so we don't need to call it every time we use it
       }
     ],
     "controls": [
@@ -428,7 +428,7 @@ If you've tried this, you might notice it overlaps with the normal modal form. T
             "wiki_server_form_factory": { // Name can be anything but cannot be the same as "server_form_factory"
               "type": "panel",
               "factory": {
-                "name": "server_form_factory", // Required, this name is binded to the data given to long_form and custom_form
+                "name": "server_form_factory", // Required, this name is bound to the data given to long_form and custom_form
                 "control_ids": {
                   "long_form": "@server_form.our_long_form_panel",
                   "custom_form": "@server_form.our_custom_form_panel"

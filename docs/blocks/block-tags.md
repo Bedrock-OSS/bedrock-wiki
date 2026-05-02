@@ -1,8 +1,10 @@
 ---
 title: Block Tags
-description: Block tags can be used to ensure that a block meets certain conditions.
+description: Block tags are used when checking for multiple types of block and can enable vanilla functionality.
 category: General
 nav_order: 3
+related:
+    - /blocks/vanilla-block-tags
 license: true
 mentions:
     - SirLich
@@ -19,7 +21,8 @@ mentions:
     - Xterionix
 ---
 
-Block tags can be used to ensure that a block meets certain conditions.
+Block tags are used when checking for multiple types of block and can enable vanilla functionality.
+For a list of vanilla block tags and their functionality, visit [this page](/blocks/vanilla-block-tags).
 
 ## Applying Tags
 
@@ -29,7 +32,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:tree_stump",
@@ -48,7 +51,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 ## Testing for Tags
 
-### From Block Descriptors
+### Block Descriptor
 
 -   `q.all_tags(...tags)`{lang=molang}
     -   Returns whether the block has all of the listed tags.
@@ -63,7 +66,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 }
 ```
 
-### From Entities
+### Entity Molang
 
 -   `q.block_has_all_tags(x, y, z, ...tags)`{lang=molang}
     -   Returns whether the block at the specified coordinates has all of the listed tags.
@@ -99,7 +102,7 @@ Example of an item querying a block's tags:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_pickaxe",
@@ -124,7 +127,3 @@ Example of an item querying a block's tags:
     }
 }
 ```
-
-## List of Vanilla Tags
-
-<Table data="vanilla_tags.json" />

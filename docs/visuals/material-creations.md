@@ -3,7 +3,7 @@ title: Material Creations
 tags:
     - expert
 category: General
-description: Useful material creations by community. 
+description: Useful material creations by community.
 ---
 
 :::warning
@@ -27,15 +27,8 @@ Note: Texture needs to have semi transparency in it to add the glow effect.
 ```json
 {
     "customblend:entity_alphablend": {
-        "+defines": [
-            "USE_EMISSIVE"
-        ],
-        "+states": [
-            "Blending",
-            "DisableCulling",
-            "DisableDepthWrite",
-            "DisableAlphaWrite"
-        ]
+        "+defines": ["USE_EMISSIVE"],
+        "+states": ["Blending", "DisableCulling", "DisableDepthWrite", "DisableAlphaWrite"]
     }
 }
 ```
@@ -55,10 +48,7 @@ Material that allows for alpha channel textures with render dragon:
 ```json
 {
     "ambient_alpha:entity": {
-        "+states": [
-            "Blending",
-            "DisableCulling"
-        ],
+        "+states": ["Blending", "DisableCulling"],
         "vertexShader": "shaders/color_uv.vertex",
         "vrGeometryShader": "shaders/color_uv.geometry",
         "fragmentShader": "shaders/color_texture.fragment",
@@ -81,9 +71,7 @@ Material that allows for alpha channel textures with render dragon:
         "variants": [
             {
                 "skinning": {
-                    "+defines": [
-                        "USE_SKINNING"
-                    ],
+                    "+defines": ["USE_SKINNING"],
                     "vertexFields": [
                         {
                             "field": "Position"
@@ -127,9 +115,7 @@ Material that doesn't permit overlay_color to be used in render controllers:
     "materials": {
         "version": "1.0.0",
         "ambient_no_overlay": {
-            "defines": [
-                "ALPHA_TEST"
-            ],
+            "defines": ["ALPHA_TEST"],
             "vertexShader": "shaders/entity.vertex",
             "vrGeometryShader": "shaders/entity.geometry",
             "fragmentShader": "shaders/entity.fragment",
@@ -147,9 +133,7 @@ Material that doesn't permit overlay_color to be used in render controllers:
             "variants": [
                 {
                     "skinning": {
-                        "+defines": [
-                            "USE_SKINNING"
-                        ],
+                        "+defines": ["USE_SKINNING"],
                         "vertexFields": [
                             {
                                 "field": "Position"
@@ -168,12 +152,8 @@ Material that doesn't permit overlay_color to be used in render controllers:
                 },
                 {
                     "skinning_color": {
-                        "+defines": [
-                            "USE_SKINNING"
-                        ],
-                        "+states": [
-                            "Blending"
-                        ],
+                        "+defines": ["USE_SKINNING"],
+                        "+states": ["Blending"],
                         "vertexFields": [
                             {
                                 "field": "Position"

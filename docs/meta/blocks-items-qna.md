@@ -37,7 +37,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 
 -   **Q**: Are there any plans to allow data binding to custom components instead of the has or does not have interface we have currently?
 -   **A**: This is a feature we are looking forward to doing and will be coming sometime next year. We want to flatten custom components into something that looks and feels more like other components.
--   **Q**: Does this include parameters or will they be coming sooner? Paramaters would make custom components much more shareable across items and blocks, as well as between projects.
+-   **Q**: Does this include parameters or will they be coming sooner? Parameters would make custom components much more shareable across items and blocks, as well as between projects.
 -   **A**: Both custom component flattening and parameters are likely to be released together, and yes will also likely require scripting version 2.0.0. For now we are saying that both of these features will be coming sometime next year
 
 ## Work more with the ScriptAPI:
@@ -116,7 +116,7 @@ In my Head it would be something like this
     `beforeBlockBroken`, for whenever the block is broken in any way including mobs or commands
 -   **A**: This is something that we have looked into, unfortunately it is more complex that it appears to support. Block updates when a neighboring block changes is not in our near term roadmap. `onBlockDestroyed` before event however is a great feature request we can look into doing but is not currently on our roadmap
 
-## Colourmap in Custom Blocks
+## Colormap in Custom Blocks
 
 -   **Q**: Are there any plans to make custom blocks use colormap, like grass and leaves?
 -   **A**: Yes we have that on our internal roadmap. somewhere between medium and long term, not ready to share exact timing yet. it will be next year sometime though
@@ -288,7 +288,7 @@ Are there any vanilla geos you think would be particularly useful to focus on?
 
 ## Support for Ambient Occlusion on/cast by full-block geometries
 
--   **Q**: As it stands now, blocks utilising the `minecraft:geometry.full_block` model (or equivalent) are not treated in the same way as a typical full block for the sake of ambient occlusion. They appear to catch shading from other blocks, but do not catch other blocks' ambient occlusion, nor cast their own shading or ambient occlusion.
+-   **Q**: As it stands now, blocks utilizing the `minecraft:geometry.full_block` model (or equivalent) are not treated in the same way as a typical full block for the sake of ambient occlusion. They appear to catch shading from other blocks, but do not catch other blocks' ambient occlusion, nor cast their own shading or ambient occlusion.
 
     Most notably his impacts any block that needs to apply rotational states with textures per face.
 
@@ -301,7 +301,7 @@ Are there any vanilla geos you think would be particularly useful to focus on?
 
 ## Camera Collision Component
 
--   **Q**: Some blocks - such as glass blocks, for example - have a different rules for collision with the camera than for entities. It'd be neat to be able recreate this behaviour, such as:
+-   **Q**: Some blocks - such as glass blocks, for example - have a different rules for collision with the camera than for entities. It'd be neat to be able recreate this behavior, such as:
 
     "minecraft:camera_collision": false
 
@@ -346,7 +346,7 @@ Are there any vanilla geos you think would be particularly useful to focus on?
 
     Like how stairs have a different collision box than a normal blocks
 
--   **A**: We know the interest in being able to do stairs that require more than the current collision (and selection) box component is capable of, so we're looking at some options that will allow us to bring that functionality to you! It's on our longterm roadmap
+-   **A**: We know the interest in being able to do stairs that require more than the current collision (and selection) box component is capable of, so we're looking at some options that will allow us to bring that functionality to you! It's on our long term roadmap
 
 ## Disabling Silk Touch
 
@@ -356,4 +356,3 @@ Are there any vanilla geos you think would be particularly useful to focus on?
     https://learn.microsoft.com/en-us/minecraft/creator/documents/loottableconditions?view=minecraft-bedrock-stable#match_tool
 
     On our short term roadmap is a way to change a vanilla block's loot table on destroy.
-

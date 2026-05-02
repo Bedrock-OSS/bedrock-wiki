@@ -13,6 +13,7 @@ mentions:
     - Sprunkles137
     - ThomasOrs
     - QuazChick
+    - MindfulLearner
 ---
 
 Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons.
@@ -57,6 +58,10 @@ The text to display in the speech bubble. Optional.
 
 Array of command strings to be run when the dialogue is opened. Optional.
 
+:::tip
+In the NPC's in-game Advanced Settings, this corresponds to the **"on enter"** button mode.
+:::
+
 <CodeHeader></CodeHeader>
 
 ```json
@@ -68,6 +73,10 @@ Array of command strings to be run when the dialogue is opened. Optional.
 ### Close Commands
 
 Array of command strings to be run when the dialogue is closed. Optional.
+
+:::tip
+In the NPC's in-game Advanced Settings, this corresponds to the **"on exit"** button mode.
+:::
 
 <CodeHeader></CodeHeader>
 
@@ -297,7 +306,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:teleport_menu",

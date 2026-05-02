@@ -23,24 +23,24 @@ Coarse Dirt File
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:single_block_feature": {
-		"description": {
-			"identifier": "wiki:coarse_dirt_feature"
-		},
-		"places_block": {
-			//Coarse dirt shares same identifier as dirt, set it using name and states
-			"name": "minecraft:dirt",
-			"states": {
-				"dirt_type": "coarse"
-			}
-		},
-		"enforce_survivability_rules": false,
-		"enforce_placement_rules": false,
-		"may_replace": [
-			"minecraft:grass" //The block can only replace grass
-		]
-	}
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "wiki:coarse_dirt_feature"
+        },
+        "places_block": {
+            //Coarse dirt shares same identifier as dirt, set it using name and states
+            "name": "minecraft:dirt",
+            "states": {
+                "dirt_type": "coarse"
+            }
+        },
+        "enforce_survivability_rules": false,
+        "enforce_placement_rules": false,
+        "may_replace": [
+            "minecraft:grass" //The block can only replace grass
+        ]
+    }
 }
 ```
 
@@ -50,18 +50,18 @@ Podzol File
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:single_block_feature": {
-		"description": {
-			"identifier": "wiki:podzol_feature"
-		},
-		"places_block": "minecraft:podzol", //Podzol can be defined using direct identifier
-		"enforce_survivability_rules": false,
-		"enforce_placement_rules": false,
-		"may_replace": [
-			"minecraft:grass" //The block can only replace grass
-		]
-	}
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "wiki:podzol_feature"
+        },
+        "places_block": "minecraft:podzol", //Podzol can be defined using direct identifier
+        "enforce_survivability_rules": false,
+        "enforce_placement_rules": false,
+        "may_replace": [
+            "minecraft:grass" //The block can only replace grass
+        ]
+    }
 }
 ```
 
@@ -71,18 +71,18 @@ Cobblestone File
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:single_block_feature": {
-		"description": {
-			"identifier": "wiki:cobblestone_feature"
-		},
-		"places_block": "minecraft:cobblestone", //Cobblestone can be defined using direct identifier
-		"enforce_survivability_rules": false,
-		"enforce_placement_rules": false,
-		"may_replace": [
-			"minecraft:grass" //The block can only replace grass
-		]
-	}
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "wiki:cobblestone_feature"
+        },
+        "places_block": "minecraft:cobblestone", //Cobblestone can be defined using direct identifier
+        "enforce_survivability_rules": false,
+        "enforce_placement_rules": false,
+        "may_replace": [
+            "minecraft:grass" //The block can only replace grass
+        ]
+    }
 }
 ```
 
@@ -96,26 +96,26 @@ Learn more about weighted random features [here](/world-generation/feature-types
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:weighted_random_feature": {
-		"description": {
-			"identifier": "wiki:select_surface_block_feature"
-		},
-		"features": [
-			[
-				"wiki:coarse_dirt_feature", //Coarse dirt weighs 5
-				5
-			],
-			[
-				"wiki:podzol_feature", //Podzol dirt weighs 3
-				3
-			],
-			[
-				"wiki:cobblestone_feature", //Cobblestone weighs 2
-				2
-			]
-		]
-	}
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "wiki:select_surface_block_feature"
+        },
+        "features": [
+            [
+                "wiki:coarse_dirt_feature", //Coarse dirt weighs 5
+                5
+            ],
+            [
+                "wiki:podzol_feature", //Podzol dirt weighs 3
+                3
+            ],
+            [
+                "wiki:cobblestone_feature", //Cobblestone weighs 2
+                2
+            ]
+        ]
+    }
 }
 ```
 
@@ -129,23 +129,23 @@ Learn more about scatter features [here](/world-generation/feature-types#scatter
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:scatter_feature": {
-		"description": {
-			"identifier": "wiki:scatter_surface_block_feature"
-		},
-		"iterations": "math.random_integer(20,25)",
-		"x": {
-			"extent": [0, 8],
-			"distribution": "gaussian"
-		},
-		"z": {
-			"extent": [0, 8],
-			"distribution": "gaussian"
-		},
-		"y": "q.heightmap(v.worldx, v.worldz) -1",
-		"places_feature": "wiki:select_surface_block_feature" //Weighted random feature identifier
-	}
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "wiki:scatter_surface_block_feature"
+        },
+        "iterations": "math.random_integer(20,25)",
+        "x": {
+            "extent": [0, 8],
+            "distribution": "gaussian"
+        },
+        "z": {
+            "extent": [0, 8],
+            "distribution": "gaussian"
+        },
+        "y": "q.heightmap(v.worldx, v.worldz) -1",
+        "places_feature": "wiki:select_surface_block_feature" //Weighted random feature identifier
+    }
 }
 ```
 
@@ -165,38 +165,38 @@ This is the final step for our surface builder. The feature rules for our surfac
 
 ```json
 {
-	"format_version": "1.13.0",
-	"minecraft:feature_rules": {
-		"description": {
-			"identifier": "wiki:overworld_surface_blocks_feature",
-			"places_feature": "wiki:scatter_surface_block_feature"
-		},
-		"conditions": {
-			"placement_pass": "surface_pass",
-			"minecraft:biome_filter": {
-				"test": "has_biome_tag",
-				"operator": "==",
-				"value": "overworld" //You can change this to whatever biometag you want
-			}
-		},
-		"distribution": {
-			"iterations": 1,
-			"x": {
-				"extent": [0, 16],
-				"distribution": "uniform"
-			},
-			"y": 0,
-			"z": {
-				"extent": [0, 16],
-				"distribution": "uniform"
-			},
-			"scatter_chance": {
-				//Chance of the blob generating each chunk
-				"numerator": 1,
-				"denominator": 5
-			}
-		}
-	}
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "wiki:overworld_surface_blocks_feature",
+            "places_feature": "wiki:scatter_surface_block_feature"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "overworld" //You can change this to whatever biometag you want
+            }
+        },
+        "distribution": {
+            "iterations": 1,
+            "x": {
+                "extent": [0, 16],
+                "distribution": "uniform"
+            },
+            "y": 0,
+            "z": {
+                "extent": [0, 16],
+                "distribution": "uniform"
+            },
+            "scatter_chance": {
+                //Chance of the blob generating each chunk
+                "numerator": 1,
+                "denominator": 5
+            }
+        }
+    }
 }
 ```
 

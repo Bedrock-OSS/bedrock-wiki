@@ -26,7 +26,7 @@ It is recommended to use this system while working with command blocks, as well 
 
 ## Setup
 
-_To be typed in chat:_
+_Type the following commands in Chat:_
 
 <CodeHeader></CodeHeader>
 
@@ -96,10 +96,10 @@ _Note: All 3 are score holders in the objective._
 
 **`wiki:ticks`** — On this objective, we define all the intervals for our events and also run our scoreboard timer:
 
--   ` .2h ` interval (static score: 144000)
--   ` .10m ` interval (static score: 12000)
--   ` .30s ` interval (static score: 600)
--   ` .Timer ` clock (variable score: n+1)
+-   `.2h` interval (static score: 144000)
+-   `.10m` interval (static score: 12000)
+-   `.30s` interval (static score: 600)
+-   `.Timer` clock (variable score: n+1)
 
 _Note: All 4 are score holders in the objective._
 
@@ -128,16 +128,16 @@ Note: In Minecraft, scoreboard division is floored, i.e., it's only calculated u
 
 The remaining commands follow the same structure, with only the event labels and interval durations modified.
 
-## Defining Events with Limited Occurances
+## Defining Events with Limited Occurrences
 
-To limit how many times an event occurs, you need to create a new objective called `wiki:occurances` and define how many times that event should occur, as shown below.
+To limit how many times an event occurs, you need to create a new objective called `wiki:occurrences` and define how many times that event should occur, as shown below.
 
 <CodeHeader></CodeHeader>
 
 ```yaml
-/scoreboard objectives add wiki:occurances dummy
-/scoreboard players set .ChatMessage wiki:occurances 5
-/scoreboard players set .SpeedEffect wiki:occurances 10
+/scoreboard objectives add wiki:occurrences dummy
+/scoreboard players set .ChatMessage wiki:occurrences 5
+/scoreboard players set .SpeedEffect wiki:occurrences 10
 ```
 
 Once you have done that, modify your system as shown below.
@@ -153,13 +153,13 @@ scoreboard players operation * wiki:events = .Timer wiki:ticks
 
 ## Chat Message (every 10m)
 scoreboard players operation .ChatMessage wiki:events %= .2h wiki:ticks
-execute if score .ChatMessage wiki:events matches 0 if score .ChatMessage wiki:occurances matches 1.. run say Technoblade never dies!
-execute if score .ChatMessage wiki:events matches 0 if score .ChatMessage wiki:occurances matches 1.. run scoreboard players remove .ChatMessage wiki:occurances 1
+execute if score .ChatMessage wiki:events matches 0 if score .ChatMessage wiki:occurrences matches 1.. run say Technoblade never dies!
+execute if score .ChatMessage wiki:events matches 0 if score .ChatMessage wiki:occurrences matches 1.. run scoreboard players remove .ChatMessage wiki:occurrences 1
 
 ## Speed Effect (every 30s)
 scoreboard players operation .SpeedEffect wiki:events %= .30s wiki:ticks
-execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurances matches 1.. run effect @a speed 10 2 true
-execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurances matches 1.. run scoreboard players remove .SpeedEffect wiki:occurances 1
+execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurrences matches 1.. run effect @a speed 10 2 true
+execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurrences matches 1.. run scoreboard players remove .SpeedEffect wiki:occurrences 1
 ```
 
 ![Chain of 8 Command Blocks](/assets/images/commands/command-block-chain/8.png)
@@ -173,18 +173,18 @@ To run commands continuously between the intervals of an event, you may use the 
 ```yaml
 ## Speed Effect (every 30s) + Particle (every tick)
 scoreboard players operation .SpeedEffect wiki:events %= .30s wiki:ticks
-execute if score .SpeedEffect wiki:occurances matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
-execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurances matches 1.. run effect @a speed 10 2 true
-execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurances matches 1.. run scoreboard players remove .SpeedEffect wiki:occurances 1
+execute if score .SpeedEffect wiki:occurrences matches 1.. as @a at @s run particle minecraft:shulker_bullet ~~~
+execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurrences matches 1.. run effect @a speed 10 2 true
+execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:occurrences matches 1.. run scoreboard players remove .SpeedEffect wiki:occurrences 1
 ```
 
-As shown in line 3, to run commands while the timer is running, all you need to do is remove the `if score` condition testing if all occurances took place. And instead, only test if any occurance remains, to run our commands.
+As shown in line 3, to run commands while the timer is running, all you need to do is remove the `if score` condition testing if all occurrences took place. And instead, only test if any occurrence remains, to run our commands.
 
-Let's say we had set the `wiki:occurances` for this event to `10`. Then players would've also had a particle trail for 300 seconds as repeating a 30s event 10 times will total 300 seconds.
+Let's say we had set the `wiki:occurrences` for this event to `10`. Then players would've also had a particle trail for 300 seconds as repeating a 30s event 10 times will total 300 seconds.
 
 ## Entity Timers
 
-In some cases, such as an entity despawn event, you will need to run timers for each entity separately rather than a synchronised timer which could cause the event to trigger too soon. In such cases, an Async Timer can be helpful.
+In some cases, such as an entity despawn event, you will need to run timers for each entity separately rather than a synchronized timer which could cause the event to trigger too soon. In such cases, an Async Timer can be helpful.
 
 Let's say we want to perform the following actions:
 

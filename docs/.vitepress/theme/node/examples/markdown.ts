@@ -1,0 +1,88 @@
+import { extname } from "path";
+import { PNG } from "pngjs";
+import TGA from "tga";
+
+const fenceChar = "`";
+
+const imageTypes = ["jpg", "jpeg", "png", "tga"];
+const unsupportedTypes = ["mcstructure"];
+
+const viewFileTooltip = "View File";
+
+export function renderExampleFile(path: string, buffer: Buffer, link?: string) {
+  let type = extname(path).substring(1);
+
+  if (imageTypes.includes(type)) {
+    if (type === "jpg") {
+      type = "jpeg";
+    } else if (type === "tga") {
+      buffer = tgaToPng(buffer);
+      type = "png";
+    }
+
+    const url = `data:image/${type};base64,${buffer.toString("base64")}`;
+
+    return renderImageFile(path, url, link);
+  }
+
+  if (unsupportedTypes.includes(type)) {
+    return renderCodeFile(path, "", "Cannot display this file type.", link);
+  }
+
+  return renderCodeFile(path, type, buffer.toString(), link);
+}
+
+function renderCodeFile(path: string, lang: string, code: string, link?: string) {
+  if (link) path = `<a href="${link}" title="${viewFileTooltip}">${path}</a>`;
+
+  if (lang === "material") lang = "json";
+  else if (lang === "mcfunction") lang = ""; // No syntax highlighting
+
+  const fence = getCodeFence(code);
+
+  return [
+    //
+    "<CodeHeader>" + path + "</CodeHeader>",
+    "",
+    fence + lang,
+    code,
+    fence,
+  ].join("\n");
+}
+
+function getCodeFence(code: string) {
+  let maxCount = 0;
+  let currentCount = 0;
+
+  for (const char of code) {
+    if (char === fenceChar) {
+      currentCount++;
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+      }
+    } else {
+      currentCount = 0;
+    }
+  }
+
+  const fenceLength = Math.max(3, maxCount + 1);
+
+  return fenceChar.repeat(fenceLength);
+}
+
+function renderImageFile(path: string, url: string, link?: string) {
+  return `<WikiImage src="${url}" alt="" caption="${path}"${link ? ` link="${link}" title="${viewFileTooltip}"` : ""} pixelated />`;
+}
+
+function tgaToPng(buffer: Buffer) {
+  const tga = new TGA(buffer, { dontFixAlpha: true });
+
+  const png = new PNG({
+    width: tga.width,
+    height: tga.height,
+  });
+
+  png.data = tga.pixels;
+
+  return PNG.sync.write(png);
+}

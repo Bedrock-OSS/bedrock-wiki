@@ -29,22 +29,14 @@ It's very easy to create custom splash texts. All you have to do is to create a 
 }
 ```
 
-<WikiImage
-    src="/assets/images/concepts/splashes/A_splash_text_example.png"
-    caption="A splash text example"
-    width="300"
-/>
+<WikiImage src="splash_text_example.png" caption="A splash text example" width="400" />
 
 The `canMerge` parameter determines whether the game will show vanilla splash texts alongside custom splash texts.
-If you set this parameter to `true`{lang=json}, the splash text will be choosen from both vanilla splash texts and custom splash texts.
-If you omit this parameter or set it to `false`{lang=json}, the splash text will be choosen only from custom splash texts.
+If you set this parameter to `true`{lang=json}, the splash text will be chosen from both vanilla splash texts and custom splash texts.
+If you omit this parameter or set it to `false`{lang=json}, the splash text will be chosen only from custom splash texts.
 
 If you leave the `splashes` array empty with `canMerge` set to `false`, the game will not show any splash text at all.
 
 There isn't a limit to how long a splash text is, but it will be split into multiple lines if it's too long, or may become so small that it is not readable!
 
-<WikiImage
-    src="/assets/images/concepts/splashes/A_long_splash_text_example.png"
-    caption="A long splash text example"
-    width="300"
-/>
+<WikiImage src="long_splash_text_example.png" caption="A long splash text example" width="400" />

@@ -19,9 +19,8 @@ mentions:
     - stirante
     - ChibiMango
     - Etanarvazac
-    - retr0cube
+    - aym-i
     - ThomasOrs
-    - lescx
     - QuazChick
 ---
 
@@ -119,13 +118,13 @@ Call the file `manifest.json` and paste the following code into the file to begi
 
 ```json
 {
-    "format_version": 2,
+    "format_version": 3,
     "header": {
         "name": "pack.name",
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": [1, 21, 120]
+        "min_engine_version": "1.26.10"
     },
     "modules": [
         {
@@ -135,6 +134,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
         }
     ],
     "metadata": {
+        "authors": ["Your Name"],
         "product_type": "addon"
     }
 }
@@ -142,7 +142,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
 
 ### Manifest Explained
 
--   `format_version` defines what version of manifest JSON format you are using. Version 2 is the most recent stable version; use it.
+-   `format_version` defines what version of manifest JSON format you are using. Version 3 is the most recent stable version; use it.
 
 -   `name` is the name of your behavior pack. `description` will show up under it in-game.
 
@@ -178,7 +178,9 @@ When you are finished, it should look something like this:
 
 ## RP Manifest
 
-The next step is to create the `manifest.json` for the RP. The format for a resource-pack manifest is nearly identical to a BP manifests except that the `type` is `resources`, which marks the pack as a _Resource Pack_.
+The next step is to create the `manifest.json` for the RP.
+The format for a resource pack manifest is nearly identical to a BP manifest except that the module `type` is `"resources"`{lang=json}, which marks the pack as a _resource pack_.
+Additionally, we specify a `pack_scope` of `"world"`{lang=json} which prevents the pack from being activated outside of worlds.
 
 Copy the following code into your newly created `RP/manifest.json` and insert your own UUIDs.
 
@@ -186,13 +188,14 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 ```json
 {
-    "format_version": 2,
+    "format_version": 3,
     "header": {
         "name": "pack.name",
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": [1, 21, 120]
+        "min_engine_version": "1.26.10",
+        "pack_scope": "world" // Can be "any" (default), "global" or "world"
     },
     "modules": [
         {
@@ -202,8 +205,10 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
         }
     ],
     "metadata": {
+        "authors": ["Your Name"],
         "product_type": "addon"
-    }
+    },
+    "capabilities": ["pbr"] // Allows Vibrant Visuals to be enabled while this pack is activated.
 }
 ```
 
@@ -211,9 +216,9 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 The pack icon is an image file which identifies how your add-on will look in-game. If you have a low-resolution square image, you can use it. Otherwise, download and use this example icon:
 
-<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated />
+<WikiImage src="pack_icon.png" alt="Pack Icon" pixelated />
 
-<Button link="/assets/images/guide/project-setup/pack_icon.png" download>
+<Button link="pack_icon.png" download>
     Download Image
 </Button>
 
@@ -255,7 +260,7 @@ pack.description=A Ghostly Guide
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide](/guide/troubleshooting).
 
-![](/assets/images/guide/project-setup/active_pack.png)
+![](active_pack.png)
 
 ## Enabling the Content Log
 

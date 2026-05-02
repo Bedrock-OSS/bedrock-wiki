@@ -1,6 +1,8 @@
 ---
 title: Entity Counter
 category: Scoreboard Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -18,11 +20,11 @@ This system allows you to track the total number of players/entities on your wor
 
 ## Setup
 
-_To be typed in Chat:_
+_Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:count dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
+If you are working with functions and prefer to have the objective added automatically on world initialization, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 
@@ -69,7 +71,7 @@ You can modify/expand these as well. Example: a `/kill` command instead of a `/t
         - **`n..n1`** any number _n_ to any number _n1_. (smaller number first)
 
 :::info NOTE:
-When working with numerous score holders across multiple objectives, it is advisable to reset previous score to zero for each score holder individually rather than using the wildcard (` * `), for better performance.
+When working with numerous score holders across multiple objectives, it is advisable to reset previous score to zero for each score holder individually rather than using the wildcard (`*`), for better performance.
 :::
 
 ## Tick JSON
@@ -94,9 +96,12 @@ If using functions, your pack folder structure will be as follows:
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/wiki',
+    'BP/functions/wiki/main.mcfunction',
     'BP/functions/wiki/scoreboard',
     'BP/functions/wiki/scoreboard/players',
     'BP/functions/wiki/scoreboard/players/tally_count.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
+
+In this setup, the `tally_count` function is called by `main.mcfunction`, which is executed every tick via `tick.json`.

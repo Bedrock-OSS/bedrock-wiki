@@ -4,6 +4,8 @@ description: Block models that are built into the game for use with custom block
 category: Documentation
 tags:
     - beginner
+related:
+    - /blocks/block-models
 license: true
 mentions:
     - QuazChick
@@ -34,7 +36,6 @@ Vanilla block models are applied in the same way as [custom block models](/block
 
 ## List of Vanilla Models
 
-| Preview                                                                                          | Identifier                      | Additional Notes                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <WikiImage src="/assets/images/blocks/vanilla-block-models/cross.png" alt="" width="100" />      | `minecraft:geometry.cross`      | <p>When used on a block, `ambient_occlusion` and `face_dimming` should be set to `false`{lang=json} in any [material instances](/blocks/block-components#material-instances).</p><p>This model should only be used with render methods that have backface culling (`"alpha_test_single_sided"`{lang=json}, `"blend"`{lang=json} and `"opaque"`{lang=json}) to avoid texture flickering.</p> |
-| <WikiImage src="/assets/images/blocks/vanilla-block-models/full_block.png" alt="" width="100" /> | `minecraft:geometry.full_block` | <p>When used for a block with the `"opaque"`{lang=json} render method, a shadow is cast onto surrounding blocks and adjacent block faces are culled.</p><p><strong>NOTE:</strong> The bottom face of this model is rotated 180 degrees compared to vanilla full blocks.</p>                                                                                                                 |
+_This documentation is up to date as of release 1.26.10._
+
+<Table data="models.json" />

@@ -1,6 +1,8 @@
 ---
 title: Block States
 category: General
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -29,18 +31,18 @@ Before version 1.19.70, Bedrock Edition relied on Aux values (metadata) to defin
 /setblock ~ ~ ~ wool ["color"="orange"]
 ```
 
-- Commands using Aux values will function in older versions or in Behaviour Packs with `min_engine_version` set to 1.19.63 or below.
-- Updating the `min_engine_version` to 1.19.70 or above requires transitioning to Block States.
+-   Commands using Aux values will function in older versions or in Behavior Packs with `min_engine_version` set to 1.19.63 or below.
+-   Updating the `min_engine_version` to 1.19.70 or above requires transitioning to Block States.
 
 ## Syntax and Examples
 
 ### Syntax
 
-- Block States are enclosed in square brackets (` [] `).
-- Separate multiple states with a comma (` , `).
-- Use quotation marks (` " " `) around strings (e.g., `"birch"`, `"orange"`).
-- Integer (`0`, `1`, etc.) and boolean (`true`, `false`) values should not use quotation marks.
-- Empty brackets (` [] `) or the absence of brackets default to `0` (e.g., `wool []` or simply `wool` corresponds to white wool).
+-   Block States are enclosed in square brackets (`[]`).
+-   Separate multiple states with a comma (`,`).
+-   Use quotation marks (`" "`) around strings (e.g., `"birch"`, `"orange"`).
+-   Integer (`0`, `1`, etc.) and boolean (`true`, `false`) values should not use quotation marks.
+-   Empty brackets (`[]`) or the absence of brackets default to `0` (e.g., `wool []` or simply `wool` corresponds to white wool).
 
 ### Examples
 
@@ -64,12 +66,12 @@ Before version 1.19.70, Bedrock Edition relied on Aux values (metadata) to defin
 A comprehensive list of Block States is available at:
 [Block States List](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockstateslist)
 
-- **Note**: Block States listed in `camelCase` format on the site must be converted to `snake_case` in commands.
-    - Example: `buttonPressedBit` → `"button_pressed_bit"`
+-   **Note**: Block States listed in `camelCase` format on the site must be converted to `snake_case` in commands.
+    -   Example: `buttonPressedBit` → `"button_pressed_bit"`
 
 ## Conversion Tool
 
-Use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) by *@SmokeyStack* to convert Aux values to Block States.
+Use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) by _@SmokeyStack_ to convert Aux values to Block States.
 
 ## Known Limitations
 
@@ -87,12 +89,12 @@ Commands using blocks must specify all corresponding Block States or leave the B
 /execute if block ~~~ stone_button ["button_pressed_bit"=false,"facing_direction"=1] run say success
 ```
 
-- The first command works because the Block States field is empty.
-- The second command works because all relevant states (`button_pressed_bit`, `facing_direction`) are specified.
+-   The first command works because the Block States field is empty.
+-   The second command works because all relevant states (`button_pressed_bit`, `facing_direction`) are specified.
 
 > **Note**: Testing a partial condition (e.g., `["button_pressed_bit"=true]`) without other states, such as `facing_direction`, will fail. Unlike entities, blocks do not yet support condition-based filtering.
 
 ### Related Bug Reports
 
-- [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
-- [MCPE-168391](https://bugs.mojang.com/browse/MCPE-168391)
+-   [MCPE-133360](https://bugs.mojang.com/browse/MCPE-133360)
+-   [MCPE-168391](https://bugs.mojang.com/browse/MCPE-168391)

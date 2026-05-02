@@ -12,22 +12,27 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.21.130
+::: tip FORMAT VERSION 1.26.10
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
 Trapdoors are versatile blocks that serve well as parts of doors, fences, decorations, and, well — as trapdoors! It's no wonder you want to make your own to add to Minecraft's collection. Here's how it's done:
 
+**Issues:**
+
+-   Custom trapdoors cannot be powered by redstone or toggled by wind charges.
+
 ## Block JSON
 
-This is the block JSON you'll need for basic trapdoor functionality. It includes the rotation for each permutation of your trapdoor, meaning it can be placed in the same orientations as vanilla trapdoors.
+This is the block JSON you'll need for basic trapdoor functionality.
+It includes the rotation for each permutation of your trapdoor, meaning it can be placed in the same orientations as vanilla trapdoors.
 
 <CodeHeader>BP/blocks/custom_trapdoor.json</CodeHeader>
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -39,33 +44,39 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                 "wiki:open": [false, true]
             },
             "traits": {
+                "minecraft:placement_direction": {
+                    "enabled_states": ["minecraft:cardinal_direction"],
+                    "y_rotation_offset": 180
+                },
                 "minecraft:placement_position": {
                     "enabled_states": ["minecraft:vertical_half"]
-                },
-                "minecraft:placement_direction": {
-                    "enabled_states": ["minecraft:cardinal_direction"]
                 }
             }
         },
         "components": {
+            "tag:trapdoors": {},
             "wiki:toggleable": {
                 "block_state": "wiki:open",
                 "enable_sound": "open.wooden_trapdoor",
                 "disable_sound": "close.wooden_trapdoor"
             },
+            // Collision and selection boxes
+            "tag:one_way_collidable": {}, // Prevents players from being pushed out by the trapdoor collision, just like vanilla
             "minecraft:collision_box": {
                 "origin": [-8, 0, -8],
                 "size": [16, 2.92, 16]
             },
-            "tag:one_way_collidable": {}, // Prevents the player from being pushed out by the trapdoor collision, just like vanilla
-            "tag:trapdoors": {},
             "minecraft:selection_box": {
                 "origin": [-8, 0, -8],
                 "size": [16, 2.92, 16]
             },
+            // Visuals
+            "minecraft:destruction_particles": {
+                "particle_count": 48
+            },
             "minecraft:geometry": {
-                "identifier": "geometry.trapdoor",
-                "culling": "wiki:culling.trapdoor"
+                "identifier": "geometry.custom_trapdoor",
+                "culling": "wiki:culling.custom_trapdoor"
             },
             "minecraft:material_instances": {
                 "*": {
@@ -73,9 +84,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                     "render_method": "alpha_test_single_sided"
                 }
             },
-            "minecraft:destruction_particles": {
-                "particle_count": 50
-            },
+            // Allows the trapdoor to be waterlogged
             "minecraft:liquid_detection": {
                 "detection_rules": [
                     {
@@ -83,105 +92,138 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
                         "can_contain_liquid": true
                     }
                 ]
+            },
+            // Prevent snow from accumulating above the trapdoor
+            "minecraft:precipitation_interactions": {
+                "precipitation_behavior": "obstruct_rain"
+            },
+            // Prevent adjacent blocks from connecting when the trapdoor is closed
+            "minecraft:connection_rule": {
+                "accepts_connections_from": "none"
             }
         },
         "permutations": [
-            // Top Closed
+            // Connections
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'north'",
                 "components": {
-                    "minecraft:transformation": { "rotation": [0, 0, 180] }
+                    "minecraft:connection_rule": { "enabled_directions": ["south"] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'south'",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, 0, 0] }
+                    "minecraft:connection_rule": { "enabled_directions": ["north"] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'west'",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, 90, 0] }
+                    "minecraft:connection_rule": { "enabled_directions": ["east"] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'east'",
                 "components": {
-                    "minecraft:transformation": { "rotation": [180, -90, 0] }
-                }
-            },
-            // Top Open
-            {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('wiki:open')",
-                "components": {
-                    "minecraft:transformation": { "rotation": [90, 0, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('wiki:open')",
-                "components": {
-                    "minecraft:transformation": { "rotation": [-90, 0, 180] }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('wiki:open')",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, -90, 90] }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('wiki:open')",
-                "components": {
-                    "minecraft:transformation": { "rotation": [180, 90, 90] }
+                    "minecraft:connection_rule": { "enabled_directions": ["west"] }
                 }
             },
             // Bottom Closed
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'north'",
                 "components": {
                     "minecraft:transformation": { "rotation": [0, 0, 0] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'south'",
                 "components": {
                     "minecraft:transformation": { "rotation": [0, 180, 0] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && !q.block_state('wiki:open')",
-                "components": {
-                    "minecraft:transformation": { "rotation": [0, -90, 0] }
-                }
-            },
-            {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && !q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'west'",
                 "components": {
                     "minecraft:transformation": { "rotation": [0, 90, 0] }
                 }
             },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, -90, 0] }
+                }
+            },
             // Bottom Open
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'north' && q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'north'",
                 "components": {
-                    "minecraft:transformation": { "rotation": [90, 0, 180] }
+                    "minecraft:transformation": { "rotation": [-90, 0, 180] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'south' && q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [90, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, -90, 90] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [180, 90, 90] }
+                }
+            },
+            // Top Closed
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'north'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [0, 0, 180] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [180, 0, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'west'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [180, -90, 0] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && !q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'east'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [180, 90, 0] }
+                }
+            },
+            // Top Open
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'north'",
                 "components": {
                     "minecraft:transformation": { "rotation": [-90, 0, 0] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'east' && q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'south'",
+                "components": {
+                    "minecraft:transformation": { "rotation": [90, 0, 180] }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'west'",
                 "components": {
                     "minecraft:transformation": { "rotation": [0, 90, 90] }
                 }
             },
             {
-                "condition": "q.block_state('minecraft:vertical_half') == 'bottom' && q.block_state('minecraft:cardinal_direction') == 'west' && q.block_state('wiki:open')",
+                "condition": "q.block_state('minecraft:vertical_half') == 'top' && q.block_state('wiki:open') && q.block_state('minecraft:cardinal_direction') == 'east'",
                 "components": {
                     "minecraft:transformation": { "rotation": [180, -90, 90] }
                 }
@@ -195,7 +237,7 @@ This is the block JSON you'll need for basic trapdoor functionality. It includes
 
 Now, it's time to put these permutations to use. The following script will allow the player to open and close the trapdoor by interacting with it. Don't forget to import this script into your main script entry.
 
-<CodeHeader>BP/scripts/custom_trapdoor.js</CodeHeader>
+<CodeHeader>BP/scripts/toggleable.js</CodeHeader>
 
 ```js
 import { system } from "@minecraft/server";
@@ -230,11 +272,11 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:geometry": [
         {
             "description": {
-                "identifier": "geometry.trapdoor",
+                "identifier": "geometry.custom_trapdoor",
                 "texture_width": 16,
                 "texture_height": 16
             },
@@ -251,28 +293,28 @@ This will be the geometry used for your custom trapdoors.
                                 "east": { "uv": [16, 3], "uv_size": [-16, -3] },
                                 "south": { "uv": [16, 3], "uv_size": [-16, -3] },
                                 "west": { "uv": [16, 3], "uv_size": [-16, -3] },
-                                "up": { "uv": [16, 16], "uv_size": [-16, -16] },
-                                "down": { "uv": [0, 0], "uv_size": [16, 16] }
+                                "up": { "uv": [0, 0], "uv_size": [16, 16] },
+                                "down": { "uv": [16, 16], "uv_size": [-16, -16] }
                             }
                         }
                     ]
                 }
             ],
             "item_display_transforms": {
+                "gui": {
+                    "fit_to_frame": false,
+                    "rotation": [30, 225, 0],
+                    "scale": [0.625, 0.625, 0.625],
+                    "translation": [0, -0.15, 0]
+                },
                 "firstperson_righthand": {
                     "translation": [0, 2.6, 0]
                 },
                 "thirdperson_righthand": {
-                    "translation": [0, 3.35, 2.25],
-                    "rotation": [70, 225, 0]
+                    "translation": [0, 3.35, 2.25]
                 },
                 "fixed": {
                     "translation": [0, 3.45, 0]
-                },
-                "gui": {
-                    "fit_to_frame": false,
-                    "translation": [0, -0.15, 0],
-                    "scale": [0.625, 0.625, 0.625]
                 },
                 "ground": {
                     "translation": [0, 4.65, 0]

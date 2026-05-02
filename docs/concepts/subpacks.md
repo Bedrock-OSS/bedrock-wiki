@@ -19,7 +19,7 @@ They are intended for texture resolutions to load on different memory capacities
 
 ## How do Subpacks work?
 
-Files placed in you subpack folder will override files placed in your main add-on folder, if the subpack is selected. For example, if your add-on contains both `RP/textures/entities/ghost.png` and `RP/subpacks/pack_1/textures/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected.
+Files placed in you subpack folder will override files placed in your main add-on folder, if the subpack is selected. For example, if your add-on contains both `RP/textures/wiki/entities/ghost.png` and `RP/subpacks/pack_1/textures/wiki/entities/ghost.png`, the second image file will replace the first, if subpack `pack_1` is selected.
 
 For more information about how files override each other, please see our page on [overriding vanilla assets](/concepts/overwriting-assets).
 
@@ -30,20 +30,20 @@ For more information about how files override each other, please see our page on
     e.g.
 
 <FolderView :paths="[
-	'RP/subpacks/subpack_1',
-	'RP/subpacks/subpack_2'
-]"></FolderView>
+    'RP/subpacks/subpack_1',
+    'RP/subpacks/subpack_2'
+]" />
 
 -   Inside each of these folders you can add the content of each subpack.
     This can be anything that normally goes in your behavior or resource pack.
     e.g.
 
 <FolderView :paths="[
-	'RP/subpacks/subpack_1/textures/blocks/dirt.png',
-	'RP/subpacks/subpack_1/textures/items/example_item.png',
-	'RP/subpacks/subpack_2/textures/blocks/dirt.png',
-	'RP/subpacks/subpack_2/textures/items/example_item.png'
-]"></FolderView>
+    'RP/subpacks/subpack_1/textures/wiki/blocks/dirt.png',
+    'RP/subpacks/subpack_1/textures/wiki/items/example_item.png',
+    'RP/subpacks/subpack_2/textures/wiki/blocks/dirt.png',
+    'RP/subpacks/subpack_2/textures/wiki/items/example_item.png'
+]" />
 
 ## Manifest Part
 
@@ -55,33 +55,33 @@ Example:
 
 ```json
 {
-	"format_version": 2,
-	"header": {
-		"name": "Pack Name",
-		"description": "Pack Description",
-		"uuid": "2fc2dd6f-86cb-4370-af70-21490a1ae471",
-		"version": [1, 0, 0],
-		"min_engine_version": [1, 13, 0]
-	},
-	"modules": [
-		{
-			"type": "resources",
-			"uuid": "f6821b4a-1854-44fc-a8a4-0c2847ffda46",
-			"version": [1, 0, 0]
-		}
-	],
-	"subpacks": [
-		{
-			"folder_name": "subpack_1",
-			"name": "First Subpack",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "subpack_2",
-			"name": "Second Subpack",
-			"memory_tier": 1
-		}
-	]
+    "format_version": 2,
+    "header": {
+        "name": "Pack Name",
+        "description": "Pack Description",
+        "uuid": "2fc2dd6f-86cb-4370-af70-21490a1ae471",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 13, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "f6821b4a-1854-44fc-a8a4-0c2847ffda46",
+            "version": [1, 0, 0]
+        }
+    ],
+    "subpacks": [
+        {
+            "folder_name": "subpack_1",
+            "name": "First Subpack",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "subpack_2",
+            "name": "Second Subpack",
+            "memory_tier": 1
+        }
+    ]
 }
 ```
 

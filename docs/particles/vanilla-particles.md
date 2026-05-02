@@ -17,7 +17,7 @@ It doesn't have autocomplete for particles.
 These particles can be spawned directly in-world, without any issues.
 
 | Working Particles                           |
-|---------------------------------------------|
+| ------------------------------------------- |
 | minecraft:basic_flame_particle              |
 | minecraft:basic_portal_particle             |
 | minecraft:basic_smoke_particle              |
@@ -85,7 +85,7 @@ These particles can be spawned directly in-world, without any issues.
 The following particles can be spawned, but might spam you with content log errors because they rely on variables that `/particle` cannot set:
 
 | Particles with issues                           |
-|-------------------------------------------------|
+| ----------------------------------------------- |
 | minecraft:arrow_spell_emitter                   |
 | minecraft:balloon_gas_particle                  |
 | minecraft:basic_crit_particle                   |
@@ -124,7 +124,7 @@ The following particles can be spawned, but might spam you with content log erro
 The following particles are various bubbles that only show up underwater. Some of them spam content log errors:
 
 | Bubble particles                       |
-|----------------------------------------|
+| -------------------------------------- |
 | minecraft:basic_bubble_particle        |
 | minecraft:basic_bubble_particle_manual |
 | minecraft:bubble_column_bubble         |
@@ -150,7 +150,7 @@ The following particles are various bubbles that only show up underwater. Some o
 The following particles are permanent and will not be removed once spawned until you exit the game:
 
 | Permanent particles              |
-|----------------------------------|
+| -------------------------------- |
 | minecraft:mobflame_emitter       |
 | minecraft:nectar_drip_particle   |
 | minecraft:phantom_trail_particle |
@@ -161,7 +161,7 @@ The following particles are permanent and will not be removed once spawned until
 The following particles exist in-game but cannot be spawned because they require context that cannot be provided by `/particle` or are simply bugged:
 
 | Broken particles                 |
-|----------------------------------|
+| -------------------------------- |
 | minecraft:block_destruct         |
 | minecraft:block_slide            |
 | minecraft:breaking_item_icon     |
@@ -183,7 +183,7 @@ The following is a list of pre-defined short names for Vanilla particles that ca
 **These have all been proven to generally work. This may not be a full list.**
 
 | Short names           | Notes                                                      |
-|-----------------------|------------------------------------------------------------|
+| --------------------- | ---------------------------------------------------------- |
 | mobspellambient       | Color determined by any present potion ID in the component |
 | villagerangry         |                                                            |
 | bubble                | Only shows underwater                                      |

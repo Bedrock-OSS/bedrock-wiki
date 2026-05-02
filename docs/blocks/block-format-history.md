@@ -16,13 +16,112 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
-:::info <Label color="yellow">Use Beta Features</Label> CHANGES
-The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
-:::
+## 1.26.30
+
+### Components
+
+-   The `minecraft:geometry` and `minecraft:material_instances` components can once again be defined individually within `permutations` entries.
+    -   This change resolves [MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086).
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:precipitation_interactions`
+    -   Updated `precipitation_behavior` parameter
+        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`{lang=json}
+
+## 1.26.20
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:multi_block`
+    -   Now also prevents the `minecraft:random_offset` and `minecraft:replaceable` components from being defined within the `permutations` array.
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Added `minecraft:tags`
+    -   Lists the tags applied to the block.
+    -   Replaces `tag:*` components.
+-   Released `minecraft:chest_obstruction` from experimental
+-   Removed the ability to apply tags using `tag:*`
+-   Updated `minecraft:flower_pottable`
+    -   Blocks in flower pots are now displayed 2 pixels lower to match vanilla.
+-   Updated `minecraft:material_instances`
+    -   Removed boolean support from the `ambient_occlusion` instance parameter.
+    -   This parameter may now only be defined as a float.
+-   Updated `minecraft:redstone_producer`
+    -   May no longer be defined in the `permutations` array without also being defined in the root `components` object.
+-   The `minecraft:geometry` and `minecraft:material_instances` components can no longer be defined individually within `permutations` entries.
+    -   This change was not intentional and has been reverted in 1.26.30 ([MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086)).
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:precipitation_interactions`
+    -   Updated `precipitation_behavior` parameter
+        -   Added `"snow_log_no_collision"`{lang=json} as a valid value, which allows the block to be submerged in layers of snow.
+        -   Requires the `minecraft:collision_box` component to be set to `false`{lang=json}.
+
+## 1.26.10
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:multi_block`
+    -   Causes the block to be treated as a multi-block made up of multiple parts.
+    -   Allows the `minecraft:multi_block_part` state to be enabled via the `enabled_states` array.
+    -   Contains `direction` which determines the direction in which parts of the multi-block are placed.
+        -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
+    -   Contains `parts` which determines the number of blocks (2-4) that make up the multi-block.
+        -   This determines how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
+    -   Prevents the `minecraft:movable` and `minecraft:placement_filter` components from being defined within the `permutations` array.
+    -   Requires the `minecraft:movable` component to be defined with a `movement_type` of `"popped"`{lang=json} or `"immovable"`{lang=json}.
+
+### Components
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:chest_obstruction`
+    -   Determines when the opening of chests placed below the block should be obstructed.
+    -   May be set to `"always"`{lang=json}, `"shape"`{lang=json} (default) or `"never"`{lang=json}.
+    -   Prior to format version 1.26.10, chest obstruction was based on whether a vanilla full block geometry was used with the `opaque` render method.
 
 ## 1.26.0
 
+### Traits
+
+<Label color="green">Versioned</Label>
+
+-   Released `minecraft:connection` from experimental
+-   Updated `minecraft:placement_direction`
+    -   Released `blocks_to_corner_with` parameter from experimental
+    -   Updated `enabled_states` parameter
+        -   Released `"minecraft:corner_and_cardinal_direction"`{lang=json} value from experimental
+
 ### Components
+
+-   Updated `minecraft:collision_box`
+    -   Released array support from experimental
+    -   Released extended bounds from experimental
+-   Updated `minecraft:geometry`
+    -   Added backwards compatibility mapping for `"minecraft:geometry.full_block"`{lang=json} identifier.
+        -   In format versions prior to `1.26.0`, `"minecraft:geometry.full_block"`{lang=json} will be treated as `"minecraft:geometry.full_block_v1"`{lang=json}.
+-   Updated `minecraft:liquid_detection`
+    -   Added `use_liquid_clipping` detection rule parameter which determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](/blocks/block-components#collision-box)).
+        -   In format versions prior to `1.26.0`, the default value is `true`{lang=json}.
+        -   In format versions of `1.26.0` and higher, the default value is `false`{lang=json}.
+-   Updated `minecraft:material_instances`
+    -   Released `alpha_masked_tint` instance parameter from experimental
+-   Updated `minecraft:redstone_consumer`
+    -   Renamed `propogates_power` parameter to `propagates_power`
 
 <Label color="green">Versioned</Label>
 
@@ -30,8 +129,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Released `minecraft:leashable` from experimental
 -   Released `minecraft:support` from experimental
 -   Released `minecraft:redstone_consumer` from experimental
--   Updated `minecraft:redstone_consumer`
-    -   Renamed `propogates_power` parameter to `propagates_power`
 
 ## 1.21.130
 
@@ -41,6 +138,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 <Label color="blue">Upcoming Creator Features</Label>
 
 -   Added `minecraft:connection`
+
     -   Allows for fence-like connection permutations.
     -   Can be used to enable the following boolean states by including `"minecraft:cardinal_connections"`{lang=json} in the `enabled_states` array:
         -   `minecraft:connection_north`
@@ -48,15 +146,13 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
         -   `minecraft:connection_south`
         -   `minecraft:connection_west`
 
-<Tag name="experimental" />
-<Label color="yellow">Beta APIs</Label>
-<Label color="yellow">Use Beta Features</Label>
-
 -   Updated `minecraft:placement_direction`
-    -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value for the `enabled_states` array, which can be used to replicate stair rotation and cornering, enabling the following states:
-        -   `minecraft:cardinal_direction`
-        -   `minecraft:corner`
-    -   Added `blocks_to_corner_with` property which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   The following changes require the file's `use_beta_features` field to be set to `true`{lang=json} while experimental.
+    -   Added `blocks_to_corner_with` parameter which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
+    -   Updated `enabled_states` parameter
+        -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value, which can be used to replicate stair rotation and cornering, enabling the following states:
+            -   `minecraft:cardinal_direction`
+            -   `minecraft:corner`
 
 ### Components
 
@@ -67,7 +163,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Added `minecraft:connection_rule`
     -   Determines whether other blocks such as fences and walls can connect to the block.
-    -   Contains `accepts_connection_from` which may be set to one of the following values:
+    -   Contains `accepts_connections_from` which may be set to one of the following values:
         -   `"all"`{lang=json} (default) allows any block to connect to the block.
         -   `"only_fences"`{lang=json} only allows fences to connect to the block, preventing other blocks such as walls and glass panes from connecting.
         -   `"none"`{lang=json} prevents all blocks from connecting.
@@ -82,20 +178,15 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Contains `propogates_power` which determines whether this block conducts redstone power to adjacent blocks.
         -   Note that the spelling of this parameter is incorrect (it is corrected to `propagates_power` in 1.26.0).
         -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
-            -   This allows the block to unintuitively have properties of a redstone conductor while not actually conducting redstone.
+            -   This allows the block to counterintuitively have properties of a redstone conductor while not actually conducting redstone.
 -   Added `minecraft:support`
     -   Defines the block's ability to support other blocks that are attached to it.
     -   Contains `shape` which may be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
--   Updated `minecraft:material_instances`
-    -   Removed redundant `emissive` instance parameter
-
-<Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
-<Label color="green">Versioned</Label>
-
 -   Updated `minecraft:collision_box`
     -   Can now be defined as an array of multiple boxes.
     -   Boxes can now extend up to 8 pixels above the block unit on the Y-axis.
+-   Updated `minecraft:material_instances`
+    -   Removed redundant `emissive` instance parameter
 
 ## 1.21.120
 
@@ -305,8 +396,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 ### Components
 
-<Label color="green">Versioned</Label>
-
 -   Updated `minecraft:destructible_by_mining`
     -   Released `item_specific_speeds` parameter from experimental
 
@@ -345,6 +434,11 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `minecraft:redstone_conductivity`
     -   Contains `redstone_conductor` which determines whether this block conducts redstone.
     -   Contains `allows_wire_to_step_down` which determines whether redstone wire can travel down the side of this block.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
 -   Updated `minecraft:destructible_by_mining`
     -   Added `item_specific_speeds` which determines the `destroy_speed` for each `item` descriptor in an array.
 
@@ -443,7 +537,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Released `traits` from experimental
 
-#### Traits
+### Traits
 
 <Label color="green">Versioned</Label>
 
@@ -478,7 +572,10 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `traits`
     -   Block traits are shortcuts for creators to add vanilla states and value setters to data-driven blocks.
 
-#### Traits
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
 
 -   Added `minecraft:placement_direction`
     -   Can enable the states `minecraft:cardinal_direction` and `minecraft:facing_direction`.
@@ -549,11 +646,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 
 -   Released `minecraft:geometry` from experimental
 -   Released `minecraft:material_instances` from experimental
-
-<Tag name="experimental" />
-<Label color="red">Holiday Creator Features</Label>
-
--   Removed `minecraft:breathability`
 
 ## 1.19.30
 
@@ -784,16 +876,16 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 -   Added `transform` response
 -   Added `trigger` response
 
-## 1.10.0
+## 1.12.0
 
 ### Description
 
 -   Added `identifier`
     -   Defines the identifier of the block. Must have a namespace that isn't `minecraft`.
 -   Added `is_experimental`
-    -   Only registers the block if the `Use Experimental Gameplay` toggle is enabled in world settings.
+    -   Only registers the block if the "Use Experimental Gameplay" toggle is enabled in world settings.
 -   Added `register_to_creative_menu`
-    -   Causes the block to appear in the `Construction` category of the creative menu.
+    -   Causes the block to appear in the "Construction" category of the creative menu.
     -   Custom blocks cannot be added to the recipe book at this time.
 
 ### Components
@@ -814,6 +906,6 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
     -   Note that this is not a measure of resistance unlike in modern formats.
 -   Added `minecraft:loot`
     -   Determines the path of the loot table that will be dropped when this block is destroyed.
-    -   This component is ignored if the used tool has the `Silk Touch` enchantment.
+    -   This component is ignored if the used tool has the "Silk Touch" enchantment.
 -   Added `minecraft:map_color`
     -   Determines the color this block appears as on a map.

@@ -16,6 +16,35 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.30
+
+### Components
+
+-   Updated `minecraft:use_modifiers`
+    -   Added `start_using` parameter which determines when use modifiers should be always be applied when the item is used, or whether they should only be applied if the item does not have other built-in use functionality (such as a charged shooter shooting its stored ammunition).
+        -   In format versions prior to `1.26.30`, the default value is `"always"`{lang=json}.
+        -   In format versions of `1.26.30` and higher, the default value is `"if_first"`{lang=json}.
+
+## 1.26.10
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:block_placer`
+    -   Added `aligned_placement` parameter which determines whether the block should be placed on the block that was previously placed, on the face in the direction that the player started moving.
+        -   By default, this parameter is set to `false`{lang=json}.
+        -   Despite being introduced in version 1.26.10, this parameter is available in format versions 1.26.0 and higher.
+
+## 1.26.0
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:damage`
+    -   Now properly supports values over `255`{lang=json} up to a maximum of `32767`{lang=json}.
+
 ## 1.21.130
 
 ### Components
@@ -193,7 +222,7 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Defines the base rarity of the item (displayed by the color of the item name).
     -   Accepts the following rarity levels: `common`, `uncommon`,`rare` and `epic`.
     -   When an item is enchanted, its rarity will increase to the next level if possible.
-    -   This component has no functional effect and can be overrided with `minecraft:hover_text_color`.
+    -   This component has no functional effect and can be overwritten with `minecraft:hover_text_color`.
 
 <Tag name="experimental" />
 <Label color="orange">Bundles</Label>
@@ -204,7 +233,7 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Requires the `minecraft:storage_item` component to be applied.
 -   Added `minecraft:storage_item`
     -   Allows this item to contain other items.
-    -   Contains `allow_nesed_storage_items` which determines whether other storage items can be placed into the container.
+    -   Contains `allow_nested_storage_items` which determines whether other storage items can be placed into the container.
     -   Contains `allowed_items` which defines the items that are exclusively allowed in the container.
         -   If empty all items are allowed in the container.
     -   Contains `banned_items` which defines the items that are not allowed in the container.
@@ -326,17 +355,51 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:interact_button`
     -   Enable and set text on a button that is displayed when using touch controls.
     -   If set to `true`, the button displays "Use Item".
+-   Released `minecraft:enchantable` from experimental
+-   Released `minecraft:food` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:mining_speed`
+
+## 1.20.20
+
+### Description
+
+<Label color="green">Versioned</Label>
+
+-   Added `menu_category`
+    -   Contains `category` which determines which tab the item is placed into.
+    -   Contains `group` which determines which other items the item is grouped with.
+    -   Contains `is_hidden_in_commands` which determines whether the item is treated as invalid when used in commands.
+
+### Components
+
+<Label color="green">Versioned</Label>
+
 -   Released `minecraft:allow_off_hand` from experimental
 -   Released `minecraft:damage` from experimental
 -   Released `minecraft:digger` from experimental
 -   Released `minecraft:enchantable` from experimental
--   Released `minecraft:food` from experimental
+-   Released `minecraft:glint` from experimental
 -   Released `minecraft:hand_equipped` from experimental
 -   Released `minecraft:liquid_clipped` from experimental
 -   Released `minecraft:should_despawn` from experimental
 -   Released `minecraft:stacked_by_data` from experimental
 -   Released `minecraft:use_animation` from experimental
 -   Released `minecraft:use_duration` from experimental
+-   Released `minecraft:wearable` from experimental
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Removed `minecraft:creative_category`
+-   Renamed `minecraft:foil` to `minecraft:glint`
+-   Updated `minecraft:digger`
+    -   Removed `on_dig` trigger parameter
 
 ## 1.20.10
 

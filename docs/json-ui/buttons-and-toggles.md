@@ -2,9 +2,9 @@
 title: Buttons and Toggles
 category: Tutorials
 tags:
-  - beginner
+    - beginner
 mentions:
-  - TheoristMC
+    - TheoristMC
 description: In this tutorial, you will learn how toggles works.
 ---
 

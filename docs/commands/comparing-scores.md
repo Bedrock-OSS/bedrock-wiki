@@ -32,10 +32,10 @@ execute as <target> if score @s <objective> = .Highest <objective> run <command>
 **Command 1:** This command compares the `.Highest` score with every other tracked score in the specified objective, and if the `.Highest` score is lesser than the one being compared to, then the `.Highest` score will be assigned the value of that score. To illustrate:
 
 |  #  | Player | Objective: `wiki:kills` | Comparison with `.Highest` | `.Highest` after comparison |
-| :-: | :----: | :----------------: | :-----------------------: | :------------------------: |
-|  1  |  Alex  |         10         |     `.Highest > Alex`      |       `.Highest = 10`       |
-|  2  |  Kai   |         5          |      `.Highest > Kai`      |       `.Highest = 10`       |
-|  3  | Steve  |         20         |     `.Highest > Alex`      |       `.Highest = 20`       |
+| :-: | :----: | :---------------------: | :------------------------: | :-------------------------: |
+|  1  |  Alex  |           10            |     `.Highest > Alex`      |       `.Highest = 10`       |
+|  2  |  Kai   |            5            |      `.Highest > Kai`      |       `.Highest = 10`       |
+|  3  | Steve  |           20            |     `.Highest > Alex`      |       `.Highest = 20`       |
 
 _No change when `.Highest` score is compared to player 2 after player 1 (since 10 is already greater than 5)._
 
@@ -82,11 +82,11 @@ execute as <target> if score @s <objective> = .Lowest <objective> run <command>
 
 **Command 1:** This command compares the `.Lowest` score with every other tracked score in the specified objective, and if the `.Lowest` score is greater than the one being compared to, then the `.Lowest` score will be assigned the value of that score. To illustrate:
 
-|  #  | Player | Objective: `wiki:blocks_travelled` | Comparison with `.Lowest` | `.Lowest` after comparison |
-| :-: | :----: | :---------------------------: | :----------------------: | :-----------------------: |
-|  1  |  Alex  |              100              |     `.Lowest < Alex`      |      `.Lowest = 100`       |
-|  2  |  Kai   |              50               |      `.Lowest < Kai`      |       `.Lowest = 50`       |
-|  3  | Steve  |              200              |     `.Lowest < Alex`      |       `.Lowest = 50`       |
+|  #  | Player | Objective: `wiki:blocks_traveled` | Comparison with `.Lowest` | `.Lowest` after comparison |
+| :-: | :----: | :-------------------------------: | :-----------------------: | :------------------------: |
+|  1  |  Alex  |                100                |     `.Lowest < Alex`      |      `.Lowest = 100`       |
+|  2  |  Kai   |                50                 |      `.Lowest < Kai`      |       `.Lowest = 50`       |
+|  3  | Steve  |                200                |     `.Lowest < Alex`      |       `.Lowest = 50`       |
 
 _No change when `.Lowest` score is compared to player 3 after player 2 (since 50 is already less than 200)._
 
@@ -103,16 +103,16 @@ Wildcard (`*`) compares with all tracked scores — that includes offline player
 **Example:**
 
 <CodeHeader>
-    BP/functions/wiki/scoreboard/players/get_lowest_score/blocks_travelled.mcfunction
+    BP/functions/wiki/scoreboard/players/get_lowest_score/blocks_traveled.mcfunction
 </CodeHeader>
 
 ```yaml
 ## Get Lowest Score
-scoreboard players operation .Lowest wiki:blocks_travelled < * wiki:blocks_travelled
+scoreboard players operation .Lowest wiki:blocks_traveled < * wiki:blocks_traveled
 
-## Tag Players with the Least Distance Travelled
+## Tag Players with the Least Distance Traveled
 tag @a remove wiki:eliminated
-execute as @a if score @s wiki:blocks_travelled = .Lowest wiki:blocks_travelled run tag @s add wiki:eliminated
+execute as @a if score @s wiki:blocks_traveled = .Lowest wiki:blocks_traveled run tag @s add wiki:eliminated
 ```
 
 ![Chain of 3 Command Blocks](/assets/images/commands/command-block-chain/3.png)
@@ -136,9 +136,9 @@ execute as @a at @s at @a[rm=0.01] if score @s <objective> = @p <objective> run 
 In the `<command>` (where `/say` is used as an example), `@s` refers to the executing entity or player (the target), and `@p` or `@e[c=1]` refers to the entity or player being compared with.
 :::
 
-**Visualisation:**
+**Visualization:**
 
-![Getting Matching Scores 2D Visualisation](/assets/images/commands/comparing-scores/2d-visualisation.gif)
+![Getting Matching Scores 2D Visualization](2d-visualization.gif)
 
 **Example 1:** Teleport pet to owner if farther than 6 blocks:
 

@@ -175,4 +175,4 @@ You can fill a structure with `structure_void` (so air doesn't replace blocks wh
 This method allows us to keep item data (such as durability).
 Then you can load this structure whenever and wherever you want.
 
-![](/assets/images/items/spawning-items/structure-method.png)
+![](structure-method.png)

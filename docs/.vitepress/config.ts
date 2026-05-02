@@ -1,7 +1,4 @@
-import { defineWikiConfig } from "./theme/config";
-
-import redirects from "./redirects";
-import tags from "./tags";
+import { defineWikiConfig } from "./theme/node/config";
 
 export default defineWikiConfig({
   title: "Bedrock Wiki",
@@ -9,7 +6,14 @@ export default defineWikiConfig({
   description: "A knowledge-sharing website for technical features of Minecraft Bedrock.",
 
   url: "https://wiki.bedrock.dev",
+
   repository: "https://github.com/Bedrock-OSS/bedrock-wiki",
+  branch: "wiki",
+
+  examples: {
+    repository: "https://github.com/Bedrock-OSS/bedrock-examples",
+    branch: "main",
+  },
 
   algolia: {
     appId: "N9ZHAYJQII",
@@ -42,9 +46,7 @@ export default defineWikiConfig({
       "/entities/vanilla-usage-spawn-rules",
       "/entities/vuc-full",
       "/entities/vusr-full",
+      "/text/fonts",
     ],
   },
-
-  redirects,
-  tags,
 });

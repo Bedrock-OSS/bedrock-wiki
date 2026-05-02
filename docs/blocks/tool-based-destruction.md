@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.10
 This tutorial assumes a basic understanding of blocks and [block tags](/blocks/block-tags).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -57,7 +57,7 @@ _You can find other hardness values on the [Minecraft Wiki](https://minecraft.wi
 
 ### Defining Suitable Tools
 
-There are currently 6 item destructible [vanilla block tags](/blocks/block-tags#list-of-vanilla-tags):
+There are currently 6 item destructible [vanilla block tags](/blocks/vanilla-block-tags):
 
 -   Axes: `minecraft:is_axe_item_destructible`
 -   Hoes: `minecraft:is_hoe_item_destructible`
@@ -80,7 +80,7 @@ These tags can be applied to your block in its `components`:
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:limestone",
@@ -106,6 +106,9 @@ These tags can be applied to your block in its `components`:
 There is no proper way to specify which tools are required for a block to drop loot.
 The following section describes workarounds that can be used to replicate vanilla drop mechanics as well as possible.
 :::
+:::danger EXPLOSIONS
+The following workaround prevents block loot from dropping when destroyed by explosions, whereas vanilla blocks that require a tool will drop when exploded.
+:::
 :::danger SILK TOUCH
 It is impossible to prevent a block from dropping itself when mined using an item with the Silk Touch enchantment.
 :::
@@ -129,7 +132,7 @@ Similarly to the destructible by mining component, the `match_tool` parameters a
 -   `minecraft:match_tool_filter_none` checks that the item has none of the listed [tags](/items/item-tags).
 
 :::tip EXCLUDING EMPTY HANDS
-By default, the `match_tool` component will match an empty hand.
+By default, the `match_tool` condition will match an empty hand.
 To prevent this from happening, you'll need to ensure that the stack size (`count`) is not 0.
 :::
 
@@ -194,7 +197,7 @@ This can be achieved by using the `item_specific_speeds` parameter of the destru
 
 ### Tier Destructible Tags
 
-There are also several tier destructible [vanilla block tags](/blocks/block-tags#list-of-vanilla-tags) that indicate the tier of tool required for the block to drop.
+There are also several tier destructible [vanilla block tags](/blocks/vanilla-block-tags) that indicate the tier of tool required for the block to drop.
 While adding one of these tags to your block does not come with changes in block functionality (such as preventing drops without a custom loot table), the appropriate tag should be added to your block to be consistent with vanilla blocks.
 
 -   Stone or better: `minecraft:stone_tier_destructible`

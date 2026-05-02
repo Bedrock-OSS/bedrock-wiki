@@ -4,7 +4,8 @@ category: Techniques
 mentions:
     - BedrockCommands
     - zheaEvyline
-nav_order: 3
+    - MaxedOut4826
+nav_order: 4
 description: Max's Block Entity system using commands.
 ---
 
@@ -17,6 +18,7 @@ This method, developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/use
 To preserve credits to the creator, the community termed this method as "Max's Block Entity" or MBE for short.
 
 **Points to Note:**
+
 1. This method uses 1 armor stand per block entity. Therefore, too many armor stands (like any entity) can contribute to server lag.
 2. Players will still be able to pass through them, as well as interact with them (if not restricted).
 3. While the block entity may render in one spot, it's actual hitbox will have a slight offset.
@@ -27,7 +29,7 @@ To preserve credits to the creator, the community termed this method as "Max's B
 
 ## Setup
 
-_To be typed in chat:_
+_Type the following commands in Chat:_
 
 1. `/summon armor_stand ~~~ 81 ~ default "Grumm"`
     - We will set the Y (horizontal) rotation to `81` to align with the normal Minecraft block grid.

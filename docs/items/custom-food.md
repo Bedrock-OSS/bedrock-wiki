@@ -1,7 +1,7 @@
 ---
 title: Custom Food
 description: Learn how to create custom foods that, when consumed, grant effects to the player (like the golden apple).
-category: Tutorials
+category: Vanilla Re-Creations
 tags:
     - easy
     - scripting
@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.21.130
+:::tip FORMAT VERSION 1.26.10
 This page requires a basic understanding of custom items.
 Check out the [items guide](/items/items-intro) before starting!
 :::
@@ -24,7 +24,7 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 ```json
 {
-    "format_version": "1.21.130",
+    "format_version": "1.26.10",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_food",
@@ -42,12 +42,13 @@ On this page, you will learn how to create custom foods that, when consumed, gra
             "minecraft:use_animation": "eat",
             "minecraft:use_modifiers": {
                 "use_duration": 1.6,
-                "movement_modifier": 0.33
+                "movement_modifier": 0.35
             },
             "minecraft:tags": {
                 "tags": [
                     "minecraft:is_food",
-                    "minecraft:is_meat", // Only include if the food is meat
+                    "minecraft:is_fish", // Only include if the food is fish
+                    "minecraft:is_meat", // Only include if the food is meat (not including fish)
                     "minecraft:is_cooked" // Only include if the food is cooked
                 ]
             }
@@ -58,16 +59,15 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 If you already know how to place a texture in the correct path, you can skip down, but if you don't, it's not enough to simply place the texture file in the `RP/textures/items` folder.
 
-We need to create an object named `wiki:custom_<thing>` in the `RP/textures/item_texture.json` file of our resource pack, as in the example below.
+We now need to create an object with the name defined in the `minecraft:icon` component above in the `RP/textures/item_texture.json` file of our resource pack.
 
 <CodeHeader>RP/textures/item_texture.json</CodeHeader>
 
 ```json
 {
-    "texture_name": "atlas.items",
     "texture_data": {
         "wiki:custom_food": {
-            "textures": "textures/items/custom_food"
+            "textures": "textures/wiki/items/custom_food"
         }
     }
 }

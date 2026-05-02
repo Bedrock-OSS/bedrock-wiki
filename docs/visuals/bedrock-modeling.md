@@ -20,7 +20,7 @@ Another trick to solve this if you _must_ have smaller textures is by **increasi
 
 Vertex snap is a handy tool in blockbench any modeler should use. It's beneficial when doing rounded things like wheels.
 You can find this tool right top next to the movement & scale tools. It has 2 modes, Move & Scale. How this tool works can be seen in the following gif.
-![](/assets/images/visuals/bedrock-modeling/vertex_snap.gif)
+![](vertex_snap.gif)
 
 ## Transparency
 
@@ -36,18 +36,18 @@ and in general, any on pixel art.
 
 Whether or no the transparency or emissive textures in your models work in-game, it's decided by the materials applied to them.
 
-| Material              | Description                                                                                              |
-|-----------------------|----------------------------------------------------------------------------------------------------------|
-| entity                | basic opaque material                                                                                    |
-| entity_alphatest      | supports transparent pixels                                                                              |
-| entity_alphablend     | supports translucent pixels                                                                              |
-| entity_emissive       | solid, alpha channel is used as the emissive channel                                                     |
-| entity_emissive_alpha | alpha channel is used for emissiveness, completely black + transparent pixels are rendered transparently |
+| Material              | Description                                                                                                   |
+| --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| entity                | basic opaque material                                                                                         |
+| entity_alphatest      | supports transparent pixels                                                                                   |
+| entity_alphablend     | supports translucent pixels                                                                                   |
+| entity_emissive       | solid, alpha channel is used as the emissive channel                                                          |
+| entity_emissive_alpha | alpha channel is used for emissive textures, completely black + transparent pixels are rendered transparently |
 
 ## Z-fighting
 
 Z-fighting is called when you have the face of 2 elements in the same place, and you can see both or half of them at the same time, as seen in the following picture.
-![](/assets/images/visuals/bedrock-modeling/z-fighting.png)
+![](z-fighting.png)
 You can solve this by inflating one of them by `0.01` or `-0.01` depending on which one should prioritize.
 
 ## Basics of Animations
@@ -56,7 +56,7 @@ When animating in Blockbench, you can set each keyframe by hand, or you can use 
 Here you will learn the basics.
 Let's start with this picture.
 
-![](/assets/images/visuals/bedrock-modeling/animations-1.png)
+![](animations-1.png)
 
 the name or `animation.cuack` is essential. You can't have symbols or caps there, and it must start with `animation.` for the animations to work without problems. Now the function we will be using is
 
@@ -69,7 +69,7 @@ the name or `animation.cuack` is essential. You can't have symbols or caps there
 -   Speed is the time it will take from going from top to down
 -   Pitch is how far it goes from the origin
 
-![](/assets/images/visuals/bedrock-modeling/animations-2.gif)
+![](animations-2.gif)
 
 Function used:
 
@@ -83,7 +83,7 @@ Don't forget that for the animation to be a perfect loop. It would help if you c
 Here's a table with values to get a perfect loop, though there are more you can discover.
 
 | Speed | Time | Group |
-|-------|------|-------|
+| ----- | ---- | ----- |
 | 150   | 2.4  | 1     |
 | 100   | 3.6  | 2     |
 
@@ -91,7 +91,7 @@ These numbers can be multiplied but not divided, so these will also work
 But only multiples of the same option
 
 | Speed | Time | Group |
-|-------|------|-------|
+| ----- | ---- | ----- |
 | 150   | 4.8  | 1     |
 | 200   | 3.6  | 2     |
 | 300   | 2.4  | 1     |
@@ -101,7 +101,7 @@ Now not all of these will "loop" together. And that is the Group column. The one
 
 :::tip
 You can have an animation in the loop by clicking on the following setting:
-![](/assets/images/visuals/bedrock-modeling/setting-loop.png)
+![](setting-loop.png)
 :::
 
 With this function & creativity, animals & dinosaurs are animated into walking, running & attacking.
@@ -111,10 +111,10 @@ You can learn more about queries & functions [here](https://bedrock.dev/docs/sta
 
 To easily change the speed of an animation you can simply multiply the default value of `anim_time_update` (defaults to `q.delta_time + q.anim_time`) inside our animation:
 
-<CodeHeader>RP/animations/myentity.animation.json#animations</CodeHeader>
+<CodeHeader>RP/animations/my_entity.a.json#animations</CodeHeader>
 
 ```json
-"animation.myentity.myanimation": {
+"animation.my_entity.my_animation": {
     "anim_time_update":"2 * q.delta_time + q.anim_time"
     //Your animation goes here!
 }

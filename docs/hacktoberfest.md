@@ -8,8 +8,8 @@ hidden: true
 
 <WikiImage
   :src="{
-    dark: '/assets/images/hacktoberfest/hf10_horz_fcl_rgb.png',
-    light: '/assets/images/hacktoberfest/hf10_horz_fcd_rgb.png'
+    dark: 'hf10_horz_fcl_rgb.png',
+    light: 'hf10_horz_fcd_rgb.png'
   }"
   alt="Hacktoberfest Logo"
   width="600"
@@ -33,7 +33,7 @@ Read the official [Hacktoberfest guide](https://hacktoberfest.com/participation/
 Below is a list of organizations and their projects that are participating in Hacktoberfest.
 
 <CardGrid>
-<Card title="Bedrock OSS" link="https://github.com/Bedrock-OSS" image="/assets/images/hacktoberfest/bedrockoss.png">
+<Card title="Bedrock OSS" link="https://github.com/Bedrock-OSS" image="bedrockoss.png">
 
 [Bedrock Loot Gen](https://github.com/Bedrock-OSS/bedrock-loot-gen) —
 A website for creating Bedrock Edition loot tables.
@@ -47,7 +47,7 @@ An add-on compiler for the Bedrock Edition of Minecraft.
 _See all participating Bedrock OSS projects [here](https://github.com/orgs/Bedrock-OSS/repositories?q=topic%3Ahacktoberfest)._
 
 </Card>
-<Card title="Blockception" link="https://github.com/Blockception" image="/assets/images/hacktoberfest/blockception.png">
+<Card title="Blockception" link="https://github.com/Blockception" image="blockception.png">
   
 [Minecraft Error Codes](https://github.com/Blockception/Minecraft-Error-Codes) —
 Every error code the plugin can throw, with explanations of the error
@@ -61,7 +61,7 @@ An extension that is used for Minecraft Bedrock Development.
 _See all participating Bedrock OSS projects [here](https://github.com/orgs/Blockception/repositories?q=topic%3Ahacktoberfest)._
 
 </Card>
-<Card title="SirLich" link="https://github.com/SirLich" image="/assets/images/hacktoberfest/sirlich.png">
+<Card title="SirLich" link="https://github.com/SirLich" image="sirlich.png">
   
 [Bedrock Schema Docs](https://github.com/SirLich/bedrock-schema-docs) —
 Auto-generated documentation from the schemas by Blockception.
@@ -72,7 +72,7 @@ Minecraft Bedrock pack-access library.
 _See all participating projects by SirLich [here](https://github.com/SirLich/repositories?q=topic%3Ahacktoberfest)._
 
 </Card>
-<Card title="MCDevKit" link="https://github.com/MCDevKit" image="/assets/images/hacktoberfest/mcdevkit.png">
+<Card title="MCDevKit" link="https://github.com/MCDevKit" image="mcdevkit.png">
   
 [jsonte](https://github.com/MCDevKit/jsonte) —
 JSON Templating Engine for generating JSON files easily for Minecraft Bedrock Add-On development.
@@ -80,7 +80,7 @@ JSON Templating Engine for generating JSON files easily for Minecraft Bedrock Ad
 _See all participating MCDevKit projects [here](https://github.com/orgs/MCDevKit/repositories?q=topic%3Ahacktoberfest)._
 
 </Card>
-<Card title="bridge." link="https://github.com/bridge-core" image="/assets/images/hacktoberfest/bridge.png">
+<Card title="bridge." link="https://github.com/bridge-core" image="bridge.png">
   
 [bridge. Documentation](https://github.com/bridge-core/docs) —
 Documentation aiming to introduce users to bridge. and its features.

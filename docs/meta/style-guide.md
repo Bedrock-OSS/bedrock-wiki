@@ -29,7 +29,7 @@ The style guide is a living, breathing document, which will evolve as add-on cre
 BP/functions/wiki/ability/ice_blast.mcfunction
 BP/functions/wiki/ability/fire_trail.mcfunction
 BP/functions/wiki/event/players/on_death.mcfunction
-BP/functions/wiki/event/worlds/on_initialise.mcfunction
+BP/functions/wiki/event/worlds/on_initialize.mcfunction
 ```
 
 -   All content folders `ability` and `event` are consistently singular.
@@ -41,7 +41,7 @@ BP/functions/wiki/event/worlds/on_initialise.mcfunction
 BP/functions/wiki/abilities/ice_blast.mcfunction
 BP/functions/wiki/abilities/fire_trail.mcfunction
 BP/functions/wiki/event/players/on_death.mcfunction
-BP/functions/wiki/event/world/on_initialise.mcfunction
+BP/functions/wiki/event/world/on_initialize.mcfunction
 ```
 
 -   Only `abilities` content folder is pluralized while `event` is singular.
@@ -82,7 +82,7 @@ The `minecraft` namespace is reserved for vanilla content so cannot be used unle
 
 For personal projects, use a convenient version of your player name, and for team projects, use a suitable version of your team name.
 
-When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `minetite.wiki:dragon`
+When multiple developers work on a project together, the namespace should always be shared. If credit is required, use sub-indexing: `ascent.wiki:dragon`
 
 Where to use namespaces:
 
@@ -219,7 +219,7 @@ This practice helps create a consistent format, making it easier for everyone to
 
 **Example Objectives:**
 
--   `wiki:blocks_travelled.overworld`
+-   `wiki:blocks_traveled.overworld`
 -   `wiki:q.is_sneaking`
 -   `wiki:q.is_armed_any`
 
@@ -260,32 +260,32 @@ Example:
 {
     "format_version": "1.8.0",
     "animations": {
-        "animation.dragon.sit": {...},
-        "animation.dragon.fly": {...},
-        "animation.dragon.roar": {...},
+        "animation.dragon.sit": { ... },
+        "animation.dragon.fly": { ... },
+        "animation.dragon.roar": { ... },
   }
 }
 ```
 
 ## Split Textures by Path, Not Name
 
-✔️ `textures/dragon/red`
+✔️ `RP/textures/wiki/dragon/red`
 
-❌ `textures/dragon_red_skin`
+❌ `RP/textures/wiki/dragon_red_skin`
 
-✔️ `textures/npc/dragon_hunter/archer`
+✔️ `RP/textures/wiki/npc/dragon_hunter/archer`
 
-❌ `textures/npc/dragon_hunter_archer`
+❌ `RP/textures/wiki/npc/dragon_hunter_archer`
 
 ## .lang File Comments
 
 Comments intended for the localizer should always be in-line, in the following format:
 
 ```lang
-the.key=The string<\t>## Comment, intended for the one localizing.
+the.key=The string	## Comment, intended for the one localizing.
 ```
 
-`<\t>` should be replaced by a tab (`	`) character in your lang files.
+**Note that the whitespace preceding inline comments must be a tab character, not spaces.**
 
 Own-line comments can be used for organizational purposes but should not store localization-critical information.
 
@@ -293,20 +293,20 @@ Own-line comments can be used for organizational purposes but should not store l
 
 ### Pack Types
 
-| Abbreviation | Pack Type                          |
-| ------------ | ---------------------------------- |
-| BP           | Behavior Pack                      |
-| RP           | Resource Pack                      |
-| SP           | Skin Pack                          |
+| Abbreviation | Pack Type     |
+| ------------ | ------------- |
+| BP           | Behavior Pack |
+| RP           | Resource Pack |
+| SP           | Skin Pack     |
 
 ### Languages
 
-| Abbreviation | Language                           |
-| ------------ | ---------------------------------- |
-| JS           | JavaScript                         |
-| JSON         | JavaScript Object Notation         |
-| NBT          | Named Binary Tag                   |
-| TS           | TypeScript                         |
+| Abbreviation | Language                   |
+| ------------ | -------------------------- |
+| JS           | JavaScript                 |
+| JSON         | JavaScript Object Notation |
+| NBT          | Named Binary Tag           |
+| TS           | TypeScript                 |
 
 ### Other
 

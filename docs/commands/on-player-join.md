@@ -1,6 +1,8 @@
 ---
 title: On Player Join
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -16,11 +18,11 @@ This system will run your desired commands on the event that a player joins the 
 
 ## Setup
 
-_To be typed in Chat:_
+_Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:joined dummy`
 
-If you are working with functions and prefer to have the objective added automatically on world initialisation, follow the process outlined in [On First World Load](/commands/on-first-world-load).
+If you are working with functions and prefer to have the objective added automatically on world initialization, follow the process outlined in [On First World Load](/commands/on-first-world-load).
 
 ## System
 

@@ -16,6 +16,7 @@ mentions:
     - JaylyDev
     - zheaEvyline
     - phoenixr-codes
+    - Aevarkan
 description: Useful links for developing add-ons.
 ---
 
@@ -57,14 +58,15 @@ Important links have a ⭐.
 -   [Bedrock World Editor (Free Open-Source Bedrock NBT/World Editor)](https://github.com/8Crafter-Studios/Bedrock-World-Editor)
 -   [Chunker (World Converter)](https://chunker.app/)
 -   [CoreCoder (Code Editor)](https://hanprog.itch.io/core-coder)
+-   [Dialogue Node Editor (VSCode Extension)](https://marketplace.visualstudio.com/items?itemName=aevarkan.bedrock-dialogue-node-editor)
 -   [Feature Rule Generator v2 (Free Version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
 -   [Feature Rule Generator v2 (Paid Version)](https://machine-builder.itch.io/frg-v2)
 -   [Mcblend (Blender Plugin)](https://github.com/Nusiq/mcblend)
--   [NBT Editor](https://www.universalminecrafteditor.com/)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
+-   [NBT Workbench](https://github.com/RealRTTV/nbtworkbench)
 -   [Ore UI Customizer App (Allows you to modify Ore UI)](https://github.com/8Crafter-Studios/Ore-UI-Customizer-App)
 -   [TesserPack (Pack Optimizer)](https://github.com/TBroz15/TesserPack)
--   [World Converter (Paid)](https://www.universalminecraftconverter.com/download)
+-   [Universal Minecraft Tool (Paid)](https://www.universalminecrafttool.com/)
 
 ## Bedrock Tools Websites
 
@@ -80,10 +82,12 @@ Important links have a ⭐.
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
 -   [Foxynotail Tools](https://foxynotail.com/software)
+-   [Glyph Drawer](https://nhanaz.github.io/glyph-drawer/)
 -   [Glyph Tools](https://nhanaz.github.io/glyph/)
 -   [Textures to Glyph Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
 -   [MCBE Essentials](https://mcbe-essentials.github.io/)
 -   [.mcpack Generator](https://mcbe-essentials.github.io/instant-pack/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
@@ -145,8 +149,9 @@ These packs are published by the open-source community.
 
 ## Add-On Marketplaces & Links
 
--   ⭐ [Minecraft Marketplace](https://www.minecraft.net/en-us/marketplace)
+-   ⭐ [Minecraft Marketplace](https://www.minecraft.net/marketplace)
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
+-   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
 -   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
 -   [CubitosMC](https://www.cubitosmc.com/)
 -   [MCDLHub](https://mcdlhub.com/)

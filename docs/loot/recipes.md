@@ -14,7 +14,7 @@ mentions:
 
 Recipes are the means of handling several item transactions, namely those occurring in crafting tables, furnaces, campfires, and brewing stands.
 
-![](/assets/images/loot/recipes/recipe.png)
+![](recipe.png)
 
 ::: tip
 Anvil interactions are handled within an [item definition](/items/item-components), not via recipe files. Loom transactions are currently unavailable.
@@ -109,7 +109,7 @@ It's strongly recommended to use a namespace. Namespaces are a standard in other
 
 ### Tags
 
-Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. These tags will make the recipe be shared across different blocks that uses the `minecraft:crafting_table` component. When the recipe does not inlcude the `crafting_table` tag, or any vanilla tag, but a tag from your custom block, the recipe will only be shared to that custom block and not the crafting table/stonecutter/etc. At least one tag must be provided.
+Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. These tags will make the recipe be shared across different blocks that uses the `minecraft:crafting_table` component. When the recipe does not include the `crafting_table` tag, or any vanilla tag, but a tag from your custom block, the recipe will only be shared to that custom block and not the crafting table/stonecutter/etc. At least one tag must be provided.
 
 <CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
 
@@ -287,7 +287,7 @@ Crafting recipes support both crafting tables and stonecutters:
 
 Shapeless recipes simply bind a collection of inputs to a single output on a crafting grid.
 
-![](/assets/images/loot/recipes/shapeless_recipe.png)
+![](shapeless_recipe.png)
 
 <CodeHeader>BP/recipes/decorations/knobs/brass.json</CodeHeader>
 
@@ -362,7 +362,7 @@ Shapeless recipe outputs are expressed using the required `"result"` property an
 
 Shaped recipes enforce that the ingredients used during crafting conform to a strict shape.
 
-![](/assets/images/loot/recipes/shaped_recipe.png)
+![](shaped_recipe.png)
 
 <CodeHeader>BP/recipes/covered_arch.json</CodeHeader>
 
@@ -623,7 +623,7 @@ Crafting recipes with lower priority values take precedence. So, if all else is 
 
 Furnace recipes are used to transform an item using a heat source over a period of time. A slight misnomer, furnace recipes are used with any interface that involves a heat source, including campfires.
 
-![](/assets/images/loot/recipes/furnace_recipe.png)
+![](furnace_recipe.png)
 
 <CodeHeader>BP/recipes/magic/magic_ash.json</CodeHeader>
 
@@ -708,7 +708,7 @@ Currently, the stackability of the produced output is bugged, regardless of whet
 
 Brewing mixes are simple brewing recipes theoretically designed to isolate the data value of the input from the data value of the output.
 
-![](/assets/images/loot/recipes/brewing_mix_recipe.png)
+![](brewing_mix_recipe.png)
 
 <CodeHeader>BP/recipes/brewing/negative/paralysis.json</CodeHeader>
 
@@ -744,7 +744,7 @@ If a data value is specified for a reagent using the `"data"` property format, a
 
 Brewing containers are designed to pass the data value of an input to the transformed output.
 
-![](/assets/images/loot/recipes/brewing_container_recipe.png)
+![](brewing_container_recipe.png)
 
 <CodeHeader>BP/recipes/illumination_potion.json</CodeHeader>
 

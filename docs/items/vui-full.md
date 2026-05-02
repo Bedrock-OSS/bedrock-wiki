@@ -8,7 +8,7 @@ hidden: true
 ---
 
 This page was created with [Wiki Content Generator](https://github.com/Bedrock-OSS/bedrock-wiki-content-generator). If there are issues, contact us on [Bedrock OSS](https://discord.gg/XjV87YN) Discord server.
-Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. *Last updated for 1.21.60*
+Includes all examples. Namespace `minecraft` and some formatting have been removed to make the page load quickly. _Last updated for 1.21.60_
 
 ## block
 
@@ -1820,4 +1820,3 @@ apple
     "movement_modifier": 0.35
 }
 ```
-

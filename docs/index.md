@@ -23,7 +23,7 @@ Our collection of step-by-step tutorials intended as your first contact with add
 Learn how to set up your own project and get started developing.
 
 </Card>
-<Card title="Discord" link="/discord" image="assets/images/icons/book.png">
+<Card title="Discord" link="/discord" image="/assets/images/icons/book.png">
 
 Join our Discord server to learn about add-ons and seek help from other add-on creators.
 

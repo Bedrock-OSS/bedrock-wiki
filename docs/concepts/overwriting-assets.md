@@ -94,7 +94,6 @@ The following files work in this way:
 
 ```json
 {
-    "resource_pack_name": "vanilla",
     "texture_data": {
         "sugar": {
             "textures": "textures/path/to/my/sugar"

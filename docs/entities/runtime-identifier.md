@@ -49,7 +49,7 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 ### minecraft:area_effect_cloud
 
 -   Disables collision with the world and other entities.
--   Makes the entity inherit attributes from vanilla [AOE clouds](/entities/introduction-to-aec), vis. existing on a timer, applying potion effects, and emitting particles.
+-   Makes the entity inherit attributes from vanilla [area effect clouds](/entities/area-effect-clouds), vis. existing on a timer, applying potion effects, and emitting particles.
 
 ---
 
@@ -147,6 +147,7 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 ---
 
 ### minecraft:creeper
+
 -   Prevents other entities with `minecraft:owner_hurt_target` from targeting the "creeper"
 -   Restricts entity to spawn at block light level 0
 
@@ -305,7 +306,7 @@ Not every runtime id/effect is mentioned here. Try experimenting yourself to fin
 
 ### minecraft:pillager
 
-- Allows `minecraft:behavior.charge_held_item` to play sounds when charging crossbow
+-   Allows `minecraft:behavior.charge_held_item` to play sounds when charging crossbow
 
 ---
 

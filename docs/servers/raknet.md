@@ -21,14 +21,14 @@ Bedrock uses the port `19132` (Ipv4, use `19133` for ipv6) as its default RakNet
 
 ### RakNet Notes
 
-- The offline message id will always be: `0x00ffff00fefefefefdfdfdfd12345678` - this series of bytes will be referred to as _Magic_.
-- The offline message id is sent with unconnected messages such as unconnected pings and pongs.
-- The first byte is used to identify the type of the packet.
+-   The offline message id will always be: `0x00ffff00fefefefefdfdfdfd12345678` - this series of bytes will be referred to as _Magic_.
+-   The offline message id is sent with unconnected messages such as unconnected pings and pongs.
+-   The first byte is used to identify the type of the packet.
 
 ### Datatypes
 
 | Type                 | Size | Range           | Notes                                                                         |
-|----------------------|------|-----------------|-------------------------------------------------------------------------------|
+| -------------------- | ---- | --------------- | ----------------------------------------------------------------------------- |
 | u8 (byte)            | 1    | 0-255           | A single Byte                                                                 |
 | i16 (short)          | 2    | -32768 - 32767  | Signed 16-bit integer                                                         |
 | u16 (unsigned short) | 2    | 0 - 65535       | Unsigned 16-bit integer                                                       |
@@ -54,14 +54,12 @@ Bedrock uses the port `19132` (Ipv4, use `19133` for ipv6) as its default RakNet
 -   [Connection Request Accepted](#connection-request-accepted)
 -   [New Incoming Connection](#new-incoming-connection)
 
-
 ### Unconnected Pings
 
 Minecraft Bedrock will send out a message to all listed servers (and the local network) to check if any games are available and retrieve the MOTD from the game.
 These messages are known as unconnected pings and are structured in this format:
 
 `0x01 | client alive time in ms (unsigned long long) | magic | client GUID`
-
 
 ### Unconnected Pongs
 
@@ -77,8 +75,8 @@ Example:
 
 The client doesn't seem to use the gamemode or the numeric value for the gamemode.
 
-
 ### Open Connection Request 1
+
 (Client -> Server)
 
 The client sends this when attempting to join the server
@@ -90,8 +88,8 @@ The null padding seems to be used to discover the maximum packet size the networ
 The client will send this to the server with decreasing null padding,
 until the server responds with a [Open Connection Reply 1](#open-connection-reply-1)
 
-
 ### Open Connection Reply 1
+
 (Server -> Client)
 
 The server responds with this once the client attempts to join
@@ -100,16 +98,16 @@ The server responds with this once the client attempts to join
 
 This is the first half of the handshake between the client and the server.
 
-
 ### Open Connection Request 2
+
 (Client -> Server)
 
 The client responds with this after they receive the open connection reply 1 packet.
 
 `0x07 | magic | Cookie (uint32, if server has security) | Client supports security (Boolean(false), always false for the vanilla client, if server has security) | server Address | MTU Size (Unsigned short) | client GUID (Long)`
 
-
 ### Open Connection Reply 2
+
 (Server -> Client)
 
 This is the last part of the handshake between the client and the server.
@@ -118,24 +116,24 @@ This is the last part of the handshake between the client and the server.
 
 **From here on, all RakNet messages are contained in a [Frame Set Packet](https://minecraft.wiki/w/RakNet#Frame_Set_Packet).**
 
-
 ### Connection Request
+
 (Client -> Server)
 
 This is the part where the client sends the connection request.
 
 `0x09 | client GUID (Long) | Request timestamp (Long) | Secure (Boolean)`
 
-
 ### Connection Request Accepted
+
 (Server -> Client)
 
 The server sends this packet in response to the incoming connection request.
 
 `0x10 | client Address | System index (Short, unknown what this does. 0 works as a value (Minecraft client sends 47)) | System adresses ([]Address) | Ping time (Long) | Pong Time (Long)`
 
-
 ### New Incoming Connection
+
 (Client -> Server)
 
 Our RakNet connection is now fully successful.
@@ -148,7 +146,6 @@ The next two packets (and the first Minecraft Protocol packet) are all sent toge
 The RakNetProtocol allows for them to be sent separately too, however, servers with a custom raknet implementation might not always handle this case because this never occurs within the vanilla client.
 
 :::
-
 
 ### New Incoming Connection
 
@@ -165,7 +162,6 @@ After having sent this packet,
 you must periodically send a Connected Ping to keep the connection alive.
 The server also sometimes sends a Connected Ping, respond with a Connected Pong.
 
-
 ### Connected Ping
 
 The client sends this packet immediately after/with New Incoming Connection.
@@ -174,7 +170,6 @@ The client/server will respond to this with a Connected Pong.
 
 `0x00 | Time since start (uint64)`
 
-
 ### Connected Pong
 
 The client or server sends this packet after having received a Connected Ping.
@@ -182,19 +177,18 @@ This packet should be sent as unreliable.
 
 `0x00 | Time since start client (uint64) | Time since start server (uint64)`
 
-
-
 ## Implementations
 
 Not everything can be explained in great detail via documentation, that's why looking at existing implementations is very helpful.
 Here is list of RakNet Protocol implementations
 
 | Name                                                                                            | Description                                                                         | Language               |
-|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|------------------------|
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------- |
 | [RakNet (Official)](https://github.com/facebookarchive/RakNet)                                  | RakNet is a cross platform, open source, C++ networking engine for game programmers | C++                    |
 | [bedrock-crustaceans/raknet](https://github.com/bedrock-crustaceans/raknet)                     | RakNet implementation in Rust                                                       | Rust                   |
 | [NetrexMC/RakNet](https://github.com/NetrexMC/RakNet)                                           | RakNet implementation in Rust                                                       | Rust                   |
 | [rust-raknet](https://github.com/b23r0/rust-raknet)                                             | RakNet Protocol implementation by Rust                                              | Rust                   |
+| [tokio-raknet](https://github.com/iAldrich23xX/tokio-raknet)                                    | RakNet Implementation build around the tokio async ecosystem                        | Rust                   |
 | [transport-raknet](https://github.com/CloudburstMC/Network/tree/develop/transport-raknet)       | netty-transport-raknet                                                              | Java                   |
 | [RakLib](https://github.com/pmmp/RakLib)                                                        | RakNet server implementation written in PHP                                         | PHP                    |
 | [go-raknet](https://github.com/Sandertv/go-raknet)                                              | Go library implementing a basic version of the RakNet protocol                      | Go                     |
