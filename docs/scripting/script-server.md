@@ -8,6 +8,7 @@ mentions:
     - ThomasOrs
     - kumja1
     - QuazChick
+    - MindfulLearner
 ---
 
 ::: warning
@@ -289,6 +290,65 @@ import { world } from "@minecraft/server";
 world.setDynamicProperty("player_score", 100); // set a property with a number value
 const playerScore = world.getDynamicProperty("player_score"); // get the previously set property- will return 100.
 ```
+
+## Inventory: Counting and Removing Items by Multiple TypeIds
+
+The `/clear` command does not support matching multiple item types in one call. When you need to count or remove items that span several `typeId` values (such as any color of wool, or any type of flower), you need to iterate the player's inventory manually.
+
+Using a `Set` for the allowed type IDs makes the lookup O(1) per slot:
+
+```js
+const WOOL_IDS = [
+    "minecraft:white_wool", "minecraft:orange_wool", "minecraft:magenta_wool",
+    "minecraft:light_blue_wool", "minecraft:yellow_wool", "minecraft:lime_wool",
+    "minecraft:pink_wool", "minecraft:gray_wool", "minecraft:light_gray_wool",
+    "minecraft:cyan_wool", "minecraft:purple_wool", "minecraft:blue_wool",
+    "minecraft:brown_wool", "minecraft:green_wool", "minecraft:red_wool",
+    "minecraft:black_wool",
+];
+
+// Count how many items matching any of the given typeIds the player has
+function countItems(player, typeIds) {
+    const allowed = new Set(typeIds);
+    const container = player.getComponent("minecraft:inventory").container;
+    let total = 0;
+    for (let i = 0; i < container.size; i++) {
+        const item = container.getItem(i);
+        if (item && allowed.has(item.typeId)) total += item.amount;
+    }
+    return total;
+}
+
+// Remove exactly `amount` items from the player, consuming stacks as needed
+function clearItems(player, typeIds, amount) {
+    const allowed = new Set(typeIds);
+    const container = player.getComponent("minecraft:inventory").container;
+    let remaining = amount;
+    for (let i = 0; i < container.size && remaining > 0; i++) {
+        const item = container.getItem(i);
+        if (!item || !allowed.has(item.typeId)) continue;
+        const take = Math.min(item.amount, remaining);
+        item.amount -= take;
+        container.setItem(i, item.amount > 0 ? item : undefined);
+        remaining -= take;
+    }
+}
+```
+
+Usage example — check that the player has 8 of any wool color, then remove them:
+
+```js
+if (countItems(player, WOOL_IDS) >= 8) {
+    clearItems(player, WOOL_IDS, 8);
+    player.sendMessage("Quest complete!");
+}
+```
+
+:::tip
+`container.getItem(i)?.typeId` always returns the full namespaced ID, such as `"minecraft:white_wool"`. Items from third-party packs use their own namespace, for example `"mypacks:custom_item"`.
+
+Passing `undefined` to `container.setItem(i, undefined)` clears that slot entirely. This is required when reducing a stack to zero — setting `item.amount = 0` alone does not remove the item from the slot.
+:::
 
 ## Running Commands
 
