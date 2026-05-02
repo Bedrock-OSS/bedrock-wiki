@@ -13,6 +13,7 @@ mentions:
     - Sprunkles137
     - ThomasOrs
     - QuazChick
+    - MindfulLearner
 ---
 
 Non-Player Characters, or NPCs are villager-like entities that can be given a dialogue with a message and multiple buttons.
@@ -340,6 +341,121 @@ system.beforeEvents.startup.subscribe(({ itemComponentRegistry }) => {
 When you are done, package these files along with the manifest, and import it into Minecraft. Start a new flat world, and make sure to enable cheats and experiments.
 
 Once you are in the world, use `/function setup` to create the ticking area and NPC entity. Then use `/give @s wiki:teleport_menu` to give yourself the teleportation item. Switch to survival mode (NPC dialogues do not work in Creative), hold the item, and right-click. You should see your dialogue appear.
+
+## Script API Integration
+
+NPC dialogues work well alongside the Script API. A button can fire a `/scriptevent` command, which is caught by a `scriptEventReceive` subscriber in JavaScript. This lets you open rich `ActionFormData` UIs from an NPC interaction, bypassing the practical limit of buttons that fit cleanly in the NPC dialogue window.
+
+### NPC Button to Script Form
+
+<CodeHeader>BP/dialogue/shop.json</CodeHeader>
+
+```json
+{
+    "scene_tag": "wiki:shop_main",
+    "npc_name": "Merchant",
+    "text": "What can I do for you?",
+    "buttons": [
+        {
+            "name": "Browse Wares",
+            "commands": ["/scriptevent wiki:shop open"]
+        }
+    ]
+}
+```
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+import { system, world } from "@minecraft/server";
+import { ActionFormData } from "@minecraft/server-ui";
+
+system.afterEvents.scriptEventReceive.subscribe(
+    (ev) => {
+        const player = ev.initiator; // the player who clicked the NPC button
+        if (!player) return;
+
+        if (ev.id === "wiki:shop" && ev.message === "open") {
+            // wrap in runTimeout so the form opens after the NPC dialogue closes
+            system.runTimeout(() => openShop(player), 1);
+        }
+    },
+    { namespaces: ["wiki"] }
+);
+
+function openShop(player) {
+    new ActionFormData()
+        .title("Merchant")
+        .button("Iron Sword — 5 gems")
+        .button("Bow — 8 gems")
+        .button("Close")
+        .show(player)
+        .then((r) => {
+            if (r.canceled || r.selection === 2) return;
+            // handle purchase...
+        })
+        .catch(() => {});
+}
+```
+
+:::tip
+Use `ev.initiator` (not `ev.sourceEntity`) to get the player when a `/scriptevent` is fired from an NPC button. `ev.sourceEntity` will be the NPC entity itself, while `ev.initiator` is the player who triggered it. `ev.initiator` can be `undefined` when the event originates from a command block, in which case you can pass the player's name in `ev.message` and look them up with `world.getAllPlayers()`.
+:::
+
+:::tip
+Always wrap `form.show(player)` in `system.runTimeout(() => ..., 1)` when calling it from a `scriptEventReceive` handler. Opening a form directly inside the handler without a delay may cause the form not to appear.
+:::
+
+### Dynamic Language Switching
+
+You can detect a player tag inside `on_open_commands` by firing a `/scriptevent` and checking the tag in JavaScript, then redirecting to a different scene. This lets you serve multiple languages from one NPC without resource pack translation files.
+
+<CodeHeader>BP/dialogue/guide.json</CodeHeader>
+
+```json
+{
+    "scene_tag": "wiki:guide_intro",
+    "npc_name": "Guide",
+    "text": "...",
+    "on_open_commands": ["/scriptevent wiki:guide lang_check"]
+}
+```
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+system.afterEvents.scriptEventReceive.subscribe(
+    (ev) => {
+        const player = ev.initiator;
+        if (!player) return;
+
+        if (ev.id === "wiki:guide" && ev.message === "lang_check") {
+            if (player.hasTag("lang_en")) {
+                player.runCommand("dialogue open @e[tag=guide,r=5] @s wiki:guide_intro_en");
+            }
+        }
+    },
+    { namespaces: ["wiki"] }
+);
+```
+
+The scene `wiki:guide_intro_en` contains the English text. The redirect is instant and the player only sees the correct language scene.
+
+### Namespace Filtering
+
+When multiple NPCs use `scriptEventReceive`, use the `namespaces` option to filter which events reach each subscriber. This avoids a single large handler and keeps each NPC's logic separate.
+
+```js
+system.afterEvents.scriptEventReceive.subscribe(
+    (ev) => { /* shop logic only */ },
+    { namespaces: ["wiki_shop"] }
+);
+
+system.afterEvents.scriptEventReceive.subscribe(
+    (ev) => { /* quest logic only */ },
+    { namespaces: ["wiki_quest"] }
+);
+```
 
 ## Credits
 
