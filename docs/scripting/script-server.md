@@ -295,7 +295,7 @@ const playerScore = world.getDynamicProperty("player_score"); // get the previou
 
 The `/clear` command does not support matching multiple item types in one call. When you need to count or remove items that span several `typeId` values (such as any color of wool, or any type of flower), you need to iterate the player's inventory manually.
 
-Using a `Set` for the allowed type IDs makes the lookup O(1) per slot:
+Both helpers take an array of `typeId` strings and use a `Set` internally for fast lookups:
 
 ```js
 const WOOL_IDS = [
@@ -346,7 +346,9 @@ if (countItems(player, WOOL_IDS) >= 8) {
 
 :::tip
 `container.getItem(i)?.typeId` always returns the full namespaced ID, such as `"minecraft:white_wool"`. Items from third-party packs use their own namespace, for example `"mypacks:custom_item"`.
+:::
 
+:::tip
 Passing `undefined` to `container.setItem(i, undefined)` clears that slot entirely. This is required when reducing a stack to zero — setting `item.amount = 0` alone does not remove the item from the slot.
 :::
 
