@@ -9,10 +9,11 @@ mentions:
     - kumja1
     - QuazChick
     - MindfulLearner
+    - Aevarkan
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.21.20
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.10
 :::
 
 In Scripting API, most of the core features are implemented in the `@minecraft/server` module, which contains lots of methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information please visit the [Microsoft documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server) pages.
@@ -28,7 +29,7 @@ You will need to add the script module as a dependency in your `manifest.json`.
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.13.0"
+            "version": "2.6.0"
         }
     ]
 }
@@ -132,8 +133,8 @@ system.afterEvents.scriptEventReceive.subscribe((event) => {
 :::tip
 When a `/scriptevent` is fired from an NPC dialogue button, `sourceType` will be `"NPCDialogue"`. In this case:
 
-- `initiator` is the **player** who clicked the button.
-- `sourceEntity` is the **NPC** entity that ran the command.
+-   `initiator` is the **player** who clicked the button.
+-   `sourceEntity` is the **NPC** entity that ran the command.
 
 Always use `initiator` to get the player in NPC-triggered events. `sourceEntity` will not be a player in this context.
 
@@ -150,6 +151,7 @@ When the event comes from a command block, both `initiator` and `sourceEntity` w
 ```js
 const player = world.getAllPlayers().find((p) => p.name === event.message.trim());
 ```
+
 :::
 
 :::tip
@@ -157,10 +159,13 @@ You can filter which namespaces a subscriber receives by passing a `namespaces` 
 
 ```js
 system.afterEvents.scriptEventReceive.subscribe(
-    (event) => { /* only receives wiki:shop events */ },
+    (event) => {
+        /* only receives wiki:shop events */
+    },
     { namespaces: ["wiki_shop"] }
 );
 ```
+
 :::
 
 ## Scheduling
@@ -329,8 +334,8 @@ const playerScore = world.getDynamicProperty("player_score"); // get the previou
 
 The Script API provides two ways to remove an entity, which behave differently:
 
-- `entity.kill()` — triggers the entity's death sequence. It fires the `entityDie` event, causes drops, plays the death animation, and counts as a kill for scoreboard objectives.
-- `entity.remove()` — removes the entity immediately and silently. No death event, no drops, no animation.
+-   `entity.kill()` — triggers the entity's death sequence. It fires the `entityDie` event, causes drops, plays the death animation, and counts as a kill for scoreboard objectives.
+-   `entity.remove()` — removes the entity immediately and silently. No death event, no drops, no animation.
 
 ```js
 // Use kill() when you want the full death behavior (drops, events, kill credit)
@@ -375,10 +380,6 @@ Normally we recommend avoiding using commands because it's slow to run a command
 
 The Script API does not provide any methods to get/set information of player's ender chest. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
-**tickingarea**
-
-Script API cannot access, set, or remove ticking areas.
-
 **kick**
 
 Script API cannot kick players.
@@ -407,17 +408,9 @@ Script API can utilize new execute syntax to run commands with lots of if/unless
 -   Script API cannot get a structure location.
 -   Cannot get a biome location.
 
-**loot**
-
--   Script API even though the loot is broken from the start, but it's useful for drop or set the item to players/world.
-
 **weather**
 
 -   Script API cannot get/set the world weather.
-
-**difficulty**
-
--   Script API cannot set the world difficulty.
 
 **mobevent**
 
