@@ -8,6 +8,7 @@ mentions:
     - ThomasOrs
     - kumja1
     - QuazChick
+    - MindfulLearner
 ---
 
 ::: warning
@@ -127,6 +128,40 @@ system.afterEvents.scriptEventReceive.subscribe((event) => {
     } = event;
 });
 ```
+
+:::tip
+When a `/scriptevent` is fired from an NPC dialogue button, `sourceType` will be `"NPCDialogue"`. In this case:
+
+- `initiator` is the **player** who clicked the button.
+- `sourceEntity` is the **NPC** entity that ran the command.
+
+Always use `initiator` to get the player in NPC-triggered events. `sourceEntity` will not be a player in this context.
+
+```js
+system.afterEvents.scriptEventReceive.subscribe((event) => {
+    const player = event.initiator; // the player, when fired from an NPC button
+    if (!player || player.typeId !== "minecraft:player") return;
+    // ...
+});
+```
+
+When the event comes from a command block, both `initiator` and `sourceEntity` will be `undefined`. If you need to target a specific player from a command block, pass the player name inside `message` and look them up:
+
+```js
+const player = world.getAllPlayers().find((p) => p.name === event.message.trim());
+```
+:::
+
+:::tip
+You can filter which namespaces a subscriber receives by passing a `namespaces` option. This avoids one large handler processing every scriptevent in your pack:
+
+```js
+system.afterEvents.scriptEventReceive.subscribe(
+    (event) => { /* only receives wiki:shop events */ },
+    { namespaces: ["wiki_shop"] }
+);
+```
+:::
 
 ## Scheduling
 
@@ -376,5 +411,4 @@ Script API can utilize new execute syntax to run commands with lots of if/unless
 
 **dialogue**
 
--   The Script API can't open the NPC dialogue to the player.
--   It cannot change the dialogue displayed by an NPC.
+-   There is no dedicated Script API method for NPC dialogues, however you can use `player.runCommand("dialogue open @e[tag=npc,r=5] @s scene_tag")` or `dimension.runCommand(...)` as a workaround to open and change NPC dialogues from script.
