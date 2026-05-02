@@ -433,34 +433,9 @@ form.show(event.source).then(r => {
 
 ## Persistent Menus
 
-You can create menus that stay open after an action by re-calling the open function inside `.then()`. This is useful for shops or admin panels where the player should be able to perform multiple actions without reopening the menu.
+You can keep a menu open after each action by re-calling the open function inside `.then()`. This is useful for shops or admin panels where the player needs to make multiple choices in a row.
 
-```js
-function openShop(player) {
-    new ActionFormData()
-        .title("Shop")
-        .button("Buy Iron Sword — 5 gems")
-        .button("Buy Bow — 8 gems")
-        .button("Close")
-        .show(player)
-        .then((r) => {
-            if (r.canceled || r.selection === 2) return;
-
-            if (r.selection === 0) {
-                // handle iron sword purchase...
-            } else if (r.selection === 1) {
-                // handle bow purchase...
-            }
-
-            // reopen the shop after the action
-            system.runTimeout(() => openShop(player), 1);
-        })
-        .catch(() => {});
-}
-```
-
-:::tip
-The `.body()` text is computed each time the function is called. This means you can display live data such as a player's current balance by building the body string at call time rather than once at startup.
+The `.body()` text is recomputed on every call, so you can show live data like a current balance without any extra state management.
 
 ```js
 function openShop(player) {
@@ -469,8 +444,14 @@ function openShop(player) {
         .title("Shop")
         .body(`Your balance: ${gems} gems`)
         .button("Buy Iron Sword — 5 gems")
-        // ...
-        .show(player).then(...).catch(() => {});
+        .button("Close")
+        .show(player)
+        .then((r) => {
+            if (r.canceled || r.selection === 1) return;
+            // handle purchase...
+            system.runTimeout(() => openShop(player), 1);
+        })
+        .catch(() => {});
 }
 ```
 :::
