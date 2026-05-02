@@ -399,11 +399,10 @@ function openShop(player) {
 ```
 
 :::tip
-Use `ev.initiator` (not `ev.sourceEntity`) to get the player when a `/scriptevent` is fired from an NPC button. `ev.sourceEntity` will be the NPC entity itself, while `ev.initiator` is the player who triggered it. `ev.initiator` can be `undefined` when the event originates from a command block, in which case you can pass the player's name in `ev.message` and look them up with `world.getAllPlayers()`.
-:::
+Two things to keep in mind when handling NPC-triggered scriptevents:
 
-:::tip
-Always wrap `form.show(player)` in `system.runTimeout(() => ..., 1)` when calling it from a `scriptEventReceive` handler. Opening a form directly inside the handler without a delay may cause the form not to appear.
+- **`ev.initiator`** is the player who clicked. `ev.sourceEntity` is the NPC — do not use it to get the player.
+- **Wrap `form.show(player)` in `system.runTimeout(() => ..., 1)`**. Calling it directly inside the handler may cause the form to not appear.
 :::
 
 ### Dynamic Language Switching
@@ -440,22 +439,6 @@ system.afterEvents.scriptEventReceive.subscribe(
 ```
 
 The scene `wiki:guide_intro_en` contains the English text. The redirect is instant and the player only sees the correct language scene.
-
-### Namespace Filtering
-
-When multiple NPCs use `scriptEventReceive`, use the `namespaces` option to filter which events reach each subscriber. This avoids a single large handler and keeps each NPC's logic separate.
-
-```js
-system.afterEvents.scriptEventReceive.subscribe(
-    (ev) => { /* shop logic only */ },
-    { namespaces: ["wiki_shop"] }
-);
-
-system.afterEvents.scriptEventReceive.subscribe(
-    (ev) => { /* quest logic only */ },
-    { namespaces: ["wiki_quest"] }
-);
-```
 
 ## Credits
 
