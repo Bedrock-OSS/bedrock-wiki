@@ -23,6 +23,8 @@ To support this, each block location in the world is stored as two separate "lay
 
 ## Waterlogging
 
+![An end rod submerged in water](waterlogging.png){.compound-blocks-float}
+
 A block is waterlogged when it contains either a source or flowing block of water.
 
 When a block is waterlogged:
@@ -53,7 +55,12 @@ By default, water is not able to flow through waterloggable blocks and will inst
 
 ### Allowing Water Flow
 
-To allow a block to be waterlogged by flowing water, simply set the `on_liquid_touches` parameter to `"no_reaction"`{lang=json}.
+![An end rod with water flowing through it](water_flowing_through.png){.compound-blocks-float}
+
+Some waterloggable blocks also allow water to flow into the block as if it were air.
+This can be seen in vanilla drip leaves, end rods, tripwires and tripwire hooks.
+
+To apply this functionality to your own block, simply set the `on_liquid_touches` parameter to `"no_reaction"`{lang=json}.
 
 <CodeHeader>minecraft:block > components</CodeHeader>
 
@@ -70,6 +77,8 @@ To allow a block to be waterlogged by flowing water, simply set the `on_liquid_t
 ```
 
 ## Snowlogging
+
+![A fern submerged in snow](snowlogging.png){.compound-blocks-float}
 
 A block is snowlogged when it is submerged in snow.
 
@@ -101,3 +110,10 @@ Note that snowloggable blocks cannot have a collision box as the secondary block
     "precipitation_behavior": "snowlogging"
 }
 ```
+
+<style>
+.compound-blocks-float {
+    float: right;
+    margin-left: 1em;
+}
+</style>
