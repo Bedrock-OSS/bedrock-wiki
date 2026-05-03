@@ -1,7 +1,8 @@
 # Alphabetical order please :)
 
-/blocks/block-materials: /blocks/block-components#render-methods
+/blocks/block-materials: /blocks/block-visuals-intro#render-methods
 /blocks/blocks-16: /blocks/blocks-intro
+/blocks/block-components#render-methods: /blocks/block-visuals-intro#render-methods
 /blocks/blocks-stable: /blocks/blocks-intro
 /blocks/block-tags#list-of-vanilla-tags: /blocks/vanilla-block-tags
 /blocks/custom-trapdoor: /blocks/custom-trapdoors
@@ -30,7 +31,7 @@
 /concepts/texture-list: /concepts/textures-list
 
 /documentation/biome-tags: /world-generation/biome-tags
-/documentation/block-model-materials: /blocks/block-components#render-methods
+/documentation/block-model-materials: /blocks/block-visuals-intro#render-methods
 /documentation/block-shapes: /blocks/block-shapes
 /documentation/block-tags: /blocks/block-tags
 /documentation/creative-categories: /items/item-catalog
