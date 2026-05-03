@@ -112,8 +112,10 @@ Note that snowloggable blocks cannot have a collision box as the secondary block
 ```
 
 <style>
-.compound-blocks-float {
-    float: right;
-    margin-left: 1em;
+@media (min-width: 1200px) {
+    .compound-blocks-float {
+        float: right;
+        margin-left: 1em;
+    }
 }
 </style>
