@@ -655,7 +655,7 @@ An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} colo
 
 ### Material Instances
 
-Configuration of the block's rendering, including textures and lighting.
+Defines the [material instances](/blocks/block-visuals-intro#material-instances) of a block, configuring how parts of the block are rendered.
 
 _Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
 
@@ -674,7 +674,7 @@ The `*` instance is the default instance for all cube faces, however it is not r
     -   `texture` — String
         -   Specifies the [texture atlas](/concepts/texture-atlases) shortname to use from `RP/textures/terrain_texture.json`.
     -   `render_method` — String (optional)
-        -   The [render method](#render-methods) to use when rendering faces using the material instance.
+        -   The [render method](/blocks/block-visuals-intro#render-methods) to use when rendering faces using the material instance.
         -   **All material instances must use the same render method.**
         -   By default, the `opaque` render method is used.
     -   `tint_method` — String (optional)
@@ -706,34 +706,6 @@ The `*` instance is the default instance for all cube faces, however it is not r
     }
 }
 ```
-
-#### Render Methods
-
-Render methods essentially control how a block appears in the world, much like entity materials. Below are the key properties of each type:
-
-| Render Method             | _Transparency_ | _Translucency_ | _Backface Culling_ | _Distant Culling_ | Vanilla Examples               |
-| ------------------------- | :------------: | :------------: | :----------------: | :---------------: | ------------------------------ |
-| `alpha_test`              |       ✔️       |       ❌       |         ❌         |        ✔️         | Ladder, Monster Spawner, Vines |
-| `alpha_test_single_sided` |       ✔️       |       ❌       |         ✔️         |        ✔️         | Doors, Saplings, Trapdoors     |
-| `blend`                   |       ✔️       |       ✔️       |         ✔️         |        ❌         | Glass, Beacon, Honey Block     |
-| `double_sided`            |       ❌       |       ❌       |         ❌         |        ✔️         | Powder Snow                    |
-| `opaque` _(default)_      |       ❌       |       ❌       |         ✔️         |        ❌         | Dirt, Stone, Concrete          |
-
--   **_Transparency_** - fully see-through areas.
--   **_Translucency_** - semi-transparent areas.
--   **_Backface Culling_** - faces become invisible when viewed from behind.
--   **_Distant Culling_** - faces become invisible after reaching half the render distance.
-
-##### Distance-Based Render Methods
-
-| Render Method                       | _Near Appearance_         | _Far Appearance_ | Vanilla Examples |
-| ----------------------------------- | ------------------------- | ---------------- | ---------------- |
-| `alpha_test_to_opaque`              | `alpha_test`              | `opaque`         | Leaves           |
-| `alpha_test_single_sided_to_opaque` | `alpha_test_single_sided` | `opaque`         | Kelp, Sugar Cane |
-| `blend_to_opaque`                   | `blend`                   | `opaque`         | N/A              |
-
--   **_Near Appearance_** - the render method used before reaching half the render distance.
--   **_Far Appearance_** - the render method used after reaching half the render distance.
 
 #### Custom Material Instance Names
 
