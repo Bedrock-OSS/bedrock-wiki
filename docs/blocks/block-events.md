@@ -204,13 +204,13 @@ onEntityFallOn(event) {
 
 ### Place
 
-Called when the block is placed.
+Called when the block is placed or [snowlogged](/blocks/compound-blocks#snowlogging).
 
 <CodeHeader>Custom Component</CodeHeader>
 
 ```js
 onPlace(event) {
-    event.block // Block impacted by this event.
+    event.block // Block impacted by this event. This will be a snow layer if the block was snowlogged.
     event.dimension // Dimension that contains the block.
     event.previousBlock // Permutation of the replaced block.
 }
