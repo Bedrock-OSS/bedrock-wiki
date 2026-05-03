@@ -18,6 +18,14 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ## 1.26.30
 
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:multi_block`
+    -   Now also prevents the `minecraft:precipitation_interactions` component from being defined within the `permutations` array.
+
 ### Components
 
 -   The `minecraft:geometry` and `minecraft:material_instances` components can once again be defined individually within `permutations` entries.
