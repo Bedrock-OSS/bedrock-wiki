@@ -116,7 +116,7 @@ The block palette is a list of all [block permutations](/blocks/block-permutatio
 
 ![List][list] `block_palette`{lang=js} — List containing block permutations
 
-> ![Compound][compound] — A single block permutation, following a similar format to [block descriptors](/concepts/shared-constructs#block-descriptors).
+> ![Compound][compound] — A single block permutation, following a similar format to [block descriptors](/documentation/shared-constructs#block-descriptors).
 >
 > > ![String][string] `name`{lang=js} — The identifier of the block type, such as `"minecraft:planks"`{lang=json}.
 > >
