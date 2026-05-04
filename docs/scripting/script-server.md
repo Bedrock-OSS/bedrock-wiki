@@ -192,7 +192,8 @@ import { system } from "@minecraft/server";
 
 There are two methods for it:
 
-**Scheduling timers**
+### Scheduling Timers
+
 `system.run(callback)` - Runs a specified function at the next available future time. This is frequently used to implement delayed behaviors and game loops. When run within the context of an event handler, this will generally run the code at the end of the same tick where the event occurred. When run in other code (a system.run callout), this will run the function in the next tick. Note, however, that depending on load on the system, running in the same or next tick is not guaranteed.
 
 ```js
@@ -245,7 +246,7 @@ function* blockPlacingGenerator(size, startX, startY, startZ) {
 system.runJob(blockPlacingGenerator(10, -2, -60, 1));
 ```
 
-**Clearing timers**
+### Clearing Timers
 
 `system.clearRun(runId): void` - Cancels the execution of a function run that was previously scheduled via the `run`, `runTimeout` or `runInterval` function.
 
@@ -300,7 +301,7 @@ In order to save data, the property must first be initialized. There are multipl
 -   String dynamic properties can be a maximum of 32767 characters in length.
 -   Number dynamic properties can be a maximum of the 64-bit float limit (-1.7976931348623158e+308 to -2.2250738585072014e-308, or from 2.2250738585072014e-308 to 1.7976931348623158e+308).
 
-**Get and Set Dynamic Properties**
+### Get & Set Dynamic Properties
 
 To get and set dynamic properties, you can use the `getDynamicProperty` and `setDynamicProperty` methods.
 
