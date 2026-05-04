@@ -2,6 +2,7 @@
 title: Script Core Features
 description: Introduction to some of the core API mechanics.
 category: Tutorials
+nav_order: 4
 mentions:
     - JaylyDev
     - SmokeyStack
@@ -13,10 +14,10 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.10
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.10 <!-- EntityEnderInventoryComponent is in preview here. Ensure you update/delete the note further down the article when changing this! -->
 :::
 
-In Scripting API, most of the core features are implemented in the `@minecraft/server` module, which contains lots of methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information please visit the [Microsoft documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server) pages.
+The Script API, with most core features being implemented in the `@minecraft/server` module, contains many methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information, please visit the [Microsoft Learn documentation pages](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
 
 ## Setup
 
@@ -37,22 +38,28 @@ You will need to add the script module as a dependency in your `manifest.json`.
 
 ## Events
 
-In script API, the `@minecraft/server` module uses its own event-driven architecture, making it possible to execute code when a specific event occurs by subscribing to an event listener.
+The Script API's `@minecraft/server` module uses its own event-driven architecture, making it possible to execute code when a specific event occurs by subscribing to an event listener.
 
-**World Events**
+There are generally two types of events: before events, and after events.
 
-World event APIs provides many event listeners that fires when a specific type of events happen in a Minecraft world, such as `chatSend`, `entityHurt`, `playerSpawn`, `worldInitialize` and many more.
+-   Before events fire **before** an action happens in [`read-only`](/scripting/privileges#restricted-execution-mode) mode, and are cancellable (with a few exceptions).
+-   After events fire **after** an action happens, and are not cancellable.
 
-::: tip
-Check the Microsoft docs to see what world events are available within Minecraft.
+### World Events
 
--   Before events fire before an event happens and are read-only but can be canceled. [Before Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/worldbeforeevents).
--   After events fire after an event has run and cannot be canceled. [After Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/worldafterevents)
--   After events should always be used unless the event needs to be canceled.
+World event APIs provides many event listeners that fire when a specific type of event happen in a Minecraft world, such as `chatSend`, `entityHurt`, `playerSpawn`, `worldLoad` and more.
 
-:::
+<Spoiler title="Further information">
 
-In order to subscribe to an event, get the `afterEvents` property from the world object. In this example we will subscribe to the block break event.
+Check the Microsoft Learn documentation to see what `world` events are available within Minecraft:
+
+-   Before events fire before an event happens and are [`read-only`](/scripting/privileges#restricted-execution-mode), but can be canceled. See the [`beforeEvent` documentation](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/worldbeforeevents).
+-   After events fire after an event has run and cannot be canceled. See the [`afterEvent` documentation](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/worldafterevents).
+-   It is good practice to always use after events, unless if there is a good reason not to, such as needing to cancel them.
+
+</Spoiler>
+
+In this example, we aim to send the player a will subscribe to the `blockBreak` after event. Here, in order to subscribe to an event, get the `afterEvents` property from the `world` object.
 
 ```js
 import { world } from "@minecraft/server";
@@ -69,18 +76,19 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
 });
 ```
 
-**System events**
+### System Events
 
-System events fires when a specific type of event happens in the scope of the Minecraft add-on system.
+System events fire when a specific type of event happens in the broader scope of the Minecraft add-on system, as opposed to events that happen in the game world itself.
 
-::: tip
-Check the Microsoft docs to see what system events are available within Minecraft.
+<Spoiler title="Further information">
 
--   Before events fire before an event happens and are read-only but can be canceled. [Before Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systembeforeevents).
--   After events fire after an event has run and cannot be canceled. [After Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systemafterevents)
+Check the Microsoft Learn documentation to see what `system` events are available within Minecraft:
+
+-   Before events fire before an event happens and are [`read-only`](/scripting/privileges#restricted-execution-mode), but can be canceled. See the [`beforeEvent` documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systembeforeevents).
+-   After events fire after an event has run and cannot be canceled. See the [`afterEvent` documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/systemafterevents)
 -   Both types of events are used for different purposes.
 
-:::
+</Spoiler>
 
 Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceeds a performance boundary, depending on the configuration of the script environment.
 
@@ -94,9 +102,11 @@ system.beforeEvents.watchdogTerminate.subscribe((event) => {
 });
 ```
 
-**ScriptEvents**
+### Script Events
 
-ScriptEvents, not to be confused with world events or system events, allows us to respond to inbound `/scriptevent` commands by registering the `scriptEventReceive` event handler, which the event fires if a `/scriptevent` command is invoked by a player, NPC, or block. More information on this event can be found on the [Script Event Documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/scripteventcommandmessageafterevent) page.
+Script events, not to be confused with world events or system events, allow us to respond to inbound [`/scriptevent`](https://learn.microsoft.com/minecraft/creator/reference/content/commandsreference/examples/commands/scriptevent) commands by subscribing to the `scriptEventReceive` event handler. This event fires when the `/scriptevent` command is invoked by a player, NPC, or block. More information on this event can be found in the [Script Event Documentation](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/scripteventcommandmessageafterevent) page.
+
+The `/scriptevent` command has the following syntax:
 
 ```
 /scriptevent <messageId: string> <message: string>
@@ -105,7 +115,7 @@ ScriptEvents, not to be confused with world events or system events, allows us t
 -   `messageId` in the scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
 -   `message` in the scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
 
-**Example**:
+**Example**
 
 Command input:
 
@@ -372,21 +382,27 @@ import { world } from "@minecraft/server";
 
 Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the queue is full.
 
-**Avoid run commands in script**
+### Avoid Running Commands in Script
 
 Normally we recommend avoiding using commands because it's slow to run a command from the Script API, and server performance starts to slow down as more commands are executed over time. However, the following command features are not implemented in scripting API, which leaves us no choice but to use `runCommand` or `runCommandAsync`.
 
 **Ender chest**
 
+:::info
+At time of writing, the [`EntityEnderInventoryComponent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entityenderinventorycomponent) is currently in preview, and allows you to view and modify a player's ender chest.
+:::
+
 The Script API does not provide any methods to get/set information of player's ender chest. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
 **kick**
 
-Script API cannot kick players.
+-   Script API cannot kick players.
 
 **setblock**
 
-Script API cannot destroy blocks `/setblock ... destroy`. It is possible to set a block, however.
+-   Script API cannot destroy blocks like `/setblock ... destroy`.
+-   It is possible to set a block, however
+-   Getting the loot from a block if it were to be mined can be done with the [`LootTableManager`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/loottablemanager).
 
 **Player abilities**
 
@@ -395,9 +411,7 @@ Script API cannot destroy blocks `/setblock ... destroy`. It is possible to set 
 
 **execute**
 
-Script API can utilize new execute syntax to run commands with lots of if/unless conditions for simplicity or performance.
-
-`/execute` can be used to trigger the `/loot` command, as `runCommandAsync` cannot access vanilla loot tables directly.
+-   Script API can utilize new execute syntax to run commands with lots of if/unless conditions for simplicity or performance.
 
 **Minecraft functions**
 
@@ -422,8 +436,18 @@ Script API can utilize new execute syntax to run commands with lots of if/unless
 
 **stopsound**
 
--   Script API cannot stop playing a sound. Music can be stopped using `World::stopMusic()` or `Player::stopMusic()`.
+::: info
+At time of writing, the [`Player::stopSound`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/player?view=minecraft-bedrock-experimental#stopsound) method is in experimental. <!-- ?view=minecraft-bedrock-experimental is needed here. delete this whole thing once it's out of experimental -->
+:::
+
+-   Script API cannot stop playing a sound. Music can be stopped using [`World::stopMusic()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/world#stopmusic) or [`Player::stopMusic()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/player#stopmusic).
 
 **dialogue**
 
+::: info
+At time of writing, the [`EntityNpcComponent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entitynpccomponent) class is in experimental.
+:::
+
 -   There is no dedicated Script API method for NPC dialogues, however you can use `player.runCommand("dialogue open @e[tag=npc,r=5] @s scene_tag")` or `dimension.runCommand(...)` as a workaround to open and change NPC dialogues from script.
+-   The Script API can't open the NPC dialogue to the player.
+-   It cannot change the dialogue displayed by an NPC.
