@@ -61,6 +61,7 @@ Important links have a ⭐.
 -   [Dialogue Node Editor (VSCode Extension)](https://marketplace.visualstudio.com/items?itemName=aevarkan.bedrock-dialogue-node-editor)
 -   [Feature Rule Generator v2 (Free Version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
 -   [Feature Rule Generator v2 (Paid Version)](https://machine-builder.itch.io/frg-v2)
+-   [ImHex (Hex Editor)](https://imhex.werwolv.net/)
 -   [Mcblend (Blender Plugin)](https://github.com/Nusiq/mcblend)
 -   [NBT Studio](https://github.com/tryashtar/nbt-studio)
 -   [NBT Workbench](https://github.com/RealRTTV/nbtworkbench)
