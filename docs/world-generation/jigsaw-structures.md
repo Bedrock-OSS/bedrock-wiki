@@ -150,7 +150,7 @@ This element places a structure template and then applies a processor and projec
 
 Processors are lists of blocks and how they can be modified when the structure is placed. They can also apply loot tables to blocks that support them such as chests and suspicous gravel.
 
-Processors support four `processor_type`s, `minecraft:block_ignore`, `minecraft:capped`, `minecraft:protected_blocks`,  and `minecraft:rule`.
+Processors support four `processor_type`s, `minecraft:block_ignore`, `minecraft:capped`, `minecraft:protected_blocks`, and `minecraft:rule`.
 
 ### Block Ignore Processors
 
@@ -158,7 +158,7 @@ Block ignore processors allow for a array of blocks that will not be placed in t
 
 A block ignore processor allows for 1 field:
 
--   `blocks`: A array of block identifiers. Block IDs can be found with `/setblock`.
+-   `blocks`: An array of block identifiers. Block IDs can be found with `/setblock`.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
