@@ -256,13 +256,13 @@ for (const part of block.getParts()) {
 
 -   Subscriptions to the following event signals are only called for the first part of a multi-block:
 
-    -   `world.beforeEvents.playerBreakBlock`{lang=js}
     -   `world.beforeEvents.playerPlaceBlock`{lang=js}
+    -   `world.afterEvents.playerPlaceBlock`{lang=js}
 
 -   Subscriptions to the following event signals are only called for the part of a multi-block that was targeted:
 
+    -   `world.beforeEvents.playerBreakBlock`{lang=js}
     -   `world.afterEvents.playerBreakBlock`{lang=js}
-    -   `world.afterEvents.playerPlaceBlock`{lang=js}
 
 <style>
 @media (min-width: 1000px) {
