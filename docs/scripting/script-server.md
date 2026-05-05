@@ -376,27 +376,36 @@ Using `kill()` on dropped item entities will fire `entityDie` for each one and m
 
 ## Running Commands
 
-`Entity.runCommandAsync()` or `Dimension.runCommandAsync()` allows the API to run a particular command asynchronously from the context of the broader dimension.
-Note that there is a maximum of 128 asynchronous commands that can be run in a given tick. Always try to avoid runCommandAsync calls wherever possible, and use built-in API methods instead.
+`Entity::runCommand()` and `Dimension::runCommand()` allows the API to run a particular command synchronously from the context of the broader dimension. Always try to avoid `runCommand` calls wherever possible, and use built-in API methods instead. As `runCommand` fires synchronously, you'll need to [schedule](#scheduling) its call if you are in [`read-only`](/scripting/privileges#restricted-execution-mode) mode.
 
-The game executes the queued commands in the next tick of the world.
-To run commands parallel with the script, you have to surround your code in a asynchronous function.
+In this example, we're sending a message that foreshadows how an entity is about to get damaged. As `runCommand` cannot be called in `read-only` mode, we will need to defer its execution using `system.run()`. The entity will run the command **after** it gets damaged, saying "OWW!!".
 
 ```js
-import { world } from "@minecraft/server";
+import { system, world } from "@minecraft/server";
 
-(async () => {
-    await world.getDimension("overworld").runCommandAsync("say Using say command on dimension.");
+// callbacks for a before event run in read-only mode
+world.beforeEvents.entityHurt.subscribe((event) => {
+    const { hurtEntity, cancel } = event;
 
-    world.sendMessage("This runs after runCommandAsync is executed");
-})();
+    // send a message foreshadowing impending damage
+    world.sendMessage(`${hurtEntity.nameTag} is about to get hurt!`);
+
+    // only you, reader, can save this entity from getting hurt
+    // your heroic action: uncommenting the next two lines
+    // cancel = true;
+    // return;
+
+    // defer the command to run outside of read-only mode
+    system.run(() => {
+        // sadly, once this command runs, it will be too late to stop the entity from being hurt
+        hurtEntity.runCommand("say OWW!!");
+    });
+});
 ```
-
-Returns a `Promise<CommandResult>`. Throws an error **synchronously** if the queue is full.
 
 ### Avoid Running Commands in Script
 
-Normally we recommend avoiding using commands because it's slow to run a command from the Script API, and server performance starts to slow down as more commands are executed over time. However, the following command features are not implemented in scripting API, which leaves us no choice but to use `runCommand` or `runCommandAsync`.
+Normally we recommend that you avoid using commands in script, because it's slow to run a command from the Script API, and server performance starts to slow down as more commands are executed over time. The following command features, however, are not implemented in the scripting API, which leaves us with no choice but to use `runCommand` instead.
 
 **Ender chest**
 
