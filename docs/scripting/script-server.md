@@ -14,7 +14,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.10 <!-- EntityEnderInventoryComponent is in preview here. Ensure you update/delete the note further down the article when changing this! -->
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.14
 :::
 
 The Script API, with most core features being implemented in the `@minecraft/server` module, contains many methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information, please visit the [Microsoft Learn documentation pages](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
@@ -59,7 +59,7 @@ Check the Microsoft Learn documentation to see what `world` events are available
 
 </Spoiler>
 
-In this example, we aim to send the player a will subscribe to the `blockBreak` after event. Here, in order to subscribe to an event, get the `afterEvents` property from the `world` object.
+In this example, we aim to send the player a message each time they break a block. We do this by subscribing to the [`playerBreakBlock`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/worldafterevents#playerbreakblock) after event, extracting its data, and then sending the player a message with that extracted data.
 
 ```js
 import { world } from "@minecraft/server";
@@ -68,7 +68,7 @@ import { world } from "@minecraft/server";
 // fires when a player breaks a block
 world.afterEvents.playerBreakBlock.subscribe((event) => {
     const player = event.player; // Player that broke the block for this event.
-    const block = event.block; // Block impacted by this event. Note that the typeId if this block will ALWAYS be air.
+    const block = event.block; // Block impacted by this event. Note that the typeId of this block will ALWAYS be air, as the player has just broken it.
     const permutation = event.brokenBlockPermutation; // Returns permutation information about this block before it was broken.
     player.sendMessage(
         `You have broken ${permutation.type.id} at ${block.x}, ${block.y}, ${block.z}`
@@ -90,7 +90,9 @@ Check the Microsoft Learn documentation to see what `system` events are availabl
 
 </Spoiler>
 
-Get the `beforeEvents` property from the system object. In this example we will subscribe to the watchdogTerminate event, allowing the API to cancel the performance watchdog from closing the world if the game exceeds a performance boundary, depending on the configuration of the script environment.
+In this example, we got tired of our add-on being shutdown by the scripting watchdog. To resolve this, we'll cancel its shutdown order.
+
+We first get the `beforeEvents` property of the `system` object, then we subscribe to the `watchdogTerminate` event. This allows us to use the API to stop the performance watchdog from closing the world when its running scripts exceed performance boundaries, which are dependent on the configuration of the script environment.
 
 ```js
 import { system } from "@minecraft/server";
@@ -99,7 +101,7 @@ import { system } from "@minecraft/server";
 system.beforeEvents.watchdogTerminate.subscribe((event) => {
     event.cancel = true; // Cancel the world from closing down. This will terminate the script engine instead.
     console.warn("Canceled critical exception of type " + event.terminateReason); // Print a message to the console if this event fires.
-});
+}); // Take that watchdog, no shutting us down now!!
 ```
 
 ### Script Events
@@ -112,8 +114,8 @@ The `/scriptevent` command has the following syntax:
 /scriptevent <messageId: string> <message: string>
 ```
 
--   `messageId` in the scriptevent command can be received in API via `ScriptEventCommandMessageEvent.id`
--   `message` in the scriptevent command can be received in API via `ScriptEventCommandMessageEvent.message`
+-   `messageId` in the `/scriptevent` command can be received in API via `ScriptEventCommandMessageEvent.id`
+-   `message` in the `/scriptevent` command can be received in API via `ScriptEventCommandMessageEvent.message`
 
 **Example**
 
@@ -182,19 +184,17 @@ system.afterEvents.scriptEventReceive.subscribe(
 
 We may decide to execute a function at a certain time in the future. This is known as "scheduling a call".
 
-In script API, native javascript methods like `setTimeout` and `setInterval` do not exist in the scripting engine. Minecraft has instead implemented their own scheduling methods that work using game ticks instead of real time.
+When using the Script API, native JavaScript functions like `setTimeout` and `setInterval` do not exist in the scripting runtime. Minecraft instead has its own scheduling methods, which work using game ticks instead of real time.
 
-These methods can be accessed from the `system` object obtained by importing:
+These methods can be accessed from the `system` object obtained by importing.
 
 ```js
 import { system } from "@minecraft/server";
 ```
 
-There are two methods for it:
-
 ### Scheduling Timers
 
-`system.run(callback)` - Runs a specified function at the next available future time. This is frequently used to implement delayed behaviors and game loops. When run within the context of an event handler, this will generally run the code at the end of the same tick where the event occurred. When run in other code (a system.run callout), this will run the function in the next tick. Note, however, that depending on load on the system, running in the same or next tick is not guaranteed.
+`system.run(callback: () => void): number` - Runs a specified function at the next available future time. This is frequently used to implement delayed behaviors and game loops. When run within the context of an event handler, this will generally run the code at the end of the same tick where the event occurred. When run in other code (a `system.run` callout), this will run the function in the next tick. Note that, depending on the load of the system, running in the same or next tick is not guaranteed.
 
 ```js
 import { system, world } from "@minecraft/server";
@@ -204,7 +204,7 @@ system.run(() => {
 });
 ```
 
-`system.runInterval(callback: () => void, tickInterval?: number): number` - Runs a set of code repeatedly, starting after the first interval of time and repeating continuously forever that interval.
+`system.runInterval(callback: () => void, tickInterval?: number): number` - Runs a set of code repeatedly, starting after the first interval of time, and then repeating continuously forever with that interval.
 
 ```js
 import { system, world } from "@minecraft/server";
@@ -224,10 +224,10 @@ system.runTimeout(() => {
 }, 20);
 ```
 
-`system.runJob(generator: Generator<void, void, void>): number` - Queues a generator function to run until completion. The generator will be given a time slice each tick, and will be run until it yields or completes. [Generator Function Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*).
+`system.runJob(generator: Generator<void, void, void>): number` - Queues a generator function to run until completion. The generator will be given a time slice each tick, and will be run until it yields or completes. For more information, see the [MDN generator function reference](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function*).
 
 ```js
-import { system, world, BlockPermutation } from "@minecraft/server";
+import { system, world } from "@minecraft/server";
 
 function* blockPlacingGenerator(size, startX, startY, startZ) {
     const overworld = world.getDimension("overworld"); // gets the dimension of type overworld.
@@ -248,7 +248,7 @@ system.runJob(blockPlacingGenerator(10, -2, -60, 1));
 
 ### Clearing Timers
 
-`system.clearRun(runId): void` - Cancels the execution of a function run that was previously scheduled via the `run`, `runTimeout` or `runInterval` function.
+`system.clearRun(runId: number): void` - Cancels the execution of a function run that was previously scheduled via the `run`, `runTimeout` or `runInterval` function.
 
 ```js
 import { system, world } from "@minecraft/server";
@@ -263,22 +263,33 @@ system.runTimeout(() => {
 }, 20);
 ```
 
-`clearJob(jobId: number): void` - Cancels the execution of a job queued via the `runJob` function.
+`system.clearJob(jobId: number): void` - Cancels the execution of a job queued via the `runJob` function.
 
 ```js
 import { system, world } from "@minecraft/server";
 
-const callbackId = system.runInterval(() => {
-    world.sendMessage("Running every tick");
-});
+function* blockPlacingGenerator(size, startX, startY, startZ) {
+    const overworld = world.getDimension("overworld");
+    for (let x = startX; x < startX + size; x++) {
+        for (let y = startY; y < startY + size; y++) {
+            for (let z = startZ; z < startZ + size; z++) {
+                const block = overworld.getBlock({ x: x, y: y, z: z });
+                if (block) block.setType("minecraft:cobblestone");
+                yield;
+            }
+        }
+    }
+}
+
+const callbackId = system.runJob(blockPlacingGenerator(10, -2, -60, 1));
 
 system.runTimeout(() => {
-    system.clearRun(callbackId); // stops the system.runInterval callback from running after 20 ticks
+    system.clearJob(callbackId); // stops the system.runJob callback from running after 20 ticks
     world.sendMessage("Stopped");
 }, 20);
 ```
 
-More information on all the system methods can be found on the [Game Loops & Timed Callbacks](https://learn.microsoft.com/en-us/minecraft/creator/documents/systemrunguide) documentation page.
+More information regarding the inner functionality of the `system` scheduling methods can be found on the Microsoft Learn [_Game Loops & Timed Callbacks_](https://learn.microsoft.com/minecraft/creator/documents/systemrunguide) page.
 
 ## Saving and Loading data
 
