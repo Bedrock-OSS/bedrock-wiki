@@ -120,13 +120,19 @@ A jigsaw that is facing up (the direction the arrows are facing) can only match 
 
 ### Elements
 
-For now there are three types of element available for creators to use: `minecraft:empty_pool_element`, `minecraft:single_pool_element`, and `minecraft:feature_pool_element`.
+For now there are three types of element available for creators to use: `minecraft:empty_pool_element`, `minecraft:feature_pool_element` and `minecraft:single_pool_element`.
 
 -   `weight` is a number applied to entries on a pool that tells the jigsaw block how often it should pick this element. Higher values are higher likelihood.
 
 #### Empty Pool Element
 
 This element places nothing. If the jigsaw blocks are viewed using debug generation, they will have no connection if an empty pool element was selected. A structure will fail to generate if this is the starting element.
+
+#### Feature Pool Element
+
+This element places a feature, custom, vanilla, or hardcoded. A jigsaw block placing a feature pool element must be facing upwards and doesn't need a target name, just a target pool with the feature pool element in it.
+
+-   `feature`: The feature to place. Can be any custom or vanilla feature including hardcoded ones such as `minecraft:desert_well_feature`.
 
 #### Single Pool Element
 
@@ -139,12 +145,6 @@ This element places a structure template and then applies a processor and projec
 
 -   `location`: tells the game where the file to generate is.
 -   `processors`: (optional) the ID of a processor to apply to the piece.
-
-#### Feature Pool Element
-
-This element places a feature, custom, vanilla, or hardcoded. A jigsaw block placing a feature pool element must be facing upwards and doesn't need a target name, just a target pool with the feature pool element in it.
-
-- `feature`: The feature to place. Can be any custom or vanilla feature including hardcoded ones such as `minecraft:desert_well_feature`.
 
 ## Processors
 
