@@ -1,0 +1,36 @@
+{
+  "columns": {
+    "render_method": {
+      "name": "Render Method",
+      "sortable": true
+    },
+    "near": {
+      "name": "_Near Appearance_"
+    },
+    "far": {
+      "name": "_Far Appearance_"
+    },
+    "vanilla_examples": {
+      "name": "Vanilla Examples"
+    }
+  },
+  "rows": [
+    {
+      "render_method": "`alpha_test_to_opaque`",
+      "near": "`alpha_test`",
+      "far": "`opaque`",
+      "vanilla_examples": "Leaves"
+    },
+    {
+      "render_method": "`alpha_test_single_sided_to_opaque`",
+      "near": "`alpha_test_single_sided`",
+      "far": "`opaque`",
+      "vanilla_examples": "Bamboo, Kelp, Sugar Cane"
+    },
+    {
+      "render_method": "`blend_to_opaque`",
+      "near": "`blend`",
+      "far": "`opaque`"
+    }
+  ]
+}
