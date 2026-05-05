@@ -150,7 +150,7 @@ This element places a structure template and then applies a processor and projec
 
 Processors are lists of blocks and how they can be modified when the structure is placed. They can also apply loot tables to blocks that support them such as chests and suspicous gravel.
 
-Processors support four `processor_type`s, `minecraft:capped`, `minecraft:protected_blocks`, `minecraft:block_ignore` and `minecraft:rule`.
+Processors support four `processor_type`s, `minecraft:block_ignore`, `minecraft:capped`, `minecraft:protected_blocks`, and `minecraft:rule`.
 
 ### Block Ignore Processors
 
@@ -158,7 +158,7 @@ Block ignore processors allow for a array of blocks that will not be placed in t
 
 A block ignore processor allows for 1 field:
 
--   `blocks`: A array of block identifiers. Block IDs can be found with `/setblock`.
+-   `blocks`: An array of block identifiers. Block IDs can be found with `/setblock`.
 
 <CodeHeader>minecraft:processor_list</CodeHeader>
 
@@ -166,23 +166,6 @@ A block ignore processor allows for 1 field:
 {
     "processor_type": "minecraft:block_ignore",
     "blocks": ["minecraft:cobblestone"]
-}
-```
-
-### Protected Blocks Processor
-
-Protected blocks processors allow for specification of a block tag that will not be overwritten by the structure when generated. The stone block tag could be provided and no blocks with that tag would be replaced by pieces with that processor applied.
-
-A protected block processor allows for 1 field:
-
--   `value`: A [block tag](https://wiki.bedrock.dev/blocks/vanilla-block-tags).
-
-<CodeHeader>minecraft:processor_list</CodeHeader>
-
-```json
-{
-    "processor_type": "minecraft:protected_blocks",
-    "value": "mob_spawner"
 }
 ```
 
@@ -206,6 +189,23 @@ A capped processor allows for 2 fields:
     "processor_type": "minecraft:capped",
     "limit": 5,
     "delegate": {}
+}
+```
+
+### Protected Blocks Processor
+
+Protected blocks processors allow for specification of a block tag that will not be overwritten by the structure when generated. The stone block tag could be provided and no blocks with that tag would be replaced by pieces with that processor applied.
+
+A protected block processor allows for 1 field:
+
+-   `value`: A [block tag](https://wiki.bedrock.dev/blocks/vanilla-block-tags).
+
+<CodeHeader>minecraft:processor_list</CodeHeader>
+
+```json
+{
+    "processor_type": "minecraft:protected_blocks",
+    "value": "mob_spawner"
 }
 ```
 
@@ -409,7 +409,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     ]
     ```
 
--   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Can be 1-128 inclusive. Defaults to 128.
+-   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Uses Chebyshev distance and can be 1-128 inclusive. Defaults to 128.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
