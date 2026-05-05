@@ -1,0 +1,73 @@
+{
+  "columns": {
+    "render_method": {
+      "name": "Render Method",
+      "sortable": true
+    },
+    "transparency": {
+      "name": "_Transparency_",
+      "sortable": true,
+      "text_align": "center"
+    },
+    "translucency": {
+      "name": "_Translucency_",
+      "sortable": true,
+      "text_align": "center"
+    },
+    "backface_visibility": {
+      "name": "_Backface Visibility_",
+      "sortable": true,
+      "text_align": "center"
+    },
+    "far_visibility": {
+      "name": "_Far Visibility_",
+      "sortable": true,
+      "text_align": "center"
+    },
+    "vanilla_examples": {
+      "name": "Vanilla Examples"
+    }
+  },
+  "rows": [
+    {
+      "render_method": "`alpha_test`",
+      "transparency": true,
+      "translucency": false,
+      "backface_visibility": true,
+      "far_visibility": false,
+      "vanilla_examples": "Ladder, Monster Spawner, Vines"
+    },
+    {
+      "render_method": "`alpha_test_single_sided`",
+      "transparency": true,
+      "translucency": false,
+      "backface_visibility": false,
+      "far_visibility": false,
+      "vanilla_examples": "Doors, Saplings, Trapdoors"
+    },
+    {
+      "render_method": "`blend`",
+      "transparency": true,
+      "translucency": true,
+      "backface_visibility": false,
+      "far_visibility": true,
+      "vanilla_examples": "Glass, Beacon, Honey Block"
+    },
+    {
+      "render_method": "`double_sided`",
+      "transparency": false,
+      "translucency": false,
+      "backface_visibility": true,
+      "far_visibility": false,
+      "vanilla_examples": "Powder Snow"
+    },
+    {
+      "render_method": "`opaque` (default)",
+      "transparency": false,
+      "translucency": false,
+      "backface_visibility": false,
+      "far_visibility": true,
+      "vanilla_examples": "Dirt, Stone, Concrete"
+    }
+  ]
+}

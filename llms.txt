@@ -79,6 +79,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 ### Sound & Visuals
 
+- [Intro to Block Visuals](/blocks/block-visuals-intro)
 - [Block Culling](/blocks/block-culling)
 - [Block Models](/blocks/block-models)
 - [Block Sounds](/blocks/block-sounds)
