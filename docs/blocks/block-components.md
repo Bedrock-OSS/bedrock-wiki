@@ -71,6 +71,27 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ## List of Vanilla Components
 
+### Chest Obstruction
+
+Determines when the opening of chests placed below the block should be obstructed.
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
+#### Object Format {#chest-obstruction-object}
+
+-   `obstruction_rule` — String
+    -   `"always"`{lang=json} prevents chests from opening.
+    -   `"never"`{lang=json} allows chests to open.
+    -   `"shape"`{lang=json} (default) checks the block's [collision box](#collision-box) to determine whether chests should be able to open.
+
+<CodeHeader>minecraft:block > components</CodeHeader>
+
+```json
+"minecraft:chest_obstruction": {
+    "obstruction_rule": "always"
+}
+```
+
 ### Collision Box
 
 Defines the area of the block that entities and particles collide with.
@@ -813,7 +834,7 @@ _Requires format version [1.21.120](/blocks/block-format-history#_1-21-120) or l
 
 #### Object Format {#precipitation-interactions-object}
 
--   `precipitation_behavior`: String
+-   `precipitation_behavior` — String
     -   `"obstruct_rain_accumulate_snow"`{lang=json} (default) prevents rain from passing through the block, instead causing it to splash on top of it and causes snow layers to build up above the block while it is snowing.
     -   `"obstruct_rain"`{lang=json} prevents rain from passing through the block, instead causing it to splash on top of it.
     -   `"none"`{lang=json} allows rain and snow to pass through the block.
