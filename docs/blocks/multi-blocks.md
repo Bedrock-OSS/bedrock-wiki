@@ -168,6 +168,7 @@ The following components may not be specified in the [`permutations`](/blocks/bl
 
 -   [`minecraft:movable`](/blocks/block-components#movable)
 -   [`minecraft:placement_filter`](/blocks/block-components#placement-filter)
+-   [`minecraft:precipitation_interactions`](/blocks/block-components#precipitation-interactions)
 -   [`minecraft:random_offset`](/blocks/block-components#random-offset)
 -   [`minecraft:replaceable`](/blocks/block-components#replaceable)
 
