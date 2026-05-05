@@ -19,9 +19,8 @@ mentions:
     - stirante
     - ChibiMango
     - Etanarvazac
-    - retr0cube
+    - aym-i
     - ThomasOrs
-    - lescx
     - QuazChick
 ---
 
@@ -217,9 +216,9 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
 
 The pack icon is an image file which identifies how your add-on will look in-game. If you have a low-resolution square image, you can use it. Otherwise, download and use this example icon:
 
-<WikiImage src="/assets/images/guide/project-setup/pack_icon.png" alt="Pack Icon" pixelated />
+<WikiImage src="pack_icon.png" alt="Pack Icon" pixelated />
 
-<Button link="/assets/images/guide/project-setup/pack_icon.png" download>
+<Button link="pack_icon.png" download>
     Download Image
 </Button>
 
@@ -261,7 +260,7 @@ pack.description=A Ghostly Guide
 
 If you have done everything correctly, your packs should show up in Minecraft now! If you don't see your pack, you should follow the [troubleshooting guide](/guide/troubleshooting).
 
-![](/assets/images/guide/project-setup/active_pack.png)
+![](active_pack.png)
 
 ## Enabling the Content Log
 

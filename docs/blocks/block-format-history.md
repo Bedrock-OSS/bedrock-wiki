@@ -16,9 +16,64 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
-:::info <Label color="yellow">Use Beta Features</Label> CHANGES
-The file's `use_beta_features` field must be set to `true`{lang=json} for the relevant changes to take effect.
-:::
+## 1.26.30
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:multi_block`
+    -   Now also prevents the `minecraft:precipitation_interactions` component from being defined within the `permutations` array.
+
+### Components
+
+-   The `minecraft:geometry` and `minecraft:material_instances` components can once again be defined individually within `permutations` entries.
+    -   This change resolves [MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086).
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:precipitation_interactions`
+    -   Updated `precipitation_behavior` parameter
+        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`{lang=json}
+
+## 1.26.20
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:multi_block`
+    -   Now also prevents the `minecraft:random_offset` and `minecraft:replaceable` components from being defined within the `permutations` array.
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Added `minecraft:tags`
+    -   Lists the tags applied to the block.
+    -   Replaces `tag:*` components.
+-   Released `minecraft:chest_obstruction` from experimental
+-   Removed the ability to apply tags using `tag:*`
+-   Updated `minecraft:flower_pottable`
+    -   Blocks in flower pots are now displayed 2 pixels lower to match vanilla.
+-   Updated `minecraft:material_instances`
+    -   Removed boolean support from the `ambient_occlusion` instance parameter.
+    -   This parameter may now only be defined as a float.
+-   Updated `minecraft:redstone_producer`
+    -   May no longer be defined in the `permutations` array without also being defined in the root `components` object.
+-   The `minecraft:geometry` and `minecraft:material_instances` components can no longer be defined individually within `permutations` entries.
+    -   This change was not intentional and has been reverted in 1.26.30 ([MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086)).
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:precipitation_interactions`
+    -   Updated `precipitation_behavior` parameter
+        -   Added `"snow_log_no_collision"`{lang=json} as a valid value, which allows the block to be submerged in layers of snow.
+        -   Requires the `minecraft:collision_box` component to be set to `false`{lang=json}.
 
 ## 1.26.10
 
@@ -91,6 +146,7 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
 <Label color="blue">Upcoming Creator Features</Label>
 
 -   Added `minecraft:connection`
+
     -   Allows for fence-like connection permutations.
     -   Can be used to enable the following boolean states by including `"minecraft:cardinal_connections"`{lang=json} in the `enabled_states` array:
         -   `minecraft:connection_north`
@@ -98,11 +154,8 @@ The file's `use_beta_features` field must be set to `true`{lang=json} for the re
         -   `minecraft:connection_south`
         -   `minecraft:connection_west`
 
-<Tag name="experimental" />
-<Label color="yellow">Beta APIs</Label>
-<Label color="yellow">Use Beta Features</Label>
-
 -   Updated `minecraft:placement_direction`
+    -   The following changes require the file's `use_beta_features` field to be set to `true`{lang=json} while experimental.
     -   Added `blocks_to_corner_with` parameter which is an array of [block descriptors](/documentation/shared-constructs#block-descriptors) specifying the blocks that may affect the `minecraft:corner` state.
     -   Updated `enabled_states` parameter
         -   Added `"minecraft:corner_and_cardinal_direction"`{lang=json} as a valid value, which can be used to replicate stair rotation and cornering, enabling the following states:

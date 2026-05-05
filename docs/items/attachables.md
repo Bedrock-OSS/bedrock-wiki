@@ -108,7 +108,7 @@ With a text editor, take the bones from the provided player skeleton file and co
 
 For convenience, such a model has been prepared here. The cubes from the player's model have already been removed:
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/steve_head.geo.json?raw=true">
+<Button download link="/assets/packs/items/attachables/method_one/steve_head.geo.json">
     📄 Geometry File
 </Button>
 
@@ -120,7 +120,7 @@ Create two new animations, one for holding the item in first person and another 
 
 Here is an example of such an animation. This also includes a first-person animation—the means of making one is detailed in the section below.
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/steve_head.animation.json?raw=true">
+<Button download link="/assets/packs/items/attachables/method_one/steve_head.animation.json">
     📄 Animation File
 </Button>
 
@@ -134,7 +134,7 @@ To add animation for player's hands, you need to use player's animations, not at
 
 Use the following guide animation and import it into Blockbench. It applies a rotation of (95, -45, 115) and a translation of (13.5, -10, 12) to the right arm bone, perfectly mimicking how the arm is positioned in first-person.
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_one/attachable_guide.animation.json?raw=true">
+<Button download link="/assets/packs/items/attachables/method_one/attachable_guide.animation.json">
     📄 Attachable Guide File
 </Button>
 
@@ -193,7 +193,7 @@ Apply the model binding to your bone, and save the geometry to your resource pac
 
 An example model with this binding applied is provided here:
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.geo.json?raw=true">
+<Button download link="/assets/packs/items/attachables/method_two/skeleton_head.geo.json">
     📄 Geometry File
 </Button>
 
@@ -207,7 +207,7 @@ To make creating these animations easier, please do the following:
 
 -   Download the following player skeleton model. We will use this as a visual aid for positioning your model.
 
-    <Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/player_skeleton.geo.json?raw=true">
+    <Button download link="/assets/packs/items/attachables/method_two/player_skeleton.geo.json">
         📄 Player Skeleton File
     </Button>
 
@@ -215,7 +215,10 @@ To make creating these animations easier, please do the following:
 -   Set your model's root bone(s) to be a child of the 'rightItem' bone in the player skeleton.
 -   Download the following animation file import the `wiki.third_person_guide` animation. This will be used later to make positioning easier.
 
-    <Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/attachable_guide.animation.json?raw=true">
+    <Button
+        download
+        link="/assets/packs/items/attachables/method_two/attachable_guide.animation.json"
+    >
         📄 Attachable Guide File
     </Button>
 
@@ -231,7 +234,7 @@ Play both animations, and position your model however you want. Save the animati
 
 An example animation file for this positioning:
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/packs/tutorials/attachables/method_two/skeleton_head.animation.json?raw=true">
+<Button download link="/assets/packs/items/attachables/method_two/skeleton_head.animation.json">
     📄 Animation File
 </Button>
 
@@ -243,6 +246,9 @@ Similar to the third-person animation, look in the Attachable Guide file and imp
 
 Each of these methods have been compiled into an example pack you may reference, for if you are getting stuck or simply want to see a working example.
 
-<Button link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/attachable-example.mcpack">
+<Button
+    download
+    link="https://github.com/Bedrock-OSS/bedrock-examples/releases/download/download/attachable-example.mcpack"
+>
     💾 Example Pack
 </Button>

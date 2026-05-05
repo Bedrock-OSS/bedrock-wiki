@@ -1,9 +1,11 @@
 ---
 title: Block Culling
 description: Block culling rules allow you to remove parts of a model based on the surrounding blocks.
-category: Visuals
+category: Sound & Visuals
 tags:
     - intermediate
+related:
+    - /blocks/block-models
 license: true
 mentions:
     - legopitstop

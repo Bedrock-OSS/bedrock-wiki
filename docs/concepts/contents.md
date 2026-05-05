@@ -32,12 +32,12 @@ Each `content` entry can contain two parameters:
 ```json
 {
     "content": [
-        { "path": "animations/my_animation.animation.json" },
-        { "path": "animation_controllers/my_ac.ac.json" },
-        { "path": "entity/my_entity.entity.json" },
+        { "path": "animation_controllers/custom_entity.animation_controllers.json" },
+        { "path": "animations/my_animation.animations.json" },
+        { "path": "entity/custom_entity.entity.json" },
         { "path": "texts/en_US.lang" },
+        { "path": "textures/wiki/blocks/custom_block.png" },
         { "path": "textures/textures_list.json" },
-        { "path": "textures/blocks/my_block.png" },
         { "path": "contents.json" },
         { "path": "manifest.json" }
     ]
@@ -45,12 +45,12 @@ Each `content` entry can contain two parameters:
 ```
 
 <FolderView :paths="[
-    'RP/animations/my_animation.animation.json',
-    'RP/animation_controllers/my_ac.ac.json',
-    'RP/entity/my_entity.entity.json',
+    'RP/animation_controllers/custom_entity.animation_controllers.json',
+    'RP/animations/my_animation.animations.json',
+    'RP/entity/custom_entity.entity.json',
     'RP/texts/en_US.lang',
+    'RP/textures/wiki/blocks/custom_block.png',
     'RP/textures/textures_list.json',
-    'RP/textures/blocks/my_block.png',
     'RP/contents.json',
     'RP/manifest.json',
 ]" />

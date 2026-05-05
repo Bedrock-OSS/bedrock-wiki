@@ -354,27 +354,27 @@ Sometimes, you can simplify and consolidate multiple controls into a single elem
     },
 
     "image_1@image_template": {
-        "$texture": "textures/ui/example_1",
+        "$texture": "textures/wiki/ui/example_1",
         "$binding_text": "1"
     },
 
     "image_2@image_template": {
-        "$texture": "textures/ui/example_2",
+        "$texture": "textures/wiki/ui/example_2",
         "$binding_text": "2"
     },
 
     "image_3@image_template": {
-        "$texture": "textures/ui/example_3",
+        "$texture": "textures/wiki/ui/example_3",
         "$binding_text": "3"
     },
 
     "image_4@image_template": {
-        "$texture": "textures/ui/example_4",
+        "$texture": "textures/wiki/ui/example_4",
         "$binding_text": "4"
     },
 
     "image_5@image_template": {
-        "$texture": "textures/ui/example_5",
+        "$texture": "textures/wiki/ui/example_5",
         "$binding_text": "5"
     }
 }
@@ -398,7 +398,7 @@ Taking a more thoughtful approach, this can be significantly simplified into a s
             },
             {
                 "binding_type": "view",
-                "source_property_name": "('textures/ui/example_' + #hud_title_text_string)",
+                "source_property_name": "('textures/wiki/ui/example_' + #hud_title_text_string)",
                 "target_property_name": "#texture"
             }
         ]

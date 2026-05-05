@@ -13,19 +13,229 @@
   },
   "rows": [
     {
-      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/empty.png' alt='' class='voxel-shape-preview' />",
+      "shape": "![](anvil.png)",
+      "identifier": "`minecraft:anvil`"
+    },
+    {
+      "shape": "![](bell_attachment_ceiling.png)",
+      "identifier": "`minecraft:bell_attachment_ceiling`"
+    },
+    {
+      "shape": "![](bell_attachment_double_wall.png)",
+      "identifier": "`minecraft:bell_attachment_double_wall`"
+    },
+    {
+      "shape": "![](bell_attachment_floor.png)",
+      "identifier": "`minecraft:bell_attachment_floor`"
+    },
+    {
+      "shape": "![](bell_attachment_single_wall.png)",
+      "identifier": "`minecraft:bell_attachment_single_wall`"
+    },
+    {
+      "shape": "![](big_dripleaf.png)",
+      "identifier": "`minecraft:big_dripleaf`"
+    },
+    {
+      "shape": "![](big_dripleaf_tilt_full.png)",
+      "identifier": "`minecraft:big_dripleaf_tilt_full`"
+    },
+    {
+      "shape": "![](big_dripleaf_tilt_partial.png)",
+      "identifier": "`minecraft:big_dripleaf_tilt_partial`"
+    },
+    {
+      "shape": "![](box_16x1x16.png)",
+      "identifier": "`minecraft:box_16x1x16`",
+      "notes": "A single 16×1×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x2x16.png)",
+      "identifier": "`minecraft:box_16x2x16`",
+      "notes": "A single 16×2×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x4x16.png)",
+      "identifier": "`minecraft:box_16x4x16`",
+      "notes": "A single 16×4×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x6x16.png)",
+      "identifier": "`minecraft:box_16x6x16`",
+      "notes": "A single 16×6×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x8x16.png)",
+      "identifier": "`minecraft:box_16x8x16`",
+      "notes": "A single 16×8×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x9x16.png)",
+      "identifier": "`minecraft:box_16x9x16`",
+      "notes": "A single 16×9×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x10x16.png)",
+      "identifier": "`minecraft:box_16x10x16`",
+      "notes": "A single 16×10×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x12x16.png)",
+      "identifier": "`minecraft:box_16x12x16`",
+      "notes": "A single 16×12×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x13x16.png)",
+      "identifier": "`minecraft:box_16x13x16`",
+      "notes": "A single 16×13×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x14x16.png)",
+      "identifier": "`minecraft:box_16x14x16`",
+      "notes": "A single 16×14×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](box_16x15x16.png)",
+      "identifier": "`minecraft:box_16x15x16`",
+      "notes": "A single 16×15×16 pixel box, taking up space from the bottom of the block unit."
+    },
+    {
+      "shape": "![](cactus.png)",
+      "identifier": "`minecraft:cactus`"
+    },
+    {
+      "shape": "![](cake_bites_0.png)",
+      "identifier": "`minecraft:cake_bites_0`"
+    },
+    {
+      "shape": "![](cake_bites_1.png)",
+      "identifier": "`minecraft:cake_bites_1`"
+    },
+    {
+      "shape": "![](cake_bites_2.png)",
+      "identifier": "`minecraft:cake_bites_2`"
+    },
+    {
+      "shape": "![](cake_bites_3.png)",
+      "identifier": "`minecraft:cake_bites_3`"
+    },
+    {
+      "shape": "![](cake_bites_4.png)",
+      "identifier": "`minecraft:cake_bites_4`"
+    },
+    {
+      "shape": "![](cake_bites_5.png)",
+      "identifier": "`minecraft:cake_bites_5`"
+    },
+    {
+      "shape": "![](cake_bites_6.png)",
+      "identifier": "`minecraft:cake_bites_6`"
+    },
+    {
+      "shape": "![](candle_cake.png)",
+      "identifier": "`minecraft:candle_cake`"
+    },
+    {
+      "shape": "![](chest_type_single.png)",
+      "identifier": "`minecraft:chest_type_single`"
+    },
+    {
+      "shape": "![](composter.png)",
+      "identifier": "`minecraft:composter`"
+    },
+    {
+      "shape": "![](composter_level_1.png)",
+      "identifier": "`minecraft:composter_level_1`"
+    },
+    {
+      "shape": "![](composter_level_2.png)",
+      "identifier": "`minecraft:composter_level_2`"
+    },
+    {
+      "shape": "![](composter_level_3.png)",
+      "identifier": "`minecraft:composter_level_3`"
+    },
+    {
+      "shape": "![](composter_level_4.png)",
+      "identifier": "`minecraft:composter_level_4`"
+    },
+    {
+      "shape": "![](composter_level_5.png)",
+      "identifier": "`minecraft:composter_level_5`"
+    },
+    {
+      "shape": "![](composter_level_6.png)",
+      "identifier": "`minecraft:composter_level_6`"
+    },
+    {
+      "shape": "![](composter_level_7.png)",
+      "identifier": "`minecraft:composter_level_7`"
+    },
+    {
+      "shape": "![](empty.png)",
       "identifier": "`minecraft:empty`",
       "notes": [
         "An empty shape that contains no boxes.",
-        "The default culling shape for blocks not using the `minecraft:geometry.full_block` model."
+        "The default culling shape for blocks not using the `minecraft:geometry.full_block` model.",
+        "**Hardcoded** — this voxel shape is not data-driven so cannot be found as a JSON file in the vanilla behavior pack."
       ]
     },
     {
-      "shape": "<img src='/assets/images/blocks/vanilla-voxel-shapes/unit_cube.png' alt='' class='voxel-shape-preview' />",
+      "shape": "![](end_portal_frame_eye.png)",
+      "identifier": "`minecraft:end_portal_frame_eye`"
+    },
+    {
+      "shape": "![](fence.png)",
+      "identifier": "`minecraft:fence`"
+    },
+    {
+      "shape": "![](fence_gate_in_wall_occlusion.png)",
+      "identifier": "`minecraft:fence_gate_in_wall_occlusion`"
+    },
+    {
+      "shape": "![](fence_gate_occlusion.png)",
+      "identifier": "`minecraft:fence_gate_occlusion`"
+    },
+    {
+      "shape": "![](grindstone.png)",
+      "identifier": "`minecraft:grindstone`"
+    },
+    {
+      "shape": "![](heavy_core.png)",
+      "identifier": "`minecraft:heavy_core`"
+    },
+    {
+      "shape": "![](lectern.png)",
+      "identifier": "`minecraft:lectern`"
+    },
+    {
+      "shape": "![](shelf_facing_east.png)",
+      "identifier": "`minecraft:shelf_facing_east`"
+    },
+    {
+      "shape": "![](shelf_facing_north.png)",
+      "identifier": "`minecraft:shelf_facing_north`"
+    },
+    {
+      "shape": "![](shelf_facing_south.png)",
+      "identifier": "`minecraft:shelf_facing_south`"
+    },
+    {
+      "shape": "![](shelf_facing_west.png)",
+      "identifier": "`minecraft:shelf_facing_west`"
+    },
+    {
+      "shape": "![](slab_type_top.png)",
+      "identifier": "`minecraft:slab_type_top`",
+      "notes": "A single 16×8×16 pixel box, taking up space from the top of the block unit."
+    },
+    {
+      "shape": "![](unit_cube.png)",
       "identifier": "`minecraft:unit_cube`",
       "notes": [
-        "A shape comprised of a single 16×16×16 pixel cube, taking up the space of the full block unit.",
-        "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling."
+        "A single 16×16×16 pixel cube, taking up the space of the full block unit.",
+        "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling.",
+        "**Hardcoded** — this voxel shape is not data-driven so cannot be found as a JSON file in the vanilla behavior pack."
       ]
     }
   ]

@@ -2,7 +2,7 @@
 title: Custom Armor
 example: custom_armor
 description: Learn how to make a custom armor set.
-category: Tutorials
+category: Vanilla Re-Creations
 license: true
 mentions:
     - SirLich
@@ -77,7 +77,7 @@ item.wiki:custom_helmet=Custom Helmet
 
 If you now go into the game and check what you have produced you should be able to wear your helmet and pat yourself on the back for a job well done.
 
-![](/assets/images/items/custom-armor/inventory.png)
+![](inventory.png)
 
 ## Custom Chestplate
 
@@ -138,7 +138,7 @@ item.wiki:custom_boots=Custom Boots
 That's it, you now have a whole suit of custom armor to swagger around in!
 You can use this as a basis to make whatever other armor you want in the game.
 
-![An armor stand and a baby zombie both equipped with a full set of custom armor.](/assets/images/items/custom-armor/armor_stand.png)
+![An armor stand and a baby zombie both equipped with a full set of custom armor.](armor_stand.png)
 
 ## Bonus - Making Set Effects
 

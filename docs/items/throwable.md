@@ -110,4 +110,4 @@ You can then customize its behavior by editing the `minecraft:projectile` compon
 
 ## Conclusion
 
-Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [AOE Cloud](/entities/introduction-to-aec). The only limit is your imagination.
+Once you have your throwable item you can start trying several things, like playing with its power, effects, animations or combining it with an [area effect cloud](/entities/area-effect-clouds). The only limit is your imagination.

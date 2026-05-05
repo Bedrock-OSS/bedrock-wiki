@@ -31,23 +31,15 @@ Below, you'll find an edited sample with some custom emojis for free-use.
 
 The provided template grid is 256×256 pixels but you could make it bigger to allow for larger emojis.
 
-<WikiImage src="/assets/images/text/custom-emojis/glyph_grid.png" width="512" pixelated />
+<WikiImage src="glyph_grid.png" width="512" pixelated />
 
 ### Glyph E0
 
-<WikiImage
-    src="/assets/images/text/custom-emojis/glyph_E0.png"
-    caption="RP/font/glyph_E0.png"
-    pixelated
-/>
+<WikiImage src="glyph_E0.png" caption="RP/font/glyph_E0.png" pixelated />
 
 ### Glyph E1
 
-<WikiImage
-    src="/assets/images/text/custom-emojis/glyph_E1.png"
-    caption="RP/font/glyph_E1.png"
-    pixelated
-/>
+<WikiImage src="glyph_E1.png" caption="RP/font/glyph_E1.png" pixelated />
 
 :::tip
 `E0` and `E1` aren't the only code points available to achieve custom emojis.
@@ -58,9 +50,9 @@ Using these code points can also help reduce conflicts with other packs to some 
 
 ## Example
 
-_Edited sample `glyph_E1.png` (CC0), shared by @zheaEvyline for free use:_
+_Sample `glyph_E2.png` (CC0), shared by @zheaEvyline for free use:_
 
-![](/assets/images/text/custom-emojis/glyph_E1_modified.png)
+![](glyph_E2.png)
 
 If you'd like to add existing vanilla textures or custom ones to the glyph and use them as emojis in-game, you can easily do so with the **[Textures to Glyph Web Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)** created by @minato4743
 
@@ -68,7 +60,8 @@ Your file paths should look like this:
 
 <FolderView :paths="[
     'RP/font/glyph_E0.png',
-    'RP/font/glyph_E1.png'
+    'RP/font/glyph_E1.png',
+    'RP/font/glyph_E2.png'
 ]" />
 
 ## Using the Emojis In-Game

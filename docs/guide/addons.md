@@ -14,7 +14,7 @@ mentions:
     - MedicalJewel105
     - ChibiMango
     - profeplaysminecraft
-    - retr0cube
+    - aym-i
     - SmokeyStack
     - QuazChick
 ---

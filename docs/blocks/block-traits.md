@@ -3,6 +3,9 @@ title: Block Traits
 description: Block traits can be used to apply vanilla block states (such as direction) to your custom blocks easily, without the need for events and triggers.
 category: General
 nav_order: 5
+related:
+    - /blocks/block-states
+    - /blocks/block-permutations
 license: true
 mentions:
     - QuazChick
@@ -76,6 +79,39 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 ```json
 "minecraft:connection": {
     "enabled_states": ["minecraft:cardinal_connections"]
+}
+```
+
+### Multi-Block
+
+:::warning EXPERIMENTAL 1.26.20
+Multi-blocks are experimental and require the "Upcoming Creator Features" toggle to be enabled in order to function.
+:::
+
+Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up of multiple parts.
+
+-   `enabled_states` — Array
+    -   Must contain `"minecraft:multi_block_part"` which is described in the table below.
+-   `direction` — String
+    -   Determines the direction in which parts of the multi-block are placed.
+    -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
+-   `parts` — Integer (`2-4`{lang=js})
+    -   Determines the number of blocks that make up the multi-block.
+    -   This controls how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
+
+#### Provided States {#multi-block-states}
+
+| State                        | Values                                                        | Description                             |
+| ---------------------------- | ------------------------------------------------------------- | --------------------------------------- |
+| `minecraft:multi_block_part` | Integers ranging from `0`{lang=json} to `parts - 1`{lang=js}. | The part index of the multi-block part. |
+
+<CodeHeader>minecraft:block > description > traits</CodeHeader>
+
+```json
+"minecraft:multi_block": {
+    "enabled_states": ["minecraft:multi_block_part"],
+    "direction": "up",
+    "parts": 2
 }
 ```
 

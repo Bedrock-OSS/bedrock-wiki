@@ -1,6 +1,8 @@
 ---
 title: Entity Counter
 category: Scoreboard Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -18,7 +20,7 @@ This system allows you to track the total number of players/entities on your wor
 
 ## Setup
 
-_To be typed in Chat:_
+_Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:count dummy`
 
@@ -94,9 +96,12 @@ If using functions, your pack folder structure will be as follows:
     'BP/pack_icon.png',
     'BP/manifest.json',
     'BP/functions/wiki',
+    'BP/functions/wiki/main.mcfunction',
     'BP/functions/wiki/scoreboard',
     'BP/functions/wiki/scoreboard/players',
     'BP/functions/wiki/scoreboard/players/tally_count.mcfunction',
     'BP/functions/tick.json'
 ]"
 ></FolderView>
+
+In this setup, the `tally_count` function is called by `main.mcfunction`, which is executed every tick via `tick.json`.

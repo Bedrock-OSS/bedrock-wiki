@@ -12,7 +12,7 @@ description: Trade tables represent the fundamental data behind trading item tra
 
 Trade tables represent the fundamental data behind trading item transactions for an entity. Trade tables are not standalone; they must be referenced from an [entity component](https://bedrock.dev/docs/stable/Entities#minecraft%3Aeconomy_trade_table). Using the randomizing properties available to trade tables, trade offers, item counts, and cost calculations may vary across entity instances, even if all would point to the same trade table.
 
-![](/assets/images/loot/trade_tables/trading.png)
+![](trading.png)
 
 Trade tables are not identified or versioned. Like loot tables, trade tables do not support Molang and instead rely on JSON constructs, like range objects and [functions](#functions). Despite being different, trade tables still support comments.
 
@@ -21,11 +21,11 @@ Trade tables are not identified or versioned. Like loot tables, trade tables do 
 Trade tables don't represent a primary add-on system, like blocks or biomes. They aren't registered by being placed in a specific folder; instead, they're referenced (from entities). Trade tables may be placed anywhere within a behavior pack.
 
 ::: tip
-It's recommended to follow vanilla convention and place all trade tables within the top-level `trading` directory in a behavior pack. From there, any hierarchy can be employed.
+It's recommended to include a namespace folder (here we've called it `wiki`) at the top level of the `trading` folder when adding custom trade tables to avoid conflicts between packs.
 :::
 
 <FolderView :paths="[
-    'BP/trading/minister.json',
+    'BP/trading/wiki/minister.json',
     'BP/trading/economy_trades/cleric_trades.json'
 ]" />
 
@@ -33,7 +33,7 @@ The following example is referenced and analyzed throughout the document:
 
 <Spoiler title="Trade Table File Example">
 
-<CodeHeader>BP/trading/minister.json</CodeHeader>
+<CodeHeader>BP/trading/wiki/minister.json</CodeHeader>
 
 ```json
 {

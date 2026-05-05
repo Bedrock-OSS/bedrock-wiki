@@ -132,7 +132,7 @@ Similarly to the destructible by mining component, the `match_tool` parameters a
 -   `minecraft:match_tool_filter_none` checks that the item has none of the listed [tags](/items/item-tags).
 
 :::tip EXCLUDING EMPTY HANDS
-By default, the `match_tool` component will match an empty hand.
+By default, the `match_tool` condition will match an empty hand.
 To prevent this from happening, you'll need to ensure that the stack size (`count`) is not 0.
 :::
 

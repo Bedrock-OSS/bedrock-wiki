@@ -29,7 +29,7 @@ While they technically do not form part of a circuit, **redstone insulators** ar
 In the diagram below, the powered repeater on the left is strongly powering the stonecutter block. However, given that the stonecutter is a redstone insulator, the repeater to the right of it is not connected to the circuit so remains unpowered.
 
 <WikiImage
-    src="/assets/images/blocks/redstone-components/insulator.png"
+    src="insulator.png"
     alt="Diagram of a stonecutter block with a powered repeater pointing into the left of it and an unpowered repeater pointing out of the right of it."
     width="512"
     pixelated
@@ -75,7 +75,7 @@ If a block is a redstone conductor, it will **prevent wire from stepping down** 
 In the diagram below, the powered repeater on the left is strongly powering the concrete block. Given that concrete is a redstone conductor, the repeater to the right of it is connected to the circuit so also becomes powered.
 
 <WikiImage
-    src="/assets/images/blocks/redstone-components/conductor.png"
+    src="conductor.png"
     alt="Diagram of a concrete block with a powered repeater pointing into the left of it and another powered repeater pointing out of the right of it."
     width="512"
     pixelated
@@ -117,7 +117,7 @@ A block that activates when supplied redstone power is known as a **redstone con
 In the diagram below, the redstone lamp is acting a redstone consumer and is being powered by the redstone torch, which is a redstone producer.
 
 <WikiImage
-    src="/assets/images/blocks/redstone-components/consumer.png"
+    src="consumer.png"
     alt="Diagram of a lit redstone lamp with a redstone torch to the left of it."
     width="384"
     pixelated
@@ -172,7 +172,7 @@ In the diagram below, the redstone torch is acting as the redstone producer of t
 Additionally, it is strongly powering the block above it.
 
 <WikiImage
-    src="/assets/images/blocks/redstone-components/producer.png"
+    src="producer.png"
     alt="Diagram of a redstone torch with two powered repeaters pointing outwards to the left and right and a strongly powered concrete block above it."
     width="384"
     pixelated

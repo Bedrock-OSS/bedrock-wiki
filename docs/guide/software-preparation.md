@@ -16,7 +16,7 @@ mentions:
     - ChibiMango
     - profeplaysminecraft
     - solvedDev
-    - retr0cube
+    - aym-i
     - SmokeyStack
     - ThomasOrs
     - QuazChick

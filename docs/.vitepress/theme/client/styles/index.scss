@@ -1,0 +1,36 @@
+@use "reset";
+
+@use "accentColors";
+@use "article";
+@use "code";
+@use "container";
+@use "frame";
+@use "home";
+@use "lists";
+@use "table";
+@use "variables";
+
+[href] {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  display: block;
+}
+
+option {
+  background-color: var(--bg-color);
+}
+
+* {
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid;
+  }
+}

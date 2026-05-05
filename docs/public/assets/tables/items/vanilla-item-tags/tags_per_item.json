@@ -27,11 +27,15 @@
     },
     {
       "item": "`minecraft:acacia_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:acacia_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:acacia_sign`",
@@ -43,15 +47,31 @@
     },
     {
       "item": "`minecraft:acacia_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:allay_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:amethyst_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:amethyst_shard`",
       "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:ancient_debris`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:andesite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:angler_pottery_sherd`",
@@ -86,6 +106,10 @@
       "tags": ["`minecraft:is_food`"]
     },
     {
+      "item": "`minecraft:bamboo_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+    },
+    {
       "item": "`minecraft:bamboo_chest_raft`",
       "tags": ["`minecraft:boat`", "`minecraft:boats`"]
     },
@@ -98,8 +122,12 @@
       "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
     },
     {
+      "item": "`minecraft:bamboo_mosaic`",
+      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+    },
+    {
       "item": "`minecraft:bamboo_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:bamboo_raft`",
@@ -118,8 +146,16 @@
       "tags": ["`minecraft:banner`"]
     },
     {
+      "item": "`minecraft:basalt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:bat_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:bedrock`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:bee_spawn_egg`",
@@ -155,11 +191,15 @@
     },
     {
       "item": "`minecraft:birch_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:birch_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:birch_sign`",
@@ -171,23 +211,51 @@
     },
     {
       "item": "`minecraft:birch_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:black_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:black_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:black_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:black_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:black_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:black_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:black_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:blackstone`",
-      "tags": ["`minecraft:stone_crafting_materials`", "`minecraft:stone_tool_materials`"]
+      "tags": [
+        "`minecraft:stone_crafting_materials`",
+        "`minecraft:stone_tool_materials`",
+        "`minecraft:sulfur_cube_archetype_regular`"
+      ]
     },
     {
       "item": "`minecraft:blade_pottery_sherd`",
@@ -202,16 +270,40 @@
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:blue_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:blue_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:blue_egg`",
       "tags": ["`minecraft:egg`"]
+    },
+    {
+      "item": "`minecraft:blue_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:blue_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:blue_ice`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_sliding`"]
+    },
+    {
+      "item": "`minecraft:blue_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:blue_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:bogged_spawn_egg`",
@@ -222,8 +314,16 @@
       "tags": ["`minecraft:trim_templates`"]
     },
     {
+      "item": "`minecraft:bone_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:book`",
       "tags": ["`minecraft:bookshelf_books`"]
+    },
+    {
+      "item": "`minecraft:brain_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:bread`",
@@ -242,24 +342,60 @@
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
+      "item": "`minecraft:brick_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:brown_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:brown_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:brown_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:brown_egg`",
       "tags": ["`minecraft:egg`"]
     },
     {
+      "item": "`minecraft:brown_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:brown_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:brown_mushroom_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
+    },
+    {
+      "item": "`minecraft:brown_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:brown_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
+    },
+    {
+      "item": "`minecraft:bubble_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:burn_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:calcite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:camel_husk_spawn_egg`",
@@ -272,6 +408,10 @@
     {
       "item": "`minecraft:carrot`",
       "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:carved_pumpkin`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:cat_spawn_egg`",
@@ -319,11 +459,15 @@
     },
     {
       "item": "`minecraft:cherry_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:cherry_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:cherry_sign`",
@@ -335,7 +479,11 @@
     },
     {
       "item": "`minecraft:cherry_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:chest_minecart`",
@@ -350,16 +498,88 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:chiseled_cinnabar`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:chiseled_deepslate`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_nether_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_polished_blackstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_quartz_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_red_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_resin_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+    },
+    {
+      "item": "`minecraft:chiseled_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:chiseled_stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_sulfur`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_tuff`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:chiseled_tuff_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:chorus_fruit`",
       "tags": ["`minecraft:is_food`"]
     },
     {
+      "item": "`minecraft:cinnabar`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cinnabar_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:clay`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:coal`",
       "tags": ["`minecraft:coals`"]
+    },
+    {
+      "item": "`minecraft:coal_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:coal_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:coarse_dirt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:coast_armor_trim_smithing_template`",
@@ -367,11 +587,19 @@
     },
     {
       "item": "`minecraft:cobbled_deepslate`",
-      "tags": ["`minecraft:stone_crafting_materials`", "`minecraft:stone_tool_materials`"]
+      "tags": [
+        "`minecraft:stone_crafting_materials`",
+        "`minecraft:stone_tool_materials`",
+        "`minecraft:sulfur_cube_archetype_regular`"
+      ]
     },
     {
       "item": "`minecraft:cobblestone`",
-      "tags": ["`minecraft:stone_crafting_materials`", "`minecraft:stone_tool_materials`"]
+      "tags": [
+        "`minecraft:stone_crafting_materials`",
+        "`minecraft:stone_tool_materials`",
+        "`minecraft:sulfur_cube_archetype_regular`"
+      ]
     },
     {
       "item": "`minecraft:cod`",
@@ -427,8 +655,16 @@
       ]
     },
     {
+      "item": "`minecraft:copper_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:copper_boots`",
       "tags": ["`minecraft:copper_tier`", "`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
+    },
+    {
+      "item": "`minecraft:copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:copper_chestplate`",
@@ -476,6 +712,10 @@
       "tags": ["`minecraft:metal_nuggets`"]
     },
     {
+      "item": "`minecraft:copper_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:copper_pickaxe`",
       "tags": [
         "`minecraft:copper_tier`",
@@ -506,8 +746,24 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:cracked_deepslate_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cracked_deepslate_tiles`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cracked_nether_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cracked_polished_blackstone_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:cracked_stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:creaking_spawn_egg`",
@@ -527,11 +783,19 @@
     },
     {
       "item": "`minecraft:crimson_hyphae`",
-      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+      "tags": [
+        "`minecraft:crimson_stems`",
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:crimson_nylium`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:crimson_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:crimson_sign`",
@@ -543,19 +807,59 @@
     },
     {
       "item": "`minecraft:crimson_stem`",
-      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+      "tags": [
+        "`minecraft:crimson_stems`",
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:crying_obsidian`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:cut_red_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cut_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:cyan_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:cyan_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cyan_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:cyan_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:cyan_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:cyan_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:cyan_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:danger_pottery_sherd`",
@@ -579,11 +883,15 @@
     },
     {
       "item": "`minecraft:dark_oak_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:dark_oak_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:dark_oak_sign`",
@@ -595,7 +903,79 @@
     },
     {
       "item": "`minecraft:dark_oak_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:dark_prismarine`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:dead_brain_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:dead_bubble_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:dead_fire_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:dead_horn_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:dead_tube_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:deepslate`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_coal_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_copper_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:deepslate_diamond_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_emerald_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_gold_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:deepslate_iron_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:deepslate_lapis_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_redstone_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:deepslate_tiles`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:diamond`",
@@ -610,6 +990,10 @@
         "`minecraft:is_tool`",
         "`minecraft:transformable_items`"
       ]
+    },
+    {
+      "item": "`minecraft:diamond_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:diamond_boots`",
@@ -666,6 +1050,10 @@
       "tags": ["`minecraft:nautilus_armor`", "`minecraft:transformable_items`"]
     },
     {
+      "item": "`minecraft:diamond_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:diamond_pickaxe`",
       "tags": [
         "`minecraft:diamond_tier`",
@@ -703,6 +1091,18 @@
       ]
     },
     {
+      "item": "`minecraft:diorite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:dirt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:dirt_with_roots`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:dolphin_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
@@ -713,6 +1113,14 @@
     {
       "item": "`minecraft:dried_kelp`",
       "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:dried_kelp_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:dripstone_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:drowned_spawn_egg`",
@@ -739,12 +1147,28 @@
       "tags": ["`minecraft:trim_materials`"]
     },
     {
+      "item": "`minecraft:emerald_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:emerald_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:enchanted_book`",
       "tags": ["`minecraft:bookshelf_books`"]
     },
     {
       "item": "`minecraft:enchanted_golden_apple`",
       "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:end_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:end_stone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:ender_dragon_spawn_egg`",
@@ -767,12 +1191,32 @@
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
+      "item": "`minecraft:exposed_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:exposed_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:exposed_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:exposed_copper_door`",
       "tags": ["`minecraft:door`"]
     },
     {
+      "item": "`minecraft:exposed_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:eye_armor_trim_smithing_template`",
       "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:fire_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:flow_armor_trim_smithing_template`",
@@ -799,12 +1243,24 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:gilded_blackstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:glow_squid_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:glowstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:goat_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:gold_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:gold_ingot`",
@@ -813,6 +1269,10 @@
     {
       "item": "`minecraft:gold_nugget`",
       "tags": ["`minecraft:metal_nuggets`"]
+    },
+    {
+      "item": "`minecraft:gold_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:golden_apple`",
@@ -896,28 +1356,80 @@
       "tags": ["`minecraft:golden_tier`", "`minecraft:is_sword`", "`minecraft:is_tool`"]
     },
     {
+      "item": "`minecraft:granite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:grass_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:gravel`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:gray_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:gray_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:gray_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:gray_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:gray_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:gray_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:gray_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:green_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:green_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:green_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:green_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:green_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:green_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:green_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:guardian_spawn_egg`",
@@ -932,6 +1444,14 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:hardened_clay`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:hay_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
       "item": "`minecraft:heart_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
@@ -944,12 +1464,24 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:honey_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
       "item": "`minecraft:honey_bottle`",
       "tags": ["`minecraft:is_food`"]
     },
     {
+      "item": "`minecraft:honeycomb_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_sticky`"]
+    },
+    {
       "item": "`minecraft:hopper_minecart`",
       "tags": ["`minecraft:is_minecart`"]
+    },
+    {
+      "item": "`minecraft:horn_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:horse_spawn_egg`",
@@ -968,6 +1500,10 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:ice`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_sliding`"]
+    },
+    {
       "item": "`minecraft:iron_axe`",
       "tags": [
         "`minecraft:digger`",
@@ -975,6 +1511,10 @@
         "`minecraft:is_axe`",
         "`minecraft:is_tool`"
       ]
+    },
+    {
+      "item": "`minecraft:iron_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:iron_boots`",
@@ -1026,6 +1566,10 @@
       "tags": ["`minecraft:metal_nuggets`"]
     },
     {
+      "item": "`minecraft:iron_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:iron_pickaxe`",
       "tags": [
         "`minecraft:digger`",
@@ -1069,11 +1613,15 @@
     },
     {
       "item": "`minecraft:jungle_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:jungle_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:jungle_sign`",
@@ -1085,11 +1633,23 @@
     },
     {
       "item": "`minecraft:jungle_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:lapis_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:lapis_lazuli`",
       "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:lapis_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:leather_boots`",
@@ -1116,36 +1676,92 @@
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:light_blue_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:light_blue_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:light_blue_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:light_blue_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:light_blue_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:light_blue_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:light_gray_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:light_gray_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:light_gray_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:light_gray_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:light_gray_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:light_gray_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:lime_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:lime_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:lime_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:lime_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:lime_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:lime_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:lime_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:llama_spawn_egg`",
@@ -1160,12 +1776,36 @@
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:magenta_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:magenta_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:magenta_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:magenta_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:magenta_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:magenta_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
+    },
+    {
+      "item": "`minecraft:magma`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:magma_cube_spawn_egg`",
@@ -1189,11 +1829,16 @@
     },
     {
       "item": "`minecraft:mangrove_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:mangrove_logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:mangrove_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:mangrove_sign`",
@@ -1205,7 +1850,16 @@
     },
     {
       "item": "`minecraft:mangrove_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:mangrove_logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:melon_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:melon_slice`",
@@ -1224,16 +1878,40 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:moss_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:mossy_cobblestone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:mossy_stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:mourner_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
+      "item": "`minecraft:mud`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:mud_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:muddy_mangrove_roots`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:mule_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:mushroom_stem`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
     },
     {
       "item": "`minecraft:mushroom_stew`",
@@ -1328,8 +2006,24 @@
       "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
     },
     {
+      "item": "`minecraft:mycelium`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
+    },
+    {
       "item": "`minecraft:nautilus_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:nether_brick`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:nether_gold_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:nether_wart_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
     },
     {
       "item": "`minecraft:netherite_axe`",
@@ -1339,6 +2033,10 @@
         "`minecraft:is_tool`",
         "`minecraft:netherite_tier`"
       ]
+    },
+    {
+      "item": "`minecraft:netherite_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:netherite_boots`",
@@ -1408,6 +2106,10 @@
       "tags": ["`minecraft:transform_templates`"]
     },
     {
+      "item": "`minecraft:netherrack`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:oak_boat`",
       "tags": ["`minecraft:boat`", "`minecraft:boats`"]
     },
@@ -1421,11 +2123,15 @@
     },
     {
       "item": "`minecraft:oak_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:oak_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:oak_sign`",
@@ -1437,31 +2143,91 @@
     },
     {
       "item": "`minecraft:oak_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:obsidian`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:ocelot_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:ochre_froglight`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
       "item": "`minecraft:orange_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:orange_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:orange_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:orange_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:orange_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:orange_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:orange_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
+    },
+    {
+      "item": "`minecraft:oxidized_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:oxidized_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:oxidized_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:oxidized_copper_door`",
       "tags": ["`minecraft:door`"]
     },
     {
+      "item": "`minecraft:oxidized_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:packed_ice`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_sliding`"]
+    },
+    {
+      "item": "`minecraft:packed_mud`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:painting`",
       "tags": ["`minecraft:hanging_actor`"]
+    },
+    {
+      "item": "`minecraft:pale_moss_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:pale_oak_boat`",
@@ -1481,11 +2247,15 @@
     },
     {
       "item": "`minecraft:pale_oak_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:pale_oak_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:pale_oak_sign`",
@@ -1497,7 +2267,11 @@
     },
     {
       "item": "`minecraft:pale_oak_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:panda_spawn_egg`",
@@ -1510,6 +2284,10 @@
     {
       "item": "`minecraft:parrot_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:pearlescent_froglight`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:phantom_spawn_egg`",
@@ -1536,16 +2314,40 @@
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:pink_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:pink_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:pink_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:pink_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:pink_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:pink_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:plenty_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:podzol`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:poisonous_potato`",
@@ -1556,12 +2358,60 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:polished_andesite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_basalt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_blackstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_blackstone_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_cinnabar`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_deepslate`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_diorite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_granite`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_sulfur`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:polished_tuff`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:porkchop`",
       "tags": ["`minecraft:is_food`", "`minecraft:is_meat`"]
     },
     {
       "item": "`minecraft:potato`",
       "tags": ["`minecraft:is_food`"]
+    },
+    {
+      "item": "`minecraft:prismarine`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:prismarine_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:prize_pottery_sherd`",
@@ -1576,6 +2426,10 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:pumpkin`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
       "item": "`minecraft:pumpkin_pie`",
       "tags": ["`minecraft:is_food`"]
     },
@@ -1584,16 +2438,60 @@
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:purple_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:purple_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:purple_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:purple_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:purple_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:purple_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
+    },
+    {
+      "item": "`minecraft:purpur_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:purpur_pillar`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:quartz`",
       "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:quartz_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:quartz_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:quartz_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:quartz_pillar`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:rabbit`",
@@ -1616,28 +2514,92 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:raw_copper_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:raw_gold_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:raw_iron_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:red_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
+    },
+    {
+      "item": "`minecraft:red_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:red_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:red_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:red_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:red_mushroom_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
+    },
+    {
+      "item": "`minecraft:red_nether_brick`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:red_sand`",
-      "tags": ["`minecraft:sand`"]
+      "tags": ["`minecraft:sand`", "`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:red_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:red_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:red_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:redstone`",
       "tags": ["`minecraft:trim_materials`"]
     },
     {
+      "item": "`minecraft:redstone_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:redstone_ore`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:reinforced_deepslate`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:resin_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+    },
+    {
       "item": "`minecraft:resin_brick`",
       "tags": ["`minecraft:trim_materials`"]
+    },
+    {
+      "item": "`minecraft:resin_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:rib_armor_trim_smithing_template`",
@@ -1657,11 +2619,23 @@
     },
     {
       "item": "`minecraft:sand`",
-      "tags": ["`minecraft:sand`"]
+      "tags": ["`minecraft:sand`", "`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:scrape_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
+    },
+    {
+      "item": "`minecraft:sculk`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:sea_lantern`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:sentry_armor_trim_smithing_template`",
@@ -1688,12 +2662,20 @@
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
+      "item": "`minecraft:shroomlight`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
+    },
+    {
       "item": "`minecraft:shulker_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
       "item": "`minecraft:silence_armor_trim_smithing_template`",
       "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:silver_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:silverfish_spawn_egg`",
@@ -1712,8 +2694,32 @@
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
+      "item": "`minecraft:slime`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
       "item": "`minecraft:slime_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:smooth_basalt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:smooth_quartz`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:smooth_red_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:smooth_sandstone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:smooth_stone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:sniffer_spawn_egg`",
@@ -1728,16 +2734,26 @@
       "tags": ["`minecraft:trim_templates`"]
     },
     {
+      "item": "`minecraft:snow`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_sliding`"]
+    },
+    {
       "item": "`minecraft:snow_golem_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
       "item": "`minecraft:soul_sand`",
-      "tags": ["`minecraft:soul_fire_base_blocks`"]
+      "tags": [
+        "`minecraft:soul_fire_base_blocks`",
+        "`minecraft:sulfur_cube_archetype_high_resistance`"
+      ]
     },
     {
       "item": "`minecraft:soul_soil`",
-      "tags": ["`minecraft:soul_fire_base_blocks`"]
+      "tags": [
+        "`minecraft:soul_fire_base_blocks`",
+        "`minecraft:sulfur_cube_archetype_high_resistance`"
+      ]
     },
     {
       "item": "`minecraft:spider_eye`",
@@ -1750,6 +2766,10 @@
     {
       "item": "`minecraft:spire_armor_trim_smithing_template`",
       "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:sponge`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:spruce_boat`",
@@ -1769,11 +2789,15 @@
     },
     {
       "item": "`minecraft:spruce_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:spruce_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:spruce_sign`",
@@ -1785,11 +2809,19 @@
     },
     {
       "item": "`minecraft:spruce_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:squid_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:stone`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:stone_axe`",
@@ -1802,7 +2834,7 @@
     },
     {
       "item": "`minecraft:stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:stone_hoe`",
@@ -1849,91 +2881,197 @@
     },
     {
       "item": "`minecraft:stripped_acacia_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_acacia_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:stripped_bamboo_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:stripped_birch_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_birch_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_cherry_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_cherry_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_crimson_hyphae`",
-      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+      "tags": [
+        "`minecraft:crimson_stems`",
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_crimson_stem`",
-      "tags": ["`minecraft:crimson_stems`", "`minecraft:logs`"]
+      "tags": [
+        "`minecraft:crimson_stems`",
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_dark_oak_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_dark_oak_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_jungle_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_jungle_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_mangrove_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:mangrove_logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_mangrove_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`", "`minecraft:mangrove_logs`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:mangrove_logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_oak_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_oak_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_pale_oak_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_pale_oak_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_spruce_log`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_spruce_wood`",
-      "tags": ["`minecraft:logs`", "`minecraft:logs_that_burn`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:stripped_warped_hyphae`",
-      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`",
+        "`minecraft:warped_stems`"
+      ]
     },
     {
       "item": "`minecraft:stripped_warped_stem`",
-      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`",
+        "`minecraft:warped_stems`"
+      ]
+    },
+    {
+      "item": "`minecraft:sulfur`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:sulfur_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:sulfur_cube_spawn_egg`",
+      "tags": ["`minecraft:spawn_egg`"]
     },
     {
       "item": "`minecraft:suspicious_stew`",
@@ -1950,6 +3088,10 @@
     {
       "item": "`minecraft:tide_armor_trim_smithing_template`",
       "tags": ["`minecraft:trim_templates`"]
+    },
+    {
+      "item": "`minecraft:tnt`",
+      "tags": ["`minecraft:sulfur_cube_archetype_explosive`"]
     },
     {
       "item": "`minecraft:tnt_minecart`",
@@ -1972,12 +3114,28 @@
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
+      "item": "`minecraft:tube_coral_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
+    },
+    {
+      "item": "`minecraft:tuff`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:tuff_bricks`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:turtle_helmet`",
       "tags": ["`minecraft:is_armor`", "`minecraft:trimmable_armors`"]
     },
     {
       "item": "`minecraft:turtle_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:verdant_froglight`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:vex_armor_trim_smithing_template`",
@@ -2017,11 +3175,19 @@
     },
     {
       "item": "`minecraft:warped_hyphae`",
-      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`",
+        "`minecraft:warped_stems`"
+      ]
+    },
+    {
+      "item": "`minecraft:warped_nylium`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:warped_planks`",
-      "tags": ["`minecraft:planks`"]
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
     },
     {
       "item": "`minecraft:warped_sign`",
@@ -2033,43 +3199,155 @@
     },
     {
       "item": "`minecraft:warped_stem`",
-      "tags": ["`minecraft:logs`", "`minecraft:warped_stems`"]
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:sulfur_cube_archetype_bouncy`",
+        "`minecraft:warped_stems`"
+      ]
+    },
+    {
+      "item": "`minecraft:warped_wart_block`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
+    },
+    {
+      "item": "`minecraft:waxed_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:waxed_copper_door`",
       "tags": ["`minecraft:door`"]
     },
     {
+      "item": "`minecraft:waxed_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_exposed_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_exposed_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_exposed_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:waxed_exposed_copper_door`",
       "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:waxed_exposed_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_oxidized_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_oxidized_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_oxidized_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:waxed_oxidized_copper_door`",
       "tags": ["`minecraft:door`"]
     },
     {
+      "item": "`minecraft:waxed_oxidized_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_weathered_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_weathered_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:waxed_weathered_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:waxed_weathered_copper_door`",
       "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:waxed_weathered_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:wayfinder_armor_trim_smithing_template`",
       "tags": ["`minecraft:trim_templates`"]
     },
     {
+      "item": "`minecraft:weathered_chiseled_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:weathered_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:weathered_copper_bulb`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
       "item": "`minecraft:weathered_copper_door`",
       "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:weathered_cut_copper`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
+    },
+    {
+      "item": "`minecraft:wet_sponge`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:white_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:white_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:white_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:white_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:white_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:white_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:white_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:wild_armor_trim_smithing_template`",
@@ -2148,12 +3426,32 @@
       "tags": ["`minecraft:vibration_damper`"]
     },
     {
+      "item": "`minecraft:yellow_concrete`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:yellow_concrete_powder`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
+      "item": "`minecraft:yellow_glazed_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:yellow_harness`",
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:yellow_terracotta`",
+      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+    },
+    {
       "item": "`minecraft:yellow_wool`",
-      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+      "tags": [
+        "`minecraft:sulfur_cube_archetype_light`",
+        "`minecraft:vibration_damper`",
+        "`minecraft:wool`"
+      ]
     },
     {
       "item": "`minecraft:zoglin_spawn_egg`",

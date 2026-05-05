@@ -15,7 +15,7 @@ description: Understanding relative coordinates.
 
 Minecraft stores the locations of blocks and entities in the world using a system of three-dimensional coordinates, each representing a value in a one-dimensional axis. They are stored in the format of X, then Y, and lastly Z. Whether you are placing structures and blocks, or teleporting and summoning entities, you can, and are sometimes required to, put in coordinates. They don't need to always be real values however; you can substitute world coordinates for relative values, either based in world space or local space.
 
-![](/assets/images/commands/relative-coordinates/coordinates.png)
+![](coordinates.png)
 
 _You may already be familiar with coordinates if you've enabled the Show Coordinates world option!_
 

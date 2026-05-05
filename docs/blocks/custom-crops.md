@@ -45,7 +45,7 @@ If you forget to lower the planes down by one, then the crops will appear to gro
 By lowering the position down a pixel, it will sit above farmland perfectly making everything right in our blocky world.
 Here is a template model for the crop:
 
-![](/assets/images/blocks/custom-crops/model.png)
+![](model.png)
 
 <Spoiler title="Example Crop Model">
 

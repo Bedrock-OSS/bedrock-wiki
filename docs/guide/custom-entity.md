@@ -26,7 +26,7 @@ Similarly to custom items, we can also make custom entities with many similar me
 
 Here we will make a ghost entity which will float, attack the player and drop our ectoplasm item on death.
 
-<WikiImage src="/assets/images/guide/custom_entity/ghost_view.png" width="150" />
+<WikiImage src="ghost_view.png" width="150" />
 
 Just like items, entities are made up of two parts:
 
@@ -1109,7 +1109,7 @@ Your folder structure should look like this:
                 "default": "entity_alphatest"
             },
             "textures": {
-                "default": "textures/entity/wiki/ghost"
+                "default": "textures/wiki/entity/ghost"
             },
             "geometry": {
                 "default": "geometry.ghost"

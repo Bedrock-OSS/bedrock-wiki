@@ -4,6 +4,8 @@ description: Block models that are built into the game for use with custom block
 category: Documentation
 tags:
     - beginner
+related:
+    - /blocks/block-models
 license: true
 mentions:
     - QuazChick
@@ -34,12 +36,6 @@ Vanilla block models are applied in the same way as [custom block models](/block
 
 ## List of Vanilla Models
 
-<Table data="models.json" />
+_This documentation is up to date as of release 1.26.10._
 
-<style>
-.model-preview {
-    display: block;
-    margin-block: 0.5em;
-    max-width: 100px;
-}
-</style>
+<Table data="models.json" />

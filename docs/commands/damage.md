@@ -2,6 +2,8 @@
 title: Damage
 description: /damage command explained.
 category: Commands
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - cda94581
@@ -84,8 +86,8 @@ Listed below are all the 'cause' values that can be used in the `/damage` comman
 | `override`         |
 | `piston`           |
 | `projectile`       |
-| `self_destruct`    |
 | `ram_attack`       |
+| `self_destruct`    |
 | `sonic_boom`       |
 | `soul_campfire`    |
 | `stalactite`       |

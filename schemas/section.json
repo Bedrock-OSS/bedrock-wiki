@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title"],
+  "properties": {
+    "title": {
+      "title": "Section Title",
+      "description": "The title of the section which will be displayed in the page sidebar.",
+      "type": "string"
+    },
+    "example": {
+      "title": "Example ID",
+      "type": "string",
+      "description": "The ID of the example to associate with all pages in the section that do not have an example explicitly defined."
+    },
+    "nav_order": {
+      "title": "Navigation Order",
+      "description": "Determines the order of this section in the page sidebar. Sections with no defined order will appear below those with an order defined.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "categories": {
+      "title": "Section Categories",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "color"],
+        "properties": {
+          "title": {
+            "title": "Category Title",
+            "description": "The title of the category which will be displayed in the page sidebar. Also acts as the identifier used when adding pages to the category.",
+            "type": "string"
+          },
+          "color": {
+            "title": "Category Color",
+            "description": "Determines the color of the category title underline in the page sidebar.",
+            "$ref": "./color.json"
+          }
+        }
+      }
+    }
+  }
+}

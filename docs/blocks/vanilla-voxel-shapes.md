@@ -13,16 +13,7 @@ mentions:
 :::warning EXPERIMENTAL
 Voxel shapes are experimental and require the "Experimental Voxel Shape Features" toggle to be enabled in order to function.
 :::
-:::danger HARDCODED
-Currently, vanilla voxel shapes are not data-driven, so cannot be modified nor found as JSON files in the vanilla behavior pack.
-:::
+
+_This documentation is up to date as of Preview 1.26.30.25._
 
 <Table data="shapes.json" />
-
-<style>
-.voxel-shape-preview {
-    display: block;
-    margin-block: 0.5em;
-    max-width: 100px;
-}
-</style>

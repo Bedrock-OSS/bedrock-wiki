@@ -13,7 +13,7 @@
   },
   "rows": [
     {
-      "preview": "<img src='/assets/images/blocks/vanilla-block-models/cross.png' alt='' class='model-preview' />",
+      "preview": "![](cross.png)",
       "identifier": "`minecraft:geometry.cross`",
       "notes": [
         "When used on a block, `ambient_occlusion` and `face_dimming` should be set to `false`{lang=json} in any [material instances](/blocks/block-components#material-instances).",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "preview": "<img src='/assets/images/blocks/vanilla-block-models/full_block.png' alt='' class='model-preview' />",
+      "preview": "![](full_block.png)",
       "identifier": "`minecraft:geometry.full_block`",
       "notes": [
         "When used by a block with the `\"opaque\"`{lang=json} render method, a shadow is cast onto surrounding blocks and adjacent block faces are culled.",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "preview": "<img src='/assets/images/blocks/vanilla-block-models/full_block.png' alt='' class='model-preview' />",
+      "preview": "![](full_block.png)",
       "identifier": "`minecraft:geometry.full_block_v1`",
       "notes": [
         "**Deprecated** — the bottom face of this model is rotated 180 degrees compared to vanilla full blocks so `minecraft:geometry.full_block` should be used instead.",

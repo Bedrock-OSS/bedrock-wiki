@@ -16,6 +16,15 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.30
+
+### Components
+
+-   Updated `minecraft:use_modifiers`
+    -   Added `start_using` parameter which determines when use modifiers should be always be applied when the item is used, or whether they should only be applied if the item does not have other built-in use functionality (such as a charged shooter shooting its stored ammunition).
+        -   In format versions prior to `1.26.30`, the default value is `"always"`{lang=json}.
+        -   In format versions of `1.26.30` and higher, the default value is `"if_first"`{lang=json}.
+
 ## 1.26.10
 
 ### Components

@@ -97,7 +97,7 @@ If you want to disable collision at all (so you can place a block at it's positi
             },
             "render_controllers": ["controller.render.dummy"],
             "textures": {
-                "default": "textures/entity/dummy"
+                "default": "textures/wiki/entity/dummy"
             }
         }
     }

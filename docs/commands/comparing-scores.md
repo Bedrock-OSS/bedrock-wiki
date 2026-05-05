@@ -83,10 +83,10 @@ execute as <target> if score @s <objective> = .Lowest <objective> run <command>
 **Command 1:** This command compares the `.Lowest` score with every other tracked score in the specified objective, and if the `.Lowest` score is greater than the one being compared to, then the `.Lowest` score will be assigned the value of that score. To illustrate:
 
 |  #  | Player | Objective: `wiki:blocks_traveled` | Comparison with `.Lowest` | `.Lowest` after comparison |
-| :-: | :----: | :--------------------------------: | :-----------------------: | :------------------------: |
-|  1  |  Alex  |                100                 |     `.Lowest < Alex`      |      `.Lowest = 100`       |
-|  2  |  Kai   |                 50                 |      `.Lowest < Kai`      |       `.Lowest = 50`       |
-|  3  | Steve  |                200                 |     `.Lowest < Alex`      |       `.Lowest = 50`       |
+| :-: | :----: | :-------------------------------: | :-----------------------: | :------------------------: |
+|  1  |  Alex  |                100                |     `.Lowest < Alex`      |      `.Lowest = 100`       |
+|  2  |  Kai   |                50                 |      `.Lowest < Kai`      |       `.Lowest = 50`       |
+|  3  | Steve  |                200                |     `.Lowest < Alex`      |       `.Lowest = 50`       |
 
 _No change when `.Lowest` score is compared to player 3 after player 2 (since 50 is already less than 200)._
 
@@ -138,7 +138,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 
 **Visualization:**
 
-![Getting Matching Scores 2D Visualization](/assets/images/commands/comparing-scores/2d-visualization.gif)
+![Getting Matching Scores 2D Visualization](2d-visualization.gif)
 
 **Example 1:** Teleport pet to owner if farther than 6 blocks:
 

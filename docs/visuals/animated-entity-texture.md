@@ -25,7 +25,7 @@ This page is based on content by [AgentMindStorm](https://www.youtube.com/channe
 First let's draw some new texture frames for our entity. In this tutorial it will be a cow, which is looking around.
 
 <WikiImage
-    src="/assets/images/visuals/animated-entity-texture/cow.png"
+    src="cow.png"
     alt="Frames of an animated cow texture stacked on top of each other"
     width="180"
     pixelated
@@ -109,7 +109,7 @@ This formula calculates the offset and the size of the texture depending on life
 
 Now, it is time to test your creation!
 
-![](/assets/images/visuals/animated-entity-texture/result.gif)
+![](result.gif)
 
 ## Download Example Pack
 

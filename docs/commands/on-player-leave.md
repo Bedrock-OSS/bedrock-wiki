@@ -1,6 +1,8 @@
 ---
 title: On Player Leave
 category: On Event Systems
+tags:
+    - easy
 mentions:
     - BedrockCommands
     - zheaEvyline
@@ -18,7 +20,7 @@ This system will run your desired commands on the event that a player leaves the
 
 ## Setup
 
-_To be typed in chat:_
+_Type the following command in Chat:_
 
 `/scoreboard objectives add wiki:player_count dummy`
 

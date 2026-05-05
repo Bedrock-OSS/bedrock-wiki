@@ -1,7 +1,7 @@
 ---
 title: Block Tinting
 description: Learn how to apply a color tint to your block's texture and map color.
-category: Visuals
+category: Sound & Visuals
 tags:
     - easy
 license: true
@@ -23,7 +23,7 @@ In the [terrain atlas file](/concepts/texture-atlases), the following parameters
     "texture_data": {
         "wiki:tinted_texture": {
             "textures": {
-                "path": "textures/blocks/untinted_texture",
+                "path": "textures/wiki/blocks/untinted_texture",
                 "tint_color": "#ff5522" // Tints the texture orange
             }
         }

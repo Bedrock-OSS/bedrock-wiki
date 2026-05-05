@@ -11,6 +11,7 @@ mentions:
     - SpacebarNinja
     - jeanmajid
     - keyyard
+nav_order: 2
 description: Understanding target selectors in commands.
 ---
 
@@ -18,12 +19,13 @@ Target selectors are used in commands to target who you want to execute a comman
 
 ## Selector Variables
 
-The selector variable defines the broad list of entities to select. There are six selector variables to choose from:
+The selector variable defines the broad list of entities to select. There are seven selector variables to choose from:
 
 -   `@a` - Target all players
 -   `@p` - Target the nearest player
 -   `@r` - Target a random player
 -   `@e` - Target all entities
+-   `@n` - Target the nearest entity
 -   `@s` - Target the executor
 -   `@initiator` - Target the player interacting with an NPC
 
@@ -128,7 +130,7 @@ Add the "wiki:warp" tag to all entities between (-1.5, 0, -2) and (1, 0, 1.5):
 
 The target will still be selected even if their hitbox is only partially contained within the volume.
 
-![](/assets/images/commands/selectors/volume.png)
+![](volume.png)
 
 In this visual representation, we can see that the horse with a larger hitbox is selected, while the player with a smaller hitbox is not selected, despite standing at the same point.
 
@@ -208,7 +210,7 @@ Affect all entities in the "monster" family with Regeneration:
 Limits the selection of targets by property. This argument can be repeated to test for multiple families, and all filters must pass for an entity to be selected. Negating this argument selects entities whose property does not match. Properties can be defined in the Entity Behavior file, and various from types (bool, int, enum,..etc based on behavior set-up)
 
 -   `has_property={key=value}` - Include only entities with the correct property
--   `has_property=!{key=value}` - Excludes any entities with the correct property
+-   `has_property={key=!value}` - Excludes any entities with the correct property
 
 -   **Examples**
     Kill all entities with wiki:property=true:
@@ -223,11 +225,11 @@ Limits the selection of targets by their rotation. There are two types of rotati
 
 _x-rotation diagram shared by @SpacebarNinja:_
 
-<img src="/assets/images/commands/selectors/x-rotation.png" width="400">
+<WikiImage src="x-rotation.png" width="400" />
 
 _y-rotation diagram shared by @SpacebarNinja:_
 
-<img src="/assets/images/commands/selectors/y-rotation.png" width="400">
+<WikiImage src="y-rotation.png" width="400" />
 
 **Examples:**
 
@@ -255,7 +257,7 @@ Damage all players facing generally south:
 **Useful Articles Related to the Rotation Arguments:**
 
 1. **[Compass Display](/commands/compass-display.md)**
-2. **[Item Drop Detection](/commands/item-drop-detection.md)**
+2. **[Item Drop Detection](/commands/detect-item-drop.md)**
 
 ### Level
 

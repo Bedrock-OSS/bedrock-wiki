@@ -42,7 +42,7 @@ Here you can report wiki issues, collaborate on new articles, or simply get in t
 <Card
     title="Learn How"
     link="/contribute-how-to"
-    image="/assets/images/misc/compass.png"
+    image="/assets/images/icons/compass.png"
 >
 
 Don't quite know what to do?

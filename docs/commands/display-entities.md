@@ -8,7 +8,7 @@ mentions:
     - PipiSpamton
     - zheaEvyline
     - szea-ll14
-nav_order: 4
+nav_order: 5
 description: A guide to creating block display entities on Bedrock purely using commands.
 ---
 
@@ -76,7 +76,7 @@ Once you have the system above active, follow the steps and instructions given b
 
 ### Setup
 
-_To be typed in chat:_
+_Type the following commands in Chat:_
 
 1. Summon a fox and use the `/replaceitem` command to give it the item model you want in its main hand.
     - `/summon fox ~~~ ~ ~ minecraft:as_adult "wiki:fmbe"`
@@ -161,7 +161,7 @@ stopsound @a mob.fox.aggro
 
 ### Changing FMBE Block Display Dynamically
 
-![Demonstration GIF](/assets/images/commands/display-entities/change-fmbe-block-dynamically.gif)
+![Demonstration GIF](change-fmbe-block-dynamically.gif)
 
 1. Summon an armor stand named "`wiki:fmbe_pickaxe`" in a secure area accessible only to operators and place a silk touch pickaxe in it's main hand.
 2. Ensure this area remains loaded at all times using a **[ticking area](https://learn.microsoft.com/en-us/minecraft/creator/documents/tickingareacommand)**.
@@ -181,7 +181,7 @@ This is a compressed three-command version of the system above. If you do not wi
 ```yaml
 ## Reposition and Define FMBE Scale
 playanimation @e[tag=wiki:fmbe] animation.player.sleeping none 0 "" controller.animation.fox.move
-playanimation @e[tag=wiki:fmbe] animation.creeper.swelling none 0 "v.scale=1;v.adscale=math.sqrt(v.scale);v.adscaled=2.1385*v.adscale;v.xbasepos=0;v.ybasepos=0;v.zbasepos=0;v.xpos=0;v.ypos=0;v.zpos=0;v.xrot=q.life_time*0;v.yrot=q.life_time*0;v.zrot=q.life_time*20;v.swelling_scale1=v.adscaled;v.swelling_scale2=v.adscaled;" wiki:scale
+playanimation @e[tag=wiki:fmbe] animation.creeper.swelling none 0 "v.scale=1;v.adscale=math.sqrt(v.scale);v.adscaled=2.1385*v.adscale;v.xbasepos=0;v.ybasepos=0;v.zbasepos=0;v.xpos=0;v.ypos=0;v.zpos=0;v.xrot=q.life_time*0;v.yrot=q.life_time*0;v.zrot=q.life_time*0;v.swelling_scale1=v.adscaled;v.swelling_scale2=v.adscaled;" wiki:scale
 
 ## Define FMBE Position & Rotation
 playanimation @e[tag=wiki:fmbe] animation.ender_dragon.neck_head_movement none 0 "v.adjust_xz=8*v.adscaled+v.zbasepos/v.adscaled;v.adjust_y=(-5-v.ybasepos/v.adscaled/v.adscaled)*v.adscaled;v.x=v.xbasepos/v.adscaled;v.y=v.adjust_y;v.z=v.adjust_xz;v.ty=v.y*math.cos(v.xrot)-v.z*math.sin(v.xrot);v.tz=v.y*math.sin(v.xrot)+v.z*math.cos(v.xrot);v.y=v.ty;v.z=v.tz;v.tx=-v.x*math.cos(v.zrot)+v.y*math.sin(v.zrot);v.ty=v.x*math.sin(v.zrot)+v.y*math.cos(v.zrot);v.x=v.tx;v.y=v.ty;v.tx=v.x*math.cos(v.yrot)+v.z*math.sin(v.yrot);v.tz=-v.x*math.sin(v.yrot)+v.z*math.cos(v.yrot);v.x=v.tx;v.z=v.tz;v.head_position_x=v.x+v.xpos/v.adscaled;v.head_position_y=7.48/v.adscale+v.z+v.zpos/v.adscaled;v.head_position_z=v.y-v.ypos/v.adscaled;v.head_rotation_x=90+v.xrot;v.head_rotation_y=v.zrot;v.head_rotation_z=v.yrot;" wiki:posrot
@@ -219,7 +219,7 @@ playanimation @e[tag=wiki:fmbe] animation.ender_dragon.neck_head_movement none 0
 
 This is the beta version of a new, slightly more advanced FMBE, which reduces the total number of command blocks required to 5, while also allowing for more complex transformations.
 
-![Advanced FMBE Diagonal Transformation Demo GIF](/assets/images/commands/display-entities/advanced-fmbe-diagonal-transformation.gif)
+![Advanced FMBE Diagonal Transformation Demo GIF](advanced-fmbe-diagonal-transformation.gif)
 
 It is still under development and may change over time, so use it with caution.
 

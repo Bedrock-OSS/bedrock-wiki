@@ -64,8 +64,8 @@ _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
 #### Object Format {#block-placer-object}
 
--   `block` — String / Object
-    -   Defines the block that will be placed.
+-   `block` — String
+    -   Defines the identifier of the block that will be placed.
 -   `replace_block_item` — Boolean (optional)
     -   Learn more about replacing block items [here](/blocks/blocks-as-items#replacing-block-items).
 -   `aligned_placement` — Boolean (optional)
@@ -75,7 +75,7 @@ _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
     -   By default, aligned placement is disabled.
 -   `use_on` — Array (optional)
     -   Lists the blocks (as an array of [block descriptors](/documentation/shared-constructs#block-descriptors)) that this item can be used on to place the block.
-    -   If empty or omitted, the item will be able to place on any block.
+    -   If empty or omitted, the item will be able to place onto any block.
 
 <CodeHeader>minecraft:item > components</CodeHeader>
 
@@ -296,6 +296,8 @@ Allows the item to take damage and determines how much damage the item can take 
 -   When the item is [wearable](#wearable), hitting an entity will not damage the item.
     Instead, it implicitly increments the damage when worn and the entity is hurt.
 
+_Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
+
 #### Object Format {#durability-object}
 
 -   `damage_chance` — Integer [Range](/documentation/shared-constructs#range-objects) (optional)
@@ -307,6 +309,18 @@ Allows the item to take damage and determines how much damage the item can take 
         -   Unbreaking III — 25% of the range.
 -   `max_durability` — Integer (`0-32767`{lang=js}) ([MCPE-180112](https://bugs.mojang.com/browse/MCPE-180112))
     -   The amount of damage that the item can take before breaking.
+
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:durability": {
+    "damage_chance": {
+        "min": 0,
+        "max": 100
+    },
+    "max_durability": 238
+}
+```
 
 ### Durability Sensor
 
@@ -377,6 +391,15 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 -   `value` — Integer (`0-255`{lang=js}) ([MCPE-180331](https://bugs.mojang.com/browse/MCPE-180331))
     -   Determines the quality and quantity of enchantments available when enchanting the item using an Enchanting Table.
 
+<CodeHeader>minecraft:item > components</CodeHeader>
+
+```json
+"minecraft:enchantable": {
+    "slot": "sword",
+    "value": 10
+}
+```
+
 #### Enchantable Slots
 
 | Slot Value                     |
@@ -428,15 +451,6 @@ The table below details enchantability scores across different materials, showca
 | Other     | 1                    | 1                          |
 
 For an in-depth exploration of enchantability and its impact on the game, refer to the [Minecraft Wiki](https://minecraft.wiki/w/Enchanting_table_mechanics#Enchantability).
-
-<CodeHeader>minecraft:item > components</CodeHeader>
-
-```json
-"minecraft:enchantable": {
-    "slot": "sword",
-    "value": 10
-}
-```
 
 ### Entity Placer
 

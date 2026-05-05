@@ -14,7 +14,7 @@ Jigsaw structures are structures made out of smaller pieces and connected via ji
 ## Jigsaw Blocks
 
 <WikiImage
-    src="/assets/images/world-generation/jigsaw-structures/jigsaw-ui.png"
+    src="jigsaw-ui.png"
     alt="The jigsaw block ui"
     caption="The jigsaw block UI."
     width="840"
@@ -27,7 +27,7 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
     They will look through a [template pool](#template-pools) for a structure with a connecting jigsaw with the name field matching the target name field.
 
     <WikiImage
-        src="/assets/images/world-generation/jigsaw-structures/generating-jigsaw-block.png"
+        src="generating-jigsaw-block.png"
         alt="A generating jigsaw"
         caption="A generating jigsaw"
         width="480"
@@ -38,7 +38,7 @@ Jigsaw blocks are the blocks that put all the pieces of a structure together. Th
     They are the block that generating jigsaws will look for when placing their connector pieces.
 
     <WikiImage
-        src="/assets/images/world-generation/jigsaw-structures/connecting-jigsaw-block.png"
+        src="connecting-jigsaw-block.png"
         alt="A generating jigsaw"
         caption="A generating jigsaw"
         width="480"
@@ -54,19 +54,19 @@ It has a target pool and target name which will place a structure with a connect
 <CardGrid>
 
 <WikiImage
-    src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws.png"
+    src="connectable-jigsaws.png"
     alt="Jigsaws that can connect"
     caption="These two jigsaws can connect because their arrows are both aligned horizontally."
 />
 
 <WikiImage
-    src="/assets/images/world-generation/jigsaw-structures/connectable-jigsaws2.png"
+    src="connectable-jigsaws2.png"
     alt="Jigsaws that can connect"
     caption="These two jigsaws can connect because their arrows are both aligned horizontally."
 />
 
 <WikiImage
-    src="/assets/images/world-generation/jigsaw-structures/unconnectable-jigsaws.png"
+    src="unconnectable-jigsaws.png"
     alt="Jigsaws that cannot connect"
     caption="These two jigsaws cannot connect because one is aligned horizontally while the other is aligned vertically."
 />

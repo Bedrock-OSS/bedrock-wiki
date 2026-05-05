@@ -606,6 +606,10 @@
       "tags": ["`minecraft:is_axe_item_destructible`", "`not_feature_replaceable`"]
     },
     {
+      "block": "`minecraft:chiseled_cinnabar`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
       "block": "`minecraft:chiseled_copper`",
       "tags": [
         "`minecraft:is_pickaxe_item_destructible`",
@@ -646,6 +650,10 @@
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
+      "block": "`minecraft:chiseled_sulfur`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
       "block": "`minecraft:chiseled_tuff`",
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
@@ -660,6 +668,46 @@
     {
       "block": "`minecraft:chorus_plant`",
       "tags": ["`minecraft:is_axe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_brick_double_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_brick_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_brick_stairs`",
+      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_brick_wall`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_bricks`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_double_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_stairs`",
+      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:cinnabar_wall`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
       "block": "`minecraft:clay`",
@@ -2563,6 +2611,26 @@
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
+      "block": "`minecraft:polished_cinnabar`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_cinnabar_double_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_cinnabar_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_cinnabar_stairs`",
+      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_cinnabar_wall`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
       "block": "`minecraft:polished_deepslate`",
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
@@ -2615,6 +2683,26 @@
       "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
     },
     {
+      "block": "`minecraft:polished_sulfur`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_sulfur_double_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_sulfur_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_sulfur_stairs`",
+      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:polished_sulfur_wall`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
       "block": "`minecraft:polished_tuff`",
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
@@ -2641,6 +2729,10 @@
     {
       "block": "`minecraft:potatoes`",
       "tags": ["`minecraft:crop`"]
+    },
+    {
+      "block": "`minecraft:potent_sulfur`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
       "block": "`minecraft:prismarine`",
@@ -3285,6 +3377,50 @@
     {
       "block": "`minecraft:stripped_warped_stem`",
       "tags": ["`minecraft:is_axe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_brick_double_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_brick_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_brick_stairs`",
+      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_brick_wall`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_bricks`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_double_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_slab`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_spike`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_stairs`",
+      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
+    },
+    {
+      "block": "`minecraft:sulfur_wall`",
+      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
       "block": "`minecraft:sunflower`",

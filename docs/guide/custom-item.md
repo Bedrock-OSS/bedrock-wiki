@@ -24,7 +24,7 @@ In Minecraft, we can create custom items, which can be dropped, traded, crafted,
 
 In this tutorial we are going to learn how to create a simple "ectoplasm" item, which we will later use as a loot-table drop for our ghost entity.
 
-<WikiImage src="/assets/images/guide/custom_item/ectoplasm_view.png" width="150" />
+<WikiImage src="ectoplasm_view.png" width="150" />
 
 Conceptually, items are made up of two parts:
 
@@ -200,7 +200,7 @@ Under `texture_data` will our list of item shortname definitions. An example def
 
 ```json
 "wiki:ectoplasm": {
-    "textures": "textures/items/ectoplasm"
+    "textures": "textures/wiki/items/ectoplasm"
 }
 ```
 
@@ -289,7 +289,7 @@ Your folder structure should look like this:
 {
     "texture_data": {
         "wiki:ectoplasm": {
-            "textures": "textures/items/wiki/ectoplasm"
+            "textures": "textures/wiki/items/ectoplasm"
         }
     }
 }
