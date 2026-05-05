@@ -112,6 +112,8 @@ They control the render method, shading, texture and tinting that is applied to 
 
 You can define the material instances that a block has by using the [`minecraft:material_instances`](/blocks/block-components#material-instances) component.
 
+Here, the `texture` parameter must reference a texture atlas shortname from `RP/textures/terrain_texture.json`.
+
 <CodeHeader>minecraft:block > components</CodeHeader>
 
 ```json
