@@ -59,7 +59,7 @@
     },
     {
       "item": "`minecraft:amethyst_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:amethyst_shard`",
@@ -67,11 +67,11 @@
     },
     {
       "item": "`minecraft:ancient_debris`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_flat`"]
     },
     {
       "item": "`minecraft:andesite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:angler_pottery_sherd`",
@@ -147,15 +147,11 @@
     },
     {
       "item": "`minecraft:basalt`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:bat_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
-    },
-    {
-      "item": "`minecraft:bedrock`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
       "item": "`minecraft:bee_spawn_egg`",
@@ -223,7 +219,7 @@
     },
     {
       "item": "`minecraft:black_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:black_concrete_powder`",
@@ -231,7 +227,7 @@
     },
     {
       "item": "`minecraft:black_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:black_harness`",
@@ -239,7 +235,7 @@
     },
     {
       "item": "`minecraft:black_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:black_wool`",
@@ -254,7 +250,7 @@
       "tags": [
         "`minecraft:stone_crafting_materials`",
         "`minecraft:stone_tool_materials`",
-        "`minecraft:sulfur_cube_archetype_regular`"
+        "`minecraft:sulfur_cube_archetype_slow_bouncy`"
       ]
     },
     {
@@ -271,7 +267,7 @@
     },
     {
       "item": "`minecraft:blue_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:blue_concrete_powder`",
@@ -283,7 +279,7 @@
     },
     {
       "item": "`minecraft:blue_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:blue_harness`",
@@ -295,7 +291,7 @@
     },
     {
       "item": "`minecraft:blue_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:blue_wool`",
@@ -343,7 +339,7 @@
     },
     {
       "item": "`minecraft:brick_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:brown_carpet`",
@@ -351,7 +347,7 @@
     },
     {
       "item": "`minecraft:brown_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:brown_concrete_powder`",
@@ -363,7 +359,7 @@
     },
     {
       "item": "`minecraft:brown_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:brown_harness`",
@@ -375,7 +371,7 @@
     },
     {
       "item": "`minecraft:brown_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:brown_wool`",
@@ -395,7 +391,7 @@
     },
     {
       "item": "`minecraft:calcite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:camel_husk_spawn_egg`",
@@ -499,7 +495,7 @@
     },
     {
       "item": "`minecraft:chiseled_cinnabar`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_copper`",
@@ -507,47 +503,47 @@
     },
     {
       "item": "`minecraft:chiseled_deepslate`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_nether_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_polished_blackstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_quartz_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_red_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_resin_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:chiseled_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_sulfur`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_tuff`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chiseled_tuff_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:chorus_fruit`",
@@ -555,11 +551,11 @@
     },
     {
       "item": "`minecraft:cinnabar`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cinnabar_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:clay`",
@@ -575,7 +571,7 @@
     },
     {
       "item": "`minecraft:coal_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:coarse_dirt`",
@@ -590,7 +586,7 @@
       "tags": [
         "`minecraft:stone_crafting_materials`",
         "`minecraft:stone_tool_materials`",
-        "`minecraft:sulfur_cube_archetype_regular`"
+        "`minecraft:sulfur_cube_archetype_slow_bouncy`"
       ]
     },
     {
@@ -598,7 +594,7 @@
       "tags": [
         "`minecraft:stone_crafting_materials`",
         "`minecraft:stone_tool_materials`",
-        "`minecraft:sulfur_cube_archetype_regular`"
+        "`minecraft:sulfur_cube_archetype_slow_bouncy`"
       ]
     },
     {
@@ -747,23 +743,23 @@
     },
     {
       "item": "`minecraft:cracked_deepslate_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cracked_deepslate_tiles`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cracked_nether_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cracked_polished_blackstone_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cracked_stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:creaking_spawn_egg`",
@@ -791,7 +787,7 @@
     },
     {
       "item": "`minecraft:crimson_nylium`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:crimson_planks`",
@@ -815,7 +811,7 @@
     },
     {
       "item": "`minecraft:crying_obsidian`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cut_copper`",
@@ -823,11 +819,11 @@
     },
     {
       "item": "`minecraft:cut_red_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cut_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cyan_carpet`",
@@ -835,7 +831,7 @@
     },
     {
       "item": "`minecraft:cyan_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cyan_concrete_powder`",
@@ -843,7 +839,7 @@
     },
     {
       "item": "`minecraft:cyan_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cyan_harness`",
@@ -851,7 +847,7 @@
     },
     {
       "item": "`minecraft:cyan_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:cyan_wool`",
@@ -911,7 +907,7 @@
     },
     {
       "item": "`minecraft:dark_prismarine`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:dead_brain_coral_block`",
@@ -935,15 +931,15 @@
     },
     {
       "item": "`minecraft:deepslate`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_coal_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_copper_ore`",
@@ -951,11 +947,11 @@
     },
     {
       "item": "`minecraft:deepslate_diamond_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_emerald_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_gold_ore`",
@@ -967,15 +963,15 @@
     },
     {
       "item": "`minecraft:deepslate_lapis_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_redstone_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:deepslate_tiles`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:diamond`",
@@ -993,7 +989,7 @@
     },
     {
       "item": "`minecraft:diamond_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:diamond_boots`",
@@ -1051,7 +1047,7 @@
     },
     {
       "item": "`minecraft:diamond_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:diamond_pickaxe`",
@@ -1092,7 +1088,7 @@
     },
     {
       "item": "`minecraft:diorite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:dirt`",
@@ -1120,7 +1116,7 @@
     },
     {
       "item": "`minecraft:dripstone_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:drowned_spawn_egg`",
@@ -1148,11 +1144,11 @@
     },
     {
       "item": "`minecraft:emerald_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:emerald_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:enchanted_book`",
@@ -1164,11 +1160,11 @@
     },
     {
       "item": "`minecraft:end_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:end_stone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:ender_dragon_spawn_egg`",
@@ -1244,7 +1240,7 @@
     },
     {
       "item": "`minecraft:gilded_blackstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:glow_squid_spawn_egg`",
@@ -1252,7 +1248,7 @@
     },
     {
       "item": "`minecraft:glowstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:goat_spawn_egg`",
@@ -1357,14 +1353,10 @@
     },
     {
       "item": "`minecraft:granite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:grass_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
-    },
-    {
-      "item": "`minecraft:gravel`",
       "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
     },
     {
@@ -1373,7 +1365,7 @@
     },
     {
       "item": "`minecraft:gray_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:gray_concrete_powder`",
@@ -1381,7 +1373,7 @@
     },
     {
       "item": "`minecraft:gray_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:gray_harness`",
@@ -1389,7 +1381,7 @@
     },
     {
       "item": "`minecraft:gray_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:gray_wool`",
@@ -1405,7 +1397,7 @@
     },
     {
       "item": "`minecraft:green_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:green_concrete_powder`",
@@ -1413,7 +1405,7 @@
     },
     {
       "item": "`minecraft:green_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:green_harness`",
@@ -1421,7 +1413,7 @@
     },
     {
       "item": "`minecraft:green_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:green_wool`",
@@ -1445,7 +1437,7 @@
     },
     {
       "item": "`minecraft:hardened_clay`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:hay_block`",
@@ -1462,10 +1454,6 @@
     {
       "item": "`minecraft:hoglin_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
-    },
-    {
-      "item": "`minecraft:honey_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:honey_bottle`",
@@ -1498,10 +1486,6 @@
     {
       "item": "`minecraft:husk_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
-    },
-    {
-      "item": "`minecraft:ice`",
-      "tags": ["`minecraft:sulfur_cube_archetype_fast_sliding`"]
     },
     {
       "item": "`minecraft:iron_axe`",
@@ -1641,7 +1625,7 @@
     },
     {
       "item": "`minecraft:lapis_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:lapis_lazuli`",
@@ -1649,7 +1633,7 @@
     },
     {
       "item": "`minecraft:lapis_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:leather_boots`",
@@ -1677,7 +1661,7 @@
     },
     {
       "item": "`minecraft:light_blue_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:light_blue_concrete_powder`",
@@ -1685,7 +1669,7 @@
     },
     {
       "item": "`minecraft:light_blue_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:light_blue_harness`",
@@ -1693,7 +1677,7 @@
     },
     {
       "item": "`minecraft:light_blue_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:light_blue_wool`",
@@ -1709,7 +1693,7 @@
     },
     {
       "item": "`minecraft:light_gray_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:light_gray_concrete_powder`",
@@ -1721,7 +1705,7 @@
     },
     {
       "item": "`minecraft:light_gray_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:light_gray_wool`",
@@ -1737,7 +1721,7 @@
     },
     {
       "item": "`minecraft:lime_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:lime_concrete_powder`",
@@ -1745,7 +1729,7 @@
     },
     {
       "item": "`minecraft:lime_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:lime_harness`",
@@ -1753,7 +1737,7 @@
     },
     {
       "item": "`minecraft:lime_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:lime_wool`",
@@ -1762,6 +1746,10 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:lit_pumpkin`",
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:llama_spawn_egg`",
@@ -1777,7 +1765,7 @@
     },
     {
       "item": "`minecraft:magenta_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:magenta_concrete_powder`",
@@ -1785,7 +1773,7 @@
     },
     {
       "item": "`minecraft:magenta_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:magenta_harness`",
@@ -1793,7 +1781,7 @@
     },
     {
       "item": "`minecraft:magenta_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:magenta_wool`",
@@ -1805,7 +1793,7 @@
     },
     {
       "item": "`minecraft:magma`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_hot`"]
     },
     {
       "item": "`minecraft:magma_cube_spawn_egg`",
@@ -1883,11 +1871,11 @@
     },
     {
       "item": "`minecraft:mossy_cobblestone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:mossy_stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:mourner_pottery_sherd`",
@@ -1899,7 +1887,7 @@
     },
     {
       "item": "`minecraft:mud_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:muddy_mangrove_roots`",
@@ -2015,7 +2003,7 @@
     },
     {
       "item": "`minecraft:nether_brick`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:nether_gold_ore`",
@@ -2107,7 +2095,7 @@
     },
     {
       "item": "`minecraft:netherrack`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:oak_boat`",
@@ -2150,8 +2138,12 @@
       ]
     },
     {
+      "item": "`minecraft:observer`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
+    },
+    {
       "item": "`minecraft:obsidian`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:ocelot_spawn_egg`",
@@ -2167,7 +2159,7 @@
     },
     {
       "item": "`minecraft:orange_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:orange_concrete_powder`",
@@ -2175,7 +2167,7 @@
     },
     {
       "item": "`minecraft:orange_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:orange_harness`",
@@ -2183,7 +2175,7 @@
     },
     {
       "item": "`minecraft:orange_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:orange_wool`",
@@ -2315,7 +2307,7 @@
     },
     {
       "item": "`minecraft:pink_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:pink_concrete_powder`",
@@ -2323,7 +2315,7 @@
     },
     {
       "item": "`minecraft:pink_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:pink_harness`",
@@ -2331,7 +2323,7 @@
     },
     {
       "item": "`minecraft:pink_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:pink_wool`",
@@ -2359,43 +2351,43 @@
     },
     {
       "item": "`minecraft:polished_andesite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_basalt`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_blackstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_blackstone_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_cinnabar`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_deepslate`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_diorite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_granite`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_sulfur`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:polished_tuff`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:porkchop`",
@@ -2407,11 +2399,11 @@
     },
     {
       "item": "`minecraft:prismarine`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:prismarine_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:prize_pottery_sherd`",
@@ -2439,7 +2431,7 @@
     },
     {
       "item": "`minecraft:purple_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:purple_concrete_powder`",
@@ -2447,7 +2439,7 @@
     },
     {
       "item": "`minecraft:purple_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:purple_harness`",
@@ -2455,7 +2447,7 @@
     },
     {
       "item": "`minecraft:purple_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:purple_wool`",
@@ -2467,11 +2459,11 @@
     },
     {
       "item": "`minecraft:purpur_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:purpur_pillar`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:quartz`",
@@ -2479,19 +2471,19 @@
     },
     {
       "item": "`minecraft:quartz_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:quartz_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:quartz_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:quartz_pillar`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:rabbit`",
@@ -2531,7 +2523,7 @@
     },
     {
       "item": "`minecraft:red_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:red_concrete_powder`",
@@ -2539,7 +2531,7 @@
     },
     {
       "item": "`minecraft:red_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:red_harness`",
@@ -2551,19 +2543,19 @@
     },
     {
       "item": "`minecraft:red_nether_brick`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:red_sand`",
-      "tags": ["`minecraft:sand`", "`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sand`"]
     },
     {
       "item": "`minecraft:red_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:red_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:red_wool`",
@@ -2578,20 +2570,16 @@
       "tags": ["`minecraft:trim_materials`"]
     },
     {
-      "item": "`minecraft:redstone_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "item": "`minecraft:redstone_lamp`",
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:redstone_ore`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
-    },
-    {
-      "item": "`minecraft:reinforced_deepslate`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:resin_block`",
-      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:resin_brick`",
@@ -2599,7 +2587,7 @@
     },
     {
       "item": "`minecraft:resin_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_bouncy`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
     },
     {
       "item": "`minecraft:rib_armor_trim_smithing_template`",
@@ -2619,23 +2607,19 @@
     },
     {
       "item": "`minecraft:sand`",
-      "tags": ["`minecraft:sand`", "`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sand`"]
     },
     {
       "item": "`minecraft:sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:scrape_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
-      "item": "`minecraft:sculk`",
-      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
-    },
-    {
       "item": "`minecraft:sea_lantern`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:sentry_armor_trim_smithing_template`",
@@ -2675,7 +2659,7 @@
     },
     {
       "item": "`minecraft:silver_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:silverfish_spawn_egg`",
@@ -2694,32 +2678,28 @@
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
     {
-      "item": "`minecraft:slime`",
-      "tags": ["`minecraft:sulfur_cube_archetype_fast_flat`"]
-    },
-    {
       "item": "`minecraft:slime_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
     },
     {
       "item": "`minecraft:smooth_basalt`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:smooth_quartz`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:smooth_red_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:smooth_sandstone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:smooth_stone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:sniffer_spawn_egg`",
@@ -2821,7 +2801,7 @@
     },
     {
       "item": "`minecraft:stone`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:stone_axe`",
@@ -2834,7 +2814,7 @@
     },
     {
       "item": "`minecraft:stone_bricks`",
-      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:stone_bricks`", "`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:stone_hoe`",
@@ -3063,11 +3043,11 @@
     },
     {
       "item": "`minecraft:sulfur`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:sulfur_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:sulfur_cube_spawn_egg`",
@@ -3119,11 +3099,11 @@
     },
     {
       "item": "`minecraft:tuff`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:tuff_bricks`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:turtle_helmet`",
@@ -3183,7 +3163,7 @@
     },
     {
       "item": "`minecraft:warped_nylium`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:warped_planks`",
@@ -3323,7 +3303,7 @@
     },
     {
       "item": "`minecraft:white_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:white_concrete_powder`",
@@ -3331,7 +3311,7 @@
     },
     {
       "item": "`minecraft:white_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:white_harness`",
@@ -3339,7 +3319,7 @@
     },
     {
       "item": "`minecraft:white_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:white_wool`",
@@ -3427,7 +3407,7 @@
     },
     {
       "item": "`minecraft:yellow_concrete`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:yellow_concrete_powder`",
@@ -3435,7 +3415,7 @@
     },
     {
       "item": "`minecraft:yellow_glazed_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:yellow_harness`",
@@ -3443,7 +3423,7 @@
     },
     {
       "item": "`minecraft:yellow_terracotta`",
-      "tags": ["`minecraft:sulfur_cube_archetype_regular`"]
+      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
     {
       "item": "`minecraft:yellow_wool`",
