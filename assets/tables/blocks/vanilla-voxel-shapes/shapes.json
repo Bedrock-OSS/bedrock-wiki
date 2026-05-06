@@ -209,6 +209,22 @@
       "identifier": "`minecraft:lectern`"
     },
     {
+      "shape": "![](piglin_wall_head_facing_east.png)",
+      "identifier": "`minecraft:piglin_wall_head_facing_east`"
+    },
+    {
+      "shape": "![](piglin_wall_head_facing_north.png)",
+      "identifier": "`minecraft:piglin_wall_head_facing_north`"
+    },
+    {
+      "shape": "![](piglin_wall_head_facing_south.png)",
+      "identifier": "`minecraft:piglin_wall_head_facing_south`"
+    },
+    {
+      "shape": "![](piglin_wall_head_facing_west.png)",
+      "identifier": "`minecraft:piglin_wall_head_facing_west`"
+    },
+    {
       "shape": "![](shelf_facing_east.png)",
       "identifier": "`minecraft:shelf_facing_east`"
     },
@@ -237,6 +253,22 @@
         "All blocks using the `minecraft:geometry.full_block` model are forced to use this voxel shape for culling.",
         "**Hardcoded** — this voxel shape is not data-driven so cannot be found as a JSON file in the vanilla behavior pack."
       ]
+    },
+    {
+      "shape": "![](wall_head_facing_east.png)",
+      "identifier": "`minecraft:wall_head_facing_east`"
+    },
+    {
+      "shape": "![](wall_head_facing_north.png)",
+      "identifier": "`minecraft:wall_head_facing_north`"
+    },
+    {
+      "shape": "![](wall_head_facing_south.png)",
+      "identifier": "`minecraft:wall_head_facing_south`"
+    },
+    {
+      "shape": "![](wall_head_facing_west.png)",
+      "identifier": "`minecraft:wall_head_facing_west`"
     }
   ]
 }
