@@ -398,7 +398,7 @@ Nothing else, not even buried treasure (this one looks like it’ll work — na
 
 `destination`:
 
-Works for any /locate location (see old recipe notes for caveats there; this is for container loot tables).
+Works for any /locate structure location (see old recipe notes for caveats there; this is for container loot tables).
 
 Only works if in the appropriate dimension.
 
@@ -432,7 +432,7 @@ Keep in mind how **only 2 locations** worked from traders.
 }
 ```
 
-Sets type of a `minecraft:banner` or the banner on a `minecraft:shield` (only usable on these).
+Sets type of a `minecraft:banner`, `minecraft:wall_banner`, `minecraft:standing_banner`, or the banner on a `minecraft:shield` (only usable on these).
 
 `type`: Can only be `0` or `1`.
 
@@ -440,7 +440,85 @@ Sets type of a `minecraft:banner` or the banner on a `minecraft:shield` (only us
 - `1` is an Ominous Banner.
 
 `base_color`: Can be set for banners of type 0 and sets the color of the banner.
-`patterns`: Is an array of banner patterns and colors to be applied to the banner. Up to 6 patterns can be applied.
+`patterns`: Is an array of banner patterns and colors to be applied to the banner. Up to 6 patterns can be applied. The patterns are applied from bottom to top in order from the top of the array to the bottom of the array. The pattern listed first in the array is the bottom pattern. The color field can be set to a string or a number.
+
+**Colors**
+- `black` or `0` for black.
+- `red` or `1` for red.
+- `green` or `2` for green.
+- `brown` or `3` for brown.
+- `blue` or `4` for blue.
+- `purple` or `5` for purple.
+- `cyan` or `6` for cyan.
+- `silver` or `7` for light gray.
+- `gray` or `8` for gray.
+- `pink` or `9` for pink.
+- `lime` or `10` for lime.
+- `yellow` or `11` for yellow.
+- `light_blue` or `12` for light blue.
+- `magenta` or `13` for magenta.
+- `orange` or `14` for orange.
+- `white` or `15` for white.
+
+**Patterns**
+- `base` is the base banner pattern.
+- `stripe_bottom` is the base fess banner pattern.
+- `stripe_top` is the chief fess banner pattern.
+- `stripe_left` is the pale dexter banner pattern.
+- `stripe_right` is the pale sinister banner pattern.
+- `stripe_center` is the pale banner pattern.
+- `stripe_middle` is the fess banner pattern.
+- `stripe_downright` is the bend banner pattern.
+- `stripe_downleft` is the bend sinister banner pattern.
+- `small_stripes` is the paly banner pattern.
+- `straight_cross` is the cross banner pattern.
+- `diagonal_left` is the per bend sinister banner pattern.
+- `diagonal_right` is the per bend banner pattern.
+- `diagonal_up_left` is the per bend inverted banner pattern.
+- `diagonal_up_right` is the per bend sinister inverted banner pattern.
+- `half_vertical` is the per pale banner pattern.
+- `half_vertical_right` is the per pale inverted banner pattern.
+- `half_horizontal` is the per fess banner pattern.
+- `half_horizontal_bottom` is the per fess inverted banner pattern.
+- `square_bottom_left` is the base dexter canton banner pattern.
+- `square_bottom_right` is the base sinister canton banner pattern.
+- `square_top_left` is the chief dexter canton banner pattern.
+- `square_top_right` is the chief sinister canton banner pattern.
+- `triangle_bottom` is the cheveron banner pattern.
+- `triangle_top` is the inverted cheveron banner pattern.
+- `triangles_bottom` is the base indented banner pattern.
+- `triangles_top` is the chief indented banner pattern.
+- `circle` is the roundel banner pattern.
+- `rhombus` is the lozenge banner pattern.
+- `curly_border` is the bordure indented banner pattern.
+- `gradient` is the gradient banner pattern.
+- `gradient_up` is the base gradient banner pattern.
+- `border` is the bordure banner pattern.
+- `creeper` is the creeper charge banner pattern.
+- `bricks` is the field masoned banner pattern.
+- `flower` is the flower charge banner pattern.
+- `globe` is the globe banner pattern.
+- `mojang` is the thing banner pattern.
+- `piglin` is the snout banner pattern.
+- `skull` is the skull charge banner pattern.
+- `guster` is the guster banner pattern.
+- `flow` is the flow banner pattern.
+
+<CodeHeader>Pattern Example</CodeHeader>
+
+```json
+{
+    "function": "set_banner_details",
+    "type": 0,
+    "base_color": "black",
+    "patterns": [
+        {
+            "color": "red", //can also be set to 1 for red
+            "pattern": "flower"
+        }
+    ]
+}
+```
 
 ### Random Dyeing
 
