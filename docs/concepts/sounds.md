@@ -14,6 +14,7 @@ mentions:
     - TheItsNameless
     - ThomasOrs
     - QuazChick
+    - Supernova3695
 ---
 
 In bedrock, we can add custom sounds without overwriting any vanilla sounds. This is done by adding files to the resource pack.
@@ -161,6 +162,10 @@ Set to `true` by default.
 #### weight
 
 If there is more than one sound in the list, the sound to be played is chosen randomly. `"weight"` (integer value like 5) will give the relative chance that this sound is chosen from the list. For example, if there are two sounds in the list, one with `"weight": 10` and the other with `"weight": 2`, the first will be played approximately 5 times more likely than the second (accurately: `10 / (10 + 2) = 83.3%` chance vs. `2 / (10 + 2) = 16.7%` chance) . Set to `1` by default.
+
+#### subtitle
+
+A localization key to display in the Closed Captions when the sound is played. `"subtitle"` is the field that specifies it. 
 
 ### Example
 
