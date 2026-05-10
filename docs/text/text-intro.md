@@ -16,6 +16,7 @@ mentions:
     - SmokeyStack
     - Sprunkles
     - QuazChick
+    - theaddonn
 ---
 
 Minecraft is a game with fully localized text in languages all over the world. To achieve this, Minecraft employs a system where internal **translation keys** are assigned values on a per-language basis. Minecraft will generate translation keys for custom entities, items, and blocks, and it is up to us to assign them a localized name in our resource pack.
@@ -33,7 +34,7 @@ Language files typically go within the resource pack in the "texts" folder as fi
 ]"
 ></FolderView>
 
-Minecraft supports 29 languages currently, as described in [§ Vanilla Languages](/text/text-intro#vanilla-languages).
+Minecraft supports 29 languages currently, as described in [§ Vanilla Languages](/text/text-intro#vanilla-languages).
 
 ### Format
 
@@ -61,6 +62,34 @@ A translation can contain substitutions in place of text. Substitutions can eith
 commands.op.success=Opped: %s
 immersive_reader.book_page_header=Page %1 of %2
 ```
+
+#### Input Key Substitutions
+
+Translation strings can also reference the player's currently bound key for a specific input action using the `:_input_key.XXX:` syntax, where `XXX` is the name of the action. When the game displays the string, the placeholder is replaced with the key the player currently has bound to that action, so the text always reflects the player's actual control scheme rather than a hard-coded key. This is especially useful for tutorial messages, hints, and tips, since it works correctly across keyboard, controller, and touch devices.
+
+```lang
+tip.how_to_jump=Press :_input_key.jump: to jump!
+tip.open_inventory=Open your inventory with :_input_key.inventory:.
+```
+
+The following input keys are available:
+
+-   `:_input_key.attack:`
+-   `:_input_key.back:`
+-   `:_input_key.chat:`
+-   `:_input_key.codeBuilder:`
+-   `:_input_key.cycleItemLeft:`
+-   `:_input_key.cycleItemRight:`
+-   `:_input_key.drop:`
+-   `:_input_key.emote:`
+-   `:_input_key.forward:`
+-   `:_input_key.inventory:`
+-   `:_input_key.jump:`
+-   `:_input_key.left:`
+-   `:_input_key.right:`
+-   `:_input_key.sneak:`
+-   `:_input_key.sprint:`
+-   `:_input_key.use:`
 
 ### Usage
 
