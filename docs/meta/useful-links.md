@@ -153,6 +153,7 @@ These packs are published by the open-source community.
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
 -   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
+-   [RFB Store](https://store.rarefrostbites.com)
 -   [CubitosMC](https://www.cubitosmc.com/)
 -   [MCDLHub](https://mcdlhub.com/)
 -   [Minecraft Marketplace Partners](https://bedrockexplorer.com/partners)
