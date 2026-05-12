@@ -26,6 +26,7 @@ mentions:
     - MinecraftBedrockArabic
     - smell-of-curry
     - causal-guide
+    - 8Crafter
 description: Documentation for JSON UI.
 ---
 
@@ -2043,6 +2044,15 @@ Some of them only work in specific screens.
 | Enable Open Chat Message                | `enable_open_chat_message`            | `#enable_open_chat_message`            | `#enable_open_chat_message_enabled`            |
 | Camera Shake                            | `camera_shake`                        | `#camera_shake`                        | `#camera_shake_enabled`                        |
 | Languages (Collection)                  | `languages`                           | `#language_initial_selected`           |                                                |
+
+### Text Boxes
+
+| Name     | Text Box Name              | State Binding Name          | Enabled Binding Name                   | Visible Binding Name                |
+| -------- | -------------------------- | --------------------------- | -------------------------------------- | ----------------------------------- |
+| Name     | `player_name_text_box`     | `#player_name`              | `#player_name_enabled`                 |                                     |
+| Passcode | `script_debugger_passcode` | `#script_debugger_passcode` |                                        | `#script_debugger_passcode_visible` |
+| Host     | `script_debugger_host`     | `#script_debugger_host`     | `#script_debugger_attach_mode_connect` |                                     |
+| Port     | `script_debugger_port`     | `#script_debugger_port`     |                                        |                                     |
 
 ## Item ID Aux (`#item_id_aux`)
 
