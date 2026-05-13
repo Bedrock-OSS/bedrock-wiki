@@ -14,7 +14,7 @@ mentions:
 ---
 
 ::: warning
-The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.14
+The Script API is currently in active development, and breaking changes are frequent. This page assumes the format of Minecraft 1.26.20
 :::
 
 The Script API, with most core features being implemented in the `@minecraft/server` module, contains many methods to interact with Minecraft world, including entities, blocks, dimensions, and more. This article contains a basic introduction to some of the core API mechanics. For more detailed information, please visit the [Microsoft Learn documentation pages](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/minecraft-server).
@@ -30,7 +30,7 @@ You will need to add the script module as a dependency in your `manifest.json`.
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "2.6.0"
+            "version": "2.7.0"
         }
     ]
 }
@@ -406,14 +406,6 @@ world.beforeEvents.entityHurt.subscribe((event) => {
 ### Avoid Running Commands in Script
 
 Normally we recommend that you avoid using commands in script, because it's slow to run a command from the Script API, and server performance starts to slow down as more commands are executed over time. The following command features, however, are not implemented in the scripting API, which leaves us with no choice but to use `runCommand` instead.
-
-**Ender chest**
-
-:::info
-At time of writing, the [`EntityEnderInventoryComponent`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entityenderinventorycomponent) is currently in preview, and allows you to view and modify a player's ender chest.
-:::
-
-The Script API does not provide any methods to get/set information of player's ender chest. Commands such as `/replaceitem`, `/clear`, `@s[hasitem=]` may be used as a workaround.
 
 **kick**
 
