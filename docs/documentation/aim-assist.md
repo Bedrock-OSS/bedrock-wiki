@@ -20,8 +20,8 @@ The categories file defines the priority weights for blocks and entities. Higher
             {
                 "name": "yourpack:category_name",
                 "priorities": {
-                    "block_default": 25,
-                    "entity_default": 80,
+                    "block_default": 30,
+                    "entity_default": 30,
                     "blocks": {},
                     "entities": {
                         "minecraft:end_crystal": 30,
