@@ -134,3 +134,6 @@ You can directly active your Aim Assist using your Camera Preset
 }
 ```
 With this you'll automatically active Aim Assist after switch to your Custom Camera Preset
+:::warning
+aim assist doesn't work on first person camera
+:::
