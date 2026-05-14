@@ -78,6 +78,8 @@ Two types of pools are available: general-purpose [weighted random pools](#weigh
 
 A traditional weighted random pool selects items based on relative weight, choosing a number of yields based on a configured roll count.
 
+A weight is were a chances of an iten dropping than other items
+
 <CodeHeader>artifacts.json/pools/0</CodeHeader>
 
 ```json
