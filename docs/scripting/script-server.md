@@ -409,7 +409,9 @@ Normally we recommend that you avoid using commands in script, because it's slow
 
 **kick**
 
--   Script API cannot kick players.
+To kick players, the [`@minecraft/server-admin`](https://learn.microsoft.com/minecraft/creator/scriptapi/mojang-minecraft-server-admin/mojang-minecraft-server-admin) module must be used. This module, however, is only available on Bedrock Dedicated Servers.
+
+-   Outside of Bedrock Dedicated Servers, the `/kick` command must be used
 
 **setblock**
 
