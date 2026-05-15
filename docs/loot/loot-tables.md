@@ -106,7 +106,6 @@ A traditional weighted random pool selects items based on relative weight, choos
     ]
 }
 ```
-**A Weighted Random Pool** selects an entry from a collection where each item is paired with an integer weight. The selection probability for any given entry is proportional to its weight relative to the total sum of all weights in the pool.
 
 ##### Rolls
 
