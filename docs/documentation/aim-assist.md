@@ -1,3 +1,11 @@
+---
+title: Aim Assist Documentation
+category: Documentation
+description: Documentation for Aim Assist
+mentions:
+ - Water(cleanpaper60581)
+---
+
 # Aim Assist
 
 Aim assist in Minecraft Bedrock Edition can be customized through behavior packs using two separate JSON files: an **aim assist preset** and an **aim assist categories** file. These work together to control what gets targeted and how.
