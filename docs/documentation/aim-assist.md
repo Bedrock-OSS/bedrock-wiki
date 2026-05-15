@@ -1,12 +1,10 @@
 ---
 title: Aim Assist
-category: documentation
+category: Documentation
 description: Documentation for Aim Assist
 mentions:
- - Water(cleanpaper60581)
+ - gUHFlGfg
 ---
-
-# Aim Assist
 
 Aim assist in Minecraft Bedrock Edition can be customized through behavior packs using two separate JSON files: an **aim assist preset** and an **aim assist categories** file. These work together to control what gets targeted and how.
 
@@ -18,7 +16,9 @@ Requires format version `1.21.50` or higher.
 
 The categories file defines the priority weights for blocks and entities. Higher weight = higher priority for the aim assist.
 
-**File location:** `behavior_pack/aim_assist/categories/your_category.json`
+<FolderView :paths="[
+ 'com.mojang/behavior_pack/aim_assist/categories/your_category.json'
+]"/>
 
 ```json
 {
@@ -44,12 +44,12 @@ The categories file defines the priority weights for blocks and entities. Higher
 
 ### Priority Fields
 
-| Field | Description |
-|---|---|
-| `block_default` | Weight applied to all blocks by default. can range from [0,100] |
-| `entity_default` | Weight applied to all entities by default. can range from [0, 100] |
-| `blocks` | Override weight for specific blocks |
-| `entities` | Override weight for specific entities |
+| Field            | Description                                                         |
+|------------------|---------------------------------------------------------------------|
+| `block_default`  | Weight applied to all blocks by default. can range from [0,100]     |
+| `entity_default` | Weight applied to all entities by default. can range from [0, 100]  |
+| `blocks`         | Override weight for specific blocks                                 |
+| `entities`       | Override weight for specific entities                               |
 
 Specific entries inside `blocks` or `entities` override their respective default values. Setting a specific entity to a lower value than `entity_default` makes it less prioritized than other entities.
 
@@ -75,7 +75,9 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
 
-**File location:** `behavior_pack/aim_assist/presets/your_preset.json`
+<FolderView :paths="[
+ 'com.mojang/behavior_pack/aim_assist/presets/your_preset.json'
+]"/>
 
 ```json
 {
@@ -83,7 +85,7 @@ The preset file ties everything together — it controls which category is used 
     "minecraft:aim_assist_preset": {
         "identifier": "yourpack:your_preset",
         "item_settings": {
-            "minecraft:bucket": "minecraft:bucket"
+            "minecraft:bucket": "yourpack:category_name"
         },
         "default_item_settings": "minecraft:default",
         "hand_settings": "minecraft:empty_hand",
@@ -101,13 +103,13 @@ The preset file ties everything together — it controls which category is used 
 
 ### Preset Fields
 
-| Field | Description |
-|---|---|
-| `identifier` | Unique identifier for this preset |
-| `item_settings` | Maps specific items to a specific aim assist category |
-| `default_item_settings` | The aim assist category used by default when holding any item |
-| `hand_settings` | The aim assist category used when the hand is empty |
-| `exclusion_list` | Items or blocks excluded from aim assist targeting |
+| Field                   | Description |
+|-------------------------|--------------------------------------------------------------------------|
+| `identifier`            | Unique identifier for this preset                                        |
+| `item_settings`         | Maps specific items to a specific aim assist category                    |
+| `default_item_settings` | The aim assist category used by default when holding any item            |
+| `hand_settings`         | The aim assist category used when the hand is empty                      |
+| `exclusion_list`        | Items or blocks excluded from aim assist targeting                       |
 | `liquid_targeting_list` | Items that enable liquid block targeting when held (e.g. buckets, boats) |
 
 ---
@@ -127,7 +129,7 @@ or in commands:
 This lets you use script logic to control **when** and **on whom** the aim assist is active, while the JSON files handle what gets prioritized.
 
 ### Adding Aim Assist in your Camera Preset
-You can directly active your Aim Assist using your Camera Preset
+You can directly activate your Aim Assist using your Camera Preset:
 ```json
 {
 	"format_version": "1.20.10",
@@ -141,7 +143,7 @@ You can directly active your Aim Assist using your Camera Preset
 	}
 }
 ```
-With this you'll automatically active Aim Assist after switch to your Custom Camera Preset
+With this you'll automatically activate Aim Assist after switching to your Custom Camera Preset.
 :::warning
-aim assist doesn't work on first person camera
+Aim assist doesn't work on first person camera.
 :::
