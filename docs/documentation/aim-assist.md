@@ -132,15 +132,15 @@ This lets you use script logic to control **when** and **on whom** the aim assis
 You can directly activate your Aim Assist using your Camera Preset:
 ```json
 {
-	"format_version": "1.20.10",
-	"minecraft:camera_preset": {
-		"identifier": "yourpack:your_camera_preset",
-		"inherit_from": "minecraft:free",
-		"player_effects": true,
-		"aim_assist": {
-			"preset": "yourpack:your_preset"
-		}
-	}
+    "format_version": "1.20.10",
+    "minecraft:camera_preset": {
+        "identifier": "yourpack:your_camera_preset",
+        "inherit_from": "minecraft:free",
+        "player_effects": true,
+        "aim_assist": {
+            "preset": "yourpack:your_preset"
+        }
+    }
 }
 ```
 With this you'll automatically activate Aim Assist after switching to your Custom Camera Preset.
