@@ -1,6 +1,6 @@
 ---
-title: Aim Assist Documentation
-category: Documentation
+title: Aim Assist
+category: documentation
 description: Documentation for Aim Assist
 mentions:
  - Water(cleanpaper60581)
