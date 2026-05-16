@@ -70,8 +70,6 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 }
 ```
 
----
-
 ## Aim Assist Preset
 
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
@@ -127,7 +125,10 @@ or in commands:
 
 This lets you use script logic to control **when** and **on whom** the Aim Assist is active, while the JSON files handle what gets prioritized.
 
+---
+
 ### Adding Aim Assist in your Camera Preset
+
 You can directly activate your Aim Assist using your Camera Preset:
 ```json
 {
