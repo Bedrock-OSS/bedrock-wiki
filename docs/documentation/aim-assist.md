@@ -21,7 +21,6 @@ The categories file defines the priority weights for blocks and entities. Higher
 BP/aim_assist/categories/your_category.json
 </CodeHeader>
 
-
 ```json
 {
     "format_version": "1.21.50",
@@ -61,8 +60,8 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 ```json
 "priorities": {
-    "block_default": 25,
-    "entity_default": 80,
+    "block_default": 1, //only chooses blocks when it couldn't find the entity
+    "entity_default": 100,
     "blocks": {},
     "entities": {
         "minecraft:end_crystal": 30,
@@ -78,8 +77,6 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
 
 <CodeHeader>BP/aim_assist/presets/your_preset.json</CodeHeader>
-
-
 
 ```json
 {
