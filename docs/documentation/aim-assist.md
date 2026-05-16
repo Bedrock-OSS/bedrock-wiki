@@ -54,7 +54,7 @@ BP/aim_assist/categories/your_category.json
 
 Specific entries inside `blocks` or `entities` override their respective default values. Setting a specific entity to a lower value than `entity_default` makes it less prioritized than other entities.
 
-### Example: PVE Aim Assist
+### Example PVE Aim Assist
 
 To make the aim assist heavily favor entities over blocks (useful for combat):
 
@@ -115,7 +115,7 @@ The preset file ties everything together — it controls which category is used 
 
 ## Activating via Script API or Commands
 
-You can activate a custom aim assist preset on a player using the `/aimassist` command through scripts:
+You can activate a custom Aim Assist preset on a player using the `/aimassist` command through scripts:
 
 ```js
 player.runCommand("aimassist set @s 60 10 16 angle yourpack:your_preset");
@@ -125,7 +125,7 @@ or in commands:
 /aimassist set @s 60 10 16 angle yourpack:your_preset
 ```
 
-This lets you use script logic to control **when** and **on whom** the aim assist is active, while the JSON files handle what gets prioritized.
+This lets you use script logic to control **when** and **on whom** the Aim Assist is active, while the JSON files handle what gets prioritized.
 
 ### Adding Aim Assist in your Camera Preset
 You can directly activate your Aim Assist using your Camera Preset:
