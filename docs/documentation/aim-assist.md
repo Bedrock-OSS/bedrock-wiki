@@ -7,7 +7,9 @@ mentions:
 
 Aim assist in Minecraft Bedrock Edition can be customized through behavior packs using two separate JSON files: an **aim assist preset** and an **aim assist categories** file. These work together to control what gets targeted and how.
 
-Requires format version `1.21.50` or higher.
+:::warning
+Requires format version `1.21.50` or higher. also aim assist doesn't support first person camera
+:::
 
 ---
 
@@ -15,11 +17,9 @@ Requires format version `1.21.50` or higher.
 
 The categories file defines the priority weights for blocks and entities. Higher weight = higher priority for the aim assist.
 
-```json
-{
-"filePath": "./com.mojang/behavior_pack/BP/aim_assist/categories/your_category.json"
-}
-```
+<CodeHeader>
+BP/aim_assist/categories/your_category.json
+</CodeHeader>
 
 
 ```json
@@ -77,11 +77,8 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
 
-```json
-{
-"filePath": "./com.mojang/behavior_pack/BP/aim_assist/presets/your_preset.json"
-}
-```
+<CodeHeader>BP/aim_assist/presets/your_preset.json</CodeHeader>
+
 
 
 ```json
@@ -149,6 +146,3 @@ You can directly activate your Aim Assist using your Camera Preset:
 }
 ```
 With this you'll automatically activate Aim Assist after switching to your Custom Camera Preset.
-:::warning
-Aim assist doesn't work on first person camera.
-:::
