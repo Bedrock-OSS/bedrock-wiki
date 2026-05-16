@@ -1,6 +1,5 @@
 ---
 title: Aim Assist
-category: Documentation
 description: Documentation for Aim Assist
 mentions:
  - gUHFlGfg
@@ -16,9 +15,12 @@ Requires format version `1.21.50` or higher.
 
 The categories file defines the priority weights for blocks and entities. Higher weight = higher priority for the aim assist.
 
-<FolderView :paths="[
- 'com.mojang/behavior_pack/aim_assist/categories/your_category.json'
-]"/>
+```json
+{
+"filePath": "./com.mojang/behavior_pack/aim_assist/categories/your_category.json"
+}
+```
+
 
 ```json
 {
@@ -75,9 +77,12 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
 
-<FolderView :paths="[
- 'com.mojang/behavior_pack/aim_assist/presets/your_preset.json'
-]"/>
+```json
+{
+"filePath": "./com.mojang/behavior_pack/aim_assist/presets/your_preset.json"
+}
+```
+
 
 ```json
 {
