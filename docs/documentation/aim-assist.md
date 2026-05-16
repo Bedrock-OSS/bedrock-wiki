@@ -17,7 +17,7 @@ The categories file defines the priority weights for blocks and entities. Higher
 
 ```json
 {
-"filePath": "./com.mojang/behavior_pack/yourBehaviorPack/aim_assist/categories/your_category.json"
+"filePath": "./com.mojang/behavior_pack/BP/aim_assist/categories/your_category.json"
 }
 ```
 
@@ -79,7 +79,7 @@ The preset file ties everything together — it controls which category is used 
 
 ```json
 {
-"filePath": "./com.mojang/behavior_pack/yourBehaviorPack/aim_assist/presets/your_preset.json"
+"filePath": "./com.mojang/behavior_pack/BP/aim_assist/presets/your_preset.json"
 }
 ```
 
