@@ -2,7 +2,7 @@
 title: Script Core Features
 description: Introduction to some of the core API mechanics.
 category: Tutorials
-nav_order: 4
+nav_order: 1
 mentions:
     - JaylyDev
     - SmokeyStack
