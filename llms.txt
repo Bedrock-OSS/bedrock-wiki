@@ -369,10 +369,10 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 ### Tutorials
 
+- [Script Core Features](/scripting/script-server)
 - [Block Placement Prevention](/scripting/placement-prevention)
 - [Custom Commands](/scripting/custom-commands)
 - [GameTests](/scripting/game-tests)
-- [Script Core Features](/scripting/script-server)
 - [Script Privileges](/scripting/privileges)
 - [Script Requests API](/scripting/script-net)
 - [Server Forms](/scripting/server-forms)
