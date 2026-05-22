@@ -25,15 +25,40 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:multi_block`
     -   Now also prevents the `minecraft:precipitation_interactions` component from being defined within the `permutations` array.
+-   Updated `minecraft:placement_direction`
+    -   Updated `enabled_states` parameter
+        -   Added `"minecraft:sixteen_way_rotation"`{lang=json} as a valid value.
+        -   This state is not supported by the `y_rotation_offset` parameter.
 
 ### Components
 
 -   The `minecraft:geometry` and `minecraft:material_instances` components can once again be defined individually within `permutations` entries.
     -   This change resolves [MCPE-238086](https://bugs.mojang.com/browse/MCPE-238086).
+-   Updated `minecraft:flammable`
+    -   Added `lava_flammable` parameter which determines when fire can spread to the block from lava.
+    -   Can be set to `"always"`{lang=json} or `"never"`{lang=json} (default).
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 
+-   Added `minecraft:block_entity`
+    -   Associates a block entity with the block which is used to store additional data beyond the block's [permutation](/blocks/block-permutations) and [queued ticks](/blocks/block-components#tick).
+    -   Contains `dynamic_properties` which determines whether dynamic properties may be added to the block using scripts.
+-   Added `minecraft:instrument_sound`
+    -   Determines the sound played when a Note Block is placed above or below the block.
+    -   Contains `"up"`{lang=json} which determines the instrument heard when the Note Block is placed above the block.
+        -   By default, this is set to `"note.harp"`{lang=json}.
+    -   Contains `"down"`{lang=json} which determines the instrument heard when the Note Block is placed below the block.
+        -   This sound overrides the sound of blocks placed below the Note Block.
+        -   By default, this is set to `"note.none"`{lang=json}.
+    -   Only the following vanilla instrument sounds are allowed: `"note.banjo"`{lang=json}, `"note.bassattack"`{lang=json}, `"note.bd"`{lang=json}, `"note.bell"`{lang=json}, `"note.bit"`{lang=json}, `"note.chime"`{lang=json}, `"note.cow_bell"`{lang=json}, `"note.creeper"`{lang=json}, `"note.didgeridoo"`{lang=json}, `"note.enderdragon"`{lang=json}, `"note.flute"`{lang=json}, `"note.guitar"`{lang=json}, `"note.harp"`{lang=json}, `"note.hat"`{lang=json}, `"note.iron_xylophone"`{lang=json}, `"note.none"`{lang=json}, `"note.piglin"`{lang=json}, `"note.pling"`{lang=json}, `"note.skeleton"`{lang=json}, `"note.snare"`{lang=json}, `"note.trumpet"`{lang=json}, `"note.trumpet_exposed"`{lang=json}, `"note.trumpet_oxidized"`{lang=json}, `"note.trumpet_weathered"`{lang=json}, `"note.witherskeleton"`{lang=json}, `"note.xylophone"`{lang=json} and `"note.zombie"`{lang=json}.
+-   Updated `minecraft:geometry`
+    -   Added `n_way_visual_rotation` parameter which can be used to rotate the geometry based on block states.
+        -   It is defined as an object where keys are axes (`x`, `y` or `z`) and values are state names (e.g. `"minecraft:sixteen_way_rotation"`{lang=json}).
+        -   This parameter may only be used from within the root `components` object, not within `permutations` entries.
+        -   The interval between the rotation of each state value is 360° divided by the number of valid values the referenced state has.
+            -   For example, a `y` parameter referencing a state with 4 values would rotate the geometry in multiples of 90°, with each rotation facing a cardinal direction.
+            -   The default state value is always associated with a rotation of 0°.
 -   Updated `minecraft:precipitation_interactions`
     -   Updated `precipitation_behavior` parameter
         -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`{lang=json}
