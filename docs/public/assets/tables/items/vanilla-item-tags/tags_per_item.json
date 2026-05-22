@@ -1922,6 +1922,10 @@
       "tags": ["`minecraft:music_disc`"]
     },
     {
+      "item": "`minecraft:music_disc_bounce`",
+      "tags": ["`minecraft:music_disc`"]
+    },
+    {
       "item": "`minecraft:music_disc_cat`",
       "tags": ["`minecraft:music_disc`"]
     },
