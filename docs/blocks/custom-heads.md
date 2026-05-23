@@ -137,25 +137,13 @@ They can be attached to the sides of adjacent blocks, or placed on the ground fa
 To support this, we'll need to add two direction states to our block:
 
 -   For block face attachment, we will use the [placement position](/blocks/block-traits#placement-position) trait to enable the `minecraft:block_face` state.
+
+    <ExampleFile path="BP/blocks/custom_head.json" snippet="minecraft:block/description/traits" />
+
 -   For intercardinal orientation when placed on top of another block, we will add a `wiki:intercardinal_direction` state and use a modified version of the wiki's [intercardinal orientation](/blocks/intercardinal-orientation) system.
     As always, remember to change `wiki` to your own namespace!
 
-Add the following to your block `description`:
-
-<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block/description" />
-
-```json
-"traits": {
-    "minecraft:placement_position": {
-        "enabled_states": ["minecraft:block_face"]
-    }
-},
-"states": {
-    "wiki:intercardinal_direction": {
-        "values": { "min": 0, "max": 15 }
-    }
-}
-```
+    <ExampleFile path="BP/blocks/custom_head.json" snippet="minecraft:block/description/states" />
 
 ## Setting the Direction States
 
@@ -249,90 +237,16 @@ Not all bones in your model should be visible, so we make use of the `bone_visib
 
 Add the following component to your block:
 
-<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block/components" />
-
-```json
-"minecraft:geometry": {
-    "identifier": "geometry.custom_head", // Model created in previous step
-    "bone_visibility": {
-        "0": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 0",
-        "22.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 1",
-        "45": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 2",
-        "67.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 3"
-    }
-}
-```
+<ExampleFile
+    path="BP/blocks/custom_head.json"
+    snippet="minecraft:block/components/minecraft:geometry"
+/>
 
 ### Permutation Entries
 
 Now, use the [`permutations`](/blocks/block-permutations) array to define the rotation for the base cardinal rotations of the block by inserting the following into your block `permutations` array (in the presented order):
 
-<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block/permutations" />
-
-```json
-// Intercardinal directions
-{
-    "condition": "q.block_state('wiki:intercardinal_direction') >= 0",
-    "components": {
-        "minecraft:transformation": { "rotation": [0, 180, 0] }
-    }
-},
-{
-    "condition": "q.block_state('wiki:intercardinal_direction') >= 4",
-    "components": {
-        "minecraft:transformation": { "rotation": [0, 90, 0] }
-    }
-},
-{
-    "condition": "q.block_state('wiki:intercardinal_direction') >= 8",
-    "components": {
-        "minecraft:transformation": { "rotation": [0, 0, 0] }
-    }
-},
-{
-    "condition": "q.block_state('wiki:intercardinal_direction') >= 12",
-    "components": {
-        "minecraft:transformation": { "rotation": [0, -90, 0] }
-    }
-},
-// Block face attachments
-{
-    "condition": "q.block_state('minecraft:block_face') == 'north'",
-    "components": {
-        "minecraft:transformation": {
-            "rotation": [0, 0, 0],
-            "translation": [0, 0.25, 0.25]
-        }
-    }
-},
-{
-    "condition": "q.block_state('minecraft:block_face') == 'west'",
-    "components": {
-        "minecraft:transformation": {
-            "rotation": [0, 90, 0],
-            "translation": [0.25, 0.25, 0]
-        }
-    }
-},
-{
-    "condition": "q.block_state('minecraft:block_face') == 'south'",
-    "components": {
-        "minecraft:transformation": {
-            "rotation": [0, 180, 0],
-            "translation": [0, 0.25, -0.25]
-        }
-    }
-},
-{
-    "condition": "q.block_state('minecraft:block_face') == 'east'",
-    "components": {
-        "minecraft:transformation": {
-            "rotation": [0, -90, 0],
-            "translation": [-0.25, 0.25, 0]
-        }
-    }
-}
-```
+<ExampleFile path="BP/blocks/custom_head.json" snippet="minecraft:block/permutations" />
 
 ## Final Block JSON
 
