@@ -138,7 +138,7 @@ There is no way to have different loot in different chests in the same structure
 
 A example of a suspicious gravel having a loot table applied.
 
-<CodeHeader path="minecraft:processor_list" />
+<CodeHeader breadcrumbs="minecraft:processor_list" />
 
 ```json
 {
@@ -163,7 +163,7 @@ A example of a suspicious gravel having a loot table applied.
 
 A example of a chest having a loot table applied to all rotations.
 
-<CodeHeader path="minecraft:processor_list" />
+<CodeHeader breadcrumbs="minecraft:processor_list" />
 
 ```json
 {

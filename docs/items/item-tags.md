@@ -84,12 +84,10 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ### Recipe Ingredient
 
-<CodeHeader path="minecraft:recipe_shapeless" />
+<CodeHeader breadcrumbs="minecraft:recipe_shapeless/ingredients/0" />
 
 ```json
-"ingredients": [
-    {
-        "item": { "tag": "minecraft:planks" }
-    }
-]
+{
+    "item": { "tag": "minecraft:planks" }
+}
 ```

@@ -67,7 +67,7 @@ Adding the `minecraft:is_stackable` component to your entity will allow it to co
 
 You will also need to add `minecraft:push_through` and set its `value` parameter to 1.
 
-<CodeHeader path="minecraft:entity" />
+<CodeHeader breadcrumbs="minecraft:entity" />
 
 ```json
 "components": {

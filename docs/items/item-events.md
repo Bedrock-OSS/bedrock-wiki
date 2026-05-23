@@ -46,12 +46,10 @@ To bind a custom component to an item, simply list it in the `components` of you
 
 _Requires format version [1.21.90](/items/item-format-history#_1-21-90) or later._
 
-<CodeHeader path="minecraft:item" />
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
-"components": {
-    "wiki:unbreakable": {}
-}
+"wiki:unbreakable": {}
 ```
 
 ## List of Events

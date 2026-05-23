@@ -80,7 +80,7 @@ In order to apply effects to the player when the food is consumed, we'll need to
 In this tutorial, our custom component will be `wiki:food_effects`.
 Make sure to change the namespace to something that uniquely identifies your add-on.
 
-<CodeHeader breadcrumbs="minecraft:item/components" />
+<CodeHeader path="BP/items/custom_food.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "wiki:food_effects": [

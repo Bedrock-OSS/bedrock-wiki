@@ -164,7 +164,7 @@ Add the following script to your `BP/scripts` folder to register the `wiki:inter
 
 Now we can apply the component to the block when it is being placed on the `up` face of another block using the block [`permutations`](/blocks/block-permutations#conditionally-applying-components) array.
 
-<CodeHeader path="minecraft:block" />
+<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block" />
 
 ```json
 "permutations": [
