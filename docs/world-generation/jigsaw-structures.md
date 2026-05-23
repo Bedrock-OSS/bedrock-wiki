@@ -94,11 +94,11 @@ Custom blocks are supported but all blocks in that field need their technical id
 
 ### Selection Priority
 
-If two generating jigsaws are attempting to place a structure in the same spot the jigsaw with the higher selection priority will place their piece first which will then stop the other piece from being placed unless the jigsaw can find a smaller structure in it's template pool which fits.
+If two generating jigsaws are attempting to place a structure in the same spot the jigsaw with the higher selection priority will place their piece first which will then stop the other piece from being placed unless the jigsaw can find a smaller structure in it's template pool which fits. If selection priority is the same then one will be picked to place their structure at random.
 
 ### Placement Priority
 
-If a structure has 2+ connecting jigsaws the game will prioritize the connector jigsaw with the higher placement priority to be connected compared to ones with lower values.
+If a structure has two or more connecting jigsaws the game will prioritize the connector jigsaw with the higher placement priority to be connected compared to ones with lower values. The game will only use lower placement priority pieces if trying to connect to the higher priority piece would place the structure in a invalid position such as out of bounds or in another structure piece.
 
 ### Joint Type
 
@@ -205,7 +205,7 @@ A protected block processor allows for 1 field:
 ```json
 {
     "processor_type": "minecraft:protected_blocks",
-    "value": "mob_spawner"
+    "value": "not_feature_replaceable"
 }
 ```
 
@@ -282,7 +282,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 ### Generation Configuration
 
 -   `step`: Which step of world generation places the structure.
-    Contains multiple options, most notable being `underground_structures`, `strongholds`, and `surface_structures`.
+    Contains multiple options, most notable being `underground_structures`, `strongholds`, and `surface_structures`. Steps generate in the following order with the first in the list being generated first. `raw_generation`, `lakes`, `local_modifications`, `underground_structures`, `surface_structures`, `strongholds`, `underground_ores`, `underground_decoration`, `fluid_springs`, `vegetal_decoration`, and `top_layer_modification`.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -291,7 +291,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     ```
 
 -   `heightmap_projection`: (optional) What y level the start_height value will look for to place the structure.
-    Can be `world_surface` or `sea_floor`.
+    Can be `world_surface`, `sea_floor`, or `none`. `world_surface` places the structure on the first non-air block from the top down. `sea_floor` places the structure on the first motion-blocking block (water are not motion-blocking so they are passed through) from the top down. `none` places the structure at y0. Defaults to `none`.
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -333,11 +333,11 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
             ```json
             "start_height": {
                 "type": "uniform",
-                "max": {
-                    "below_top": 100
-                },
                 "min": {
-                    "above_bottom": 20
+                    "above_bottom": 100 //must be 100 blocks above the bedrock
+                },
+                "max": {
+                    "below_top": 100 //must be below y220
                 }
             }
             ```
@@ -365,7 +365,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     "max_depth": 20
     ```
 
--   `terrain_adaptation`: (optional) How the game will modify the terrain around the structure.
+-   `terrain_adaptation`: (optional) How the game will modify the terrain around the structure. Defaults to `none`
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -409,7 +409,16 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     ]
     ```
 
--   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Uses Chebyshev distance and can be 1-128 inclusive. Defaults to 128.
+-   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Uses Chebyshev distance and can be 1-128 inclusive for horizontal. Can be any interger greater then 1 for vertical. Defaults to 128. Vertical and horizontal can be set separately. Can be set as just a number in which it is 1-128 inclusive.
+
+    <CodeHeader>minecraft:jigsaw</CodeHeader>
+
+    ```json
+    "max_distance_from_center": {
+        "vertical": 384,
+        "horizontal": 128
+    }
+    ```
 
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
@@ -422,7 +431,10 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     <CodeHeader>minecraft:jigsaw</CodeHeader>
 
     ```json
-    "dimension_padding": 0
+    "dimension_padding": {
+        "top": 100,
+        "bottom": 10
+    }
     ```
 
 -   `pool_aliases`: (optional) Can be used to reroute jigsaw target pools to a set template that will be applied to the whole structure to allow for the creation of themes.
@@ -443,7 +455,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
         Direct has 2 extra fields after `type` is assigned to be `direct`:
 
-        -   `alias` is the ID of the pool alias to be used in the target field of a jigsaw block.
+        -   `alias` is the ID of the pool alias to be used in the target pool field of a jigsaw block.
         -   `target` is the template pool to be used when the alias is called.
 
         <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
@@ -561,7 +573,7 @@ The `placement` parameter of structure sets contains the following rules of plac
 -   `separation`: The padding distance (in chunks) between structures from the set. Must be less than half of the spacing value.
 -   `spread_type`: The algorithm used by the game to decided how to place the structures, either `linear` or `triangular`.
     -   `linear` is basic randomness.
-    -   `triangular` is more advanced randomness.
+    -   `triangular` is more advanced randomness. This field attempts to place structures in a more grid like formation.
 
 ### Structures
 
