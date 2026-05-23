@@ -2,6 +2,8 @@ import { extname } from "path";
 import { PNG } from "pngjs";
 import TGA from "tga";
 
+import { getCodeSnippet } from "./snippet";
+
 const fenceChar = "`";
 
 const imageTypes = ["jpg", "jpeg", "png", "tga"];
@@ -9,7 +11,12 @@ const unsupportedTypes = ["mcstructure"];
 
 const viewFileTooltip = "View File";
 
-export function renderExampleFile(path: string, buffer: Buffer, link?: string) {
+export function renderExampleFile(
+  path: string,
+  buffer: Buffer,
+  link?: string,
+  snippetLocation?: string
+) {
   let type = extname(path).substring(1);
 
   if (imageTypes.includes(type)) {
@@ -29,12 +36,24 @@ export function renderExampleFile(path: string, buffer: Buffer, link?: string) {
     return renderCodeFile(path, "", "Cannot display this file type.", link);
   }
 
-  return renderCodeFile(path, type, buffer.toString(), link);
+  let code = buffer.toString();
+
+  const snippet = snippetLocation ? getCodeSnippet(code, snippetLocation) : undefined;
+  if (snippet?.code) code = snippet.code;
+
+  return renderCodeFile(path, type, code, link, snippet?.breadcrumbs);
 }
 
-function renderCodeFile(path: string, lang: string, code: string, link?: string) {
+function renderCodeFile(
+  path: string,
+  lang: string,
+  code: string,
+  link?: string,
+  breadcrumbs?: string
+) {
   let header = `<CodeHeader path="${path}" `;
   if (link) header += `link="${link}" `;
+  if (breadcrumbs) header += `breadcrumbs="${breadcrumbs}" `;
   header += "/>";
 
   const fence = getCodeFence(code);

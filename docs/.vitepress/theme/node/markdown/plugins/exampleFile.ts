@@ -5,7 +5,8 @@ import { join } from "path";
 import { examplesCacheDirectory, renderExampleFile, getExampleForPage } from "../../examples";
 import filePageLink from "../../../shared/filePageLink";
 
-const exampleFilePattern = /^<ExampleFile\s+path="(?<path>[^"]*)"\s*\/>$/;
+const exampleFilePattern =
+  /^<ExampleFile\s+path="(?<path>[^"]*)"(\s*snippet="(?<snippet>[^"]*)")?\s*\/>$/;
 
 export const exampleFilePlugin: PluginSimple = (md) => {
   md.core.ruler.after("block", "example_file", ({ env, tokens, inlineMode }) => {
@@ -31,7 +32,7 @@ export const exampleFilePlugin: PluginSimple = (md) => {
       const buffer = readFileSync(cacheFilePath);
       const link = filePageLink(env.relativePath.replace(/\.md$/, ""), props.path);
 
-      const markdown = renderExampleFile(props.path, buffer, link);
+      const markdown = renderExampleFile(props.path, buffer, link, props.snippet);
       const newTokens = md.parse(markdown, env);
 
       // Replace the original HTML token
