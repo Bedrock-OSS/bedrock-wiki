@@ -35,7 +35,7 @@ Currently, scripts can only be used in behavior packs.
 
 In the behavior pack manifest, you need to add a `script` module and set an `entry` point for your script project. Currently, only `"javascript"` is supported as a valid language.
 
-<CodeHeader>BP/manifest.json#modules[0]</CodeHeader>
+<CodeHeader path="BP/manifest.json" breadcrumbs="modules/0" />
 
 ```json
 {
@@ -49,7 +49,7 @@ In the behavior pack manifest, you need to add a `script` module and set an `ent
 
 Additionally, dependencies will need to be set based on modules used. To import and use script API modules, you must specify dependencies using the `module_name` and `version`. In this example, the `@minecraft/server` module is used.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -88,11 +88,11 @@ If your project needs other module to run your code, add the other dependencies 
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. Most features are included in stable APIs, and will not break or be changed when Minecraft is updated.
 
 -   `@minecraft/server`:
- 
+
     -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0) (Latest version)
-    -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0) 
-    -   [`2.4.0`](https://www.npmjs.com/package/@minecraft/server/v/2.4.0) 
-    -   [`2.3.0`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0) 
+    -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0)
+    -   [`2.4.0`](https://www.npmjs.com/package/@minecraft/server/v/2.4.0)
+    -   [`2.3.0`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0)
     -   [`2.2.0`](https://www.npmjs.com/package/@minecraft/server/v/2.2.0)
     -   [`2.1.0`](https://www.npmjs.com/package/@minecraft/server/v/2.1.0)
     -   [`2.0.0`](https://www.npmjs.com/package/@minecraft/server/v/2.0.0)
@@ -187,7 +187,7 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
 
 In order to use the `eval()` function or `Function()` constructors within your code, you can add the following in the manifest capabilities:
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -201,7 +201,7 @@ The entry point file can contain scripts and/or imports to other script files. O
 
 Minecraft's scripting engine only runs JavaScript, like any other JavaScript projects. Check out [Scripting with TypeScript](/scripting/typescript#script-api) for compiling TS directly to JavaScript.
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 // This file demonstrates that the code is working by
@@ -221,7 +221,7 @@ system.runInterval(() => {
 
 With Script API Version 2, scripts now by default execute before the world has loaded. This means that we now have to wait until the world is loaded to run most functions.
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 import { world } from "@minecraft/server";

@@ -72,7 +72,7 @@ Animation controller are defined in their own files, and must be "attached" to e
 
 Here is a sample `description`, which shows how the AC can first be defined in `animations`, and then played in `scripts/animate`.
 
-<CodeHeader>RP/entity/helicopter.ce.json OR BP/entities/helicopter.se.json</CodeHeader>
+<CodeHeader path="RP/entity/helicopter.ce.json OR BP/entities/helicopter.se.json" />
 
 ```json
 "description": {
@@ -90,7 +90,7 @@ Here is a sample `description`, which shows how the AC can first be defined in `
 
 If you want to conditionally play an animation controller, you can supply an optional molang argument. If the argument evaluates to true, the controller will play:
 
-<CodeHeader>RP/entity/helicopter.ce.json OR BP/entities/helicopter.se.json</CodeHeader>
+<CodeHeader path="RP/entity/helicopter.ce.json OR BP/entities/helicopter.se.json" />
 
 ```json
 "scripts": {
@@ -117,7 +117,7 @@ Lets look at a simple animation controller from our State Machine example above:
 
 ### Simple Example
 
-<CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
+<CodeHeader path="RP/animation_controllers/helicopter.ac.json" />
 
 ```json
 {
@@ -159,9 +159,10 @@ So this particular example contains two states:
 
 You can note that `"initial_state": "ground"` means that our Animation Controller will begin in the `ground` state.
 
-<CodeHeader>
-    RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter.blade/states
-</CodeHeader>
+<CodeHeader
+    path="RP/animation_controllers/helicopter.ac.json"
+    breadcrumbs="animation_controllers/controller.animation.helicopter.blade/states"
+/>
 
 ```json
 "ground": {
@@ -175,9 +176,10 @@ You can note that `"initial_state": "ground"` means that our Animation Controlle
 
 The `ground` state contains a list of _transitions_, which is how we get to other states. In this example, the default state is saying: _Move to the `flying` state when `q.is_on_ground` is NOT true_. In other words - start the flying animation when we fly into the air!
 
-<CodeHeader>
-    RP/animation_controllers/helicopter.ac.json#animation_controllers/controller.animation.helicopter.blade/states
-</CodeHeader>
+<CodeHeader
+    path="RP/animation_controllers/helicopter.ac.json"
+    breadcrumbs="animation_controllers/controller.animation.helicopter.blade/states"
+/>
 
 ```json
 "flying": {
@@ -203,7 +205,7 @@ Here is the code for the second state machine from above, with three states this
 -   States with multiple transitions
 -   States with no transitions
 
-<CodeHeader>RP/animation_controllers/helicopter.ac.json</CodeHeader>
+<CodeHeader path="RP/animation_controllers/helicopter.ac.json" />
 
 ```json
 {
@@ -247,7 +249,7 @@ Here is the code for the second state machine from above, with three states this
 Resource Pack animation controllers can run things like sounds and particles too.
 Before calling sound or particle in an animation controller, you need to define them in client entity file.
 
-<CodeHeader>RP/entities/custom_tnt.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entities/custom_tnt.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "sound_effects": {
@@ -260,9 +262,10 @@ Before calling sound or particle in an animation controller, you need to define 
 
 And only then you can call them in the animation controller:
 
-<CodeHeader>
-    RP/animation_controllers/custom_tnt.animation_controllers.json#controller.animation.custom_tnt
-</CodeHeader>
+<CodeHeader
+    path="RP/animation_controllers/custom_tnt.animation_controllers.json"
+    breadcrumbs="animation_controllers/controller.animation.custom_tnt"
+/>
 
 ```json
 "states":{
@@ -312,7 +315,7 @@ Commands in this context mean three distinct things:
 
 Here is an example BP animation controller, which exhibits some of this behavior:
 
-<CodeHeader>BP/animation_controllers/helicopter.ac.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/helicopter.ac.json" />
 
 ```json
 {

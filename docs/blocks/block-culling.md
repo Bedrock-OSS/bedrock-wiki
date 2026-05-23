@@ -22,7 +22,7 @@ Block culling rules allow you to remove parts of a model based on the surroundin
 
 Culling rules are added in your resource pack's `block_culling` folder and appear in the format shown below:
 
-<CodeHeader>RP/block_culling/lamp.json</CodeHeader>
+<CodeHeader path="RP/block_culling/lamp.json" />
 
 ```json
 {
@@ -38,7 +38,7 @@ Culling rules are added in your resource pack's `block_culling` folder and appea
 
 They are then applied to block models in your block's [`minecraft:geometry`](/blocks/block-components#geometry) component:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/lamp.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": {
@@ -51,7 +51,7 @@ They are then applied to block models in your block's [`minecraft:geometry`](/bl
 
 This type of rule should be used if a bone is only visible from one direction, meaning the entire bone can be culled rather than individual cube faces.
 
-<CodeHeader>minecraft:block_culling_rules > rules</CodeHeader>
+<CodeHeader path="RP/block_culling/lamp.json" breadcrumbs="minecraft:block_culling_rules/rules" />
 
 ```json
 {
@@ -66,7 +66,7 @@ This type of rule should be used if a bone is only visible from one direction, m
 
 This type of rule should be used when you want to hide specific faces of cubes that are abutting full, opaque blocks.
 
-<CodeHeader>minecraft:block_culling_rules > rules</CodeHeader>
+<CodeHeader path="RP/block_culling/lamp.json" breadcrumbs="minecraft:block_culling_rules/rules" />
 
 ```json
 {
@@ -84,7 +84,7 @@ This type of rule should be used when you want to hide specific faces of cubes t
 Culling rules will cull against full, opaque faces of adjacent blocks by default.
 However, they can also cull against other types of blocks based on the rule's `condition` parameter.
 
-<CodeHeader>minecraft:block_culling_rules > rules</CodeHeader>
+<CodeHeader path="RP/block_culling/lamp.json" breadcrumbs="minecraft:block_culling_rules/rules" />
 
 ```json
 {

@@ -19,7 +19,7 @@ This system will run your desired commands on the event that a player joins the 
 
 ## System
 
-<CodeHeader>BP/functions/wiki/event/players/on_first_join.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/event/players/on_first_join.mcfunction" />
 
 ```yaml
 ## Your Commands Here (Examples)

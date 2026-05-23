@@ -46,7 +46,7 @@ We are able to define how our custom item will behave by using behavior componen
 
 <Spoiler title="Example Components">
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:glint": true,
@@ -83,7 +83,7 @@ Now that we have our components and identifier, we can now start defining our it
 All item definitions go in `BP/items/`. The name of your file doesn't affect anything, but for ease of navigation it's recommend to name it after your id.
 We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of the file:
 
-<CodeHeader>BP/items/ectoplasm.json</CodeHeader>
+<CodeHeader path="BP/items/ectoplasm.json" />
 
 ```json
 {
@@ -102,7 +102,7 @@ The second definitions defines what kind of file this is. In our case, as this i
 
 Let us look closer at the `"description"`:
 
-<CodeHeader>ectoplasm.json > minecraft:item</CodeHeader>
+<CodeHeader path="BP/items/ectoplasm.json" breadcrumbs="minecraft:item" />
 
 ```json
 "description": {
@@ -119,7 +119,7 @@ The `category` key defines which tab of the creative inventory / recipe book the
 Now we can actually define the behavior of our item, under `components`. Here we simply place any components we want our item to have.
 This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/item-components).
 
-<CodeHeader>ectoplasm.json > minecraft:item</CodeHeader>
+<CodeHeader path="BP/items/ectoplasm.json" breadcrumbs="minecraft:item" />
 
 ```json
 "components": {
@@ -129,7 +129,7 @@ This will be our `"minecraft:max_stack_size"` component. For other components yo
 
 With that, we have now fully defined our item's behavior. This is what your file should currently look like.
 
-<CodeHeader>BP/items/ectoplasm.json</CodeHeader>
+<CodeHeader path="BP/items/ectoplasm.json" />
 
 ```json
 {
@@ -184,7 +184,7 @@ A shortname is essentially a name that is assigned to the folder path of the tex
 
 All item shortnames are stored in one file called `item_texture.json` which is in `RP/textures`. This contains a list of shortnames and its assigned textures.
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {
@@ -196,7 +196,7 @@ Here we have a top level definition, `texture_data`, which is where we will defi
 
 Under `texture_data` will our list of item shortname definitions. An example definition looks like this:
 
-<CodeHeader>RP/textures/item_texture.json/texture_data</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json/texture_data" />
 
 ```json
 "wiki:ectoplasm": {
@@ -212,7 +212,7 @@ Now whenever we want to refer our image, we will use the shortname `wiki:ectopla
 
 To finally apply our texture to our item, we add the `minecraft:icon` component to our item definition and set its value to our shortname.
 
-<CodeHeader>ectoplasm.json/minecraft:item/</CodeHeader>
+<CodeHeader path="ectoplasm.json/minecraft:item/" />
 
 ```json
 "components": {
@@ -229,7 +229,7 @@ The last thing to add is a nice name to your item. Currently it will look like `
 
 We already created these files when making our `RP` and `BP`, so we just need to add to them.
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:ectoplasm=Ectoplasm
@@ -259,7 +259,7 @@ Your folder structure should look like this:
 
 <Spoiler title="Full ectoplasm.json">
 
-<CodeHeader>BP/items/ectoplasm.json</CodeHeader>
+<CodeHeader path="BP/items/ectoplasm.json" />
 
 ```json
 {
@@ -283,7 +283,7 @@ Your folder structure should look like this:
 
 <Spoiler title="Full item_texture.json">
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {

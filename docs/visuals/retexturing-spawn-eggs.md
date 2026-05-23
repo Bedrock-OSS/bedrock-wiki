@@ -35,7 +35,7 @@ On the wiki, we keep our textures in the `RP/textures/wiki` folder, so the textu
 
 Now we need to give our texture a short-name. This can be done in the item texture atlas file:
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {
@@ -53,7 +53,7 @@ Now we need to give our texture a short-name. This can be done in the item textu
 
 Now we can use our new texture inside of the Resource Pack entity file:
 
-<CodeHeader>RP/entity/custom_entity.json#description</CodeHeader>
+<CodeHeader path="RP/entity/custom_entity.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "spawn_egg": {

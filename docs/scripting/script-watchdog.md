@@ -16,7 +16,7 @@ Watchdog is a performance system for script engine that is enabled in Minecraft 
 
 There is a set of watchdog configuration that governs the performance of the script environment since 1.19.20. These options cannot be modified in world or realms, but they can be modified via `server.properties` in [Dedicated Server](https://www.minecraft.net/en-us/download/server/bedrock). Below is default watchdog settings, which are the same on all devices for world and realms.
 
-<CodeHeader>bedrock-server/server.properties</CodeHeader>
+<CodeHeader path="bedrock-server/server.properties" />
 
 ```ini
 # Enables the watchdog (default = true)

@@ -97,7 +97,7 @@ _Meanwhile, why not upgrade the visuals of your own unique entities' or create a
 
 <Spoiler title="Show code">
 
-<CodeHeader>RP/models/entity/ghost.geo.json</CodeHeader>
+<CodeHeader path="RP/models/entity/ghost.geo.json" />
 
 ```json
 {
@@ -168,7 +168,7 @@ _Meanwhile, why not upgrade the visuals of your own unique entities' or create a
 }
 ```
 
-<CodeHeader>RP/animations/ghost.a.animations.json</CodeHeader>
+<CodeHeader path="RP/animations/ghost.a.animations.json" />
 
 ```json
 {

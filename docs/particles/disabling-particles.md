@@ -15,7 +15,7 @@ In the event that you want to disable a particle, it is recommended to do so fro
 
 The basic idea of disabling a particle from emitting is as follows:
 
-<CodeHeader>RP/particles/some_vanilla_particle.json</CodeHeader>
+<CodeHeader path="RP/particles/some_vanilla_particle.json" />
 
 ```json
 {

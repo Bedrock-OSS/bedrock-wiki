@@ -19,7 +19,7 @@ Don't worry! This page will help you to understand what the deprecated JSON even
 
 ## Add Mob Effect
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ entity }) {
@@ -36,7 +36,7 @@ onStepOn({ entity }) {
 import { EntityDamageCause } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ entity }) {
@@ -52,7 +52,7 @@ onStepOn({ entity }) {
 import { EquipmentSlot, GameMode } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onPlayerInteract({ player }) {
@@ -100,7 +100,7 @@ onPlayerInteract({ player }) {
 import { EquipmentSlot, GameMode } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onPlayerInteract({ player }) {
@@ -124,7 +124,7 @@ onPlayerInteract({ player }) {
 
 ## Die (Blocks)
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ block }) {
@@ -134,7 +134,7 @@ onStepOn({ block }) {
 
 ## Die (Entities)
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ entity }) {
@@ -144,7 +144,7 @@ onStepOn({ entity }) {
 
 ## Play Effect
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension, block }) {
@@ -154,7 +154,7 @@ onStepOn({ dimension, block }) {
 
 ## Play Sound
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension, block }) {
@@ -164,7 +164,7 @@ onStepOn({ dimension, block }) {
 
 ## Remove Mob Effect
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ entity }) {
@@ -174,7 +174,7 @@ onStepOn({ entity }) {
 
 ## Run Command
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension }) {
@@ -185,7 +185,7 @@ onStepOn({ dimension }) {
 
 ## Set Block
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ block }) {
@@ -197,7 +197,7 @@ onStepOn({ block }) {
 import { BlockPermutation } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ block }) {
@@ -210,7 +210,7 @@ onStepOn({ block }) {
 
 ## Set Block at Pos
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension, block }) {
@@ -230,7 +230,7 @@ onStepOn({ dimension, block }) {
 import { BlockPermutation } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension, block }) {
@@ -251,7 +251,7 @@ onStepOn({ dimension, block }) {
 
 ## Set Block State
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ block }) {
@@ -265,7 +265,7 @@ onStepOn({ block }) {
 import { BlockPermutation } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ block }) {
@@ -288,7 +288,7 @@ onStepOn({ block }) {
 import { ItemStack } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension, block }) {
@@ -296,7 +296,7 @@ onStepOn({ dimension, block }) {
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ dimension, block }) {
@@ -308,7 +308,7 @@ onStepOn({ dimension, block }) {
 
 ## Teleport
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn({ entity }) {
@@ -322,7 +322,7 @@ onStepOn({ entity }) {
 import { EquipmentSlot, ItemStack } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onPlayerInteract({ player }) {

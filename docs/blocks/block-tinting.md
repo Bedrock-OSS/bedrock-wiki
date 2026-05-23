@@ -16,7 +16,7 @@ In the [terrain atlas file](/concepts/texture-atlases), the following parameters
 -   [`tint_color`](/concepts/texture-atlases#tint-color) applies a basic multiply tint to a texture.
 -   [`overlay_color`](/concepts/texture-atlases#overlay-color) applies a tint to a texture, using the alpha channel of the texture to determine tint intensity.
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -52,7 +52,7 @@ Similarly to the static texture tinting mentioned previously, tint methods can b
 
 Here's how the material instances of a grass block would look:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/custom_grass.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {
@@ -77,7 +77,7 @@ If your texture has tinting applied, the chances are, you'll want maps to displa
 
 Tint methods can be applied to the block's map color, not just its textures!
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/custom_grass.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:map_color": {

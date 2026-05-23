@@ -19,7 +19,7 @@ The best way to learn about this component is by using the vanilla examples for 
 
 ### Completely Invulnerable Entity
 
-<CodeHeader>BP/entities/entity.json#minecraft:entity/components</CodeHeader>
+<CodeHeader path="BP/entities/entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:damage_sensor": {
@@ -32,7 +32,7 @@ The best way to learn about this component is by using the vanilla examples for 
 
 ### Disable Damage from Player
 
-<CodeHeader>BP/entities/entity.json#minecraft:entity/components</CodeHeader>
+<CodeHeader path="BP/entities/entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:damage_sensor": {
@@ -55,7 +55,7 @@ The `min` property in the `minecraft:health` component allows us to make invinci
 
 If you choose to use this component, please make sure you have another method for killing the entity. Triggering `minecraft:instant_despawn` from something like an environment sensor, a timer, or an interact is a good solution. You also can call it using `/event` or consider using `Entity.remove()`{lang=js} from the script API.
 
-<CodeHeader>BP/entities/entity.json#minecraft:entity/components</CodeHeader>
+<CodeHeader path="BP/entities/entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:health": {

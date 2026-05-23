@@ -85,7 +85,7 @@ If you receive an error such as `command npm not found`, ensure you have Node.js
 
 Now the project can be initialized. The next step is to create a TypeScript project by creating a `tsconfig.json` file in your current directory, with the following details which simulates the Minecraft Scripting API file system.
 
-<CodeHeader>tsconfig.json</CodeHeader>
+<CodeHeader path="tsconfig.json" />
 
 ```json
 {
@@ -123,7 +123,7 @@ Unless you know what you are doing, the only part of the project to be concerned
 
 Now write your first TypeScript code in `src` directory, for example below:
 
-<CodeHeader>BP/src/Main.ts</CodeHeader>
+<CodeHeader path="BP/src/Main.ts" />
 
 ```ts
 import { Player, EntityQueryOptions, GameMode, Vector3, world } from "@minecraft/server";
@@ -174,7 +174,7 @@ tsc --watch
 
 Now the `src/Main.ts` file should have been transpiled to `scripts/Main.js` with the following code:
 
-<CodeHeader>BP/scripts/Main.js</CodeHeader>
+<CodeHeader path="BP/scripts/Main.js" />
 
 ```js
 import { GameMode, world } from "@minecraft/server";

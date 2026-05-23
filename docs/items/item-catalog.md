@@ -15,7 +15,7 @@ The crafting item catalog file is used to specify where items appear in the crea
 First of all, you need to create a file named `crafting_item_catalog.json` in the `item_catalog` folder of your behavior pack.
 Below is the basic JSON format which you should include in the file:
 
-<CodeHeader>BP/item_catalog/crafting_item_catalog.json</CodeHeader>
+<CodeHeader path="BP/item_catalog/crafting_item_catalog.json" />
 
 ```json
 {
@@ -40,7 +40,7 @@ The four available categories are:
 
 For example, if we were adding items to the "Nature" tab, a new entry would be created in the `categories` array specifying `"nature"`{lang=json} as the `category_name`:
 
-<CodeHeader>BP/item_catalog/crafting_item_catalog.json</CodeHeader>
+<CodeHeader path="BP/item_catalog/crafting_item_catalog.json" />
 
 ```json
 {
@@ -62,7 +62,10 @@ To add a new group of items, you'll need to make a new entry in the category's `
 The following example adds two custom ore blocks to the "Nature" category.
 Note that custom groups in the item catalog will appear after vanilla groups.
 
-<CodeHeader>minecraft:crafting_items_catalog > categories</CodeHeader>
+<CodeHeader
+    path="BP/item_catalog/crafting_item_catalog.json"
+    breadcrumbs="minecraft:crafting_items_catalog/categories"
+/>
 
 ```json
 {
@@ -85,7 +88,10 @@ This can be achieved by adding the `group_identifier` parameter to the group.
 
 Let's use the `group_identifier` parameter to make our custom ore group take up less space in the creative menu!
 
-<CodeHeader>minecraft:crafting_items_catalog > categories</CodeHeader>
+<CodeHeader
+    path="BP/item_catalog/crafting_item_catalog.json"
+    breadcrumbs="minecraft:crafting_items_catalog/categories"
+/>
 
 ```json
 {
@@ -102,7 +108,7 @@ Let's use the `group_identifier` parameter to make our custom ore group take up 
 }
 ```
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 wiki:itemGroup.name.ore=Custom Ores

@@ -17,7 +17,7 @@ This animation controller can be used to run commands, such as re-adding potion 
 
 Simply add the following animation controller to the `player.json`, and you'll be all done!
 
-<CodeHeader>BP/animation_controllers/respawn.ac.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/respawn.ac.json" />
 
 ```json
 {

@@ -138,8 +138,6 @@ These components can be edited as needed to create good pathing. Make sure to up
 
 Don't forget to add some basic movement and navigation components so your entity is able to move.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 0,
@@ -177,8 +175,6 @@ Don't forget to add some basic movement and navigation components so your entity
 #### Detecting a reached waypoint
 
 You can use `minecraft:target_nearby_sensor` to detect when you have reached the marker entity:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:target_nearby_sensor": {

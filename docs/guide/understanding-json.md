@@ -78,8 +78,6 @@ This key-value syntax looks like this: `"<key>": <any structure>`. Notice the qu
 
 Here is an example of an object, which contains a few _key-value-pairs_.
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
     "a_list_of_integers": [1, 2, 3],
@@ -96,8 +94,6 @@ We call the key-value pairs of an object as its _child_ or as being _inside_ the
 In Minecraft, JSON files always begin with an _object_, which you can remember is two curly brackets:`{}`. We call this the _top level object_. We write our code _inside_ of this object, in the form of key-value pairs.
 
 Here is an example of a simple json file, used for Minecraft add-ons:
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

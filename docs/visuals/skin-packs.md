@@ -28,7 +28,7 @@ Here is what is needed:
 
 ## manifest.json
 
-<CodeHeader>skin_packs/tutorial_skin_pack/manifest.json</CodeHeader>
+<CodeHeader path="skin_packs/tutorial_skin_pack/manifest.json" />
 
 ```json
 {
@@ -57,7 +57,7 @@ Here is what is needed:
 
 This file is used to define textures and shortnames for skins. Most of the options are, however, hard-coded or unchangeable.
 
-<CodeHeader>skin_packs/tutorial_skin_pack/skins.json</CodeHeader>
+<CodeHeader path="skin_packs/tutorial_skin_pack/skins.json" />
 
 ```json
 {
@@ -94,7 +94,7 @@ This file is used to define textures and shortnames for skins. Most of the optio
 
 Finally, we'll define the names of the skin pack and every skin in the `.lang` file. Of course "en_US" can be replaced with any language.
 
-<CodeHeader>skin_packs/tutorial_skin_pack/texts/en_US.lang</CodeHeader>
+<CodeHeader path="skin_packs/tutorial_skin_pack/texts/en_US.lang" />
 
 ```lang
 skinpack.tutorial=Tutorial Skin Pack

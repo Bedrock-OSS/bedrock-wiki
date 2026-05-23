@@ -15,7 +15,7 @@ The following tutorial provides a resource pack method to detect when the player
 
 ## variable
 
-<CodeHeader>RP/entity/mob.entity.json</CodeHeader>
+<CodeHeader path="RP/entity/mob.entity.json" />
 
 ```json
 "pre_animation": [
@@ -27,7 +27,7 @@ The following tutorial provides a resource pack method to detect when the player
 Because the query `q.rotation_to_camera` is based at the origin of the entity (their feet), the vertical detection range will be based around the bottom of the entity. The code below creates a modified variable for the vertical angle which takes a positional offset into account to allow the vertical detection range to be based around the center of the entity.
 :::
 
-<CodeHeader>RP/entity/mob.entity.json</CodeHeader>
+<CodeHeader path="RP/entity/mob.entity.json" />
 
 ```json
 "pre_animation": [

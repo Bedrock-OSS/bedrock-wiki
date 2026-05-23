@@ -22,8 +22,6 @@ Note: Texture needs to have semi transparency in it to add the glow effect.
 
 <Spoiler title="Show">
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
     "customblend:entity_alphablend": {
@@ -42,8 +40,6 @@ Credit: StealthyX.
 Material that allows for alpha channel textures with render dragon:
 
 <Spoiler title="Show">
-
-<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -107,8 +103,6 @@ Credit: Ambient.
 Material that doesn't permit overlay_color to be used in render controllers:
 
 <Spoiler title="Show">
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

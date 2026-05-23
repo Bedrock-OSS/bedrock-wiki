@@ -42,7 +42,7 @@ By the end of this tutorial, you should have created something like this:
 
 _Note that the block description does not have the `menu_category` parameter as that will be defined in the item JSON instead in a later step._
 
-<CodeHeader>BP/blocks/custom_head.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_head.json" />
 
 ```json
 {
@@ -142,7 +142,7 @@ To support this, we'll need to add two direction states to our block:
 
 Add the following to your block `description`:
 
-<CodeHeader>minecraft:block > description</CodeHeader>
+<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block/description" />
 
 ```json
 "traits": {
@@ -176,7 +176,7 @@ Add the following script to your `BP/scripts` folder to register the `wiki:inter
 
 Now we can apply the component to the block when it is being placed on the `up` face of another block using the block [`permutations`](/blocks/block-permutations#conditionally-applying-components) array.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader path="minecraft:block" />
 
 ```json
 "permutations": [
@@ -249,7 +249,7 @@ Not all bones in your model should be visible, so we make use of the `bone_visib
 
 Add the following component to your block:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": {
@@ -267,7 +267,7 @@ Add the following component to your block:
 
 Now, use the [`permutations`](/blocks/block-permutations) array to define the rotation for the base cardinal rotations of the block by inserting the following into your block `permutations` array (in the presented order):
 
-<CodeHeader>minecraft:block > permutations</CodeHeader>
+<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block/permutations" />
 
 ```json
 // Intercardinal directions

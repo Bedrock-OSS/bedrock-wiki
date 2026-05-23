@@ -26,7 +26,7 @@ Each state may have up to 16 valid values defined. For integer range states, thi
 
 _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or later._
 
-<CodeHeader>BP/blocks/custom_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_block.json" />
 
 ```json
 {
@@ -57,7 +57,7 @@ Listed below are ways to get the current value of block states in different cont
 
 State values are returned by the `q.block_state()`{lang=molang} query function.
 
-<CodeHeader>Molang Expression</CodeHeader>
+<CodeHeader path="Molang Expression" />
 
 ```molang
 q.block_state('wiki:string_state_example') == 'blue'
@@ -67,7 +67,7 @@ q.block_state('wiki:string_state_example') == 'blue'
 
 The [block states argument](/commands/block-states) is included in commands such as `execute` and `testforblock`, and can be used to check the value of block states.
 
-<CodeHeader>Command</CodeHeader>
+<CodeHeader path="Command" />
 
 ```c
 execute if block ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer_state_example"=4] run kill
@@ -77,7 +77,7 @@ execute if block ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki
 
 The [`BlockPermutation.getState()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#getstate) method allows you to get the current value of different states.
 
-<CodeHeader>Script</CodeHeader>
+<CodeHeader path="Script" />
 
 ```js
 customBlock.permutation.getState("wiki:integer_state_example") === 3;
@@ -89,7 +89,7 @@ customBlock.permutation.getState("wiki:integer_state_example") === 3;
 
 The [block states argument](/commands/block-states) is included in commands such as `setblock` and `fill`, and can be used to change states away from their default values.
 
-<CodeHeader>Command</CodeHeader>
+<CodeHeader path="Command" />
 
 ```c
 setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer_state_example"=4]
@@ -99,7 +99,7 @@ setblock ~~~ wiki:custom_block["wiki:string_state_example"="blue", "wiki:integer
 
 The [`BlockPermutation.withState()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/blockpermutation#withstate) method returns a new block permutation with the specified state value changed. This permutation can be applied to the block using the [`Block.setPermutation()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/block#setpermutation) method, as seen below.
 
-<CodeHeader>Script</CodeHeader>
+<CodeHeader path="Script" />
 
 ```js
 customBlock.setPermutation(customBlock.permutation.withState("wiki:boolean_state_example", false));

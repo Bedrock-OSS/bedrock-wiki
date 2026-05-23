@@ -31,7 +31,7 @@ This component requires the entity to have a `minecraft:movement.hover` componen
 To make the entity ascend when the player holds down the jump button, you'll also need to add the `minecraft:vertical_movement_action` component to the entity.
 If the velocity defined in this component is negative, the entity will move downwards rather than upwards.
 
-<CodeHeader>minecraft:entity > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:input_air_controlled": {
@@ -51,7 +51,7 @@ This can be achieved by using component groups!
 
 #### Component Groups
 
-<CodeHeader>minecraft:entity > component_groups</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/component_groups" />
 
 ```json
 // Enables gravity
@@ -73,7 +73,7 @@ This can be achieved by using component groups!
 
 #### Components
 
-<CodeHeader>minecraft:entity > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/components" />
 
 ```json
 // Allows the entity to be controlled
@@ -103,7 +103,7 @@ This can be achieved by using component groups!
 
 #### Events
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:start_flying": {
@@ -130,8 +130,6 @@ While not exactly "flying", setting the entity's jumping power high and giving i
 
 To achieve this, we will need to add the `"minecraft:horse.jump_strength"` component to our entity. Adding this will allow you to control its jumping power and disable dismounting when the player presses the jump button.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:horse.jump_strength": {
     "value": 7
@@ -139,8 +137,6 @@ To achieve this, we will need to add the `"minecraft:horse.jump_strength"` compo
 ```
 
 We can also use `"value"` as an object to utilize the **range bar** players will see when holding down the jump button.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:horse.jump_strength": {
@@ -151,8 +147,6 @@ We can also use `"value"` as an object to utilize the **range bar** players will
 Now we will give it slow falling and speed as it's falling so that it doesn't instantly fall. To do this, we will make an animation controller and give it those effects when it's not on the ground as so:
 
 (You can read a tutorial on how to use animation controllers to execute commands [here](/animation-controllers/entity-commands).)
-
-<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.dragon.flying": {
@@ -183,8 +177,6 @@ Now we will give it slow falling and speed as it's falling so that it doesn't in
 ```
 
 We'll also need to hook it up to our entity as so:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "description": {

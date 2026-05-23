@@ -33,7 +33,7 @@ In short, animation controllers allow us to trigger events from behavior packs.
 
 Here is an example animation controller:
 
-<CodeHeader>BP/animation_controllers/entity_commands.ac.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/entity_commands.ac.json" />
 
 ```json
 {
@@ -71,7 +71,7 @@ If you need to stop this from happening, you need to add additional queries, suc
 
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
-<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
+<CodeHeader path="BP/entities/entity_commands.se.json" />
 
 ```json
 "description": {
@@ -97,7 +97,7 @@ I personally like using [skin_id](https://docs.microsoft.com/en-us/minecraft/cre
 
 We can update our animation controller to trigger based on `skin_id`:
 
-<CodeHeader>BP/animation_controllers/entity_commands.ac.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/entity_commands.ac.json" />
 
 ```json
 {
@@ -154,8 +154,6 @@ Back in our entity file, we can set the `skin_id` using the `skin_id` component.
 
 The `skin_id` component looks like this:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:skin_id": {
     "value": 1
@@ -164,7 +162,7 @@ The `skin_id` component looks like this:
 
 We can add component groups that contains skin_ids:
 
-<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
+<CodeHeader path="BP/entities/entity_commands.se.json" />
 
 ```json
 "component_groups": {
@@ -190,7 +188,7 @@ We can add component groups that contains skin_ids:
 
 Now let's create events so we can easily add these groups:
 
-<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
+<CodeHeader path="BP/entities/entity_commands.se.json" />
 
 ```json
 "events": {
@@ -233,7 +231,7 @@ There are loads of ways to trigger events in Minecraft. As stated earlier, you c
 
 This component will spawn zombies whenever you click on him.
 
-<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
+<CodeHeader path="BP/entities/entity_commands.se.json" />
 
 ```json
 "minecraft:interact": {
@@ -257,7 +255,7 @@ This component will spawn zombies whenever you click on him.
 
 This component will trigger the example command every 10 seconds:
 
-<CodeHeader>BP/entities/entity_commands.se.json</CodeHeader>
+<CodeHeader path="BP/entities/entity_commands.se.json" />
 
 ```json
 "minecraft:timer": {

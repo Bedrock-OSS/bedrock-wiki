@@ -22,7 +22,7 @@ This system allows you to run specific commands the very first time a world is l
 
 ## Tick JSON
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 ```json
 {
   "values": [
@@ -33,7 +33,7 @@ This system allows you to run specific commands the very first time a world is l
 
 ## Main MCFUNCTION
 
-<CodeHeader>BP/functions/wiki/main.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/main.mcfunction" />
 
 ```yaml
 # ON FIRST WORLD LOAD
@@ -43,7 +43,7 @@ execute unless score .World wiki:q.is_initialised matches 1 run function wiki/ev
 
 ## System
 
-<CodeHeader>BP/functions/wiki/event/worlds/on_initialise.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/event/worlds/on_initialise.mcfunction" />
 
 ```yaml
 ## Your Commands Here (Example)

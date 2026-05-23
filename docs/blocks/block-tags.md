@@ -28,7 +28,7 @@ For a list of vanilla block tags and their functionality, visit [this page](/blo
 
 Block tags can be applied in the block's `components`, prefixed with `tag:`, as seen below:
 
-<CodeHeader>BP/blocks/tree_stump.json</CodeHeader>
+<CodeHeader path="BP/blocks/tree_stump.json" />
 
 ```json
 {
@@ -58,7 +58,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 -   `q.any_tag(...tags)`{lang=molang}
     -   Returns whether the block has at least one of the listed tags.
 
-<CodeHeader>Block Descriptor</CodeHeader>
+<CodeHeader path="Block Descriptor" />
 
 ```json
 {
@@ -77,7 +77,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 -   `q.relative_block_has_any_tag(x, y, z, ...tags)`{lang=molang}
     -   Returns whether the block at the specified offset from the entity has at least one of the listed tags.
 
-<CodeHeader>minecraft:client_entity > description</CodeHeader>
+<CodeHeader path="RP/entity/crab.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {
@@ -98,7 +98,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
 
 Example of an item querying a block's tags:
 
-<CodeHeader>BP/items/custom_pickaxe.json</CodeHeader>
+<CodeHeader path="BP/items/custom_pickaxe.json" />
 
 ```json
 {

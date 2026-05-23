@@ -35,7 +35,7 @@ Example Pig texture:
 
 We need to modify the `RP/entity/my_entity.entity.json` file of the mob we want to glow. Now, find `"materials":{}` and set the values to `"entity_emissive_alpha"`. (Be sure to check if the textures are properly defined).
 
-<CodeHeader>RP/entity/pig.entity.json#description</CodeHeader>
+<CodeHeader path="RP/entity/pig.entity.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "materials": {
@@ -45,7 +45,7 @@ We need to modify the `RP/entity/my_entity.entity.json` file of the mob we want 
 
 <Spoiler title="Example Pig Entity File">
 
-<CodeHeader>RP/entity/pig.entity.json</CodeHeader>
+<CodeHeader path="RP/entity/pig.entity.json" />
 
 ```json
 {

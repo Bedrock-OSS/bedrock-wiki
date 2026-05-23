@@ -28,7 +28,7 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 
 ## 1st method: minecraft:behavior.rise_to_liquid_level
 
-<CodeHeader>BP/entities/bar</CodeHeader>
+<CodeHeader path="BP/entities/bar" />
 
 ```json
 {
@@ -92,8 +92,6 @@ Currently, the best way to create a boat entity is by using components. 1.16 int
 ```
 
 ## 2nd method: minecraft:buoyant
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

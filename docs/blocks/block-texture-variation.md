@@ -39,7 +39,7 @@ This is an example of how to create 3 texture variations for the vanilla gravel 
     This could contain additional folders if you want to be orderly.
 -   Add the following to the `gravel` texture atlas entry:
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -63,7 +63,7 @@ After using the example above, you might want to adjust the weights, edit the `t
 
 To calculate how likely a texture variation is, add all of the weights together (in this case 70 + 20 + 10 = 100) and divide the weight by this total. For example, the probability of the `gravel0` variation being chosen is 70 &div; 100, so 70% of positions in the world will display `gravel0` if gravel is placed there.
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {

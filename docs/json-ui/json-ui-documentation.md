@@ -191,7 +191,7 @@ Data Binding allows to bind hardcoded values/variables to an element property.
 
 Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 {
@@ -305,7 +305,7 @@ To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with
 | other_focus_container_name | string | Name of the UI control that will receive focus when on button.menu_left, button.menu_right, button.menu_up or button.menu_down |
 | focus_id_inside            | string | Identifier (`focus_identifier`) of the focusable child control of the `other_focus_container_name` that will receive the focus |
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 ...
@@ -633,7 +633,7 @@ In JSON UI, there's two properties `anchor_from` and `anchor_to` that together a
 
 Most people use them by giving them the same value:
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 {
@@ -653,7 +653,7 @@ Most people use them by giving them the same value:
 
 However, what happens when they have different values? Let's look at what happens when `anchor_from: center` and `anchor_to: top_left`. It's the best example to demonstrate what's really happening.
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 {
@@ -694,7 +694,7 @@ Basically `anchor_to` is the anchor point in the element that will be attached t
 
 If you only have one variable to use, you should just use `"variables": {}`
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 {
@@ -712,7 +712,7 @@ If you only have one variable to use, you should just use `"variables": {}`
 
 If you have multiple variables use `"variables": [{}]`
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 {

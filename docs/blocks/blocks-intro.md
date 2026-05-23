@@ -45,7 +45,7 @@ Unlike entities, blocks do not have a resource definition other than in `RP/bloc
 
 Below is the **minimum** behavior-side code to get a custom block into the creative inventory.
 
-<CodeHeader>BP/blocks/custom_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_block.json" />
 
 ```json
 {
@@ -78,7 +78,7 @@ Right now, our custom block is using the default component values (which can be 
 
 Let's configure our own functionality!
 
-<CodeHeader>BP/blocks/custom_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_block.json" />
 
 ```json
 {
@@ -121,7 +121,7 @@ The [geometry](/blocks/block-components#geometry) and [material instances](/bloc
 
 For our basic 16&times;16&times;16 pixel block, the [vanilla model](/blocks/vanilla-block-models) `minecraft:geometry.full_block` will be used.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/custom_block.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": "minecraft:geometry.full_block",
@@ -134,7 +134,7 @@ For our basic 16&times;16&times;16 pixel block, the [vanilla model](/blocks/vani
 
 Now, we need to link the texture shortname to an image file path in `RP/textures/terrain_texture.json`:
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -194,7 +194,7 @@ Textures can also be applied per face. For example, a custom "compass block" cou
 
 The [material instances](/blocks/block-components#material-instances) should look like this:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/compass_block.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {
@@ -221,7 +221,7 @@ The [material instances](/blocks/block-components#material-instances) should loo
 
 With the following `terrain_texture.json` data:
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -254,7 +254,7 @@ The mining sound, step on sound, breaking sound, and placement sound of custom b
 
 Learn more about block sounds [here](/blocks/block-sounds)!
 
-<CodeHeader>RP/blocks.json</CodeHeader>
+<CodeHeader path="RP/blocks.json" />
 
 ```json
 {
@@ -269,7 +269,7 @@ Learn more about block sounds [here](/blocks/block-sounds)!
 
 Finally, let's define our block names like this:
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 tile.wiki:custom_block.name=Custom Block

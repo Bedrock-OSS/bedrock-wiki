@@ -59,7 +59,7 @@ To set the state which determines the block's attachment, we will use the `minec
 
 The state contains more values than we need for log rotation, so some permutations will look identical.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "description": {
@@ -77,7 +77,7 @@ The state contains more values than we need for log rotation, so some permutatio
 
 Rotation makes use of block permutations. Each permutation contains the `minecraft:transformation` component, which allows for cardinal rotation by checking the `minecraft:block_face` state and applying an appropriate rotation.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "permutations": [
@@ -111,7 +111,7 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 To set the state which determines the block's attachment, we will use the `minecraft:placement_position` block trait with the `minecraft:block_face` state enabled.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "description": {
@@ -131,7 +131,7 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 **The below rotation values assume that the front of your model is facing north.**
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "permutations": [
@@ -186,7 +186,7 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 To set the state which determines the block's direction, we will use the `minecraft:placement_direction` block trait with the `minecraft:cardinal_direction` state enabled.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "description": {
@@ -207,7 +207,7 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 **The below rotation values assume that the front of your model is facing north.**
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "permutations": [
@@ -248,7 +248,7 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 To set the state which determines the block's direction, we will use the `minecraft:placement_direction` block trait with the `minecraft:facing_direction` state enabled.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "description": {
@@ -269,7 +269,7 @@ Rotation makes use of block permutations. Each permutation contains the `minecra
 
 **The below rotation values assume that the front of your model is facing north.**
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block" />
 
 ```json
 "permutations": [

@@ -32,7 +32,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 
 ### Feature File
 
-<CodeHeader>BP/features/house_feature.json</CodeHeader>
+<CodeHeader path="BP/features/house_feature.json" />
 
 ```json
 {
@@ -59,7 +59,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 
 ### Feature Rule
 
-<CodeHeader>BP/feature_rules/plains_house_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/plains_house_feature.json" />
 
 ```json
 {
@@ -103,7 +103,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 
 ### Feature File
 
-<CodeHeader>BP/features/bunker_feature.json</CodeHeader>
+<CodeHeader path="BP/features/bunker_feature.json" />
 
 ```json
 {
@@ -129,7 +129,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 
 ### Feature Rule
 
-<CodeHeader>BP/feature_rules/overworld_bunker_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/overworld_bunker_feature.json" />
 
 ```json
 {
@@ -179,7 +179,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 
 ### Feature File
 
-<CodeHeader>BP/features/balloon_feature.json</CodeHeader>
+<CodeHeader path="BP/features/balloon_feature.json" />
 
 ```json
 {
@@ -204,7 +204,7 @@ The first subfolder is used as the namespace for structure, meaning the structur
 
 ### Feature Rule
 
-<CodeHeader>BP/feature_rules/overworld_balloon_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/overworld_balloon_feature.json" />
 
 ```json
 {
@@ -258,7 +258,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 
 ### Feature File
 
-<CodeHeader>BP/features/aqua_temple_feature.json</CodeHeader>
+<CodeHeader path="BP/features/aqua_temple_feature.json" />
 
 ```json
 {
@@ -283,7 +283,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 
 ### Feature Rule
 
-<CodeHeader>BP/feature_rules/ocean_aqua_temple_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/ocean_aqua_temple_feature.json" />
 
 ```json
 {
@@ -327,7 +327,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 
 ### Feature File
 
-<CodeHeader>BP/features/raft_feature.json</CodeHeader>
+<CodeHeader path="BP/features/raft_feature.json" />
 
 ```json
 {
@@ -353,7 +353,7 @@ For underwater structures, make sure you waterlogged the structure, because Mine
 
 ### Feature Rule
 
-<CodeHeader>BP/feature_rules/ocean_raft_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/ocean_raft_feature.json" />
 
 ```json
 {

@@ -19,7 +19,7 @@ Have you ever needed to prevent a specific block from being placed? Sometimes pl
 
 Just like other scripts, you need the dependency in your `manifest.json`. We are using the `@minecraft/server` module, specifically the latest `beta` version.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -71,7 +71,7 @@ This is because blocks often have an identifier different from what you may thin
 
 We will start by adding the module imports we will be using in the code.
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 import { world, system } from "@minecraft/server";
@@ -83,7 +83,7 @@ Learn more about `system` at [System Events](/scripting/script-server#events).
 
 After we have added the module, we will add the preventative measure for block placement.
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 world.beforeEvents.playerPlaceBlock.subscribe((event) => {

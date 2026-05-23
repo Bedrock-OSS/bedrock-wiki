@@ -23,7 +23,7 @@ They were originally designed for use in adventure maps, but with the introducti
 
 NPC dialogue data is stored in dialogue files, which are stored in the `dialogue` folder in the root of the behavior pack. Here is a basic NPC dialogue file:
 
-<CodeHeader>BP/dialogue/example.json</CodeHeader>
+<CodeHeader path="BP/dialogue/example.json" />
 
 ```json
 {
@@ -62,8 +62,6 @@ Array of command strings to be run when the dialogue is opened. Optional.
 In the NPC's in-game Advanced Settings, this corresponds to the **"on enter"** button mode.
 :::
 
-<CodeHeader></CodeHeader>
-
 ```json
 "on_open_commands": [
     "/say Hello"
@@ -78,8 +76,6 @@ Array of command strings to be run when the dialogue is closed. Optional.
 In the NPC's in-game Advanced Settings, this corresponds to the **"on exit"** button mode.
 :::
 
-<CodeHeader></CodeHeader>
-
 ```json
 "on_close_commands": [
     "/say Goodbye"
@@ -89,8 +85,6 @@ In the NPC's in-game Advanced Settings, this corresponds to the **"on exit"** bu
 ### Buttons
 
 An array of objects specifying the buttons to show in the dialogue. Optional.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "buttons": [
@@ -114,8 +108,6 @@ An array of objects specifying the buttons to show in the dialogue. Optional.
 
 In `on_open_commands`, `on_close_commands`, and the `commands` property of each button object, you can use normal selectors, such as `@p` to select the nearest player. However, these selectors are run relative to the NPC entity, so this may be confusing in multiplayer. To solve this, there is a special selector, `@initiator` which always selects the player with the dialogue open.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "buttons": [
     {
@@ -132,8 +124,6 @@ This selector **only** works within NPC dialogues, it cannot be used anywhere el
 ## Translation
 
 All of the dialogue properties that will be displayed to the user can also be translated:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "npc_name": {
@@ -184,7 +174,7 @@ For this demo, use the manifest file at the top of this page.
 
 Even if the NPC will never be visible, an NPC entity is always needed for the `/dialogue` command. To do this, you will need to summon the NPC and put it in a ticking area so that it is accessible from anywhere:
 
-<CodeHeader>functions/setup.mcfunction</CodeHeader>
+<CodeHeader path="functions/setup.mcfunction" />
 
 ```
 tickingarea add 0 1 0 0 2 0
@@ -216,8 +206,6 @@ You can trigger an NPC dialogue from within the player using the /dialogue comma
 
 To avoid this add the `minecraft:interaction` to the entity which will replace the npc interaction. The npc stuff will still work, but if a player clicks on another player, then the npc won't come up
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -242,7 +230,7 @@ To avoid this add the `minecraft:interaction` to the entity which will replace t
 
 This dialogue file features two dialogues, each with two teleport buttons, and a button to switch between the two.
 
-<CodeHeader>BP/dialogue/example.json</CodeHeader>
+<CodeHeader path="BP/dialogue/example.json" />
 
 ```json
 {
@@ -302,7 +290,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 
 #### Item JSON
 
-<CodeHeader>BP/items/teleport_menu.json</CodeHeader>
+<CodeHeader path="BP/items/teleport_menu.json" />
 
 ```json
 {
@@ -328,7 +316,7 @@ Lastly, create an item that will open the dialogue when right-clicked/interacted
 
 #### Custom Component Script
 
-<CodeHeader>BP/scripts/teleportMenu.js</CodeHeader>
+<CodeHeader path="BP/scripts/teleportMenu.js" />
 
 ```js
 import { system } from "@minecraft/server";

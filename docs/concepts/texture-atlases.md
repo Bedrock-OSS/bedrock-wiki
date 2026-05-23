@@ -71,7 +71,7 @@ At each mip level, the resolution of the texture is halved.
 
 By default, block textures in `atlas.terrain` have 4 mip levels:
 
-<CodeHeader>Vanilla RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="Vanilla RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -120,7 +120,7 @@ By default, there are 8 texels of padding around each block texture:
 
 An object where each key is a shortname that can be used to reference an area in the texture atlas.
 
-<CodeHeader>Texture Atlas</CodeHeader>
+<CodeHeader path="Texture Atlas" />
 
 ```json
 {
@@ -256,7 +256,7 @@ May also be set to a number, where `0` represents `false` and all other numbers 
 -   `default_leather_horse_armor_color`: HEX String
     -   Determines the default color of leather horse armor when undyed.
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {

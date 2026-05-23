@@ -114,7 +114,7 @@ Manifest files are written in JSON. If this isn't familiar to you, you can learn
 First, create a new file in your BP folder by right-clicking on the folder and selecting `New File`
 Call the file `manifest.json` and paste the following code into the file to begin with.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -184,7 +184,7 @@ Additionally, we specify a `pack_scope` of `"world"`{lang=json} which prevents t
 
 Copy the following code into your newly created `RP/manifest.json` and insert your own UUIDs.
 
-<CodeHeader>RP/manifest.json</CodeHeader>
+<CodeHeader path="RP/manifest.json" />
 
 ```json
 {
@@ -230,27 +230,27 @@ The last thing to do is setup language support for your add-on.
 You will need to create a language file for both the RP and the BP (note that the BP translations are only used by the BP manifest, **all other translations such as item names go in the RP**).
 You can learn more about how Minecraft handles localization [here](/text/text-intro).
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 pack.name=Wiki Resource Pack
 pack.description=A Ghostly Guide
 ```
 
-<CodeHeader>BP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="BP/texts/en_US.lang" />
 
 ```lang
 pack.name=Wiki Behavior Pack
 pack.description=A Ghostly Guide
 ```
 
-<CodeHeader>RP/texts/languages.json</CodeHeader>
+<CodeHeader path="RP/texts/languages.json" />
 
 ```json
 ["en_US"]
 ```
 
-<CodeHeader>BP/texts/languages.json</CodeHeader>
+<CodeHeader path="BP/texts/languages.json" />
 
 ```json
 ["en_US"]

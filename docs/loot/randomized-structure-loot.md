@@ -24,7 +24,7 @@ To start, create the directory `BP/loot_tables/chests` and create your loot tabl
 
 You can learn how to make loot tables in [Beginner's Guide](/guide/loot-table)
 
-<CodeHeader>BP/loot_tables/chests/my_structure_loot.json</CodeHeader>
+<CodeHeader path="BP/loot_tables/chests/my_structure_loot.json" />
 
 ```json
 {
@@ -138,7 +138,7 @@ There is no way to have different loot in different chests in the same structure
 
 A example of a suspicious gravel having a loot table applied.
 
-<CodeHeader>minecraft:processor_list</CodeHeader>
+<CodeHeader path="minecraft:processor_list" />
 
 ```json
 {
@@ -163,7 +163,7 @@ A example of a suspicious gravel having a loot table applied.
 
 A example of a chest having a loot table applied to all rotations.
 
-<CodeHeader>minecraft:processor_list</CodeHeader>
+<CodeHeader path="minecraft:processor_list" />
 
 ```json
 {

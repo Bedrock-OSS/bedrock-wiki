@@ -24,7 +24,7 @@ Not all techniques are ideal for all scenarios. Experiment, and figure out what 
 
 This is generally the best option for creating entities with solid collisions, allowing players to collide with the entity without needing to modify the player entity JSON.
 
-<CodeHeader>BP/entities/solid_entity.json</CodeHeader>
+<CodeHeader path="BP/entities/solid_entity.json" />
 
 ```json
 {
@@ -67,7 +67,7 @@ Adding the `minecraft:is_stackable` component to your entity will allow it to co
 
 You will also need to add `minecraft:push_through` and set its `value` parameter to 1.
 
-<CodeHeader>minecraft:entity</CodeHeader>
+<CodeHeader path="minecraft:entity" />
 
 ```json
 "components": {
@@ -82,7 +82,7 @@ You will also need to add `minecraft:push_through` and set its `value` parameter
 
 ### Boat
 
-<CodeHeader>BP/entities/solid_entity.json</CodeHeader>
+<CodeHeader path="BP/entities/solid_entity.json" />
 
 ```json
 {
@@ -102,7 +102,7 @@ You will also need to add `minecraft:push_through` and set its `value` parameter
 
 ### Shulker
 
-<CodeHeader>BP/entities/solid_entity.json</CodeHeader>
+<CodeHeader path="BP/entities/solid_entity.json" />
 
 ```json
 {

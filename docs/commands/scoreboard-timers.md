@@ -28,8 +28,6 @@ It is recommended to use this system while working with command blocks, as well 
 
 _Type the following commands in Chat:_
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /scoreboard objectives add wiki:ticks dummy
 /scoreboard objectives add wiki:events dummy
@@ -38,8 +36,6 @@ _Type the following commands in Chat:_
 After creating these objectives, the next step is to define the interval for each repeating event using the `ticks` objective.
 
 To do that, first, you must know that 1 second is approximately 20 game-ticks in Minecraft. Based on this knowledge, you will need to do some basic calculations to obtain the equivalent ticks for each interval you want to define.
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 # 2h = 20t × 60s × 60m × 2h = 144000t
@@ -56,7 +52,7 @@ With the scoreboard data set, we can now operate our timers based on the interva
 
 ## System
 
-<CodeHeader>BP/functions/wiki/scoreboard/world_timer.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/world_timer.mcfunction" />
 
 ```yaml
 ## World Timer/Clock
@@ -132,8 +128,6 @@ The remaining commands follow the same structure, with only the event labels and
 
 To limit how many times an event occurs, you need to create a new objective called `wiki:occurrences` and define how many times that event should occur, as shown below.
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /scoreboard objectives add wiki:occurrences dummy
 /scoreboard players set .ChatMessage wiki:occurrences 5
@@ -142,7 +136,7 @@ To limit how many times an event occurs, you need to create a new objective call
 
 Once you have done that, modify your system as shown below.
 
-<CodeHeader>BP/functions/wiki/scoreboard/world_timer.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/world_timer.mcfunction" />
 
 ```yaml
 ## World Timer/Clock
@@ -167,8 +161,6 @@ execute if score .SpeedEffect wiki:events matches 0 if score .SpeedEffect wiki:o
 ## Executing Commands During Intervals
 
 To run commands continuously between the intervals of an event, you may use the technique shown below.
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 ## Speed Effect (every 30s) + Particle (every tick)
@@ -195,7 +187,7 @@ Let's say we want to perform the following actions:
 5. stop the timer if a passive mob is nearby.
 6. loop the timer if a hostile mob is nearby.
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/entity_timer.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/entity_timer.mcfunction" />
 
 ```yaml
 ## Running the Timer

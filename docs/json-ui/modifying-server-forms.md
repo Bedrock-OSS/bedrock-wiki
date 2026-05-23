@@ -22,7 +22,7 @@ In this tutorial, we will be implementing this inside the `ui/server_form.json`.
 
 First we need to modify the controls of `main_screen_content` in order to add our custom made one.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>
+<CodeHeader path="RP/ui/server_form.json" />
 ```json
 {
   "main_screen_content": {
@@ -51,7 +51,7 @@ First we need to modify the controls of `main_screen_content` in order to add ou
 
 You can do this multiple times but it's advised to do it once since we can just reference a main panel inside `"long_form"` which contains all our custom made forms.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>
+<CodeHeader path="RP/ui/server_form.json" />
 ```json
 {
   "main_screen_content": {
@@ -91,7 +91,7 @@ You can do this multiple times but it's advised to do it once since we can just 
 
 Now we need to define the element `"our_long_form_panel"` which contains our all custom made forms.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>
+<CodeHeader path="RP/ui/server_form.json" />
 ```json
 {
   "our_long_form_panel": {
@@ -150,7 +150,7 @@ Now we need to define the element `"our_long_form_panel"` which contains our all
 
 If you've tried this, you might notice it overlaps with the normal action form. To fix this, we need to define the binding in the normal long form as well.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>  
+<CodeHeader path="RP/ui/server_form.json" />  
 ```json
 {
   "long_form": {
@@ -234,7 +234,7 @@ Editing the modal forms is the same as editing long form but we need to modify m
 
 First we need to modify the controls of `main_screen_content` in order to add our custom made one.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>
+<CodeHeader path="RP/ui/server_form.json" />
 ```json
 {
   "main_screen_content": {
@@ -264,7 +264,7 @@ First we need to modify the controls of `main_screen_content` in order to add ou
 
 You can do this multiple times but it's advised to do it once since we can just reference a main panel inside `"custom_form"` which contains all our custom made forms.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>
+<CodeHeader path="RP/ui/server_form.json" />
 ```json
 {
   "main_screen_content": {
@@ -306,7 +306,7 @@ You can do this multiple times but it's advised to do it once since we can just 
 
 Now we need to define the element `"our_custom_form_panel"` which contains our all custom made forms.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>
+<CodeHeader path="RP/ui/server_form.json" />
 ```json
 {
   "our_custom_form_panel": {
@@ -366,7 +366,7 @@ Now we need to define the element `"our_custom_form_panel"` which contains our a
 
 If you've tried this, you might notice it overlaps with the normal modal form. To fix this, we need to define the binding in the normal custom form as well.
 
-<CodeHeader>RP/ui/server_form.json</CodeHeader>  
+<CodeHeader path="RP/ui/server_form.json" />  
 ```json
 {
   "custom_form": {

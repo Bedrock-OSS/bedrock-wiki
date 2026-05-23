@@ -21,7 +21,7 @@ This document will showcase some of the various ways to remove shadows, and any 
 
 One possibility is to make the size of the collision component very small. This will make it hard to interact/hit the entity, but it will make the shadow disappear!
 
-<CodeHeader>minecraft:entity > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:collision_box": {
@@ -32,7 +32,7 @@ One possibility is to make the size of the collision component very small. This 
 
 You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit the entity, although you will not be able to interact with it. The `custom_hit_test` will not create a shadow.
 
-<CodeHeader>minecraft:entity > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:custom_hit_test": {
@@ -51,7 +51,7 @@ You can also add the [custom hit test component](https://bedrock.dev/docs/stable
 
 Another method is to give the entity the effect of invisibility (which hides the entity's shadow) and apply the `"minecraft:renders_when_invisible"` component.
 
-<CodeHeader>minecraft:entity > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:renders_when_invisible": {},
@@ -91,7 +91,7 @@ This method is no longer supported. With the advent of render-dragon, materials 
 
 #### Working shadow code: Shadows for ALL entities:
 
-<CodeHeader>RP/materials/shadows.material</CodeHeader>
+<CodeHeader path="RP/materials/shadows.material" />
 
 ```json
 "shadow_overlay":{
@@ -114,8 +114,6 @@ This method is no longer supported. With the advent of render-dragon, materials 
 ```
 
 #### Disabled shadow code: No Shadows for ALL entities:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "shadow_overlay":{

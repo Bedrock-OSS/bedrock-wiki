@@ -26,7 +26,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/wiki/events/player/on_death.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/events/player/on_death.mcfunction" />
 
 ```yaml
 ## State Machine
@@ -72,7 +72,7 @@ Just make sure to follow the given order and properly apply the `scores={wiki:q.
 
 If you are using functions instead of command blocks, the `on_death` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 ```json
 {
   "values": [
@@ -108,7 +108,7 @@ If two or more players are teleported to the same point and one of them dies but
 -   Make sure you add the `wiki:q.is_dead` scoreboard objective:
     -   `/scoreboard objectives add wiki:q.is_dead dummy`
 
-<CodeHeader>BP/functions/detect/player/is_dead.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/detect/player/is_dead.mcfunction" />
 
 ```yaml
 ## Set Player States

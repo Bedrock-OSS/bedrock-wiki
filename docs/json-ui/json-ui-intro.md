@@ -67,7 +67,7 @@ The `_ui_defs.json` file references all JSON UI files in an array.
 
 You can make new files, for example we'll add `RP/ui/button.json` and `RP/my_ui/main_menu.json`. In the file, we would list them as such:
 
-<CodeHeader>RP/ui/_ui_defs.json</CodeHeader>
+<CodeHeader path="RP/ui/_ui_defs.json" />
 
 ```json
 {
@@ -84,7 +84,7 @@ You can make new files, for example we'll add `RP/ui/button.json` and `RP/my_ui/
 
 We can denote a variable `"$info_text_color"` and its value of `[0.8, 0.8, 0.8]` within the `_global_variables.json` file as such:
 
-<CodeHeader>RP/ui/_global_variables.json</CodeHeader>
+<CodeHeader path="RP/ui/_global_variables.json" />
 
 ```json
 {
@@ -94,7 +94,7 @@ We can denote a variable `"$info_text_color"` and its value of `[0.8, 0.8, 0.8]`
 
 Other elements in different JSON UI files can then reference this variable to be used for later:
 
-<CodeHeader>vanilla/my_ui/file1.json</CodeHeader>
+<CodeHeader path="vanilla/my_ui/file1.json" />
 
 ```json
 {
@@ -106,7 +106,7 @@ Other elements in different JSON UI files can then reference this variable to be
 }
 ```
 
-<CodeHeader>vanilla/my_ui/file2.json</CodeHeader>
+<CodeHeader path="vanilla/my_ui/file2.json" />
 
 ```json
 {
@@ -127,7 +127,7 @@ Namespaces are identifiers for the UI files. They are used to access elements in
 
 For instance, we have an element `foobar` in the namespace `one`:
 
-<CodeHeader>vanilla/ui/file_a.json</CodeHeader>
+<CodeHeader path="vanilla/ui/file_a.json" />
 
 ```json
 {
@@ -139,7 +139,7 @@ For instance, we have an element `foobar` in the namespace `one`:
 
 We can then reference the same element above into a different namespace `two`:
 
-<CodeHeader>vanilla/ui/file_b.json</CodeHeader>
+<CodeHeader path="vanilla/ui/file_b.json" />
 
 ```json
 {
@@ -167,7 +167,7 @@ A JSON UI element is the basic form of data within JSON UI. Elements must have a
 
 Here the element `type` is `label` so it will render a text of `Hello World` when called:
 
-<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
+<CodeHeader path="vanilla/ui/example_file.json" />
 
 ```json
 {
@@ -198,7 +198,7 @@ When using the `anim_type` property in place of the `type` property, you can cre
 
 Animation elements can then be referenced on other non-animation element types, such as `label` and `panel`.
 
-<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
+<CodeHeader path="vanilla/ui/example_file.json" />
 
 ```json
 {
@@ -271,7 +271,7 @@ Variables are not only limited to the `_global_variables.json` file. Instead, it
 
 The symbol `$` is added at the beginning of each string to denote it as a variable. Variables can store integers, floats, booleans, strings, and arrays.
 
-<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
+<CodeHeader path="vanilla/ui/example_file.json" />
 
 ```json
 {
@@ -300,7 +300,7 @@ The symbol `$` is added at the beginning of each string to denote it as a variab
 
 You can also derive variables from another element as such:
 
-<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
+<CodeHeader path="vanilla/ui/example_file.json" />
 
 ```json
 {
@@ -328,7 +328,7 @@ Bindings are used to bind hardcoded values to the element and use it for process
 The `text` property value is `#hardtext`. By using `bindings`, I can get the value of the hardcoded variable `#hardtext` so the `text` property can use it.
 Here it's directly assigning the `#hardtext` value to the `text` property.
 
-<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
+<CodeHeader path="vanilla/ui/example_file.json" />
 
 ```json
 {
@@ -346,7 +346,7 @@ Here it's directly assigning the `#hardtext` value to the `text` property.
 
 Or alternatively, it may sometimes look like as follows:
 
-<CodeHeader>vanilla/ui/example_file.json</CodeHeader>
+<CodeHeader path="vanilla/ui/example_file.json" />
 
 ```json
 {
@@ -366,8 +366,6 @@ Or alternatively, it may sometimes look like as follows:
 In this case, the `#hardtext` value is assigned to the `#text` binding property name that will then be assigned to the `text` property.
 
 This happens a lot with the `visible` and `enabled` properties. Here's an example with both of them:
-
-<CodeHeader></CodeHeader>
 
 ```json
 {
@@ -399,8 +397,6 @@ And `#play_button_enabled` will override the `#enabled` binding property value, 
 Let's say you want to show a panel with some content when a specific toggle is selected/checked. You'll need a different type of binding structure.
 We have to tell the source element where the value will come from, tell which property of that source element we want to get the value from and which property we want to override its value.
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
   "panel": {
@@ -431,7 +427,7 @@ It is challenging to manipulate Bedrock's current UI system when things are visi
 
 Variables can be used to render UI controls conditionally. Recall that UI variables are properties with `$` in front of them. An example of a variable that carries engine data in `hud_screen.json` is `$actionbar_text`. Looking at `hud_actionbar_text`, we can see that `$actionbar_text` is used to display the actionbar text.
 
-<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="vanilla/ui/hud_screen.json" />
 
 ```json
 {
@@ -463,7 +459,7 @@ Variables can be used to render UI controls conditionally. Recall that UI variab
 
 The `visible` property is used to conditionally render a UI control when working with variables that carry bedrock engine data. Consider the below example. A copy is made of the `$actionbar_text` variable to allow us to modify and perform comparisons on it (cannot be done with the hardcoded variable directly). The copy variable `$atext` is then used in the added `visible` property, which says "make the text label visible if the actionbar text is **not** equal to `hello world`".
 
-<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="vanilla/ui/hud_screen.json" />
 
 ```json
 {
@@ -498,7 +494,7 @@ The `visible` property is used to conditionally render a UI control when working
 
 Modifying the above JSON into an unobtrusive UI file used in a resource pack should look identical to this:
 
-<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="vanilla/ui/hud_screen.json" />
 
 ```json
 {
@@ -513,7 +509,7 @@ When you log into a world with the resource pack enabled, try executing `/title 
 
 Here's a more complicated example of conditional rendering with variables. In this case, it is necessary to use the actionbar factory. Factories are element generators, and there are some with specific names such as `hud_actionbar_text_factory` which have hardcoded properties. This factory generates/resets the element inside its `control_id` whenever the actionbar command is run in addition to passing us some useful variables such as `$actionbar_text`, `$tool_tip_text`, etc., data which is only accessible through the factory.
 
-<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="vanilla/ui/hud_screen.json" />
 
 ```json
 {
@@ -556,7 +552,7 @@ The above example shows a 16x16 black square on the HUD screen when the actionba
 
 Following the above example with the actionbar, you might logically assume that the title also uses variables. This is not the case. The title uses bindings for its data, as shown below.
 
-<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="vanilla/ui/hud_screen.json" />
 
 ```json
 {
@@ -625,7 +621,7 @@ Following the above example with the actionbar, you might logically assume that 
 
 You will need to add another binding object to the text to control its visibility. Recall that `#visible` contains the visibility of the thing directly through bindings. The following example will not render the title string `hello world` but will render all other strings. Try typing `/title @s title hello world` to see it in-game.
 
-<CodeHeader>vanilla/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="vanilla/ui/hud_screen.json" />
 
 ```json
 {
@@ -699,7 +695,7 @@ You will need to add another binding object to the text to control its visibilit
 
 Modifying the above JSON into an unobtrusive UI file used in a resource pack should look identical to this:
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 
 ```json
 {
@@ -721,7 +717,7 @@ Modifying the above JSON into an unobtrusive UI file used in a resource pack sho
 
 Like before, here's a more complicated example of conditional rendering with bindings below. In this case, the 16x16 black image will only render when the title text string equals `hello world`. While you don't need to use the title factory in this case, you should if you are going to use UI animations.
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 
 ```json
 {

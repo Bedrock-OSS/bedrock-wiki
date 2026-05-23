@@ -18,7 +18,7 @@ This article is for anyone who wants to try imitate the village mechanic for the
 
 First let's start with some basic navigation behavior.
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:preferred_path":{
@@ -52,7 +52,7 @@ First let's start with some basic navigation behavior.
 
 Allows entity to do random walk.
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:behavior.random_stroll":{
@@ -65,7 +65,7 @@ Allows entity to do random walk.
 
 Make entity return to inside dwelling bound, in this case inside a village border. Requiring minecraft:dweller component that will be explained below.
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:behavior.move_towards_dwelling_restriction": {
@@ -76,7 +76,7 @@ Make entity return to inside dwelling bound, in this case inside a village borde
 
 Makes entity navigate around a village by creating a path to patrol. Used by Iron Golem.
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:behavior.move_through_village": {
@@ -88,7 +88,7 @@ Makes entity navigate around a village by creating a path to patrol. Used by Iro
 
 Allows entity to enter a building and also take shelter when raining. Needs open door capabilities.
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:behavior.move_indoors":{
@@ -98,7 +98,7 @@ Allows entity to enter a building and also take shelter when raining. Needs open
 
 Makes entity stay indoors while sun is down.
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:behavior.restrict_open_door":{
@@ -108,7 +108,7 @@ Makes entity stay indoors while sun is down.
 
 Use in pair with:
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:annotation.open_door":{
@@ -116,7 +116,7 @@ Use in pair with:
 }
 ```
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:navigation.walk":{
@@ -125,7 +125,7 @@ Use in pair with:
 }
 ```
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
  "minecraft:behavior.open_door":{
@@ -136,7 +136,7 @@ Use in pair with:
 
 ## Main Behavior
 
-<CodeHeader>BP/entities/custom_villager.json#components</CodeHeader>
+<CodeHeader path="BP/entities/custom_villager.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:dweller": {
@@ -177,8 +177,6 @@ You can find out how to make your entity sleep [here](/entities/sleeping-entitie
 
 Requires "dweller_role" set to be "inhabitant" also if "preferred_profession" doesn't exist the entity will try to move to the closest any job site.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:behavior.work": {
 	"priority": 4,
@@ -218,8 +216,6 @@ Now you know everything about needed mechanic, let's try to put all of this toge
 First let's do something simple.
 Put work behavior in component group work like this:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "component_groups":{
     "work_schedule":{
@@ -252,8 +248,6 @@ Put work behavior in component group work like this:
 ```
 
 Next, make your entity work.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:scheduler":{
@@ -299,8 +293,6 @@ Next, make your entity work.
 ```
 
 The events section looks something like this:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "events":{

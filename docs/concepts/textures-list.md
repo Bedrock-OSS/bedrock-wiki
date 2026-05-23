@@ -26,7 +26,7 @@ Any texture! All textures can and _should_ be used in the `textures_list.json` f
 The structure is simple. The file itself is in `RP/textures` and is named `textures_list.json`.
 The file contains an array of texture paths (file paths in the `textures` folder excluding extensions such as `.texture_set.json` and `.png`):
 
-<CodeHeader>RP/textures/textures_list.json</CodeHeader>
+<CodeHeader path="RP/textures/textures_list.json" />
 
 ```json
 [

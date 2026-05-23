@@ -19,7 +19,7 @@ Learn more about single block features [here](/world-generation/feature-types#si
 
 Coarse Dirt File
 
-<CodeHeader>BP/features/coarse_dirt_feature.json</CodeHeader>
+<CodeHeader path="BP/features/coarse_dirt_feature.json" />
 
 ```json
 {
@@ -46,7 +46,7 @@ Coarse Dirt File
 
 Podzol File
 
-<CodeHeader>BP/features/podzol_feature.json</CodeHeader>
+<CodeHeader path="BP/features/podzol_feature.json" />
 
 ```json
 {
@@ -67,7 +67,7 @@ Podzol File
 
 Cobblestone File
 
-<CodeHeader>BP/features/cobblestone_feature.json</CodeHeader>
+<CodeHeader path="BP/features/cobblestone_feature.json" />
 
 ```json
 {
@@ -92,7 +92,7 @@ Weighted random features are going to be our _randomizer_ to select between each
 
 Learn more about weighted random features [here](/world-generation/feature-types#weighted-random-features)
 
-<CodeHeader>BP/features/select_surface_block_feature.json</CodeHeader>
+<CodeHeader path="BP/features/select_surface_block_feature.json" />
 
 ```json
 {
@@ -125,7 +125,7 @@ Scatter features are an important part of our surface builder. It will determine
 
 Learn more about scatter features [here](/world-generation/feature-types#scatter-features)
 
-<CodeHeader>BP/features/scatter_surface_block_feature.json</CodeHeader>
+<CodeHeader path="BP/features/scatter_surface_block_feature.json" />
 
 ```json
 {
@@ -161,7 +161,7 @@ Learn more about scatter features [here](/world-generation/feature-types#scatter
 
 This is the final step for our surface builder. The feature rules for our surface builders are slightly different.
 
-<CodeHeader>BP/feature_rules/overworld_surface_blocks_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/overworld_surface_blocks_feature.json" />
 
 ```json
 {

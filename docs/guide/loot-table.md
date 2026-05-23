@@ -24,7 +24,7 @@ Next, we'll enhance the custom Ghost entity by adding some more basic mechanics 
 
 First, we'll make the ghost drop Ectoplasm upon death: create the following file:
 
-<CodeHeader>BP/loot_tables/entities/ghost.json</CodeHeader>
+<CodeHeader path="BP/loot_tables/entities/ghost.json" />
 
 ```json
 {
@@ -66,7 +66,7 @@ For more information on loot tables, see our extended guide: [Loot Tables](/loot
 
 Next, we'll make the ghost spawn in deserts at night:
 
-<CodeHeader>BP/spawn_rules/ghost.json</CodeHeader>
+<CodeHeader path="BP/spawn_rules/ghost.json" />
 
 ```json
 {
@@ -123,7 +123,7 @@ To learn more about spawn rules, take a look on our guide on [Vanilla spawn rule
 
 And finally, as an introduction to recipes, we'll make the Ectoplasm craftable into Slime Blocks:
 
-<CodeHeader>BP/recipes/ectoplasm_slime_blocks.json</CodeHeader>
+<CodeHeader path="BP/recipes/ectoplasm_slime_blocks.json" />
 
 ```json
 {

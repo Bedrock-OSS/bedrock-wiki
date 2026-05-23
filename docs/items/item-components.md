@@ -18,7 +18,7 @@ The wiki aims to share up-to-date information about custom items, and currently 
 
 Item components are used to change how your item appears and functions in the world. They are applied in the `components` child of `minecraft:item`.
 
-<CodeHeader>BP/items/custom_item.json</CodeHeader>
+<CodeHeader path="BP/items/custom_item.json" />
 
 ```json
 {
@@ -50,7 +50,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 -   When `true`{lang=json}, the item can be equipped into the off-hand slot.
 -   When `false`{lang=json} (default), the item cannot be equipped into the off-hand slot.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:allow_off_hand": true
@@ -77,7 +77,7 @@ _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
     -   Lists the blocks (as an array of [block descriptors](/documentation/shared-constructs#block-descriptors)) that this item can be used on to place the block.
     -   If empty or omitted, the item will be able to place onto any block.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:block_placer": {
@@ -111,7 +111,7 @@ _Requires format version [1.21.40](/items/item-format-history#_1-21-40) or later
     -   Defines the maximum number of item stacks accessible from the top of the bundle.
     -   Slots are accessed via the tooltip in rows filling from the bottom right to the top left.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:bundle_interaction": {
@@ -130,7 +130,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 -   When `true`{lang=json} (default), the item can destroy blocks in creative mode.
 -   When `false`{lang=json}, the item cannot destroy blocks in creative mode.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:can_destroy_in_creative": true
@@ -147,7 +147,7 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
 -   `composting_chance` — Float (`0-100`{lang=js})
     -   How likely the compost level is to increase as a percentage.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:compostable": {
@@ -174,7 +174,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
         -   `"use"`{lang=json} (default) causes the cooldown to start when the item is used and prevents the item from being used while the cooldown is active.
         -   `"attack"`{lang=json} causes the cooldown to start when the player attacks while holding the item and prevents the item from being used to attack while the cooldown is active.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:cooldown": {
@@ -192,7 +192,7 @@ _Requires format version [1.26.0](/items/item-format-history#_1-26-0) or later._
 
 #### Integer Format {#damage-integer}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:damage": 10
@@ -211,7 +211,7 @@ _Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later
     -   List of damage causes (such as `entity_attack` and `magma`) that can be absorbed by the item.
     -   See the autocompletion for the `/damage` command for a list of available damage causes.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:damage_absorption": {
@@ -237,7 +237,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
     -   Determines whether the "Efficiency" enchantment is able to affect the defined destroy speeds.
     -   By default, this is set to `false`{lang=json}.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:digger": {
@@ -271,7 +271,7 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 -   `value` — String
     -   The localization key to associate with the item.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:display_name": {
@@ -279,7 +279,7 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 }
 ```
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_item=Custom Item
@@ -310,7 +310,7 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 -   `max_durability` — Integer (`0-32767`{lang=js}) ([MCPE-180112](https://bugs.mojang.com/browse/MCPE-180112))
     -   The amount of damage that the item can take before breaking.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:durability": {
@@ -340,7 +340,7 @@ _Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later
     -   `sound_event` — String (optional)
         -   Vanilla level sound event to trigger when the threshold is met.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:durability_sensor": {
@@ -370,7 +370,7 @@ _Requires format version [1.21.30](/items/item-format-history#_1-21-30) or later
 -   `default_color` — String (optional)
     -   Determines the color to use by default before the player has dyed the item.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:dyeable": {
@@ -391,7 +391,7 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 -   `value` — Integer (`0-255`{lang=js}) ([MCPE-180331](https://bugs.mojang.com/browse/MCPE-180331))
     -   Determines the quality and quantity of enchantments available when enchanting the item using an Enchanting Table.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:enchantable": {
@@ -473,7 +473,7 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
     -   Lists the blocks (as an array of [block descriptors](/documentation/shared-constructs#block-descriptors)) that this item can be used on to place the block.
     -   If empty or omitted, the item will be able to place on any block.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
     "minecraft:entity_placer": {
@@ -496,7 +496,7 @@ Determines whether items should be able to withstand fire and lava when dropped 
 -   `value` — Boolean
     -   Determines whether the item is fire resistant.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:fire_resistant": {
@@ -531,7 +531,7 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 -   `using_converts_to` — String (optional)
     -   When used, converts to the item specified by the string in this field.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:food": {
@@ -553,7 +553,7 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
     -   The time duration (in seconds) that this item fuels furnaces for.
     -   The maximum value is a result of the tick-converted duration reaching the 32-bit integer limit.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:fuel": {
@@ -569,7 +569,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 
 #### Boolean Format {#glint-boolean}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:glint": false
@@ -583,7 +583,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 
 #### Boolean Format {#hand-equipped-boolean}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:hand_equipped": true
@@ -597,7 +597,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 
 #### String Format {#hover-text-color-string}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:hover_text_color": "minecoin_gold"
@@ -613,7 +613,7 @@ _Requires format version [1.20.60](/items/item-format-history#_1-20-60) or later
 
 A shorthand format for defining the `default` texture of the item icon.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:icon": "wiki:custom_item"
@@ -638,7 +638,7 @@ A shorthand format for defining the `default` texture of the item icon.
     -   `bundle_open_front`
         -   The texture displayed in front of the preview of the item selected in the [bundle interaction](#bundle-interaction) tooltip.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:icon": {
@@ -660,7 +660,7 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 -   When `true`{lang=json}, the generic "Use Item" (`action.interact.use`) text will be displayed on the interact button.
 -   When `false`{lang=json} (default), the interact button will not be displayed.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:interact_button": true
@@ -670,13 +670,13 @@ _Requires format version [1.20.30](/items/item-format-history#_1-20-30) or later
 
 Enables the interact button and determines the localization key of the text to display.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:interact_button": "action.interact.wiki:launch"
 ```
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 action.interact.wiki:launch=Launch
@@ -712,7 +712,7 @@ Causes the item to damage (as well as dismount and apply knockback to) each enti
     -   Lists the conditions that need to be met for each target to be receive knockback from the kinetic attack.
     -   By default, knockback is never applied.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:kinetic_weapon": {
@@ -751,7 +751,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 
 #### Boolean Format {#liquid-clipped-boolean}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:liquid_clipped": true
@@ -765,7 +765,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 
 #### Integer Format {#max-stack-size-integer}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:max_stack_size": 64
@@ -790,7 +790,7 @@ Causes the item to damage all entities in a straight line from the player's view
     -   Determines the `reach` applied when the player is in creative mode.
     -   By default, players in creative mode will be restricted to the normal `reach` range.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:piercing_weapon": {
@@ -820,7 +820,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
     -   The type of entity to be fired as a projectile.
     -   If no namespace is specified, it is assumed to be `minecraft`.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:projectile": {
@@ -846,7 +846,7 @@ _Requires format version [1.21.30](/items/item-format-history#_1-21-30) or later
 -   `rare` results in an aqua name.
 -   `epic` results in a light purple name.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:rarity": "rare"
@@ -871,7 +871,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
         -   The localization key will follow the format `item.record_<id>.desc`{lang=xml}, where `<id>`{lang=xml} is the substring of the sound event following the last `.` character.
         -   For example, if the `"bucket.empty.powder_snow"`{lang=json} sound event were used, the description would be `item.record_powder_snow.desc`.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:record": {
@@ -901,7 +901,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
             -   The second slot in the anvil can be referenced using `context.other`{lang=molang}.
             -   Random functions such as `math.random`{lang=molang} are supported.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:repairable": {
@@ -922,7 +922,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 }
 ```
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:repairable": {
@@ -965,7 +965,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 -   `scale_power_by_draw_duration` — Boolean
     -   Determines whether the power of the released projectile increases the longer the weapon is drawn.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:shooter": {
@@ -996,7 +996,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 -   When `true`{lang=json} (default), the item will despawn as an entity.
 -   When `false`{lang=json}, the item will not despawn as an entity.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:should_despawn": true
@@ -1010,7 +1010,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 
 #### Boolean Format {#stacked-by-data-boolean}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:stacked_by_data": true
@@ -1035,7 +1035,7 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
 -   `max_slots` — Integer (`1-64`{lang=js})
     -   Defines the number of slots in the container.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:storage_item": {
@@ -1062,7 +1062,7 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
 
 -   `max_weight_limit` — Integer
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:storage_weight_limit": {
@@ -1081,7 +1081,7 @@ _Requires format version [1.21.60](/items/item-format-history#_1-21-60) or later
 -   `weight_in_storage_item` — Integer (`0-64`{lang=js})
     -   When `0`{lang=json}, the item is not allowed inside another storage item.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:storage_weight_modifier": {
@@ -1096,7 +1096,7 @@ The actual swing duration may differ from this value due to effects such as Mini
 
 #### Float Format {#swing-duration-float}
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:swing_duration": {
@@ -1117,7 +1117,7 @@ Determines the vanilla sound events triggered when a player attacks when holding
 -   `attack_critical_hit` — String (optional)
     -   Determines the _vanilla_ sound event triggered when an entity is hit and critical damage is dealt.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:swing_sounds": {
@@ -1137,7 +1137,7 @@ _Requires format version [1.20.50](/items/item-format-history#_1-20-50) or later
 -   `tags` — Array
     -   An array of tags to apply to the item.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:tags": {
@@ -1169,7 +1169,7 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 -   `scale_power_by_draw_duration` — Boolean
     -   Determines whether the power of the released projectile increases the longer the item is drawn.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:throwable": {
@@ -1203,7 +1203,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 | `"spear"`{lang=json}    | Plays the third person arm raising animation used by the Trident.<br/>For melee spear animations, apply the `minecraft:is_spear` tag to the item instead of this component. |
 | `"spyglass"`{lang=json} | Plays the third person arm raising animation used by the Spyglass.                                                                                                          |
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:use_animation": "eat"
@@ -1226,7 +1226,7 @@ _Requires format version [1.20.50](/items/item-format-history#_1-20-50) or later
 -   `use_duration` — Float
     -   The time duration (in seconds) that the item must be used for to complete a single use.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:use_modifiers": {
@@ -1256,7 +1256,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
         -   `"slot.armor.feet"`{lang=json}
     -   When set to an armor slot, the item's [max stack size](#max-stack-size) is set to 1 ([MCPE-176931](https://bugs.mojang.com/browse/MCPE-176931)).
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:wearable": {

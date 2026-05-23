@@ -155,8 +155,6 @@ This can be seen as three operations: `.Temp = .A; .A = .B; .B = .Temp;`, and as
 
 If you want to check in scoreboard, whether one value equals another value, you can use the following command:
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 scoreboard objectives add wiki:temp dummy
 execute if score .Steve wiki:temp = .Alex wiki:temp run say Steve's score matches Alex's score.

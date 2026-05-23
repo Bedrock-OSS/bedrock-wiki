@@ -34,7 +34,7 @@ If you are using functions and prefer the objective to be added automatically du
 
 ## System
 
-<CodeHeader>BP/functions/wiki/detect/weather/is_raining.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/detect/weather/is_raining.mcfunction" />
 
 ```yaml
 ## State Machine

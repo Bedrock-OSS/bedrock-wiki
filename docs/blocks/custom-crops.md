@@ -59,7 +59,7 @@ To start with, we want our crops to have 8 stages of growth like vanilla crops, 
 
 This code example also includes the base components of our crop which will be active in every permutation.
 
-<CodeHeader>BP/blocks/custom_crop.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_crop.json" />
 
 ```json
 {
@@ -159,7 +159,7 @@ Afterwards, you'll be provided with the full script which can be copied into you
 
 This is the configuration we will be using for our custom crop:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "wiki:crop_growth": {
@@ -183,7 +183,7 @@ This is the configuration we will be using for our custom crop:
 Below is the basis for the crop growth script that will be included in the behavior pack.
 It imports what is required from the `@minecraft/server` module and sets up the registration of the custom component for use in block JSON definitions.
 
-<CodeHeader>BP/scripts/cropGrowth.js</CodeHeader>
+<CodeHeader path="BP/scripts/cropGrowth.js" />
 
 ```js
 import { system, EquipmentSlot, GameMode } from "@minecraft/server";
@@ -205,7 +205,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ### Calculating Growth Speed
 
-<CodeHeader>BP/scripts/cropGrowth.js</CodeHeader>
+<CodeHeader path="BP/scripts/cropGrowth.js" />
 
 ```js
 function getGrowthSpeed(crop, growthParams) {
@@ -293,7 +293,7 @@ Each random tick, we will make sure that the crop has enough light to grow and i
 
 Then, we use the `randomShouldCropGrow()`{lang=js} function to determine whether the crop should grow on the random tick based on the calculated growth speed.
 
-<CodeHeader>BlockCropGrowthComponent</CodeHeader>
+<CodeHeader path="BlockCropGrowthComponent" />
 
 ```js
 onRandomTick({ block }, { params }) {
@@ -327,7 +327,7 @@ Fertilization refers to using a fertilizer (such as Bone Meal) on the crop to ca
 
 For this, we'll use the [`onPlayerInteract()`{lang=js}](/blocks/block-events#player-interact) event hook to add a random value to `wiki:growth` when using Bone Meal, or fully grow the crop in creative mode or when using Minecraft Education's "Super Fertilizer".
 
-<CodeHeader>BlockCropGrowthComponent</CodeHeader>
+<CodeHeader path="BlockCropGrowthComponent" />
 
 ```js
 onPlayerInteract({ block, dimension, player }, { params }) {
@@ -396,7 +396,7 @@ So we know how to set our block states, what happens when our block has a partic
 The `permutations` array below sets the block's selection box, loot table and texture based on its `wiki:growth` state.
 For example, if `wiki:growth` is `7`{lang=json}, the texture is set to `"wiki:custom_crop_3"`{lang=json} and the crop is able to drop food.
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader path="minecraft:block" />
 
 ```json
 "permutations": [

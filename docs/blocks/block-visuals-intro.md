@@ -43,7 +43,7 @@ Within this file, you can create a new texture entry inside the `texture_data` f
 The key of this entry will be referred to as the texture "shortname" and should have a namespace.
 We'll be using the `wiki` namespace but you should choose something that uniquely identifies your add-on.
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -74,7 +74,7 @@ You can either choose to [make a custom model](/blocks/block-models) for your bl
 
 Geometry can be applied to a block using the [`minecraft:geometry`](/blocks/block-components#geometry) component in the block JSON file.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/honey_jar.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": {
@@ -88,7 +88,7 @@ The groups of cubes in your model (known as bones) can be conditionally shown an
 
 For example, you could hide the `lid` bone on a custom honey jar block based on a boolean block state.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/honey_jar.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": {
@@ -114,7 +114,7 @@ You can define the material instances that a block has by using the [`minecraft:
 
 Here, the `texture` parameter must reference a texture atlas shortname from `RP/textures/terrain_texture.json`.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/custom_log.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {
@@ -216,7 +216,7 @@ Disabling ambient occlusion on a block will disable these shadows, as well as di
 
 The intensity of ambient occlusion can be configured by defining the `ambient_occlusion` [material instance](#material-instances) parameter, with higher intensity resulting in darker shadows.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {
@@ -235,7 +235,7 @@ A value of `10.0`{lang=js} represents the maximum allowed ambient occlusion inte
 Face dimming causes faces of a block to be darkened based on the direction they face.
 This type of shading can be enabled or disabled by defining the `face_dimming` [material instance](#material-instances) parameter.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {

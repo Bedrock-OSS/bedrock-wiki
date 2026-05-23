@@ -52,7 +52,7 @@ You can use more than 2 values in order to have more possible combinations.
 
 Using the example above as reference, your states would look like this:
 
-<CodeHeader>minecraft:block > description</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/description" />
 
 ```json
 "states": {
@@ -63,13 +63,13 @@ Using the example above as reference, your states would look like this:
 
 And for your conditions, like this:
 
-<CodeHeader>Permutation Condition</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/permutations/0/condition" />
 
 ```molang
 q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 1
 ```
 
-<CodeHeader>Permutation Condition</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/permutations/1/condition" />
 
 ```molang
 q.block_state('wiki:division') == 1 && q.block_state('wiki:value') == 2

@@ -41,7 +41,7 @@ Navigate to your `item_texture.json` file. Ensure that it is properly named, and
 
 Here is an example file to compare against:
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {
@@ -55,7 +55,7 @@ Here is an example file to compare against:
 
 Next, navigate to your items BP file. Place the `minecraft:icon` component in your item file under the components section. Ensure that it is properly named.
 
-<CodeHeader>BP/items/your_item.json</CodeHeader>
+<CodeHeader path="BP/items/your_item.json" />
 
 ```json
 {

@@ -28,7 +28,7 @@ What will be discussed on this page:
 
 ### Components
 
-<CodeHeader>BP/items/my_item.json#components</CodeHeader>
+<CodeHeader path="BP/items/my_item.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:durability": {
@@ -42,7 +42,7 @@ What will be discussed on this page:
 
 ### Item event
 
-<CodeHeader>BP/items/my_item.json#events</CodeHeader>
+<CodeHeader path="BP/items/my_item.json" breadcrumbs="minecraft:item/events" />
 
 ```json
 "durability_update": {
@@ -63,7 +63,7 @@ For the script methods, we'll be using a function to damage our item
 
 This function supports unbreaking on items
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 function damage_item(item) {
@@ -103,7 +103,7 @@ For format versions 1.20.40 and onward, `on_hurt_entity` no longer works.
 
 This provides a way to damage weapons using scripts
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 // Add your item IDs into this array
@@ -142,7 +142,7 @@ world.afterEvents.entityHurt.subscribe((event) => {
 
 `on_hurt_entity` can be defined in "minecraft:weapon" component. It tells the game what event should happen when player hurts entity using this item.
 
-<CodeHeader>BP/items/my_item.json#components</CodeHeader>
+<CodeHeader path="BP/items/my_item.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:weapon": {
@@ -165,7 +165,7 @@ For format versions 1.20.20 and onward, `on_dig` no longer works.
 
 This provides a way to damage digger items by using scripts
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 // Add your item IDs into this array
@@ -203,7 +203,7 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
 
 `on_dig` can be defined in "minecraft:digger" component. It tells the game what event should happen when player dug a block using this item.
 
-<CodeHeader>BP/items/my_item.json#components</CodeHeader>
+<CodeHeader path="BP/items/my_item.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:digger": {
@@ -231,7 +231,7 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
 
 `repair_amount` can be defined in "minecraft:repairable" component. It tells the game how much of the item's durability should be back when it was repaired.
 
-<CodeHeader>BP/items/my_item.json#components</CodeHeader>
+<CodeHeader path="BP/items/my_item.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:repairable": {
@@ -269,7 +269,7 @@ Known tags:
 
 You can apply these tags this way:
 
-<CodeHeader>BP/items/my_item.json#components</CodeHeader>
+<CodeHeader path="BP/items/my_item.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "tag:minecraft:is_axe": {}

@@ -35,7 +35,7 @@ Within each custom component, event handler functions (such as [`beforeOnPlayerP
 
 _This example prevents the player from placing the block if they aren't in creative mode:_
 
-<CodeHeader>BP/scripts/creativeModeOnly.js</CodeHeader>
+<CodeHeader path="BP/scripts/creativeModeOnly.js" />
 
 ```js
 import { system, GameMode } from "@minecraft/server"; // Must be version 2.0.0 or higher
@@ -67,12 +67,10 @@ Like any normal component, custom components can be added and removed based on t
 
 _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or later._
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
-"components": {
-    "wiki:creative_mode_only": {}
-}
+"wiki:creative_mode_only": {}
 ```
 
 ## List of Events
@@ -81,7 +79,7 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 
 Called before a player places the block, preventing the client-side placement of the block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 beforeOnPlayerPlace(event) {
@@ -98,7 +96,7 @@ beforeOnPlayerPlace(event) {
 
 Called whenever the block is removed from the world, including when replaced via commands.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onBreak(event) {
@@ -117,7 +115,7 @@ Called when an entity executes an event on the block.
 Events can be triggered by the `execute_event_on_home_block` entity event response or by vanilla entity components (see [vanilla entity events](#vanilla-entity-events)).
 Events will not necessarily be received by this hook in the same tick that the entity requests for the event to be executed.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onEntity(event) {
@@ -141,7 +139,7 @@ onEntity(event) {
 
 #### Custom Dog Example
 
-<CodeHeader>minecraft:entity</CodeHeader>
+<CodeHeader path="BP/entities/dog.json" breadcrumbs="minecraft:entity" />
 
 ```json
 "components": {
@@ -162,7 +160,7 @@ onEntity(event) {
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockKennelComponent" />
 
 ```js
 onEntity({ name, block }) {
@@ -183,7 +181,7 @@ The entity fall on event requires the [`minecraft:collision_box`](/blocks/block-
 
 Called when an entity falls on the block.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:entity_fall_on": {
@@ -191,7 +189,7 @@ Called when an entity falls on the block.
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onEntityFallOn(event) {
@@ -206,7 +204,7 @@ onEntityFallOn(event) {
 
 Called when the block is placed.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onPlace(event) {
@@ -220,7 +218,7 @@ onPlace(event) {
 
 Called when the player breaks the block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onPlayerBreak(event) {
@@ -239,7 +237,7 @@ The `onPlayerInteract` hook is not called when the player interacts with the blo
 
 Called when the player interacts with / uses the block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onPlayerInteract(event) {
@@ -255,7 +253,7 @@ onPlayerInteract(event) {
 
 Triggered on every random tick, allowing for behavior like random crop growth.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onRandomTick(event) {
@@ -278,7 +276,7 @@ This happens in the following situations:
 -   The chunk containing the block is loaded
 -   The redstone power level of the block changes
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_consumer": {
@@ -286,7 +284,7 @@ This happens in the following situations:
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onRedstoneUpdate(event) {
@@ -304,7 +302,7 @@ The step off event requires the [`minecraft:collision_box`](/blocks/block-compon
 
 Called when an entity steps off the block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOff(event) {
@@ -322,7 +320,7 @@ The step on event requires the [`minecraft:collision_box`](/blocks/block-compone
 
 Called when an entity steps onto the block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onStepOn(event) {
@@ -340,7 +338,7 @@ The tick event requires the [`minecraft:tick`](/blocks/block-components#tick) co
 
 Triggers between X and Y amount of ticks inside `interval_range` of the block's [`minecraft:tick`](/blocks/block-components#tick) component.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:tick": {
@@ -349,7 +347,7 @@ Triggers between X and Y amount of ticks inside `interval_range` of the block's 
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
 onTick(event) {

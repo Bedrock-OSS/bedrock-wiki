@@ -178,7 +178,7 @@ When we make short-names of this form, we can use a generic "sit" animation cont
 
 <Spoiler title="Example Function File">
 
-<CodeHeader>BP/functions/wiki/ability/fire_trail.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/ability/fire_trail.mcfunction" />
 
 ```yaml
 # ON PLAYER ITEM DROP
@@ -253,8 +253,6 @@ Score holders prefixed with a hashtag (`#`) will not be displayed on the scorebo
 ## Group Animations Files when Possible
 
 Example:
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

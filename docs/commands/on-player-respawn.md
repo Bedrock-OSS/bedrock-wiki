@@ -26,7 +26,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/wiki/events/player/on_respawn.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/events/player/on_respawn.mcfunction" />
 
 ```yaml
 ## Your Commands Here (Example)
@@ -62,7 +62,7 @@ Hence, if we were to put them at the end, the other 2 commands would set respawn
 
 If you are using functions instead of command blocks, the `on_respawn` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 ```json
 {
   "values": [

@@ -20,7 +20,7 @@ You might have thought about making your entities fire an event when other entit
 
 This is probably the most basic way to detect other entities. The main issues is it only accepts one entry and testing if the entity is out of range can be very tricky. Because it's an entity component, you can just place into your entity behavior file and edit the Minecraft filters. Here's a demonstration:
 
-<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:entity_sensor": {
@@ -44,7 +44,7 @@ Using the `/execute` command, you can execute commands as long as another entity
 
 This example you'll be following will make pigs say "oink oink" upon detecting players, though you can replace those with whatever you want. First of all, copy-paste these BP animations.
 
-<CodeHeader>BP/animations/detection_animation.json</CodeHeader>
+<CodeHeader path="BP/animations/detection_animation.json" />
 
 ```json
 {
@@ -76,7 +76,7 @@ The first one is for detecting if the entity is present, and the other for detec
 
 Next of all, copy paste this BP animation controller. This assumes that you set up the `/event` parts of the `/execute` commands to add or remove `minecraft:is_sheared`.
 
-<CodeHeader>BP/animation_controllers/pig_animation_controllers.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/pig_animation_controllers.json" />
 
 ```json
 {
@@ -110,7 +110,7 @@ Next of all, copy paste this BP animation controller. This assumes that you set 
 
 Finally, copy-paste this snippet into the behavior file for the pig-like so. Make sure to insert this in `description`.
 
-<CodeHeader>BP/entities/my_entity.json#description</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/description" />
 
 ```json
 "animations": {

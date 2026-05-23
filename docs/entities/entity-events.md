@@ -25,7 +25,7 @@ Events allow us to perform actions, such as adding and removing component groups
 
 The most essential and common use of events is directly adding and/or removing component groups. These will almost always be used in your event and are used in conjunction with the other keys. The following event named `wiki:ranged_attacker` adds the two component groups "attacker" and "ranged" and removes the groups "standby" and "melee":
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:ranged_attacker": {
@@ -52,7 +52,7 @@ When you add a component group, if a currently active component group has the sa
 
 Queues commands to be executed by a target at the end of the tick.
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:execute_event": {
@@ -65,7 +65,7 @@ Queues commands to be executed by a target at the end of the tick.
 
 An array can be used to queue multiple commands:
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:execute_event": {
@@ -85,7 +85,7 @@ Randomize is a parameter which can be used inside of an entity event to add or r
 
 The `minecraft:entity_spawned` event inside the cow uses randomize to give a 95% chance of the cow spawning as an adult and a 5% chance of spawning as a baby (component groups `minecraft:cow_adult` and `minecraft:cow_baby`).
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "minecraft:entity_spawned": {
@@ -116,7 +116,7 @@ Note that the `randomize` will only select one option out of the pool of options
 
 Sequence is a parameter which can be used inside of an entity event to add or remove component groups based on filters. Filters allow us to make conditional events which will only add/remove component groups if a condition is met. The `minecraft:convert_to_drowned` event inside the zombie uses the `sequence` parameter to add a different component group based on whether or not the zombie is a baby.
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "minecraft:convert_to_drowned": {
@@ -170,7 +170,7 @@ Below is an extensive example of using the sequence to combine filters, randomiz
 
 This event is run when the entity is hit by a player or projectile. There is a 60% chance nothing will happen and a 40% chance an attack sequence will activate. This attack sequence chooses a random attack with weights determined both by the entity's current health (stronger attacks are given a higher chance when the entity is below half health) and the distance to the nearest player (ranged attacks have higher priority when the player is further away).
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:on_hit": {
@@ -371,7 +371,7 @@ This event is run when the entity is hit by a player or projectile. There is a 6
 
 Sets entity property values (each value can be set to the returned value of a Molang expression string).
 
-<CodeHeader>minecraft:block > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:change_properties": {
@@ -390,7 +390,7 @@ We can use this to trigger another event within the entity, and combining this w
 
 We are also able to specify filters and a target for the event. The target parameter is discussed in depth later. If the following event is called by the `minecraft:interact` component, then if the entity interacted with has the family tag `pig`, it will run the event `wiki:interacted` in the player that interacted with the entity.
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:on_interact": {
@@ -412,7 +412,7 @@ Events are able to retain entity context from the component they were called in.
 
 Combining this with the sequence parameter, this allows us to run an event in multiple entities as long as there is a context for it. We discuss this more in the target section.
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:on_interact": {
@@ -445,7 +445,7 @@ In order for an event to run we need to know to activate it, this is done by cal
 
 Some components allow the player to call an event based on parameters set. Here we input the event we want to run when the parameters are met. For example, the `minecraft:environment_sensor` component is used in the zombie to call the event `minecraft:start_transforming` when the entity is underwater.
 
-<CodeHeader>minecraft:entity > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:environment_sensor": {
@@ -463,8 +463,6 @@ Some components allow the player to call an event based on parameters set. Here 
 We are also able to run an event directly on the entity within animations and animation controllers.
 This behavior-based animation is used to call the event `wiki:start_pouncing` after 10 seconds.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "animation.entity.pounce_timer": {
     "timeline": {
@@ -475,8 +473,6 @@ This behavior-based animation is used to call the event `wiki:start_pouncing` af
 ```
 
 This behavior-based animation controller is used to call the event `wiki:running` upon transition to the state "run".
-
-<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.entity.movement":{
@@ -508,7 +504,7 @@ Here the `@s` is used to apply the event onto the entities self. Animation contr
 Within an event, as well as adding & removing component groups we can also `trigger` other events to occur.
 This event inside the piglin calls the event `spawn_baby` from the event `minecraft:entity_born`.
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "minecraft:entity_born": {
@@ -524,8 +520,6 @@ We can also use the command `/event` to activate an event on an entity. The foll
 Some components, such as the damage sensor, can target entities other than "self" when calling events. One component in particular is specifically designed to call events in other entities: `minecraft:behavior.send_event`. We will discuss this component first.
 
 The `minecraft:behavior.send_event` component is used inside the evoker to call an event named `wololo` inside any blue sheep within its activation range.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:behavior.send_event": {
@@ -567,7 +561,10 @@ The `minecraft:behavior.send_event` component is used inside the evoker to call 
 
 You can also call event when spawning entity. To do it, add `<my:event_name>` in the end of string that is in component that can summon entity.
 
-<CodeHeader>BP/entities/zombie.json#component_groups/minecraft:convert_to_drowned</CodeHeader>
+<CodeHeader
+    path="BP/entities/zombie.json"
+    breadcrumbs="component_groups/minecraft:convert_to_drowned"
+/>
 
 ```json
 "minecraft:transformation": {
@@ -583,8 +580,6 @@ You can also call event when spawning entity. To do it, add `<my:event_name>` in
 ### Targets
 
 The component `minecraft:damage_sensor` inside the pillager calls the event `minecraft:gain_bad_omen` on the player which kills it. Note how the target of the event is set to "other".
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:damage_sensor": {
@@ -623,7 +618,7 @@ In general, using the component groups from vanilla mobs will not work. For exam
 
 A good example of these in use is with the cow. This shows how we can always ensure the cow has either `minecraft:cow_adult` or `minecraft:cow_baby` as soon as it is spawned/transformed.
 
-<CodeHeader>BP/entities/cow.json#events</CodeHeader>
+<CodeHeader path="BP/entities/cow.json" breadcrumbs="minecraft:entity/events" />
 
 ```json
 "events": {

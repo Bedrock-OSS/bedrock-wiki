@@ -66,7 +66,7 @@ This is the tree for a default Bedrock Dedicated Server:
 -   Modifying the files in the default config folder allows every add-on with the server-net module to have access to the `@minecraft/server-net` module.
 -   It is recommended to assign individual permissions for each script behavior pack.
 
-<CodeHeader>BedrockServer/config/default/permissions.json</CodeHeader>
+<CodeHeader path="BedrockServer/config/default/permissions.json" />
 
 ```json
 {

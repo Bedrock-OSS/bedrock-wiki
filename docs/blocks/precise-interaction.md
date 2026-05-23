@@ -45,7 +45,7 @@ To use this method for precise interaction, create the file `BP/scripts/utilitie
 
 <Spoiler title="FaceSelectionPlains Code">
 
-<CodeHeader>BP/scripts/utilities/face_selection_plains.js</CodeHeader>
+<CodeHeader path="BP/scripts/utilities/face_selection_plains.js" />
 
 ```js
 import { Direction } from "@minecraft/server";
@@ -183,7 +183,7 @@ export default class FaceSelectionPlains {
 
 The below example would split the targeted block face into quarters:
 
-<CodeHeader>BP/scripts/blocks/example.js</CodeHeader>
+<CodeHeader path="BP/scripts/blocks/example.js" />
 
 ```js
 import { world } from "@minecraft/server";
@@ -239,7 +239,7 @@ To use this method for precise interaction, create the file `BP/scripts/utilitie
 
 <Spoiler title="SelectionBoxes Code">
 
-<CodeHeader>BP/scripts/utilities/selection_boxes.js</CodeHeader>
+<CodeHeader path="BP/scripts/utilities/selection_boxes.js" />
 
 ```js
 const isInRange = (value, min, max) => value >= min && value <= max;
@@ -371,7 +371,7 @@ export default class SelectionBoxes {
 
 The below example would split the targeted block into its vertical halves:
 
-<CodeHeader>BP/scripts/blocks/example.js</CodeHeader>
+<CodeHeader path="BP/scripts/blocks/example.js" />
 
 ```js
 import { world } from "@minecraft/server";
@@ -411,7 +411,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 <Spoiler title="Block JSON">
 
-<CodeHeader>BP/blocks/pigeonholes.json</CodeHeader>
+<CodeHeader path="BP/blocks/pigeonholes.json" />
 
 ```json
 {
@@ -515,7 +515,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 <Spoiler title="Precise Interaction Script">
 
-<CodeHeader>BP/scripts/blocks/pigeonholes.js</CodeHeader>
+<CodeHeader path="BP/scripts/blocks/pigeonholes.js" />
 
 ```js
 import { system, EquipmentSlot, GameMode, ItemStack } from "@minecraft/server";
@@ -623,7 +623,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 <Spoiler title="Block JSON">
 
-<CodeHeader>BP/blocks/double_flower_pot.json</CodeHeader>
+<CodeHeader path="BP/blocks/double_flower_pot.json" />
 
 ```json
 {
@@ -713,7 +713,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 <Spoiler title="Precise Interaction Script">
 
-<CodeHeader>BP/scripts/blocks/double_flower_pot.js</CodeHeader>
+<CodeHeader path="BP/scripts/blocks/double_flower_pot.js" />
 
 ```js
 import { system, ItemStack, EquipmentSlot, GameMode } from "@minecraft/server";
@@ -831,7 +831,7 @@ function releasePlants({ block, brokenBlockPermutation, dimension }) {
 
 Don't forget to import your scripts into your pack's entry file!
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -853,7 +853,7 @@ Don't forget to import your scripts into your pack's entry file!
 }
 ```
 
-<CodeHeader>BP/scripts/index.js</CodeHeader>
+<CodeHeader path="BP/scripts/index.js" />
 
 ```js
 // Import your precise interaction scripts here...

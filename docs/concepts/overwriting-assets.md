@@ -90,8 +90,6 @@ The following files work in this way:
 :::tip
 **Example:** Lets say you want to override the `sugar` texture, using the reference files. You can do so by creating a new `item_texture.json`, with the following contents:
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
     "texture_data": {

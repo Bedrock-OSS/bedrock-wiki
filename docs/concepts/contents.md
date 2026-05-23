@@ -27,7 +27,7 @@ Each `content` entry can contain two parameters:
 -   `path` — The path of the file relative to the pack's root directory. This must include the file extension.
 -   `key` (optional) — The key used for decrypting a file that has been encrypted.
 
-<CodeHeader>RP/contents.json</CodeHeader>
+<CodeHeader path="RP/contents.json" />
 
 ```json
 {
@@ -62,7 +62,7 @@ Allowing Minecraft to generate this file for you means that you won't make mista
 
 However, the file must be prepared first. Create a new empty file called `contents.json` in the root directory of your add-on, and add empty brackets.
 
-<CodeHeader>BP|RP/contents.json</CodeHeader>
+<CodeHeader path="BP|RP/contents.json" />
 
 ```json
 {}

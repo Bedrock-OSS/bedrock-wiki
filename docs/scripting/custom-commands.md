@@ -35,7 +35,7 @@ Assuming you have understood the basics of scripting, let's start creating the p
 
 Below is an example manifest, make sure that you **generate your own UUIDs**.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -100,7 +100,7 @@ You also need to provide a description for the command which will appear next to
 
 This should be a translation key (preferably in the form `commands.<name>.description`) from a `.lang` file.
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 commands.wiki:goto.description=Teleport to a specific location.
@@ -153,7 +153,7 @@ This is the function that is called (in [read-only mode](/scripting/privileges#r
 The callback always gets the command origin as its first parameter, the rest of the parameters are based on the `mandatoryParameters` and `optionalParameters` you provide.
 The number of parameters passed to the callback matches the number of parameters defined in the command, so if you have a command with 3 different parameters your callback would look like this:
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 customCommandRegistry.registerCommand(
@@ -183,7 +183,7 @@ In command autocompletion, its syntax is the following:
 /wiki:goto <teleportLocation: string>
 ```
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 import {
@@ -250,7 +250,7 @@ By default, the "any" command permission level allows sources that are not playe
 In this example, we will create a custom slash command `/wiki:heal` that can only be executed by players (not the server console or command blocks).
 This command will restore the player's health back to full.
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 import {

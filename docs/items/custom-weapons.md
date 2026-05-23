@@ -23,7 +23,7 @@ Check out the [hit entity](/items/item-events#hit-entity) event to add even more
 
 Like with the other item tutorials we will start by making a simple custom sword like so.
 
-<CodeHeader>BP/items/my_sword.json</CodeHeader>
+<CodeHeader path="BP/items/my_sword.json" />
 
 ```json
 {
@@ -71,7 +71,7 @@ Like with the other item tutorials we will start by making a simple custom sword
 
 So at a bare minimum that is enough to get a sword put into the game, we still need to register the icon with the RP but thats not a massive issue as all we need to do is go to our RP folder and enter it in like so.
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {
@@ -112,7 +112,7 @@ Now that wasn't too hard was it? You can make as many custom swords as you want 
 
 You can also mix and match other components like `minecraft:digger` to allow you to go through web or bamboo quicker like this:
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:digger": {
@@ -134,7 +134,7 @@ You can also mix and match other components like `minecraft:digger` to allow you
 
 You should probably make a recipe for it, which is covered in previous chapters, as there isn't anything really new in there, but in case you are unsure here is an example one to make the sword with ender eyes and ender pearls.
 
-<CodeHeader>BP/recipes/my_sword.json</CodeHeader>
+<CodeHeader path="BP/recipes/my_sword.json" />
 
 ```json
 {

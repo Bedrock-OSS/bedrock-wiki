@@ -30,7 +30,7 @@
     "scope": "markdown",
     "prefix": "code block",
     "body": [
-      "<CodeHeader>$1</CodeHeader>",
+      "<CodeHeader path=\"$1\" />",
       "",
       "```${2:json}",
       "$3",

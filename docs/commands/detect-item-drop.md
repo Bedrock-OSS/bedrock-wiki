@@ -17,7 +17,7 @@ This technique allows you to differentiate player dropped items from other dropp
 
 ## Commands
 
-<CodeHeader>BP/functions/wiki/detect/item/is_dropped_by.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/detect/item/is_dropped_by.mcfunction" />
 
 ```yaml
 ## Tag Items From Other

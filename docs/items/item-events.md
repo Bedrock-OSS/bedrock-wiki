@@ -23,7 +23,7 @@ Within each custom component, event handler functions (such as [`onBeforeDurabil
 
 _This example prevents the item from taking durability damage when hitting an entity:_
 
-<CodeHeader>BP/scripts/unbreakable.js</CodeHeader>
+<CodeHeader path="BP/scripts/unbreakable.js" />
 
 ```js
 import { system } from "@minecraft/server"; // Must be version 2.0.0 or higher
@@ -46,7 +46,7 @@ To bind a custom component to an item, simply list it in the `components` of you
 
 _Requires format version [1.21.90](/items/item-format-history#_1-21-90) or later._
 
-<CodeHeader>minecraft:item</CodeHeader>
+<CodeHeader path="minecraft:item" />
 
 ```json
 "components": {
@@ -60,7 +60,7 @@ _Requires format version [1.21.90](/items/item-format-history#_1-21-90) or later
 
 This event will be called when an item containing this component is hitting an entity and about to take durability damage.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onBeforeDurabilityDamage(event) {
@@ -79,7 +79,7 @@ The complete use event requires the [`minecraft:use_modifiers`](/items/item-comp
 
 This event will be called when the use duration of the item containing this component is completed.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:use_modifiers": {
@@ -87,7 +87,7 @@ This event will be called when the use duration of the item containing this comp
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onCompleteUse(event) {
@@ -104,7 +104,7 @@ This event will be called when an item containing this component is eaten by an 
 The complete use event requires the [`minecraft:use_modifiers`](/items/item-components#use-modifiers) and the [`minecraft:food`](/items/item-components#food) component to be active on your item to trigger.
 :::
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:food": {},
@@ -113,7 +113,7 @@ The complete use event requires the [`minecraft:use_modifiers`](/items/item-comp
 }
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onConsume(event) {
@@ -126,7 +126,7 @@ onConsume(event) {
 
 This function will be called when an item containing this component is used to hit another entity.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onHitEntity(event) {
@@ -141,7 +141,7 @@ onHitEntity(event) {
 
 This function will be called when an item containing this component is used to mine a block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onMineBlock(event) {
@@ -156,7 +156,7 @@ onMineBlock(event) {
 
 This function will be called when an item containing this component is used by a player.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onUse(event) {
@@ -169,7 +169,7 @@ onUse(event) {
 
 This function will be called when an item containing this component is used on a block.
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onUseOn(event) {

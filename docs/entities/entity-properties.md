@@ -20,7 +20,7 @@ Entity properties (also known as actor properties) allow data to be stored on en
 
 Entity properties are defined in the BP entity's `description` object:
 
-<CodeHeader>BP/entities/properties_example.json</CodeHeader>
+<CodeHeader path="BP/entities/properties_example.json" />
 
 ```json
 {
@@ -63,7 +63,7 @@ Default values, determined by the `default` parameter, can be defined either as 
 A string value will be treated as a Molang expression unless it is an enum value.
 Molang expressions are evaluated when the entity is first spawned.
 
-<CodeHeader>minecraft:entity > description > properties</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/description/properties" />
 
 ```json
 "example:enum_property_example": {
@@ -78,7 +78,7 @@ Molang expressions are evaluated when the entity is first spawned.
 To access a property from the resource pack (client-side), the `client_sync` parameter must be `true`.
 By default, this value is `false`.
 
-<CodeHeader>minecraft:entity > description > properties</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/description/properties" />
 
 ```json
 "wiki:is_sad": {
@@ -90,7 +90,7 @@ By default, this value is `false`.
 
 Let's set a variable to the value of this property for use in an animation!
 
-<CodeHeader>minecraft:client_entity > description</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/description" />
 
 ```json
 "scripts": {
@@ -106,7 +106,7 @@ Let's set a variable to the value of this property for use in an animation!
 
 Property values are returned by the `property` query function.
 
-<CodeHeader>Molang Expression</CodeHeader>
+<CodeHeader path="Molang Expression" />
 
 ```molang
 !q.property('wiki:bool_property_example')
@@ -114,7 +114,7 @@ Property values are returned by the `property` query function.
 
 ### Entity Filter Test
 
-<CodeHeader>Entity Filter</CodeHeader>
+<CodeHeader path="Entity Filter" />
 
 ```json
 {
@@ -127,7 +127,7 @@ Property values are returned by the `property` query function.
 
 ### Command Selector Parameter
 
-<CodeHeader>Command</CodeHeader>
+<CodeHeader path="Command" />
 
 ```c
 testfor @e[has_property={wiki:enum_property_example="second"}]
@@ -137,7 +137,7 @@ testfor @e[has_property={wiki:enum_property_example="second"}]
 
 The [`Entity.getProperty()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#getproperty) method allows you to get the current value of different properties.
 
-<CodeHeader>Script</CodeHeader>
+<CodeHeader path="Script" />
 
 ```js
 customEntity.getProperty("wiki:int_property_example") === 2;
@@ -149,7 +149,7 @@ customEntity.getProperty("wiki:int_property_example") === 2;
 
 With entity events, you may set the entity property to a value with the `set_property` event response:
 
-<CodeHeader>minecraft:entity > events</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:set_entity_property": {
@@ -165,7 +165,7 @@ With entity events, you may set the entity property to a value with the `set_pro
 
 The [`Entity.setProperty()`](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/entity#setproperty) method allows you to set the value of a property.
 
-<CodeHeader>Script</CodeHeader>
+<CodeHeader path="Script" />
 
 ```js
 customEntity.setProperty("wiki:int_property_example", 2);

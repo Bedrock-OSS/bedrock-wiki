@@ -101,7 +101,7 @@ The manifest file is the file Minecraft uses to identify your packs. Every pack 
 
 Create a new text file in your add-on's behavior pack folder called `manifest.json`. To begin, copy and paste the following code into the `manifest.json` file. A full breakdown of the manifest file is provided after creating these files.
 
-<codeHeader>BP/manifest.json</codeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -125,7 +125,7 @@ Create a new text file in your add-on's behavior pack folder called `manifest.js
 
 Now create another `manifest.json` file in your add-on's resource pack folder. Again, copy and paste the following code inside the new file.
 
-<codeHeader>RP/manifest.json</codeHeader>
+<CodeHeader path="RP/manifest.json" />
 
 ```json
 {
@@ -179,27 +179,27 @@ You must place a copy of your desired image in both the behavior and resource pa
 
 Remember when we said we'll define the pack name and description in code form earlier? Now is that time as it's the last thing we need to do to setup your add-on. You will need to create 4 new files and 2 new folders (2 files and 1 folder for each pack). You can You can learn more about how Minecraft handles localization [here](/text/text-intro). You can also format your definitions using the `§` symbol. You can view a list of colors and formats [here](https://htmlcolorcodes.com/minecraft-color-codes/). If you use any formatting, make sure you `§r`eset when changing formats: `§kl My pack l` will render "My pack" unreadable whereas `§kl §rMy pack §kl` can be read properly.
 
-<codeHeader>BP/texts/en_US.lang</codeHeader>
+<CodeHeader path="BP/texts/en_US.lang" />
 
 ```lang
 pack.name=§2My §lFIRST §r§2Add-on's Behavior Pack!
 pack.description=This add-on is made by a Wiki Contributor!
 ```
 
-<codeHeader>BP/texts/languages.json</codeHeader>
+<CodeHeader path="BP/texts/languages.json" />
 
 ```json
 ["en_US"]
 ```
 
-<codeHeader>RP/texts/en_US.lang</codeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 pack.name=§2My §lFIRST §r§2Add-on's Resource Pack!
 pack.description=This add-on is made by a Wiki Contributor!
 ```
 
-<codeHeader>RP/texts/languages.json</codeHeader>
+<CodeHeader path="RP/texts/languages.json" />
 
 ```json
 ["en_US"]

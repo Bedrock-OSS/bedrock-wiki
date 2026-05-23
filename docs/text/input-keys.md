@@ -11,7 +11,7 @@ Input keys can be used to automatically detect the input of the player and displ
 
 ## Displaying Input Keys
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 action.hint.exit.rollercoaster=Press :_input_key.sneak: to end the ride

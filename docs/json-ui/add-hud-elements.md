@@ -21,7 +21,7 @@ To add an element you've created onto the hud screen, you'll need to use the `mo
 
 The following code creates an image element that displays a black square at the top of the screen, creates a label element which displays the text "hud text" at the top-right of the screen, and performs a modification to the `root_panel` which adds the image and label elements to the hud screen.
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 
 ```json
 "hud_square": {
@@ -61,7 +61,7 @@ All of the elements added to the hud screen are listed out in the `value` sectio
 
 It is often helpful for organizational purposes to not add many elements to the root panel individually. The following code wraps the previously defined `hud_square` and `hud_text` elements (not shown) in a panel element called `hud_elements_panel` and then adds that element to the root panel of the hud screen. Effect is the same as the Individual Elements code.
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 ```json
 "hud_elements_panel": {
 	"type": "panel",

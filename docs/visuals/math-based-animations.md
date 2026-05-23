@@ -18,8 +18,6 @@ description: Create smooth and breathtaking animations with Math.
 
 Math animations are a powerful alternative to keyframe animations. Generally speaking, `math-based animations` is the concept of using Molang expressions to animate entity geometry. All vanilla animations are math-based, here is an example:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "leftarm" : {
     "rotation" : [ "((-0.2 + 1.5 * (math.abs(math.mod(q.modified_distance_moved, 13) - 6.5) - 3.25) / 3.25) * q.modified_move_speed) * 57.3 - v.agent.armxrotationfactor", 0.0, "-v.agent.armzrotation" ]
@@ -69,8 +67,6 @@ By using queries, you can avoid the need to create animation controllers. If the
 ## Example
 
 A specific application example of a Math-Based animation may be found below. The example utilizes the Molang Query, `"q.modified_distance_moved"`:
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

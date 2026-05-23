@@ -21,7 +21,7 @@ This guide will teach you how to create your own blocks resembling Glazed Terrac
 
 ## Block JSON
 
-<CodeHeader>BP/blocks/custom_glazed_terracotta.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_glazed_terracotta.json" />
 
 ```json
 {
@@ -95,7 +95,7 @@ This requires two separate bottom faces with different rotations.
 
 <Spoiler title="Geometry JSON">
   
-<CodeHeader>RP/models/blocks/glazed_terracotta.geo.json</CodeHeader>
+<CodeHeader path="RP/models/blocks/glazed_terracotta.geo.json" />
 
 ```json
 {

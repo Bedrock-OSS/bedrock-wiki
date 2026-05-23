@@ -34,7 +34,7 @@ All components are formatted like `"minecraft:<name>": { <setting> }`. Every com
 
 Here is an example of a few components, inside an entity:
 
-<CodeHeader>BP/entities/example.json#minecraft:entity</CodeHeader>
+<CodeHeader path="BP/entities/example.json" breadcrumbs="minecraft:entity" />
 
 ```json
 "components": {
@@ -59,7 +59,7 @@ Component groups are "folders" for components. They group components and can be 
 
 Here is an example:
 
-<CodeHeader>BP/entities/example.json#minecraft:entity</CodeHeader>
+<CodeHeader path="BP/entities/example.json" breadcrumbs="minecraft:entity" />
 
 ```json
 "component_groups": {
@@ -97,7 +97,7 @@ Events are a special syntax for adding and removing component groups that can be
 
 An example:
 
-<CodeHeader>BP/entities/example.json#minecraft:entity#events</CodeHeader>
+<CodeHeader path="BP/entities/example.json" breadcrumbs="minecraft:entity/events" />
 
 ```json
 "minecraft:ageable_grow_up": { //Name of the event
@@ -120,7 +120,7 @@ The only thing you can add/remove from an entity is `component groups`. As tempt
 
 Events are activated inside of certain components when some criteria is met. Below is an example:
 
-<CodeHeader>BP/entities/example.json#minecraft:entity</CodeHeader>
+<CodeHeader path="BP/entities/example.json" breadcrumbs="minecraft:entity" />
 
 ```json
 "components": {

@@ -31,7 +31,7 @@ Before you implement intercardinal direction into your block, you'll need to cre
 
 Here is the JSON we will be starting with for the "mug" block in this tutorial:
 
-<CodeHeader>BP/blocks/mug.json</CodeHeader>
+<CodeHeader path="BP/blocks/mug.json" />
 
 ```json
 {
@@ -97,13 +97,11 @@ As shown above, we'll need to define a [block state](/blocks/block-states) that 
 In this tutorial, that state will be called `wiki:intercardinal_direction`.
 As always, make sure you change `wiki` to your own namespace!
 
-<CodeHeader>minecraft:block > description</CodeHeader>
+<CodeHeader path="BP/blocks/mug.json" breadcrumbs="minecraft:block/description/states" />
 
 ```json
-"states": {
-    "wiki:intercardinal_direction": {
-        "values": { "min": 0, "max": 15 }
-    }
+"wiki:intercardinal_direction": {
+    "values": { "min": 0, "max": 15 }
 }
 ```
 
@@ -117,7 +115,7 @@ For this, we can use scripts to calculate the direction value and update the blo
 
 Here is the function that we will use to convert the player's rotation into an intercardinal direction from `0`{lang=js} to `15`{lang=js}.
 
-<CodeHeader>BP/scripts/intercardinalOrientation.js</CodeHeader>
+<CodeHeader path="BP/scripts/intercardinalOrientation.js" />
 
 ```js
 /** @param {number} yRotation */
@@ -135,7 +133,7 @@ function getIntercardinalDirection(yRotation) {
 
 Now let's create a custom component that uses the `getIntercardinalDirection()`{lang=js} function to set the block to the correct direction permutation.
 
-<CodeHeader>BP/scripts/intercardinalOrientation.js</CodeHeader>
+<CodeHeader path="BP/scripts/intercardinalOrientation.js" />
 
 ```js
 import { system } from "@minecraft/server";
@@ -179,7 +177,7 @@ By setting the parameter to `180`{lang=json}, the front of the block (north face
 
 Let's apply the custom component to our block in its `components`:
 
-<CodeHeader>BP/blocks/mug.json</CodeHeader>
+<CodeHeader path="BP/blocks/mug.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "wiki:intercardinal_orientation": {
@@ -234,7 +232,7 @@ Not all bones in your model should be visible, so we make use of the `bone_visib
 
 Add the following component to your block:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader path="BP/blocks/mug.json" breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": {
@@ -252,7 +250,7 @@ Add the following component to your block:
 
 Now, use the [`permutations`](/blocks/block-permutations) array to define the rotation for the base cardinal rotations of the block by inserting the following into your block JSON (in the presented order):
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader path="BP/blocks/mug.json" breadcrumbs="minecraft:block" />
 
 ```json
 "permutations": [

@@ -19,7 +19,7 @@ In this tutorial we're gonna see how we can make noise based terrain using the `
 
 First we will define the single block feature. It will define the block that is going to be generated. For this tutorial I'll use stone.
 
-<CodeHeader>BP/features/stone_feature.json</CodeHeader>
+<CodeHeader path="BP/features/stone_feature.json" />
 
 ```json
 {
@@ -39,7 +39,7 @@ First we will define the single block feature. It will define the block that is 
 
 The scatter feature is the main feature which we'll be using to generate the terrain.
 
-<CodeHeader>BP/features/column.json</CodeHeader>
+<CodeHeader path="BP/features/column.json" />
 
 ```json
 {
@@ -70,7 +70,7 @@ So what's happening here is that we are getting values from the `t.height` temp 
 
 ## Feature Rule
 
-<CodeHeader>BP/feature_rules/column_grid_placement.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/column_grid_placement.json" />
 
 ```json
 {

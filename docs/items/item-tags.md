@@ -17,7 +17,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ## Applying Tags
 
-<CodeHeader>BP/items/example_item.json</CodeHeader>
+<CodeHeader path="BP/items/example_item.json" />
 
 ```json
 {
@@ -39,7 +39,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ### Entity Filter
 
-<CodeHeader>Entity Filter</CodeHeader>
+<CodeHeader path="Entity Filter" />
 
 ```json
 {
@@ -57,7 +57,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 -   `q.equipped_item_any_tag(slot, ...tags)`{lang=molang}
     -   Returns whether the item at the specified location has at least one of the listed tags.
 
-<CodeHeader>minecraft:client_entity > description</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {
@@ -74,7 +74,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 -   `q.any_tag(...tags)`{lang=molang}
     -   Returns whether the item has at least one of the listed tags.
 
-<CodeHeader>Item Descriptor</CodeHeader>
+<CodeHeader path="Item Descriptor" />
 
 ```json
 {
@@ -84,7 +84,7 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ### Recipe Ingredient
 
-<CodeHeader>minecraft:recipe_shapeless</CodeHeader>
+<CodeHeader path="minecraft:recipe_shapeless" />
 
 ```json
 "ingredients": [

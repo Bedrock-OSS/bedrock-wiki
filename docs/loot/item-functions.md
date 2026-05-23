@@ -16,7 +16,7 @@ Item functions modify the nature of an item in [loot tables](/loot/loot-tables) 
 TODO
 can enchantments be prefixed with minecraft:/whatever?
 
-<CodeHeader>Loot Entry</CodeHeader>
+<CodeHeader path="Loot Entry" />
 
 ```json
 {
@@ -78,7 +78,7 @@ Trade tables use the [`"quantity"` property](/loot/trade-tables#quantity) to set
 
 The `set_count` function sets the count for that item entry.
 
-<CodeHeader>Count Function</CodeHeader>
+<CodeHeader path="Count Function" />
 
 ```json
 {
@@ -105,7 +105,7 @@ The `"count"` property determines how many of that item should be yielded; it ca
 
 The name of an item can be set using the `set_name` function. Names are visible in the user interface when hovering over an item. Names can be changed by players using anvils.
 
-<CodeHeader>Name Function</CodeHeader>
+<CodeHeader path="Name Function" />
 
 ```json
 {
@@ -129,7 +129,7 @@ The name to give the item is given with the string `"name"` property. By default
 
 The `set_lore` function sets the lore for an item.
 
-<CodeHeader>Lore Function</CodeHeader>
+<CodeHeader path="Lore Function" />
 
 ```json
 {
@@ -153,7 +153,7 @@ The `"lore"` property configures the lore. It can be represented as either a str
 
 `set_data` establishes the data for the given item, similar to the argument in the `/give` command. If used on a block, it will set the block's data value. If used on an item, it will set it's aux value. Unlike the command, however, `set_data` cannot set the durability of an item. For that, use [`durability`](#durability).
 
-<CodeHeader>Data Function</CodeHeader>
+<CodeHeader path="Data Function" />
 
 ```json
 {
@@ -194,7 +194,7 @@ The object form will randomly select a data value inclusively between the provid
 
 `random_block_state` sets an individual block state for a block.
 
-<CodeHeader>Block State Function</CodeHeader>
+<CodeHeader path="Block State Function" />
 
 ```json
 {
@@ -225,7 +225,7 @@ Defaults to 0… kinda required otherwise pointless? IDK…
 
 `random_aux_value`
 
-<CodeHeader>Aux Value Function</CodeHeader>
+<CodeHeader path="Aux Value Function" />
 
 ```json
 {
@@ -262,7 +262,7 @@ Also works for block data.
 
 Item durability can be set using the `set_damage` function.
 
-<CodeHeader>Durability Function</CodeHeader>
+<CodeHeader path="Durability Function" />
 
 ```json
 {
@@ -311,7 +311,7 @@ Some functions are only usable by a certain set of items. See each function for 
 
 `furnace_smelt`
 
-<CodeHeader>Heat Item Function</CodeHeader>
+<CodeHeader path="Heat Item Function" />
 
 ```json
 {
@@ -335,7 +335,7 @@ Vanilla files use a function condition for this, but even removing that conditio
 
 `set_book_contents`
 
-<CodeHeader>Book Contents Function</CodeHeader>
+<CodeHeader path="Book Contents Function" />
 
 ```json
 {
@@ -377,7 +377,7 @@ Can use color codes; Each different page string resets the color codes each time
 
 `exploration_map`
 
-<CodeHeader>Exploration Map Function</CodeHeader>
+<CodeHeader path="Exploration Map Function" />
 
 ```json
 {
@@ -423,7 +423,7 @@ Keep in mind how **only 2 locations** worked from traders.
 
 `set_banner_details`
 
-<CodeHeader>Banner Type Function</CodeHeader>
+<CodeHeader path="Banner Type Function" />
 
 ```json
 {
@@ -504,7 +504,7 @@ Sets type of a `minecraft:banner`, `minecraft:wall_banner`, `minecraft:standing_
 - `guster` is the guster banner pattern.
 - `flow` is the flow banner pattern.
 
-<CodeHeader>Pattern Example</CodeHeader>
+<CodeHeader path="Pattern Example" />
 
 ```json
 {
@@ -533,7 +533,7 @@ Sets type of a `minecraft:banner`, `minecraft:wall_banner`, `minecraft:standing_
 
 `random_dye`
 
-<CodeHeader>Random Dyeing Function</CodeHeader>
+<CodeHeader path="Random Dyeing Function" />
 
 ```json
 {
@@ -558,7 +558,7 @@ It doesn’t work on wool or other related items.
 
 `set_actor_id`
 
-<CodeHeader>Spawn Eggs Function</CodeHeader>
+<CodeHeader path="Spawn Eggs Function" />
 
 ```json
 {
@@ -586,7 +586,7 @@ In trade tables, if the `id` property is omitted, it defaults to the trader's id
 
 `fill_container`
 
-<CodeHeader>Container Contents Function</CodeHeader>
+<CodeHeader path="Container Contents Function" />
 
 ```json
 {
@@ -616,7 +616,7 @@ Works in containers and both entity stuff and blocks
 
 `set_potion`
 
-<CodeHeader>Potion Type Function</CodeHeader>
+<CodeHeader path="Potion Type Function" />
 
 ```json
 {
@@ -642,7 +642,7 @@ Sets the potion type of this item. Allowed item types are: `minecraft:potion`, `
 
 `set_ominous_bottle_amplifier`
 
-<CodeHeader>Ominous Bottle Amplifier Function</CodeHeader>
+<CodeHeader path="Ominous Bottle Amplifier Function" />
 
 ```json
 {
@@ -671,7 +671,7 @@ Sets the `minecraft:ominous_bottle` potion effect amplifier.
 
 `set_ominous_bottle_amplifier`
 
-<CodeHeader>Set Stew Effect Function</CodeHeader>
+<CodeHeader path="Set Stew Effect Function" />
 
 ```json
 {
@@ -716,7 +716,7 @@ These functions control whether an item has an enchantment.
 
 `enchant_book_for_trading`
 
-<CodeHeader>Enchant for Trading Function</CodeHeader>
+<CodeHeader path="Enchant for Trading Function" />
 
 ```json
 {
@@ -739,7 +739,7 @@ These functions control whether an item has an enchantment.
 
 `enchant_with_levels` enchants items using enchantment table logic, optionally allowing for treasure enchantments.
 
-<CodeHeader>Level-Based Enchantments Function</CodeHeader>
+<CodeHeader path="Level-Based Enchantments Function" />
 
 ```json
 {
@@ -776,7 +776,7 @@ Can be negative, but will just be remapped as though `0`.
 
 `enchant_randomly`
 
-<CodeHeader>Random Enchantments Function</CodeHeader>
+<CodeHeader path="Random Enchantments Function" />
 
 ```json
 {
@@ -801,7 +801,7 @@ Randomly picks a count of enchantments and their strengths for the given item.
 
 `enchant_random_gear`
 
-<CodeHeader>Enchant Gear Function</CodeHeader>
+<CodeHeader path="Enchant Gear Function" />
 
 ```json
 {
@@ -832,7 +832,7 @@ Note that going over `1.0` doesn't make it more "enchanted".
 
 `specific_enchants`
 
-<CodeHeader>Specific Enchantments Function</CodeHeader>
+<CodeHeader path="Specific Enchantments Function" />
 
 ```json
 {
@@ -904,7 +904,7 @@ External conditions that affect item drops.
 
 `looting_enchant`
 
-<CodeHeader>Held Tool Looting Function</CodeHeader>
+<CodeHeader path="Held Tool Looting Function" />
 
 ```json
 {
@@ -933,7 +933,7 @@ Count can be an integer or a [range object](/documentation/shared-constructs#ran
 
 `explosion_decay`
 
-<CodeHeader>Explosion Decay Function</CodeHeader>
+<CodeHeader path="Explosion Decay Function" />
 
 ```json
 {
@@ -956,7 +956,7 @@ By default, always survives. If in an explosion, has a chance of not dropping ba
 
 `set_data_from_color_index`
 
-<CodeHeader>Entity Color Function</CodeHeader>
+<CodeHeader path="Entity Color Function" />
 
 ```json
 {
@@ -979,7 +979,7 @@ Sets the data value of the block to the value of the `minecraft:color` component
 
 `trader_material_type`
 
-<CodeHeader>Trader Material Type Function</CodeHeader>
+<CodeHeader path="Trader Material Type Function" />
 
 ```json
 {

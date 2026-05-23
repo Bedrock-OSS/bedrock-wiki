@@ -23,7 +23,7 @@ This also means that they are not compatible with the `bone_visibility` and `cul
 
 Vanilla block models are applied in the same way as [custom block models](/blocks/block-models), using the [geometry](/blocks/block-components#geometry) component, with textures defined in [material instances](/blocks/block-components#material-instances):
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": "minecraft:geometry.full_block",

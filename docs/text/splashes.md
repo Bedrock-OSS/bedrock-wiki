@@ -15,7 +15,7 @@ There are a bunch of splash texts that Minecraft has on its own, but you can mod
 
 It's very easy to create custom splash texts. All you have to do is to create a `splashes.json` file in your resource pack and edit it. Splash texts also support formatting (using `§`).
 
-<CodeHeader>RP/splashes.json</CodeHeader>
+<CodeHeader path="RP/splashes.json" />
 
 ```json
 {

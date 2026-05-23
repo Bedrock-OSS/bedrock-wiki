@@ -36,7 +36,7 @@ Some browsers also prohibit the use of these methods, mainly the eval method, as
 
 To enable these methods that evaluate code, you must add it in the manifest. This capability also adds the usage of the `Function()`{lang=js} constructor.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {

@@ -27,8 +27,6 @@ This json contains geometry for both the Steve and Alex versions:
 
 <Spoiler title="Geometry">
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
     "format_version": "1.12.0",
@@ -472,8 +470,6 @@ Use this entity file if you would like to have animations for your geometry. Thi
 If you need a more complete set of animations, consider copying the default player RP-entity file, and trying to work with the animations by hand.
 
 <Spoiler title="Entity File">
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

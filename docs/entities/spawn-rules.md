@@ -22,7 +22,7 @@ In general, it's possible to spawn your custom entity in a very similar way as v
 
 Here is an example spawn rule, with an explanation of the fields.
 
-<CodeHeader>BP/spawn_rules/zombie.json</CodeHeader>
+<CodeHeader path="BP/spawn_rules/zombie.json" />
 
 ```json
 {
@@ -116,8 +116,6 @@ minecraft:player_in_village_filter
 
 ### minecraft:herd
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:herd": {
           "min_size": 1,
@@ -132,8 +130,6 @@ minecraft:player_in_village_filter
 
 ### minecraft:spawns_above_block_filter
 
-<CodeHeader></CodeHeader>
-
 ```json
         "minecraft:spawns_above_block_filter": {
           "blocks": "minecraft:stone",
@@ -144,8 +140,6 @@ minecraft:player_in_village_filter
 -   "`minecraft:spawns_above_block_filter`" will detect blocks within a set distance vertically, and if the condition is met, the entity will spawn successfully.
 
 ### minecraft:spawns_on_block_prevented_filter
-
-<CodeHeader></CodeHeader>
 
 ```json
         "minecraft:spawns_on_block_prevented_filter": [

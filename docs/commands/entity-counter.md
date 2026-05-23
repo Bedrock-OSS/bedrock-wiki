@@ -28,7 +28,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/tally_count.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/tally_count.mcfunction" />
 
 ```yaml
 ## Reset Previous Count
@@ -78,7 +78,7 @@ When working with numerous score holders across multiple objectives, it is advis
 
 If you are using functions instead of command blocks, the `tally_count` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 ```json
 {
   "values": [

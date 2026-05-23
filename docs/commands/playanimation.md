@@ -31,8 +31,6 @@ In Bedrock, the `/playanimation` command allows entities to play animations. You
 
 **Example:**
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @a animation.player.riding.legs none 0 "query.is_moving"
 ```
@@ -51,8 +49,6 @@ If an existing animation controller is accessed, it will be overwritten.
 
 ### Examples
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @e[type=allay] animation.player.attack.positions none "1" controller.animation.allay.dancing
 ```
@@ -63,13 +59,9 @@ This happens because the original animation controller, which made it dance when
 
 If a non-existent animation controller is specified, it will be registered as a new one:
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @a animation.ender_dragon.neck_head_movement animation.piglin.celebrate_hunt_special 0 "v.head_position_y=0;v.head_rotation_y=q.life_time*1000;return !q.is_sneaking;" wiki:head
 ```
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 /playanimation @a animation.piglin.celebrate_hunt_special animation.ender_dragon.neck_head_movement 0 "v.head_position_y=0;v.head_rotation_y=q.target_y_rotation;return q.is_sneaking;" wiki:dance
@@ -100,15 +92,11 @@ Each animation controller can play only one animation at a time. By using multip
 
 ### Examples
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @a animation.player.riding.legs none 0 "0" wiki:rideleg
 ```
 
 This command overlays the **riding legs** animation with the **pigling dance** animation:
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 /playanimation @a animation.piglin.celebrate_hunt_special none 0 "0" wiki:dance
@@ -120,13 +108,9 @@ Here, `wiki:rideleg` and `wiki:dance` are used as controller names, but any name
 
 To remove the above animations, you must **overwrite** the animation controller states:
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @a animation.player.attack.positions none 0 "1" wiki:rideleg
 ```
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 /playanimation @a animation.player.attack.positions none 0 "1" wiki:dance
@@ -148,21 +132,15 @@ To remove the above animations, you must **overwrite** the animation controller 
 
 ### Bad Usage Examples
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @a animation.ender_dragon.neck_head_movement attack.positions 0 "v.head_position_y=0;v.head_rotation_y=q.life_time*1000;return !q.is_sneaking;" wiki:head
 ```
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 /playanimation @a attack.positions animation.ender_dragon.neck_head_movement 0 "v.head_position_y=0;v.head_rotation_y=q.target_y_rotation;return q.is_sneaking;" wiki:head
 ```
 
 This makes the head rotate **only while sneaking**. However, if you then execute:
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 playanimation @e[tag=main] attack.positions none 0 "1" wiki:head
@@ -185,8 +163,6 @@ Instead of transitioning to `attack.positions`, transition to a **different** an
 ### Example: Editing the Parrot's Animation
 
 This is part of the `animation.parrot.moving` JSON file:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "animation.parrot.moving": {
@@ -213,8 +189,6 @@ This is part of the `animation.parrot.moving` JSON file:
 
 Now, let's **modify the parrot's body position** using this command:
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 /playanimation @a animation.parrot.moving none 0 "variable.wing_flap=10;" wiki:body.ypos
 ```
@@ -227,8 +201,6 @@ This moves the parrot’s **body upwards**.
 **Shortened Syntax:**
 
 You can **shorten `variable` to `v`**:
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 /playanimation @a animation.parrot.moving none 0 "v.wing_flap=10;" wiki:body_ypos
@@ -243,8 +215,6 @@ You can **shorten `variable` to `v`**:
 2. **Default entity variables reset on each execution.**
 
     - If you loop the command:
-
-    <CodeHeader></CodeHeader>
 
     ```yaml
     /playanimation @a animation.player.attack.rotations none 0 "v.attack_body_rot_y=90;" wiki:body.yrot
@@ -285,15 +255,11 @@ For a detailed guide, visit: [Bedrock.dev - Molang Documentation](https://bedroc
 
 1. Rotate the body of the entity along the Y-axis (excluding limbs and head):
 
-    <CodeHeader></CodeHeader>
-
     ```yaml
     /playanimation @a animation.player.attack.rotations none 0 "v.attack_body_rot_y=0;" wiki:body_yrot
     ```
 
 2. Rotate the body of the entity along the Z-axis (excluding limbs and head):
-
-    <CodeHeader></CodeHeader>
 
     ```yaml
     /playanimation @a animation.wolf.shaking none 0 "v.body_rot_z=0;" wiki:body_zrot
@@ -303,8 +269,6 @@ For a detailed guide, visit: [Bedrock.dev - Molang Documentation](https://bedroc
 
 1. Rotate the entire entity along the X-axis and Z-axis:
 
-    <CodeHeader></CodeHeader>
-
     ```yaml
     /playanimation @a animation.ender_dragon.setup none 0 "v.clamped_pitch=0;v.clamped_roll=0;" wiki:root_xrot_yrot
     ```
@@ -313,8 +277,6 @@ For a detailed guide, visit: [Bedrock.dev - Molang Documentation](https://bedroc
     - `clamped_roll` — rotate the entire entity along the Z-axis.
 
 2. Offset the entire entity's position along the X, Y, and Z axes:
-
-    <CodeHeader></CodeHeader>
 
     ```yaml
     /playanimation @a animation.minecart.move none 0 "v.rail_offset.x=0;v.rail_offset.y=0;v.rail_offset.z=0;" wiki:root_pos
@@ -327,8 +289,6 @@ For a detailed guide, visit: [Bedrock.dev - Molang Documentation](https://bedroc
 ### Head Animations
 
 1. Offset or rotate the entity's head:
-
-    <CodeHeader></CodeHeader>
 
     ```yaml
     /playanimation @a animation.ender_dragon.neck_head_movement none 0 "v.head_position_x=0;v.head_position_y=0;v.head_position_z=0;v.head_rotation_x=0;v.head_rotation_y=0;v.head_rotation_z=0;" wiki:head_pos_rot

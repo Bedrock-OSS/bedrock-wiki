@@ -43,7 +43,7 @@ We will need to modify materials in this guide. However due to render dragon mat
 To use animated texture, we need to change the entity material to one, that has `USE_UV_ANIM` property.
 Let's simply add a new material:
 
-<CodeHeader>RP/materials/entity.material</CodeHeader>
+<CodeHeader path="RP/materials/entity.material" />
 
 ```json
 {
@@ -57,8 +57,6 @@ Let's simply add a new material:
 ```
 
 Or you can add this to existing ones, check default material file.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "+defines": [
@@ -79,7 +77,7 @@ Some entities have multiple materials and if you want to make its texture animat
 
 Before we go next, we need to define a new material in our client entity file.
 
-<CodeHeader>minecraft:client_entity > description</CodeHeader>
+<CodeHeader path="RP/entity/cow.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "materials": {
@@ -93,7 +91,10 @@ After that all, we need to edit a render controller.
 
 Here we will add `uv_anim` component with offset and scale properties:
 
-<CodeHeader>RP/render_controllers/cow.render_controllers.json > controller.render.cow</CodeHeader>
+<CodeHeader
+    path="RP/render_controllers/cow.render_controllers.json"
+    breadcrumbs="render_controllers/controller.render.cow"
+/>
 
 ```json
 "uv_anim": {

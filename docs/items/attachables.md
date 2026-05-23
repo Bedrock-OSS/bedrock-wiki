@@ -46,7 +46,7 @@ The attachable definition goes within the 'attachables' folder. The file layout 
 
 Here's a basic example of an attachable.
 
-<CodeHeader>RP/attachables/stick.entity.json</CodeHeader>
+<CodeHeader path="RP/attachables/stick.entity.json" />
 
 ```json
 {
@@ -162,7 +162,7 @@ Our first step is to upgrade the model file format version to `"1.16.0"` if it i
 
 Next up is modifying the root bone of our geometry to be bound to the equipment slot the item is placed in. Take note of line 4 in this excerpt from the skeleton head geometry file:
 
-<CodeHeader>RP/models/entity/skeleton_head.geo.json</CodeHeader>
+<CodeHeader path="RP/models/entity/skeleton_head.geo.json" />
 
 ```json
 // A bone

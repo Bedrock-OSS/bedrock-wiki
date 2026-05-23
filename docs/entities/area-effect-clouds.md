@@ -90,7 +90,7 @@ To make manipulating area effect clouds easier, the following utility is provide
     Download utility
 </Button>
 
-<CodeHeader>Example usage:</CodeHeader>
+<CodeHeader path="Example usage:" />
 
 ```js
 import { world, DimensionLocation } from "@minecraft/server";

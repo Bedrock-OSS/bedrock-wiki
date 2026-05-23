@@ -29,7 +29,7 @@ In this section behavior pack components will be discussed.
 
 Let's start with some basic components that you need to add to your entity.
 
-<CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/sleeping_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:dweller": {
@@ -41,7 +41,7 @@ Let's start with some basic components that you need to add to your entity.
 
 Undocumented, needed for entity to be able to sleep.
 
-<CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/sleeping_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:environment_sensor": {
@@ -68,7 +68,10 @@ You need some basic navigation components for your entity be able to move to bed
 
 Now you need some component groups for your entity with some components.
 
-<CodeHeader>BP/entities/sleeping_entity.json#component_groups</CodeHeader>
+<CodeHeader
+    path="BP/entities/sleeping_entity.json"
+    breadcrumbs="minecraft:entity/component_groups"
+/>
 
 ```json
 "sleeping": {
@@ -136,7 +139,10 @@ Runs `wake_up` event when it is day time.
 
 This makes player to be able wake up entity without hurting it.
 
-<CodeHeader>BP/entities/sleeping_entity.json#component_groups</CodeHeader>
+<CodeHeader
+    path="BP/entities/sleeping_entity.json"
+    breadcrumbs="minecraft:entity/component_groups"
+/>
 
 ```json
 "sleep_timer": {
@@ -156,7 +162,7 @@ This component group is required for entity to fall asleep again (with some dela
 Here you will find all events that you need.
 I don't really think it needs explanation.
 
-<CodeHeader>BP/entities/sleeping_entity.json#events</CodeHeader>
+<CodeHeader path="BP/entities/sleeping_entity.json" breadcrumbs="minecraft:entity/events" />
 
 ```json
 "sleep": {
@@ -207,7 +213,7 @@ Don't forget that you need to add sleeping animation and controller for it to yo
 
 Just copy/paste it.
 
-<CodeHeader>RP/animations/sleeping_entity.animation.json</CodeHeader>
+<CodeHeader path="RP/animations/sleeping_entity.animation.json" />
 
 ```json
 {
@@ -234,7 +240,7 @@ Just copy/paste it.
 
 Again just copy/paste it if you need.
 
-<CodeHeader>RP/animations_controllers/ac.sleeping_entity.sleep.json</CodeHeader>
+<CodeHeader path="RP/animations_controllers/ac.sleeping_entity.sleep.json" />
 
 ```json
 {
@@ -290,7 +296,7 @@ In this section behavior pack components will be discussed.
 
 For this behavior you will need only one component:
 
-<CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/sleeping_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:behavior.nap": {
@@ -354,7 +360,7 @@ For this behavior you will need only one component:
 
 If you want to also use the trusting mechanic, add:
 
-<CodeHeader>BP/entities/sleeping_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/sleeping_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:trust": {}
@@ -364,7 +370,7 @@ If you want to also use the trusting mechanic, add:
 
 In our resource pack you can run an animation when entity starts to sleep.
 
-<CodeHeader>RP/animations_controllers/ac.sleeping_entity.sleep.json</CodeHeader>
+<CodeHeader path="RP/animations_controllers/ac.sleeping_entity.sleep.json" />
 
 ```json
 {

@@ -39,7 +39,7 @@ On this page, we will be referring to the value that `seconds_to_destroy` and `d
 A block's _hardness_ value is set using the [destructible by mining](/blocks/block-components#destructible-by-mining) component.
 By default a block's hardness is `0`{lang=json}, meaning it can be mined instantly.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destructible_by_mining": {
@@ -76,7 +76,7 @@ This can be seen in vanilla Cobwebs which have both `minecraft:is_shears_item_de
 
 These tags can be applied to your block in its `components`:
 
-<CodeHeader>BP/blocks/custom_stone.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_stone.json" />
 
 ```json
 {
@@ -115,7 +115,7 @@ It is impossible to prevent a block from dropping itself when mined using an ite
 
 In order to prevent your block from dropping when destroyed without the required tool, you'll need to create a new loot table.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:loot": "loot_tables/wiki/blocks/limestone.json"
@@ -136,7 +136,7 @@ By default, the `match_tool` condition will match an empty hand.
 To prevent this from happening, you'll need to ensure that the stack size (`count`) is not 0.
 :::
 
-<CodeHeader>BP/loot_tables/wiki/blocks/limestone.json</CodeHeader>
+<CodeHeader path="BP/loot_tables/wiki/blocks/limestone.json" />
 
 ```json
 {
@@ -179,7 +179,7 @@ However, given that custom blocks have no way to properly define the tool they r
 We can replicate this penalty by making the hardness of the block **3.33×** higher than it should be when the correct tool is not being used.
 This can be achieved by using the `item_specific_speeds` parameter of the destructible by mining component.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destructible_by_mining": {

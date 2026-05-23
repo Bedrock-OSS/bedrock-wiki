@@ -48,7 +48,7 @@ However, unlike other insulators such as glass, vanilla slabs do not allow wire 
 
 You can prevent wire from stepping down your own block by using the [redstone conductivity](/blocks/block-components#redstone-conductivity) component.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_conductivity": {
@@ -85,7 +85,7 @@ In the diagram below, the powered repeater on the left is strongly powering the 
 
 To create custom redstone conductors, you'll need to include the [redstone conductivity](/blocks/block-components#redstone-conductivity) component in your block.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_conductivity": {
@@ -97,7 +97,7 @@ To create custom redstone conductors, you'll need to include the [redstone condu
 Applying the `minecraft:redstone_consumer` component to the block will prevent it from conducting redstone, while retaining other properties of redstone conductors such as wire cutting.
 In order to make a redstone consumer actually conduct redstone in the same way as regular blocks, you must set the `propagates_power` parameter to `true`{lang=json}:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_conductivity": {
@@ -132,7 +132,7 @@ Redstone updates are not only caused by changes to the redstone power level rece
 They can also be triggered by the block being placed or the chunk containing the block being loaded, meaning it is currently impossible to create a block that functions like doors.
 :::
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_consumer": {
@@ -141,7 +141,7 @@ They can also be triggered by the block being placed or the chunk containing the
 "wiki:redstone_update_logging": {}
 ```
 
-<CodeHeader>Custom Component Script</CodeHeader>
+<CodeHeader path="BP/scripts/redstoneUpdateLogging.js" />
 
 ```js
 import { system } from "@minecraft/server";
@@ -184,7 +184,7 @@ To create custom redstone producers, you'll need to include the [redstone produc
 
 Here's how the redstone producer component of the lit redstone torch in the above diagram would look:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_producer": {

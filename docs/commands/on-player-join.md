@@ -26,7 +26,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/wiki/event/players/on_join.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/event/players/on_join.mcfunction" />
 
 ```yaml
 ## Register Players to 'wiki:joined' Objective Who Joined For First Time or Were Cleared from 'wiki:joined' Previously
@@ -64,7 +64,7 @@ This is because _adding_ a score of 0 to a score of 1 will have no change. But a
 
 If you are using functions instead of command blocks, the `on_join` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 ```json
 {
   "values": [

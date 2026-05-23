@@ -33,7 +33,7 @@ The following example is referenced and analyzed throughout the document:
 
 <Spoiler title="Trade Table File Example">
 
-<CodeHeader>BP/trading/wiki/minister.json</CodeHeader>
+<CodeHeader path="BP/trading/wiki/minister.json" />
 
 ```json
 {
@@ -164,7 +164,7 @@ The following example is referenced and analyzed throughout the document:
 
 Trade tables are represented as un-versioned, un-namespaced objects.
 
-<CodeHeader>#</CodeHeader>
+<CodeHeader path="#" />
 
 ```json
 {
@@ -187,7 +187,7 @@ Trade tables use [tiers](#tiers) to structure trade organization. Tiers are defi
 
 Tiers act as an unlockable set of trades and represent the highest level of grouping in a trade table.
 
-<CodeHeader>#/tiers/0</CodeHeader>
+<CodeHeader path="#/tiers/0" />
 
 ```json
 {
@@ -195,7 +195,7 @@ Tiers act as an unlockable set of trades and represent the highest level of grou
 }
 ```
 
-<CodeHeader>#/tiers/1</CodeHeader>
+<CodeHeader path="#/tiers/1" />
 
 ```json
 {
@@ -217,7 +217,7 @@ Within a tier, trades appear in order in the trading interface. If trades are gr
 
 Tiers are unlocked when the _trader_ meets experience thresholds. Each trader has its own internal lifetime experience that accumulates when trading with players. The amount of experience obtained per trade depends on that trade's [experience reward](#trader-experience). The optional `"total_exp_required"` property specifies how much experience the trader needs in order for that tier to unlock.
 
-<CodeHeader>#/tiers/1/</CodeHeader>
+<CodeHeader path="#/tiers/1/" />
 
 ```json
 "total_exp_required": 28
@@ -245,7 +245,7 @@ When the initial tier's experience threshold is non-zero, a manual update is req
 
 Excluding the [initial tier](#initial-tier-experience), it's possible to freeze trades at a tier:
 
-<CodeHeader>Example Tier Freeze</CodeHeader>
+<CodeHeader path="Example Tier Freeze" />
 
 ```json
 "total_exp_required": -1
@@ -257,7 +257,7 @@ When its prior tier is unlocked, a tier with a negative XP requirement will imme
 
 Trade groups are a way to randomly select which trades an individual trader should use for a tier.
 
-<CodeHeader>#/tiers/0/groups/0</CodeHeader>
+<CodeHeader path="#/tiers/0/groups/0" />
 
 ```json
 {
@@ -281,7 +281,7 @@ Currently, no random selection count is possible. Nor is weighting by trade, but
 
 Trades represent a transaction between a trader and the player.
 
-<CodeHeader>#/tiers/0/trades/1</CodeHeader>
+<CodeHeader path="#/tiers/0/trades/1" />
 
 ```json
 {
@@ -304,7 +304,7 @@ Individual trade definitions can affect more than just trades themselves. Notabl
 
 The fundamental transactional units are declared using `"wants"` and `"gives"`; players trade with `"wants"` to receive `"gives"`. Both properties must be arrays and are required.
 
-<CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+<CodeHeader path="#/tiers/0/trades/1/" />
 
 ```json
 "wants": […],
@@ -323,7 +323,7 @@ If an object is provided as an entry that contains both item and choice properti
 
 A trader can typically only perform an individual trade a set number of times before having to resupply. The numeric `"max_uses"` property configures this number.
 
-<CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+<CodeHeader path="#/tiers/0/trades/1/" />
 
 ```json
 "max_uses": 2
@@ -341,7 +341,7 @@ If a value of `0` is given, that trade will be shown in the trading interface bu
 
 Experience orbs intended for the _player_ can be disabled for a trade using the optional Boolean `"reward_exp"` property.
 
-<CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+<CodeHeader path="#/tiers/0/trades/1/" />
 
 ```json
 "reward_exp": false
@@ -353,7 +353,7 @@ By default, `"reward_exp"` is true, and the player will be rewarded with some ex
 
 Traders may receive experience when the player finalizes a trade. This property is the key to establishing a trade progression system with a trader using [tiers](#tiers).
 
-<CodeHeader>#/tiers/0/trades/1/</CodeHeader>
+<CodeHeader path="#/tiers/0/trades/1/" />
 
 ```json
 "trader_exp": 8
@@ -369,7 +369,7 @@ For non-linearly spaced tiers, it's typical for the trader experience to increas
 
 Choices are simple objects for randomly selecting an item to use for a trade. One item is selected with uniform randomness for that trade for each instance of a trader.
 
-<CodeHeader>#/tiers/1/trades/0/wants/0</CodeHeader>
+<CodeHeader path="#/tiers/1/trades/0/wants/0" />
 
 ```json
 {
@@ -400,7 +400,7 @@ There are currently no means of specifying a weight for a given item, but an ite
 
 Items are the subjects of a trade. Their definitions are shared between wanted and given items, but there are some various implications depending on location used.
 
-<CodeHeader>#/tiers/1/trades/0/wants/0/choice/0</CodeHeader>
+<CodeHeader path="#/tiers/1/trades/0/wants/0/choice/0" />
 
 ```json
 {
@@ -414,7 +414,7 @@ Items are the subjects of a trade. Their definitions are shared between wanted a
 }
 ```
 
-<CodeHeader>#/tiers/0/groups/0/trades/1/gives/0</CodeHeader>
+<CodeHeader path="#/tiers/0/groups/0/trades/1/gives/0" />
 
 ```json
 {
@@ -437,7 +437,7 @@ Items are the subjects of a trade. Their definitions are shared between wanted a
 
 Items are referenced within trades using the required `"item"` string property.
 
-<CodeHeader>#/tiers/1/trades/0/wants/0/choice/0/</CodeHeader>
+<CodeHeader path="#/tiers/1/trades/0/wants/0/choice/0/" />
 
 ```json
 "item": "wiki:exalted_blade"
@@ -445,7 +445,7 @@ Items are referenced within trades using the required `"item"` string property.
 
 The item reference must point to the identifier of an item. A data value can be provided in-place to the reference as a suffix:
 
-<CodeHeader>Example Data Assignment</CodeHeader>
+<CodeHeader path="Example Data Assignment" />
 
 ```json
 "item": "minecraft:log:2"
@@ -461,7 +461,7 @@ If no data value is specified for a _wanted_ item, any item with that identifier
 
 The optional `"quantity"` property specifies the count of items wanted or given in a trade.
 
-<CodeHeader>#/tiers/1/trades/0/wants/0/choice/0/</CodeHeader>
+<CodeHeader path="#/tiers/1/trades/0/wants/0/choice/0/" />
 
 ```json
 "quantity": {
@@ -480,7 +480,7 @@ Quantity is always bounded by the stack size and can only affect a single slot i
 
 The price multiplier dictates how an item's [base quantity](#quantity) is altered due to certain events.
 
-<CodeHeader>#/tiers/1/trades/0/wants/0/choice/0/</CodeHeader>
+<CodeHeader path="#/tiers/1/trades/0/wants/0/choice/0/" />
 
 ```json
 "price_multiplier": 0.5
@@ -530,7 +530,7 @@ A negative price multiplier is possible but can't affect increasing costs due to
 
 Functions are used to modify the nature of the item. The optional `"functions"` array contains a collection of functions to be applied to the item.
 
-<CodeHeader>#/tiers/0/groups/0/trades/1/gives/0/</CodeHeader>
+<CodeHeader path="#/tiers/0/groups/0/trades/1/gives/0/" />
 
 ```json
 "functions": [
@@ -589,7 +589,7 @@ Despite overriding the quantity, all [modified trade prices](#fluctuation-factor
 
 `enchant_with_levels` randomly enchants an item as through enchanted from an enchantment table.
 
-<CodeHeader>#/tiers/0/groups/0/trades/1/gives/0/functions/0</CodeHeader>
+<CodeHeader path="#/tiers/0/groups/0/trades/1/gives/0/functions/0" />
 
 ```json
 {
@@ -609,7 +609,7 @@ The cost for the first wanted item is determined by adding this function's chose
 
 `enchant_book_for_trading` is intended solely for trading. Its properties combine to determine the first wanted item's cost.
 
-<CodeHeader>#/tiers/0/groups/0/trades/0/gives/0/functions/0</CodeHeader>
+<CodeHeader path="#/tiers/0/groups/0/trades/0/gives/0/functions/0" />
 
 ```json
 {
@@ -643,7 +643,7 @@ If either random cost property is negative, there seems to be a 50-50 chance tha
 ::: tip
 If the total combined cost would be negative (assuming no negative random cost properties were used), the provided [quantity](#quantity) of the affected wanted item is used instead. The simplest means of guaranteeing this would be:
 
-<CodeHeader>Example Quantity-Based Enchanted Book Cost</CodeHeader>
+<CodeHeader path="Example Quantity-Based Enchanted Book Cost" />
 
 ```json
 {
@@ -662,7 +662,7 @@ If the total combined cost would be negative (assuming no negative random cost p
 
 The `"set_actor_id"` function is used to set the data value of a spawn egg based on a provided entity identifier, given with `"id"`.
 
-<CodeHeader>Example Spawn Egg Trader Binding</CodeHeader>
+<CodeHeader path="Example Spawn Egg Trader Binding" />
 
 ```json
 {

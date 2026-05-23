@@ -21,8 +21,6 @@ Before version 1.19.70, Bedrock Edition relied on Aux values (metadata) to defin
 
 ### Example Conversion
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 # Aux value example:
 /setblock ~ ~ ~ wool 1
@@ -45,8 +43,6 @@ Before version 1.19.70, Bedrock Edition relied on Aux values (metadata) to defin
 -   Empty brackets (`[]`) or the absence of brackets default to `0` (e.g., `wool []` or simply `wool` corresponds to white wool).
 
 ### Examples
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 /setblock ~ ~ ~ wool ["color"="white"]
@@ -78,8 +74,6 @@ Use this [Lookup Table](https://auxval-to-blockstates.netlify.app/) by _@SmokeyS
 Commands using blocks must specify all corresponding Block States or leave the Block States field empty. Missing any required states causes the command to fail.
 
 ### Examples
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 # Testing a Stone Button (Aux Value 0)
