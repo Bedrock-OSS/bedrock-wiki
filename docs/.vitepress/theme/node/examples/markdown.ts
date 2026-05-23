@@ -33,16 +33,18 @@ export function renderExampleFile(path: string, buffer: Buffer, link?: string) {
 }
 
 function renderCodeFile(path: string, lang: string, code: string, link?: string) {
-  if (link) path = `<a href="${link}" title="${viewFileTooltip}">${path}</a>`;
+  let header = `<CodeHeader path="${path}" `;
+  if (link) header += `link="${link}" `;
+  header += "/>";
+
+  const fence = getCodeFence(code);
 
   if (lang === "material") lang = "json";
   else if (lang === "mcfunction") lang = ""; // No syntax highlighting
 
-  const fence = getCodeFence(code);
-
   return [
     //
-    "<CodeHeader>" + path + "</CodeHeader>",
+    header,
     "",
     fence + lang,
     code,

@@ -32,7 +32,42 @@
   }
 
   & > .copy {
-    display: none;
+    position: absolute;
+    cursor: pointer;
+
+    top: 0.2rem;
+    right: 0.2rem;
+    border-radius: calc(var(--border-radius) - 0.2rem);
+    padding-inline: 0.3em;
+
+    color: var(--secondary-text-color);
+    line-height: 1.4;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    background-color: inherit;
+    opacity: 0;
+
+    transition:
+      background-color 0.05s,
+      opacity 0.05s;
+
+    &:hover {
+      background-color: var(--border-color);
+    }
+
+    &::after {
+      content: "Copy";
+    }
+    &.copied::after {
+      content: "Copied!";
+    }
+  }
+
+  &:hover > .copy,
+  & > .copy:focus-visible {
+    opacity: 1;
   }
 
   & > .line-numbers-wrapper {
