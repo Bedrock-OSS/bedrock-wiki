@@ -176,9 +176,11 @@ A example of a chest having a loot table applied to all rotations.
             },
             "input_predicate": {
                 "predicate_type": "minecraft:blockstate_match",
-                "block": "minecraft:chest",
-                "states": {
-                    "minecraft:cardinal_direction": "north"
+                "block_state": {
+                    "name": "minecraft:chest",
+                    "states": {
+                        "minecraft:cardinal_direction": "north"
+                    }
                 }
             },
             "output_state": {
@@ -195,9 +197,11 @@ A example of a chest having a loot table applied to all rotations.
             },
             "input_predicate": {
                 "predicate_type": "minecraft:blockstate_match",
-                "block": "minecraft:chest",
-                "states": {
-                    "minecraft:cardinal_direction": "south"
+                "block_state": {
+                    "name": "minecraft:chest",
+                    "states": {
+                        "minecraft:cardinal_direction": "south"
+                    }
                 }
             },
             "output_state": {
@@ -214,9 +218,11 @@ A example of a chest having a loot table applied to all rotations.
             },
             "input_predicate": {
                 "predicate_type": "minecraft:blockstate_match",
-                "block": "minecraft:chest",
-                "states": {
-                    "minecraft:cardinal_direction": "east"
+                "block_state": {
+                    "name": "minecraft:chest",
+                    "states": {
+                        "minecraft:cardinal_direction": "east"
+                    }
                 }
             },
             "output_state": {
@@ -233,9 +239,11 @@ A example of a chest having a loot table applied to all rotations.
             },
             "input_predicate": {
                 "predicate_type": "minecraft:blockstate_match",
-                "block": "minecraft:chest",
-                "states": {
-                    "minecraft:cardinal_direction": "west"
+                "block_state": {
+                    "name": "minecraft:chest",
+                    "states": {
+                        "minecraft:cardinal_direction": "west"
+                    }
                 }
             },
             "output_state": {
