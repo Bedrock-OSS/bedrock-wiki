@@ -102,16 +102,7 @@ The second definitions defines what kind of file this is. In our case, as this i
 
 Let us look closer at the `"description"`:
 
-<CodeHeader path="BP/items/ectoplasm.json" breadcrumbs="minecraft:item" />
-
-```json
-"description": {
-    "identifier": "wiki:ectoplasm",
-    "menu_category": {
-        "category": "items"
-    }
-},
-```
+<ExampleFile path="BP/items/ectoplasm.json" snippet="minecraft:item/description" />
 
 The description key contains the `identifier` and any other information required. The `identifier` allows the file to know which item to apply the components to.
 The `category` key defines which tab of the creative inventory / recipe book the item would show up in. There are four tabs to choose from: `"construction"`, `"equipment"`, `"items"` and `"nature"`. If this key is not included, then the item will not show in the creative inventory, but you can still get the item by using `/give`.
@@ -119,13 +110,10 @@ The `category` key defines which tab of the creative inventory / recipe book the
 Now we can actually define the behavior of our item, under `components`. Here we simply place any components we want our item to have.
 This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/item-components).
 
-<CodeHeader path="BP/items/ectoplasm.json" breadcrumbs="minecraft:item" />
-
-```json
-"components": {
-    "minecraft:max_stack_size": 16
-}
-```
+<ExampleFile
+    path="BP/items/ectoplasm.json"
+    snippet="minecraft:item/components/minecraft:max_stack_size"
+/>
 
 With that, we have now fully defined our item's behavior. This is what your file should currently look like.
 
@@ -162,11 +150,7 @@ Textures are stored in the resource pack under `RP/textures` as images. In order
 
 To start we need a texture for our item. For our ectoplasm, we will be using this image.
 
-![ectoplasm.png](https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/items/ectoplasm.png)
-
-<Button link="https://raw.githubusercontent.com/Bedrock-OSS/bedrock-examples/main/resources/guide/rp/textures/wiki/items/ectoplasm.png">
-    Download texture here
-</Button>
+<ExampleFile path="RP/textures/wiki/items/ectoplasm.png" />
 
 All item textures are stored in `RP/textures/wiki/items/`, where `wiki` should be replaced by your own namespace. From here, you can create any subdirectories you wish.
 It's best to name your texture image files with the items' _id_, in our case it will be `ectoplasm.png`.
@@ -196,13 +180,7 @@ Here we have a top level definition, `texture_data`, which is where we will defi
 
 Under `texture_data` will our list of item shortname definitions. An example definition looks like this:
 
-<CodeHeader path="RP/textures/item_texture.json/texture_data" />
-
-```json
-"wiki:ectoplasm": {
-    "textures": "textures/wiki/items/ectoplasm"
-}
-```
+<ExampleFile path="RP/textures/item_texture.json" />
 
 Here `wiki:ectoplasm` is our shortname and under `textures` we have the path to our item. Notice that this is relative to the resource pack, and does not include the file extension. Your shortname should be short and unique. We recommend setting it as the namespace and id for the item we are assigning it to.
 
@@ -212,14 +190,7 @@ Now whenever we want to refer our image, we will use the shortname `wiki:ectopla
 
 To finally apply our texture to our item, we add the `minecraft:icon` component to our item definition and set its value to our shortname.
 
-<CodeHeader path="ectoplasm.json/minecraft:item/" />
-
-```json
-"components": {
-    "minecraft:max_stack_size": 16,
-    "minecraft:icon": "wiki:ectoplasm"
-}
-```
+<ExampleFile path="BP/items/ectoplasm.json" snippet="minecraft:item/components" />
 
 Now your texture should appear on your item.
 
@@ -259,41 +230,13 @@ Your folder structure should look like this:
 
 <Spoiler title="Full ectoplasm.json">
 
-<CodeHeader path="BP/items/ectoplasm.json" />
-
-```json
-{
-    "format_version": "1.26.10",
-    "minecraft:item": {
-        "description": {
-            "identifier": "wiki:ectoplasm",
-            "menu_category": {
-                "category": "items"
-            }
-        },
-        "components": {
-            "minecraft:max_stack_size": 16,
-            "minecraft:icon": "wiki:ectoplasm"
-        }
-    }
-}
-```
+<ExampleFile path="BP/items/ectoplasm.json" />
 
 </Spoiler>
 
 <Spoiler title="Full item_texture.json">
 
-<CodeHeader path="RP/textures/item_texture.json" />
-
-```json
-{
-    "texture_data": {
-        "wiki:ectoplasm": {
-            "textures": "textures/wiki/items/ectoplasm"
-        }
-    }
-}
-```
+<ExampleFile path="RP/textures/item_texture.json" />
 
 </Spoiler>
 
