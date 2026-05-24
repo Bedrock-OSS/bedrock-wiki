@@ -2,7 +2,12 @@ import { PluginSimple } from "markdown-it";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-import { examplesCacheDirectory, renderExampleFile, getExampleForPage } from "../../examples";
+import {
+  examplesCacheDirectory,
+  getExampleRootForPage,
+  getExampleFromRoot,
+  renderExampleFile,
+} from "../../examples";
 import filePageLink from "../../../shared/filePageLink";
 
 const exampleFilePattern =
@@ -21,7 +26,8 @@ export const exampleFilePlugin: PluginSimple = (md) => {
 
       const props = match.groups!;
 
-      const example = getExampleForPage(env.relativePath);
+      const rootPath = getExampleRootForPage(env.relativePath);
+      const example = getExampleFromRoot(rootPath);
 
       if (!example.files.includes(props.path)) {
         throw new Error(`Example file "${props.path}" does not exist.`);
@@ -30,7 +36,7 @@ export const exampleFilePlugin: PluginSimple = (md) => {
       const cacheFilePath = join(examplesCacheDirectory, example.id, props.path);
 
       const buffer = readFileSync(cacheFilePath);
-      const link = filePageLink(env.relativePath.replace(/\.md$/, ""), props.path);
+      const link = filePageLink(rootPath, props.path);
 
       const markdown = renderExampleFile(props.path, buffer, link, props.snippet);
       const newTokens = md.parse(markdown, env);
