@@ -41,7 +41,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Create a Custom Item](/guide/custom-item)
 - [Create a Custom Entity](/guide/custom-entity)
 - [Blockbench: Modeling, Texturing & Animating](/guide/blockbench)
-- [Adding a Loot Table, Spawn Rule & Crafting Recipe](/guide/loot-table)
+- [Adding Loot Tables, Spawn Rules & Crafting Recipes](/guide/loot-table)
 
 ### Extra
 
