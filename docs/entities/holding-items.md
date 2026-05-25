@@ -38,7 +38,7 @@ Now you'll need to add a `minecraft:equipment` component in the component list f
 
 In our example it will look like this:
 
-<CodeHeader>BP/entity/mandalorian.json#components</CodeHeader>
+<CodeHeader path="BP/entity/mandalorian.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:equipment": {
@@ -56,7 +56,7 @@ This isn't the same loot table as what it drops on death. So make sure it has a 
 
 To have the entity always spawn with the same item, add the following loot table:
 
-<CodeHeader>BP/loot_tables/wiki/entities/gear/mandalorian.json</CodeHeader>
+<CodeHeader path="BP/loot_tables/wiki/entities/gear/mandalorian.json" />
 
 ```json
 {

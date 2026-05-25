@@ -16,7 +16,7 @@ For example, block descriptors are used in the block [placement filter](/blocks/
 
 ### Block Type Descriptor
 
-<CodeHeader>Block Descriptor</CodeHeader>
+<CodeHeader path="Block Descriptor" />
 
 ```json
 {
@@ -26,7 +26,7 @@ For example, block descriptors are used in the block [placement filter](/blocks/
 
 ### Block Permutation Descriptor
 
-<CodeHeader>Block Descriptor</CodeHeader>
+<CodeHeader path="Block Descriptor" />
 
 ```json
 {
@@ -41,7 +41,7 @@ For example, block descriptors are used in the block [placement filter](/blocks/
 
 Only has access to the `q.all_tags()`{lang=molang} and `q.any_tag()`{lang=molang} query functions.
 
-<CodeHeader>Block Tags Descriptor</CodeHeader>
+<CodeHeader path="Block Tags Descriptor" />
 
 ```json
 {
@@ -56,7 +56,7 @@ For example, item descriptors are used in the item [repairable](/items/item-comp
 
 ### Item Type Descriptor
 
-<CodeHeader>Item Descriptor</CodeHeader>
+<CodeHeader path="Item Descriptor" />
 
 ```json
 {
@@ -68,7 +68,7 @@ For example, item descriptors are used in the item [repairable](/items/item-comp
 
 Only has access to the `q.all_tags()`{lang=molang} and `q.any_tag()`{lang=molang} query functions.
 
-<CodeHeader>Item Tags Descriptor</CodeHeader>
+<CodeHeader path="Item Tags Descriptor" />
 
 ```json
 {
@@ -80,7 +80,7 @@ Only has access to the `q.all_tags()`{lang=molang} and `q.any_tag()`{lang=molang
 
 Range objects define a spread between two numbers.
 
-<CodeHeader>Range Object Example</CodeHeader>
+<CodeHeader path="Range Object Example" />
 
 ```json
 {
@@ -95,7 +95,7 @@ When provided, a random value will be selected inclusively between the minimum a
 
 Fraction objects define a fraction using a numerator and denominator.
 
-<CodeHeader>Fraction Object Example</CodeHeader>
+<CodeHeader path="Fraction Object Example" />
 
 ```json
 {

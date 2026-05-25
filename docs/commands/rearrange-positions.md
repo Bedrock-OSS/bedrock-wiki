@@ -67,7 +67,7 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 An ID system is required to index the position of all targets from 1 to N, allowing us to track the original position of each target. We will run this file in the `tick.json` to automatically assign the IDs.
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/id.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/id.mcfunction" />
 
 ```yaml
 ## Register New Players to ID Objective
@@ -86,7 +86,7 @@ This is the function you run (once) each time you need to derange the positions 
 
 -   `/function wiki/derange_position/initiate`
 
-<CodeHeader>BP/functions/wiki/derange_position/initiate.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/derange_position/initiate.mcfunction" />
 
 ```yaml
 ## Summon Position Marker
@@ -115,7 +115,7 @@ In case a single target is left with no available position except its original, 
 
 The actual randomized derangement process will be performed by this function below:
 
-<CodeHeader>BP/functions/wiki/derange_position/process.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/derange_position/process.mcfunction" />
 
 ```yaml
 ## Move to a Different Position
@@ -147,7 +147,7 @@ execute if score .Players.NotAllocated wiki:count matches 2.. run function wiki/
 
 Directly using this command to teleport to a new position only works within the current dimension. Therefore, instead of that, we use the following three-command function for cross-dimensional compatibility:
 
-<CodeHeader>BP/functions/wiki/derange_position/teleport.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/derange_position/teleport.mcfunction" />
 
 ```yaml
 tag @e[type=armor_stand,name="wiki:position_marker",r=0.01] add wiki:pos.ignored
@@ -159,7 +159,7 @@ tag @e remove wiki:pos.ignored
 
 Now, for our functions to actually work, we will need to add the following objectives on our world:
 
-<CodeHeader>BP/functions/wiki/scoreboard/objectives/add_all.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/objectives/add_all.mcfunction" />
 
 ```yaml
 scoreboard objectives add wiki:id dummy
@@ -170,7 +170,7 @@ scoreboard objectives add wiki:count dummy
 
 If you wish to add the objectives automatically as soon as you load the world, you may create the function file below:
 
-<CodeHeader>BP/functions/wiki/event/worlds/on_initialize.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/event/worlds/on_initialize.mcfunction" />
 
 ```yaml
 ## Initialization
@@ -190,7 +190,7 @@ scoreboard players set .Initialized wiki:world 1
 
 Finally, create your `tick.json` file:
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 
 ```json
 {

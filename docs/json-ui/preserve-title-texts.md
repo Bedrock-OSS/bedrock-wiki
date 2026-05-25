@@ -28,7 +28,7 @@ The following JSON creates a `label` element that is controlled by a hidden chil
 
 This code can be placed in any UI screen file, such as `hud_screen.json`.
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 
 ```json
 "preserved_title_display": {

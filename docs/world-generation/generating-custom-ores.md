@@ -21,7 +21,7 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 
 ## The Feature File
 
-<CodeHeader>BP/features/titanite_ore_feature.json</CodeHeader>
+<CodeHeader path="BP/features/titanite_ore_feature.json" />
 
 ```json
 {
@@ -49,7 +49,7 @@ For this tutorial, I'll be using 2 custom blocks, Titanite Ore and Deepslate Tit
 
 ## The Feature Rule
 
-<CodeHeader>BP/feature_rules/overworld_underground_titanite_ore_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/overworld_underground_titanite_ore_feature.json" />
 
 ```json
 {

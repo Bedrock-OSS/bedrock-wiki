@@ -69,7 +69,7 @@ The attachable samples in this guide are largely based on the vanilla armor atta
 
 Finally, let's define the name of our item by adding a translation in the resource pack in the form `item.<identifier>=<name>`{lang=xml}.
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_helmet=Custom Helmet
@@ -91,7 +91,7 @@ If you now go into the game and check what you have produced you should be able 
 
 ### Item Name
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_chestplate=Custom Chestplate
@@ -109,7 +109,7 @@ item.wiki:custom_chestplate=Custom Chestplate
 
 ### Item Name
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_leggings=Custom Leggings
@@ -127,7 +127,7 @@ item.wiki:custom_leggings=Custom Leggings
 
 ### Item Name
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_boots=Custom Boots
@@ -154,7 +154,7 @@ So rather than include the whole `player.json` I will just include the parts you
 
 So first of all lets put in the damage sensor component (which goes in your component section) which listens for when you take damage and lets you raise an event from it.
 
-<CodeHeader>BP/entities/player.json#components</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:damage_sensor": {
@@ -210,7 +210,7 @@ As you can see from the comments, there is a lot there but really all we are doi
 The event can be called anything but it is often better to have it more specific, in case you end up having multiple similar events etc., also it can help finding if you have multiple sections to it, i.e. I could search for "armour_sets" and find all events related to it.
 Then once you are done, in the same file we decide what we want to do with the event, which we put into our `events` section.
 
-<CodeHeader>BP/entities/player.json#events</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:armor_sets.my_custom.taken_damage": {

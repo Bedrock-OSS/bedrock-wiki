@@ -16,7 +16,7 @@ The following provides a method to read any Molang (variable, query, etc.) into 
 `/scoreboard objectives add MoLang dummy`
 `/scoreboard players set "#10" MoLang 10`
 
-<CodeHeader>BP/animation_controllers/molang_to_score.animation_controllers.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/molang_to_score.animation_controllers.json" />
 
 ```json
 "controller.animation.namespace.molang_to_score": {
@@ -46,7 +46,7 @@ The following provides a method to read any Molang (variable, query, etc.) into 
 }
 ```
 
-<CodeHeader>BP/animations/molang_to_score.animation.json</CodeHeader>
+<CodeHeader path="BP/animations/molang_to_score.animation.json" />
 
 ```json
 "animation.namespace.molang_to_score": {

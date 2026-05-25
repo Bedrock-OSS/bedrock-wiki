@@ -39,7 +39,7 @@ This arbitrary structure is used for the paths in this document:
 
 As an example, a "cold steel sword" might be crafted using the following [shaped recipe](#shaped-recipes):
 
-<CodeHeader>BP/recipes/crafting/weapons/cold_steel_sword.json</CodeHeader>
+<CodeHeader path="BP/recipes/crafting/weapons/cold_steel_sword.json" />
 
 ```json
 {
@@ -77,7 +77,7 @@ As an example, a "cold steel sword" might be crafted using the following [shaped
 
 The [format version](/guide/format-version) is intended to version the schema used for the body of a recipe. It is provided with the top-level `"format_version"` property.
 
-<CodeHeader>#/</CodeHeader>
+<CodeHeader path="#/" />
 
 ```json
 "format_version": "1.17.41"
@@ -93,7 +93,7 @@ It's strongly recommended to include a format version anyway, choosing a value t
 
 The `"description"` object, required within any recipe type, holds the identifier of a recipe.
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "description": {
@@ -111,7 +111,7 @@ It's strongly recommended to use a namespace. Namespaces are a standard in other
 
 Recipes are linked to crafting interfaces using the required `"tags"` array property, which must be placed within any recipe type. These tags will make the recipe be shared across different blocks that uses the `minecraft:crafting_table` component. When the recipe does not include the `crafting_table` tag, or any vanilla tag, but a tag from your custom block, the recipe will only be shared to that custom block and not the crafting table/stonecutter/etc. At least one tag must be provided.
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "tags": ["crafting_table", "altar"]
@@ -182,7 +182,7 @@ Working with recipes entails referencing items across a number of properties. It
 
 Generally, a string reference is just the namespace and identifier combination for that item:
 
-<CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/ingredients/0" />
 
 ```json
 "minecraft:planks"
@@ -190,7 +190,7 @@ Generally, a string reference is just the namespace and identifier combination f
 
 String references additionally support specification of a data value as a suffix:
 
-<CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/ingredients/0" />
 
 ```json
 "minecraft:planks:2"
@@ -200,7 +200,7 @@ String references additionally support specification of a data value as a suffix
 
 The item object is a more explicit construct for referencing items.
 
-<CodeHeader>#/minecraft:recipe_shapeless/ingredients/0</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/ingredients/0" />
 
 ```json
 {
@@ -212,7 +212,7 @@ The item object is a more explicit construct for referencing items.
 
 The required `"item"` property functions the same as the string reference format. Although an explicit data field is available, the data suffix string format is still supported in the `"item"` property. However, unlike the suffix form, `"data"` can accept Molang. The Molang here is evaluated once on world load, not per-crafting attempt. Variables cannot be used to pass data between properties in a recipe. Furthermore, the nature of input items cannot be queried. Currently, the only known usable query in the `"data"` property is `q.get_actor_info_id`, used to look up the ID of an entity's spawn egg by its identifier, however this can also be achieved by simply setting the `"item"` to the spawn egg's ID (e.g. `minecraft:chicken_spawn_egg`).
 
-<CodeHeader>#/minecraft:recipe_shapeless/result</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/result" />
 
 ```json
 {
@@ -235,7 +235,7 @@ Despite having similarities to trade [table item descriptors](/loot/trade-tables
 
 Additional identifiers not typically usable are available to recipes to describe basic potions.
 
-<CodeHeader>#/minecraft:recipe_brewing_mix/input</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_brewing_mix/input" />
 
 ```json
 "minecraft:potion_type:strength"
@@ -275,7 +275,7 @@ Where supported, `long_` and `strong_` prefixes may be used to designate modifie
 Crafting operations instantly transform inputs to outputs using crafting grids. Two crafting recipe types are available: [shapeless recipes](#shapeless-recipes), whose inputs may be arranged in any way, and [shaped recipes](#shaped-recipes), used to define strict arrangements of inputs.
 Crafting recipes support both crafting tables and stonecutters:
 
-<CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/" />
 
 ```json
 "tags": ["crafting_table", "stonecutter"]
@@ -289,7 +289,7 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 
 ![](shapeless_recipe.png)
 
-<CodeHeader>BP/recipes/decorations/knobs/brass.json</CodeHeader>
+<CodeHeader path="BP/recipes/decorations/knobs/brass.json" />
 
 ```json
 {
@@ -331,7 +331,7 @@ Shapeless recipes simply bind a collection of inputs to a single output on a cra
 
 The required `"ingredients"` array property lists the items required as inputs for the crafting recipe.
 
-<CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/" />
 
 ```json
 "ingredients": [
@@ -349,7 +349,7 @@ Each entry is an [item descriptor](#item-descriptors). If an ingredient provides
 
 Shapeless recipe outputs are expressed using the required `"result"` property and may be expressed as either an [item descriptor](#item-descriptors) or an array of a single item descriptor.
 
-<CodeHeader>#/minecraft:recipe_shapeless/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shapeless/" />
 
 ```json
 "result": {
@@ -364,7 +364,7 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 
 ![](shaped_recipe.png)
 
-<CodeHeader>BP/recipes/covered_arch.json</CodeHeader>
+<CodeHeader path="BP/recipes/covered_arch.json" />
 
 ```json
 {
@@ -407,7 +407,7 @@ Shaped recipes enforce that the ingredients used during crafting conform to a st
 
 The required `"pattern"` array property establishes the shape used for the recipe.
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -429,7 +429,7 @@ If the pattern is only comprised of spaces, empty crafting interfaces able to fi
 
 The pattern grid must be at most 3 × 3 but may be smaller. If string lengths are mismatched, Minecraft will automatically extend shorter strings, implying spaces in filled slots. The following two are equivalent:
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -439,7 +439,7 @@ The pattern grid must be at most 3 × 3 but may be smaller. If string lengths ar
 ]
 ```
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -457,7 +457,7 @@ Currently, no crafting grids, including those configurable from custom blocks, m
 
 Spaces are not automatically implied to fill in any remaining slots in the 3 × 3 space. If a provided pattern is smaller than the crafting grid being used, the pattern can be used anywhere so long as the structure and contents are maintained. As an example, consider the following pattern on a crafting table:
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -500,7 +500,7 @@ _OO
 
 To restrict placements to a particular location, use explicit spaces, which enforce empty slots in certain locations. The following is only usable in the upper-left corner of a grid:
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -514,7 +514,7 @@ To restrict placements to a particular location, use explicit spaces, which enfo
 
 All shaped recipes are innately horizontally symmetric:
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -526,7 +526,7 @@ All shaped recipes are innately horizontally symmetric:
 
 The preceding recipe may also be used by a player as though it were set to:
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "pattern": [
@@ -540,7 +540,7 @@ The preceding recipe may also be used by a player as though it were set to:
 
 Keys provide meaning to characters in a [pattern](#patterns), done via the required `"key"` object property, which maps key names to [item descriptors](#item-descriptors).
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "key": {
@@ -563,7 +563,7 @@ If a character in the pattern is not present in the key map, it will be treated 
 
 Shaped crafting recipe outputs behave very similarly to their [shapeless counterparts](#shapeless-results). Unlike array results for shapeless recipes, however, shaped recipe result arrays may contain more than one [item descriptor](#item-descriptors).
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "result": [
@@ -599,7 +599,7 @@ When comparing a shaped recipe to a shapeless recipe, the rules for comparing sh
 
 This section is included informatively. Groups are present in crafting recipes in vanilla definitions, given with the optional `"group"` string property.
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "group": "slingshots"
@@ -611,7 +611,7 @@ It is currently unknown what, if anything, this property achieves. Presumably, i
 
 Crafting recipes support an additional property for handling input collisions, `"priority"`, which primarily acts as a [tiebreaker](#prioritization) when multiple recipes could possibly apply to the given situation. Priorities are provided directly within the crafting recipe type object.
 
-<CodeHeader>#/minecraft:recipe_shaped/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_shaped/" />
 
 ```json
 "priority": 2
@@ -625,7 +625,7 @@ Furnace recipes are used to transform an item using a heat source over a period 
 
 ![](furnace_recipe.png)
 
-<CodeHeader>BP/recipes/magic/magic_ash.json</CodeHeader>
+<CodeHeader path="BP/recipes/magic/magic_ash.json" />
 
 ```json
 {
@@ -646,7 +646,7 @@ Furnace recipes are used to transform an item using a heat source over a period 
 
 All vanilla heating blocks are supported via tags.
 
-<CodeHeader>#/minecraft:recipe_furnace/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_furnace/" />
 
 ```json
 "tags": ["furnace", "blast_furnace", "smoker", "campfire", "soul_campfire"]
@@ -656,7 +656,7 @@ All vanilla heating blocks are supported via tags.
 
 Furnace recipes bind exactly one input [item descriptor](#item-descriptors) to exactly one output item descriptor.
 
-<CodeHeader>#/minecraft:recipe_furnace/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_furnace/" />
 
 ```json
 "input": "wiki:bone_fragments",
@@ -674,7 +674,7 @@ Brewing recipes are used to transform an item using another item as a catalyst. 
 
 Only one interface supports brewing recipes:
 
-<CodeHeader>#/minecraft:recipe_brewing_container/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_brewing_container/" />
 
 ```json
 "tags": ["brewing_stand"]
@@ -684,7 +684,7 @@ Only one interface supports brewing recipes:
 
 Brewing transactions are similar to [heating transactions](#heating-transactions), requiring an input and output, each pointing to a single [item descriptor](#item-descriptors). Brewing recipes, however, also require the `"reagent"` property as a catalyst, which also can only point to a single item descriptor.
 
-<CodeHeader>#/minecraft:recipe_brewing_mix/</CodeHeader>
+<CodeHeader path="#/minecraft:recipe_brewing_mix/" />
 
 ```json
 "input": "wiki:flask",
@@ -710,7 +710,7 @@ Brewing mixes are simple brewing recipes theoretically designed to isolate the d
 
 ![](brewing_mix_recipe.png)
 
-<CodeHeader>BP/recipes/brewing/negative/paralysis.json</CodeHeader>
+<CodeHeader path="BP/recipes/brewing/negative/paralysis.json" />
 
 ```json
 {
@@ -746,7 +746,7 @@ Brewing containers are designed to pass the data value of an input to the transf
 
 ![](brewing_container_recipe.png)
 
-<CodeHeader>BP/recipes/illumination_potion.json</CodeHeader>
+<CodeHeader path="BP/recipes/illumination_potion.json" />
 
 ```json
 {

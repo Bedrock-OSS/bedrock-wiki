@@ -160,7 +160,7 @@ A block ignore processor allows for 1 field:
 
 -   `blocks`: An array of block identifiers. Block IDs can be found with `/setblock`.
 
-<CodeHeader>minecraft:processor_list</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:processor_list" />
 
 ```json
 {
@@ -182,7 +182,7 @@ A capped processor allows for 2 fields:
     Limit can also specify a type of `constant` and then a `value`, a integer.
 -   `delegate`: A processor that will run the amount of times set in `limit`. It cannot be another `minecraft:capped` processor.
 
-<CodeHeader>minecraft:processor_list</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:processor_list" />
 
 ```json
 {
@@ -200,7 +200,7 @@ A protected block processor allows for 1 field:
 
 -   `value`: A [block tag](https://wiki.bedrock.dev/blocks/vanilla-block-tags).
 
-<CodeHeader>minecraft:processor_list</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:processor_list" />
 
 ```json
 {
@@ -238,7 +238,7 @@ A rule processor allows for 5 inputs:
         -   `min_chance` a percentage from 0.0 to 1.0 for the processor to be run if the block is between the origin and the `min_distance`.
         -   `max_chance` a percentage from 0.0 to 1.0 for the processor to be run if the block is between the `min_distance` and the `max_distance`.
 
-<CodeHeader>minecraft:processor_list</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:processor_list" />
 
 ```json
 {
@@ -265,7 +265,7 @@ They tell the game which template pool should be used to start generating the st
 
 They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
-<CodeHeader>BP/worldgen/structures/lone_fortress.json</CodeHeader>
+<CodeHeader path="BP/worldgen/structures/lone_fortress.json" />
 
 ```json
 {
@@ -284,7 +284,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 -   `step`: Which step of world generation places the structure.
     Contains multiple options, most notable being `underground_structures`, `strongholds`, and `surface_structures`. Steps generate in the following order with the first in the list being generated first. `raw_generation`, `lakes`, `local_modifications`, `underground_structures`, `surface_structures`, `strongholds`, `underground_ores`, `underground_decoration`, `fluid_springs`, `vegetal_decoration`, and `top_layer_modification`.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "step": "surface_structures"
@@ -293,14 +293,14 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 -   `heightmap_projection`: (optional) What y level the start_height value will look for to place the structure.
     Can be `world_surface`, `sea_floor`, or `none`. `world_surface` places the structure on the first non-air block from the top down. `sea_floor` places the structure on the first motion-blocking block (water are not motion-blocking so they are passed through) from the top down. `none` places the structure at y0. Defaults to `none`.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "heightmap_projection": "world_surface"
     ```
 
 -   `liquid_settings`: (optional) Determines what to do if a piece generates where a liquid was before. Can be `apply_waterlogging` or `ignore_waterlogging`. Defaults to `apply_waterlogging`.
--   <CodeHeader>minecraft:jigsaw</CodeHeader>
+-   <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "liquid_settings": "ignore_waterlogging"
@@ -314,7 +314,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
         -   `constant`: A constant anchor point will be used.
             The rest of the `start_height` will follow the format of `constant` when `type` is set to it.
 
-            <CodeHeader>minecraft:jigsaw</CodeHeader>
+            <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
             ```json
             "start_height": {
@@ -328,7 +328,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
         -   `uniform`: Uniform distribution of possible starting heights.
             The rest of the `start_height` will follow the format of `uniform` when `type` is set to it.
 
-            <CodeHeader>minecraft:jigsaw</CodeHeader>
+            <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
             ```json
             "start_height": {
@@ -359,7 +359,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     The depth determines how many jigsaws will be placed in a row before terminating the chain.
     For example if the structure starts with a structure with 1 generating jigsaw it will place 1 extension which counts as 1 level however if that extension places a piece with 3 generating jigsaws each piece placed by those will count as a level so all 3 will count as level 2, if they each place 3 more then all of those will count as level 3 and so on.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "max_depth": 20
@@ -367,7 +367,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 -   `terrain_adaptation`: (optional) How the game will modify the terrain around the structure. Defaults to `none`
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "terrain_adaptation": "beard_thin"
@@ -381,7 +381,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "start_pool": "wiki:lone_fortress_courtyard"
@@ -390,7 +390,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 -   `start_jigsaw_name`: (optional) The name field value of the jigsaw block from a structure in the start pool that should be considered the origin point of the structure.
     The location of the jigsaw block will be the center that `max_distance_from_center` uses as an origin and it will also be the coordinates that `/locate` guides to.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "start_jigsaw_name": "wiki:courtyard"
@@ -398,7 +398,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 -   `biome_filters`: (optional) What biomes the structure can spawn in.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "biome_filters": [
@@ -420,7 +420,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     }
     ```
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "max_distance_from_center": 128
@@ -428,7 +428,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 -   `dimension_padding`: (optional) How close to the world height and depth limits pieces of the structure can get before being terminated. Must be a positive number. Top and bottom can be set separately. Defaults to 0.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "dimension_padding": {
@@ -441,7 +441,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
     Trial chambers use them to determine what type of mob will be spawned from each type of spawner. For example the small melee spawners can pick baby zombies and every single small melee spawner will then spawn baby zombies.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "pool_aliases": [
@@ -458,7 +458,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
         -   `alias` is the ID of the pool alias to be used in the target pool field of a jigsaw block.
         -   `target` is the template pool to be used when the alias is called.
 
-        <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
+        <CodeHeader breadcrumbs="minecraft:jigsaw/pool_aliases" />
 
         ```json
         {
@@ -477,7 +477,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
             -   `data` is the ID of the template pool to be used if chosen.
             -   `weight` is the weight assigned to it, a higher value is more likely to be chosen.
 
-        <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
+        <CodeHeader breadcrumbs="minecraft:jigsaw/pool_aliases" />
 
         ```json
         {
@@ -500,7 +500,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
         They can be any type except `random_group`.
 
-        <CodeHeader>minecraft:jigsaw > pool_aliases</CodeHeader>
+        <CodeHeader breadcrumbs="minecraft:jigsaw/pool_aliases" />
 
         ```json
         {
@@ -548,7 +548,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 A file which tells the game how to place structures in a world. Multiple structures can be put here and the distance of how far apart they are is set here.
 
-<CodeHeader>BP/worldgen/structure_sets/fortress.json</CodeHeader>
+<CodeHeader path="BP/worldgen/structure_sets/fortress.json" />
 
 ```json
 {
@@ -581,7 +581,7 @@ The `structures` parameter of structure sets is an array with the identifiers of
 In this example, the two structures have an equal chance of being picked when the structure set marks a spot for a structure.
 If the structure selected to generate rolls a `minecraft:empty_pool_element` for its starting pool, the structure will fail to generate and the structure set will reroll until a structure is generated.
 
-<CodeHeader>minecraft:structure_set</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:structure_set" />
 
 ```json
 "structures": [
@@ -600,7 +600,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ### Jigsaw Definition
 
-<CodeHeader>BP/worldgen/structures/fortress.json</CodeHeader>
+<CodeHeader path="BP/worldgen/structures/fortress.json" />
 
 ```json
 {
@@ -655,7 +655,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ### Template Pool
 
-<CodeHeader>BP/worldgen/template_pools/lone_fortress_courtyard.json</CodeHeader>
+<CodeHeader path="BP/worldgen/template_pools/lone_fortress_courtyard.json" />
 
 ```json
 {
@@ -681,7 +681,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ### Processor List
 
-<CodeHeader>BP/worldgen/processors/fortress_decay.json</CodeHeader>
+<CodeHeader path="BP/worldgen/processors/fortress_decay.json" />
 
 ```json
 {
@@ -736,7 +736,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ### Structure Set
 
-<CodeHeader>BP/worldgen/structure_sets/fortress.json</CodeHeader>
+<CodeHeader path="BP/worldgen/structure_sets/fortress.json" />
 
 ```json
 {

@@ -17,7 +17,7 @@ In this guide, you will learn how to test for targets of matching scores / targe
 
 **Commands:**
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/get_highest_score.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_highest_score.mcfunction" />
 
 ```yaml
 ## Get Highest Score
@@ -51,7 +51,7 @@ Wildcard (`*`) compares with all tracked scores — that includes offline player
 
 **Example:**
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/get_highest_score/kills.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_highest_score/kills.mcfunction" />
 
 ```yaml
 ## Get Highest Score
@@ -68,7 +68,7 @@ execute as @a if score @s wiki:kills = .Highest wiki:kills run tag @s add wiki:t
 
 **Commands:**
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/get_lowest_score.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_lowest_score.mcfunction" />
 
 ```yaml
 ## Get Lowest Score
@@ -102,9 +102,7 @@ Wildcard (`*`) compares with all tracked scores — that includes offline player
 
 **Example:**
 
-<CodeHeader>
-    BP/functions/wiki/scoreboard/players/get_lowest_score/blocks_traveled.mcfunction
-</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_lowest_score/blocks_traveled.mcfunction" />
 
 ```yaml
 ## Get Lowest Score
@@ -123,7 +121,7 @@ This command compares the executing target's score with other selected targets. 
 
 **Command:**
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/get_matching_score.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_matching_score.mcfunction" />
 
 ```yaml
 execute as @a at @s at @a[rm=0.01] if score @s <objective> = @p <objective> run say @s and @p have matching scores!
@@ -142,7 +140,7 @@ In the `<command>` (where `/say` is used as an example), `@s` refers to the exec
 
 **Example 1:** Teleport pet to owner if farther than 6 blocks:
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/get_matching_score/pet.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_matching_score/pet.mcfunction" />
 
 ```yaml
 ## Teleport to Owner
@@ -153,7 +151,7 @@ execute as @e[tag=pet] at @s at @a[rm=7] if score @s wiki:id = @p wiki:id run tp
 
 **Example 2:** Set plot owner to Creative mode and others to Adventure mode:
 
-<CodeHeader>BP/functions/wiki/scoreboard/players/get_matching_score/plot.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/scoreboard/players/get_matching_score/plot.mcfunction" />
 
 ```yaml
 ## Set Owners to Creative Mode

@@ -22,7 +22,7 @@ description: runtime_identifier is an optional parameter that sits inside the de
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
-<CodeHeader>Behavior Entity Description</CodeHeader>
+<CodeHeader path="Behavior Entity Description" />
 
 ```json
 "description": {

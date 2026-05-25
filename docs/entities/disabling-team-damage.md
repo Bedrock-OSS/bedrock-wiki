@@ -28,7 +28,7 @@ If you wish to disable team damage (so one cannot hurt their teammates), assign 
 
 Now add this damage sensor component into your `player.json` `"components": {}`. See comments for explanation.
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > components</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:damage_sensor": {
@@ -88,7 +88,7 @@ The process uses:
 -   Hurt on condition
 -   Functions
 
-<CodeHeader>BP/entities/player.json</CodeHeader>
+<CodeHeader path="BP/entities/player.json" />
 
 ```json
 "components": {
@@ -140,7 +140,7 @@ The process uses:
 }
 ```
 
-<CodeHeader>BP/functions/wiki-apply_team.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki-apply_team.mcfunction" />
 
 ```
 execute as @s[tag=team1] at @s run tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team1
@@ -149,7 +149,7 @@ execute as @s[tag=team3] at @s run tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team
 execute as @s[tag=team4] at @s run tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team4
 ```
 
-<CodeHeader>BP/entities/arrow.json</CodeHeader>
+<CodeHeader path="BP/entities/arrow.json" />
 
 ```json
 "components": {
@@ -175,7 +175,7 @@ execute as @s[tag=team4] at @s run tag @e[rm=0,r=1,c=1,type=arrow,tag=] add team
 }
 ```
 
-<CodeHeader>BP/functions/wiki-apply_damage.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki-apply_damage.mcfunction" />
 
 ```
 execute as @s[tag=team1] at @s run tag @p[rm=0,r=1,tag=!team1] add damage

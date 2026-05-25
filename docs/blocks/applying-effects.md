@@ -26,7 +26,7 @@ This tutorial aims to show how to apply status effects to entities that are with
 To match the vanilla Beacon block, our custom block should apply effects every 4 seconds.
 This can be achieved by causing the block to "tick" every 80 ticks.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:tick": {
@@ -38,7 +38,7 @@ This can be achieved by causing the block to "tick" every 80 ticks.
 Next, we need to register our custom component to hook onto the [tick](/blocks/block-events#tick) event.
 This component should apply effects to entities within a specified area, so we're going to call it `wiki:radial_effects`.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "wiki:radial_effects": [
@@ -59,7 +59,7 @@ This component should apply effects to entities within a specified area, so we'r
 
 ## Custom Component Script
 
-<CodeHeader>BP/scripts/radialEffects.js</CodeHeader>
+<CodeHeader path="BP/scripts/radialEffects.js" />
 
 ```js
 import { system } from "@minecraft/server";
@@ -96,7 +96,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 <Spoiler title="Example Wither Block">
 
-<CodeHeader>BP/blocks/wither_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/wither_block.json" />
 
 ```json
 {

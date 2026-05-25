@@ -22,7 +22,7 @@ To convert the string to a number, we will utilize multiplication. Multiplying a
 
 The following code creates a label element that, when added to the root panel, displays the highest value in the scoreboard sidebar if that number is between 100-999.
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 
 ```json
 "string_to_number": {
@@ -56,7 +56,7 @@ The first binding reads the top value in the scoreboard sidebar (the binding is 
 
 The following code creates a label element that, when added to the root panel, displays the number # when passing in a title formatted "strength: #".
 
-<CodeHeader>RP/ui/hud_screen.json</CodeHeader>
+<CodeHeader path="RP/ui/hud_screen.json" />
 
 ```json
 "number_to_string": {

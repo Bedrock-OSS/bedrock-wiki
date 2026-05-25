@@ -28,7 +28,7 @@ This is a non-exhaustive list of how dummies can be used:
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
-<CodeHeader>BP/entities/dummy.json</CodeHeader>
+<CodeHeader path="BP/entities/dummy.json" />
 
 ```json
 {
@@ -81,7 +81,7 @@ If you want to disable collision at all (so you can place a block at it's positi
 
 ### Resource Entity
 
-<CodeHeader>RP/entity/dummy.json</CodeHeader>
+<CodeHeader path="RP/entity/dummy.json" />
 
 ```json
 {
@@ -106,7 +106,7 @@ If you want to disable collision at all (so you can place a block at it's positi
 
 ### Geometry
 
-<CodeHeader>RP/models/entity/dummy.json</CodeHeader>
+<CodeHeader path="RP/models/entity/dummy.json" />
 
 ```json
 {
@@ -125,7 +125,7 @@ If you want to disable collision at all (so you can place a block at it's positi
 
 ### Render Controller (Optional)
 
-<CodeHeader>RP/render_controllers/dummy.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/dummy.json" />
 
 ```json
 {

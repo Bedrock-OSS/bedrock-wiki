@@ -19,7 +19,7 @@ Each page consists of two parts: frontmatter and content.
 
 Inside the frontmatter you write the most important information about your article.
 
-<CodeHeader>docs/section/page.md</CodeHeader>
+<CodeHeader path="docs/section/page.md" />
 
 ```yaml
 ---
@@ -474,65 +474,76 @@ This is some _content_.
 
 ### CodeHeader
 
-CodeHeaders are used to nicely wrap codeblocks, so a user can easily copy the code inside them. You can also add some text, like a file path, so the users know exactly where to put this code.
-Remember to format json. You can use [this](https://jsonformatter.curiousconcept.com) tool.
+Code headers are used to give additional context to a code block so that users know exactly where to put the code.
 
-````json
-<CodeHeader>BP/blocks/example.json</CodeHeader>
+````xml
+<CodeHeader
+    path="RP/entity/example.json"
+    breadcrumbs="minecraft:client_entity/description/scripts"
+/>
 
 ```json
-{
-    "some": "json"
-}
+"pre_animation": [
+    "v.is_hidden = q.property('wiki:is_hidden');"
+]
 ```
 ````
 
-<CodeHeader>BP/blocks/example.json</CodeHeader>
+<CodeHeader
+    path="RP/entity/example.json"
+    breadcrumbs="minecraft:client_entity/description/scripts"
+/>
 
 ```json
-{
-    "some": "json"
-}
+"pre_animation": [
+    "v.is_hidden = q.property('wiki:is_hidden');"
+]
 ```
 
-The filepath goes between the two HTML-Tags. Make sure to follow our [Style-Guide](/meta/style-guide) when describing filepaths:
+| Attribute   | Type   | Note                                                                                 |
+| ----------- | ------ | ------------------------------------------------------------------------------------ |
+| path        | String | File location of the code.                                                           |
+| link        | String | Link to redirect on clicking the path.                                               |
+| breadcrumbs | String | Section of the file that contains the code. Breadcrumbs are separated using slashes. |
 
--   If you link inside a Behavior-Pack, place `BP` in front of all other files:
+-   `link` can only be defined if the code header also has a `path`.
+-   At least one of `path` and `breadcrumbs` must be defined.
+    Make sure to follow our [style guide](/meta/style-guide) when describing filepaths:
 
-    ✔️ `BP/blocks/example.json`
+    -   If you link inside a behavior pack, place `BP` in front of all other files:
 
-    ❌ `YourBehaviorPack/blocks/example.json`
+        ✔️ `BP/blocks/example.json`
 
--   Same for the Resource-Pack, use `RP` in front of all other files:
+        ❌ `YourBehaviorPack/blocks/example.json`
 
-    ✔️ `RP/manifest.json`
+    -   Same for the resource pack, use `RP` in front of all other files:
 
-    ❌ `YourResourcePack/manifest.json`
+        ✔️ `RP/manifest.json`
 
-On the next line after the closing tag, you have to start a code block to use this Component, as shown in the example above.
+        ❌ `YourResourcePack/manifest.json`
 
 ### FolderView
 
 Folder views can be used to show a setup of files, like in our [Project Setup](/guide/project-setup) guide.
 
-```md
+```xml
 <FolderView :paths="[
-    'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-    'com.mojang/development_resource_packs/guide_RP/manifest.json',
-    'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
-    'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
-    'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-    'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+    'com.mojang/development_resource_packs/Guide RP/texts/en_US.lang',
+    'com.mojang/development_resource_packs/Guide RP/manifest.json',
+    'com.mojang/development_resource_packs/Guide RP/pack_icon.png',
+    'com.mojang/development_behavior_packs/Guide BP/texts/en_US.lang',
+    'com.mojang/development_behavior_packs/Guide BP/manifest.json',
+    'com.mojang/development_behavior_packs/Guide BP/pack_icon.png',
 ]" />
 ```
 
 <FolderView :paths="[
-    'com.mojang/development_resource_packs/guide_RP/texts/en_US.lang',
-    'com.mojang/development_resource_packs/guide_RP/manifest.json',
-    'com.mojang/development_resource_packs/guide_RP/pack_icon.png',
-    'com.mojang/development_behavior_packs/guide_BP/texts/en_US.lang',
-    'com.mojang/development_behavior_packs/guide_BP/manifest.json',
-    'com.mojang/development_behavior_packs/guide_BP/pack_icon.png',
+    'com.mojang/development_resource_packs/Guide RP/texts/en_US.lang',
+    'com.mojang/development_resource_packs/Guide RP/manifest.json',
+    'com.mojang/development_resource_packs/Guide RP/pack_icon.png',
+    'com.mojang/development_behavior_packs/Guide BP/texts/en_US.lang',
+    'com.mojang/development_behavior_packs/Guide BP/manifest.json',
+    'com.mojang/development_behavior_packs/Guide BP/pack_icon.png',
 ]" />
 
 | Attribute | Required | Type             | Note                                                                                     |
@@ -666,7 +677,7 @@ Wrong:
 ````
 -   one
 -   two
-<CodeHeader>BP/blocks/example.json</CodeHeader>
+<CodeHeader path="BP/blocks/example.json" />
 ```json
 {
     "some": "json"
@@ -680,7 +691,7 @@ Correct:
 -   one
 -   two
 
-<CodeHeader>BP/blocks/example.json</CodeHeader>
+<CodeHeader path="BP/blocks/example.json" />
 
 ```json
 {
@@ -751,7 +762,7 @@ Some examples:
 Describe the most important things in comments inside the JSON, you can tell about other components after the code. Also follow our comments style.
 Example:
 
-<CodeHeader>BP/items/copper_coin.json</CodeHeader>
+<CodeHeader path="BP/items/copper_coin.json" />
 
 ```json
 {

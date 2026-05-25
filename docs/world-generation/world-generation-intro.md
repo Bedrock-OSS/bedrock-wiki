@@ -36,7 +36,7 @@ However, bridge. is not required.
 
 ## Custom Biomes
 
-<CodeHeader>BP/biomes/cold_biome.json</CodeHeader>
+<CodeHeader path="BP/biomes/cold_biome.json" />
 
 ```json
 {
@@ -108,7 +108,7 @@ _A non-smooth transition between the same biome, generated with noise_params as 
 
 -   And, last but not least, BIOME TAGS! They're very simple, but useful. You can set however many of the vanilla or custom tags you want by adding them in this format in the `minecraft:tags` component:
 
-<CodeHeader>minecraft:biome > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:biome/components" />
 
 ```json
 "minecraft:tags": {
@@ -146,7 +146,7 @@ Features are located in `BP/features` and are basically a group of blocks stored
 
 You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev/r/Features)
 
-<CodeHeader>BP/features/blocky_ore_feature.json</CodeHeader>
+<CodeHeader path="BP/features/blocky_ore_feature.json" />
 
 ```json
 {
@@ -215,7 +215,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 
 **Feature Rules** control where and how _features_ (and, in the future, _structures_) are placed.
 
-<CodeHeader>BP/feature_rules/overworld_underground_blocky_ore_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/overworld_underground_blocky_ore_feature.json" />
 
 ```json
 {
@@ -299,8 +299,6 @@ Now that you have your `.mcstructure`, time to write your `feature` and `feature
 -   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `wiki:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
 
 Here's an code example from the [Features Documentation](https://bedrock.dev/r/Features#minecraft:structure_template_feature):
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

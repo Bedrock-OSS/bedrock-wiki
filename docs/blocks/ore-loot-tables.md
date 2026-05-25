@@ -42,7 +42,7 @@ In addition, through use of scripts and custom components, we can create the exp
 In the example below, you can see how the `match_tool` condition is used to test for a pickaxe item that is iron tier or higher:
 :
 
-<CodeHeader>BP/loot_tables/blocks/silver_ore.json</CodeHeader>
+<CodeHeader path="BP/loot_tables/blocks/silver_ore.json" />
 
 ```json
 {
@@ -81,22 +81,20 @@ If needed you can add the enchantments section to your condition, but remember e
 
 Also note that it can correctly detect only 1st and 2nd enchantment level.
 
-<CodeHeader>BP/loot_tables/blocks/silver_ore.json > pools</CodeHeader>
+<CodeHeader path="BP/loot_tables/blocks/silver_ore.json" breadcrumbs="pools/0/conditions" />
 
 ```json
-"conditions": [
-    {
-        "condition": "match_tool",
-        ...
-        "enchantments": [
-            {
-                "fortune": {
-                    "level": 1
-                }
+{
+    "condition": "match_tool",
+    ...
+    "enchantments": [
+        {
+            "fortune": {
+                "level": 1
             }
-        ]
-    }
-]
+        }
+    ]
+}
 ```
 
 ## XP Reward Script
@@ -105,7 +103,7 @@ To spawn experience orbs when your ore block is destroyed, custom components can
 
 Similarly to the loot table, we check the item in the player's hand and then spawn a random number of XP orbs at the block's location.
 
-<CodeHeader>BP/scripts/silver_ore.js</CodeHeader>
+<CodeHeader path="BP/scripts/silver_ore.js" />
 
 ```js
 import { system, EquipmentSlot } from "@minecraft/server";
@@ -166,7 +164,7 @@ Here you need to do two things:
 -   Point to the new loot table with the `minecraft:loot` component.
 -   Add our experience reward custom component to the block's `components`.
 
-<CodeHeader>BP/blocks/silver_ore.json</CodeHeader>
+<CodeHeader path="BP/blocks/silver_ore.json" />
 
 ```json
 {

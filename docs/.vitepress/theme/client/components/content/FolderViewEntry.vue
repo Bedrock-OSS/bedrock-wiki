@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import { Entry } from "./FolderView.vue";
 import NavLink from "../navigation/NavLink.vue";
+import getFileIcon from "../../utils/getFileIcon";
 
 const props = defineProps<{
   entry: Entry;
@@ -19,22 +20,7 @@ function toggleChildren() {
 
 const icon = computed(() => {
   if (isFolder.value) return "📂";
-
-  let type = props.entry.name.split(".").pop();
-
-  switch (type) {
-    case "jpg":
-    case "jpeg":
-    case "png":
-    case "tga":
-      return "🖼️";
-    case "lang":
-      return "🈵";
-    case "mcstructure":
-      return "🏛";
-    default:
-      return "📝";
-  }
+  return getFileIcon(props.entry.name);
 });
 
 const name = computed(() => props.entry.name.split("/")[0]);
@@ -46,7 +32,7 @@ const link = computed(() => props.links?.(props.entry.path));
     <button v-if="isFolder" type="button" @click="toggleChildren">
       {{ name }}
     </button>
-    <NavLink v-else-if="link" :link>
+    <NavLink v-else-if="link" :link :title="name">
       {{ name }}
     </NavLink>
     <div v-else>{{ name }}</div>

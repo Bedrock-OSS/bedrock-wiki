@@ -44,7 +44,7 @@ Using scripting is preferred as it does not have these downsides.
 
 We'll need to create a simple custom entity that will have the `minecraft:arrow` runtime identifier (other projectile runtime identifiers work as well), an empty projectile component, and a transformation component to turn into a tamed wolf.
 
-<CodeHeader>BP/entities/pretamed_wolf.json</CodeHeader>
+<CodeHeader path="BP/entities/pretamed_wolf.json" />
 
 ```json
 {
@@ -80,7 +80,7 @@ Here, we'll need a copy of the player's behavior file, which we will modify slig
 
 You can find the BP player entity file in the vanilla behavior pack provided by Mojang [here](https://aka.ms/behaviorpacktemplate).
 
-<CodeHeader>BP/entities/player.json</CodeHeader>
+<CodeHeader path="BP/entities/player.json" />
 
 ```json
 {
@@ -122,7 +122,7 @@ You can find the BP player entity file in the vanilla behavior pack provided by 
 
 To make the tamed wolf spawn only when the projectile hits something, we first need to create a throwable item:
 
-<CodeHeader>BP/items/throwable_pretamed_wolf.json</CodeHeader>
+<CodeHeader path="BP/items/throwable_pretamed_wolf.json" />
 
 ```json
 {
@@ -146,7 +146,7 @@ To make the tamed wolf spawn only when the projectile hits something, we first n
 
 We'll also need to make some adjustment to our custom projectile entity so that it doesn't transform right as it spawns.
 
-<CodeHeader>BP/entities/pretamed_wolf.json</CodeHeader>
+<CodeHeader path="BP/entities/pretamed_wolf.json" />
 
 ```json
 {

@@ -47,48 +47,21 @@ Indentation works like `code`:
 
 ### Code Header
 
-<CodeHeader>
-    loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong.json
-</CodeHeader>
+<CodeHeader
+    path="loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong.json"
+    breadcrumbs="loooooooooooooooo/loooooong/loooooooooooooooong/looooooooooong/loooooooooong/looooooooooooooooooooooooooong/loooooooooooong/looooooooooooooong/loooooooooooooooong"
+/>
 
 ```json
 {
     "var": "a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
 }
-```
-
-<CodeHeader>func</CodeHeader>
-
-<CodeHeader>func</CodeHeader>
-
-```
-scoreboard players add @a joined 0
-
-
-#Your Commands Here (example)
-tp @a[scores={joined=0}] 0 65 0
-
-
-scoreboard players reset * joined
-scoreboard players set @a joined 1
-
-scoreboard objectives add world dummy
-scoreboard players add initialized world 0
-
-
-#Your Commands Here (example)
-execute if score initialized world matches 0 run say New world created!
-
-
-scoreboard players set initialized world 1
 ```
 
 ### No Line Numbers
 
 ```json
-{
-    "var": "a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
-}
+"a very very very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong value"
 ```
 
 ## Comments

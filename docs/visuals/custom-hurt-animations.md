@@ -18,7 +18,7 @@ First you need to setup entity file. Make sure to use file version that supports
 
 Add the following to entity description:
 
-<CodeHeader>BP/entity/my_entity.json#description</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/description" />
 
 ```json
 "properties": {
@@ -32,7 +32,7 @@ Add the following to entity description:
 
 And this in component groups:
 
-<CodeHeader>BP/entity/my_entity.json#component_groups</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/component_groups" />
 
 ```json
 "wiki:hurt_group": {
@@ -47,7 +47,7 @@ And this in component groups:
 
 Events to add this component group and switch properties:
 
-<CodeHeader>BP/entity/my_entity.json#events</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/events" />
 
 ```json
 "wiki:on_hurt_event": {
@@ -74,7 +74,7 @@ Events to add this component group and switch properties:
 
 To call this event add `damage_sensor` to components:
 
-<CodeHeader>BP/entity/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:damage_sensor": {

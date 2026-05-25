@@ -30,7 +30,7 @@ Note: When sleeping, the player's hitbox is reduced to 0.2 blocks.
 -   Make sure you add the `wiki:q.is_sleeping` scoreboard objective:
     -   `/scoreboard objectives add wiki:wiki:q.is_sleeping dummy`
 
-<CodeHeader>BP/functions/wiki/detect/player/is_sleeping.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/detect/player/is_sleeping.mcfunction" />
 
 ```yaml
 ## Sleep Detection
@@ -75,7 +75,7 @@ Thanks to the introduction of Short Sneaking parity in 1.20.10 which reduces the
 -   Make sure you add the `wiki:q.is_sneaking` scoreboard objective:
     -   `/scoreboard objectives add wiki:wiki:q.is_sneaking dummy`
 
-<CodeHeader>BP/functions/wiki/detect/player/is_sneaking.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/detect/player/is_sneaking.mcfunction" />
 
 ```yaml
 ## Sneak Detection
@@ -125,7 +125,7 @@ Swimming in water or gliding with Elytra will be detected as crawling.
 -   Make sure you add the `wiki:q.is_crawling` scoreboard objective:
     -   `/scoreboard objectives add wiki:wiki:q.is_crawling dummy`
 
-<CodeHeader>BP/functions/wiki/detect/player/is_crawling.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/detect/player/is_crawling.mcfunction" />
 
 ```yaml
 ## Crawl Detection
@@ -172,7 +172,7 @@ If you desperately need to detect all three states separately **solely using com
 
 :::
 
-<CodeHeader>BP/functions/wiki/detect/player/is_crawling.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/detect/player/is_crawling.mcfunction" />
 
 ```yaml
 ## Set Player States

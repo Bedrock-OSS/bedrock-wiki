@@ -23,7 +23,7 @@ This page will break down each part of the entity file and explain each part. Fo
 
 ## File Outline
 
-<CodeHeader>RP/entity/example.json</CodeHeader>
+<CodeHeader path="RP/entity/example.json" />
 
 ```json
 {
@@ -56,7 +56,7 @@ While it may look overwhelming, many of these sections are just _shortname defin
 
 A material describes the way that a texture is rendered. For example, skeletons have a material which allows the texture to be transparent and endermen have one which allows their eyes to glow. There are many materials that you can use without needing to make your own.
 
-<CodeHeader>RP/entity/spider.entity.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/spider.entity.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "materials": {
@@ -74,7 +74,7 @@ For a guide on making your own material, you can check this [page](/visuals/mate
 
 A texture is an image which gets mapped onto our geometry. Each entity has a different texture. Similarly to materials, this key is also a shortname definition however here, the reference is the path to the texture.
 
-<CodeHeader>RP/entity/bee.entity.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/bee.entity.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "textures": {
@@ -92,7 +92,10 @@ As before, we can define multiple textures. This can be useful if we want differ
 
 A geometry is a file which defines a collection of _bones_ which make up the shape of our entity. This file can be made automatically using applications like Blockbench. You can check our [guide](/guide/blockbench) for more details on how to make your own models.
 
-<CodeHeader>RP/entity/creeper.entity.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader
+    path="RP/entity/creeper.entity.json"
+    breadcrumbs="minecraft:client_entity/description"
+/>
 
 ```json
 "geometry": {
@@ -103,7 +106,10 @@ A geometry is a file which defines a collection of _bones_ which make up the sha
 
 Here our shortname references the identifier of our geometry.
 
-<CodeHeader>RP/entity/creeper.entity.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader
+    path="RP/entity/creeper.entity.json"
+    breadcrumbs="minecraft:client_entity/description"
+/>
 
 ```json
 {
@@ -128,7 +134,7 @@ Often if your are having trouble with visuals, it may be because of a typo with 
 
 A render controller simply controls how your entity will be rendered. This file takes the shortnames of your materials, textures and geometries and with them you define when it renders each element.
 
-<CodeHeader>RP/render_controllers/example.rc.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/example.rc.json" />
 
 ```json
 {
@@ -151,7 +157,7 @@ Here, this render controller says to always use the `default` material, texture 
 
 To tell our entity which render controller to use, we just add the render controller identifier to our file.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "render_controllers": [
@@ -165,7 +171,7 @@ The most basic entity file requires these 4 keys in order to properly render an 
 
 Animations describe how our entity may move. This can include walking animations, attacks or the way entities look at the player. They are defined by code which describe how a geometry moves at certain times or using maths equations. You need a geometry in order for your animations to work.
 
-<CodeHeader>RP/animations/example.a.json</CodeHeader>
+<CodeHeader path="RP/animations/example.a.json" />
 
 ```json
 {
@@ -179,7 +185,7 @@ Animations describe how our entity may move. This can include walking animations
 
 Each animation is defined by its identifier. Our animation key is then another shortname definition for our animations.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "animations": {
@@ -201,7 +207,7 @@ Remember that this key just _defines_ a shortname for our animation and do not r
 
 The scripts key defines certain scripts which the entity runs at certain times. This allows us to run animations, set up variables and even control the size of our entity. Additionally, we can use _Molang_ to define these. For a more in depth look at Molang, you can check our page [here](/concepts/molang). Overall, Molang is essentially a type of math equation which uses variables.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {
@@ -231,7 +237,7 @@ This script runs every frame before the animations play. This is useful for comp
 
 This script runs every frame after `pre_animation`. This is where you run animations and animation controllers. Each frame every animation or animation controller in this key will be run.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {
@@ -256,7 +262,7 @@ Scale controls the size of the model. This is slightly different to the componen
 
 Another difference of `scale` is that you can use Molang and there are 3 additional components: `scaleX`, `scaleY` and `scaleZ`.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {
@@ -271,7 +277,7 @@ Additionally, the model will be squashed in the `y` direction by a factor of 2 a
 
 A use case of this may be having an atmospheric entity which has a random size.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {
@@ -288,7 +294,7 @@ This code will make it so each time the entity is loaded, it will have a random 
 
 Sounds effects are sound files which can be played in game at certain times. This key again defines shortnames for sound effects which can be used by the entity in animations. This can be useful for creating more dynamic sounds when an entity interacts with the world. For example, you may want the entity to play 3 sounds as it attacks.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "sound_effects": {
@@ -304,7 +310,7 @@ Here, the shortname references the sound shortname defined in the `sound_definit
 
 Particle effects are files which contain information about the movement of many small spires to create effects like smoke or fire. Similarly to sound effects, this key defines short names for particle effects to be used in animations. For example, the phantom has particle effects on its wings as it flies around.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "particle_effects": {
@@ -318,7 +324,7 @@ Here, the shortname references the identifier for the particle. For more informa
 
 The spawn egg key allows us to generate a spawn egg for our entity. When used this will spawn in our entity and is automatically added to the creative inventory. There are two options for the look of your spawn egg, colored and texture.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "spawn_egg": {
@@ -329,7 +335,7 @@ The spawn egg key allows us to generate a spawn egg for our entity. When used th
 
 Using `base_color` and `overlay_color` will create a texture egg similar to the vanilla ones with the colors provided.
 
-<CodeHeader>RP/entity/example.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entity/example.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "spawn_egg": {
@@ -350,7 +356,7 @@ The `texture` key takes the texture shortname of an image, defined in `item_text
 In order to support persona skins (created in the Character Creator), the `min_engine_version` of the client entity definition cannot be greater than 1.13.0.
 Ensure that you include the following parameter in the player client entity file:
 
-<CodeHeader>RP/entity/player.entity.json</CodeHeader>
+<CodeHeader path="RP/entity/player.entity.json" />
 
 ```json
 {

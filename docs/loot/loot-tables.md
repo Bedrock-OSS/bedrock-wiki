@@ -41,7 +41,7 @@ Loot tables are not registered add-on entries and are instead referenced by path
 
 Loot tables are represented as JSON objects with a single required `"pools"` array property.
 
-<CodeHeader>#</CodeHeader>
+<CodeHeader path="#" />
 
 ```json
 {
@@ -57,7 +57,7 @@ The loot returned from a loot table invocation will be the _collective sum_ of t
 
 Pools act as isolated constructs for selecting items; the results of pools cannot be influenced by other pools.
 
-<CodeHeader>#</CodeHeader>
+<CodeHeader path="#" />
 
 ```json
 {
@@ -78,7 +78,7 @@ Two types of pools are available: general-purpose [weighted random pools](#weigh
 
 A traditional weighted random pool selects items based on relative weight, choosing a number of yields based on a configured roll count.
 
-<CodeHeader>artifacts.json/pools/0</CodeHeader>
+<CodeHeader path="artifacts.json/pools/0" />
 
 ```json
 {
@@ -236,7 +236,7 @@ Empty entries can generally be mimicked using [a roll count](#) whose range incl
 
 Functions are what makes loot tables so powerful. They can do a wide range of tasks for each entry in your loot table. For example, they can change the amount of an item is dropped, what enchantments are present (even on items that normally cannot be enchanted), the item name, it's lore, and it can even write books! View [item functions](/loot/item-functions) for a full list of functions and how they're used.
 
-<CodeHeader>artifacts.json/pools/entries</CodeHeader>
+<CodeHeader path="artifacts.json/pools/entries" />
 
 ```json
 {
@@ -263,7 +263,7 @@ Functions are what makes loot tables so powerful. They can do a wide range of ta
 
 Conditions check to see if a certain criteria is met. Examples: "Was Zombie killed by Player", "Did the sword have the Looting enchantment on it? If so, what level?"
 
-<CodeHeader>artifacts.json/pools/entries</CodeHeader>
+<CodeHeader path="artifacts.json/pools/entries" />
 
 ```json
 {

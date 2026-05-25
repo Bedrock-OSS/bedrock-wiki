@@ -28,7 +28,7 @@ To allow an item to be used to craft a Decorated Pot, we need to apply the `mine
 The tooltip that displays the pottery sherds used to craft a Decorated Pot will assume that the item's localization key is in the format `item.<identifier>.name`{lang=xml}.
 Therefore, you will need to change your item's display name to be in this format.
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_pottery_sherd.name=Custom Pottery Sherd
@@ -36,7 +36,7 @@ item.wiki:custom_pottery_sherd.name=Custom Pottery Sherd
 
 :::
 
-<CodeHeader>BP/items/custom_pottery_sherd.json</CodeHeader>
+<CodeHeader path="BP/items/custom_pottery_sherd.json" />
 
 ```json
 {
@@ -82,7 +82,7 @@ Here's an example pottery pattern texture that we will use for this tutorial:
 To tell the game to display the texture, we need to edit the decorated pot's client entity file.
 Add the following JSON file to your resource pack:
 
-<CodeHeader>RP/entity/decorated_pot.json</CodeHeader>
+<CodeHeader path="RP/entity/decorated_pot.json" />
 
 ```json
 {

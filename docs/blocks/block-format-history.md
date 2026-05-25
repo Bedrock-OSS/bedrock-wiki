@@ -309,7 +309,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 
     -   Custom components should now be applied in the same way as vanilla components, as entries in the `components` object:
 
-        <CodeHeader>minecraft:block</CodeHeader>
+        <CodeHeader breadcrumbs="minecraft:block" />
 
         ```json
         "components": {

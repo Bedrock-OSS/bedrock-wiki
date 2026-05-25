@@ -22,7 +22,7 @@ For this tutorial, we will use the existing vanilla buttons and toggles for simp
 
 In this example, we will reference `ui/ui_template_toggles.json`
 
-<CodeHeader>RP/ui/your_file.json</CodeHeader>
+<CodeHeader path="RP/ui/your_file.json" />
 ```json
 {
   "our_toggle@common_toggles.light_text_toggle": {
@@ -41,7 +41,7 @@ And that's it! You now have a working toggle. You can test it by adding it to an
 
 Additionally, you can utilize toggles to control the visibility of UI elements.
 
-<CodeHeader>RP/ui/your_file.json</CodeHeader>
+<CodeHeader path="RP/ui/your_file.json" />
 ```json
 {
   "our_toggle@common_toggles.light_text_toggle": {
@@ -82,7 +82,7 @@ Generally, buttons have limited functionality, as they are primarily used in har
 
 In this example, we will reference `ui/ui_template_buttons.json`
 
-<CodeHeader>RP/ui/your_file.json</CodeHeader>
+<CodeHeader path="RP/ui/your_file.json" />
 ```json
 {
   "our_button@common_buttons.light_text_button": {
@@ -106,7 +106,7 @@ In order to make buttons that shows a text when you hover into it, we will need 
 
 In this example, we will reference `ui/ui_template_buttons.json` and `ui/ui_common.json`
 
-<CodeHeader>RP/ui/your_file.json</CodeHeader>
+<CodeHeader path="RP/ui/your_file.json" />
 ```json
 {
   "our_button@common_buttons.light_content_button": {
@@ -150,7 +150,7 @@ If you want to play an animation when you click a button, you have to use `$pres
 
 For example:
 
-<CodeHeader>RP/ui/your_file.json</CodeHeader>
+<CodeHeader path="RP/ui/your_file.json" />
 ```json
 {
     "example_animation": {

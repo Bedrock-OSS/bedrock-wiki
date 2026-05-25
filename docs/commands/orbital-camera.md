@@ -19,7 +19,7 @@ This technique allows you to confine your camera rotations to an orbit around th
 
 ## Command
 
-<CodeHeader>BP/functions/wiki/camera/orbital.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/camera/orbital.mcfunction" />
 
 ```yaml
 execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s set minecraft:free ease 0.1 linear pos ~~~ facing @s
@@ -62,7 +62,7 @@ execute as @p at @s anchored eyes rotated ~ 0 positioned ^^1^-2 run camera @s se
 
 **Similar Examples:**
 
-<CodeHeader>BP/functions/wiki/camera/orbital.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/camera/orbital.mcfunction" />
 
 ```yaml
 # To orbit camera around entity tagged with 'wiki:orbital_camera.focus'
@@ -71,7 +71,7 @@ execute as @p at @e[tag=wiki:orbital_camera.focus] anchored eyes rotated as @s r
 
 ![One Repeating Command Block](/assets/images/commands/command-block-chain/1.png)
 
-<CodeHeader>BP/functions/wiki/camera/orbital.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/camera/orbital.mcfunction" />
 
 ```yaml
 # To orbit camera around position 6 7 8

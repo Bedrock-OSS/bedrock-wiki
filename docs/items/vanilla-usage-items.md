@@ -16,8 +16,6 @@ If you want to see full page, you can do it [here](/items/vui-full). _Last updat
 
 camera
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:block": "minecraft:camera"
 ```
@@ -30,8 +28,6 @@ camera
 
 black_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:bundle_interaction": {
     "num_viewable_slots": 12
@@ -39,8 +35,6 @@ black_bundle
 ```
 
 blue_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:bundle_interaction": {
@@ -50,8 +44,6 @@ blue_bundle
 
 brown_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:bundle_interaction": {
     "num_viewable_slots": 12
@@ -59,8 +51,6 @@ brown_bundle
 ```
 
 bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:bundle_interaction": {
@@ -70,8 +60,6 @@ bundle
 
 cyan_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:bundle_interaction": {
     "num_viewable_slots": 12
@@ -79,8 +67,6 @@ cyan_bundle
 ```
 
 gray_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:bundle_interaction": {
@@ -90,8 +76,6 @@ gray_bundle
 
 green_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:bundle_interaction": {
     "num_viewable_slots": 12
@@ -99,8 +83,6 @@ green_bundle
 ```
 
 light_blue_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:bundle_interaction": {
@@ -115,8 +97,6 @@ light_blue_bundle
 <Spoiler title="Show">
 
 camera
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:camera": {
@@ -136,8 +116,6 @@ camera
 
 wind_charge
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:cooldown": {
     "category": "wind_charge",
@@ -153,8 +131,6 @@ wind_charge
 
 apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:display_name": {
     "value": "item.apple.name"
@@ -162,8 +138,6 @@ apple
 ```
 
 breeze_rod
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:display_name": {
@@ -173,8 +147,6 @@ breeze_rod
 
 ominous_trial_key
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:display_name": {
     "value": "item.ominous_trial_key.name"
@@ -183,8 +155,6 @@ ominous_trial_key
 
 trial_key
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:display_name": {
     "value": "item.trial_key.name"
@@ -192,8 +162,6 @@ trial_key
 ```
 
 wind_charge
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:display_name": {
@@ -209,15 +177,11 @@ wind_charge
 
 appleEnchanted
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:foil": true
 ```
 
 golden_apple
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:foil": false
@@ -231,8 +195,6 @@ golden_apple
 
 apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 4,
@@ -241,8 +203,6 @@ apple
 ```
 
 appleEnchanted
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -280,8 +240,6 @@ appleEnchanted
 
 baked_potato
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -290,8 +248,6 @@ baked_potato
 ```
 
 beef
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -302,8 +258,6 @@ beef
 
 beetroot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 1,
@@ -312,8 +266,6 @@ beetroot
 ```
 
 beetroot_soup
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -325,8 +277,6 @@ beetroot_soup
 
 bread
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:food": {
     "nutrition": 5,
@@ -335,8 +285,6 @@ bread
 ```
 
 carrot
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:food": {
@@ -353,15 +301,11 @@ carrot
 
 appleEnchanted
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:hand_equipped": false
 ```
 
 breeze_rod
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:hand_equipped": true
@@ -375,8 +319,6 @@ breeze_rod
 
 apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:icon": {
     "texture": "apple"
@@ -384,8 +326,6 @@ apple
 ```
 
 black_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:icon": {
@@ -397,8 +337,6 @@ black_bundle
 
 blue_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:icon": {
     "textures": {
@@ -409,8 +347,6 @@ blue_bundle
 
 breeze_rod
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:icon": {
     "texture": "breeze_rod"
@@ -418,8 +354,6 @@ breeze_rod
 ```
 
 brown_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:icon": {
@@ -431,8 +365,6 @@ brown_bundle
 
 bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:icon": {
     "textures": {
@@ -443,8 +375,6 @@ bundle
 
 cyan_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:icon": {
     "textures": {
@@ -454,8 +384,6 @@ cyan_bundle
 ```
 
 gray_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:icon": {
@@ -473,15 +401,11 @@ gray_bundle
 
 clownfish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_damage": 0
 ```
 
 cooked_fish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -489,15 +413,11 @@ cooked_fish
 
 cooked_salmon
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_damage": 0
 ```
 
 fish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -505,15 +425,11 @@ fish
 
 pufferfish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_damage": 0
 ```
 
 salmon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_damage": 0
@@ -527,15 +443,11 @@ salmon
 
 beetroot_soup
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 black_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -543,15 +455,11 @@ black_bundle
 
 blue_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 brown_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -559,15 +467,11 @@ brown_bundle
 
 bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 cyan_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -575,15 +479,11 @@ cyan_bundle
 
 gray_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:max_stack_size": 1
 ```
 
 green_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:max_stack_size": 1
@@ -596,8 +496,6 @@ green_bundle
 <Spoiler title="Show">
 
 wind_charge
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:projectile": {
@@ -613,8 +511,6 @@ wind_charge
 
 beetroot_seeds
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "beetroot"
@@ -623,8 +519,6 @@ beetroot_seeds
 
 carrot
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "carrots"
@@ -632,8 +526,6 @@ carrot
 ```
 
 glow_berries
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -649,8 +541,6 @@ glow_berries
 
 melon_seeds
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "melon_stem"
@@ -658,8 +548,6 @@ melon_seeds
 ```
 
 nether_wart
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -670,8 +558,6 @@ nether_wart
 
 pitcher_pod
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "pitcher_crop"
@@ -680,8 +566,6 @@ pitcher_pod
 
 potato
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:seed": {
     "crop_result": "potatoes"
@@ -689,8 +573,6 @@ potato
 ```
 
 pumpkin_seeds
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:seed": {
@@ -706,15 +588,11 @@ pumpkin_seeds
 
 appleEnchanted
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 clownfish
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -722,15 +600,11 @@ clownfish
 
 cooked_fish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 cooked_salmon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -738,15 +612,11 @@ cooked_salmon
 
 fish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 golden_apple
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -754,15 +624,11 @@ golden_apple
 
 pufferfish
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:stacked_by_data": true
 ```
 
 salmon
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:stacked_by_data": true
@@ -775,8 +641,6 @@ salmon
 <Spoiler title="Show">
 
 black_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:storage_item": {
@@ -793,8 +657,6 @@ black_bundle
 
 blue_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:storage_item": {
     "max_slots": 64,
@@ -809,8 +671,6 @@ blue_bundle
 ```
 
 brown_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:storage_item": {
@@ -827,8 +687,6 @@ brown_bundle
 
 bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:storage_item": {
     "max_slots": 64,
@@ -843,8 +701,6 @@ bundle
 ```
 
 cyan_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:storage_item": {
@@ -861,8 +717,6 @@ cyan_bundle
 
 gray_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:storage_item": {
     "max_slots": 64,
@@ -878,8 +732,6 @@ gray_bundle
 
 green_bundle
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:storage_item": {
     "max_slots": 64,
@@ -894,8 +746,6 @@ green_bundle
 ```
 
 light_blue_bundle
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:storage_item": {
@@ -918,8 +768,6 @@ light_blue_bundle
 
 apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:tags": {
     "tags": [
@@ -935,8 +783,6 @@ apple
 <Spoiler title="Show">
 
 wind_charge
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:throwable": {
@@ -954,8 +800,6 @@ wind_charge
 
 apple
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_animation": "eat"
 ```
@@ -968,15 +812,11 @@ apple
 
 appleEnchanted
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 baked_potato
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -984,15 +824,11 @@ baked_potato
 
 beef
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 beetroot
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1000,15 +836,11 @@ beetroot
 
 beetroot_soup
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 32
 ```
 
 bread
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1016,15 +848,11 @@ bread
 
 camera
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:use_duration": 100000
 ```
 
 carrot
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_duration": 32
@@ -1037,8 +865,6 @@ carrot
 <Spoiler title="Show">
 
 apple
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:use_modifiers": {

@@ -34,7 +34,7 @@ Item definitions are structured similarly to entities: they contain a descriptio
 
 Below is the **minimum** behavior-side code to get a custom item into the creative inventory.
 
-<CodeHeader>BP/items/custom_item.json</CodeHeader>
+<CodeHeader path="BP/items/custom_item.json" />
 
 ```json
 {
@@ -63,7 +63,7 @@ Right now, our custom item is using the default component values (which can be f
 
 Let's configure our own functionality!
 
-<CodeHeader>BP/items/custom_item.json</CodeHeader>
+<CodeHeader path="BP/items/custom_item.json" />
 
 ```json
 {
@@ -92,7 +92,7 @@ Browse more item components [here](/items/item-components)!
 
 We need to create a texture shortname to link it to an image in `RP/textures/item_texture.json`.
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {
@@ -106,7 +106,7 @@ We need to create a texture shortname to link it to an image in `RP/textures/ite
 
 In our item file, we will add the `minecraft:icon` component to apply the texture.
 
-<CodeHeader>BP/items/custom_item.json</CodeHeader>
+<CodeHeader path="BP/items/custom_item.json" />
 
 ```json
 {
@@ -133,7 +133,7 @@ Alternatively, [block placer](/items/item-components#block-placer) items can omi
 
 Finally, let's define our item's name like this:
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 item.wiki:custom_item=Custom Item

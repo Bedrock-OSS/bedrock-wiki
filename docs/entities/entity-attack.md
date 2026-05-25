@@ -36,8 +36,6 @@ Even if you are making an unmoving entity (like turret), you still need to add n
 
 There are many ways to trigger hostility. The most common type `nearest_attackable_target`, is shown here. It generally allows you to define which entities this entity is interested in attacking:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:behavior.nearest_attackable_target": {
   "must_see": true, //If true, potential target must be in mob's line of sight
@@ -69,7 +67,7 @@ But there is also one more - `minecraft:lookat`
 
 This last component is slightly different to the other three, as it is for detecting and targeting entities that attempt eye contact. It is structured like so:
 
-<CodeHeader>BP/entities/enderman.json</CodeHeader>
+<CodeHeader path="BP/entities/enderman.json" />
 
 ```json
 "minecraft:lookat": {
@@ -102,8 +100,6 @@ This section shows you how to configure the "Targeting" components, explained ab
 :::
 
 Mobs find targets by using [filters](https://bedrock.dev/docs/stable/Entities#Filters) can be used to determine which entities are a valid target, through `test`, `subject`, `operator`, and `value`.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "entity_types":[
@@ -167,8 +163,6 @@ Here are the available attacks:
 ### Melee
 
 Melee attacks are the most common type of attack, they cause knockback, and have a 100% success rate at accuracy.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "wiki:melee_attack": {
@@ -234,8 +228,6 @@ Both the mob effect and duration timer are optional, but when they are used, the
 
 Fires specified [projectiles](/entities/projectiles) towards target at set intervals.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "wiki:ranged_attack": {
   "minecraft:behavior.ranged_attack": {
@@ -274,8 +266,6 @@ List of vanilla projectiles:
 
 Only one item has an effect on an entity's ranged attacks. Crossbows. If one is equipped, it is first required for it to be "charged" before the entity can fire anything. Regardless of the projectile stated in `minecraft:shooter`, the item to charge the crossbow with should always be `minecraft:arrow`.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:behavior.charge_held_item": {
   "priority": 2,
@@ -290,8 +280,6 @@ Once `minecraft:behavior.charge_held_item` has been achieved, the entity will be
 ### Area
 
 These attacks damage all entities within a set radius. It is different to both ranged and melee in that this component doesn’t actually require a target. Regardless of the entities behavior, _all_ entities will be affected by this. It appears to be similar to melee attacks, as it deals knockback in a similar manner, though dealing damage at a constant rate.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:area_attack" : {
@@ -320,8 +308,6 @@ These attacks damage all entities within a set radius. It is different to both r
 ### Knockback Roar
 
 Many similarities between this and `minecraft:area_attack`, this component though having much more flexibility.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "wiki:roar_attack": {
@@ -363,7 +349,7 @@ Entity Attacks don't have to be as simple as Mob being hostile towards X target,
 
 Express components and values to use for each difficulty.
 
-<CodeHeader>BP/entities/bee.json</CodeHeader>
+<CodeHeader path="BP/entities/bee.json" />
 
 ```json
 "easy_attack": {
@@ -395,8 +381,6 @@ You can use events to make your mob only attack under specific circumstances, or
 
 Component groups are required to define the different modes of attack, such as:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "wiki:ranged_components": {
   "minecraft:shooter": {
@@ -411,8 +395,6 @@ Component groups are required to define the different modes of attack, such as:
   }
 }
 ```
-
-<CodeHeader></CodeHeader>
 
 ```json
 "wiki:melee_components": {
@@ -431,8 +413,6 @@ Those are examples of your attack modes, but they are not the only ones you can 
 
 These component groups won't actually do anything by themselves. Another component group is required, and some events to add/remove the attack modes.
 
-<CodeHeader></CodeHeader>
-
 ```json
 "wiki:melee_swap": {    //When triggered, adds component group for ranged and removes melee component group
   "remove": {
@@ -447,8 +427,6 @@ These component groups won't actually do anything by themselves. Another compone
   }
 }
 ```
-
-<CodeHeader></CodeHeader>
 
 ```json
 "wiki:ranged_swap": {   //When triggered, adds component group for melee and removes ranged component group
@@ -473,8 +451,6 @@ To trigger the events, another component group is used. Sensors are components t
 
 -   For sensing the distance between the mob and target
 
-<CodeHeader></CodeHeader>
-
 ```json
 "wiki:switcher_range": {
   "minecraft:target_nearby_sensor": {
@@ -494,8 +470,6 @@ To trigger the events, another component group is used. Sensors are components t
 ```
 
 -   For sensing certain features of the environment of which the mob is exposed to
-
-<CodeHeader></CodeHeader>
 
 ```json
 "wiki:switcher_environment": {

@@ -41,7 +41,7 @@ Sound files themselves are added inside of the `sounds` folder, and can be any o
 
 `sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example, `sound_definitions.json`, that adds a new trumpet sound called `example.toot`:
 
-<CodeHeader>RP/sounds/sound_definitions.json</CodeHeader>
+<CodeHeader path="RP/sounds/sound_definitions.json" />
 
 ```json
 {
@@ -114,7 +114,7 @@ The distance from the sound source after which the sound volume is the quietest 
 
 In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds but does not have much power. For starts, I can add multiple sounds to the list. These sounds will be randomized when played:
 
-<CodeHeader>RP/sounds/sound_definitions.json</CodeHeader>
+<CodeHeader path="RP/sounds/sound_definitions.json" />
 
 ```json
 {
@@ -165,13 +165,13 @@ If there is more than one sound in the list, the sound to be played is chosen ra
 
 #### subtitle
 
-A localization key to display in the Closed Captions when the sound is played. `"subtitle"` is the field that specifies it. 
+A localization key to display in the Closed Captions when the sound is played. `"subtitle"` is the field that specifies it.
 
 ### Example
 
 Here is a more realistic example containing these options:
 
-<CodeHeader>RP/sounds/sound_definitions.json#sound_definitions</CodeHeader>
+<CodeHeader path="RP/sounds/sound_definitions.json" breadcrumbs="sound_definitions" />
 
 ```json
 "block.beehive.drip": {
@@ -246,7 +246,7 @@ There are also many sound events, which _most likely_ trigger automatically, but
 
 ### Example
 
-<CodeHeader>RP/sounds.json</CodeHeader>
+<CodeHeader path="RP/sounds.json" />
 
 ```json
 {
@@ -279,15 +279,15 @@ Sounds played in animations function based on short-name definitions in the RP e
 
 This example shows playing a wing-flap sound, synced with an animation.
 
-<CodeHeader>RP/entities/dragon.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entities/dragon.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "sound_effects": {
-    "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound defined in sound_definitions
+    "wing_flap": "wiki.dragon.wing_flap" // Where wiki.dragon.roar is a sound defined in sound_definitions
 }
 ```
 
-<CodeHeader>RP/animations/dragon.json#animations/animation.dragon.flying</CodeHeader>
+<CodeHeader path="RP/animations/dragon.json" breadcrumbs="animations/animation.dragon.flying" />
 
 ```json
 "sound_effects": {
@@ -303,36 +303,37 @@ You can play sounds within animation controllers in a similar way that animation
 
 This example shows playing an explosion sound, synced using an animation controller.
 
-<CodeHeader>RP/entities/custom_tnt.json#minecraft:client_entity/description</CodeHeader>
+<CodeHeader path="RP/entities/custom_tnt.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "sound_effects": {
-    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound defined in sound_definitions just like animation sounds.
+    "explosion": "wiki.custom_tnt.explosion" // Where wiki.custom_tnt.explosion is a sound defined in sound_definitions just like animation sounds.
 }
 ```
 
-<CodeHeader>
-    RP/animation_controllers/custom_tnt.animation_controllers.json#controller.animation.custom_tnt
-</CodeHeader>
+<CodeHeader
+    path="RP/animation_controllers/custom_tnt.animation_controllers.json"
+    breadcrumbs="animation_controllers/controller.animation.custom_tnt"
+/>
 
 ```json
-"states":{
-    "default":{
-        "transitions":[
+"states": {
+    "default": {
+        "transitions": [
             {
-                "explode_state":"q.mark_variant == 1"
+                "explode_state": "q.mark_variant == 1"
             }
         ]
     },
-    "explode_state":{
-        "sound_effects":[
+    "explode_state": {
+        "sound_effects": [
             {
-                "effect":"explosion"
+                "effect": "explosion"
             }
         ],
-        "transitions":[
+        "transitions": [
             {
-                "default":"q.mark_variant == 0"
+                "default": "q.mark_variant == 0"
             }
         ]
     }

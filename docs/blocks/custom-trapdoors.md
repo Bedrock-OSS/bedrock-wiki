@@ -28,7 +28,7 @@ Trapdoors are versatile blocks that serve well as parts of doors, fences, decora
 This is the block JSON you'll need for basic trapdoor functionality.
 It includes the rotation for each permutation of your trapdoor, meaning it can be placed in the same orientations as vanilla trapdoors.
 
-<CodeHeader>BP/blocks/custom_trapdoor.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_trapdoor.json" />
 
 ```json
 {
@@ -237,7 +237,7 @@ It includes the rotation for each permutation of your trapdoor, meaning it can b
 
 Now, it's time to put these permutations to use. The following script will allow the player to open and close the trapdoor by interacting with it. Don't forget to import this script into your main script entry.
 
-<CodeHeader>BP/scripts/toggleable.js</CodeHeader>
+<CodeHeader path="BP/scripts/toggleable.js" />
 
 ```js
 import { system } from "@minecraft/server";
@@ -268,7 +268,7 @@ This will be the geometry used for your custom trapdoors.
 
 <Spoiler title="Geometry JSON">
   
-<CodeHeader>RP/models/blocks/trapdoor.geo.json</CodeHeader>
+<CodeHeader path="RP/models/blocks/trapdoor.geo.json" />
 
 ```json
 {
@@ -329,7 +329,7 @@ This will be the geometry used for your custom trapdoors.
 
 <Spoiler title="Block Culling Rules JSON">
 
-<CodeHeader>RP/block_culling/trapdoor.json</CodeHeader>
+<CodeHeader path="RP/block_culling/trapdoor.json" />
 
 ```json
 {

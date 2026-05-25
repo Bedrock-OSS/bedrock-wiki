@@ -49,7 +49,7 @@ Ensure both files have the same name but different extensions.
 
 The `aseprite_flip_book` animation type can only be used for the `uv` property in an element of the type `image`.
 
-<CodeHeader>RP/ui/example_file.json</CodeHeader>
+<CodeHeader path="RP/ui/example_file.json" />
 
 ```json
 {

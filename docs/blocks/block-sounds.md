@@ -17,7 +17,7 @@ The `sound` parameter in `RP/blocks.json` is used to determine general block sou
 
 You can apply a set of sounds to your block using this parameter:
 
-<CodeHeader>RP/blocks.json</CodeHeader>
+<CodeHeader path="RP/blocks.json" />
 
 ```json
 {
@@ -40,7 +40,7 @@ We **strongly** recommend giving this identifier a namespace to avoid incompatib
 For example, let's imagine we were creating a custom chestnut woodset; we would name the custom block sound `wiki:chestnut_wood`.
 This is the `sound` value that should be used in `RP/blocks.json`.
 
-<CodeHeader>RP/blocks.json</CodeHeader>
+<CodeHeader path="RP/blocks.json" />
 
 ```json
 {
@@ -57,7 +57,7 @@ This is the `sound` value that should be used in `RP/blocks.json`.
 -   `hit` is triggered when the block is hit, such as when being mined by a player.
 -   `place` is triggered when the block is placed by a player.
 
-<CodeHeader>RP/sounds.json</CodeHeader>
+<CodeHeader path="RP/sounds.json" />
 
 ```json
 {
@@ -84,7 +84,7 @@ The following sound events can be defined in the `interactive_sounds` section of
 -   `land` is triggered when an entity falls onto the block from up to 3 blocks above.
 -   `step` is triggered when an entity moves on top of the block.
 
-<CodeHeader>RP/sounds.json</CodeHeader>
+<CodeHeader path="RP/sounds.json" />
 
 ```json
 {

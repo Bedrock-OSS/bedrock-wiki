@@ -39,8 +39,6 @@ Please note that this will remove all death effects, including sound, particles,
 
 Similar to teleporting, the entity is triggering an entity transform on death. Use `!q.is_alive` in animation controller to send an event which will add component group with `"minecraft:transformation"` component. With this component entity will convert into another:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:transformation": {
 	"into": "wiki:death_animation_entity",
@@ -68,8 +66,6 @@ Rotation needs to be applied to a bone parent to all other bones, with a pivot a
 
 Animation:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, q.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
 ```
@@ -78,7 +74,7 @@ Animation Controller:
 
 (q.all_animations_finished is only needed for respawning entities, like players)
 
-<CodeHeader>RP/animation_controllers/custom_death.animation.controllers.json</CodeHeader>
+<CodeHeader path="RP/animation_controllers/custom_death.animation.controllers.json" />
 
 ```json
 {
@@ -124,7 +120,7 @@ To remove the damage overlay color of any entity you want when it gets damaged, 
 First, you need to make the rgba values to 0
 Here's the example of removing the damage and fire overlay color.
 
-<CodeHeader>RP/render_controllers/custom_death.render_controllers.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/custom_death.render_controllers.json" />
 
 ```json
 {
@@ -146,7 +142,7 @@ The code above will remove the red damage overlay color.
 You can also change the damage color overlay to different colors just by putting different values in rgba. You can check out various websites to get the rgba values of all colors.
 Here's another example in which the damage color overlay becomes pink.
 
-<CodeHeader>RP/render_controllers/custom_death.render_controllers.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/custom_death.render_controllers.json" />
 
 ```json
 {
@@ -183,7 +179,7 @@ Please note that you will have to find another work for entities with an invento
 
 Here an example file in the BP
 
-<CodeHeader>BP/entities/entity.json</CodeHeader>
+<CodeHeader path="BP/entities/entity.json" />
 
 ```json
 {
@@ -271,7 +267,7 @@ Here an example file in the BP
 
 Here an example file for the animation controller.
 
-<CodeHeader>RP/animation_controllers/animation_controller.entity.json</CodeHeader>
+<CodeHeader path="RP/animation_controllers/animation_controller.entity.json" />
 
 ```json
 {
@@ -300,7 +296,7 @@ Here an example file for the animation controller.
 Note: You can also spawn custom spawn egg items using the `minecraft:spawn_entity` component by setting `"spawn_item"`
 to be your entity's id and an affix of `spawn_egg`, and it will look something like this.
 
-<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 {
@@ -316,8 +312,6 @@ to be your entity's id and an affix of `spawn_egg`, and it will look something l
 ```
 
 If you want to drop a loot table, you can trigger an event (as shown below) and summon another entity that have this component:
-
-<CodeHeader></CodeHeader>
 
 ```json
 {

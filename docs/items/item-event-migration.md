@@ -19,7 +19,7 @@ Don't worry! This page will help you to understand what the deprecated JSON even
 
 ## Add Mob Effect
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onHitEntity({ hitEntity }) {
@@ -36,7 +36,7 @@ onHitEntity({ hitEntity }) {
 import { EntityDamageCause } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onUse({ source }) {
@@ -52,7 +52,7 @@ onUse({ source }) {
 import { EquipmentSlot, GameMode, Player } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onMineBlock({ source }) {
@@ -100,7 +100,7 @@ onMineBlock({ source }) {
 import { EquipmentSlot, GameMode } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onUse({ source }) {
@@ -124,7 +124,7 @@ onUse({ source }) {
 
 ## Remove Mob Effect
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onHitEntity({ hitEntity }) {
@@ -134,7 +134,7 @@ onHitEntity({ hitEntity }) {
 
 ## Run Command
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onUse({ source }) {
@@ -145,7 +145,7 @@ onUse({ source }) {
 
 ## Teleport
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onConsume({ source }) {
@@ -159,7 +159,7 @@ onConsume({ source }) {
 import { EquipmentSlot, ItemStack } from "@minecraft/server";
 ```
 
-<CodeHeader>Custom Component</CodeHeader>
+<CodeHeader breadcrumbs="ItemCustomComponent" />
 
 ```js
 onUse({ source }) {

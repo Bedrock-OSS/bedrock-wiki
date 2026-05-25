@@ -37,8 +37,6 @@ In the vanilla Behavior Pack, this component is used in all kinds of circumstanc
 
 A simple example which triggers an event after 5.6 seconds:
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:timer": {
   "time": 5.6,
@@ -49,8 +47,6 @@ A simple example which triggers an event after 5.6 seconds:
 ```
 
 A more complex example which triggers an event after a randomized amount of delay using weighted values:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:timer": {
@@ -81,8 +77,6 @@ A more complex example which triggers an event after a randomized amount of dela
 ```
 
 A particularly useful way to handle time events is using a single, looping `minecraft:timer` component and processing the events on each tick (or however often you decide to fire the timer). This is done by using the `randomize` parameter in events, where a weight may be used determine how often other events will be run. This can get you a lot of extra mileage out of a single timer component.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "wiki:do_event": {
@@ -116,8 +110,6 @@ Another component ([minecraft:environment_sensor](https://bedrock.dev/docs/stabl
 
 Here is an example which is used to fire an event 800 ticks after the start of the day (valid range is 0 to 24000):
 
-<CodeHeader></CodeHeader>
-
 ```json
 "minecraft:environment_sensor": {
   "triggers": [
@@ -138,8 +130,6 @@ Here is an example which is used to fire an event 800 ticks after the start of t
 If this component ([minecraft:ageable](https://bedrock.dev/docs/stable/Entities#minecraft:ageable)) is not being used in the entity's behavior for a different purpose, it can be useful as an additional timer. It's important to note that it requires the `minecraft:is_baby` component to be defined in order to function.
 
 Here is an example which fires an event after four seconds:
-
-<CodeHeader></CodeHeader>
 
 ```json
 "minecraft:is_baby": {},
@@ -174,8 +164,6 @@ By triggering animations from an animation controller or directly from the scrip
 
 You can set up timelines like this:
 
-<CodeHeader></CodeHeader>
-
 ```json
 {
     "format_version": "1.8.0",
@@ -202,8 +190,6 @@ You can set up timelines like this:
 ### Random interval
 
 A very useful feature of the timer component is its ability to define a random interval in which the event will be triggered. This functionality can be replicated using animations and a controller. Below is an example of an animation triggered by adding the `minecraft:is_sheared` component to an entity which randomly fires an event between 2 to 7 seconds after activation. Animation and controller version 1.10.0.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.shanewolf.random_interval": {
@@ -238,8 +224,6 @@ A very useful feature of the timer component is its ability to define a random i
 }
 ```
 
-<CodeHeader></CodeHeader>
-
 ```json
 "animation.shanewolf.random_interval": {
   "animation_length": 100
@@ -258,8 +242,6 @@ Explanation: Upon entry into the state beginning the animation, a variable is gi
 ### Weighted random choice
 
 Another useful feature of the timer component is its ability to trigger events at a time determined by a weighted list of values. This functionality can also be replicated using animations and a controller. Below is an example of an animation triggered by adding the `minecraft:is_charged` component to an entity which randomly fires an event at either 2, 5, or 9 seconds with weights of 30, 60, and 10, respectively. Animation and controller version 1.10.0.
-
-<CodeHeader></CodeHeader>
 
 ```json
 "controller.animation.shanewolf.random_choices": {
@@ -299,8 +281,6 @@ Another useful feature of the timer component is its ability to trigger events a
   }
 }
 ```
-
-<CodeHeader></CodeHeader>
 
 ```json
 "animation.shanewolf.random_choices": {

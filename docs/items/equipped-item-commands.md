@@ -22,7 +22,7 @@ The [`hasitem`](https://minecraft.wiki/w/Target_selectors#Selecting_targets_by_i
 
 You can view a list of additional slot identifiers at the [Minecraft Wiki](https://minecraft.wiki/w/Slot#Bedrock_Edition).
 
-<CodeHeader>Target Selector</CodeHeader>
+<CodeHeader path="Target Selector" />
 
 ```c
 @e[hasitem={item=wiki:custom_helmet,location=slot.armor.head}]
@@ -32,13 +32,13 @@ By using a function that is listed in the `tick.json` file, we can run commands 
 
 For example, to make a custom helmet give its wearer jump boost, the following function could be used:
 
-<CodeHeader>RP/functions/wiki/custom_helmet_effects.mcfunction</CodeHeader>
+<CodeHeader path="RP/functions/wiki/custom_helmet_effects.mcfunction" />
 
 ```c
 effect @e[hasitem={item=wiki:custom_helmet,location=slot.armor.head}] jump_boost 10
 ```
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 
 ```json
 {
@@ -52,7 +52,7 @@ Keep in mind that this requires modifying the player behavior, which is a common
 
 The first step will be to create a server animation, which is a file that runs commands or events at certain keyframes. While client animations are in the resource pack, server animations are in the behavior pack. You can read a bit more [here](/entities/timers#animation-based-timers). We can start by using the following as a template:
 
-<CodeHeader>BP/animations/player.json</CodeHeader>
+<CodeHeader path="BP/animations/player.json" />
 
 ```json
 {
@@ -100,7 +100,7 @@ You can skip this section if:
 In our item's behavior, we'll have to add a tag.
 For example, if we wanted to add the `wiki:emerald_tier` tag, we would add the following to the tags component:
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:item/components" />
 
 ```json
 "minecraft:tags": {
@@ -116,7 +116,7 @@ Finally, we need to modify the player's behavior to run the server animation. We
 
 First, we need to set a short name for our animation. If you have any experience with client animations, this process will be quite similar. Add `animations` to `description`, and set a short name, like such:
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > description</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/description" />
 
 ```json
 {
@@ -154,7 +154,7 @@ q.equipped_item_all_tags('slot.armor.head', 'wiki:ancient_tier', 'wiki:emerald_t
 
 Let's take a look at an example using `q.equipped_item_any_tag`:
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > description</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/description" />
 
 ```json
 {
@@ -189,7 +189,7 @@ With the server animation, player behavior, and item tag all set up, your equipp
 
 If you want to run a command when multiple of the armor set's pieces are equipped, we can expand our Molang from before:
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > description > scripts</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/description/scripts" />
 
 ```json
 "animate": [
@@ -205,7 +205,7 @@ This example will check for emerald-tier armor in all four armor slots, and run 
 
 The turtle shell doesn't always inflict Water Breathing, but instead only for 10 seconds when a player first enters water. If we want our emerald armor to only run our animation when we have lower health, we can add another query to our Molang:
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > description > scripts</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/description/scripts" />
 
 ```json
 "animate": [
@@ -219,16 +219,14 @@ This example will run the animation with 2.5 hearts or less remaining, allowing 
 
 We can also apply this to requiring multiple armor pieces, with even longer Molang:
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > description > scripts</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/description/scripts" />
 
 ```json
-{
-    "animate": [
-        {
-            "emerald_armor": "q.equipped_item_any_tag('slot.armor.head', 'wiki:emerald_tier') && q.equipped_item_any_tag('slot.armor.chest', 'wiki:emerald_tier') && q.equipped_item_any_tag('slot.armor.legs', 'wiki:emerald_tier') && q.equipped_item_any_tag('slot.armor.feet', 'wiki:emerald_tier') && q.health <= 5"
-        }
-    ]
-}
+"animate": [
+    {
+        "emerald_armor": "q.equipped_item_any_tag('slot.armor.head', 'wiki:emerald_tier') && q.equipped_item_any_tag('slot.armor.chest', 'wiki:emerald_tier') && q.equipped_item_any_tag('slot.armor.legs', 'wiki:emerald_tier') && q.equipped_item_any_tag('slot.armor.feet', 'wiki:emerald_tier') && q.health <= 5"
+    }
+]
 ```
 
 You can view a list of documented Molang queries at [bedrock.dev](https://bedrock.dev/docs/stable/Molang#List%20of%20Entity%20Queries).
@@ -237,7 +235,7 @@ You can view a list of documented Molang queries at [bedrock.dev](https://bedroc
 
 If you want to add more items with unique effects, fret not; this is easily done. You can either create a new server animation file, or add on to the file from before, like such:
 
-<CodeHeader>BP/animations/player.json</CodeHeader>
+<CodeHeader path="BP/animations/player.json" />
 
 ```json
 {
@@ -263,7 +261,7 @@ If you want to add more items with unique effects, fret not; this is easily done
 
 In our player behavior, you'll have to add on to `animations` and `scripts` as well.
 
-<CodeHeader>BP/entities/player.json > minecraft:entity > description</CodeHeader>
+<CodeHeader path="BP/entities/player.json" breadcrumbs="minecraft:entity/description" />
 
 ```json
 {

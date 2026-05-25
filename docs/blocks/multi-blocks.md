@@ -71,7 +71,7 @@ This block trait allows you to define how many parts your multi-block has and th
 
 **Custom multi-blocks can have 2-4 parts and are currently only able to extend upwards or downwards, not horizontally.**
 
-<CodeHeader>BP/blocks/multi_block_example.json</CodeHeader>
+<CodeHeader path="BP/blocks/multi_block_example.json" />
 
 ```json
 {
@@ -104,7 +104,7 @@ Let's give each part of this multi-block its own appearance, similar to how the 
 
 We can do this using the [`permutations`](/blocks/block-permutations) array, with conditions querying `q.block_state('minecraft:multi_block_part')`{lang=molang}.
 
-<CodeHeader>BP/blocks/multi_block_example.json</CodeHeader>
+<CodeHeader path="BP/blocks/multi_block_example.json" />
 
 ```json
 {
@@ -180,7 +180,7 @@ Omitting this component will prevent the block from being registered as well as 
 
 Most vanilla multi-blocks are popped off as items when a piston attempts to push them, excluding extended pistons which are immovable.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:movable": {
@@ -213,8 +213,6 @@ Using scripts, this can be achieved by getting all parts associated with a given
 This method returns an array of the individual blocks that make up the multi-block in part index order.
 We can then set the permutation of every part at the same time, preventing the multi-block from breaking due to unequal states across parts.
 
-<CodeHeader>Script</CodeHeader>
-
 ```js
 // Assume we have ensured that "block" is a part of the multi-block
 for (const part of block.getParts()) {
@@ -238,7 +236,7 @@ for (const part of block.getParts()) {
 -   The [`onPlayerBreak()`{lang=js}](/blocks/block-events#player-break) hook is not supported by multi-blocks so will never be called.
     Consider using the [`onBreak()`{lang=js}](/blocks/block-events#break) hook instead:
 
-    <CodeHeader>Custom Component</CodeHeader>
+    <CodeHeader breadcrumbs="BlockCustomComponent" />
 
     ```js
     onBreak(event) {

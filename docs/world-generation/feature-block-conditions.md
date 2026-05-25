@@ -22,7 +22,7 @@ This technique utilizes `aggregate_feature` and `single_block_feature` features.
 
 This feature places a `single_block_feature` which can be specified with the conditions we need for some other feature. The block can be kept there if it doesn't interrupt your desired features, but we will replace it with air in the next feature so that it doesn't cause any issues later on. This feature acts as a "dummy" feature because we only want its condition part but we don't need it to actually place anything.
 
-<CodeHeader>BP/features/block_condition_feature.json</CodeHeader>
+<CodeHeader path="BP/features/block_condition_feature.json" />
 
 ```json
 {
@@ -46,7 +46,7 @@ This feature places a `single_block_feature` which can be specified with the con
 
 This next feature is the one that is going to replace the cobblestone with the original air block that was there, however it can be omitted if you choose a block you actually want there or if it won't cause you any issues later.
 
-<CodeHeader>BP/features/block_replacement_feature.json</CodeHeader>
+<CodeHeader path="BP/features/block_replacement_feature.json" />
 
 ```json
 {
@@ -66,7 +66,7 @@ This next feature is the one that is going to replace the cobblestone with the o
 
 This is a feature that places the condition "dummy" feature, the feature that gets rid of the "dummy" block placed by the condition and after that the actual features we want to conditionally place. It uses `early_out` with value `first_failure` to make the aggregate stop if the conditional placement fails. It is the feature placed by a feature rule.
 
-<CodeHeader>BP/features/aggregate_placement_rock_feature.json</CodeHeader>
+<CodeHeader path="BP/features/aggregate_placement_rock_feature.json" />
 
 ```json
 {
@@ -89,7 +89,7 @@ This is a feature that places the condition "dummy" feature, the feature that ge
 
 This is the actual feature we want to be conditionally placed. It is `ore_feature` which doesn't have actual condition for us to allow it to only be placed in air and on a grass block, so this technique has helped us achieve that.
 
-<CodeHeader>BP/features/rock_ore_feature.json</CodeHeader>
+<CodeHeader path="BP/features/rock_ore_feature.json" />
 
 ```json
 {
@@ -124,7 +124,7 @@ If you want to learn more about ore features, you can visit [Generating Custom O
 
 ### Feature Rule
 
-<CodeHeader>BP/feature_rules/overworld_after_surface_rock_feature.json</CodeHeader>
+<CodeHeader path="BP/feature_rules/overworld_after_surface_rock_feature.json" />
 
 ```json
 {

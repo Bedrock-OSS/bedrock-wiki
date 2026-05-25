@@ -31,7 +31,7 @@ Before you implement intercardinal direction into your block, you'll need to cre
 
 Here is the JSON we will be starting with for the "mug" block in this tutorial:
 
-<CodeHeader>BP/blocks/mug.json</CodeHeader>
+<CodeHeader path="BP/blocks/mug.json" />
 
 ```json
 {
@@ -97,15 +97,10 @@ As shown above, we'll need to define a [block state](/blocks/block-states) that 
 In this tutorial, that state will be called `wiki:intercardinal_direction`.
 As always, make sure you change `wiki` to your own namespace!
 
-<CodeHeader>minecraft:block > description</CodeHeader>
-
-```json
-"states": {
-    "wiki:intercardinal_direction": {
-        "values": { "min": 0, "max": 15 }
-    }
-}
-```
+<ExampleFile
+    path="BP/blocks/mug.json"
+    snippet="minecraft:block/description/states/wiki:intercardinal_direction"
+/>
 
 ## Setting the Direction State
 
@@ -117,7 +112,7 @@ For this, we can use scripts to calculate the direction value and update the blo
 
 Here is the function that we will use to convert the player's rotation into an intercardinal direction from `0`{lang=js} to `15`{lang=js}.
 
-<CodeHeader>BP/scripts/intercardinalOrientation.js</CodeHeader>
+<CodeHeader path="BP/scripts/intercardinalOrientation.js" />
 
 ```js
 /** @param {number} yRotation */
@@ -135,7 +130,7 @@ function getIntercardinalDirection(yRotation) {
 
 Now let's create a custom component that uses the `getIntercardinalDirection()`{lang=js} function to set the block to the correct direction permutation.
 
-<CodeHeader>BP/scripts/intercardinalOrientation.js</CodeHeader>
+<CodeHeader path="BP/scripts/intercardinalOrientation.js" />
 
 ```js
 import { system } from "@minecraft/server";
@@ -179,13 +174,10 @@ By setting the parameter to `180`{lang=json}, the front of the block (north face
 
 Let's apply the custom component to our block in its `components`:
 
-<CodeHeader>BP/blocks/mug.json</CodeHeader>
-
-```json
-"wiki:intercardinal_orientation": {
-    "y_rotation_offset": 180 // Face towards the player
-}
-```
+<ExampleFile
+    path="BP/blocks/mug.json"
+    snippet="minecraft:block/components/wiki:intercardinal_orientation"
+/>
 
 ## Block Model
 
@@ -234,54 +226,13 @@ Not all bones in your model should be visible, so we make use of the `bone_visib
 
 Add the following component to your block:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
-
-```json
-"minecraft:geometry": {
-    "identifier": "geometry.mug", // Model created in previous step
-    "bone_visibility": {
-        "0": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 0",
-        "22.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 1",
-        "45": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 2",
-        "67.5": "math.mod(q.block_state('wiki:intercardinal_direction'), 4) == 3"
-    }
-}
-```
+<ExampleFile path="BP/blocks/mug.json" snippet="minecraft:block/components/minecraft:geometry" />
 
 ### Permutation Entries
 
 Now, use the [`permutations`](/blocks/block-permutations) array to define the rotation for the base cardinal rotations of the block by inserting the following into your block JSON (in the presented order):
 
-<CodeHeader>minecraft:block</CodeHeader>
-
-```json
-"permutations": [
-    {
-        "condition": "q.block_state('wiki:intercardinal_direction') >= 0",
-        "components": {
-            "minecraft:transformation": { "rotation": [0, 180, 0] }
-        }
-    },
-    {
-        "condition": "q.block_state('wiki:intercardinal_direction') >= 4",
-        "components": {
-            "minecraft:transformation": { "rotation": [0, 90, 0] }
-        }
-    },
-    {
-        "condition": "q.block_state('wiki:intercardinal_direction') >= 8",
-        "components": {
-            "minecraft:transformation": { "rotation": [0, 0, 0] }
-        }
-    },
-    {
-        "condition": "q.block_state('wiki:intercardinal_direction') >= 12",
-        "components": {
-            "minecraft:transformation": { "rotation": [0, -90, 0] }
-        }
-    }
-]
-```
+<ExampleFile path="BP/blocks/mug.json" snippet="minecraft:block/permutations" />
 
 ## Final Block JSON & Script
 

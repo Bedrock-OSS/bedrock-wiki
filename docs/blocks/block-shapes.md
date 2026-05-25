@@ -27,7 +27,7 @@ Support was dropped after **1.19.0**, meaning blocks introduced in "Trails & Tal
 
 They are assigned using `blocks.json`, under child `"blockshape"` of a block's object as a string.
 
-<CodeHeader>RP/blocks.json</CodeHeader>
+<CodeHeader path="RP/blocks.json" />
 
 ```json
 "minecraft:dirt": {

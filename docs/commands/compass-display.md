@@ -19,7 +19,7 @@ Create a compass display on the actionbar using commands.
 
 ## Commands
 
-<CodeHeader>BP/functions/wiki/displays/compass.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/displays/compass.mcfunction" />
 
 ```yaml
 title @a[rym=157.5,ry=-157.5] actionbar North (N)

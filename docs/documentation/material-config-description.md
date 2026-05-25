@@ -22,7 +22,7 @@ We will explain the material files of native Microsoft. First of all, the files 
 
 Let's take a look at sad.json and fancy.json first. They are used to control the image quality performance. Each of them defines a list of material files. fancy.json usually defines several more material files than sad.json and may Some additional macros have been added to some material files, and the shader can do special processing by judging these macros:
 
-<CodeHeader>sad.json</CodeHeader>
+<CodeHeader path="sad.json" />
 
 ```json
 [
@@ -35,7 +35,7 @@ Let's take a look at sad.json and fancy.json first. They are used to control the
 ]
 ```
 
-<CodeHeader>fancy.json</CodeHeader>
+<CodeHeader path="fancy.json" />
 
 ```json
 [
@@ -53,7 +53,7 @@ It can be seen that fancy.json defines more fancy.material and hologram.material
 
 In order to achieve better performance, the material files in fancy.json usually have more complex operations, while the materials in sad.json usually sacrifice a little rendering performance in exchange for better performance. If developers need to write more complex shaders, it is recommended to write a low-cost version at the same time, and then define them in fancy and sad respectively. Let the player control whether to turn on the corresponding effect through the exquisite texture option in the game.
 
-<CodeHeader>common.json</CodeHeader>
+<CodeHeader path="common.json" />
 
 ```json
 [

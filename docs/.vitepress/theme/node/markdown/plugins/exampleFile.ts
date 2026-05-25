@@ -2,10 +2,16 @@ import { PluginSimple } from "markdown-it";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-import { examplesCacheDirectory, renderExampleFile, getExampleForPage } from "../../examples";
+import {
+  examplesCacheDirectory,
+  getExampleRootForPage,
+  getExampleFromRoot,
+  renderExampleFile,
+} from "../../examples";
 import filePageLink from "../../../shared/filePageLink";
 
-const exampleFilePattern = /^<ExampleFile\s+path="(?<path>[^"]*)"\s*\/>$/;
+const exampleFilePattern =
+  /^<ExampleFile\s+path="(?<path>[^"]*)"(\s*snippet="(?<snippet>[^"]*)")?\s*\/>$/;
 
 export const exampleFilePlugin: PluginSimple = (md) => {
   md.core.ruler.after("block", "example_file", ({ env, tokens, inlineMode }) => {
@@ -20,7 +26,8 @@ export const exampleFilePlugin: PluginSimple = (md) => {
 
       const props = match.groups!;
 
-      const example = getExampleForPage(env.relativePath);
+      const rootPath = getExampleRootForPage(env.relativePath);
+      const example = getExampleFromRoot(rootPath);
 
       if (!example.files.includes(props.path)) {
         throw new Error(`Example file "${props.path}" does not exist.`);
@@ -29,9 +36,9 @@ export const exampleFilePlugin: PluginSimple = (md) => {
       const cacheFilePath = join(examplesCacheDirectory, example.id, props.path);
 
       const buffer = readFileSync(cacheFilePath);
-      const link = filePageLink(env.relativePath.replace(/\.md$/, ""), props.path);
+      const link = filePageLink(rootPath, props.path);
 
-      const markdown = renderExampleFile(props.path, buffer, link);
+      const markdown = renderExampleFile(props.path, buffer, link, props.snippet);
       const newTokens = md.parse(markdown, env);
 
       // Replace the original HTML token

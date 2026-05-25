@@ -45,7 +45,7 @@ To get started, you'll want to begin with your own behavior pack and decent know
 
 To use the GameTest Framework, the `@minecraft/server-gametest` module is required. The GameTest API module also requires the `@minecraft/server` module, so in your dependency in your manifest.json requires the following:
 
-<CodeHeader>BP/manifest.json/</CodeHeader>
+<CodeHeader path="BP/manifest.json/" />
 
 ```json
 "dependencies": [
@@ -62,7 +62,7 @@ To use the GameTest Framework, the `@minecraft/server-gametest` module is requir
 
 To run a GameTest, a structure file is required on your behavior pack and the command needs to be registered via `register` function.
 
-<CodeHeader>BP/scripts/Main.js</CodeHeader>
+<CodeHeader path="BP/scripts/Main.js" />
 
 ```js
 import * as GameTest from "@minecraft/server-gametest";

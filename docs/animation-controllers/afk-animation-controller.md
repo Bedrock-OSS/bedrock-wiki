@@ -15,7 +15,7 @@ description: Run commands when player is AFK.
 
 Here's an example that can be used to track AFK players.
 
-<CodeHeader>BP/animation_controllers/afk.ac.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/afk.ac.json" />
 
 ```json
 {

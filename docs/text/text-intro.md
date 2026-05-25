@@ -83,7 +83,7 @@ It is good practice create a copy of your language file for each major language 
 
 When editing language files one must also add a `languages.json` file in the `texts` folder containing an array with each of the languages you plan to change. This lets Minecraft know that it should apply localization for these languages.
 
-<CodeHeader>RP/texts/languages.json</CodeHeader>
+<CodeHeader path="RP/texts/languages.json" />
 
 ```json
 ["en_US", "en_GB", "fr_FR"]
@@ -95,7 +95,7 @@ With a global resource pack, custom languages may be introduced through the `lan
 
 For the following examples, lets assume that we have 2 fully functional language files, one named `xx_XX.lang`, and another named `yy_YY.lang`.
 
-<CodeHeader>RP/texts/languages.json</CodeHeader>
+<CodeHeader path="RP/texts/languages.json" />
 
 ```json
 ["xx_XX", "yy_YY"]
@@ -103,7 +103,7 @@ For the following examples, lets assume that we have 2 fully functional language
 
 `language_names.json` is an array as well, but this time to define the names to display for the languages.
 
-<CodeHeader>RP/texts/language_names.json</CodeHeader>
+<CodeHeader path="RP/texts/language_names.json" />
 
 ```json
 [

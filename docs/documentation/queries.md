@@ -151,7 +151,7 @@ Needs to be used in special conditions.
 
 <Spoiler title="Show">
 
-<CodeHeader>animation_controllers/ac.json</CodeHeader>
+<CodeHeader path="animation_controllers/ac.json" />
 
 ```json
 {
@@ -196,7 +196,7 @@ Needs to be used in special conditions.
 
 <Spoiler title="Show">
 
-<CodeHeader>animation_controllers/ac.json</CodeHeader>
+<CodeHeader path="animation_controllers/ac.json" />
 
 ```json
 {

@@ -15,7 +15,7 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 1. Add `"minecraft:behavior.trade_with_player": {}` to your entity's components.
 2. Copy the following code into a component group of your entity. I'll call mine `"wiki:trader"`;
 
-<CodeHeader>BP/entities/trader.json</CodeHeader>
+<CodeHeader path="BP/entities/trader.json" />
 
 ```json
 "minecraft:trade_table": {

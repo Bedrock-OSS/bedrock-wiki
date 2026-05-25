@@ -28,7 +28,7 @@ If you are working with functions and prefer to have the objective added automat
 
 ## System
 
-<CodeHeader>BP/functions/wiki/event/players/on_leave.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/event/players/on_leave.mcfunction" />
 
 ```yaml
 ## Get Current Tick Player Count
@@ -93,7 +93,7 @@ All commands in a command-block chain or function will execute sequentially but 
 
 If you are using functions instead of command blocks, the `on_leave` function must be added to `tick.json` to ensure continuous execution. Multiple files can be added to `tick.json` by placing a comma after each string. Refer to the [Functions](/commands/mcfunctions#tick-json) documentation for more details.
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
 ```json
 {
   "values": [

@@ -79,7 +79,7 @@ Do not use both `"uuid"` and `"module_name"` properties into dependency, pick on
 
 Example for `@minecraft/server` with version of `1.13.0`.
 
-<CodeHeader>BP/manifest.json#dependencies[0]</CodeHeader>
+<CodeHeader path="BP/manifest.json" breadcrumbs="dependencies/0" />
 
 ```json
 {
@@ -90,7 +90,7 @@ Example for `@minecraft/server` with version of `1.13.0`.
 
 Required capability to mark your pack as Editor Extension, in that case editor modules are allowed.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {

@@ -38,7 +38,7 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 ## Initial Block JSON
 
-<CodeHeader>BP/blocks/custom_glass.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_glass.json" />
 
 ```json
 {
@@ -90,11 +90,15 @@ This means that, when multiple glass blocks are next to each other, there will b
 
 ### Applying Culling Rules
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<ExampleFile
+    path="BP/blocks/custom_glass.json"
+    snippet="minecraft:block/components/minecraft:geometry"
+/>
 
-```json
-"minecraft:geometry": {
-    "identifier": "geometry.custom_glass",
-    "culling": "wiki:culling.custom_glass"
-}
-```
+## Full Block JSON
+
+<Spoiler title="Custom Glass Block JSON">
+
+<ExampleFile path="BP/blocks/custom_glass.json" />
+
+</Spoiler>

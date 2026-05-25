@@ -19,7 +19,7 @@ Render controllers work based on the short-name definitions of the RP entity fil
 
 Lets look at a simplified version of the spider RP entity file:
 
-<CodeHeader>RP/entity/spider.json</CodeHeader>
+<CodeHeader path="RP/entity/spider.json" />
 
 ```json
 {
@@ -58,7 +58,7 @@ It would help if you thought of short-name definitions as `importing` the assets
 
 A simple render controller looks like this:
 
-<CodeHeader>RP/render_controllers/cow.render.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/cow.render.json" />
 
 ```json
 {
@@ -117,7 +117,7 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 #### Render Controller
 
-<CodeHeader>RP/render_controllers/controller.render.texture_layering.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/controller.render.texture_layering.json" />
 
 ```json
 {
@@ -144,7 +144,7 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 You need to define all textures in the entity and also use `villager_v2_masked` material.
 
-<CodeHeader>RP/entity/my_entity.json</CodeHeader>
+<CodeHeader path="RP/entity/my_entity.json" />
 
 ```json
 "materials": {
@@ -165,7 +165,7 @@ While I guess hard-coding layered textures are cool, the real fun comes when you
 
 Set multiple top textures, which we will index later.
 
-<CodeHeader>RP/entity/my_entity.json#description</CodeHeader>
+<CodeHeader path="RP/entity/my_entity.json" breadcrumbs="minecraft:entity/description" />
 
 ```json
 "textures": {
@@ -178,7 +178,7 @@ Set multiple top textures, which we will index later.
 
 #### Render Controller
 
-<CodeHeader>RP/render_controllers/controller.render.wool_only</CodeHeader>
+<CodeHeader path="RP/render_controllers/controller.render.wool_only" />
 
 ```json
 {
@@ -211,7 +211,7 @@ Using arrays and then `q.variant`, we can select the top texture based on the `v
 
 Now, to select which layer will show up, we can simply set the variant component in the entity:
 
-<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:variant": {
@@ -240,7 +240,7 @@ As we change the variant it will use a different geometry.
 Note that unlike textures you can not layer geometries, and such you should not include a "base bottom layer" geometry.
 This still requires the use of `villager_v2_masked` material.
 
-<CodeHeader>RP/render_controllers/controller.render.player.third_person.json</CodeHeader>
+<CodeHeader path="RP/render_controllers/controller.render.player.third_person.json" />
 
 ```json
 {
@@ -270,8 +270,6 @@ This still requires the use of `villager_v2_masked` material.
 #### Entity
 
 Remember to include the geometry variants in your entity's file
-
-<CodeHeader></CodeHeader>
 
 ```json
 "geometry": {

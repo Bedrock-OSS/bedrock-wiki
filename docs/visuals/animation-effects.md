@@ -18,7 +18,7 @@ Animations can have effects in them, such as:
 
 Minecraft Particles can be used in entity animations. For example, the phantom has an animation which emits the minecraft:phantom_trail particle constantly. Let's try to add a particle to our entity's attack animation.
 
-<CodeHeader>RP/entity/my_entity.json</CodeHeader>
+<CodeHeader path="RP/entity/my_entity.json" />
 
 ```json
 "particle_effects": {
@@ -40,7 +40,7 @@ Also note that some particles emit constantly.
 If you want to use a sound, you need to define it too.
 You can get sounds at [ZapSplat](https://www.zapsplat.com/).
 
-<CodeHeader>RP/entity/my_entity.json</CodeHeader>
+<CodeHeader path="RP/entity/my_entity.json" />
 
 ```json
 "sound_effects": {
@@ -60,7 +60,10 @@ You can add particles or sounds to your animation mainly or in Blockbench.
 
 You need to add the following to your animation:
 
-<CodeHeader>RP/animations/my_animation.json#my.animation</CodeHeader>
+<CodeHeader
+    path="RP/animations/my_animations.json"
+    breadcrumbs="animations/animation.my_animation"
+/>
 
 ```json
 "particle_effects": {
@@ -71,7 +74,10 @@ You need to add the following to your animation:
 }
 ```
 
-<CodeHeader>RP/animations/my_animation.json#my.animation</CodeHeader>
+<CodeHeader
+    path="RP/animations/my_animations.json"
+    breadcrumbs="animations/animation.my_animation"
+/>
 
 ```json
 "sound_effects": {
@@ -100,7 +106,7 @@ You can call more than one particle at the same time:
 
 <Spoiler title="Example">
 
-<CodeHeader>RP/animations/my_animation.json</CodeHeader>
+<CodeHeader path="RP/animations/my_animations.json" />
 
 ```json
 {
@@ -185,7 +191,7 @@ Currently (1.21.1) locators are broken for attachables.
 
 You can set `"should_update_bones_and_effects_offscreen"` to `true` inside entity rp scripts for particle and sound effects to update offscreen, by default both of them will stop playing if the entity isn't being rendered on display.
 
-<CodeHeader>RP/entity/my_entity.json#description</CodeHeader>
+<CodeHeader path="RP/entity/my_entity.json" breadcrumbs="minecraft:client_entity/description" />
 
 ```json
 "scripts": {

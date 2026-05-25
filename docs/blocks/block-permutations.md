@@ -28,7 +28,7 @@ Block permutations represent all state value configurations that each block can 
 
 For example, if you added a custom block with two boolean states…
 
-<CodeHeader>minecraft:block</CodeHeader>
+<CodeHeader path="BP/blocks/permutations_example.json" breadcrumbs="minecraft:block" />
 
 ```json
 "description": {
@@ -65,7 +65,7 @@ Components within the `permutations` array can override the block's base compone
 
 _Requires format version [1.19.70](/blocks/block-format-history#_1-19-70) or later._
 
-<CodeHeader>BP/blocks/custom_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_block.json" />
 
 ```json
 {

@@ -26,7 +26,7 @@ Items like the Splash Potion or the Trident are special items that can be thrown
 
 First, you'll want to make the actual item:
 
-<CodeHeader>BP/items/throwable_item.item.json</CodeHeader>
+<CodeHeader path="BP/items/throwable_item.item.json" />
 
 ```json
 {
@@ -54,7 +54,7 @@ First, you'll want to make the actual item:
 The entity will be the actual thrown item, and it will behave like a projectile.
 Make sure to add snowball runtime identifier to make your projectile to actually be shoot, not spawned. You can also experiment with other projectile runtime id's.
 
-<CodeHeader>BP/entities/throwable_item_entity.se.json</CodeHeader>
+<CodeHeader path="BP/entities/throwable_item_entity.se.json" />
 
 ```json
 {

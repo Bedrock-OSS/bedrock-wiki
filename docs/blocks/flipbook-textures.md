@@ -20,7 +20,9 @@ From this page you will learn:
 
 Flipbook textures are animated textures. Blocks like fire, water, lava and magma use them. You can use animated texture for your blocks too!
 For the first time let's use magma's animated texture.
-You can simply apply animated magma's texture to your block by changing `texture` value to one, defined in `Vanilla RP/textures/terrain_texture.json`:
+You can simply apply animated magma's texture to your block by changing the `texture` value of a material instance to the `magma` texture defined in the vanilla resource pack:
+
+<CodeHeader path="Vanilla RP/textures/terrain_texture.json" breadcrumbs="texture_data" />
 
 ```json
 "magma": {
@@ -28,7 +30,7 @@ You can simply apply animated magma's texture to your block by changing `texture
 }
 ```
 
-<CodeHeader>BP/blocks/flipbook_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/flipbook_block.json" />
 
 ```json
 {
@@ -62,7 +64,7 @@ After making block have animated texture, it is time to figure out how it all wo
 
 1. Minecraft takes name and path to texture defined in `terrain_texture.json`
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -76,7 +78,7 @@ After making block have animated texture, it is time to figure out how it all wo
 
 2. Minecraft searches looks into `flipbook_textures.json` aiming to find animation parameters for this name (`magma`)
 
-<CodeHeader>RP/textures/flipbook_textures.json</CodeHeader>
+<CodeHeader path="RP/textures/flipbook_textures.json" />
 
 ```json
 [
@@ -111,7 +113,7 @@ While looking up for something in vanilla flipbook texture file, you may notice 
 
 A component where you'll define the block texture index to animate.
 
-<CodeHeader>RP/textures/terrain_texture.json > texture_data</CodeHeader>
+<CodeHeader path="Vanilla RP/textures/terrain_texture.json" breadcrumbs="texture_data" />
 
 ```json
 "dirt": {
@@ -128,7 +130,7 @@ Since path 2 has an animated texture, therefore you'll put `"atlas_index": 1`{la
 
 A component where you'll define the block variant (which is registered to the `variations` array) to animate.
 
-<CodeHeader>RP/textures/terrain_texture.json > texture_data</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" breadcrumbs="texture_data" />
 
 ```json
 "dirt": {

@@ -22,7 +22,7 @@ When working with block states, ensure that the `min_engine_version` in your pac
 
 Block traits can be used to apply vanilla block states (such as direction) to your custom blocks easily, without the need for events and triggers.
 
-<CodeHeader>BP/blocks/custom_slab.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_slab.json" />
 
 ```json
 {
@@ -74,7 +74,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 | `minecraft:connection_west`  | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the west.  |
 | `minecraft:connection_east`  | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the east.  |
 
-<CodeHeader>minecraft:block > description > traits</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
 "minecraft:connection": {
@@ -105,7 +105,7 @@ Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up 
 | ---------------------------- | ------------------------------------------------------------- | --------------------------------------- |
 | `minecraft:multi_block_part` | Integers ranging from `0`{lang=json} to `parts - 1`{lang=js}. | The part index of the multi-block part. |
 
-<CodeHeader>minecraft:block > description > traits</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
 "minecraft:multi_block": {
@@ -139,7 +139,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 | `minecraft:facing_direction`   | `"down"`{lang=json} _(default)_<br>`"up"`{lang=json}<br>`"south"`{lang=json}<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json}    | Overall direction of player when placed.            |
 | `minecraft:corner`             | `"none"`{lang=json} _(default)_<br>`"inner_left"`{lang=json}<br>`"inner_right"`{lang=json}<br>`"outer_left"`{lang=json}<br>`"outer_right"`{lang=json} | The shape of the corner that the block has created. |
 
-<CodeHeader>minecraft:block > description > traits</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
 "minecraft:placement_direction": {
@@ -164,7 +164,7 @@ _Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or lat
 | `minecraft:block_face`    | `"down"`{lang=json} _(default)_<br>`"up"`{lang=json}<br>`"south"`{lang=json}<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json} | Face on which the block was placed.           |
 | `minecraft:vertical_half` | `"top"`{lang=json}<br>`"bottom"`{lang=json} _(default)_                                                                                            | The vertical half where the block was placed. |
 
-<CodeHeader>minecraft:block > description > traits</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
 "minecraft:placement_position": {

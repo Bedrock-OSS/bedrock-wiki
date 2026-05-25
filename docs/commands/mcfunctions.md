@@ -79,7 +79,7 @@ BP/functions/wiki/event/world/on_initialize.mcfunction
 
 _Below is an example function file for beginners reference:_
 
-<CodeHeader>BP/functions/wiki/effects.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/effects.mcfunction" />
 
 ```yaml
 # These effects are for the spawn
@@ -112,7 +112,7 @@ effect @a[tag=wiki:in_nether] fire_resistance 12 255 true
 
 <Spoiler title="Example Function File">
 
-<CodeHeader>BP/functions/wiki/ability/fire_trail.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/ability/fire_trail.mcfunction" />
 
 ```yaml
 # ON PLAYER ITEM DROP
@@ -149,17 +149,14 @@ For Scoreboard and Tags convention, see the **[Style Guide](/meta/style-guide#sc
 ## Creating a Function
 
 1. Locate the `📁 com.mojang` folder and navigate to `📁 development_behavior_packs`
-
     - The development folders are used for quick reloading of packs, as the packs aren't cached to the world files.
-
 2. Create a folder (of any name) for the function pack. This will be referred to as Behavior Pack or BP.
-
 3. Create a `📄 manifest.json` file and a `🖼 pack_icon.png` file (optional) within the BP folder.
     - A manifest file contains all the information needed to register a pack, while a pack icon displays visually in the pack menu. A pack icon is typically a 128x128 or a 256x256 image, though any power-of-2 resolution will do, they will be upscaled and downscaled accordingly.
 
 <Spoiler title="Sample 📄 manifest.json">
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {
@@ -222,16 +219,15 @@ Nested functions, for example `BP/functions/wiki/teleport/zone/hell` can be run 
 
 The final file within a functions folder is the **`tick.json`** file. This specifies functions to run server-side on every game tick, (similar to a repeating command block). It is located in the `BP/functions` folder. By default, functions running in this file execute at origin (`0, 0, 0`) in the overworld. Example **tick.json`** file:
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+<CodeHeader path="BP/functions/tick.json" />
+
 ```json
 {
-  "values": [
-    "wiki/function_1",
-    "wiki/function_2"
-  ]
+    "values": ["wiki/function_1", "wiki/function_2"]
 }
 ```
-> Note: Functions in this file are run as soon as the world is *initialized*, regardless of whether or not the player has been *loaded*. This may cause unintended behavior if used incorrectly.
+
+> Note: Functions in this file are run as soon as the world is _initialized_, regardless of whether or not the player has been _loaded_. This may cause unintended behavior if used incorrectly.
 
 ## Sample Function Pack
 
@@ -249,9 +245,9 @@ Enabling the [Content Log](/guide/troubleshooting#content-log) in the creator se
 
 The list of errors will be generated every time you load a world or run `/reload` to reflect changes after editing files. The list can be viewed on-screen for a few seconds, as well as in the content log history in settings.
 
-![contentLogToggles](/assets/images/commands/mcfunctions/content-log-toggles.png)
+![contentLogToggles](content-log-toggles.png)
 
-![contentLogHistory](/assets/images/commands/mcfunctions/content-log-history.png)
+![contentLogHistory](content-log-history.png)
 
 ## Professional Workspace Setup (Optional)
 
@@ -261,34 +257,34 @@ Setting up a dedicated workspace is the final step in developing function packs 
 
 Think of **VS Code** as your command center. It is a powerful, free code editor that makes writing `.mcfunction` files much easier than using Notepad.
 
-- **Download:** Get it from the [Official VS Code Site](https://code.visualstudio.com/Download).
-- **The Essential Plugin:** Once installed, click the **Extensions** icon (the four squares) on the left sidebar and search for **MCBE Command Checker**.
-- **Why use it?**
-    - **Syntax Highlighting:** Commands change color based on their type, making them easier to read.
-    - **Auto-Complete:** As you type, the editor will suggest valid arguments, targets, and block names.
-    - **Error Detection:** It will highlight typos or invalid syntax with a red underline before you even open the game.
+-   **Download:** Get it from the [Official VS Code Site](https://code.visualstudio.com/Download).
+-   **The Essential Plugin:** Once installed, click the **Extensions** icon (the four squares) on the left sidebar and search for **MCBE Command Checker**.
+-   **Why use it?**
+    -   **Syntax Highlighting:** Commands change color based on their type, making them easier to read.
+    -   **Auto-Complete:** As you type, the editor will suggest valid arguments, targets, and block names.
+    -   **Error Detection:** It will highlight typos or invalid syntax with a red underline before you even open the game.
 
 Example screenshot:
 
-![Editing a .mcfunction file in VSCode](/public/assets/images/commands/mcfunctions/mcfunction-file-vscode.png)
+![Editing a .mcfunction file in VSCode](mcfunction-file-vscode.png)
 
 ### 2. Version Control with GitHub
 
 **GitHub** is a cloud-based service that acts as a "save point" for your projects.
 
-- **Create an Account:** Sign up at [GitHub.com](https://github.com/).
-- **The Benefits:**
-    - **Cloud Backup:** You’ll never lose your work if your computer crashes.
-    - **Collaboration:** You can share a link to your code so others can review it or help you fix bugs without sending files back and forth.
-    - **History:** You can see exactly what changes you made today versus a week ago.
-    - **Releases:** Once your pack is ready for the public, you can create a "Release." This allows you to host specific versions (like v1.0 or v2.1) as downloadable `.mcpack` files, making it easy for players to find the most stable version of your work.
+-   **Create an Account:** Sign up at [GitHub.com](https://github.com/).
+-   **The Benefits:**
+    -   **Cloud Backup:** You’ll never lose your work if your computer crashes.
+    -   **Collaboration:** You can share a link to your code so others can review it or help you fix bugs without sending files back and forth.
+    -   **History:** You can see exactly what changes you made today versus a week ago.
+    -   **Releases:** Once your pack is ready for the public, you can create a "Release." This allows you to host specific versions (like v1.0 or v2.1) as downloadable `.mcpack` files, making it easy for players to find the most stable version of your work.
 
 ### 3. GitHub Desktop
 
 While GitHub lives in the cloud, **GitHub Desktop** is the app on your computer that talks to it. It’s the easiest way for beginners to manage their files without learning complex "Git" commands.
 
-- **Download:** Get it at [desktop.github.com](https://desktop.github.com).
-- **The Workflow:** After you finish writing code in VS Code, you use GitHub Desktop to "Commit" (save) and "Push" (upload) your changes to the cloud.
+-   **Download:** Get it at [desktop.github.com](https://desktop.github.com).
+-   **The Workflow:** After you finish writing code in VS Code, you use GitHub Desktop to "Commit" (save) and "Push" (upload) your changes to the cloud.
 
 ### 4. Linking Your Folders
 
@@ -299,24 +295,30 @@ By linking your `\GitHub\ProjectName` folder to Minecraft's `\development_behavi
 **How to Link Folders (Windows):**
 
 1.  Locate your project in your GitHub folder.
-> Example:
-> ```
-> C:\Github\YOUR_PROJECT_NAME
-> ```
+    Example:
+
+    ```
+    C:\Github\YOUR_PROJECT_NAME
+    ```
+
 2.  Locate your Minecraft development folder.
-> Example:
-> ```
-> C:\Users\YOUR_NAME\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\YOUR_PROJECT_NAME
-> ```
+    Example:
+
+    ```
+    C:\Users\YOUR_NAME\AppData\Roaming\Minecraft Bedrock\Users\Shared\games\com.mojang\development_behavior_packs\YOUR_PROJECT_NAME
+    ```
+
 3.  Open **Command Prompt** as Administrator.
+
 4.  Use the `mklink /J` command to link them.
-> Example:
-> ```
-> mklink /J "Path\To\Minecraft\Folder" "Path\To\GitHub\Folder"`
-> ```
+    Example:
+
+    ```
+    mklink /J "Path\To\Minecraft\Folder" "Path\To\GitHub\Folder"`
+    ```
 
 :::tip
-Once these folders are linked, you don’t need to restart Minecraft or even re-enter the world to test your work. Simply save your file in VS Code and run the `/reload` command in-game to apply your changes immediately. 
+Once these folders are linked, you don’t need to restart Minecraft or even re-enter the world to test your work. Simply save your file in VS Code and run the `/reload` command in-game to apply your changes immediately.
 
 **Bonus Tip:** Enable **Auto Save** in VS Code (**File > Auto Save**) to make this process even faster—just tab back into Minecraft and run `/reload`!
 :::

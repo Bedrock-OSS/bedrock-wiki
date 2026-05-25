@@ -28,7 +28,7 @@ This technique allows you to execute commands at the location of any block varia
 
 ## System
 
-<CodeHeader>BP/functions/wiki/execute_at_blocks/diamond_block.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/execute_at_blocks/diamond_block.mcfunction" />
 
 ```yaml
 ## Replace [Block] in [Area] with Fully-filled Composters
@@ -89,7 +89,7 @@ This is a slightly modified version of the system that will not affect any exist
 
 ![Demonstration GIF](demo_2.gif)
 
-<CodeHeader>BP/functions/wiki/execute_at_blocks/diamond_block.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/execute_at_blocks/diamond_block.mcfunction" />
 
 ```yaml
 ## Tag Existing Item Drops to Ignore

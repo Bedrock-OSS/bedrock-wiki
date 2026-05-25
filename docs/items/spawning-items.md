@@ -24,7 +24,7 @@ The simplest method of spawning items to date is by using /loot. Formatted as su
 /loot spawn ~ ~ ~ loot "entities/cow"
 ```
 
-<CodeHeader>BP/loot_tables/entities/cow.json</CodeHeader>
+<CodeHeader path="BP/loot_tables/entities/cow.json" />
 
 ```json
 "minecraft:loot": {
@@ -36,7 +36,7 @@ The simplest method of spawning items to date is by using /loot. Formatted as su
 
 Another simple method of spawning items - and generally the most common one - is dropping items upon an entity's death. This is done by adding the `minecraft:loot` component to the entity and linking it to the respective loot table (`forium` in the following example) containing items you wish to be dropped.
 
-<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:loot": {
@@ -50,7 +50,7 @@ We can use `minecraft:loot` on a [dummy entity](/entities/dummy-entities) that d
 
 Behaviors:
 
-<CodeHeader>BP/entities/my_entity.json</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" />
 
 ```json
 {
@@ -82,7 +82,7 @@ Here is an example of an entity called "box" which will drop its contents upon i
 
 Note that if the entity is not removed upon interaction, it can be interacted with again and will spawn the items. If the entity should persist after the interaction, the `cooldown` parameter may be added to the entity to prevent interaction for a specified amount of time. Alternatively, an event may be called to remove the component group containing this `minecraft:interact` component.
 
-<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:interact": {
@@ -118,7 +118,7 @@ The items are spawned using the `minecraft:behavior.drop_item_for` component in 
 
 This behavior appears to push the mob back when the items are dropped. Thus it is essential to summon the entity slightly above the ground (or teleport it up in the following animation controller) to avoid the items spawning a few blocks away from the spawn location. Decreasing the size of the collision box may also help.
 
-<CodeHeader>BP/entities/my_entity.json#components</CodeHeader>
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/components" />
 
 ```json
 "minecraft:navigation.walk": {},
@@ -136,7 +136,7 @@ This behavior appears to push the mob back when the items are dropped. Thus it i
 
 Teleporting the entity into the void causes no death animation, sound, or particles. Two transitions are used to ensure it is not killed in the same tick it spawns.
 
-<CodeHeader>BP/animation_controllers/my_entity.ac.json</CodeHeader>
+<CodeHeader path="BP/animation_controllers/my_entity.ac.json" />
 
 ```json
 {

@@ -2,6 +2,7 @@
 node_modules
 .DS_Store
 
+docs/.vitepress/.temp
 docs/.vitepress/cache
 docs/.vitepress/dist
 docs/public/llms.txt

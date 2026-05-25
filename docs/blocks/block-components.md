@@ -36,7 +36,7 @@ Block components are used to change how your block appears and functions in the 
 
 Block components can be directly applied in the `components` child of `minecraft:block`, or per block [permutation](/blocks/block-permutations).
 
-<CodeHeader>BP/blocks/lamp.json</CodeHeader>
+<CodeHeader path="BP/blocks/lamp.json" />
 
 ```json
 {
@@ -84,7 +84,7 @@ _Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or lat
     -   `"never"`{lang=json} allows chests to open.
     -   `"shape"`{lang=json} (default) checks the block's [collision box](#collision-box) to determine whether chests should be able to open.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:chest_obstruction": {
@@ -103,7 +103,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 -   When `true`{lang=json} (default), a 16×16×16 collision box is used.
 -   When `false`{lang=json}, the block's collision with entities is disabled.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:collision_box": true
@@ -120,7 +120,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
     -   Measured in pixels from the `origin` of the collision box.
     -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 24, 8]`{lang=json}.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:collision_box": {
@@ -134,7 +134,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 An array of up to 16 object collision box definitions.
 Setting this to an empty array results in a full block collision.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:collision_box": [
@@ -165,7 +165,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
     -   Lists the cardinal directions from which other blocks can connect to the block.
     -   By default, blocks can connect from any cardinal direction.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:connection_rule": {
@@ -192,7 +192,7 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
     -   If a translation for the given string can not be resolved, the raw string will be displayed.
     -   When omitted, the name displayed will default to the block's [display name](#display-name).
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:crafting_table": {
@@ -215,7 +215,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 -   When `true`{lang=json} (default), the block has an explosion resistance of 0.
 -   When `false`{lang=json}, the block cannot be destroyed by explosions.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destructible_by_explosion": false
@@ -227,7 +227,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
     -   Defines how resistant the block is to being destroyed by explosions.
     -   Greater resistance reduces the chance of the block being destroyed when near an explosion.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destructible_by_explosion": {
@@ -246,7 +246,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 -   When `true`{lang=json} (default), the block will be destroyed instantly when mined.
 -   When `false`{lang=json}, the block cannot be destroyed by mining it.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destructible_by_mining": false
@@ -265,7 +265,7 @@ While the name suggests that this parameter determines how many seconds it takes
 By default, the number of seconds it actually takes to destroy a custom block is 1.5× the value set here.
 :::
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destructible_by_mining": {
@@ -290,7 +290,7 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 -   `tint_method` — String (optional)
     -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `texture` based on the biome the block is placed in.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:destruction_particles": {
@@ -310,13 +310,13 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 
 #### String Format {#display-name-string}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:display_name": "tile.wiki:custom_block.name"
 ```
 
-<CodeHeader>RP/texts/en_US.lang</CodeHeader>
+<CodeHeader path="RP/texts/en_US.lang" />
 
 ```lang
 tile.wiki:custom_block.name=Custom Block
@@ -338,7 +338,7 @@ For a block to be able to be placed in a Flower Pot, it must also have the [flow
 -   `material_instances` — Object
     -   The displayed [material instances](#material-instances) component.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:embedded_visual": {
@@ -362,7 +362,7 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or lat
 -   `min_fall_distance` — Float
     -   The minimum distance (in blocks) that an entity must fall in order to trigger the event.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:entity_fall_on": {
@@ -381,7 +381,7 @@ _Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or lat
 When `true`, the block will be able to catch on fire naturally from neighbors.
 When `false` (default), the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:flammable": true
@@ -397,7 +397,7 @@ When `false` (default), the block will not be able to catch on fire naturally fr
 -   `destroy_chance_modifier` — Integer
     -   Affects chance that this block will be destroyed by flames when on fire.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:flammable": {
@@ -417,7 +417,7 @@ The [embedded visual](#embedded-visual) component can be used to change the appe
 
 #### Object Format {#flower-pottable-object}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:flower_pottable": {}
@@ -436,7 +436,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 
 #### Float Format {#friction-float}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:friction": 0.4
@@ -460,7 +460,7 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 
 #### String Format {#geometry-string}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": "geometry.example_block"
@@ -491,7 +491,7 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
     -   When `true`{lang=json}, all UVs in the model will have locked rotation.
     -   When an array is used, all UVs in the listed bones will have locked rotation.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:geometry": {
@@ -519,7 +519,7 @@ _Requires format version [1.21.60](/blocks/block-format-history#_1-21-60) or lat
 -   `material_instances` — Object
     -   The displayed [material instances](#material-instances) component.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:item_visual": {
@@ -543,7 +543,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 -   `offset` — Vector `[X, Y, Z]`{lang=js} (optional)
     -   Determines the position of the middle of the knot relative to the bottom middle of the block.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:leashable": {
@@ -559,7 +559,7 @@ _Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or lat
 
 #### Integer Format {#light-dampening-integer}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:light_dampening": 15
@@ -573,7 +573,7 @@ _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or lat
 
 #### Integer Format {#light-emission-integer}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:light_emission": 10
@@ -605,7 +605,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
         -   Determines whether liquid contained in the block is visually clipped based on the block's encompassing collider (the smallest box containing all [collision boxes](#collision-box)).
         -   By default, liquid is not clipped.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:liquid_detection": {
@@ -626,7 +626,7 @@ If omitted, the block is dropped as an item.
 
 #### String Format {#loot-string}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:loot": "loot_tables/blocks/custom_block.json"
@@ -641,7 +641,7 @@ If omitted, the block is ignored by maps.
 
 A hex string (starting with a `#`) defining the `#RRGGBB` color of the block on a map.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:map_color": "#FFFFFF"
@@ -651,7 +651,7 @@ A hex string (starting with a `#`) defining the `#RRGGBB` color of the block on 
 
 An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} color of the block on a map.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:map_color": [255, 255, 255]
@@ -665,7 +665,7 @@ An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} colo
 -   `tint_method` — String (optional)
     -   Specifies the [tint method](/blocks/block-tinting#tint-methods) used to tint the `color` based on the biome the block is placed in.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:map_color": {
@@ -715,7 +715,7 @@ The `*` instance is the default instance for all cube faces, however it is not r
         -   Determines whether the UVs of faces using the material instance are randomly rotated based on the block's position in the world.
         -   By default, textures are not randomly rotated.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {
@@ -738,7 +738,7 @@ Learn more about applying different material instances [here](/blocks/block-mode
 
 Custom instance names can be defined within material instances, and can be referenced by built-in instance names, or within the block model.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:material_instances": {
@@ -774,7 +774,7 @@ _Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or l
 -   `sticky` — String (optional)
     -   Can be set to `"same"`{lang=json} to replicate Slime/Honey Block functionality.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:movable": {
@@ -802,7 +802,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
         -   See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.
         -   A maximum of 64 block descriptors can be included.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:placement_filter": {
@@ -839,7 +839,7 @@ _Requires format version [1.21.120](/blocks/block-format-history#_1-21-120) or l
     -   `"obstruct_rain"`{lang=json} prevents rain from passing through the block, instead causing it to splash on top of it.
     -   `"none"`{lang=json} allows rain and snow to pass through the block.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:precipitation_interactions": {
@@ -865,7 +865,7 @@ _Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or l
         -   Determines how many equally-spaced random values can be chosen across the `range`.
         -   A value of `0`{lang=json} means that any value within the `range` can be used.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:random_offset": {
@@ -907,7 +907,7 @@ _Requires format version [1.21.40](/blocks/block-format-history#_1-21-40) or lat
 -   `redstone_conductor` — Boolean (optional)
     -   Determines whether this block conducts direct redstone power.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_conductivity": {
@@ -932,7 +932,7 @@ Allows the block to respond to redstone power via custom components using the `o
         -   This parameter is set to `false`{lang=json} by default and overrides the `redstone_conductor` parameter of the [redstone conductivity](#redstone-conductivity) component.
         -   This allows the block to counterintuitively have properties of a redstone conductor while not actually conducting redstone.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_consumer": {
@@ -959,7 +959,7 @@ Causes the block to produce redstone power.
     -   Determines whether face directions should be relative to the rotation value in the [transformation](#transformation) component.
     -   By default, faces are not transform-relative.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:redstone_producer": {
@@ -976,7 +976,7 @@ Does not allow the block to be replaced by a block of the same permutation.
 
 #### Object Format {#replaceable-object}
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:replaceable": {}
@@ -993,7 +993,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 -   When `true`{lang=json} (default), a 16×16×16 selection box is used.
 -   When `false`{lang=json}, the block cannot be selected by players.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:selection_box": true
@@ -1010,7 +1010,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
     -   Measured in pixels from the `origin` of the selection box.
     -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 16, 8]`{lang=json}.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:selection_box": {
@@ -1030,7 +1030,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 -   `shape` — String
     -   Can be set to `"fence"`{lang=json} or `"stair"`{lang=json}.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:support": {
@@ -1054,7 +1054,7 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or lat
 -   `looping` — Boolean (optional)
     -   Whether this block should continuously tick, rather than only ticking once.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:tick": {
@@ -1091,7 +1091,7 @@ Lean about [block orientation](/blocks/block-orientation) to apply rotation base
 -   `translation` — Vector `[X, Y, Z]`{lang=js} (optional)
     -   The number of block units to offset the geometry by on each axis.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:transformation": {

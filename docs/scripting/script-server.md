@@ -23,7 +23,7 @@ The Script API, with most core features being implemented in the `@minecraft/ser
 
 You will need to add the script module as a dependency in your `manifest.json`.
 
-<CodeHeader>BP/manifest.json</CodeHeader>
+<CodeHeader path="BP/manifest.json" />
 
 ```json
 {

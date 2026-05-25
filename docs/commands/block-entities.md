@@ -54,7 +54,7 @@ _Type the following commands in Chat:_
 
 ## System
 
-<CodeHeader>BP/functions/wiki/mbe/render.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/mbe/render.mcfunction" />
 
 ```yaml
 ## Align Arms
@@ -100,8 +100,6 @@ Using the same controller names above is not required. However, it can help avoi
 
 <Spoiler title="Full Block">
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 # Face north
 /tp @e[type=armor_stand,name="Grumm",c=1] ~-1.1245 ~0.2260 ~-0.097 81
@@ -119,8 +117,6 @@ Using the same controller names above is not required. However, it can help avoi
 </Spoiler>
 
 <Spoiler title="Mini Block">
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 # Face north
@@ -140,8 +136,6 @@ Using the same controller names above is not required. However, it can help avoi
 
 <Spoiler title="Stairs">
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 # Face north
 /tp @e[type=armor_stand,name="Grumm",c=1] ~-0.097 ~0.2325 ~1.1245 350
@@ -160,8 +154,6 @@ Using the same controller names above is not required. However, it can help avoi
 
 <Spoiler title="Bottom Slab">
 
-<CodeHeader></CodeHeader>
-
 ```yaml
 # Face north
 /tp @e[type=armor_stand,name="Grumm",c=1] ~-0.097 ~0.2325 ~1.1245 350
@@ -179,8 +171,6 @@ Using the same controller names above is not required. However, it can help avoi
 </Spoiler>
 
 <Spoiler title="Top Slab">
-
-<CodeHeader></CodeHeader>
 
 ```yaml
 # Face north

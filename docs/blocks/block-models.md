@@ -49,7 +49,7 @@ Bones can be renamed by pressing `F2`.
 The "paper bag" model will need two cubes: one for the handle, and one for the main bag.
 These can be added by selecting your root bone and clicking `Add Cube`.
 
-<WikiImage src="new_cube.png" alt width="600" class="my-4" />
+<WikiImage src="new_cube.png" alt width="600" />
 
 Cubes can be moved, resized and rotated from the top toolbar.
 Below are the two cubes my "paper_bag" model will use.

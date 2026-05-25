@@ -33,7 +33,7 @@ I will be reviewing three different types of blocks that have different layouts:
 
 Navigate to your `RP/textures/terrain_texture.json`. Ensure that the file is properly named.
 
-<CodeHeader>RP/textures/terrain_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/terrain_texture.json" />
 
 ```json
 {
@@ -64,7 +64,7 @@ Next, navigate to your block file. In your block file, make sure you have the `m
 
 Dirt like block example:
 
-<CodeHeader>BP/blocks/dirt_like.json</CodeHeader>
+<CodeHeader path="BP/blocks/dirt_like.json" />
 
 ```json
 {
@@ -86,7 +86,7 @@ Dirt like block example:
 
 Log like block example:
 
-<CodeHeader>BP/blocks/custom_log.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_log.json" />
 
 ```json
 {
@@ -113,7 +113,7 @@ Log like block example:
 
 Grass-like block example:
 
-<CodeHeader>BP/blocks/custom_grass.json</CodeHeader>
+<CodeHeader path="BP/blocks/custom_grass.json" />
 
 ```json
 {
@@ -163,7 +163,7 @@ Problem: You have transparent pixels in your texture file, but when applied in-g
 
 Solution: Navigate to your block file. Navigate to your `material_instances` component. Add the following to your component:
 
-<CodeHeader>BP/blocks/your_block.json</CodeHeader>
+<CodeHeader path="BP/blocks/your_block.json" />
 
 ```json
 {
@@ -187,7 +187,7 @@ Problem: You have block with custom geometry but it has a shadow.
 
 Solution: Add following component to your block's code:
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:light_dampening": 0

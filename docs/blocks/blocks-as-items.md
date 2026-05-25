@@ -27,7 +27,7 @@ The block placer component will also give the item the 3D appearance of the bloc
 
 One example of a situation where replacing the block item is necessary is with flower blocks, which should display as an icon in item form rather than being 3D.
 
-<CodeHeader>BP/blocks/daffodil.json</CodeHeader>
+<CodeHeader path="BP/blocks/daffodil.json" />
 
 ```json
 {
@@ -50,7 +50,7 @@ One example of a situation where replacing the block item is necessary is with f
 }
 ```
 
-<CodeHeader>BP/items/daffodil.json</CodeHeader>
+<CodeHeader path="BP/items/daffodil.json" />
 
 ```json
 {

@@ -20,7 +20,7 @@ On this page, you will learn how to create custom foods that, when consumed, gra
 
 ## Basic Item JSON
 
-<CodeHeader>BP/items/custom_food.json</CodeHeader>
+<CodeHeader path="BP/items/custom_food.json" />
 
 ```json
 {
@@ -61,7 +61,7 @@ If you already know how to place a texture in the correct path, you can skip dow
 
 We now need to create an object with the name defined in the `minecraft:icon` component above in the `RP/textures/item_texture.json` file of our resource pack.
 
-<CodeHeader>RP/textures/item_texture.json</CodeHeader>
+<CodeHeader path="RP/textures/item_texture.json" />
 
 ```json
 {
@@ -80,7 +80,7 @@ In order to apply effects to the player when the food is consumed, we'll need to
 In this tutorial, our custom component will be `wiki:food_effects`.
 Make sure to change the namespace to something that uniquely identifies your add-on.
 
-<CodeHeader>minecraft:item > components</CodeHeader>
+<CodeHeader path="BP/items/custom_food.json" breadcrumbs="minecraft:item/components" />
 
 ```json
 "wiki:food_effects": [
@@ -101,7 +101,7 @@ Make sure to change the namespace to something that uniquely identifies your add
 
 In the scripts file, just use a single event after using a specific item, and after using this item the player will acquire one or more effects, as in the code below.
 
-<CodeHeader>BP/scripts/main.js</CodeHeader>
+<CodeHeader path="BP/scripts/main.js" />
 
 ```js
 import { system } from "@minecraft/server";

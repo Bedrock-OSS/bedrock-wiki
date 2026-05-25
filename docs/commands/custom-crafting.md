@@ -37,7 +37,7 @@ To complete the setup, place down one final dropper where you want players to be
 
 ## System
 
-<CodeHeader>BP/functions/wiki/custom_crafting.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/custom_crafting.mcfunction" />
 
 ```yaml
 ## If Recipe Matches Crafter: Clone Recipe Output to Crafter
@@ -70,7 +70,7 @@ For convenience, you may download the .mcstructure sample shared by @TwigYT:
 
 You may add a playsound command to slightly enhance the crafting experience like so:
 
-<CodeHeader>BP/functions/wiki/custom_crafting.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/custom_crafting.mcfunction" />
 
 ```yaml
 ## If Recipe Matches Crafter: Play Sound Upon Crafting (optional)
