@@ -75,9 +75,9 @@ Additionally, dependencies will need to be set based on modules used. To import 
     // "capabilities": ["script_eval"],
     "dependencies": [
         {
-            // Enables the use of @minecraft/server module, with a version of 2.2.0 (the latest stable version available).
+            // Enables the use of @minecraft/server module, with a version of 2.7.0 (the latest stable version available).
             "module_name": "@minecraft/server",
-            "version": "2.6.0"
+            "version": "2.7.0"
         }
     ]
 }
@@ -89,7 +89,8 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server`:
 
-    -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0) (Latest version)
+    -   [`2.7.0`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0) (Latest Version)
+    -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0)
     -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0)
     -   [`2.4.0`](https://www.npmjs.com/package/@minecraft/server/v/2.4.0)
     -   [`2.3.0`](https://www.npmjs.com/package/@minecraft/server/v/2.3.0)
@@ -132,7 +133,7 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
 :::
 
 -   `@minecraft/server`:
-
+    -   [`2.8.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.8.0-beta.1.26.21-stable) (1.26.21)
     -   [`2.7.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0-beta.1.26.14-stable) (1.26.14)
     -   [`2.6.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0-beta.1.26.0-stable) (1.26.0)
     -   [`2.5.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0-beta.1.21.130-stable) (1.21.130)
@@ -160,7 +161,7 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
     -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0-beta.1.19.40-stable) (1.19.40)
 
 -   `@minecraft/server-ui`:
-
+    -   [`2.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0-beta.1.26.21-stable) (1.26.21)
     -   [`2.1.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0-beta.1.21.114-stable) (1.21.114)
     -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.84-stable) (1.21.84)
     -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.4.0-beta.1.21.62-stable) (1.21.62)
@@ -170,8 +171,7 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
     -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.0.0-beta.1.19.80-stable) (1.21.23)
 
 -   `@minecraft/server-gametest`:
-
-    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.21.114-stable) (1.21.114)
+    -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-gametest/v/1.0.0-beta.1.26.21-stable) (1.26.21)
 
 -   `@minecraft/server-net`:
 
