@@ -39,6 +39,10 @@ An experiment must be enabled in your world for experimental changes to take eff
     -   Can be set to `"always"`{lang=json} or `"never"`{lang=json} (default).
 -   Updated `minecraft:geometry`
     -   Released `culling_shape` parameter from experimental
+-   Updated `minecraft:precipitation_interactions`
+    -   Updated `precipitation_behavior` parameter
+        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`{lang=json}
+        -   Released `"snowlogging"`{lang=json} value from experimental
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
