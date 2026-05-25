@@ -24,7 +24,7 @@ Next, we'll enhance the custom Ghost entity by adding some more basic mechanics 
 
 First, we'll make the ghost drop Ectoplasm upon death: create the following file:
 
-<ExampleFile path="BP/loot_tables/entities/ghost.json" />
+<ExampleFile path="BP/loot_tables/wiki/entities/ghost.json" />
 
 -   Loot tables consist of `pools`.
     Each pool defines a different set of loot that will be dropped.

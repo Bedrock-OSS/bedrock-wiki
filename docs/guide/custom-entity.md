@@ -51,7 +51,7 @@ This is a basic overview of the file:
 
 ```json
 {
-    "format_version": "1.21.120",
+    "format_version": "1.26.10",
     "minecraft:entity": {
         "description": { ... },
         "components": { ... }
@@ -104,7 +104,7 @@ These are the components that you will generally have on every entity. This defi
     "height": 1.8
 },
 "minecraft:loot": {
-    "table": "loot_tables/entities/ghost.json"
+    "table": "loot_tables/wiki/entities/ghost.json"
 }
 ```
 
