@@ -37,6 +37,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:flammable`
     -   Added `lava_flammable` parameter which determines when fire can spread to the block from lava.
     -   Can be set to `"always"`{lang=json} or `"never"`{lang=json} (default).
+-   Updated `minecraft:geometry`
+    -   Released `culling_shape` parameter from experimental
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
@@ -59,9 +61,6 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   The interval between the rotation of each state value is 360° divided by the number of valid values the referenced state has.
             -   For example, a `y` parameter referencing a state with 4 values would rotate the geometry in multiples of 90°, with each rotation facing a cardinal direction.
             -   The default state value is always associated with a rotation of 0°.
--   Updated `minecraft:precipitation_interactions`
-    -   Updated `precipitation_behavior` parameter
-        -   Renamed `"snow_log_no_collision"`{lang=json} value to `"snowlogging"`{lang=json}
 
 ## 1.26.20
 
