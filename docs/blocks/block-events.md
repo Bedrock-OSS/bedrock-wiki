@@ -204,7 +204,7 @@ onEntityFallOn(event) {
 
 ### Place
 
-Called when the block is placed or [snowlogged](/blocks/compound-blocks#snowlogging).
+Called when the block is placed or [snowlogged](/blocks/block-colocation#snowlogging).
 
 <CodeHeader>Custom Component</CodeHeader>
 

@@ -1,6 +1,6 @@
 ---
-title: Compound Blocks
-description: Compound blocks are made up of two blocks that are placed at the same position. This is the system that allows for waterlogging and snowlogging.
+title: Block Co-Location
+description: Learn about the ways that two blocks can be placed at the same position. This is the system that allows for waterlogging and snowlogging.
 category: Documentation
 tags:
     - intermediate
@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-## What Are Compound Blocks?
+## What Are Co-Located Blocks?
 
 While each block location in the world is typically limited to only containing one block, there are some situations where a single location can contain two blocks instead.
 This includes [waterlogging](#waterlogging) and [snowlogging](#snowlogging) functionality which allows water or snow to occupy the same space as another block.
@@ -23,7 +23,7 @@ To support this, each block location in the world is stored as two separate "lay
 
 ## Waterlogging
 
-![An end rod submerged in water](waterlogging.png){.compound-blocks-float}
+![An end rod submerged in water](waterlogging.png){.block-colocation-float}
 
 A block is waterlogged when it contains either a source or flowing block of water.
 
@@ -55,7 +55,7 @@ By default, water is not able to flow through waterloggable blocks and will inst
 
 ### Allowing Water Flow
 
-![An end rod with water flowing through it](water_flowing_through.png){.compound-blocks-float}
+![An end rod with water flowing through it](water_flowing_through.png){.block-colocation-float}
 
 Some waterloggable blocks also allow water to flow into the block as if it were air.
 This can be seen in vanilla drip leaves, end rods, tripwires and tripwire hooks.
@@ -78,7 +78,7 @@ To apply this functionality to your own block, simply set the `on_liquid_touches
 
 ## Snowlogging
 
-![A fern submerged in snow](snowlogging.png){.compound-blocks-float}
+![A fern submerged in snow](snowlogging.png){.block-colocation-float}
 
 A block is snowlogged when it is submerged in snow.
 
@@ -113,7 +113,7 @@ Note that snowloggable blocks cannot have a collision box as the secondary block
 
 <style>
 @media (min-width: 1200px) {
-    .compound-blocks-float {
+    .block-colocation-float {
         float: right;
         margin-left: 1em;
     }

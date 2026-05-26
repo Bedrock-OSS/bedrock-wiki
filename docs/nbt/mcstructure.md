@@ -90,7 +90,7 @@ In this case, the file in the `mystructure` folder overrides the file directly i
 ### Block Indices
 
 Each structure contains two lists of block indices, which are integers that correspond to a block permutation from the [block palette](#block-palette) for a given block position.
-Having two lists of block indices creates a primary and secondary block layer, allowing for [compound blocks](/blocks/compound-blocks) (such as those that are waterlogged) to be stored.
+Having two lists of block indices creates a primary and secondary block layer, allowing for [co-located blocks](/blocks/block-colocation) (such as those that are waterlogged) to be stored.
 
 -   Each sublist proceeds in ZYX order from the bottom north-west corner of the structure to the top south-east corner.
     For example, if the structure is 2×3×4 blocks in size, then the 24 (product of the dimensions) values in each layer list represent the blocks located at `0 0 0`, `0 0 1`, `0 0 2`, `0 0 3`, `0 1 0`, `0 1 1`, `0 1 2`, `0 1 3`, `0 2 0`, `0 2 1`, `0 2 2`, `0 2 3`, `1 0 0`, `1 0 1`, `1 0 2`, `1 0 3`, `1 1 0`, `1 1 1`, `1 1 2`, `1 1 3`, `1 2 0`, `1 2 1`, `1 2 2`, `1 2 3` relative to the origin.
