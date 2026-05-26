@@ -40,7 +40,7 @@ When a block is waterlogged:
 The [liquid detection](/blocks/block-components#liquid-detection) component can be used to allow a block to contain water.
 By default, water is not able to flow through waterloggable blocks and will instead flow around.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:liquid_detection": {
@@ -62,7 +62,7 @@ This can be seen in vanilla drip leaves, end rods, tripwires and tripwire hooks.
 
 To apply this functionality to your own block, simply set the `on_liquid_touches` parameter to `"no_reaction"`{lang=json}.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:liquid_detection": {
@@ -102,7 +102,7 @@ Snowlogging for custom blocks requires the "Upcoming Creator Features" toggle to
 The [precipitation interactions](/blocks/block-components#precipitation-interactions) component can be used to allow a block to be submerged in snow layers.
 Note that snowloggable blocks cannot have a collision box as the secondary block layer does not support collision.
 
-<CodeHeader>minecraft:block > components</CodeHeader>
+<CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:collision_box": false,
