@@ -107,6 +107,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 ### Documentation
 
+- [Block Co-Location](/blocks/block-colocation)
 - [Block Format History](/blocks/block-format-history)
 - [Block Shapes](/blocks/block-shapes)
 - [Redstone Components](/blocks/redstone-components)
