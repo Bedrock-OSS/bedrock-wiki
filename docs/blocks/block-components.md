@@ -591,7 +591,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
     -   `liquid_type` — String
         -   Which type of liquid this rule applies to. Currently only `"water"`{lang=json} is supported.
     -   `can_contain_liquid` — Boolean
-        -   Whether the liquid type can occupy the same space as this block e.g., waterlogging.
+        -   Whether the liquid type can occupy the same space as this block e.g., [waterlogging](/blocks/block-colocation#waterlogging).
     -   `on_liquid_touches` — String (optional)
         -   Determines what happens when the liquid type flows into the block based on one of the following values:
             -   `"blocking"`{lang=json} (default) prevents the liquid from flowing.
