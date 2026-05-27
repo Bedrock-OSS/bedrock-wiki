@@ -58,7 +58,7 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 ```json
 "priorities": {
-    "block_default": 1, //only chooses blocks when it couldn't find the entity
+    "block_default": 1, // only choose blocks when an entity can't be found
     "entity_default": 100,
     "blocks": {},
     "entities": {
