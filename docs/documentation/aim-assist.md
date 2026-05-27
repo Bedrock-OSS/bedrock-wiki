@@ -78,7 +78,7 @@ The preset file ties everything together — it controls which category is used 
 {
     "format_version": "1.21.50",
     "minecraft:aim_assist_preset": {
-        "identifier": "yourpack:your_preset",
+        "identifier": "wiki:aim_assist_preset",
         "item_settings": {
             "minecraft:bucket": "yourpack:category_name"
         },
