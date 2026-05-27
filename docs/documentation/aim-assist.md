@@ -43,12 +43,12 @@ The categories file defines the priority weights for blocks and entities. A high
 
 ### Priority Fields
 
-| Field            | Description                                                         |
-|------------------|---------------------------------------------------------------------|
-| `block_default`  | Weight applied to all blocks by default. can range from [0,100]     |
-| `entity_default` | Weight applied to all entities by default. can range from [0, 100]  |
-| `blocks`         | Override weight for specific blocks                                 |
-| `entities`       | Override weight for specific entities                               |
+| Field            | Description                                                        |
+| ---------------- | ------------------------------------------------------------------ |
+| `block_default`  | Weight applied to all blocks by default. can range from [0, 100]   |
+| `entity_default` | Weight applied to all entities by default. can range from [0, 100] |
+| `blocks`         | Override weight for specific blocks                                |
+| `entities`       | Override weight for specific entities                              |
 
 Specific entries inside `blocks` or `entities` override their respective default values. Setting a specific entity to a lower value than `entity_default` makes it less prioritized than other entities.
 
