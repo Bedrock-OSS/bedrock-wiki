@@ -8,7 +8,7 @@ mentions:
 Aim assist in Minecraft Bedrock Edition can be customized through behavior packs using two separate JSON files: an **aim assist preset** and an **aim assist categories** file. These work together to control what gets targeted and how.
 
 :::warning
-Requires format version `1.21.50` or higher. also aim assist doesn't support first person camera
+Requires format version `1.21.50` or higher. Additionally, aim assist doesn't support first person camera.
 :::
 
 ---
