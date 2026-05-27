@@ -15,7 +15,7 @@ Requires format version `1.21.50` or higher. Additionally, aim assist doesn't su
 
 The categories file defines the priority weights for blocks and entities. A higher weight means higher priority for the aim assist.
 
-<CodeHeader>BP/aim_assist/categories/your_category.json</CodeHeader>
+<CodeHeader>BP/aim_assist/categories/camera_category.json</CodeHeader>
 
 ```json
 {
@@ -23,7 +23,7 @@ The categories file defines the priority weights for blocks and entities. A high
     "minecraft:aim_assist_categories": {
         "categories": [
             {
-                "name": "yourpack:category_name",
+                "name": "wiki:category_name",
                 "priorities": {
                     "block_default": 30,
                     "entity_default": 30,
@@ -70,7 +70,7 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
 
-<CodeHeader>BP/aim_assist/presets/your_preset.json</CodeHeader>
+<CodeHeader>BP/aim_assist/presets/camera_preset.json</CodeHeader>
 
 ```json
 {
@@ -78,7 +78,7 @@ The preset file ties everything together — it controls which category is used 
     "minecraft:aim_assist_preset": {
         "identifier": "wiki:aim_assist_preset",
         "item_settings": {
-            "minecraft:bucket": "yourpack:category_name"
+            "minecraft:bucket": "wiki:category_name"
         },
         "default_item_settings": "minecraft:default",
         "hand_settings": "minecraft:empty_hand",
