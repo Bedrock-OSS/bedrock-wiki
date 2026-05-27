@@ -17,9 +17,7 @@ Requires format version `1.21.50` or higher. also aim assist doesn't support fir
 
 The categories file defines the priority weights for blocks and entities. A higher weight means higher priority for the aim assist.
 
-<CodeHeader>
-BP/aim_assist/categories/your_category.json
-</CodeHeader>
+<CodeHeader>BP/aim_assist/categories/your_category.json</CodeHeader>
 
 ```json
 {
