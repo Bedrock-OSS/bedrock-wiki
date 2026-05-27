@@ -11,8 +11,6 @@ Aim assist in Minecraft Bedrock Edition can be customized through behavior packs
 Requires format version `1.21.50` or higher. Additionally, aim assist doesn't support first person camera.
 :::
 
----
-
 ## Aim Assist Categories
 
 The categories file defines the priority weights for blocks and entities. A higher weight means higher priority for the aim assist.
@@ -84,22 +82,16 @@ The preset file ties everything together — it controls which category is used 
         },
         "default_item_settings": "minecraft:default",
         "hand_settings": "minecraft:empty_hand",
-        "exclusion_list": [
-            "minecraft:bedrock",
-            "minecraft:arrow"
-        ],
-        "liquid_targeting_list": [
-            "minecraft:bucket",
-            "minecraft:oak_boat"
-        ]
+        "exclusion_list": ["minecraft:bedrock", "minecraft:arrow"],
+        "liquid_targeting_list": ["minecraft:bucket", "minecraft:oak_boat"]
     }
 }
 ```
 
 ### Preset Fields
 
-| Field                   | Description |
-|-------------------------|--------------------------------------------------------------------------|
+| Field                   | Description                                                              |
+| ----------------------- | ------------------------------------------------------------------------ |
 | `identifier`            | Unique identifier for this preset                                        |
 | `item_settings`         | Maps specific items to a specific aim assist category                    |
 | `default_item_settings` | The aim assist category used by default when holding any item            |
@@ -107,38 +99,29 @@ The preset file ties everything together — it controls which category is used 
 | `exclusion_list`        | Items or blocks excluded from aim assist targeting                       |
 | `liquid_targeting_list` | Items that enable liquid block targeting when held (e.g. buckets, boats) |
 
----
-
 ## Activating via Script API or Commands
 
-You can activate a custom Aim Assist preset on a player using the `/aimassist` command through scripts:
+You can activate a custom aim assist preset on a player using the `/aimassist` command through scripts:
 
 ```js
-player.runCommand("aimassist set @s 60 10 16 angle yourpack:your_preset");
-```
-or in commands:
-```txt
-/aimassist set @s 60 10 16 angle yourpack:your_preset
+player.runCommand("aimassist set @s 60 10 16 angle wiki:aim_assist_preset");
+/aimassist set @s 60 10 16 angle wiki:aim_assist_preset
 ```
 
-This lets you use script logic to control **when** and **on whom** the Aim Assist is active, while the JSON files handle what gets prioritized.
-
----
+This lets you use script logic to control **when** and **on whom** the aim assist is active, while the JSON files handle what gets prioritized.
 
 ### Adding Aim Assist in your Camera Preset
 
-You can directly activate your Aim Assist using your Camera Preset:
-```json
+You can directly activate your aim assist using your camera preset:
+
 {
     "format_version": "1.20.10",
     "minecraft:camera_preset": {
-        "identifier": "yourpack:your_camera_preset",
+        "identifier": "wiki:camera_preset",
         "inherit_from": "minecraft:free",
         "player_effects": true,
         "aim_assist": {
-            "preset": "yourpack:your_preset"
+            "preset": "wiki:aim_assist_preset"
         }
     }
 }
-```
-With this you'll automatically activate Aim Assist after switching to your Custom Camera Preset.
