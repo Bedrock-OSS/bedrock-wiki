@@ -52,7 +52,7 @@ The categories file defines the priority weights for blocks and entities. A high
 
 Specific entries inside `blocks` or `entities` override their respective default values. Setting a specific entity to a lower value than `entity_default` makes it less prioritized than other entities.
 
-### Example PVE Aim Assist
+### PVE Aim Assist Example
 
 To make the aim assist heavily favor entities over blocks (useful for combat):
 
