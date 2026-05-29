@@ -187,7 +187,7 @@ The client or server sends this packet when either side wants to cleanly disconn
 
 ### Incompatible Protocol Version
 
-The client sends this packet when when it's RakNet protocol version doesn't match the server's.
+The client sends this packet when it's RakNet protocol version doesn't match the server's.
 
 `0x19 | Server's RakNet protocol version (uint8) | magic | server GUID`
 
