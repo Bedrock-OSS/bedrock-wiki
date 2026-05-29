@@ -61,6 +61,8 @@ These messages are known as unconnected pings and are structured in this format:
 
 `0x01 | client alive time in ms (unsigned long long) | magic | client GUID`
 
+There's also `0x02` which is used for LAN discovery.
+
 ### Unconnected Pongs
 
 After this message, the server will respond with something called an unconnected pong.
@@ -175,7 +177,27 @@ The client/server will respond to this with a Connected Pong.
 The client or server sends this packet after having received a Connected Ping.
 This packet should be sent as unreliable.
 
-`0x00 | Time since start client (uint64) | Time since start server (uint64)`
+`0x03 | Time since start client (uint64) | Time since start server (uint64)`
+
+### Disconnection
+
+The client or server sends this packet when either side wants to cleanly disconnect.
+
+`0x03`
+
+### Incompatible Protocol Version
+
+The client sends this packet when when it's RakNet protocol version doesn't match the server's.
+
+`0x19 | Server's RakNet protocol version (uint8) | magic | server GUID`
+
+### MCPE Wrapper
+
+Direction: Both (inside Frame Set)
+
+All Minecraft Bedrock game packets are wrapped in this RakNet message type.
+
+`0xFE | Compressed (zlib/snappy) batch of MCPE packets`
 
 ## Implementations
 
