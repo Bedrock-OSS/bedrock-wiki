@@ -1,6 +1,6 @@
 ---
 title: Multi-Blocks
-description: Learn how to create blocks that occupy more than a single block unit by being comprised of multiple invididual blocks.
+description: Learn how to create blocks that occupy more than a single block unit by being comprised of multiple individual blocks.
 category: General
 tags:
     - experimental
