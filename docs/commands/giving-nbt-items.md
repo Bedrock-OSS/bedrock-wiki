@@ -102,10 +102,6 @@ The `lock_in_slot` component prevents the item from being dropped, moved or remo
 /replaceitem entity @p slot.hotbar 0 iron_shovel 1 0 {"minecraft:item_lock":{"mode":"lock_in_slot"}}
 ```
 
-:::info NOTE:
-Players can place items with an `item_lock` component in Decorated Pots. When the pot is broken the item retains its nbt components.
-:::
-
 ### Overriding How ItemLock Displays
 
 The texture to overwrite is `16x16`, and is located in `RP/textures/ui/item_lock_red.png` and `RP/textures/ui/item_lock_yellow.png`
