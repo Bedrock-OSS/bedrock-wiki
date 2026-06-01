@@ -65,19 +65,19 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 ## Functions
 
-An ID system is required to index the position of all targets from 1 to N, allowing us to track the original position of each target. We will run this file in the `tick.json` to automatically assign the IDs.
+An ID system is required to index the position of all targets from 1 to N, allowing us to track the original position of each target. We will run this function whenever a player joins the world for the first time to automatically assign the IDs.
 
-<CodeHeader path="BP/functions/wiki/scoreboard/players/id.mcfunction" />
+<CodeHeader>BP/functions/wiki/event/players/on_first_join.mcfunction</CodeHeader>
 
 ```yaml
-## Register New Players to ID Objective
-scoreboard players add @a wiki:id 0
+## Player ID System
+### Create a new ID
+scoreboard players add .Total wiki:id 1
+### Assign the new ID
+scoreboard players operation @s wiki:id = .Total wiki:id
 
-## Create New ID
-execute if entity @a[scores={wiki:id=0}] run scoreboard players add .Total wiki:id 1
-
-## Assign the New ID
-scoreboard players operation @r[scores={wiki:id=0}] wiki:id = .Total wiki:id
+## Tag player to be ignored
+tag @s add wiki:joined
 ```
 
 <br>
@@ -173,28 +173,38 @@ If you wish to add the objectives automatically as soon as you load the world, y
 <CodeHeader path="BP/functions/wiki/event/worlds/on_initialize.mcfunction" />
 
 ```yaml
+## Add Objectives
+function wiki/scoreboard/objectives/add_all
+
 ## Initialization
 ### Add objective
-scoreboard objectives add wiki:world dummy
-### Register to objective
-scoreboard players add .Initialized wiki:world 0
-
-## Commands to Execute
-execute if score .Initialized wiki:world matches 0 run function wiki/scoreboard/objectives/add_all
-
-## Mark As Initialized
-scoreboard players set .Initialized wiki:world 1
+scoreboard objectives add wiki:q.is_initialised dummy
+### Mark as Initialized
+scoreboard players set .World wiki:q.is_initialised 1
 ```
 
 ## Tick JSON
 
-Finally, create your `tick.json` file:
+Finally, create your `main.mcfunction` and `tick.json` files:
 
-<CodeHeader path="BP/functions/tick.json" />
+<CodeHeader>BP/functions/wiki/main.mcfunction</CodeHeader>
+
+```yaml
+# ON FIRST WORLD LOAD
+## Execute Function if World Not Initialized
+execute unless score .World wiki:q.is_initialised matches 1 run function wiki/event/worlds/on_initialise
+
+
+# ON PLAYER FIRST JOIN
+## Execute Function for All Players Without the 'wiki:joined' Tag
+execute as @a[tag=!wiki:joined] run function wiki/event/players/on_first_join
+```
+
+<CodeHeader>BP/functions/tick.json</CodeHeader>
 
 ```json
 {
-    "values": ["wiki/event/worlds/on_initialize", "wiki/scoreboard/players/id"]
+    "values": ["wiki/main"]
 }
 ```
 
@@ -205,8 +215,9 @@ Finally, create your `tick.json` file:
     'BP/functions/wiki/derange_position/process.mcfunction',
     'BP/functions/wiki/derange_position/teleport.mcfunction',
     'BP/functions/wiki/event/worlds/on_initialize.mcfunction',
+    'BP/functions/wiki/event/players/on_first_join.mcfunction',
     'BP/functions/wiki/scoreboard/objectives/add_all.mcfunction',
-    'BP/functions/wiki/scoreboard/players/id.mcfunction',
+    'BP/functions/wiki/main.mcfunction',
     'BP/functions/tick.json',
     'BP/manifest.json',
     'BP/pack_icon.png',

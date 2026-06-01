@@ -47,7 +47,7 @@ Wildcard (`*`) compares with all tracked scores — that includes offline player
 
 **Command 2:** This command can be modified or expanded. It allows you to run your desired command if the `<target>` score is equal to `.Highest` score.
 
--   Note: Use `@p` or `@e[c=1]` in place of `<target>` if you want to limit your selection to only one.
+-   Note: Use `@p` or `@n` in place of `<target>` if you want to limit your selection to only one.
 
 **Example:**
 
@@ -98,7 +98,7 @@ Wildcard (`*`) compares with all tracked scores — that includes offline player
 
 **Command 2:** This command can be modified or expanded. It allows you to run your desired command if the `<target>` score is equal to `.Lowest` score.
 
--   Note: Use `@p` or `@e[c=1]` in place of `<target>` if you want to limit your selection to only one.
+-   Note: Use `@p` or `@n` in place of `<target>` if you want to limit your selection to only one.
 
 **Example:**
 
@@ -131,7 +131,7 @@ execute as @a at @s at @a[rm=0.01] if score @s <objective> = @p <objective> run 
 
 :::info NOTE:
 
-In the `<command>` (where `/say` is used as an example), `@s` refers to the executing entity or player (the target), and `@p` or `@e[c=1]` refers to the entity or player being compared with.
+In the `<command>` (where `/say` is used as an example), `@s` refers to the executing entity or player (the target), and `@p` or `@n` refers to the entity or player being compared with.
 :::
 
 **Visualization:**
