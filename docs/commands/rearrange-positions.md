@@ -67,7 +67,7 @@ The number of derangement possibilities increases rapidly as the number of eleme
 
 An ID system is required to index the position of all targets from 1 to N, allowing us to track the original position of each target. We will run this function whenever a player joins the world for the first time to automatically assign the IDs.
 
-<CodeHeader>BP/functions/wiki/event/players/on_first_join.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/event/players/on_first_join.mcfunction" />
 
 ```yaml
 ## Player ID System
@@ -187,7 +187,7 @@ scoreboard players set .World wiki:q.is_initialised 1
 
 Finally, create your `main.mcfunction` and `tick.json` files:
 
-<CodeHeader>BP/functions/wiki/main.mcfunction</CodeHeader>
+<CodeHeader path="BP/functions/wiki/main.mcfunction" />
 
 ```yaml
 # ON FIRST WORLD LOAD
@@ -200,7 +200,8 @@ execute unless score .World wiki:q.is_initialised matches 1 run function wiki/ev
 execute as @a[tag=!wiki:joined] run function wiki/event/players/on_first_join
 ```
 
-<CodeHeader>BP/functions/tick.json</CodeHeader>
+
+<CodeHeader path="BP/functions/tick.json" />
 
 ```json
 {
