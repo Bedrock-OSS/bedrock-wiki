@@ -68,35 +68,6 @@ Just make sure to follow the given order and properly apply the `scores={wiki:q.
 3. **Command 3:** Now that alive players have a score of 1 and non-alive players have a score of 0, we will use this knowledge to run our desired commands when the player becomes dead (0).
 4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to `2`. As not doing this will cause the commands to repeat till they respawn.
 
-## Tick JSON
-
-If you are using functions instead of command blocks, the `on_death` function must be added to the `tick.json` in order to loop and run it continuously. Multiple files can be added to the `tick.json` by placing a comma after each string. Refer to [Functions](/commands/mcfunctions#tick-json) documentation for further info.
-
-<CodeHeader path="BP/functions/tick.json" />
-```json
-{
-  "values": [
-    "wiki/event/players/on_death"
-  ]
-}
-```
-
-If using functions, your pack folder structure will be as follows:
-
-<FolderView
-	:paths="[
-    'BP',
-    'BP/functions',
-    'BP/functions/wiki',
-    'BP/pack_icon.png',
-    'BP/manifest.json',
-    'BP/functions/wiki/event',
-    'BP/functions/wiki/event/players',
-    'BP/functions/wiki/event/players/on_death.mcfunction',
-    'BP/functions/tick.json'
-]"
-></FolderView>
-
 ## Alternative Method
 
 This method was possible after the introduction of the new `/execute` syntax in Minecraft `1.19.50`.

@@ -257,16 +257,15 @@ Setting up a dedicated workspace is the final step in developing function packs 
 
 Think of **VS Code** as your command center. It is a powerful, free code editor that makes writing `.mcfunction` files much easier than using Notepad.
 
--   **Download:** Get it from the [Official VS Code Site](https://code.visualstudio.com/Download).
--   **The Essential Plugin:** Once installed, click the **Extensions** icon (the four squares) on the left sidebar and search for **MCBE Command Checker**.
--   **Why use it?**
-    -   **Syntax Highlighting:** Commands change color based on their type, making them easier to read.
-    -   **Auto-Complete:** As you type, the editor will suggest valid arguments, targets, and block names.
-    -   **Error Detection:** It will highlight typos or invalid syntax with a red underline before you even open the game.
-
-Example screenshot:
-
-![Editing a .mcfunction file in VSCode](mcfunction-file-vscode.png)
+- **Download:** Get it from the [Official VS Code Site](https://code.visualstudio.com/Download).
+- **The Essential Plugin:** Once installed, click the **Extensions** icon (the four squares) on the left sidebar and search for **MCBE Command Checker**.
+- **Why use it?**
+    - **Syntax Highlighting:** Commands change color based on their type, making them easier to read.
+    - **Auto-Complete:** As you type, the editor will suggest valid arguments, targets, and block names.
+    - **Error Detection:** It will highlight typos or invalid syntax with a red underline before you even open the game.
+    Example screenshot:
+    ![Editing a .mcfunction file in VSCode](/public/assets/images/commands/mcfunctions/mcfunction-file-vscode.png)
+- **Bonus Extension:** Install the **[Minecraft Bedrock Glyph Viewer](https://marketplace.visualstudio.com/items?itemName=Nicita3.minecraft-bedrock-glyph-viewer)** if you frequently work with custom UI icons and emojis.
 
 ### 2. Version Control with GitHub
 
