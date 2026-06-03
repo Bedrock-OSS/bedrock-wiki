@@ -2,7 +2,7 @@
 title: Float to Int
 category: Tutorials
 tags:
-    - expert
+    - intermediate
 mentions:
     - pankis4173
 description: In this tutorial, you will learn how to convert a numerical string into a number and a number into a text string.
