@@ -150,7 +150,7 @@ Here, we have defined two controls in `control_ids` and two arrangements of thes
 
 #### Factory (Extra):
 
-You can define factories directly using `"type": "factory"` as well. These factories are always invoked natively by the engine.However, it is possible to define these factories in the ways discussed above we can also modify the control references to generate custom elements instead.
+You can define factories directly using `"type": "factory"` as well. These factories are always invoked natively by the engine. However, it is possible to define these factories in the ways discussed above we can also modify the control references to generate custom elements instead.
 
 <CodeHeader path="RP/ui/server_form.json" />
 
