@@ -288,6 +288,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Adding HUD Elements](/json-ui/add-hud-elements)
 - [Aseprite Animations](/json-ui/aseprite-animations)
 - [Buttons and Toggles](/json-ui/buttons-and-toggles)
+- [Dynamic Content Generation](/json-ui/dynamic-content-generation)
 - [Modifying Server Forms](/json-ui/modifying-server-forms)
 - [Preserve Title Texts](/json-ui/preserve-title-texts)
 - [String to Number](/json-ui/string-to-number)
