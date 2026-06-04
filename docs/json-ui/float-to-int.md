@@ -210,7 +210,7 @@ There is another method which involves using several comparisons to obtain each 
         },
         {
             "binding_type": "view",
-            "source_property_name": "('§r' + #1 + #2 + '.' + #3 + #4 + '%')",
+            "source_property_name": "('§r' + (#1 * 10 + #2) + '.' + #3 + #4 + '%')",
             "target_property_name": "#output"
         }
     ]
@@ -223,7 +223,7 @@ This method also gets the floor of our float.
 - `(10 - (#a < 1) - (#a < 2) - ...)` Compare to all possible digits to obtain the integer part (the first digit, `8`).
 - `(#a * 10 - #1 * 10)` Multiply the original value by 10, then subtract the resulting digit by 10 to get something similar to the above (`84.651 - 80 = 4.651`).
 - `(9 - (#b < 1) - (#b < 2) - ...)` Repeat. In this case, the comparison is only made 9 times, since that digit can only range from 0 to 9.
-- `('§r' + #1 + #2 + '.' + #3 + #4 + '%')` Finally, concatenate each digit.
+- `('§r' + (#1 * 10 + #2) + '.' + #3 + #4 + '%')` Finally, concatenate each digit.
 
 If you want more decimals, just repeat bindings `a` and `b`, remembering to change the names, of course.
 
