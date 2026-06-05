@@ -162,9 +162,12 @@ This issue can be overcome in two ways:
 
 ## Multi-Block Limitations
 
-### Component Application
+### Components
 
-The following components may not be specified in the [`permutations`](/blocks/block-permutations) array of a multi-block definition so can only be applied in the base `components` object.
+-   The `minecraft:block_entity` component is not supported by multi-blocks.
+-   For the [`minecraft:geometry`](/blocks/block-components#geometry) component, the `n_way_visual_rotation` parameter is not supported.
+
+The following components may not be specified in the [`permutations`](/blocks/block-permutations) array of a multi-block definition so can only be applied in the root `components` object.
 
 -   [`minecraft:movable`](/blocks/block-components#movable)
 -   [`minecraft:placement_filter`](/blocks/block-components#placement-filter)
@@ -219,6 +222,12 @@ for (const part of block.getParts()) {
     part.setPermutation(part.permutation.withState("wiki:color", "red"));
 }
 ```
+
+### Traits
+
+-   The [`minecraft:connection`](/blocks/block-traits#connection) trait is not supported by multi-blocks.
+-   The [`minecraft:placement_position`](/blocks/block-traits#placement-position) trait is not supported by multi-blocks.
+-   For the [`minecraft:placement_direction`](/blocks/block-traits#placement-direction) trait, only `"minecraft:cardinal_direction"`{lang=json} is supported as an enabled state.
 
 ## Event Triggering
 

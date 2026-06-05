@@ -16,6 +16,19 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.40
+
+### Traits
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:multi_block`
+    -   Now prevents the `minecraft:connection` and `minecraft:placement_position` traits from being defined.
+    -   Now prevents the `minecraft:placement_direction` trait from having `enabled_states` other than `"minecraft:cardinal_direction"`{lang=json} defined.
+    -   Now prevents the `minecraft:geometry` component from having `n_way_visual_rotation` defined.
+    -   Now prevents the `minecraft:block_entity` component from being defined.
+
 ## 1.26.30
 
 ### Traits
