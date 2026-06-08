@@ -30,7 +30,7 @@ One possibility is to make the size of the collision component very small. This 
 }
 ```
 
-You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit the entity, although you will not be able to interact with it. The `custom_hit_test` will not create a shadow.
+You can also add the [custom hit test component](https://bedrock.dev/docs/stable/Entities#minecraft:custom_hit_test). The `custom_hit_test` component will allow you to hit and interact the entity. The `custom_hit_test` will not create a shadow.
 
 <CodeHeader breadcrumbs="minecraft:entity/components" />
 
