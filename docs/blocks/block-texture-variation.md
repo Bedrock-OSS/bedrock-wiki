@@ -13,7 +13,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 When using texture variation with the [material instances](/blocks/block-components#material-instances) component, ensure that the `format_version` of your block JSON is 1.21.110 or higher.
 :::
 

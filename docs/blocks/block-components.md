@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.10.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.30.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -374,7 +374,7 @@ _Requires format version [1.21.10](/blocks/block-format-history#_1-21-10) or lat
 
 Determines how flammable the block is.
 
-_Requires format version [1.19.10](/blocks/block-format-history#_1-19-10) or later._
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
 
 #### Boolean Format {#flammable-boolean}
 
@@ -396,13 +396,17 @@ When `false` (default), the block will not be able to catch on fire naturally fr
     -   By default, this is set to `5`{lang=json} which is the same as vanilla planks.
 -   `destroy_chance_modifier` — Integer
     -   Affects chance that this block will be destroyed by flames when on fire.
+-   `lava_flammable` — String
+    -   Determines when fire can spread to the block from lava.
+    -   Can be set to `"always"`{lang=json} or `"never"`{lang=json} (default).
 
 <CodeHeader breadcrumbs="minecraft:block/components" />
 
 ```json
 "minecraft:flammable": {
     "catch_chance_modifier": 5,
-    "destroy_chance_modifier": 20
+    "destroy_chance_modifier": 20,
+    "lava_flammable": "always"
 }
 ```
 
@@ -414,6 +418,8 @@ This component may only be defined in the root `components` object of your block
 
 Allows the block to be placed in a Flower Pot.
 The [embedded visual](#embedded-visual) component can be used to change the appearance of the block when in a Flower Pot.
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
 
 #### Object Format {#flower-pottable-object}
 
@@ -485,6 +491,9 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
     -   When using the `minecraft` namespace, only the following values are allowed:
         -   `"minecraft:culling_layer.undefined"`{lang=json} is the culling layer of blocks that have none defined.
         -   `"minecraft:culling_layer.leaves"`{lang=json} is the culling layer of all vanilla leaves and should be used when creating custom leaves.
+-   `culling_shape` — String (optional)
+    -   The voxel shape to check against when culling adjacent blocks.
+    -   This parameter may only be set to `"minecraft:unit_cube"`{lang=json} if a [vanilla full block model](/blocks/vanilla-block-models) is being used.
 -   `uv_lock` — Array / Boolean (optional)
     -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
     -   When `false`{lang=json} (default), all UVs in the model will follow the block's rotation.
@@ -678,7 +687,7 @@ An array of 3 integers (`0-255`{lang=js}) defining the `[R, G, B]`{lang=js} colo
 
 Defines the [material instances](/blocks/block-visuals-intro#material-instances) of a block, configuring how parts of the block are rendered.
 
-_Requires format version [1.19.40](/blocks/block-format-history#_1-19-40) or later._
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
 
 **Known Issues:**
 
@@ -704,10 +713,9 @@ The `*` instance is the default instance for all cube faces, however it is not r
         -   Determines whether the intensity of the tint applied by tint methods should be based on the alpha channel of the texture.
         -   When `true`{lang=json}, a `tint_method` must be specified (that is not `"none"`{lang=json}) and the `render_method` must be `"opaque"`{lang=json}.
         -   By default, tinting from tint methods is not alpha-masked.
-    -   `ambient_occlusion` — Boolean / Float (`0.0-10.0`{lang=json}) (optional)
-        -   Determines whether "smooth lighting" is applied to faces using the material instance.
-        -   Float values can be used to determine ambient occlusion intensity.
-        -   By default, this is `false`{lang=json} (or `0.0`{lang=json}) for blocks that emit light and `true`{lang=json} (or `1.0`{lang=json}) for blocks that do not emit light.
+    -   `ambient_occlusion` — Float (`0.0-10.0`{lang=json}) (optional)
+        -   Determines the intensity of "smooth lighting" that is applied to faces using the material instance.
+        -   By default, this is or `0.0`{lang=json} for blocks that emit light and `1.0`{lang=json} for blocks that do not emit light.
     -   `face_dimming` — Boolean (optional)
         -   Determines whether faces using the material instance are dimmed by their direction.
         -   By default, this is `false`{lang=json} for blocks that emit light and `true`{lang=json} for blocks that do not emit light.
@@ -828,16 +836,25 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 
 ### Precipitation Interactions
 
-Determines how the block interacts with precipitation (rain and snow).
+Determines how the block interacts with rain and snow.
 
 _Requires format version [1.21.120](/blocks/block-format-history#_1-21-120) or later._
 
 #### Object Format {#precipitation-interactions-object}
 
 -   `precipitation_behavior` — String
-    -   `"obstruct_rain_accumulate_snow"`{lang=json} (default) prevents rain from passing through the block, instead causing it to splash on top of it and causes snow layers to build up above the block while it is snowing.
-    -   `"obstruct_rain"`{lang=json} prevents rain from passing through the block, instead causing it to splash on top of it.
-    -   `"none"`{lang=json} allows rain and snow to pass through the block.
+    -   `"obstruct_rain_accumulate_snow"`{lang=json} (default)
+        -   Prevents rain from passing through the block, instead causing it to splash on top of it.
+        -   Causes snow layers to build up above the block.
+    -   `"obstruct_rain"`{lang=json}
+        -   Prevents rain from passing through the block, instead causing it to splash on top of it.
+        -   Prevents snow layers from building up above the block.
+    -   `"snowlogging"`{lang=json}
+        -   Allows rain to pass through the block without splashing on top of it.
+        -   Allows snow to build up or be placed inside of the block, meaning the block can be [snowlogged](/blocks/block-colocation#snowlogging).
+    -   `"none"`{lang=json}
+        -   Allows rain to pass through the block without splashing on top of it.
+        -   Prevents snow from building up inside or on top of the block.
 
 <CodeHeader breadcrumbs="minecraft:block/components" />
 

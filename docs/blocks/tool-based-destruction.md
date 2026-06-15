@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 This tutorial assumes a basic understanding of blocks and [block tags](/blocks/block-tags).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -74,13 +74,13 @@ Blocks aren't limited to just one item destructible tag, it's possible to let yo
 This can be seen in vanilla Cobwebs which have both `minecraft:is_shears_item_destructible` and `minecraft:is_sword_item_destructible`.
 :::
 
-These tags can be applied to your block in its `components`:
+These tags can be applied to your block in its `minecraft:tags` component:
 
 <CodeHeader path="BP/blocks/custom_stone.json" />
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:limestone",
@@ -93,8 +93,9 @@ These tags can be applied to your block in its `components`:
             "minecraft:destructible_by_mining": {
                 "seconds_to_destroy": 1.5
             },
-            // Allows pickaxes to mine this block faster
-            "tag:minecraft:is_pickaxe_item_destructible": {}
+            "minecraft:tags": [
+                "minecraft:is_pickaxe_item_destructible" // Allows pickaxes to mine this block faster
+            ]
         }
     }
 }

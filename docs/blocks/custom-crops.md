@@ -15,7 +15,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -63,7 +63,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
@@ -74,7 +74,7 @@ This code example also includes the base components of our crop which will be ac
             }
         },
         "components": {
-            "tag:minecraft:crop": {},
+            "minecraft:tags": ["minecraft:crop"],
             "minecraft:collision_box": false,
             // Visuals
             "minecraft:destruction_particles": {
@@ -85,7 +85,7 @@ This code example also includes the base components of our crop which will be ac
                 "*": {
                     "texture": "wiki:custom_crop_0",
                     "render_method": "alpha_test_single_sided",
-                    "ambient_occlusion": false,
+                    "ambient_occlusion": 0,
                     "face_dimming": false
                 }
             },

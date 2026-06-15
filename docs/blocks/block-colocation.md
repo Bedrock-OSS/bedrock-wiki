@@ -95,10 +95,6 @@ When a block is snowlogged:
 
 ### Creating Snowloggable Blocks
 
-:::warning EXPERIMENTAL 1.26.30
-Snowlogging for custom blocks requires the "Upcoming Creator Features" toggle to be enabled in order to function.
-:::
-
 The [precipitation interactions](/blocks/block-components#precipitation-interactions) component can be used to allow a block to be submerged in snow layers.
 Note that snowloggable blocks cannot have a collision box as the secondary block layer does not support collision.
 

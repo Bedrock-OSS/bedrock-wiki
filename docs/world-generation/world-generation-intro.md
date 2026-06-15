@@ -40,7 +40,7 @@ However, bridge. is not required.
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:biome": {
         "description": {
             "identifier": "wiki:cold_biome"
@@ -77,7 +77,7 @@ However, bridge. is not required.
 }
 ```
 
--   Set `format_version` to 1.26.10: it's the latest biome file version as of the current release.
+-   Set `format_version` to 1.26.30: it's the latest biome file version as of the current release.
 -   `description` takes only one value: `identifier`.
 -   `components` is just what you'd expect: something applied to the biome at default. let's look through them:
 -   `minecraft:climate` controls everything climate-wise.

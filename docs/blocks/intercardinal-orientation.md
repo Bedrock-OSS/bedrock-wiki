@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.26.10
+::: tip FORMAT VERSION 1.26.30
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -35,7 +35,7 @@ Here is the JSON we will be starting with for the "mug" block in this tutorial:
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:mug",

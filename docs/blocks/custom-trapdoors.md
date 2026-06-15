@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.26.10
+::: tip FORMAT VERSION 1.26.30
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -32,7 +32,7 @@ It includes the rotation for each permutation of your trapdoor, meaning it can b
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -54,14 +54,16 @@ It includes the rotation for each permutation of your trapdoor, meaning it can b
             }
         },
         "components": {
-            "tag:trapdoors": {},
+            "minecraft:tags": [
+                "trapdoors",
+                "one_way_collidable" // Prevents players from being pushed out by the trapdoor collision, just like vanilla
+            ],
             "wiki:toggleable": {
                 "block_state": "wiki:open",
                 "enable_sound": "open.wooden_trapdoor",
                 "disable_sound": "close.wooden_trapdoor"
             },
             // Collision and selection boxes
-            "tag:one_way_collidable": {}, // Prevents players from being pushed out by the trapdoor collision, just like vanilla
             "minecraft:collision_box": {
                 "origin": [-8, 0, -8],
                 "size": [16, 2.92, 16]
@@ -272,7 +274,7 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:geometry": [
         {
             "description": {

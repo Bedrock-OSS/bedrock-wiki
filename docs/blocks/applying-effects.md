@@ -14,7 +14,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.26.10
+::: tip FORMAT VERSION 1.26.30
 This tutorial assumes a basic understanding of blocks, including [block events](/blocks/block-events).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -100,7 +100,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:wither_block",

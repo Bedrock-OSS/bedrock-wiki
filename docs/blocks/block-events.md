@@ -22,9 +22,9 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.10.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.30.
 :::
 
 ## Registering Custom Components

@@ -19,7 +19,7 @@ Below is the basic JSON format which you should include in the file:
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:crafting_items_catalog": {
         "categories": []
     }
@@ -44,7 +44,7 @@ For example, if we were adding items to the "Nature" tab, a new entry would be c
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:crafting_items_catalog": {
         "categories": [
             {

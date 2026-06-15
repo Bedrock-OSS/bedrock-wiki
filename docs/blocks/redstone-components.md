@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 Using the latest format version when creating custom blocks provides access to the newest redstone features.
 :::
 

@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::warning EXPERIMENTAL 1.26.20
+:::warning EXPERIMENTAL
 Multi-blocks are experimental and require the "Upcoming Creator Features" toggle to be enabled in order to function.
 :::
 
