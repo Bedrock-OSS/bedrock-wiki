@@ -1055,6 +1055,20 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 }
 ```
 
+### Tags
+
+Determines the list of tags that the block has.
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
+#### Array Format {#tags-array}
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:tags": ["wiki:custom_tag"]
+```
+
 ### Tick
 
 Causes the block to "tick" after a random delay in the range specified by `interval_range`.
