@@ -19,7 +19,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 This page assumes a basic understanding of custom items and attachables.
 Check out the [items guide](/items/items-intro) before starting!
 :::

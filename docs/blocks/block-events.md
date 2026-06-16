@@ -22,9 +22,9 @@ mentions:
     - BlazeDrake
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.10.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.30.
 :::
 
 ## Registering Custom Components
@@ -89,6 +89,20 @@ beforeOnPlayerPlace(event) {
     event.face // The block face that was placed onto.
     event.permutationToPlace // The block permutation that will be placed. Can be changed to place a different permutation instead.
     event.player // The player that is placing this block. May be undefined.
+}
+```
+
+### Block State Change
+
+Called whenever the block permutation is changed to another permutation of the same block type.
+
+<CodeHeader breadcrumbs="BlockCustomComponent" />
+
+```js
+onBlockStateChange(event) {
+    event.block // Block impacted by this event. This is the block after it was replaced by the new permutation.
+    event.dimension // Dimension that contains the block.
+    event.previousPermutation // Permutation of the replaced block.
 }
 ```
 

@@ -111,7 +111,7 @@ Block used to summon the dummy entity right on the block, and as the block is ce
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:align"
@@ -162,7 +162,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:entity": {
         "description": {
             "identifier": "wiki:dummy_align", // The dummy entity is used to avoid triggering the entity_spawned event in the original entity.

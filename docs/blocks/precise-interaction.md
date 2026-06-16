@@ -12,7 +12,7 @@ mentions:
 hidden: true
 ---
 
-::: tip FORMAT VERSION 1.26.10
+::: tip FORMAT VERSION 1.26.30
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
@@ -415,7 +415,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -627,7 +627,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",
@@ -669,13 +669,13 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
                 "*": {
                     "texture": "flower_pot",
                     "render_method": "alpha_test",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 // Material instances defined in model:
                 "dirt": {
                     "texture": "wiki:double_flower_pot_dirt", // Apply a darker tint to the dirt texture to replicate vanilla potted dirt
                     "render_method": "alpha_test",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "handle": {
                     "texture": "wiki:double_flower_pot_handle",
@@ -685,7 +685,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
                     "texture": "yellow_flower",
                     "render_method": "alpha_test",
                     "face_dimming": false,
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "cactus_side": {
                     "texture": "cactus_side",

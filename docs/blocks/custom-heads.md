@@ -11,7 +11,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.10
+:::tip FORMAT VERSION 1.26.30
 This tutorial assumes an advanced understanding of blocks, items and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -26,7 +26,6 @@ In this tutorial you will learn how to create your own mob head blocks.
 
 **Issues:**
 
--   Custom heads cannot be stacked as items ([MCPE-176931](https://bugs.mojang.com/browse/MCPE-176931)).
 -   Custom heads cannot be used to craft firework stars.
 -   When enchanted, custom heads lack an enchantment glint outside of the user interface.
 
@@ -46,7 +45,7 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_head"
@@ -101,27 +100,27 @@ _Note that the block description does not have the `menu_category` parameter as 
             "minecraft:material_instances": {
                 "down": {
                     "texture": "wiki:custom_head_bottom",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "up": {
                     "texture": "wiki:custom_head_top",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "north": {
                     "texture": "wiki:custom_head_front",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "south": {
                     "texture": "wiki:custom_head_back",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "west": {
                     "texture": "wiki:custom_head_left",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 },
                 "east": {
                     "texture": "wiki:custom_head_right",
-                    "ambient_occlusion": false
+                    "ambient_occlusion": 0
                 }
             }
         }

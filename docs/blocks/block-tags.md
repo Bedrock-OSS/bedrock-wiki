@@ -26,13 +26,11 @@ For a list of vanilla block tags and their functionality, visit [this page](/blo
 
 ## Applying Tags
 
-Block tags can be applied in the block's `components`, prefixed with `tag:`, as seen below:
-
 <CodeHeader path="BP/blocks/tree_stump.json" />
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:tree_stump",
@@ -41,9 +39,7 @@ Block tags can be applied in the block's `components`, prefixed with `tag:`, as 
             }
         },
         "components": {
-            "tag:wood": {},
-            "tag:minecraft:is_axe_item_destructible": {},
-            "tag:wiki:very_useless": {}
+            "minecraft:tags": ["wood", "minecraft:is_axe_item_destructible", "wiki:very_useless"]
         }
     }
 }
@@ -102,7 +98,7 @@ Example of an item querying a block's tags:
 
 ```json
 {
-    "format_version": "1.26.10",
+    "format_version": "1.26.30",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_pickaxe",

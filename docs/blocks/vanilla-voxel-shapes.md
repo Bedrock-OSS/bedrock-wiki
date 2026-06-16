@@ -11,7 +11,7 @@ mentions:
 ---
 
 :::warning EXPERIMENTAL
-Voxel shapes are experimental and require the "Experimental Voxel Shape Features" toggle to be enabled in order to function.
+Vanilla voxel shapes are experimental and require the "Experimental Voxel Shape Features" toggle to be enabled in order to function.
 :::
 
 _This documentation is up to date as of Preview 1.26.30.29._
