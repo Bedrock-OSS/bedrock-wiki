@@ -58,6 +58,7 @@
 /items/item-tags#list-of-vanilla-tags: /items/vanilla-item-tags
 
 /json-ui/custom-buttons: /json-ui/buttons-and-toggles
+/json-ui/string-to-number: /json-ui/type-conversion#string-to-number
 
 /knowledge/addon-performance: /meta/addon-performance
 /knowledge/addon-programming: /meta/addon-programming
