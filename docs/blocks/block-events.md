@@ -99,7 +99,7 @@ Called whenever the block permutation is changed to another permutation of the s
 <CodeHeader breadcrumbs="BlockCustomComponent" />
 
 ```js
-onBlockStateChanged(event) {
+onBlockStateChange(event) {
     event.block // Block impacted by this event. This is the block after it was replaced by the new permutation.
     event.dimension // Dimension that contains the block.
     event.previousPermutation // Permutation of the replaced block.
