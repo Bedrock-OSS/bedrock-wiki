@@ -1253,12 +1253,15 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
     -   The number of armor points this item contributes when worn.
 -   `slot` — String
     -   The slot that the item can be equipped into, which must be one of the following values:
-        -   `"slot.weapon.offhand"`{lang=json}
-        -   `"slot.armor.head"`{lang=json}
+        -   `"slot.armor.body"`{lang=json}
         -   `"slot.armor.chest"`{lang=json}
-        -   `"slot.armor.legs"`{lang=json}
         -   `"slot.armor.feet"`{lang=json}
-    -   When set to an armor slot, the item's [max stack size](#max-stack-size) is set to 1 ([MCPE-176931](https://bugs.mojang.com/browse/MCPE-176931)).
+        -   `"slot.armor.head"`{lang=json}
+        -   `"slot.armor.legs"`{lang=json}
+        -   `"slot.weapon.mainhand"`{lang=json}
+        -   `"slot.weapon.offhand"`{lang=json}
+    -   When set to an armor slot, the item's default [max stack size](#max-stack-size) is set to 1.
+        This can be overridden by explicitly defining the max stack size component.
 
 <CodeHeader breadcrumbs="minecraft:item/components" />
 

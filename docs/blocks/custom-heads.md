@@ -26,7 +26,6 @@ In this tutorial you will learn how to create your own mob head blocks.
 
 **Issues:**
 
--   Custom heads cannot be stacked as items ([MCPE-176931](https://bugs.mojang.com/browse/MCPE-176931)).
 -   Custom heads cannot be used to craft firework stars.
 -   When enchanted, custom heads lack an enchantment glint outside of the user interface.
 
