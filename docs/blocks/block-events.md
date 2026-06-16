@@ -92,6 +92,20 @@ beforeOnPlayerPlace(event) {
 }
 ```
 
+### Block State Change
+
+Called whenever the block permutation is changed to another permutation of the same block type.
+
+<CodeHeader breadcrumbs="BlockCustomComponent" />
+
+```js
+onBlockStateChanged(event) {
+    event.block // Block impacted by this event. This is the block after it was replaced by the new permutation.
+    event.dimension // Dimension that contains the block.
+    event.previousPermutation // Permutation of the replaced block.
+}
+```
+
 ### Break
 
 Called whenever the block is removed from the world, including when replaced via commands.
