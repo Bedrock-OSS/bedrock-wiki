@@ -1,5 +1,6 @@
 ---
 title: Type Conversion
+description: In this tutorial, you will learn how to convert between data types in JSON UI.
 category: Tutorials
 tags:
     - intermediate
@@ -8,48 +9,44 @@ mentions:
     - SmokeyStack
     - ThomasOrs
     - TheoristMC
-description: In this tutorial, you will learn how to convert data types.
 ---
 
-## Introduction
+There are multiple instances where a data needs to be converted into another type due to some properties only allowing specific data types.
+This can range from converting strings to numbers and vice-versa.
 
-There are multiple instances where a data needs to be converted into another type due to some properties only allowing specific data types. This can range from converting strings to numbers and vice-versa.
-
-## Conversion
-
-### String to Number
+## String to Number
 
 The following code will create a label that will contain a string data at which will get turned into number.
 
-<CodeHeader>ui/*.json</CodeHeader>
+<CodeHeader path="RP/ui/example_screen.json" />
 
 ```json
 "label": {
-  "type": "label",
-  "text": "#text",
-  "property_bag": {
-    "#str": "10",
-    // You don't need to necessarily turn this into a binding
-    // property but it alleviate problems later on the line.
-    "#float": 1.0
-  },
-  "bindings": [
-    {
-      "binding_type": "view",
-      "source_property_name": "(#str * 1)",
-      "target_property_name": "#integer"
+    "type": "label",
+    "text": "#text",
+    "property_bag": {
+        "#str": "10",
+        // You don't need to necessarily turn this into a binding
+        // property but it alleviate problems later on the line.
+        "#float": 1.0
     },
-    {
-      "binding_type": "view",
-      "source_property_name": "(#str * #float)",
-      "target_property_name": "#float"
-    },
-    {
-      "binding_type": "view",
-      "source_property_name": "('Result: ' + #integer)",
-      "target_property_name": "#text"
-    }
-  ]
+    "bindings": [
+        {
+            "binding_type": "view",
+            "source_property_name": "(#str * 1)",
+            "target_property_name": "#integer"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(#str * #float)",
+            "target_property_name": "#float"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "('Result: ' + #integer)",
+            "target_property_name": "#text"
+        }
+    ]
 }
 ```
 
@@ -63,26 +60,26 @@ By doing arithmetic operation on strings (except addition), you convert a string
 -   Adding a string and float (like `'abc' + 1.2`) will not produce anything.
 -   It is not possible to directly display floats—refer to [this](#float-to-string) part of the documentation.
 
-### Number to String
+## Number to String
 
 The following code will create a label that will contain a string number at which will get turned into string.
 
-<CodeHeader>ui/*.json</CodeHeader>
+<CodeHeader path="RP/ui/example_screen.json" />
 
 ```json
 "label": {
-  "type": "label",
-  "text": "#text",
-  "property_bag": {
-    "#num": 10
-  },
-  "bindings": [
-    {
-      "binding_type": "view",
-      "source_property_name": "('Result: ' + #num)",
-      "target_property_name": "#text"
-    }
-  ]
+    "type": "label",
+    "text": "#text",
+    "property_bag": {
+        "#num": 10
+    },
+    "bindings": [
+        {
+            "binding_type": "view",
+            "source_property_name": "('Result: ' + #num)",
+            "target_property_name": "#text"
+        }
+    ]
 }
 ```
 
@@ -94,7 +91,7 @@ Doing addition between string and a number will always result a string consistin
 
 -   You cannot combine a string and a float, it will produce nothing.
 
-### Float to String
+## Float to String
 
 The following code will create a label that will contain a float data at which will get turned into string.
 
@@ -102,27 +99,27 @@ The following code will create a label that will contain a float data at which w
 There is no float to number because floats are a sub-child of numbers, so floats are already numbers by itself.
 :::
 
-<CodeHeader>ui/*.json</CodeHeader>
+<CodeHeader path="RP/ui/example_screen.json" />
 
 ```json
 "label": {
-  "type": "label",
-  "text": "#text",
-  "property_bag": {
-    "#float": 6.7
-  },
-  "bindings": [
-    {
-      "binding_type": "view",
-      "source_property_name": "(0 + (#float > 0) + (#float > 1) + (#float > 2) + (#float > 3) + (#float > 4) + (#float > 5) + (#float > 6) + (#float > 7) + (#float > 8) + (#float > 9))",
-      "target_property_name": "#integer"
+    "type": "label",
+    "text": "#text",
+    "property_bag": {
+        "#float": 6.7
     },
-    {
-      "binding_type": "view",
-      "source_property_name": "('Result: ' + #integer)",
-      "target_property_name": "#text"
-    }
-  ]
+    "bindings": [
+        {
+            "binding_type": "view",
+            "source_property_name": "(0 + (#float > 0) + (#float > 1) + (#float > 2) + (#float > 3) + (#float > 4) + (#float > 5) + (#float > 6) + (#float > 7) + (#float > 8) + (#float > 9))",
+            "target_property_name": "#integer"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "('Result: ' + #integer)",
+            "target_property_name": "#text"
+        }
+    ]
 }
 ```
 
@@ -138,32 +135,32 @@ In this process, it also limits itself into only support floats between 1 to 10 
 -   The code seen is the simplified version of the concept, there is much more better ways of doing this process.
 -   This is great if you know the range of your number reference, otherwise, you will need to guess.
 
-### Boolean to Number
+## Boolean to Number
 
 The following code will create a label that will contain a boolean data at which will get turned into number.
 
-<CodeHeader>ui/*.json</CodeHeader>
+<CodeHeader path="RP/ui/example_screen.json" />
 
 ```json
 "label": {
-  "type": "label",
-  "text": "#text",
-  "property_bag": {
-    "#bool": true,
-    "#hahasixseven": false
-  },
-  "bindings": [
-    {
-      "binding_type": "view",
-      "source_property_name": "(#bool + #hahasixseven)",
-      "target_property_name": "#integer"
+    "type": "label",
+    "text": "#text",
+    "property_bag": {
+        "#bool": true,
+        "#hahasixseven": false
     },
-    {
-      "binding_type": "view",
-      "source_property_name": "('Result: ' + #integer)",
-      "target_property_name": "#text"
-    }
-  ]
+    "bindings": [
+        {
+            "binding_type": "view",
+            "source_property_name": "(#bool + #hahasixseven)",
+            "target_property_name": "#integer"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "('Result: ' + #integer)",
+            "target_property_name": "#text"
+        }
+    ]
 }
 ```
 
