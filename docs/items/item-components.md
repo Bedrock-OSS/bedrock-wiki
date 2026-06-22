@@ -973,12 +973,12 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
         {
             "item": "minecraft:arrow",
             "search_inventory": true,
-            "use_in_creative": true, // This is the default ammunition to use in creative move
+            "use_in_creative": true,
             "use_offhand": true
         },
         {
             "item": "wiki:custom_projectile",
-            "use_offhand": true // This ammunition can only be used when in the off-hand
+            "use_offhand": true
         }
     ],
     "scale_power_by_draw_duration": true
