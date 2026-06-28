@@ -18,9 +18,30 @@ This tutorial will show you how to make a simple dungeon.
 
 First things first, you will want to make your structure pieces. These can be tunnels or rooms or spawners. I'll make 2 tunnels, a straight piece and a corner. I'll also make a room and a zombie and skeleton spawener to spawn in them. Then go through the tunnels and at each end place a jigsaw block with a target pool named `wiki:tunnels`, a target name named `wiki:tunnel` and a name named `wiki:tunnel` Copy the jigsaw block using ctrl+pick block on computers to copy it's nbt data and place those jigsaw blocks at every entrance to tunnel or room that you want to be counted as a tunnel and spawn tunnel pieces out of it. If you want a piece to only be connected to by tunnel pieces then you can remove target pool and target name and leave the name field or if you want the opposite you can remove the name field and the entrance will only generate tunnels.
 
+<WikiImage
+    src="tunnel_jigsaw.png"
+    alt="The jigsaw settings for the tunnel pieces and the room piece"
+    caption="The jigsaw settings for the tunnel pieces and the room piece."
+    width="840"
+/>
+
 I'll do the above steps with my tunnels and room entrances. For spawners I'll place a jigsaw facing upwards in the middle of the room with a target name specifying `wiki:spawner` and a target pool specifying `wiki:spawners`. Then on the zombie and skeleton spawners I'll place a block beneath them with the name field specifying `wiki:spawner` then I'll set the turns into field to `minecraft:stone_bricks`.
 
+<WikiImage
+    src="spawner_jigsaw.png"
+    alt="The jigsaw settings for the jigsaw block placing spawners"
+    caption="The jigsaw settings for the jigsaw block placing spawners."
+    width="840"
+/>
+
 After that is done you can save the structure pieces and we move into the programming portion of the structure.
+
+<WikiImage
+    src="structure_templates_completed.png"
+    alt="All the completed structure templates"
+    caption="All the completed structure templates."
+    width="840"
+/>
 
 ## Template Pools
 
@@ -34,19 +55,29 @@ In the location field place the write the file path to your tunnel structure fil
 
 ```json
 {
-    "format_version": "1.21.100"
+    "format_version": "1.21.100",
     "minecraft:template_pool": {
         "description": {
             "identifier": "wiki:tunnels"
         },
         "elements": [
             {
-                "element_type": "minecraft:single_pool_element",
-                "location": "wiki/example_dungeon/tunnels/tunnel_01"
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "wiki/example_dungeon/tunnels/tunnel_01"
+                }
             },
             {
-                "element_type": "minecraft:single_pool_element",
-                "location": "wiki/example_dungeon/tunnels/tunnel_02"
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "wiki/example_dungeon/tunnels/tunnel_02"
+                }
+            },
+            {
+                "element": {
+                    "element_type": "minecraft:single_pool_element",
+                    "location": "wiki/example_dungeon/tunnels/room_01"
+                }
             }
         ]
     }
@@ -59,7 +90,7 @@ Next up create the spawners template pool file
 
 ```json
 {
-    "format_version": "1.21.100"
+    "format_version": "1.21.100",
     "minecraft:template_pool": {
         "description": {
             "identifier": "wiki:spawners"
