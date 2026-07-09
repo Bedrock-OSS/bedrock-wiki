@@ -362,6 +362,12 @@
       "type": "Custom"
     },
     {
+      "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
+      "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
+      "languages": "C++",
+      "type": "Custom"
+    },
+    {
       "name": "[Netrex](https://github.com/NetrexMC/Netrex)",
       "description": "A powerful minecraft bedrock software written in Rust and Typescript with a powerful Typescript plugin API.",
       "languages": "Rust",
@@ -395,6 +401,12 @@
       "name": "[PieMC](https://github.com/PieMC-Dev/PieMC)",
       "description": "An exciting open-source project aimed at developing a powerful and customizable Minecraft Bedrock server software using Python",
       "languages": "Python",
+      "type": "Custom"
+    },
+    {
+      "name": "[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)",
+      "description": "Custom server software for Minecraft: Bedrock, built from scratch in PHP, C and C++.",
+      "languages": "C, C++, PHP",
       "type": "Custom"
     },
     {
