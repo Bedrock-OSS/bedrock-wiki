@@ -60,12 +60,6 @@
       "type": "Custom"
     },
     {
-      "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
-      "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
-      "languages": "C++",
-      "type": "Custom"
-    },
-    {
       "name": "[Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)",
       "description": "Add support for LevelDB, multiversion & more to Nukkit Minecraft Bedrock Edition server software.",
       "languages": "Java",
@@ -75,12 +69,6 @@
       "name": "[Nukkit-MOT](https://github.com/MemoriesOfTime/Nukkit-MOT)",
       "description": "Support for multiple versions of Nukkit Minecraft Bedrock Edition Server Software.",
       "languages": "Java",
-      "type": "Custom"
-    },
-    {
-      "name": "[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)",
-      "description": "Custom server software for Minecraft: Bedrock, built from scratch in PHP, C and C++.",
-      "languages": "C, C++, PHP",
       "type": "Custom"
     },
     {
