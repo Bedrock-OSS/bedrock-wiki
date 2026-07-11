@@ -794,7 +794,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | weathered_copper                       | -342  |
 | exposed_copper                         | -341  |
 | copper_block                           | -340  |
-| item.glow_frame                        | -339  |
+| glow_item_frame                        | -339  |
 | flowering_azalea                       | -338  |
 | azalea                                 | -337  |
 | small_dripleaf_block                   | -336  |
@@ -841,7 +841,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | polished_blackstone_slab               | -293  |
 | polished_blackstone_stairs             | -292  |
 | polished_blackstone                    | -291  |
-| item.soul_campfire                     | -290  |
+| soul_campfire (animated)               | -290  |
 | crying_obsidian                        | -289  |
 | nether_gold_ore                        | -288  |
 | twisting_vines                         | -287  |
@@ -889,7 +889,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | stripped_warped_stem                   | -241  |
 | stripped_crimson_stem                  | -240  |
 | target                                 | -239  |
-| item.nether_sprouts                    | -238  |
+| nether_sprouts (old texture)           | -238  |
 | soul_fire                              | -237  |
 | soul_soil                              | -236  |
 | polished_basalt                        | -235  |
@@ -917,7 +917,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | composter                              | -213  |
 | oak_wood                               | -212  |
 | jigsaw                                 | -211  |
-| item.campfire                          | -209  |
+| campfire (animated)                    | -209  |
 | lantern                                | -208  |
 | sweet_berry_bush                       | -207  |
 | bell                                   | -206  |
@@ -987,7 +987,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | birch_button                           | -141  |
 | acacia_button                          | -140  |
 | dried_kelp_block                       | -139  |
-| item.kelp                              | -138  |
+| kelp (animated)                        | -138  |
 | horn_coral_wall_fan                    | -137  |
 | bubble_coral_wall_fan                  | -136  |
 | tube_coral_wall_fan                    | -135  |
@@ -1149,7 +1149,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | dispenser                              |  23   |
 | sandstone                              |  24   |
 | noteblock                              |  25   |
-| item.bed                               |  26   |
+| bed (bottom texture)                   |  26   |
 | golden_rail                            |  27   |
 | detector_rail                          |  28   |
 | sticky_piston                          |  29   |
@@ -1182,7 +1182,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | diamond_ore                            |  56   |
 | diamond_block                          |  57   |
 | crafting_table                         |  58   |
-| item.wheat                             |  59   |
+| wheat (sprouting)                      |  59   |
 | farmland                               |  60   |
 | furnace                                |  61   |
 | lit_furnace                            |  62   |
@@ -1204,7 +1204,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | snow                                   |  80   |
 | cactus                                 |  81   |
 | clay                                   |  82   |
-| item.reeds                             |  83   |
+| reeds                                  |  83   |
 | jukebox                                |  84   |
 | oak_fence                              |  85   |
 | pumpkin                                |  86   |
@@ -1213,7 +1213,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | glowstone                              |  89   |
 | portal                                 |  90   |
 | lit_pumpkin                            |  91   |
-| item.cake                              |  92   |
+| cake (block render)                    |  92   |
 | unpowered_repeater                     |  93   |
 | powered_repeater                       |  94   |
 | invisible_bedrock                      |  95   |
@@ -1236,10 +1236,10 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | nether_brick                           |  112  |
 | nether_brick_fence                     |  113  |
 | nether_brick_stairs                    |  114  |
-| item.nether_wart                       |  115  |
+| nether_wart (sprouting)                |  115  |
 | enchanting_table                       |  116  |
-| item.brewing_stand                     |  117  |
-| item.cauldron                          |  118  |
+| brewing_stand (old)                    |  117  |
+| cauldron (side view)                   |  118  |
 | end_portal                             |  119  |
 | end_portal_frame                       |  120  |
 | end_stone                              |  121  |
@@ -1261,7 +1261,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | command_block                          |  137  |
 | beacon                                 |  138  |
 | cobblestone_wall                       |  139  |
-| item.flower_pot                        |  140  |
+| flower_pot (old)                       |  140  |
 | carrots                                |  141  |
 | potatoes                               |  142  |
 | wooden_button                          |  143  |
@@ -1275,7 +1275,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | daylight_detector                      |  151  |
 | redstone_block                         |  152  |
 | quartz_ore                             |  153  |
-| item.hopper                            |  154  |
+| hopper (old)                           |  154  |
 | quartz_block                           |  155  |
 | quartz_stairs                          |  156  |
 | oak_double_slab                        |  157  |
@@ -1314,7 +1314,7 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | hard_white_stained_glass_pane          |  191  |
 | chemical_heat                          |  192  |
 | grass_path                             |  198  |
-| item.frame                             |  199  |
+| frame (old)                            |  199  |
 | chorus_flower                          |  200  |
 | purpur_block                           |  201  |
 | colored_torch_red                      |  202  |
@@ -1357,9 +1357,9 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | underwater_torch                       |  239  |
 | chorus_plant                           |  240  |
 | white_stained_glass                    |  241  |
-| item.camera                            |  242  |
+| camera (old)                           |  242  |
 | podzol                                 |  243  |
-| item.beetroot                          |  244  |
+| beetroot (sprouting)                   |  244  |
 | stonecutter                            |  245  |
 | glowingobsidian                        |  246  |
 | netherreactor                          |  247  |
@@ -1958,4 +1958,3 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 | spawn_egg                              |  843  |
 | end_crystal                            |  844  |
 | glow_berries                           |  845  |
-
