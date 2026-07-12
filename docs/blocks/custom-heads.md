@@ -66,7 +66,7 @@ _Note that the block description does not have the `menu_category` parameter as 
             },
             // Prevents the block from being placed on the bottom face of another block
             "minecraft:placement_filter": {
-                "conditions": [{ "allowed_faces": ["up", "side"] }]
+                "conditions": [{ "allowed_faces": ["up", "south", "north", "west", "east"] }]
             },
             // Prevents snow from accumulating above the block
             "minecraft:precipitation_interactions": {

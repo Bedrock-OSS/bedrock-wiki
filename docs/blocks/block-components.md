@@ -795,7 +795,7 @@ _Requires format version [1.21.100](/blocks/block-format-history#_1-21-100) or l
 Determines the placement conditions that a block must be in to be able to survive.
 If none of the specified conditions are met, the block will not be placed; or if the block is already placed, it will pop off as an item.
 
-_Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or later._
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
 
 #### Object Format {#placement-filter-object}
 
@@ -804,7 +804,7 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
     -   A maximum of 64 conditions can be included.
     -   `allowed_faces` — Array (optional)
         -   The block faces that the block can be placed on
-        -   Can include `"all"`{lang=json}, `"side"`{lang=json}, `"down"`{lang=json}, `"up"`{lang=json}, `"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} and `"east"`{lang=json}.
+        -   Can include `"down"`{lang=json}, `"up"`{lang=json}, `"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} and `"east"`{lang=json}.
     -   `block_filter` — Array (optional)
         -   Array of [block descriptors](/documentation/shared-constructs#block-descriptors) that the block can be placed against in the `allowed_faces` direction.
         -   See [this](/blocks/block-tags) page for a list of vanilla tags and relevant blocks.

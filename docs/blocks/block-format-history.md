@@ -103,6 +103,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:material_instances`
     -   Removed boolean support from the `ambient_occlusion` instance parameter.
     -   This parameter may now only be defined as a float.
+-   Updated `minecraft:placement_filter`
+    -   The `allowed_faces` condition parameter no longer accepts values of `"all"`{lang=json} or `"side"`{lang=json}.
 -   Updated `minecraft:redstone_producer`
     -   May no longer be defined in the `permutations` array without also being defined in the root `components` object.
 -   The `minecraft:geometry` and `minecraft:material_instances` components can no longer be defined individually within `permutations` entries.
