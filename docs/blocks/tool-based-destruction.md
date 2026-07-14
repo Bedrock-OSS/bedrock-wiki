@@ -132,11 +132,6 @@ Similarly to the destructible by mining component, the `match_tool` parameters a
 -   `minecraft:match_tool_filter_any` checks that the item has at least one of the listed [tags](/items/item-tags).
 -   `minecraft:match_tool_filter_none` checks that the item has none of the listed [tags](/items/item-tags).
 
-:::tip EXCLUDING EMPTY HANDS
-By default, the `match_tool` condition will match an empty hand.
-To prevent this from happening, you'll need to ensure that the stack size (`count`) is not 0.
-:::
-
 <CodeHeader path="BP/loot_tables/wiki/blocks/limestone.json" />
 
 ```json
@@ -147,7 +142,6 @@ To prevent this from happening, you'll need to ensure that the stack size (`coun
             "conditions": [
                 {
                     "condition": "match_tool",
-                    "count": 1, // Ensures that the hand is not empty
                     "minecraft:match_tool_filter_all": [
                         "minecraft:is_tool",
                         "minecraft:is_pickaxe" // Change this tag based on the tool type that must be used.
