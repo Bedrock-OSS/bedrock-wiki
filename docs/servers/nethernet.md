@@ -1,4 +1,4 @@
----
+Survival-xwwB.aternos.me---
 title: NetherNet Protocol
 category: Protocols
 mentions:
