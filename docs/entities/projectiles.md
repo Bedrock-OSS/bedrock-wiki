@@ -175,7 +175,11 @@ Spawns an area of effect cloud of potion effect.
 | Potion of Turtle Master   | 37      | 38       | 39                  |
 | Potion of Slow Falling    | 40      | 41       |                     |
 | Potion of Slowness IV     | 42      |          |                     |
-| Potion of Crashing        | 43+     |          |                     |
+| Potion of Wind Charging   | 43      |          |                     |
+| Potion of Weaving         | 44      |          |                     |
+| Potion of Oozing          | 45      |          |                     |
+| Potion of Infestation     | 46      |          |                     |
+| Potion of Crashing        | 47+     |          |                     |
 
 ### spawn_chance
 
