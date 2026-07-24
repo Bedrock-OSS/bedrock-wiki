@@ -20,14 +20,21 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Traits
 
-<Tag name="experimental" />
-<Label color="blue">Upcoming Creator Features</Label>
-
+-   Released `minecraft:multi_block` from experimental
 -   Updated `minecraft:multi_block`
     -   Now prevents the `minecraft:connection` and `minecraft:placement_position` traits from being defined.
     -   Now prevents the `minecraft:placement_direction` trait from having `enabled_states` other than `"minecraft:cardinal_direction"`{lang=json} defined.
     -   Now prevents the `minecraft:geometry` component from having `n_way_visual_rotation` defined.
     -   Now prevents the `minecraft:block_entity` component from being defined.
+-   Updated `minecraft:placement_direction`
+    -   Updated `enabled_states` parameter
+        -   Released `"minecraft:sixteen_way_rotation"`{lang=json} value from experimental
+    -   The `y_rotation_offset` parameter can now be defined when `"minecraft:sixteen_way_rotation"`{lang=json} is an enabled state.
+
+### Components
+
+-   Updated `minecraft:geometry`
+    -   Released `n_way_visual_rotation` parameter from experimental
 
 ## 1.26.30
 
@@ -41,7 +48,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:placement_direction`
     -   Updated `enabled_states` parameter
         -   Added `"minecraft:sixteen_way_rotation"`{lang=json} as a valid value.
-        -   This state is not supported by the `y_rotation_offset` parameter.
+        -   This state did not support the `y_rotation_offset` parameter until the following version.
 
 ### Components
 
