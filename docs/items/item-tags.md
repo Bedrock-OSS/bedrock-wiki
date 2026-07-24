@@ -17,6 +17,8 @@ For a list of vanilla item tags and their functionality, visit [this page](/item
 
 ## Applying Tags
 
+_Requires format version [1.20.50](/items/item-format-history#_1-20-50) or later._
+
 <CodeHeader path="BP/items/example_item.json" />
 
 ```json

@@ -26,6 +26,8 @@ For a list of vanilla block tags and their functionality, visit [this page](/blo
 
 ## Applying Tags
 
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
 <CodeHeader path="BP/blocks/tree_stump.json" />
 
 ```json
