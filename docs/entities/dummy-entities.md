@@ -61,7 +61,7 @@ You can use whatever behaviors you like, but here is a good template. The import
             },
             "minecraft:damage_sensor": {
                 "triggers": {
-                    "deals_damage": false
+                    "deals_damage": "no"
                 }
             },
             "minecraft:pushable": {
