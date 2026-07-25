@@ -507,7 +507,7 @@ For example,in setting that is accessibility and in inventory,the construction,e
 | `mob_effects_renderer`        | Draws the effects that are applied to the player                                                                |
 | `cursor_renderer`             | Draws the crosshair in the center of the screen                                                                 |
 | `equipment_preview_renderer`  | Draws armor stand                                                                                               |
-| `progress_indicator_renderer` | Draws touch circle on Mobile controls                                                                                                        |
+| `progress_indicator_renderer` | Draws touch circle on Mobile controls                                                                           |
 | `camera_renderer`             | Used for the camera item                                                                                        |
 | `web_view_renderer`           | Shows a website view                                                                                            |
 | `banner_pattern_renderer`     | Renders a banner                                                                                                |
