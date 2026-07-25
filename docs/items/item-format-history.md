@@ -25,6 +25,12 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   In format versions prior to `1.26.30`, the default value is `"always"`{lang=json}.
         -   In format versions of `1.26.30` and higher, the default value is `"if_first"`{lang=json}.
 
+<Tag name="experimental" />
+<Label color="yellow">Beta APIs</Label>
+
+-   Sound names from `RP/sounds/sound_definitions.json` can now be used in all components that previously only accepted vanilla sound event names.
+    -   This means that components like `minecraft:record` now accept custom sounds.
+
 ## 1.26.10
 
 ### Components
