@@ -33,8 +33,18 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
+-   Released `minecraft:instrument_sound` from experimental
 -   Updated `minecraft:geometry`
     -   Released `n_way_visual_rotation` parameter from experimental
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Added `minecraft:sound`
+    -   Contains `sound` which determines the sounds that the block makes, such as the mining sound, step on sound, breaking sound, and placement sound.
+        -   This parameter is equivalent to the `sound` parameter in `RP/blocks.json`.
+        -   Unlike `RP/blocks.json`, this component can be used to specify different sounds for different block permutations.
+        -   Definitions in `RP/blocks.json` override the value set here.
 
 ## 1.26.30
 
