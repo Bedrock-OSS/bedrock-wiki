@@ -31,6 +31,13 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   Released `"minecraft:sixteen_way_rotation"`{lang=json} value from experimental
     -   The `y_rotation_offset` parameter can now be defined when `"minecraft:sixteen_way_rotation"`{lang=json} is an enabled state.
 
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:multi_block`
+    -   Updated `direction` parameter to support horizontal directions (`"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} and `"east"`{lang=json}).
+    -   If the `direction` parameter is omitted and the block has the `minecraft:cardinal_direction` state enabled, the parts of the multi-block will be placed in the direction of that state.
+
 ### Components
 
 -   Released `minecraft:instrument_sound` from experimental
