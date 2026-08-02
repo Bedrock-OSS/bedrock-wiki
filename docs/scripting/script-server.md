@@ -172,7 +172,7 @@ You can filter which namespaces a subscriber receives by passing a `namespaces` 
 ```js
 system.afterEvents.scriptEventReceive.subscribe(
     (event) => {
-        /* only receives wiki:shop events */
+        /* only receives events with the namespace wiki_shop */
     },
     { namespaces: ["wiki_shop"] }
 );
