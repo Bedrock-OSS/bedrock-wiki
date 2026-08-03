@@ -3,16 +3,11 @@ title: Multi-Blocks
 description: Learn how to create blocks that occupy more than a single block unit by being comprised of multiple individual blocks.
 category: General
 tags:
-    - experimental
     - intermediate
 license: true
 mentions:
     - QuazChick
 ---
-
-:::warning EXPERIMENTAL
-Multi-blocks are experimental and require the "Upcoming Creator Features" toggle to be enabled in order to function.
-:::
 
 ## What Are Multi-Blocks?
 

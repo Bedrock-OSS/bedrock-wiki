@@ -79,10 +79,6 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 
 ### Multi-Block
 
-:::warning EXPERIMENTAL
-Multi-blocks are experimental and require the "Upcoming Creator Features" toggle to be enabled in order to function.
-:::
-
 Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up of multiple parts.
 
 -   `enabled_states` — Array
