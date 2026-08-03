@@ -6,7 +6,8 @@
 /blocks/blocks-stable: /blocks/blocks-intro
 /blocks/block-tags#list-of-vanilla-tags: /blocks/vanilla-block-tags
 /blocks/custom-trapdoor: /blocks/custom-trapdoors
-/blocks/precise-rotation: /blocks/intercardinal-orientation
+/blocks/intercardinal-orientation: /blocks/n-way-rotation
+/blocks/precise-rotation: /blocks/n-way-rotation
 /blocks/rotatable-blocks: /blocks/block-orientation
 
 /commands/item-drop-detection: /commands/detect-item-drop
