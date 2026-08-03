@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="320" height="320" viewBox="0 0 32 32" version="1.1" xml:space="preserve"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg" fill="none" stroke="none">
+  <image width="32" height="32" preserveAspectRatio="none" x="0" y="0" style="image-rendering:pixelated" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAArFJREFU&#10;WIXt1stuIzcQheG/isW+SrYG43maLAIEyC5A3v8dMo7Vd0kkKwtpDHjdi2y0bKC/vpBVrCO//f6H&#10;iyqlFHLK1E1NKU663QCnOxxwYB0nggXaw4GcEpd1RVTBnT3e3J0YI3XbArCME7Gu6F+OAEwfH4gG&#10;LEaavmP89wOAWNdYNK7btsvLn3/97e7OtiyEYIgKJWdulyuxrqmaGhEhp/QJS87klHB3LEZ2+ek8&#10;IAIigkRhneb7jVWFBmU+D4gKVdM8/ugMAk3b4sBeb7GKxKoi3RKiyunHGwCXdWWdFywaOJ8PPn47&#10;oSEwvL9TitO0zS5vl3XDHayKmBnLOAJC07XUbcv1cgF3+teXz6VM1yt105JzYq+30483ckos08QV&#10;sKpCQ2CZJkouHL+dwJ1tXiil0PYdOeX7ssaG/uVll7dlHCm5UDcNwYx5GBGB7nhERBh+vqNB6Y5H&#10;btcr03m4Xx8OiCp7vVmMSCXMw4iqfhbLfB7wR4+L6KPYhF81Mw8DiFA3zS5v27LipRCioaqs84yq&#10;EszQcMcalMOjz3NKlJzRYICz11vbdwQz0qNPfy3d7XKhlILFiIgwDwMiSnvoERHCo5f3etuWBQ1G&#10;23cAbPNCTonD6ZWcEtftQk6JumsJIbCMI+5OCIG275mHYZc3ESGEwDyOlJzpj0diFRl+vt+r9tDj&#10;rmzzjMWKumnwxx5v60aMtsubu7MuCzFGLEamYSRYABFiVbHNy/2LzajbhnkYSCkTQkBVcS+7vHXH&#10;I8HuQ+V2vXF6+w7A7XIh50z/+gJAut3IOWOPF7k7qoFYV7u8zcOIqNB0HW3fcd023P1xlof72Q0c&#10;Tq8A4P5lCO31piqIKtuyfJnn27J+mefnf35+mefzMCCq7PXPPPDMA8888MwDzzzwzAPPPPC/54H/&#10;AAXQ689854H3AAAAAElFTkSuQmCC&#10;" />
+  <path fill="#ffffff" d="m 5,12 v -0.42 h -0.84 v -0.42 h 0.84 v -1.26 h -1.47 v 0.42 h 0.84 v 0.42 h -0.84 v 1.26 z m 1.154998,-0.84 h -0.42 v -0.21 h 0.21 v -0.417 h 0.21 z m 0.63,0.84 v -2.1 h -0.63 v 0.21 h -0.42 v 0.21 h -0.21 v 0.42 h -0.21 v 0.84 h 0.84 v 0.42 z m 1.784998,0 v -2.1 h -1.47 v 2.1 z m -0.63,-0.42 h -0.21 v -1.26 h 0.21 z m 1.994998,-0.42 v -0.21 h 0.21 v -0.84 h -0.21 v -0.21 h -0.84 v 0.21 h -0.21 v 0.84 h 0.21 v 0.21 z m -0.21,-0.42 h -0.42 v -0.42 h 0.42 z" />
+  <g transform="rotate(180)" style="transform-origin:center">
+    <path fill="#ffffff" transform="rotate(240)" style="transform-origin:center" d="m 15,9 v 2 h -2 v 2 h -2 v 2 h 2 2 v 2 2 2 2 h 2 v -2 -2 -2 -2 h 2 2 v -2 h -2 v -2 h -2 v -2 z" />
+    <path stroke="#ff8080" style="stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round" d="m 16,9 v 7" />
+    <path stroke="#ff8080" style="stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round" d="m -9,16 a 7,7 0 0 1 -5.784463,6.893654 7,7 0 0 1 -7.793385,-4.499513 7,7 0 0 1 3.077848,-8.456319" transform="rotate(-90)" />
+    <path stroke="#8080ff" style="stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round" d="M 16,16 9.94,19.5" />
+  </g>
+</svg>

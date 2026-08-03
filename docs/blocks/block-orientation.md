@@ -6,7 +6,7 @@ tags:
     - easy
 outline_depth: 2
 related:
-    - /blocks/intercardinal-orientation
+    - /blocks/n-way-rotation
 license: true
 mentions:
     - Ultr4Anubis
@@ -44,7 +44,7 @@ Check out the [blocks guide](/blocks/blocks-intro) before starting.
     -   Used by dispensers and observers.
     -   6 directions: down, up, north, south, west and east.
 
--   [Intercardinal Orientation](/blocks/intercardinal-orientation)
+-   [Sixteen-Way Rotation](/blocks/n-way-rotation)
 
     -   Used by banners, conduits, mob heads and signs.
     -   16 directions (at 22.5 degree intervals)
