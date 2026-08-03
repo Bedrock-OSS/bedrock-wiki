@@ -515,6 +515,62 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 }
 ```
 
+### Instrument Sound
+
+Determines the sound played when a Note Block is placed above or below the block.
+
+#### Object Format {#instrument-sound-object}
+
+At least one of the following parameters is required:
+
+-   `up` — [Instrument Sound](#instrument-sounds)
+    -   Determines the instrument heard when the Note Block is placed above the block.
+    -   By default, this is set to `"note.harp"`{lang=json}.
+-   `down` — [Instrument Sound](#instrument-sounds)
+    -   Determines the instrument heard when the Note Block is placed below the block.
+    -   This sound overrides the sound of blocks placed below the Note Block.
+    -   By default, this is set to `"note.none"`{lang=json}.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:instrument_sound": {
+    "up": "note.didgeridoo"
+}
+```
+
+#### Instrument Sounds
+
+| Value                                 | Sound                  |
+| ------------------------------------- | ---------------------- |
+| `"note.banjo"`{lang=json}             | Banjo                  |
+| `"note.bassattack"`{lang=json}        | Bass                   |
+| `"note.bd"`{lang=json}                | Bass drum              |
+| `"note.bell"`{lang=json}              | Bell                   |
+| `"note.bit"`{lang=json}               | Bit                    |
+| `"note.chime"`{lang=json}             | Chime                  |
+| `"note.cow_bell"`{lang=json}          | Cow bell               |
+| `"note.creeper"`{lang=json}           | Creeper hiss           |
+| `"note.didgeridoo"`{lang=json}        | Didgeridoo             |
+| `"note.enderdragon"`{lang=json}       | Ender dragon roar      |
+| `"note.flute"`{lang=json}             | Flute                  |
+| `"note.guitar"`{lang=json}            | Guitar                 |
+| `"note.harp"`{lang=json}              | Harp                   |
+| `"note.hat"`{lang=json}               | Hi-hat                 |
+| `"note.iron_xylophone"`{lang=json}    | Iron xylophone         |
+| `"note.none"`{lang=json}              | None                   |
+| `"note.piglin"`{lang=json}            | Piglin snort           |
+| `"note.pling"`{lang=json}             | Pling                  |
+| `"note.skeleton"`{lang=json}          | Skeleton rattle        |
+| `"note.snare"`{lang=json}             | Snare drum             |
+| `"note.trumpet"`{lang=json}           | Trumpet                |
+| `"note.trumpet_exposed"`{lang=json}   | Trumpet (exposed)      |
+| `"note.trumpet_oxidized"`{lang=json}  | Trumpet (oxidized)     |
+| `"note.trumpet_weathered"`{lang=json} | Trupet (weathered)     |
+| `"note.witherskeleton"`{lang=json}    | Wither skeleton rattle |
+| `"note.xylophone"`{lang=json}         | Xylophone              |
+| `"note.zombie"`{lang=json}            | Zombie moan            |
+
 ### Item Visual
 
 Determines how this block is displayed as an item.
