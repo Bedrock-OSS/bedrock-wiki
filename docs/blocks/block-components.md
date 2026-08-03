@@ -494,6 +494,10 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 -   `culling_shape` — String (optional)
     -   The voxel shape to check against when culling adjacent blocks.
     -   This parameter may only be set to `"minecraft:unit_cube"`{lang=json} if a [vanilla full block model](/blocks/vanilla-block-models) is being used.
+-   `n_way_visual_rotation` — Object (optional)
+    -   This parameter may only be used from within the root `components` object, not within `permutations` entries.
+    -   Keys are axes (`x`, `y` or `z`) and values are state names (e.g. `"minecraft:sixteen_way_rotation"`{lang=json}).
+    -   Learn more about N-way rotation [here](/blocks/n-way-rotation).
 -   `uv_lock` — Array / Boolean (optional)
     -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
     -   When `false`{lang=json} (default), all UVs in the model will follow the block's rotation.
