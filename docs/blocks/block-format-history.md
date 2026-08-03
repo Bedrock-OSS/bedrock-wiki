@@ -101,7 +101,7 @@ An experiment must be enabled in your world for experimental changes to take eff
         -   This parameter may only be used from within the root `components` object, not within `permutations` entries.
         -   The interval between the rotation of each state value is 360° divided by the number of valid values the referenced state has.
             -   For example, a `y` parameter referencing a state with 4 values would rotate the geometry in multiples of 90°, with each rotation facing a cardinal direction.
-            -   The default state value is always associated with a rotation of 0°.
+            -   The default state value is always associated with a rotation of 0° from south.
 
 ## 1.26.20
 
