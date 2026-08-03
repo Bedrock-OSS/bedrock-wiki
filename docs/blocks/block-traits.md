@@ -65,15 +65,6 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 -   `enabled_states` — Array
     -   May only contain `"minecraft:cardinal_connections"`{lang=json}, which enables _all_ of the following states.
 
-#### Provided States {#connection-states}
-
-| State                        | Values                                              | Description                                                        |
-| ---------------------------- | --------------------------------------------------- | ------------------------------------------------------------------ |
-| `minecraft:connection_north` | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the north. |
-| `minecraft:connection_south` | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the south. |
-| `minecraft:connection_west`  | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the west.  |
-| `minecraft:connection_east`  | `false`{lang=json} _(default)_<br>`true`{lang=json} | Whether the block is connected to the adjacent block to the east.  |
-
 <CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
@@ -81,6 +72,10 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
     "enabled_states": ["minecraft:cardinal_connections"]
 }
 ```
+
+#### Provided States {#connection-states}
+
+<Table data="connection_states.json" />
 
 ### Multi-Block
 
@@ -99,12 +94,6 @@ Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up 
     -   Determines the number of blocks that make up the multi-block.
     -   This controls how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
 
-#### Provided States {#multi-block-states}
-
-| State                        | Values                                                        | Description                             |
-| ---------------------------- | ------------------------------------------------------------- | --------------------------------------- |
-| `minecraft:multi_block_part` | Integers ranging from `0`{lang=json} to `parts - 1`{lang=js}. | The part index of the multi-block part. |
-
 <CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
@@ -114,6 +103,10 @@ Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up 
     "parts": 2
 }
 ```
+
+#### Provided States {#multi-block-states}
+
+<Table data="multi_block_states.json" />
 
 ### Placement Direction
 
@@ -131,14 +124,6 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
     -   Lists the blocks (as an array of [block descriptors](/documentation/shared-constructs#block-descriptors)) that the block can create corners with.
     -   This parameter may only be specified when `"minecraft:corner_and_cardinal_direction"`{lang=json} is included in the `enabled_states` array.
 
-#### Provided States {#placement-direction-states}
-
-| State                          | Values                                                                                                                                                | Description                                         |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| `minecraft:cardinal_direction` | `"south"`{lang=json} _(default)_<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json}                                                | Cardinal facing direction of player when placed.    |
-| `minecraft:facing_direction`   | `"down"`{lang=json} _(default)_<br>`"up"`{lang=json}<br>`"south"`{lang=json}<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json}    | Overall direction of player when placed.            |
-| `minecraft:corner`             | `"none"`{lang=json} _(default)_<br>`"inner_left"`{lang=json}<br>`"inner_right"`{lang=json}<br>`"outer_left"`{lang=json}<br>`"outer_right"`{lang=json} | The shape of the corner that the block has created. |
-
 <CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
 ```json
@@ -148,6 +133,10 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 }
 ```
 
+#### Provided States {#placement-direction-states}
+
+<Table data="placement_direction_states.json" />
+
 ### Placement Position
 
 Contains information about where the player placed the block.
@@ -156,13 +145,6 @@ _Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or lat
 
 -   `enabled_states` — Array
     -   May contain any of the states from the table below, enabling only the states specified.
-
-#### Provided States {#placement-position-states}
-
-| State                     | Values                                                                                                                                             | Description                                   |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `minecraft:block_face`    | `"down"`{lang=json} _(default)_<br>`"up"`{lang=json}<br>`"south"`{lang=json}<br>`"north"`{lang=json}<br>`"west"`{lang=json}<br>`"east"`{lang=json} | Face on which the block was placed.           |
-| `minecraft:vertical_half` | `"top"`{lang=json}<br>`"bottom"`{lang=json} _(default)_                                                                                            | The vertical half where the block was placed. |
 
 <CodeHeader breadcrumbs="minecraft:block/description/traits" />
 
@@ -174,3 +156,7 @@ _Requires format version [1.20.20](/blocks/block-format-history#_1-20-20) or lat
     ]
 }
 ```
+
+#### Provided States {#placement-position-states}
+
+<Table data="placement_position_states.json" />
