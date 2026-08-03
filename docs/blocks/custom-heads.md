@@ -5,14 +5,13 @@ description: Learn how to create your own mob heads that can be worn, placed in 
 category: Vanilla Re-Creations
 tags:
     - expert
-    - scripting
 license: true
 mentions:
     - QuazChick
 ---
 
 :::tip FORMAT VERSION 1.26.30
-This tutorial assumes an advanced understanding of blocks, items and scripting.
+This tutorial assumes an advanced understanding of blocks and items.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
 
@@ -36,6 +35,18 @@ By the end of this tutorial, you should have created something like this:
     alt="A charged creeper, surrounded by husk heads, waiting eagerly outside a desert villager's house"
     width="500"
 />
+
+## Block Model
+
+![](model.png)
+
+Here's the JSON code for a basic 8×8×8 head model, where each face of the block should have a separate 8×8 texture defined by material instances.
+
+<Spoiler title="Example Head Model">
+
+<ExampleFile path="RP/models/blocks/custom_head.geo.json" />
+
+</Spoiler>
 
 ## Initial Block JSON
 
@@ -128,120 +139,30 @@ _Note that the block description does not have the `menu_category` parameter as 
 }
 ```
 
-## Defining the Direction States
+## Enabling the Direction States
 
 Mob heads use two types of [block orientation](/blocks/block-orientation).
-They can be attached to the sides of adjacent blocks, or placed on the ground facing an intercardinal direction.
+They can be attached to the sides of adjacent blocks, or placed on the ground facing one of 16 directions.
 
 To support this, we'll need to add two direction states to our block:
 
+-   For 16-way rotation when placed on the ground, we will use the [placement direction](/blocks/block-traits#placement-direction) trait to enable the `minecraft:sixteen_way_rotation` state.
 -   For block face attachment, we will use the [placement position](/blocks/block-traits#placement-position) trait to enable the `minecraft:block_face` state.
 
-    <ExampleFile path="BP/blocks/custom_head.json" snippet="minecraft:block/description/traits" />
-
--   For intercardinal orientation when placed on top of another block, we will add a `wiki:intercardinal_direction` state and use a modified version of the wiki's [intercardinal orientation](/blocks/intercardinal-orientation) system.
-    As always, remember to change `wiki` to your own namespace!
-
-    <ExampleFile path="BP/blocks/custom_head.json" snippet="minecraft:block/description/states" />
-
-## Setting the Direction States
-
-Given that it's a part of a block trait, the `minecraft:block_face` state will be set automatically.
-However, to set the `wiki:intercardinal_direction` state to the correct value, we'll need to use a custom component.
-
-::: tip LEARN MORE
-For a more detailed explanation of how this custom component works, check out the [intercardinal orientation](/blocks/intercardinal-orientation#setting-the-direction-state) page!
-:::
-
-Add the following script to your `BP/scripts` folder to register the `wiki:intercardinal_orientation` component.
-
-<Spoiler title="Intercardinal Orientation Script">
-
-<ExampleFile path="BP/scripts/intercardinalOrientation.js" />
-
-</Spoiler>
-
-Now we can apply the component to the block when it is being placed on the `up` face of another block using the block [`permutations`](/blocks/block-permutations#conditionally-applying-components) array.
-
-<CodeHeader path="BP/blocks/custom_head.json" breadcrumbs="minecraft:block" />
-
-```json
-"permutations": [
-    {
-        "condition": "q.block_state('minecraft:block_face') == 'up'",
-        "components": {
-            // Sets the "wiki:intercardinal_direction" state to the correct value before the block is placed
-            "wiki:intercardinal_orientation": {
-                "y_rotation_offset": 180 // Face towards the player
-            }
-        }
-    }
-]
-```
-
-## Block Model
-
-Generally, the block [transformation](/blocks/block-components#transformation) component is used to rotate blocks to match their direction, however this component only supports angles that are multiples of 90 degrees.
-To allow for the 22.5 degree intervals used for intercardinal rotation, your block's model will need a few extra bones.
-
-There are four bones required for intercardinal orientation, each with different Y-axis rotations:
-
--   `0`{lang=json}
--   `22.5`{lang=json}
--   `45`{lang=json}
--   `67.5`{lang=json}
-
-**These rotations are in a clockwise direction when looking at the model from above.**
-
-### Cardinal Bone
-
-First, you need to create a bone with no rotation, where the front of the model faces north.
-In this tutorial, each bone will be named after its Y rotation, meaning this bone should have the name `0` as it has been rotated 0 degrees.
-
-This is the bone that will be visible when the block is facing a cardinal direction (when `wiki:intercardinal_direction` is `0`{lang=json}, `4`{lang=json}, `8`{lang=json} or `12`{lang=json}) or when the head is attached to the side of an adjacent block.
-At this stage, all cubes of your model must be direct children of this bone and cannot be contained in child bones.
-
-![](model_bone_0.png)
-
-### Intercardinal Bones
-
-Now you need to duplicate this bone three times with the remaining rotation values (`22.5`{lang=json}, `45`{lang=json} and `67.5`{lang=json}).
-These duplicate bones are used when rotating the block to face an intercardinal direction.
-
-:::tip
-You can duplicate bones in Blockbench by selecting the bone and pressing Ctrl + D.
-
-Keep each bone's pivot point set to `[0, 0, 0]`{lang=json} so that its rotation is around the middle of the block.
-:::
-
-For reference, here's how the final model looks for a basic custom head. Be warned, it isn't a pretty sight just yet!
-
-![](model_bones.png)
-
-### Example Model
-
-Here's the JSON code for a basic 8×8×8 head model, where each face of the block should have a separate 8×8 texture defined by material instances.
-
-<Spoiler title="Example Head Model">
-
-<ExampleFile path="RP/models/blocks/custom_head.geo.json" />
-
-</Spoiler>
+<ExampleFile path="BP/blocks/custom_head.json" snippet="minecraft:block/description/traits" />
 
 ## Applying Block Rotation
 
-### Bone Visibility
+### Ground Rotation
 
-Not all bones in your model should be visible, so we make use of the `bone_visibility` parameter in the [geometry](/blocks/block-components#geometry) component to ensure that only the required bones are rendered.
-
-Add the following component to your block:
+First, we'll make use of the [N-way rotation](/blocks/n-way-rotation) geometry feature to apply 16-way rotation when the head is placed on top of another block.
 
 <ExampleFile
     path="BP/blocks/custom_head.json"
     snippet="minecraft:block/components/minecraft:geometry"
 />
 
-### Permutation Entries
+### Wall Attachment
 
 Now, use the [`permutations`](/blocks/block-permutations) array to define the rotation for the base cardinal rotations of the block by inserting the following into your block `permutations` array (in the presented order):
 
@@ -267,13 +188,15 @@ Great! Now we're able to equip the block into the head slot:
 
 ## Charged Creeper Drops
 
+<Tag name="scripting" />
+
 If a vanilla mob has a mob head associated with it, that head will drop as an item when the entity is exploded by a charged creeper.
 
 You can use the following script to add drops for any custom heads.
 
 <ExampleFile path="BP/scripts/headDrops.js" />
 
-Remember to import the scripts into your entry file!
+Remember to import the scripts into your entry file and set up scripts in `BP/manifest.json` if you haven't already!
 
 <ExampleFile path="BP/scripts/index.js" />
 
@@ -281,9 +204,7 @@ Remember to import the scripts into your entry file!
 
 What you have created:
 
--   [x] A block model supporting intercardinal directions
 -   [x] A block with 16 supported direction state values when placed on the ground, along with 4 side attachments
--   [x] A custom component that can be used to set the intercardinal direction state
 -   [x] A block item that can be worn and enchanted
 -   [x] A custom head drop system for charged creeper explosions
 
