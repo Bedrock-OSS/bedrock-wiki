@@ -188,12 +188,7 @@ Most vanilla multi-blocks are popped off as items when a piston attempts to push
 
 ### Snowlogging
 
-:::warning REQUIRES 1.26.30
-Prior to version 1.26.30, snowlogging is not supported by multi-blocks.
-Attempting to submerge part of a multi-block in snow instead results in the multi-block being destroyed.
-:::
-
-Attempting to place snow in part of a snowloggable multi-block will result in the multi-block being submerged in snow from its bottom part upwards, rather than the snow always being placed in the part that was selected.
+Attempting to place snow in part of a [snowloggable](/blocks/block-colocation#snowlogging) multi-block will result in the multi-block being submerged in snow from its bottom part upwards, rather than the snow always being placed in the part that was selected.
 
 Targeting part of a multi-block that contains snow will select the snow layer rather than the multi-block.
 This means that attempting to break a snowlogged part will break the snow layer, leaving the multi-block.
