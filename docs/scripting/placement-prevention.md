@@ -10,7 +10,7 @@ mentions:
 ---
 
 :::warning BETA APIs
-Beta versions of the Script API are in active development and breaking changes are frequent. This page assumes the format of Minecraft 1.26.30.
+Beta versions of the Script API are in active development and breaking changes are frequent. This page assumes the format of Minecraft 1.26.40.
 :::
 
 Have you ever needed to prevent a specific block from being placed? Sometimes players may acquire dangerous blocks so you can use this script to keep your world or server safe!
@@ -29,7 +29,7 @@ Just like other scripts, you need the dependency in your `manifest.json`. We are
         "description": "Prevents players from placing certain blocks using scripting.",
         "uuid": "6f3a4325-4ce5-42f5-b141-12641c8823c3",
         "version": "1.0.0",
-        "min_engine_version": "1.26.30"
+        "min_engine_version": "1.26.40"
     },
     "modules": [
         {

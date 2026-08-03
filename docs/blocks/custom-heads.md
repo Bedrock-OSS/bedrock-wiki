@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.30
+:::tip FORMAT VERSION 1.26.40
 This tutorial assumes an advanced understanding of blocks and items.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -56,7 +56,7 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_head"

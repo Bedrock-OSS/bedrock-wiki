@@ -17,7 +17,7 @@ mentions:
     - QuazChick
 ---
 
-::: tip FORMAT VERSION 1.26.30
+::: tip FORMAT VERSION 1.26.40
 This tutorial assumes a basic understanding of blocks, including [block states](/blocks/block-states) and [block traits](/blocks/block-traits).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
