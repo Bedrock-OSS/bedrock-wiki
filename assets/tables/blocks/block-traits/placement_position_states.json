@@ -1,0 +1,36 @@
+{
+  "columns": {
+    "state": {
+      "name": "State",
+      "sortable": true
+    },
+    "values": {
+      "name": "Values"
+    },
+    "description": {
+      "name": "Description"
+    }
+  },
+  "rows": [
+    {
+      "state": "`minecraft:block_face`",
+      "values": [
+        "`\"down\"`{lang=json} _(default)_",
+        "`\"up\"`{lang=json}",
+        "`\"south\"`{lang=json}",
+        "`\"north\"`{lang=json}",
+        "`\"west\"`{lang=json}",
+        "`\"east\"`{lang=json}"
+      ],
+      "description": "Face on which the block was placed."
+    },
+    {
+      "state": "`minecraft:vertical_half`",
+      "values": [
+        "`\"bottom\"`{lang=json} _(default)_",
+        "`\"top\"`{lang=json}"
+      ],
+      "description": "The vertical half where the block was placed."
+    }
+  ]
+}

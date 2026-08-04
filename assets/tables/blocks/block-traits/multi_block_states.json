@@ -1,0 +1,21 @@
+{
+  "columns": {
+    "state": {
+      "name": "State",
+      "sortable": true
+    },
+    "values": {
+      "name": "Values"
+    },
+    "description": {
+      "name": "Description"
+    }
+  },
+  "rows": [
+    {
+      "state": "`minecraft:multi_block_part`",
+      "values": "Integers ranging from `0`{lang=js} to `parts - 1`{lang=js}.",
+      "description": "The part index of the multi-block part."
+    }
+  ]
+}

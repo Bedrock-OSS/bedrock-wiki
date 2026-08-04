@@ -1,0 +1,48 @@
+{
+  "columns": {
+    "state": {
+      "name": "State",
+      "sortable": true
+    },
+    "values": {
+      "name": "Values"
+    },
+    "description": {
+      "name": "Description"
+    }
+  },
+  "rows": [
+    {
+      "state": "`minecraft:connection_north`",
+      "values": [
+        "`false`{lang=json} _(default)_",
+        "`true`{lang=json}"
+      ],
+      "description": "Whether the block is connected to the adjacent block to the north."
+    },
+    {
+      "state": "`minecraft:connection_south`",
+      "values": [
+        "`false`{lang=json} _(default)_",
+        "`true`{lang=json}"
+      ],
+      "description": "Whether the block is connected to the adjacent block to the south."
+    },
+    {
+      "state": "`minecraft:connection_west`",
+      "values": [
+        "`false`{lang=json} _(default)_",
+        "`true`{lang=json}"
+      ],
+      "description": "Whether the block is connected to the adjacent block to the west."
+    },
+    {
+      "state": "`minecraft:connection_east`",
+      "values": [
+        "`false`{lang=json} _(default)_",
+        "`true`{lang=json}"
+      ],
+      "description": "Whether the block is connected to the adjacent block to the east."
+    }
+  ]
+}
