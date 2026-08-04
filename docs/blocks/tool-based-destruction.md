@@ -9,7 +9,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.30
+:::tip FORMAT VERSION 1.26.40
 This tutorial assumes a basic understanding of blocks and [block tags](/blocks/block-tags).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -80,7 +80,7 @@ These tags can be applied to your block in its `minecraft:tags` component:
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:limestone",

@@ -13,7 +13,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.30
+:::tip FORMAT VERSION 1.26.40
 This example requires basic knowledge of blocks to understand.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -42,7 +42,7 @@ Therefore, we need to create our own full block model in order for our glass to 
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_glass",
@@ -62,6 +62,15 @@ Therefore, we need to create our own full block model in order for our glass to 
                     "texture": "wiki:custom_glass", // Texture shortname defined in terrain_texture.json
                     "render_method": "blend" // Allow translucency
                 }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:instrument_sound": {
+                "up": "note.hat"
             }
         }
     }

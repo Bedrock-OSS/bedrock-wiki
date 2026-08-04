@@ -32,7 +32,7 @@ _Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or lat
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:tree_stump",
@@ -100,7 +100,7 @@ Example of an item querying a block's tags:
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_pickaxe",

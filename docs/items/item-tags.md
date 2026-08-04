@@ -23,7 +23,7 @@ _Requires format version [1.20.50](/items/item-format-history#_1-20-50) or later
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:example_item"

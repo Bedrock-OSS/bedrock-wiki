@@ -10,10 +10,6 @@ mentions:
     - QuazChick
 ---
 
-:::warning EXPERIMENTAL
-Vanilla voxel shapes are experimental and require the "Experimental Voxel Shape Features" toggle to be enabled in order to function.
-:::
-
 _This documentation is up to date as of Preview 1.26.30.29._
 
 <Table data="shapes.json" />

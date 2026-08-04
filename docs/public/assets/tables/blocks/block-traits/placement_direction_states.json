@@ -1,0 +1,71 @@
+{
+  "columns": {
+    "state": {
+      "name": "State",
+      "sortable": true
+    },
+    "values": {
+      "name": "Values"
+    },
+    "description": {
+      "name": "Description"
+    }
+  },
+  "rows": [
+    {
+      "state": "`minecraft:cardinal_direction`",
+      "values": [
+        "`\"south\"`{lang=json} _(default)_",
+        "`\"west\"`{lang=json}",
+        "`\"north\"`{lang=json}",
+        "`\"east\"`{lang=json}"
+      ],
+      "description": "Cardinal facing direction of player when placed."
+    },
+    {
+      "state": "`minecraft:corner`",
+      "values": [
+        "`\"none\"`{lang=json} _(default)_",
+        "`\"inner_left\"`{lang=json}",
+        "`\"inner_right\"`{lang=json}",
+        "`\"outer_left\"`{lang=json}",
+        "`\"outer_right\"`{lang=json}"
+      ],
+      "description": "The shape of the corner that the block has created."
+    },
+    {
+      "state": "`minecraft:facing_direction`",
+      "values": [
+        "`\"down\"`{lang=json} _(default)_",
+        "`\"up\"`{lang=json}",
+        "`\"south\"`{lang=json}",
+        "`\"north\"`{lang=json}",
+        "`\"west\"`{lang=json}",
+        "`\"east\"`{lang=json}"
+      ],
+      "description": "Overall direction of player when placed."
+    },
+    {
+      "state": "`minecraft:sixteen_way_rotation`",
+      "values": [
+        " `0`{lang=json} (south) _(default)_",
+        " `1`{lang=json} (south-southwest)",
+        " `2`{lang=json} (southwest)",
+        " `3`{lang=json} (west-southwest)",
+        " `4`{lang=json} (west)",
+        " `5`{lang=json} (west-northwest)",
+        " `6`{lang=json} (northwest)",
+        " `7`{lang=json} (north-northwest)",
+        " `8`{lang=json} (north)",
+        " `9`{lang=json} (north-northeast)",
+        "`10`{lang=json} (northeast)",
+        "`11`{lang=json} (east-northeast)",
+        "`12`{lang=json} (east)",
+        "`13`{lang=json} (east-southeast)",
+        "`14`{lang=json} (southeast)",
+        "`15`{lang=json} (south-southeast)"
+      ],
+      "description": "Which direction out of 16 possible rotations the block has been placed in based on the player's Y rotation."
+    }
+  ]
+}

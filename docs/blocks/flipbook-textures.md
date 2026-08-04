@@ -34,7 +34,7 @@ You can simply apply animated magma's texture to your block by changing the `tex
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:flipbook_block",

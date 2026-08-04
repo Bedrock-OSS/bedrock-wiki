@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.30
+:::tip FORMAT VERSION 1.26.40
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.30.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.40.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.26.30",
+    "format_version": "1.26.40",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -494,6 +494,10 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
 -   `culling_shape` — String (optional)
     -   The voxel shape to check against when culling adjacent blocks.
     -   This parameter may only be set to `"minecraft:unit_cube"`{lang=json} if a [vanilla full block model](/blocks/vanilla-block-models) is being used.
+-   `n_way_visual_rotation` — Object (optional)
+    -   This parameter may only be used from within the root `components` object, not within `permutations` entries.
+    -   Keys are axes (`x`, `y` or `z`) and values are state names (e.g. `"minecraft:sixteen_way_rotation"`{lang=json}).
+    -   Learn more about N-way rotation [here](/blocks/n-way-rotation).
 -   `uv_lock` — Array / Boolean (optional)
     -   Determines whether UVs should be locked to their original rotation when rotation from the [transformation](#transformation) component is applied.
     -   When `false`{lang=json} (default), all UVs in the model will follow the block's rotation.
@@ -514,6 +518,62 @@ _Requires format version [1.21.90](/blocks/block-format-history#_1-21-90) or lat
     "uv_lock": ["locked_bone"]
 }
 ```
+
+### Instrument Sound
+
+Determines the sound played when a Note Block is placed above or below the block.
+
+#### Object Format {#instrument-sound-object}
+
+At least one of the following parameters is required:
+
+-   `up` — [Instrument Sound](#instrument-sounds)
+    -   Determines the instrument heard when the Note Block is placed above the block.
+    -   By default, this is set to `"note.harp"`{lang=json}.
+-   `down` — [Instrument Sound](#instrument-sounds)
+    -   Determines the instrument heard when the Note Block is placed below the block.
+    -   This sound overrides the sound of blocks placed below the Note Block.
+    -   By default, this is set to `"note.none"`{lang=json}.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:instrument_sound": {
+    "up": "note.didgeridoo"
+}
+```
+
+#### Instrument Sounds
+
+| Value                                 | Sound                  |
+| ------------------------------------- | ---------------------- |
+| `"note.banjo"`{lang=json}             | Banjo                  |
+| `"note.bassattack"`{lang=json}        | Bass                   |
+| `"note.bd"`{lang=json}                | Bass drum              |
+| `"note.bell"`{lang=json}              | Bell                   |
+| `"note.bit"`{lang=json}               | Bit                    |
+| `"note.chime"`{lang=json}             | Chime                  |
+| `"note.cow_bell"`{lang=json}          | Cow bell               |
+| `"note.creeper"`{lang=json}           | Creeper hiss           |
+| `"note.didgeridoo"`{lang=json}        | Didgeridoo             |
+| `"note.enderdragon"`{lang=json}       | Ender dragon roar      |
+| `"note.flute"`{lang=json}             | Flute                  |
+| `"note.guitar"`{lang=json}            | Guitar                 |
+| `"note.harp"`{lang=json}              | Harp                   |
+| `"note.hat"`{lang=json}               | Hi-hat                 |
+| `"note.iron_xylophone"`{lang=json}    | Iron xylophone         |
+| `"note.none"`{lang=json}              | None                   |
+| `"note.piglin"`{lang=json}            | Piglin snort           |
+| `"note.pling"`{lang=json}             | Pling                  |
+| `"note.skeleton"`{lang=json}          | Skeleton rattle        |
+| `"note.snare"`{lang=json}             | Snare drum             |
+| `"note.trumpet"`{lang=json}           | Trumpet                |
+| `"note.trumpet_exposed"`{lang=json}   | Trumpet (exposed)      |
+| `"note.trumpet_oxidized"`{lang=json}  | Trumpet (oxidized)     |
+| `"note.trumpet_weathered"`{lang=json} | Trupet (weathered)     |
+| `"note.witherskeleton"`{lang=json}    | Wither skeleton rattle |
+| `"note.xylophone"`{lang=json}         | Xylophone              |
+| `"note.zombie"`{lang=json}            | Zombie moan            |
 
 ### Item Visual
 
