@@ -3,6 +3,7 @@ title: Assign Unique Scores
 category: Scoreboard Systems
 tags:
     - intermediate
+license: true
 mentions:
     - katsutosakae
     - akiponggg0119
@@ -123,16 +124,11 @@ If you are using functions instead of command blocks, the `assign_unique_id` fun
 If using functions, your pack folder structure will be as follows:
 
 <FolderView :paths="[
-    'BP',
-    'BP/functions',
-    'BP/pack_icon.png',
-    'BP/manifest.json',
-    'BP/functions/wiki',
-    'BP/functions/wiki/main.mcfunction',
-    'BP/functions/wiki/scoreboard',
-    'BP/functions/wiki/scoreboard/entities',
     'BP/functions/wiki/scoreboard/entities/assign_unique_id.mcfunction',
-    'BP/functions/tick.json'
+    'BP/functions/wiki/main.mcfunction',
+    'BP/functions/tick.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png'
 ]" />
 
 In this setup, the `assign_unique_id` function is called by `main.mcfunction`, which is executed every tick via `tick.json`.
