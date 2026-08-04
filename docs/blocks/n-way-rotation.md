@@ -1,7 +1,7 @@
 ---
 title: N-Way Rotation
 example: n_way_rotation
-description: Learn hw
+description: Learn how to make blocks that are able to face a given number of directions, without being restricted to axis-aligned rotations.
 category: Sound & Visuals
 tags:
     - guide
