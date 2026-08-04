@@ -29,7 +29,6 @@ This page will guide you through the process of creating a unique crop block as 
 
 -   Custom crops cannot be destroyed by flowing lava.
 -   Custom crops cannot be grown by bees carrying nectar.
--   Custom crops become dark when surrounded by full blocks.
 -   Custom crops drop as items when destroyed by an item with the "Silk Touch" enchantment.
 -   Custom crop drop rates do not match vanilla and are not affected by the "Fortune" enchantment.
 -   Custom crops can be interacted with, even when the player is not holding a fertilizer such as Bone Meal.
