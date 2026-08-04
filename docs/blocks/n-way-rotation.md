@@ -17,7 +17,7 @@ Unlike rotation from the [transformation](/blocks/block-components#transformatio
 This is because N-way rotation may not be axis-aligned which would cause issues for these components.
 :::
 :::tip ROOT ONLY
-N-way rotation can only be defined in the root `components` object of the block, so cannot be specified per [permutation](/blocks/block-permutation).
+N-way rotation can only be defined in the root `components` object of the block, so cannot be specified per [permutation](/blocks/block-permutations).
 :::
 :::danger MULTI-BLOCKS
 N-way rotation is not supported by [multi-blocks](/blocks/multi-blocks) and attempts to use it will cause the block JSON to be invalid.
