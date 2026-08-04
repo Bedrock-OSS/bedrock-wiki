@@ -56,6 +56,9 @@ This guide will teach you how to create your own blocks resembling Glazed Terrac
             },
             "minecraft:redstone_conductivity": {
                 "redstone_conductor": true
+            },
+            "minecraft:instrument_sound": {
+                "up": "note.bd"
             }
         },
         "permutations": [

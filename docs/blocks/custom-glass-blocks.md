@@ -62,6 +62,15 @@ Therefore, we need to create our own full block model in order for our glass to 
                     "texture": "wiki:custom_glass", // Texture shortname defined in terrain_texture.json
                     "render_method": "blend" // Allow translucency
                 }
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.3
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1.5
+            },
+            "minecraft:instrument_sound": {
+                "up": "note.hat"
             }
         }
     }

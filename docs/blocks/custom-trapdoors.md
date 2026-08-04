@@ -102,6 +102,9 @@ It includes the rotation for each permutation of your trapdoor, meaning it can b
             // Prevent adjacent blocks from connecting when the trapdoor is closed
             "minecraft:connection_rule": {
                 "accepts_connections_from": "none"
+            },
+            "minecraft:instrument_sound": {
+                "up": "note.bassattack"
             }
         },
         "permutations": [
