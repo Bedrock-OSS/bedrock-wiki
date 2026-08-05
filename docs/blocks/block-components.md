@@ -751,7 +751,6 @@ _Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or lat
 
 **Known Issues:**
 
--   Ambient occlusion does not perfectly match vanilla blocks, meaning custom blocks may appear darker/lighter than surrounding vanilla blocks ([MCPE-237493](https://bugs.mojang.com/browse/MCPE-237493)).
 -   In user interfaces, face dimming is applied before rotation from `item_display_transforms` in the block model ([MCPE-235788](https://bugs.mojang.com/browse/MCPE-235788)).
 -   PBR textures are not supported by custom blocks when rendered as entities (when held, in item frames, on ground, etc.) ([MCPE-237517](https://bugs.mojang.com/browse/MCPE-237517)).
 
