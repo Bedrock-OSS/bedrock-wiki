@@ -2,7 +2,7 @@
 title: CCT - A Technique to Transform Execution Points
 category: Coordinates Calculation Theory
 tags:
-    - guide
+    - expert
 mentions:
     - theVivia
 nav_order: 1
