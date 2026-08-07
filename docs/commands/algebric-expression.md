@@ -1,12 +1,12 @@
 ---
-title: CCT - A Technique to Transform Execution Points
+title: Math about CCT
 category: Coordinates Calculation Theory
 tags:
     - expert
 mentions:
     - theVivia
-nav_order: 1
-description: A guide to transform execution points more advanced.
+nav_order: 5
+description: Math tools and proves to express CCT subcommands.
 ---
 
 ## Introduction
@@ -215,3 +215,5 @@ There is also an equivalent form:
 $$
 \boldsymbol{v}' = \boldsymbol{v} + (\boldsymbol{k} \times \boldsymbol{v})\sin\theta + \boldsymbol{k} \times (\boldsymbol{k} \times \boldsymbol{v})(1-\cos\theta)
 $$
+
+<!-- This page is still writing -->
