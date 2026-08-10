@@ -42,7 +42,7 @@ One example of a situation where replacing the block item is necessary is with f
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wiki:daffodil",
-                    "render_method": "alpha_test"
+                    "render_method": "alpha_test_single_sided"
                 }
             }
         }
