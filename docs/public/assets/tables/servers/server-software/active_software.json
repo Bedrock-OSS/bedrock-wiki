@@ -30,6 +30,12 @@
       "type": "Custom"
     },
     {
+      "name": "[Chorus](http://bedrock-crustaceans.org/chorus/)",
+      "description": "Minecraft: Bedrock server software, open source and written in Rust",
+      "languages": "Rust",
+      "type": "Custom"
+    },
+    {
       "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
       "description": "Nuclear-Powered Minecraft: Bedrock Edition Server Software.",
       "languages": "Java",
