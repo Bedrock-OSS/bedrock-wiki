@@ -17,6 +17,7 @@ mentions:
     - zheaEvyline
     - phoenixr-codes
     - Aevarkan
+    - xspring1982
 description: Useful links for developing add-ons.
 ---
 
@@ -87,6 +88,7 @@ Important links have a ⭐.
 -   [Textures to Glyph Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [MapMC (Real-World Map to Bedrock .mcworld Generator, Paid)](https://mapmc.app/)
 -   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
 -   [MCBE Essentials](https://mcbe-essentials.github.io/)
 -   [.mcpack Generator](https://mcbe-essentials.github.io/instant-pack/)
