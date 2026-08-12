@@ -16,6 +16,18 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.50
+
+### Traits
+
+-   Updated `minecraft:multi_block`
+    -   Released horizontal multi-blocks from experimental.
+    -   No longer prevents the `minecraft:block_entity` component from being defined.
+
+### Components
+
+-   Released `minecraft:sound` from experimental
+
 ## 1.26.40
 
 ### Traits
