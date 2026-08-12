@@ -10,6 +10,7 @@ mentions:
     - QuazChick
     - MinecraftBedrockArabic
     - 8Crafter
+    - MeItsLars
 ---
 
 Minecraft: Bedrock Edition uses its own version of JavaScript, which is based on QuickJS.
@@ -52,14 +53,13 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
     -   `Object`{lang=js} - Standard function constructor for objects
     -   `Function`{lang=js} - Standard function constructor for functions. Note that to use this the `script_eval` capability must be added to the pack manifest.
     -   `Error`{lang=js} - (`EvalError`{lang=js}, `RangeError`{lang=js}, `ReferenceError`{lang=js}, `SyntaxError`{lang=js}, `TypeError`{lang=js}, `URIError`{lang=js}, `InternalError`{lang=js}, `AggregateError`{lang=js}) - Classes for error construction
-    -   `Array`{lang=js} - (`Int8Array`{lang=js}, `UInt8Array`{lang=js}, `Int16Array`{lang=js}, `UInt16Array`{lang=js}, `Int32Array`{lang=js}, `UInt32Array`{lang=js}, `Float32Array`{lang=js}, `Float64Array`{lang=js}, `SharedArrayBuffer`{lang=js}, `ArrayBuffer`{lang=js}, `UInt8ClampedArray`{lang=js}) Standard function constructor for Array objects
+    -   `Array`{lang=js} - (`Int8Array`{lang=js}, `UInt8Array`{lang=js}, `Int16Array`{lang=js}, `UInt16Array`{lang=js}, `Int32Array`{lang=js}, `UInt32Array`{lang=js}, `Float32Array`{lang=js}, `Float64Array`{lang=js}, `SharedArrayBuffer`{lang=js}, `ArrayBuffer`{lang=js}, `UInt8ClampedArray`{lang=js}, `BigInt64Array`{lang=js}, `BigUint64Array`{lang=js}) Standard function constructor for Array objects
     -   `parseInt`{lang=js}, `parseFloat`{lang=js} - Standard methods for parsing string to number
     -   `isNaN`{lang=js}, `isFinite`{lang=js} - Standard methods for checking number types
     -   `decodeURI`{lang=js}, `encodeURI`{lang=js} - Standard methods for decoding and encoding URI paths
     -   `decodeURIComponent`{lang=js}, `encodeURIComponent`{lang=js} - Standard methods for decoding and encoding URI components
     -   `escape`{lang=js}, `unescape`{lang=js} - Non-standard methods! Please use decodeURI/encodeURI if possible
     -   `NaN`{lang=js}, `Infinity`{lang=js}, `undefined`{lang=js} - Standard variables for in-code usage
-    -   `__date_clock`{lang=js} - Built-in QuickJS method for getting current time in microseconds
     -   `Number`{lang=js}, `Boolean`{lang=js}, `String`{lang=js}, `Symbol`{lang=js} - Standard function constructor for JS primitives
     -   `Math`{lang=js} - Standard object having primary math functions, such as trig ratios & powers
     -   `Reflect`{lang=js} - Standard object having built-in methods
