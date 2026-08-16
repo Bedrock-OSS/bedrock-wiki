@@ -1,18 +1,145 @@
----
-title: Block Models
-example: block_models
-description: Learn how to set up a custom model for your block.
-category: Sound & Visuals
-tags:
-    - guide
-    - beginner
-    - easy
-license: true
-mentions:
-    - QuazChick
-    - SmokeyStack
+```
+behavior_pack/
+├── blocks/
+│   └── yangi_blok.json
+├── loot_tables/
+│   └── blocks/
+│       └── yangi_blok.json
+├── scripts/
+│   └── main.js  (agar JavaScript ishlatilsa)
+└── manifest.json
+```
+
 ---
 
+1️⃣ Blok fayli (blocks/yangi_blok.json)
+
+```json
+{
+  "format_version": "1.16.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "sizningmodingiz:yangi_blok",
+      "is_experimental": false,
+      "register_to_creative_menu": true
+    },
+    "components": {
+      "minecraft:destroy_time": 2.0,
+      "minecraft:explosion_resistance": 6.0,
+      "minecraft:map_color": "#7B8B6B",
+      "minecraft:block_light_emission": 0,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "yangi_blok",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:creative_category": {
+        "category": "construction"
+      },
+      "minecraft:loot": "loot_tables/blocks/yangi_blok.json",
+      "minecraft:on_player_destroy": {
+        "condition": "query.get_equipped_item_name == 'wooden_pickaxe'",
+        "event": "give_random_ore"
+      }
+    },
+    "events": {
+      "give_random_ore": {
+        "run_command": {
+          "command": [
+            "function sizningmodingiz:random_ore"
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
+2️⃣ Loot table (loot_tables/blocks/yangi_blok.json)
+
+```json
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:stone",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+3️⃣ Funktsiya (tasodifiy ruda) — functions/random_ore.mcfunction
+
+Fayl joyi: behavior_pack/functions/sizningmodingiz/random_ore.mcfunction
+
+```mcfunction
+# Tasodifiy ruda berish
+scoreboard players random @s ore_chance 1 10
+
+execute if score @s ore_chance matches 1 run give @s minecraft:iron_ore 1
+execute if score @s ore_chance matches 2 run give @s minecraft:gold_ore 1
+execute if score @s ore_chance matches 3 run give @s minecraft:coal_ore 1
+execute if score @s ore_chance matches 4 run give @s minecraft:redstone_ore 1
+execute if score @s ore_chance matches 5 run give @s minecraft:lapis_ore 1
+execute if score @s ore_chance matches 6 run give @s minecraft:copper_ore 1
+execute if score @s ore_chance matches 7 run give @s minecraft:emerald_ore 1
+execute if score @s ore_chance matches 8 run give @s minecraft:diamond_ore 1
+execute if score @s ore_chance matches 9 run give @s minecraft:nether_gold_ore 1
+execute if score @s ore_chance matches 10 run give @s minecraft:ancient_debris 1
+```
+
+---
+
+4️⃣ Manifest (manifest.json)
+
+```json
+{
+  "format_version": 2,
+  "header": {
+    "name": "Yangi Blok Addon",
+    "description": "Taxta ketmon bilan sindirsangiz ruda beradi",
+    "uuid": "your-uuid-here",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "your-uuid-here-2",
+      "version": [1, 0, 0]
+    }
+  ]
+}
+```
+
+---
+
+5️⃣ Texture (textures/blocks/yangi_blok.png)
+
+· O‘zingiz xohlagan rangdagi 16x16 PNG rasm yarating.
+· textures/terrain_texture.json ga qo‘shish kerak:
+
+```json
+{
+  "texture_data": {
+    "yangi_blok": {
+      "textures": "textures/blocks/yangi_blok"
+    }
+  }
+}
+```
 Although custom blocks are unable to make use of vanilla [block shapes](/blocks/block-shapes), we can create our own models which follow a similar format to entity models.
 This tutorial will walk you through the process of creating a custom block model for a "paper bag" using [Blockbench](https://blockbench.net).
 You should learn the main features of Minecraft geometry tailored towards creating custom blocks from this tutorial.
