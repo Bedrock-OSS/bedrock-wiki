@@ -21,7 +21,7 @@ The algebraic representation is only applicable to theoretical analysis. In actu
 
 ## Algebraic Expression (Non-linear Algebraic Form)
 
-Let the current execution position of the `/execute` command be $(x, y, z)$ and the execution view angles be $(ry, rx)$. The following transformations related to positioned do not change the view angles; they only change the execution position.
+Let the current execution position of the `/execute` command be $(x, y, z)$ and the execution view angles be $(-ry, rx)$. The following transformations related to positioned do not change the view angles; they only change the execution position.
 
 If `positioned a b c`, perform the following transformations:
 $$
