@@ -14,6 +14,8 @@ This tutorial assumes a basic understanding of blocks and [block tags](/blocks/b
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
 
+On this page you will learn how to specify which types of tool should be used to mine your block faster, as well as how to prevent drops when the wrong tool is used.
+
 ## Before You Start
 
 Unfortunately, the [destructible by mining](/blocks/block-components#destructible-by-mining) component has extremely inaccurate parameter names which makes tool-based destruction (and block destruction overall) especially confusing.
