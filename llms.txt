@@ -454,6 +454,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 ### Tutorials
 
 - [Block Conditions for Features](/world-generation/feature-block-conditions)
+- [Generating Custom Jigsaw Structures](/world-generation/generate-custom-jigsaw-structures)
 - [Generating Custom Ores](/world-generation/generating-custom-ores)
 - [Generating Custom Structures](/world-generation/structure-features)
 - [Generating Patches](/world-generation/surface-builder)
