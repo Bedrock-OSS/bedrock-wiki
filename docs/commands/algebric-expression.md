@@ -5,7 +5,7 @@ tags:
     - expert
 mentions:
     - theVivia
-nav_order: 5
+nav_order: 9
 description: Math tools and proves to express CCT subcommands.
 ---
 

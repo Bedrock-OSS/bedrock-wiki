@@ -2,16 +2,21 @@
 title: CCT Application
 category: Coordinates Calculation Theory
 tags:
-    - expert
+    - method
 mentions:
     - theVivia
 nav_order: 4
-description: Math tools and proves to express CCT subcommands.
+description: The application of the coordinates calculation theory
 ---
 
-## 3.1 求中点
+## Introduction
 
-**准备**
+In this page, we are going to talk about the application coordinates calculation theory, including geometry, algebra, and error analysis.
+There may be some confusing commands in the fact of symbols, see [the formula table](/cct-formula-table)
+
+### Finding the Midpoint
+
+**Setup**
 
 Name two armor stands as `S` and `M`, placed at **identical Y coordinates**. Keep their distance within a few tens of blocks initially.
 
@@ -30,299 +35,289 @@ We only use their positions, not their view rotations, so armor stands are fully
 
 **Line-by-line Breakdown**
 
-| 子命令 | 动作 | 对应第二章 |
-|-------|-----|-----------|
-| `at @e[...name=S,c=1]` | 原点搬到 S | — |
-| `positioned ~ ~100000 ~` | 抬到 S 上方 H | 第一步 |
-| `facing entity ... feet` | 视线转向 M | 第二步 |
-| `positioned ^ ^ ^50000` | 沿斜边走 H/2 | 第三步 |
-| `positioned ~ ~-50000 ~` | 向下补 H/2 | 第四步 |
-| `run particle ...` | 放粒子 | — |
+| Subcommand               | Action               | Purpose                          |
+| ------------------------ | -------------------- | -------------------------------- |
+| `at @e[...name=S,c=1]`   | Move the origin to S | —                                |
+| `positioned ~ ~100000 ~` | Lift the origin      | Set the big reference height $H$ |
+| `facing entity ... feet` | Aim at M             | Get the slope direction          |
+| `positioned ^ ^ ^50000`  | Walk along the slope | $tH$ with $t = \frac{1}{2}$      |
+| `positioned ~ ~-50000 ~` | Drop back down       | $(1-t)H$                         |
+| `run particle ...`       | Spawn the particle   | —                                |
 
+**Step-by-step Debugging**
 
-**分段调试**
-
-先只写前三段，看粒子是不是出现在 S 上方很高的地方：
+First write only the first three segments and check whether the particle appears high above S:
 
 ```yaml
 /execute at @e[type=armor_stand,name=S,c=1] positioned ~ ~100000 ~ run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-再加走斜边那段，看粒子是不是跑到 M 上方附近。最后加下降段。每加一段确认一次，出问题立刻知道是哪段。
+Then add the slope segment and check whether the particle lands near above M. Finally add the drop segment. Confirm after each segment you add, so that if something goes wrong you immediately know which segment it is.
 
-**两个注意点**
+**Two Caveats**
 
-选择器必须带 `type` 和 `c=1`。
+The selector must include `type` and `c=1`.
 
-前进距离和下降距离必须配套：这里是 50000 和 50000，改 H 时**两个都要改**。
+The forward distance and the drop distance must match: here they are $50000$ and $50000$. When you change $H$, **you must change both**.
 
-## 3.2 比例点与延长线
+### Proportional Points and Extended Lines
 
-$$\text{前进} = tH, \qquad \text{下降} = (1-t)H$$
+$\text{forward} = tH, \qquad \text{drop} = (1-t)H$
 
-**3/4 点**（t = 0.75，H = 100000）：
+**$\frac{3}{4}$ point** ($t = 0.75$, $H = 100000$):
 
-```yaml+
+```yaml
 /execute at @e[type=armor_stand,name=S,c=1] positioned ~ ~100000 ~ facing entity @e[type=armor_stand,name=M,c=1] feet positioned ^ ^ ^75000 positioned ~ ~-25000 ~ run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-**1/3 点**：
+**$\frac{1}{3}$ point**:
 
 ```yaml
 /execute at @e[type=armor_stand,name=S,c=1] positioned ~ ~100000 ~ facing entity @e[type=armor_stand,name=M,c=1] feet positioned ^ ^ ^33333 positioned ~ ~-66667 ~ run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-两个数字加起来必须等于 H。33333 + 66667 = 100000 ✓
+The two numbers must add up to $H$: $33333 + 66667 = 100000$ ✓
 
-**常用比例对照**（H = 100000）：
+**Common Ratios** ($H = 100000$):
 
-| t | 前进 | 下降 |
-|--:|-----:|-----:|
-| 0.1 | 10000 | 90000 |
-| 0.25 | 25000 | 75000 |
-| 1/3 | 33333 | 66667 |
-| 0.5 | 50000 | 50000 |
-| 2/3 | 66667 | 33333 |
-| 0.75 | 75000 | 25000 |
-| 0.9 | 90000 | 10000 |
+|           $t$ | forward |    drop |
+| ------------: | ------: | ------: |
+|         $0.1$ | $10000$ | $90000$ |
+|        $0.25$ | $25000$ | $75000$ |
+| $\frac{1}{3}$ | $33333$ | $66667$ |
+|         $0.5$ | $50000$ | $50000$ |
+| $\frac{2}{3}$ | $66667$ | $33333$ |
+|        $0.75$ | $75000$ | $25000$ |
+|         $0.9$ | $90000$ | $10000$ |
 
-**延长线**
+**Extended Lines**
 
-t 可以超出 [0, 1]。t = 1.5 落在 M 之外的延长线上，下降距离是负数，写成 `positioned ~ ~50000 ~`（往上补）。$t = -0.5$ 落在 S 的反方向。
+$t$ can go beyond $[0, 1]$. $t = 1.5$ lands on the extension past M, where the drop goes negative — so you write `positioned ~ ~50000 ~` (up instead of down). $t = -0.5$ lands on the opposite side of S.
 
-误差公式带 t 因子，t 越大精度越低。
+The error formula carries the $t$ factor — the bigger $t$, the worse the precision.
 
-**画一条线**
+**Drawing a Line**
 
-想在 S、M 之间生成一串等距点，用一排连锁命令方块，每个填一个不同的 t。放一个脉冲方块打头，后面接十个连锁方块，t 依次填 0.1 到 1.0，一按按钮出十个点。
+To get a row of equally spaced points between S and M, use a line of chain command blocks, one $t$ per block. Put an impulse block at the head, then ten chain blocks with $t$ from $0.1$ to $1.0$; press the button and ten points pop out.
 
-想用一条命令搞定，需要第六章的 MEF。
+One command for the whole line? That's MEF's job.
 
-## 3.3 轴间转值
+### Cross-Axis Value Transfer
 
-`facing` 同时改 $\text{yaw}$ 和 $\text{pitch}$。S、M 同高时没问题，但如果两点有高度差，`facing` 给出的方向是斜的，`positioned ^ ^ ^d` 会同时改变水平位置和高度。有时候只想要其中一个分量。
+`facing` sets $\text{yaw}$ and $\text{pitch}$ together. Fine when S and M are level, but if the two points differ in height, `facing` gives a slanted direction and `positioned ^ ^ ^d` moves both horizontally and vertically at once. Sometimes you only want one of them.
 
-办法是在 `facing` 之后用 `rotated` 覆盖掉不想要的那个角度。
+Fix: after `facing`, use `rotated` to override the angle you don't want.
 
-**只留水平方向**
+**Keeping Only the Horizontal Direction**
 
 ```yaml
 /execute at @e[name=A,c=1] facing entity @e[name=B,c=1] feet rotated ~ 0 positioned ^ ^ ^5 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-`rotated ~ 0` 是"$\text{yaw}$ 保持，$\text{pitch}$ 设为 0"。视线被压平，只保留指向 B 的水平朝向。不管 A、B 高度差多少，粒子都出现在 A 的高度上、朝 B 的水平方向 5 格处。
+`rotated ~ 0` means "keep $\text{yaw}$, set $\text{pitch}$ to $0$". The view flattens to the horizontal heading toward B. No matter how big the height difference is, the particle lands at A's height, $5$ blocks toward B horizontally.
 
-**只留垂直方向**
+**Keeping Only the Vertical Direction**
 
 ```yaml
 /execute at @e[name=A,c=1] facing entity @e[name=B,c=1] feet rotated 0 ~ positioned ^ ^ ^5 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-`rotated 0 ~` 把 $\text{yaw}$ 强制设为 0，只保留 $\text{pitch}$。
+`rotated 0 ~` forces $\text{yaw}$ to $0$ and keeps only $\text{pitch}$.
 
-**为什么这个技巧重要**
+**Why This Trick Matters**
 
-`facing` 给出的是一个三维方向，三个分量混在一起。加一个 `rotated` 就能剥掉一部分，只留下想要的分量。
+`facing` gives a full 3D direction with its three components mixed together. One `rotated` strips off part of it and leaves only the piece you want.
 
-社区把这类操作叫**轴间转值**。第六章的正方体命令里 `rotated 0 ~` 和 `rotated ~ 0` 各出现四次，作用都是把一个倾斜的视角掰成单一坐标轴方向。
+The community calls this **cross-axis value transfer**. In the cube command, `rotated 0 ~` and `rotated ~ 0` each show up four times — always to bend a tilted view onto a single coordinate axis.
 
-**注意这里的实体差别**
+**Note the Entity Difference**
 
-这一节用的是 `facing entity`，只读位置，所以 A、B 用盔甲架没问题——`rotated 0 ~` 保留的是 `facing` 算出来的 $\text{pitch}$，不是实体的 $\text{pitch}$。
+This section uses `facing entity`, which reads positions only, so armor stands are fine — `rotated 0 ~` keeps the $\text{pitch}$ that `facing` computed, not the entity's $\text{pitch}$.
 
-但如果换成 `rotated as @e[...]` 加 `rotated 0 ~`，保留的就是**实体的** $\text{pitch}$ 了。这时候盔甲架给出的恒为 0，整个竖直分量凭空消失。1.4 的判据表说的就是这个。
+But `rotated as @e[...]` plus `rotated 0 ~` keeps the **entity's** $\text{pitch}$ instead. An armor stand's $\text{pitch}$ is always $0$, so the vertical part just vanishes. That's the rule of cover in action: whatever follows `rotated as` decides which part of the entity's view stays active.
 
-## 3.4 一条改命令的原则
+### A Principle for Modifying Commands
 
-这一节只讲一件事，但它比前面所有命令加起来都重要。
+This section is one idea, but it's more important than every command above combined.
 
-> **插入或删除任何子命令之后，整条链子的距离配套关系可能全变了，必须重新推一遍。**
+> **Insert or delete any subcommand and the whole chain's distance pairing can change completely. Re-derive it from scratch.**
 
-例子。3.1 的中点命令里，`positioned ~ ~-50000 ~` 是为了抵消沿斜边下降的高度。如果在 `facing` 后面插一个 `rotated ~ 0`，斜边就变成了水平线——走 50000 格根本没有下降，这时候再向下 50000 格，粒子会跑到地下五万格。
+Example: in the midpoint command, `positioned ~ ~-50000 ~` exists to cancel the height dropped along the slope. Now insert a `rotated ~ 0` right after `facing` — the "slope" becomes a horizontal line, so walking $50000$ drops nothing. The later `-50000` then buries the particle $50000$ blocks underground.
 
-改命令时不要盯着字符串改。回到 1.6 的动作清单层面：
+So don't eyeball the string. Work from an action list. The right way to read a long command is left to right: every subcommand is one action.
 
-1. 写出改动后的完整动作清单
-2. 逐条算出每个动作造成的位移
-3. 检查各项加起来是不是想要的
-4. 再翻译回子命令
+```
+Move the origin to S
+Lift by 100000
+Look at M
+Walk 50000 along the view
+Drop 50000
+Run particle
+```
 
-跳过这个流程，改动稍复杂就会出错，而且错在哪根本看不出来。
+When editing:
 
-## 3.5 小结
+1. Write the full action list for the new command.
+2. Work out what each action does to the position.
+3. Check the pieces add up to what you want.
+4. Translate back into subcommands.
 
-- 比例点：抬高 H → facing → 走 tH → 降 (1-t)H
-- `rotated ~ 0` 保留 $\text{yaw}$（压平视线），`rotated 0 ~` 保留 $\text{pitch}$
-- 选择器加 `type` 和 `c=1`
-- 只用位置的参考实体，盔甲架永远够用
-- 改动任何一处，重新推整条链子
+Skip this and any non-trivial change will quietly break — and you won't see where. I strongly recommend writing the action list before any long command; it's the only sane way to debug.
 
-第四章的远点反射会把这一章的骨架当积木使用。往下走之前，请确保你能不看书写出中点命令并解释每一段。
+### Quick Recap
+
+- Proportional points: lift by $H$ → `facing` → walk $tH$ → drop $(1-t)H$
+- `rotated ~ 0` keeps $\text{yaw}$ (flattens the view); `rotated 0 ~` keeps $\text{pitch}$
+- Always add `type` and `c=1` to selectors
+- Reference entities only need a position — armor stands always suffice
+- Change anything, re-derive the whole chain
+
+Make sure you can write the midpoint command from scratch and explain every segment before moving on.
 
 ---
 
-# 第四章　CCT 进阶
+### Far-Point Reflection
 
-前三章只涉及一次 `facing`。这一章把多个 `facing` 串起来。
+This is the core primitive of all advanced CCT.
 
-串联带来的变化是质的：一次只能做比例，两次能做镜像，四次能做旋转。再配合精心设计的距离，还能算出平方、乘法和除法。
+**Goal**
 
-## 4.1 远点反射
+Mirror a point across a line. The line passes through the origin, and its direction is given by some entity's view.
 
-这是整个进阶 CCT 的核心原语。
-
-**目标**
-
-把一个点关于某条直线做镜像。这条直线过原点，方向由某个实体的视角给出。
-
-**骨架**
+**Skeleton**
 
 ```
-沿轴走 H
-面向原点
-走 2H
-恢复轴方向
-再走 H
+Walk H along the axis
+Face the origin
+Walk 2H
+Restore the axis direction
+Walk H again
 ```
 
-**命令**
+**Command**
 
-准备三个实体：待镜像的点 `P`、原点 `O`、给出轴方向的 `axis`。
+Set up three entities: the point to mirror `P`, the origin `O`, and `axis` (which gives the axis direction).
 
-**先看轴是水平的情况**，这时 `axis` 用盔甲架就行：
+Start with a horizontal axis, so an armor stand works for `axis`:
 
 ```yaml
 /execute at @e[type=armor_stand,name=P,c=1] rotated as @e[type=armor_stand,name=axis,c=1] positioned ^ ^ ^1024 facing 0 0 0 positioned ^ ^ ^2048 rotated as @e[type=armor_stand,name=axis,c=1] positioned ^ ^ ^1024 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-`facing 0 0 0` 假定原点在世界原点。想用别的原点就换成 `facing entity @e[name=O,c=1] feet`。
+`facing 0 0 0` assumes the origin is the world origin. Want a different origin? Use `facing entity @e[name=O,c=1] feet`. The tilted-axis case needs $\text{pitch}$, so it's a boat job — more on that later.
 
-轴需要 $\text{pitch}$ 的情况见 4.4。
+**Why This Is a Reflection**
 
-**为什么是镜像**
+Take the Z axis as the axis ($\text{yaw} = 0$, $\text{pitch} = 0$) and put P to the right of it at distance $w$.
 
-设轴是 Z 轴（`axis` 的 $\text{yaw}$ = 0，$\text{pitch}$ = 0），点 P 在 Z 轴右侧，到轴的距离记为 w。
+**Step 1** walks $H$ along Z to a far point A. Since $H$ is huge, A sits basically on the Z axis — P's little offset $w$ doesn't matter compared to $H$.
 
-**第一步**沿 Z 轴走 H，到达远处的 A。因为 H 很大，A 几乎就在 Z 轴上——P 那点偏移 w 和 H 相比可以忽略。
+**Step 2** faces the origin. From A, the origin is almost straight back down the negative Z axis. The "almost" matters: because P is off by $w$, the direction carries a tiny tilt of about $\frac{w}{H}$.
 
-**第二步**面向原点。从 A 看原点，方向几乎就是 Z 轴反方向。注意"几乎"：由于 P 有偏移 w，这个方向带一个微小的倾斜，倾斜角约为 $w/H$。
+**Step 3** walks $2H$. The tilt gets amplified — the sideways drift is about $2H\times\frac{w}{H} = 2w$, from P's side to the opposite side. Offset $+w$ right becomes $-w$ left.
 
-**第三步**走 2H。倾斜被 2H 放大，产生约
+**Step 4** restores the axis direction, **Step 5** walks $H$ back.
 
-$$2H\times\frac{w}{H} = 2w$$
+Net effect: the along-axis component survives (walk $H$, walk back $H$); the perpendicular component flips from $+w$ to $-w$. That's the reflection.
 
-的横向位移，方向从 P 那一侧指向对面。原来偏右 w，现在偏左 w。
+**Exact Result**
 
-**第四步**恢复轴方向，**第五步**走 H 回来。
+With the origin at $(0,0,0)$, the point as vector $\mathbf{p}$, and the axis unit vector $\mathbf{u}$:
 
-净效果：沿轴的分量原样保留（走了 H 又走回 H），垂直于轴的分量从 $+w$ 变成 $-w$。这就是镜像。
+$\mathbf{p}_H = \mathbf{p} + 2H\mathbf{u} - 2H\frac{\mathbf{p}+H\mathbf{u}}{\lVert\mathbf{p}+H\mathbf{u}\rVert}$
 
-**严格结果**
+As $H$ tends to infinity this approaches:
 
-设原点在 (0,0,0)，点为向量 $\mathbf{p}$，轴的单位向量为 $\mathbf{u}$：
+$\mathbf{p}' = 2(\mathbf{u}\cdot\mathbf{p})\mathbf{u} - \mathbf{p}$
 
-$$\mathbf{p}_H = \mathbf{p}+2H\mathbf{u}-2H\frac{\mathbf{p}+H\mathbf{u}}{\lVert\mathbf{p}+H\mathbf{u}\rVert}$$
+The parallel component stays; the perpendicular component flips sign.
 
-8.3 节会给出完整推导。当 H 趋于无穷时它趋近：
+**Error Magnitude**
 
-$$\mathbf{p}' = 2(\mathbf{u}\cdot\mathbf{p})\mathbf{u}-\mathbf{p}$$
+$O\!\left(\frac{\lVert\mathbf{p}\rVert^2}{H}\right)$
 
-平行于轴的分量保留，垂直的分量取反。
+**A Decisive Property**
 
-**误差量级**
+Reflection keeps the point's distance to the origin: $\lVert\mathbf{p}'\rVert = \lVert\mathbf{p}\rVert$
 
-$$O\!\left(\frac{\lVert\mathbf{p}\rVert^2}{H}\right)$$
+The parallel part keeps its length, the perpendicular part only flips sign — Pythagoras says the norm is untouched. This is what lets us draw circles.
 
-和第二章的 $E_y\approx tD^2/2H$ 是同一个形式。
+### Working It Out by Hand
 
-**一个决定性的性质**
+Formulas are hard to feel. Plug in real numbers and watch, and you'll also check the error model along the way.
 
-镜像不改变点到原点的距离：
+**Setup**
 
-$$\lVert\mathbf{p}'\rVert = \lVert\mathbf{p}\rVert$$
+- Axis is Z: $\mathbf{u} = (0,0,1)$
+- P at $(3,\ 0,\ 5)$
+- $H = 1024$
 
-平行分量长度不变，垂直分量只是取反，勾股一算模长就不变。
+The ideal result is $(-3,\ 0,\ 5)$: Z (parallel) kept, X (perpendicular) flipped.
 
-这条性质是第七章画圆的全部依据。
+**Step-by-Step**
 
-## 4.2 手算一遍
+Step 1 walks $H$ to $(3,\ 0,\ 1029)$. Its length:
 
-公式不好直观感受，把具体数代进去算一遍，顺便验证误差模型。
+$\sqrt{9+1029^2} = \sqrt{1058850} \approx 1029.004374$
 
-**设定**
+— only $0.0044$ more than $1029$.
 
-- 轴是 Z 轴：$\mathbf{u} = (0,0,1)$
-- 点 P 在 $(3,\ 0,\ 5)$
-- H = 1024
+Step 2 faces the origin; step 3 walks $2H = 2048$, displacement:
 
-理想的镜像结果是 $(-3,\ 0,\ 5)$：Z 分量（平行于轴）保留，X 分量（垂直于轴）取反。
+$-\frac{2048}{1029.004374}\times(3,\ 0,\ 1029) = -1.99027\times(3,\ 0,\ 1029) = (-5.97082,\ 0,\ -2047.99129)$
 
-**逐步计算**
+Steps 4–5 restore the axis and walk $H$, displacement $(0,\ 0,\ 1024)$.
 
-第一步走 H，到 $(3,\ 0,\ 1029)$。这个向量的长度：
+**Totals**
 
-$$\sqrt{9+1029^2} = \sqrt{1058850} \approx 1029.004374$$
+$X:\ 3-5.97082 = -2.97082$, $Y:\ 0$, $Z:\ 5+1024-2047.99129+1024 = 5.00871$
 
-比 1029 只多 0.0044。
+So we get $(-2.97082,\ 0,\ 5.00871)$ vs the ideal $(-3,\ 0,\ 5)$: X off by $0.0292$, Z by $0.0087$, total error about $0.030$.
 
-第二步面向原点，第三步走 2H = 2048，位移是：
+**Check the Error Model**
 
-$$-\frac{2048}{1029.004374}\times(3,\ 0,\ 1029) = -1.99027\times(3,\ 0,\ 1029) = (-5.97082,\ 0,\ -2047.99129)$$
+The model says the leading term is $\frac{\lVert\mathbf{p}\rVert^2}{H}$. Here $\lVert\mathbf{p}\rVert^2 = 9+25 = 34$:
 
-第四、五步恢复轴方向走 H，位移 $(0,\ 0,\ 1024)$。
+$\frac{34}{1024} = 0.0332$
 
-**总计**
+Measured $0.030$ — same ballpark.
 
-$$X:\ 3-5.97082 = -2.97082$$
-$$Y:\ 0$$
-$$Z:\ 5+1024-2047.99129+1024 = 5.00871$$
+**Try $H = 4096$**
 
-结果 $(-2.97082,\ 0,\ 5.00871)$，理想值 $(-3,\ 0,\ 5)$。偏差：X 差 0.0292，Z 差 0.0087，总误差约 0.030。
+$\lVert\mathbf{p}+H\mathbf{u}\rVert = \sqrt{9+4101^2}\approx4101.0011$, so the ratio is $\frac{8192}{4101.0011}\approx1.997561$.
 
-**验证误差模型**
+Result $(-2.99268,\ 0,\ 5.00220)$, total error about $0.0076$.
 
-模型说主项是 $\lVert\mathbf{p}\rVert^2/H$。这里 $\lVert\mathbf{p}\rVert^2 = 9+25 = 34$：
+|    $H$ | total error | theoretical $\frac{\lVert\mathbf{p}\rVert^2}{H}$ |
+| -----: | ----------: | -----------------------------------------------: |
+| $1024$ |    $0.0304$ |                                         $0.0332$ |
+| $4096$ |    $0.0076$ |                                         $0.0083$ |
 
-$$\frac{34}{1024} = 0.0332$$
+Quadruple $H$, the error drops to $\frac{1}{4}$. **Error is inversely proportional to $H$ — confirmed.**
 
-实测 0.030，量级对得上。
+Worth doing this once by hand. After that, "asymptotic approximation" stops being an empty phrase.
 
-**H 换成 4096**
+### Two Reflections Equal One Rotation
 
-$\lVert\mathbf{p}+H\mathbf{u}\rVert = \sqrt{9+4101^2}\approx4101.0011$，比例 $8192/4101.0011\approx1.997561$。
+**Conclusion**
 
-结果 $(-2.99268,\ 0,\ 5.00220)$，总误差约 0.0076。
+Reflect across two intersecting lines and you get a rotation about their crossing point. The rotation angle is **twice** the angle between the lines.
 
-| H | 总误差 | 理论 $\lVert\mathbf{p}\rVert^2/H$ |
-|---:|---:|---:|
-| 1024 | 0.0304 | 0.0332 |
-| 4096 | 0.0076 | 0.0083 |
+Mirror intuition: two mirrors at $30°$ rotate an image inside them by $60°$.
 
-H 变 4 倍，误差变 1/4。**误差与 H 成反比，这一条确认了。**
+**Why Twice**
 
-这个例子值得自己算一遍。算完之后，"渐近近似"就不再是抽象说法了。
+Angle between the axes is $\theta$; angle between a point and the first axis is $\alpha$.
 
-## 4.3 两次反射等于一次旋转
+After the first reflection the point sits at $-\alpha$ from the first axis, i.e. at $-\alpha-\theta$ from the second.
 
-**结论**
+After the second reflection it's at $+\alpha+\theta$ from the second axis, which is $\alpha+2\theta$ from the first.
 
-两条相交直线的镜像复合，等于绕交点的旋转。旋转角等于两条直线夹角的**两倍**。
+Net rotation $2\theta$, **independent of $\alpha$**. Every starting point rotates by the same amount.
 
-用镜子想：两面镜子夹角 30 度，物体在里面的像会转 60 度。
+**Command**
 
-**为什么是两倍**
-
-设两轴夹角为 θ，某点与第一条轴的夹角为 α。
-
-第一次镜像后，它与第一条轴的夹角变成 $-\alpha$。此时它与第二条轴的夹角是 $-\alpha-\theta$。
-
-第二次镜像后，与第二条轴的夹角从 $-\alpha-\theta$ 变成 $+\alpha+\theta$。换回以第一条轴为基准，就是 $\alpha+2\theta$。
-
-净转了 $2\theta$，**与 α 无关**。不管起始点在哪，都转同样的角度。
-
-**命令**
-
-两条轴都是水平的（$\text{pitch}$ = 0），所以**盔甲架够用**。`axisA` 的 $\text{yaw}$ = 0，`axisB` 的 $\text{yaw}$ = 30：
+Both axes are horizontal ($\text{pitch} = 0$), so armor stands are enough. `axisA` has $\text{yaw} = 0$, `axisB` has $\text{yaw} = 30$:
 
 ```yaml
 /summon armor_stand axisA 0 64 0
@@ -335,35 +330,33 @@ H 变 4 倍，误差变 1/4。**误差与 H 成反比，这一条确认了。**
 /execute at @e[type=armor_stand,name=P,c=1] rotated as @e[type=armor_stand,name=axisA,c=1] positioned ^ ^ ^1024 facing 0 0 0 positioned ^ ^ ^2048 rotated as @e[type=armor_stand,name=axisA,c=1] positioned ^ ^ ^1024 rotated as @e[type=armor_stand,name=axisB,c=1] positioned ^ ^ ^1024 facing 0 0 0 positioned ^ ^ ^2048 rotated as @e[type=armor_stand,name=axisB,c=1] positioned ^ ^ ^1024 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-结构就是两个 4.1 的骨架接在一起。
+It's just two reflection skeletons glued together.
 
-**角度对照**
+**Angle Reference**
 
-| 两轴夹角 | 旋转角 |
-|--------:|------:|
-| 15° | 30° |
-| 22.5° | 45° |
-| 30° | 60° |
-| 45° | 90° |
-| 90° | 180° |
+| Angle between the axes | Rotation angle |
+| ---------------------: | -------------: |
+|                  $15°$ |          $30°$ |
+|                $22.5°$ |          $45°$ |
+|                  $30°$ |          $60°$ |
+|                  $45°$ |          $90°$ |
+|                  $90°$ |         $180°$ |
 
-交换两次反射的顺序，旋转方向反向。
+Swap the order of the two reflections and the rotation spins the other way.
 
-**为什么不直接用 rotated**
+**Why Not Just Use `rotated`**
 
-`rotated` 改的是视角，不是位置。它能让后续的 `^` 沿新方向移动，但不能把一个已有的点绕原点转过去。
+`rotated` changes the view, not the position. It makes later `^` moves follow the new direction, but it can't rotate an existing point around the origin.
 
-要转动位置只能靠位移的组合，反射复合是最短的路径：一次反射三个 `positioned`，两次共六个，换来任意角度的旋转。
+Rotating a position needs displacement combos, and a reflection pair is the shortest route: one reflection is three `positioned`, two reflections are six, and you get any angle you want.
 
-这就是为什么复杂 CCT 命令里到处都是 H、2H、H 的三连——看到这个组合就知道是在做反射。
+That's why $H$, $2H$, $H$ triples are everywhere in complex CCT commands — see the triple, smell a reflection.
 
-## 4.4 需要 $\text{pitch}$ 的轴
+### Axes That Need $\text{pitch}$
 
-上一节两条轴都在水平面内，所以两次反射的复合是绕**竖直轴**的旋转。想绕别的方向转，或者想让镜像轴倾斜，就需要带 $\text{pitch}$ 的轴。
+Last section both axes sat in the horizontal plane, so the compound rotation was about the **vertical axis**. To rotate about other directions, or to tilt the mirror axis, you need $\text{pitch}$. And then armor stands stop working — switch to a boat.
 
-这时候**盔甲架不能用了**，必须换船。
-
-**例：关于一条 $\text{pitch}$ = 30° 的轴做镜像**
+**Example: Mirror Across an Axis with $\text{pitch} = 30°$**
 
 ```yaml
 /summon boat 0 64 0 0 30
@@ -374,315 +367,301 @@ H 变 4 倍，误差变 1/4。**误差与 H 成反比，这一条确认了。**
 /execute at @e[type=armor_stand,name=P,c=1] rotated as @e[type=boat,tag=axisC,c=1] positioned ^ ^ ^1024 facing 0 0 0 positioned ^ ^ ^2048 rotated as @e[type=boat,tag=axisC,c=1] positioned ^ ^ ^1024 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-如果这里把船换成盔甲架，$\text{pitch}$ 恒为 0，得到的会是关于**水平** Z 轴的镜像——命令不会报错，粒子照样出现，但位置完全不是你要的。
+Swap the boat for an armor stand and $\text{pitch}$ pins to $0$ — you'd silently mirror across the **horizontal** Z axis. No error, particle still spawns, position just wrong.
 
-这是最难查的一类错误：语法正确、有输出、结果错。养成习惯：**每次写 `rotated as`，先问一句"这个方向需要 $\text{pitch}$ 吗"。**
+That's the worst kind of bug: valid syntax, visible output, wrong result. Build the habit: **every time you write `rotated as`, ask "does this direction need $\text{pitch}$?"**
 
-**一个折中办法**
+**A Compromise**
 
-如果轴的 $\text{pitch}$ 是固定值，不需要靠实体传递，可以直接写死角度：
+If the axis's $\text{pitch}$ is a fixed value, you don't need an entity at all — hard-code it:
 
 ```yaml
 rotated 0 30
 ```
 
-绝对角度不读任何实体，也就绕过了限制。4.1 的骨架里两次 `rotated as` 都换成 `rotated 0 30` 完全可行：
+An absolute angle reads nothing, so it sidesteps the whole problem. In the reflection skeleton, swapping both `rotated as` for `rotated 0 30` works perfectly:
 
 ```yaml
 /execute at @e[type=armor_stand,name=P,c=1] rotated 0 30 positioned ^ ^ ^1024 facing 0 0 0 positioned ^ ^ ^2048 rotated 0 30 positioned ^ ^ ^1024 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-**什么时候必须用船**
+**When You Must Use a Boat**
 
-只有一种情况：需要**同一条命令里出现多个不同的 $\text{pitch}$ 方向**，且要靠 MEF 的分叉一次遍历它们。那时候方向必须存在实体身上，绝对角度做不到——这正是第六章正方体的处境。
+Only one case: you need **multiple different $\text{pitch}$ directions inside one command** and want MEF's branching to sweep through them all at once. Then the directions have to live on entities — absolute angles can't do it. That's exactly the cube's situation.
 
-单条 CCT 命令、方向固定的场合，写死角度更省事。
+For a single command with a fixed direction, hard-code the angle and be done.
 
-## 4.5 平方
+### Squaring
 
-现在不做几何变换，改做算术。
+Time for arithmetic instead of geometry.
 
-**思路**
+**The Idea**
 
-看这个式子：
+Look at this:
 
-$$\frac{a^2}{\sqrt{a^2+x^2}}$$
+$\frac{a^2}{\sqrt{a^2+x^2}}$
 
-分母是斜边，分子是常数。展开（同样用二项近似）：
+Hypotenuse on the bottom, constant on top. Expand (binomial again):
 
-$$\frac{a^2}{a\sqrt{1+x^2/a^2}} = a\left(1+\frac{x^2}{a^2}\right)^{-1/2} \approx a\left(1-\frac{x^2}{2a^2}\right) = a-\frac{x^2}{2a}$$
+$\frac{a^2}{a\sqrt{1+\frac{x^2}{a^2}}} = a\left(1+\frac{x^2}{a^2}\right)^{-\frac{1}{2}} \approx a\left(1-\frac{x^2}{2a^2}\right) = a-\frac{x^2}{2a}$
 
-**一个含平方根的量，展开后自然带出了和 $x^2$ 成正比的项。** 只要构造出这个量，再减掉常数主项，剩下的就是 $x^2$ 的倍数。
+**A square-root quantity, expanded, leaks out a term proportional to $x^2$.** Build that quantity, subtract the constant leading term, and what's left is a multiple of $x^2$.
 
-而斜边正是 `facing` 的归一化分母，构造它一行就够。
+And the hypotenuse is exactly the normalization denominator `facing` uses — one line builds it.
 
-**公式**（附录 B.1）
+**Formula**
 
 ```yaml
 facing 0 ~a ~ positioned ^ ^ ^-a² rotated ~180 ~ positioned ^ ^ ^-a² positioned ~ ~2a² ~
 ```
 
-功能：$(x,y,z)\to(x,\ y+x^2,\ z)$
+Maps $(x,y,z)\to(x,\ y+x^2,\ z)$.
 
-`a` 是大数占位符，`a²` 要写成实际算出的数值。a = 100 时，`^ ^ ^-a²` 写成 `^ ^ ^-10000`。
+`a` is a big placeholder; `a²` must be the real number. For $a = 100$, `^ ^ ^-a²` becomes `^ ^ ^-10000`.
 
-**完整推导**
+**Full Derivation**
 
-设当前位置 $(x,y,z)$。
+Start at $(x,y,z)$.
 
-**第一步** `facing 0 ~a ~`：目标是 $(0,\ y+a,\ z)$，方向向量
+**Step 1** `facing 0 ~a ~`: target $(0,\ y+a,\ z)$, direction
 
-$$\mathbf{v} = (-x,\ a,\ 0), \qquad s = \lVert\mathbf{v}\rVert = \sqrt{a^2+x^2}$$
+$\mathbf{v} = (-x,\ a,\ 0)$, $s = \lVert\mathbf{v}\rVert = \sqrt{a^2+x^2}$, $\mathbf{F} = \frac{(-x,\ a,\ 0)}{s}$
 
-$$\mathbf{F} = \frac{(-x,\ a,\ 0)}{s}$$
+**Step 2** `positioned ^ ^ ^-a²`: move $-a^2$, displacement $\left(\frac{a^2x}{s},\ -\frac{a^3}{s},\ 0\right)$
 
-**第二步** `positioned ^ ^ ^-a²`：走 $-a^2$，位移
+**Step 3** `rotated ~180 ~`: $\text{yaw}$ plus $180°$.
 
-$$\left(\frac{a^2x}{s},\ -\frac{a^3}{s},\ 0\right)$$
+That just flips the horizontal component; the vertical stays: $\mathbf{F}' = \frac{(x,\ a,\ 0)}{s}$. X flips, Y doesn't.
 
-**第三步** `rotated ~180 ~`：$\text{yaw}$ 加 180 度。
+**Step 4** `positioned ^ ^ ^-a²`: displacement $\left(-\frac{a^2x}{s},\ -\frac{a^3}{s},\ 0\right)$
 
-按 1.2 的观察二，这只反转水平分量，竖直分量不变：
+**Add the two**: $X:\ \frac{a^2x}{s}-\frac{a^2x}{s} = 0$, $Y:\ -\frac{2a^3}{s}$
 
-$$\mathbf{F}' = \frac{(x,\ a,\ 0)}{s}$$
+X cancels completely, Y piles up. That's the whole point of `rotated ~180 ~` — horizontals cancel, verticals add.
 
-X 变号，Y 不变。
+**Step 5** `positioned ~ ~2a² ~`: total Y change
 
-**第四步** `positioned ^ ^ ^-a²`：位移
+$2a^2-\frac{2a^3}{s} = 2a^2\left(1-\left(1+\frac{x^2}{a^2}\right)^{-\frac{1}{2}}\right) \approx 2a^2\cdot\frac{x^2}{2a^2} = x^2$
 
-$$\left(-\frac{a^2x}{s},\ -\frac{a^3}{s},\ 0\right)$$
+$x$, $z$ untouched; $y$ gains $x^2$.
 
-**两次相加**：
+**That `rotated ~180 ~`**
 
-$$X:\ \frac{a^2x}{s}-\frac{a^2x}{s} = 0 \qquad Y:\ -\frac{2a^3}{s}$$
+The most common trick in CCT: make one component of two moves cancel, the other add. It's everywhere in the formula table — see it, think "something's about to be cancelled."
 
-X 完全抵消，Y 累计。这正是 `rotated ~180 ~` 的作用——让水平分量互相消掉、竖直分量互相叠加。
+The cube base uses the same idea, just with two boats facing opposite ways, one move each.
 
-**第五步** `positioned ~ ~2a² ~`：总的 Y 变化
-
-$$2a^2-\frac{2a^3}{s} = 2a^2\left(1-\left(1+\frac{x^2}{a^2}\right)^{-1/2}\right) \approx 2a^2\cdot\frac{x^2}{2a^2} = x^2$$
-
-$x$ 和 $z$ 原样保留，$y$ 增加了 $x^2$。
-
-**那个 rotated ~180 ~**
-
-它是 CCT 里最常见的手法：让两次移动的某个分量互相抵消、另一个分量互相叠加。附录的公式表里到处都是它，看到它就该想"某个分量要被消掉"。
-
-第六章的正方体基座段用的是同一个思路，只不过换成两条互补朝向的船各走一次。
-
-**更短的版本**（附录 B.2）
+**A Shorter Version**
 
 ```yaml
 facing 0 ~a ~ positioned ^ ^ ^-2a² positioned ~ ~2a² ~
 ```
 
-三个子命令，代价是 X 坐标被破坏（偏移约 $2ax$ 没人抵消）。功能变成 $(x,y,z)\to(?,\ y+x^2,\ z)$。
+Three subcommands, but X gets wrecked (an uncancelled drift of about $2ax$). Now it maps $(x,y,z)\to(?,\ y+x^2,\ z)$.
 
-**误差**
+**Error**
 
-被丢掉的下一项量级是 $x^4/a^2$。精确一点：$(1+u)^{-1/2} = 1-u/2+3u^2/8-\cdots$，所以
+The dropped next term is order $\frac{x^4}{a^2}$. Exactly: $(1+u)^{-\frac{1}{2}} = 1-\frac{u}{2}+\frac{3u^2}{8}-\cdots$, so
 
-$$\Delta y \approx x^2-\frac{3x^4}{4a^2}$$
+$\Delta y \approx x^2-\frac{3x^4}{4a^2}$
 
-误差随输入的**四次方**增长。所以用之前一定要把输入缩放到较小区间，$[-1,1]$ 是常见选择。缩放用 5.2 节的公式。
+Error grows with the **fourth power** of the input. So shrink the input first; $[-1,1]$ is the usual target. Use the scaling formula to shrink it.
 
-## 4.6 乘法
+### Multiplication
 
-有了平方，乘法立刻能推出来。平方差公式：
+Square in hand, multiplication falls out. Difference of squares:
 
-$$xz = \frac{(x+z)^2-(x-z)^2}{4}$$
+$xz = \frac{(x+z)^2-(x-z)^2}{4}$
 
-验证：$(x^2+2xz+z^2)-(x^2-2xz+z^2) = 4xz$ ✓
+Check: $(x^2+2xz+z^2)-(x^2-2xz+z^2) = 4xz$ ✓
 
-理论上做两次平方、一次减法、一次除以 4 就行。这条路概念最清楚，缺点是命令长。
+Two squares, one subtraction, one divide by $4$. Cleanest to understand, but the command gets long.
 
-附录里的乘法走另一条路：用二维向量的斜边归一化一次完成。最短的只用六个子命令（B.5）：
+The formula table takes another route: normalize a 2D vector's hypotenuse once and be done. The shortest version is six subcommands:
 
 ```yaml
 facing 0 ~a 0 positioned 0 ~ 0 rotated ~45 ~ positioned ^ ^ ^a² facing ~ ~-a²/√2 0 positioned ^ ^ ^a²
 ```
 
-功能：$(x,y,z)\to(?,\ y+xz,\ ?)$
+Maps $(x,y,z)\to(?,\ y+xz,\ ?)$.
 
-`rotated ~45 ~` 和 $\sqrt2$ 是配套的：$\cos45° = 1/\sqrt2$。**这类公式的常数之间有严格对应，改一个必须同时改另一个。**
+`rotated ~45 ~` and $\sqrt{2}$ are a pair: $\cos 45° = \frac{1}{\sqrt{2}}$. **Constants in these formulas are locked together — change one, change the other.**
 
-## 4.7 除法与高次幂
+### Division and Higher Powers
 
-**除法**
+**Division**
 
-`facing` 做的归一化本身就是除法：
+`facing`'s normalization is division already:
 
-$$\frac{(x,y,z)}{\sqrt{x^2+y^2+z^2}}$$
+$\frac{(x,y,z)}{\sqrt{x^2+y^2+z^2}}$
 
-除法公式的思路是预先布置合适的辅助轴，让归一化的分母恰好等于除数，再从单位方向的某个分量里把比值读出来。
+The division formula pre-places helper axes so the normalization denominator lands exactly on the divisor, then reads the ratio out of a component of the unit direction.
 
-最短版本（附录 B.10）：
+Shortest version:
 
 ```yaml
 positioned ~ 0 ~ facing 0 a ~ positioned ^ ^-ab ^ facing ~ 0 0 positioned ~ 0 0 positioned ^ ^1/b ^
 ```
 
-功能：$(x,y,z)\to(?,\ ?,\ x/z)$
+Maps $(x,y,z)\to(?,\ ?,\ \frac{x}{z})$.
 
-两个参数各有分工：**a 取大数**，让第一次归一化的分母 $\approx a$；**b 取小数**，让中间偏移远小于 z，使第二次归一化的分母 $\approx\lvert z\rvert$。
+The two parameters split the work: **$a$ is a large number** (in math it tends to $+\infty$), so the first denominator ends up about $a$; **$b$ is a small number** (tends to $0$), so the middle offset stays tiny next to $z$ and the second denominator ends up about $\lvert z\rvert$.
 
-误差量级：
+Error magnitude:
 
-$$\sqrt{\frac{1}{b^2}+\frac{a^2}{z^2}}\cdot\varepsilon$$
+$\sqrt{\frac{1}{b^2}+\frac{a^2}{z^2}}\cdot\varepsilon$
 
-两项互相制约：b 太小第一项爆炸，z 太小第二项爆炸。
+The two terms fight: too small $b$ blows up the first, too small $z$ blows up the second.
 
-**除法的硬限制**
+**The Hard Limit**
 
-除数接近 0 时误差无界增长。这不是公式的问题，而是 $1/z$ 本身的性质——z 越接近 0，$1/z$ 变化越剧烈，任何微小误差都被放大。
+Near a divisor of $0$, the error blows up without bound. That's not the formula's fault — it's $\frac{1}{z}$'s nature: as $z$ heads to $0$, $\frac{1}{z}$ moves violently and amplifies any tiny error.
 
-用除法必须限制输入域，确保除数离 0 有足够距离。
+So restrict the input domain and keep the divisor clear of $0$.
 
-**高次幂**
+**Higher Powers**
 
-| 目标 | 构造 |
-|-----|-----|
-| $x^2$ | 平方公式 |
-| $x^3$ | $x^2\cdot x$，或附录 B.13 |
-| $x^4$ | $x^2\cdot x^2$ |
-| $x^5$ | $x^4\cdot x$ |
+| Target | Construction                      |
+| ------ | --------------------------------- |
+| $x^2$  | Squaring formula                  |
+| $x^3$  | $x^2\cdot x$, or the cube formula |
+| $x^4$  | $x^2\cdot x^2$                    |
+| $x^5$  | $x^4\cdot x$                      |
 
-$x^4$ 用 $x^2\cdot x^2$ 比 $x^3\cdot x$ 好：前者两个因子误差相当，后者会把 $x^3$ 已有的误差再放大一次。
+For $x^4$, $x^2\cdot x^2$ beats $x^3\cdot x$: the two factors have similar errors, while the latter re-amplifies $x^3$'s existing error.
 
-每级级联同时增加误差和命令长度。做到四次方基本是实用上限。
+Each cascade level costs both error and command length. The fourth power is about the practical ceiling.
 
-## 4.8 误差工程
+### Error Engineering
 
-**两种误差**
+**Two Errors**
 
-$$E_g \approx C_1\frac{r^2}{H} \qquad\text{（几何截断）}$$
+$E_g \approx C_1\frac{r^2}{H} \qquad\text{(geometric truncation)}$
 
-$$E_f \approx C_2\varepsilon H \qquad\text{（浮点）}$$
+$E_f \approx C_2\varepsilon H \qquad\text{(floating point)}$
 
-一个随 H 减小，一个随 H 增大。
+One shrinks with $H$, the other grows with $H$.
 
-**扫描 H**
+**Scan $H$**
 
 ```
 256, 512, 1024, 2048, 4096, 8192
 ```
 
-远点反射用了 H、2H、H 三处，必须**同步替换**。
+The reflection uses $H$, $2H$, $H$ in three spots — replace them **in sync**.
 
-判断标准：
+How to judge:
 
-- 误差随 H 增大持续下降 → 几何误差还在主导，可以继续加大
-- 加大 H 之后误差反而上升 → 浮点误差已经接管，往回退
+- Error keeps dropping as $H$ grows → geometric error dominates, keep going bigger
+- Error rises after bumping $H$ → floating point took over, step back
 
-4.2 那个手算就是一次两点扫描：1024 → 4096，误差降到 1/4，说明还在几何误差区间。
+The hand calculation above is exactly a two-point scan: $1024 \to 4096$, error down to $\frac{1}{4}$ — still in the geometric zone.
 
-**扫描输入尺度**
+**Scan the Input Scale**
 
-固定 H，改变图形尺度 r：
+Fix $H$, vary the figure scale $r$:
 
 ```
 0.5, 1, 2, 4, 8, 16
 ```
 
-误差大致按 $r^2$ 增长就符合预期。
+Error growing like $r^2$ means all is well.
 
-**必须覆盖的边界**
+**Boundaries to Cover**
 
-算术公式要测：正数、负数、0、极小的除数、输入域两个端点、不同象限、不同 $\text{pitch}$。
+Test arithmetic formulas with: positives, negatives, $0$, tiny divisors, both ends of the input domain, every quadrant, different $\text{pitch}$.
 
-一个只在正数小范围内有效的公式，不能当通用公式用。
+A formula that only works over a small positive range isn't a general formula.
 
-**先缩放，再运算**
+**Scale First, Then Compute**
 
-所有算术公式的误差都随输入增大，所以正确的流程是：
+Every arithmetic formula's error grows with the input, so:
 
 ```
-缩小输入到安全区间 → 做运算 → 放大结果
+shrink the input to a safe range → do the math → amplify the result
 ```
 
-具体场景：输入范围 $[-8,8]$，要算平方。直接算，误差按 $x^4$ 走，在 $x=8$ 处是 $x=1$ 处的 4096 倍。先缩小 8 倍到 $[-1,1]$，算完平方再放大 64 倍（因为 $(x/8)^2 = x^2/64$），误差就控制在小区间水平。
+Example: inputs in $[-8,8]$, want a square. Square straight and the error follows $x^4$ — at $x=8$ it's $4096$ times the error at $x=1$. Shrink by $8$ into $[-1,1]$, square, then scale the result up by $64$ (since $\left(\frac{x}{8}\right)^2 = \frac{x^2}{64}$). The error stays at the small-range level.
 
-缩放要花八个子命令，换来的精度提升通常很值。
+Scaling costs eight subcommands, but the precision it buys is usually worth it.
 
-## 4.9 小结
+### Summary
 
-| 操作 | 结构 | 实体要求 |
-|-----|-----|---------|
-| 轴镜像（水平轴） | H → 面向原点 → 2H → H | 盔甲架够 |
-| 轴镜像（倾斜轴） | 同上 | 船，或写死角度 |
-| 旋转 2θ | 两次镜像，轴夹角 θ | 看轴是否水平 |
-| 平方 | 构造斜边，翻转抵消，减主项 | 无需实体 |
-| 乘法 | 平方差，或二维向量归一化 | 无需实体 |
-| 除法 | facing 的归一化分母 | 无需实体 |
+| Operation                    | Structure                                                   | Entity requirement                        |
+| ---------------------------- | ----------------------------------------------------------- | ----------------------------------------- |
+| Axis reflection (horizontal) | $H$ → face origin → $2H$ → $H$                              | Armor stand suffices                      |
+| Axis reflection (tilted)     | same                                                        | Boat, or hard-coded angle                 |
+| Rotation $2\theta$           | two reflections, axes at angle $\theta$                     | depends on whether the axis is horizontal |
+| Squaring                     | build hypotenuse, flip to cancel, subtract the leading term | none                                      |
+| Multiplication               | difference of squares, or 2D vector normalization           | none                                      |
+| Division                     | `facing`'s normalization denominator                        | none                                      |
 
-一条底线：**这些公式都是有限精度下的渐近近似，不是代数恒等式。**
+One bottom line: **these are all finite-precision asymptotic approximations, not algebraic identities.**
 
-**练习**
+**Exercise**
 
-按 4.2 的方式手算点 $(2,\ 0,\ 3)$ 关于 Z 轴、H = 2048 的反射结果，然后进游戏用粒子对照。理想值 $(-2,\ 0,\ 3)$，实际会差多少，你应该能提前算出来。
+Hand-compute the reflection of $(2,\ 0,\ 3)$ across the Z axis with $H = 2048$, then verify with particles in-game. Ideal answer $(-2,\ 0,\ 3)$; predict how far off the real one will be.
 
 ---
 
-# 第五章　CCT 应用
+### The Output of CCT Is a Single Point
 
-## 5.1 CCT 的输出是一个点
+**One CCT command makes exactly one execution point.** Every selector carries `c=1`, so there's a single execution path and `run` fires once.
 
-**一条 CCT 命令只产生一个执行点。** 因为选择器全带 `c=1`，执行路径只有一条，`run` 只执行一次。
+That's by design. CCT is a calculator: accurate, but one result at a time.
 
-这是设计使然。CCT 是计算器，算得准，但一次只出一个结果。
+So use it to:
 
-所以它适合：
+- compute one specific spot and do one thing there
+- compute a point per tick and let time trace a trajectory
+- hand another system a ready-made coordinate
+- wrap it around bigger structures as a transform operator
 
-- 算出一个特定位置，在那里做一件事
-- 每游戏刻算一个点，靠时间累积成轨迹
-- 给别的系统提供一个算好的坐标
-- 作为变换算子，套在别的结构外面（第七章）
+CCT is **not** for dumping hundreds of points at once. For that, reach for MEF.
 
-CCT **不**适合一次画出成百上千个点。想要那个效果，需要第六章的 MEF。
+### Coordinate System Scaling
 
-## 5.2 坐标系缩放
+**Purpose**: cram the input into a safe range (the scale-first rule above), or scale a whole figure.
 
-**用途**：把输入压缩到安全区间（4.8 的流程），或把已有图形整体放缩。
+**Formula** (8 subcommands)
 
-**公式**（附录 A.4，8 子命令）
-
-以某个参考点为中心，$(x,y,z)\to(x/n,\ y/n,\ z/n)$：
+Around a reference point, $(x,y,z)\to\left(\frac{x}{n},\ \frac{y}{n},\ \frac{z}{n}\right)$:
 
 ```yaml
 positioned ~ ~a ~ facing <> positioned ^ ^ ^(n-1)a/n positioned ~ ~-a/n ~-a facing <> rotated 0 ~ positioned ^ ^ ^(n-1)a/n positioned ~ ~ ~a/n
 ```
 
-`<>` 换成参考点（通常是原点），`a` 是大数，`n` 是缩小倍数。
+Swap `<>` for the reference point (usually the origin). `a` is big, `n` is the shrink factor.
 
-**具体例子**：参考点在世界原点，缩小 4 倍，a 取 1024。
+**Example**: origin as reference, shrink by $4$, $a = 1024$.
 
-$$\frac{(n-1)a}{n} = \frac{3\times1024}{4} = 768, \qquad \frac{a}{n} = 256$$
+$\frac{(n-1)a}{n} = \frac{3\times1024}{4} = 768, \qquad \frac{a}{n} = 256$
 
 ```yaml
 /execute at @e[type=armor_stand,name=P,c=1] positioned ~ ~1024 ~ facing 0 0 0 positioned ^ ^ ^768 positioned ~ ~-256 ~-1024 facing 0 0 0 rotated 0 ~ positioned ^ ^ ^768 positioned ~ ~ ~256 run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-P 到原点的距离变成原来的 1/4，方向不变。
+P's distance to the origin becomes $\frac{1}{4}$, direction unchanged.
 
-**注意这里的 `rotated 0 ~`**
+**About that `rotated 0 ~`**
 
-它跟在 `facing 0 0 0` 后面，保留的是 `facing` 算出的 $\text{pitch}$，不是任何实体的 $\text{pitch}$。所以这条命令不涉及实体视角，盔甲架、船都无关。
+It follows `facing 0 0 0`, so it keeps the $\text{pitch}$ `facing` computed — not any entity's. The command never reads entity views, so armor stands vs boats doesn't matter here.
 
-**为什么需要两次 facing**
+**Why Two `facing`**
 
-一次 `facing` 加走一段只能沿一条直线缩放。要让三个坐标同时按同一比例缩，需要两次不同方向的操作配合，中间那些 `positioned ~` 是在切换参考方向。
+One `facing` plus a walk scales along a single line. To scale all three coordinates together you need two differently-directed moves, and the `positioned ~` in the middle flips the reference.
 
-这个公式的常数绑得很紧：`a`、`(n-1)a/n`、`a/n` 由同一组 a 和 n 决定。改 n 要重算全部三个数。
+The constants are locked: `a`, `(n-1)a/n`, `a/n` all come from the same $a$ and $n$. Change $n$, recompute all three.
 
-**放大**：n 换成小于 1 的数，n = 0.25 就是放大 4 倍。此时 $(n-1)a/n = -3072$，$a/n = 4096$，注意符号。
+**Enlarging**: $n$ below $1$; $n = 0.25$ magnifies by $4$. Then $\frac{(n-1)a}{n} = -3072$ and $\frac{a}{n} = 4096$ — mind the signs.
 
-## 5.3 圆到椭圆的映射
+### Mapping a Circle to an Ellipse
 
-这是一个纯 CCT 变换：输入一个点，输出一个点。作用是把"到原点距离为 r 的点"映射成"落在椭圆上的点"。
+Pure CCT transform: one point in, one point out. It maps "points at distance $r$ from the origin" onto "points on an ellipse".
 
-值得单独讲，因为它演示了一个很有用的手法：**把位置信息转成方向信息。**
+Worth its own section because it shows off a key trick: **turn position info into direction info.**
 
-**五个子命令**
+**The Five Subcommands**
 
 ```yaml
 facing 0 0 0
@@ -692,147 +671,118 @@ rotated ~180 ~
 positioned ^ ^ ^-2
 ```
 
-**逐步推导**
+**Step by Step**
 
-设输入点为 $(0,\ y,\ z)$，到原点距离 $r = \sqrt{y^2+z^2}$。
+Input $(0,\ y,\ z)$, distance $r = \sqrt{y^2+z^2}$.
 
-**第一步** `facing 0 0 0`：视线指向原点，前方向
+**Step 1** `facing 0 0 0`: look at the origin, forward $\mathbf{F} = \left(0,\ -\frac{y}{r},\ -\frac{z}{r}\right)$
 
-$$\mathbf{F} = \left(0,\ -\frac{y}{r},\ -\frac{z}{r}\right)$$
+**Step 2** `positioned 0 0 0`: position snaps to the origin, **view stays**.
 
-**第二步** `positioned 0 0 0`：位置重置到原点，**视角保留**。
+This is the heart. The position zeroes out, but the direction remembers where the point was. The old $(y,z)$ now lives on as two direction components.
 
-这一步是核心。位置被清零了，但方向记住了原来的点在哪。原来的坐标 $(y,z)$ 现在以"方向的两个分量"的形式活着。
+**Step 3** `positioned ^ ^ ^4`: $\mathbf{P} = \left(0,\ -\frac{4y}{r},\ -\frac{4z}{r}\right)$
 
-**第三步** `positioned ^ ^ ^4`：
+**Step 4** `rotated ~180 ~`: $\text{yaw}$ plus $180°$, flipping only the horizontal: $\mathbf{F}' = \left(0,\ -\frac{y}{r},\ +\frac{z}{r}\right)$
 
-$$\mathbf{P} = \left(0,\ -\frac{4y}{r},\ -\frac{4z}{r}\right)$$
+Y stays, Z flips.
 
-**第四步** `rotated ~180 ~`：$\text{yaw}$ 加 180 度。按 1.2 观察二，只翻转水平分量：
+**Step 5** `positioned ^ ^ ^-2`: displacement $\left(0,\ +\frac{2y}{r},\ -\frac{2z}{r}\right)$
 
-$$\mathbf{F}' = \left(0,\ -\frac{y}{r},\ +\frac{z}{r}\right)$$
+**Totals**: $Y:\ -\frac{4y}{r}+\frac{2y}{r} = -\frac{2y}{r}$, $Z:\ -\frac{4z}{r}-\frac{2z}{r} = -\frac{6z}{r}$
 
-Y 保持，Z 变号。
+Since $\lvert y\rvert\le r$ and $\lvert z\rvert\le r$, output Y maxes at $2$, Z at $6$.
 
-**第五步** `positioned ^ ^ ^-2`：位移
+**Semi-Axis Formula**
 
-$$\left(0,\ +\frac{2y}{r},\ -\frac{2z}{r}\right)$$
+Two step distances $d_1$, $d_2$ (the second one signed):
 
-**总计**
+$\text{Y semi-axis} = \lvert d_1+d_2\rvert, \qquad \text{Z semi-axis} = \lvert d_1-d_2\rvert$
 
-$$Y:\ -\frac{4y}{r}+\frac{2y}{r} = -\frac{2y}{r} \qquad Z:\ -\frac{4z}{r}-\frac{2z}{r} = -\frac{6z}{r}$$
+Check ($d_1 = 4$, $d_2 = -2$): $\lvert4-2\rvert = 2$, $\lvert4+2\rvert = 6$ ✓
 
-由于 $\lvert y\rvert\le r$、$\lvert z\rvert\le r$，输出的 Y 最大值 2，Z 最大值 6。
-
-**半轴公式**
-
-设两步距离为 $d_1$、$d_2$（第二步带符号）：
-
-$$\text{Y 半轴} = \lvert d_1+d_2\rvert, \qquad \text{Z 半轴} = \lvert d_1-d_2\rvert$$
-
-验证（$d_1 = 4$，$d_2 = -2$）：$\lvert4-2\rvert = 2$，$\lvert4+2\rvert = 6$ ✓
-
-**反过来求**：想要 Y 半轴 3、Z 半轴 5，解
-
-$$d_1+d_2 = 3, \qquad d_1-d_2 = 5$$
-
-得 $d_1 = 4$，$d_2 = -1$：
+**Going the other way**: want a Y semi-axis of $3$ and a Z semi-axis of $5$? Solve $d_1+d_2 = 3$, $d_1-d_2 = 5$ → $d_1 = 4$, $d_2 = -1$:
 
 ```yaml
 positioned ^ ^ ^4 rotated ~180 ~ positioned ^ ^ ^-1
 ```
 
-**一个容易犯的错**
+**An Easy Mistake**
 
-命令里的 4 和 -2 **不是半轴的值**。它们通过上面那组方程和半轴关联。直接把想要的半轴填进去，得到的是完全不同的椭圆。
+The $4$ and $-2$ in the command are **not** the semi-axes. They connect to the semi-axes through those equations. Plug in the semi-axis values directly and you get a totally different ellipse.
 
-**前提**
+**Prerequisite**
 
-它要求输入点到原点的距离恒定（落在圆上）。距离不一，输出不会落在同一个椭圆上。
+The input's distance to the origin must be constant (it has to sit on a circle). If distances vary, the outputs won't land on one ellipse.
 
-怎么一次生成一整圈这样的点，见 7.4。
+Whole ring at once? That's MEF again.
 
-## 5.4 函数图像
+### Function Graphs
 
-**目标**：画出 $y = x^2$。
+**Goal**: plot $y = x^2$.
 
-用 4.5 的平方公式，一个输入得到一个点。取 a = 100，则 $a^2 = 10000$，$2a^2 = 20000$：
+Feed the squaring formula one input, get one point. With $a = 100$, $a^2 = 10000$ and $2a^2 = 20000$:
 
 ```yaml
 /execute positioned 2 64 0 facing 0 ~100 ~ positioned ^ ^ ^-10000 rotated ~180 ~ positioned ^ ^ ^-10000 positioned ~ ~20000 ~ run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-`positioned 2 64 0` 设定输入 x = 2，基准高度 64。执行完粒子出现在 $(2,\ 68,\ 0)$——y 增加了 $2^2 = 4$。
+`positioned 2 64 0` sets input $x = 2$ at base height $64$. The particle lands at $(2,\ 68,\ 0)$ — $y$ gained $2^2 = 4$.
 
-改成 `positioned 3 64 0` 得到 $(3,\ 73,\ 0)$，`positioned -1.5 64 0` 得到 $(-1.5,\ 66.25,\ 0)$。
+`positioned 3 64 0` → $(3,\ 73,\ 0)$; `positioned -1.5 64 0` → $(-1.5,\ 66.25,\ 0)$.
 
-**画出整条曲线**
+**Plotting the Whole Curve**
 
-**办法一：一排连锁命令方块。** x 从 -4 到 4，步长 0.5，17 个方块各填一个输入坐标，一按按钮整条曲线出现。
+**Way 1: a row of chain command blocks.** $x$ from $-4$ to $4$ in steps of $0.5$ — $17$ blocks, one input each, one button press, whole curve.
 
-**办法二：一个移动的输入点。** 放一个盔甲架当输入，让它沿 X 轴走，每刻算一次：
+**Way 2: a moving input.** Drop an armor stand as the input, let it walk the X axis, compute every tick:
 
 ```yaml
 /execute at @e[type=armor_stand,name=in,c=1] facing 0 ~100 ~ positioned ^ ^ ^-10000 rotated ~180 ~ positioned ^ ^ ^-10000 positioned ~ ~20000 ~ run particle minecraft:basic_flame_particle ~ ~ ~
 ```
 
-配一个循环命令方块推进输入点（盔甲架 $\text{yaw}$ 设成 -90 就是沿 X 正方向；这里只用到水平方向，盔甲架够）：
+Pair it with a repeating block that advances the input (set the stand's $\text{yaw}$ to $-90°$ to head along $+X$; horizontal only, so an armor stand is fine):
 
 ```yaml
 /execute as @e[type=armor_stand,name=in,c=1] at @s run tp @s ^ ^ ^0.1
 ```
 
-粒子随时间描出抛物线。命令短、可实时响应，代价是曲线不同时全部显示。
+The particle traces the parabola in real time. Short command, live response; the catch is the curve isn't all visible at once.
 
-**换成别的函数**
+**Other Functions**
 
-| 函数 | 用什么 |
-|-----|-------|
-| $y = x^2$ | 平方公式 |
-| $y = x^3$ | 附录 B.13 |
-| $y = xz$ | 乘法公式 |
-| $y = ax^2+bx+c$ | 平方 + 缩放 + 两次平移 |
-| $y = \sin x$ | 附录 D.3 |
+| Function        | What to use                     |
+| --------------- | ------------------------------- |
+| $y = x^2$       | Squaring formula                |
+| $y = x^3$       | Cube formula                    |
+| $y = xz$        | Multiplication formula          |
+| $y = ax^2+bx+c$ | Squaring + scaling + two shifts |
+| $y = \sin x$    | Sine formula (Taylor)           |
 
-组合时记住 4.8 的流程：先缩放，再运算，再放大。
+Composing? Remember the order: scale first, compute, then amplify.
 
-## 5.5 坐标系对齐
+### Coordinate System Alignment
 
-有时候需要把整个坐标系转到某个实体的朝向上，之后所有 `~` 相对坐标都按新方向解释。
+Sometimes you want the whole coordinate system to follow an entity's orientation, so every `~` relative coordinate reads along the new axes.
 
-**公式**（附录 C.5，12 子命令）
+**Formula** (12 subcommands)
 
 ```yaml
 positioned ~ ~-a ~ rotated as @s positioned ^-a ^ ^ facing <> positioned ^ ^ ^2√2a rotated as @s positioned ^ ^ ^a positioned ~ ~-a ~ facing <> positioned ^ ^ ^2√2a rotated as @s positioned ^a ^ ^a
 ```
 
-逆变换见附录 C.6。
+**Entity Requirements**
 
-**实体要求**
+Here `rotated as @s` has no cover, so `@s`'s $\text{pitch}$ fully applies. Armor stand → $\text{pitch} = 0$ always, so you can only spin around the vertical axis, no tilting.
 
-这个公式里 `rotated as @s` 不加任何覆盖，所以 `@s` 的 $\text{pitch}$ 会完整生效。如果 `@s` 是盔甲架，$\text{pitch}$ 恒为 0，你只能把坐标系绕竖直轴转，转不出倾斜。
+For arbitrary orientation, `@s` must be a boat (or a player — players carry full $\text{pitch}$).
 
-想要任意朝向的对齐，`@s` 必须是船（或者玩家——玩家有完整的 $\text{pitch}$）。
+**When to Use It**
 
-**什么时候用得上**
+Say a figure is already built "upright" and you want it to track an entity's orientation.
 
-一个图形已经写好了，但它是"正着"的，你想让它跟着某个实体的朝向转。
+Option one: edit every angle parameter in the figure — tedious, easy to miss one. Option two: prepend one alignment (12 subcommands, done once). The second wins; afterwards just rotate the entity, and the command stays untouched.
 
-两个办法：改图形本身所有角度参数（麻烦、容易漏），或者在图形前面加一次坐标系对齐（12 个子命令，一次搞定）。后者更划算，之后改朝向只需转动那个实体，命令一个字不动。
+CCT's role is a **transform operator**: point in, point out.
 
-## 5.6 小结
-
-| 用法 | 公式 | 实体要求 |
-|-----|-----|---------|
-| 比例点 | 第三章 | 位置标记，盔甲架够 |
-| 镜像、旋转 | 远点反射 | 轴水平→盔甲架，倾斜→船 |
-| 缩放 | A.3 / A.4 | 不涉及实体视角 |
-| 圆→椭圆 | 5.3 | 不涉及实体视角 |
-| 函数值 | 平方、乘法、立方 | 不涉及实体视角 |
-| 坐标系对齐 | C.5 / C.6 | 需完整视角→船或玩家 |
-
-CCT 的定位是**变换算子**：进去一个点，出来一个点。
-
-想让它一次作用在几千个点上，需要另一套技术。
-
----
+Want it to hit thousands of points at once? That's another technique entirely.

@@ -40,7 +40,7 @@ This is the central CCT practice: define the set, choose an operation, and calcu
 
 #### Three primitive operations
 
-|       Operation       |             $\text{Pose}$ effect             |                 Set effect                |
+| Operation             | $\text{Pose}$ effect                         | Set effect                                |
 | --------------------- | -------------------------------------------- | ----------------------------------------- |
 | `positioned ~a ~b ~c` | $p ← p+(a,b,c)$                              | Translate every member on world axes      |
 | `positioned ^a ^b ^c` | $p ← p+R(rx,ry)(a,b,c)$                      | Move each state using its own orientation |
@@ -77,27 +77,24 @@ execute positioned 0.0 0 0.0 rotated as @e[name=mef] positioned ^^^4 rotated as 
 
 The following entries are a small part of transcription of the Formula-table of the Chinese community. They are community/source claims, not automatic independent proofs.
 
-| Table result | Target transformation       | Typical Note | Sub-commands                                                           |
-| ------------ | --------------------------- | ------------ | ---------------------------------------------------------------------- |
-| Square | $(x,y,z) → (x,y+z²,z)$ | The base of algebra | `facing 0~a~ positioned ^^^-a² rotated ~180~ positioned ^^^-a² positioned ~~2a²~` |
-| Short square | $(x,z) → (?,y+z²,z)$ | The base of algebra | `facing 0~a~ positioned ^^^-2a² positioned ~~2a²~` |
-| Shorter multiplication | $(x,y,z) → (?,y+xz,?)$ | The base of algebra | `facing 0 ~a 0 positioned 0~ 0 rotated ~45~ positioned ^^^a² facing ~~-a²/√2 0 positioned ^^^a²` |
-| 2D vector multiplication | $(x,y,z) → (xy,y,zy)$ | scales a plane vector | `facing 0 ~b 0 positioned 0~ 0 positioned ^^-a/2b^ rotated ~180~ positioned ^^-a/2b^ facing 0 0 0 positioned 0 ~a 0 positioned ^^-a^` |
+| Table result             | Target transformation  | Typical Note          | Sub-commands                                                                                                                          |
+| ------------------------ | ---------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Square                   | $(x,y,z) → (x,y+z²,z)$ | The base of algebra   | `facing 0~a~ positioned ^^^-a² rotated ~180~ positioned ^^^-a² positioned ~~2a²~`                                                     |
+| Short square             | $(x,z) → (?,y+z²,z)$   | The base of algebra   | `facing 0~a~ positioned ^^^-2a² positioned ~~2a²~`                                                                                    |
+| Shorter multiplication   | $(x,y,z) → (?,y+xz,?)$ | The base of algebra   | `facing 0 ~a 0 positioned 0~ 0 rotated ~45~ positioned ^^^a² facing ~~-a²/√2 0 positioned ^^^a²`                                      |
+| 2D vector multiplication | $(x,y,z) → (xy,y,zy)$  | scales a plane vector | `facing 0 ~b 0 positioned 0~ 0 positioned ^^-a/2b^ rotated ~180~ positioned ^^-a/2b^ facing 0 0 0 positioned 0 ~a 0 positioned ^^-a^` |
 
 :::tip
 The "a" is one large number, tends to positive infinity in mathematics; the "b" is a small number, tends to zero in mathematics. [See the other page](/infinity-approximation) for more details.
 :::
 
->The Chinese community has developed abundant of formula-table entries, I will integrate them in the future.
-
 There is where CCT became powerful, with these two entries, we can build all mathematical transformations which **can expand by Taylor's formula**.
-
->The reason of it is writing.
 
 ### Appendix
 
 Now you have a basic understanding of CCT, in the forward pages, I will show you the amazing effects and interesting mathematical commands problems which relative to CCT (proven and disproven)
 
 <!--
+The Chinese community has developed abundant of formula-table entries, I will integrate them in the future.
 I only show a small part of the CCT, the full version is too long. If the community allows, I will write a full version on wiki and show all things to public, the Discord is hard to use via Chinese network. After all, science and technology knows no borders!
 -->
