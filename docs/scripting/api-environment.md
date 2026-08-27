@@ -106,11 +106,11 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
 
 ## TypeScript Integration - Community Driven Types
 
-> This section requires basic knowledge typescript and JS eco-system, we highly recommend reading about [Scripting In TypeScript](/scripting/typescript)
+> This section requires a basic knowledge of TypeScript and the JS ecosystem. We highly recommend reading about [Scripting In TypeScript](/scripting/typescript).
 
-Most of the features are already part of the minecraft engine, but it is still good to include proper type safety for miss-use of functions or apis that have different implementation and collide with ECMAScript standard.
+Most of the features are already part of Minecraft's QuickJS engine, but it is still good to include proper type safety to prevent the misuse of functions or APIs that might have different implementations and collide with the ECMAScript standard.
 
-So to strengthen type safety you can use community npm types with typescript or javascript and trigger code editor errors before testing in game.
+So, to strengthen type safety, you can use community npm types with TypeScript or JavaScript and trigger code editor errors before testing in-game.
 
 More about [Bedrock API - Environment Types](https://github.com/bedrock-apis/env-types).
 
