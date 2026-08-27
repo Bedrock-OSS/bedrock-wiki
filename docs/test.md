@@ -144,6 +144,71 @@ Some text...
 -   b
 -   c
 
+## Mermaid
+
+### State Diagram
+
+```mermaid
+stateDiagram-v2
+    noAnimation: play no animation
+    flyAnimation: play fly animation
+    explodeAnimation: play explode animation
+
+    state Ground {
+        noAnimation
+    }
+
+    state Air {
+        flyAnimation
+    }
+
+    state Explode {
+        explodeAnimation
+    }
+
+    direction TB
+    Ground --> Air: Is in air
+    Air --> Ground: Is on ground
+    Ground --> Explode: Is dead
+    Air --> Explode: Is dead
+```
+
+### Flowchart
+
+```mermaid
+flowchart LR
+    A[minecraft:entity] --> B{"has component_groups?"}
+    B -- Yes --> C[Apply events]
+    B -- No --> D[Use base components]
+```
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    Player->>Server: Interact with block
+    Server->>Script: beforeEvents.playerInteractWithBlock
+    Script-->>Server: event.cancel = true
+    Server-->>Player: Interaction cancelled
+```
+
+### Pie Chart
+
+```mermaid
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+
+### Invalid Diagram
+
+```mermaid
+flowchart LR
+    A --> B --> 
+    this is not valid mermaid
+```
+
 ## Molang
 
 ```molang

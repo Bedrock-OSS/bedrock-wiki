@@ -56,6 +56,16 @@
     "prefix": "label",
     "body": "<Label color=\"$1\">$2</Label>"
   },
+  "Insert mermaid diagram": {
+    "scope": "markdown",
+    "prefix": "mermaid",
+    "body": [
+      "```mermaid",
+      "${1:flowchart LR}",
+      "$2",
+      "```"
+    ]
+  },
   "Insert page dumper": {
     "scope": "markdown",
     "prefix": "page dumper",
