@@ -191,6 +191,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 ## Documentation
 
 - [Advanced Molang](/documentation/advanced-molang)
+- [Aim Assist](/documentation/aim-assist)
 - [File Types](/documentation/file-types)
 - [Fog IDs](/documentation/fog-ids)
 - [Material Configuration Description](/documentation/material-config-description)
