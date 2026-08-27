@@ -233,6 +233,47 @@ The above example will render as:
 
 `console.log("Hello World!");`{lang=js}
 
+### Diagrams
+
+The wiki also supports rendering diagrams using [Mermaid](https://mermaid.js.org/). Any code block using the `mermaid` language will be rendered as a diagram instead of highlighted code.
+
+Here is an example of how to use it:
+
+````md
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> Idle
+    Idle --> Moving: is moving
+    Moving --> Idle: is not moving
+    Moving --> Attacking: has target
+    Attacking --> Idle: target lost
+```
+````
+
+The above example will render as:
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> Idle
+    Idle --> Moving: is moving
+    Moving --> Idle: is not moving
+    Moving --> Attacking: has target
+    Attacking --> Idle: target lost
+```
+
+Mermaid supports all sorts of diagram types, like flowcharts, state diagrams, sequence diagrams and pie charts. When writing one, keep the following in mind:
+
+-   Prefer diagrams for things like state machines, event/flow relationships and hierarchies, where a picture is clearer than prose.
+-   Keep diagrams small and focused on one idea.
+-   Always explain the diagram in the surrounding text as well, since the diagram itself is not readable by search engines or screen readers.
+-   Check out the [Mermaid syntax reference](https://mermaid.js.org/intro/syntax-reference.html) for the full syntax and all supported diagram types.
+
+:::tip
+Diagrams are rendered in the reader's browser and automatically follow the wiki's light/dark theme. If a diagram has a syntax error, the page will show the error message together with the raw source instead of the diagram.
+:::
+
 ### Links
 
 If you want to refer to another website, like the Microsoft Docs, you can use links.
