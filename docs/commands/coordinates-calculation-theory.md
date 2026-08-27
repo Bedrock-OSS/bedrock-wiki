@@ -98,7 +98,6 @@ There is where CCT became powerful, with these two entries, we can build all mat
 
 Now you have a basic understanding of CCT, in the forward pages, I will show you the amazing effects and interesting mathematical commands problems which relative to CCT (proven and disproven)
 
-<!-- This page is still writing -->
 <!--
 I only show a small part of the CCT, the full version is too long. If the community allows, I will write a full version on wiki and show all things to public, the Discord is hard to use via Chinese network. After all, science and technology knows no borders!
 -->

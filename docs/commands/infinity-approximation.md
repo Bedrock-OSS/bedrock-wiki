@@ -181,4 +181,3 @@ Then move the two armor stands 500 blocks apart and repeat the procedure. This t
 ## Zero Approximation
 
 Just like the infinity approximation, when something like $\lim\limits_{b \to 0}$ appears, you need to manually assign a value (a small number) to $b$, We call it **Zero approximation** (as known as the *Little number compass*), the basic idea of zero approximation is similar to infinity approximation.
-<!-- This page is still writing -->

@@ -49,9 +49,9 @@ The following transformations related to facing and rotated do not change the ex
 If `facing a b c`, the trigonometric values of $ry$ and $rx$ after the transformation are as follows:
 $$
 \begin{aligned}
-\sin ry \leftarrow \frac{a - x}{\sqrt{(a - x)^2 + (c - z)^2}} \\
+\sin ry \leftarrow \frac{x - a}{\sqrt{(a - x)^2 + (c - z)^2}} \\
 \cos ry \leftarrow \frac{c - z}{\sqrt{(a - x)^2 + (c - z)^2}} \\
-\sin rx \leftarrow \frac{b - y}{\sqrt{(a - x)^2 + (b - y)^2 + (c - z)^2}} \\
+\sin rx \leftarrow \frac{y - b}{\sqrt{(a - x)^2 + (b - y)^2 + (c - z)^2}} \\
 \cos rx \leftarrow \frac{\sqrt{(a - x)^2 + (c - z)^2}}{\sqrt{(a - x)^2 + (b - y)^2 + (c - z)^2}}
 \end{aligned}
 $$
@@ -163,10 +163,10 @@ $$
 
 The following transformations related to facing and rotated do not change the execution position; they only change the view angles. For `facing`, the values of $\boldsymbol{V}$ are as referenced in the following table.
 
-| Facing     | $\boldsymbol{v}$            |
-|------------|-----------------------------|
-| `a b c`    | $(a,b,c)-\boldsymbol{P}$ |
-| `~a ~b ~c` | $(a,b,c)$ |
+| Facing     | $\boldsymbol{v}$                                  |
+| ---------- | ------------------------------------------------- |
+| `a b c`    | $(a,b,c)-\boldsymbol{P}$                          |
+| `~a ~b ~c` | $(a,b,c)$                                         |
 | `^a ^b ^c` | $a\boldsymbol{L}+b\boldsymbol{U}+c\boldsymbol{F}$ |
 
 Then update $\boldsymbol{F},\boldsymbol{U},\boldsymbol{L}$:
@@ -191,7 +191,8 @@ $$
 If `rotated ~a ~b`, perform the following transformations:
 $$
 \begin{aligned}
-\Delta\boldsymbol{R} &= \boldsymbol{M}(a,b) \\
+\Delta\boldsymbol{R} &= \boldsymbol{M}(ry+a,rx+
+b) \\
 \boldsymbol{R} &\rightarrow \boldsymbol{R} \cdot \Delta\boldsymbol{R}
 \end{aligned}
 $$
@@ -215,5 +216,3 @@ There is also an equivalent form:
 $$
 \boldsymbol{v}' = \boldsymbol{v} + (\boldsymbol{k} \times \boldsymbol{v})\sin\theta + \boldsymbol{k} \times (\boldsymbol{k} \times \boldsymbol{v})(1-\cos\theta)
 $$
-
-<!-- This page is still writing -->
