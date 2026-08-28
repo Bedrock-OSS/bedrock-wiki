@@ -82,7 +82,7 @@ _Requires format version [1.26.0](/blocks/block-format-history#_1-26-0) or later
 Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up of multiple parts.
 
 -   `enabled_states` — Array
-    -   Must contain `"minecraft:multi_block_part"` which is described in the table below.
+    -   Must contain `"minecraft:multi_block_part"`{lang=json} which is described in the table below.
 -   `direction` — String
     -   Determines the direction in which parts of the multi-block are placed.
     -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.

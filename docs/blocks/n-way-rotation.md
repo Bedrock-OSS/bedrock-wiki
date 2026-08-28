@@ -12,6 +12,10 @@ mentions:
     - QuazChick
 ---
 
+:::danger KNOWN ISSUE ([MCPE-241952](https://bugs.mojang.com/browse/MCPE-241952))
+N-way rotation is only visible to the player hosting the world, not remote players joining.
+For servers, this means it is not visible to any players.
+:::
 :::tip VISUAL ONLY
 Unlike rotation from the [transformation](/blocks/block-components#transformation) component, features such as [collision box](/blocks/block-components#collision-box) and [selection box](/blocks/block-components#selection-box) will not be affected by N-way rotation as this system only targets block [geometry](/blocks/block-components#geometry).
 This is because N-way rotation may not be axis-aligned which would cause issues for these components.

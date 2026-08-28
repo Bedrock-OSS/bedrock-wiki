@@ -16,6 +16,29 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.50
+
+### Traits
+
+-   Updated `minecraft:multi_block`
+    -   Released horizontal multi-blocks from experimental.
+    -   No longer prevents the `minecraft:block_entity` component from being defined.
+
+### Components
+
+-   Released `minecraft:block_entity` from experimental
+-   Released `minecraft:sound` from experimental
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:block_entity`
+    -   Added `container` parameter which gives the block an inventory that can be accessed by interacting with the block.
+        -   Other methods of container access (e.g. hopper siphoning) are not supported.
+        -   The contents of the container will be dropped when the block is destroyed.
+        -   This parameter cannot be defined at the same time as the `minecraft:crafting_table` component.
+        -   Contains `slot_count` which is the number of slots (`1-54`{lang=js}) in the container.
+
 ## 1.26.40
 
 ### Traits

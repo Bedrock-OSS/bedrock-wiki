@@ -201,7 +201,33 @@ To set the state which determines the block's direction, we will use the `minecr
 }
 ```
 
-### Permutations
+Next, you'll need to decide how you want to apply rotation to the block:
+
+-   If the rotation only needs to be visual, [use N-way rotation](#n-way-rotation-method).
+    -   This is useful when the collision and selections boxes of the block do not need to rotate with the geometry.
+    -   Blocks like carved pumpkins and stonecutters could make use of this method.
+    -   This method will result in simpler a block JSON file.
+-   If the rotation needs to impact other components along with geometry, [use the transformation component](#rotation-transformation-method).
+    -   Blocks like anvils should use this method so that their collision and selection boxes rotate to match the geometry.
+
+### N-Way Rotation Method
+
+Let's use the `n_way_visual_rotation` parameter of the [geometry](/blocks/block-components#geometry) component to apply rotation to the block's model based on this block state.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:geometry": {
+    "identifier": "geometry.directional_block",
+    "n_way_visual_rotation": {
+        "y": "minecraft:cardinal_direction"
+    }
+}
+```
+
+That's it! Now your block will have cardinal orientation.
+
+### Rotation Transformation Method
 
 Rotation makes use of block permutations. Each permutation contains the `minecraft:transformation` component, which allows for cardinal rotation by checking the `minecraft:cardinal_direction` state and applying an appropriate rotation.
 

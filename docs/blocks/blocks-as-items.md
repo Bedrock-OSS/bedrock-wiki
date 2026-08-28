@@ -21,6 +21,8 @@ In order to apply other components, such as a 2D icon for your block, you'll nee
 In order to replace a block item, you will need to create a new item JSON file that has the same identifier as the block.
 
 Your new item will also need the [block placer](/items/item-components#block-placer) component which will allow the item to place the block.
+The `replace_block_item` parameter must be set to `true`, otherwise both the automatic block item and custom block item will exist.
+
 The block placer component will also give the item the 3D appearance of the block by default, however this can be overridden with the [icon](/items/item-components#icon) component to display a 2D sprite.
 
 ### Custom Flower Example
@@ -42,7 +44,7 @@ One example of a situation where replacing the block item is necessary is with f
             "minecraft:material_instances": {
                 "*": {
                     "texture": "wiki:daffodil",
-                    "render_method": "alpha_test"
+                    "render_method": "alpha_test_single_sided"
                 }
             }
         }

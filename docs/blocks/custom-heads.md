@@ -10,6 +10,10 @@ mentions:
     - QuazChick
 ---
 
+:::danger KNOWN ISSUE ([MCPE-241952](https://bugs.mojang.com/browse/MCPE-241952))
+N-way rotation is only visible to the player hosting the world, not remote players joining.
+For servers, this means it is not visible to any players.
+:::
 :::tip FORMAT VERSION 1.26.40
 This tutorial assumes an advanced understanding of blocks and items.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
