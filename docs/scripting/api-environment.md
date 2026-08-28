@@ -13,7 +13,7 @@ mentions:
     - MeItsLars
 ---
 
-Minecraft: Bedrock Edition uses its own version of JavaScript, which is based on QuickJS.
+Minecraft: Bedrock Edition uses a slightly customized QuickJS engine to run your JS scripts, and might not always align with ECMAScript standard (JavaScript).
 It uses the ECMAScript module (ESM) system for organizing and loading code, which allows for a more modular and organized approach to writing scripts for the game.
 
 ## Common Problems
@@ -23,7 +23,7 @@ It uses the ECMAScript module (ESM) system for organizing and loading code, whic
 What people often run into when starting out with Minecraft Scripting is the problem with timing.
 The standards for timing code, as you may know, are the `setTimeout`{lang=js} and `setInterval`{lang=js} functions and their cancel functions.
 
-These standardized methods are used by the frame system where you can set the delay to millisecond precision, but minecraft uses a tick to process changes in the world.
+These standardized methods are commonly used in environments where timing doesn't play a big role, but Minecraft uses a tick with precise rules of execution to process changes in the world.
 That's why these methods are not and will not be available.
 
 Minecraft instead uses the [`system.runTimeout`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/system#runtimeout) and [`system.runInterval`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/system#runinterval) system methods, first added in version 1.19.70, which delay to the precision of one tick.
@@ -93,7 +93,44 @@ To enable these methods that evaluate code, you must add it in the manifest. Thi
 
 -   **_1.21 (Tricky Trials)_**
 
+    -   `__date_clock`{lang=js} - Removal of this global function. It previously returned the current time in microseconds.
     -   `BigInt`{lang=js} – Global support for arbitrary-precision integers (e.g. `123n`{lang=js}).
     -   `Object.hasOwn(obj, prop)`{lang=js} – Checks if `obj`{lang=js} has its own property `prop`{lang=js}.
     -   `Array.prototype.findLast(callbackFn, thisArg?)`{lang=js} – Returns the last item matching the condition.
     -   `Array.prototype.at(index)`{lang=js} – Returns the element at the given `index`{lang=js}.
+
+-  **_1.26 Update_**
+
+    -   `WeakRef`{lang=js} - Added, used for tracking object lifetime, [About WeakRef](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
+    -   `FinalizationRegistry`{lang=js} - Added, used as event handler to run code at the end of object lifetime, [About FinalizationRegistry](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+
+## TypeScript Integration - Community Driven Types
+
+> This section requires a basic knowledge of TypeScript and the JS ecosystem. We highly recommend reading about [Scripting In TypeScript](/scripting/typescript).
+
+Most of the features are already part of Minecraft's QuickJS engine, but it is still good to include proper type safety to prevent the misuse of functions or APIs that might have different implementations and collide with the ECMAScript standard.
+
+So, to strengthen type safety, you can use community npm types with TypeScript or JavaScript and trigger code editor errors before testing in-game.
+
+More about [Bedrock API - Environment Types](https://github.com/bedrock-apis/env-types).
+
+### Basic setup
+
+-   Install the `env-types` package by running the following command from the terminal:
+
+    ```bash
+    npm install --save-dev @bedrock-apis/env-types
+    ```
+
+-   Create a `tsconfig.json` or `jsconfig.json` with the following options as well as any others that you may want to specify.
+
+    ```json
+    {
+        "compilerOptions": {
+            // ... your properties
+            "noLib": true,
+            "types": ["@bedrock-apis/env-types"]
+        },
+        // ... your properties
+    }
+    ```
