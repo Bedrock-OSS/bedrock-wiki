@@ -90,7 +90,7 @@ If your project needs other module to run your code, add the other dependencies 
 
 -   `@minecraft/server`:
     -   [`2.9.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0) (Latest Version)
-    -   [`2.8.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0)
+    -   [`2.8.0`](https://www.npmjs.com/package/@minecraft/server/v/2.8.0)
     -   [`2.7.0`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0)
     -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0)
     -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0)
