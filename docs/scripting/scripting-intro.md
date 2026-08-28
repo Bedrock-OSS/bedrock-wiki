@@ -89,8 +89,8 @@ If your project needs other module to run your code, add the other dependencies 
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. Most features are included in stable APIs, and will not break or be changed when Minecraft is updated.
 
 -   `@minecraft/server`:
-    - [`2.9.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0) (Latest Version)
-    - [`2.8.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0)
+    -   [`2.9.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0) (Latest Version)
+    -   [`2.8.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0)
     -   [`2.7.0`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0)
     -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0)
     -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0)
@@ -121,7 +121,7 @@ If your project needs other module to run your code, add the other dependencies 
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0)
 
 -   `@minecraft/server-ui`:
-    -   [`2.1.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0) (Latest version, requires `@minecraft/server@2.1.0` or above)
+    -   [`2.1.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0) (Latest version, requires `@minecraft/server@2.0.0` or above)
     -   [`2.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0) (Latest version, requires `@minecraft/server@2.0.0` or above)
     -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0) (Requires `@minecraft/server@1.3.0` or above)
     -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.2.0) (Requires `@minecraft/server@1.2.0` or above)
