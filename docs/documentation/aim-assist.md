@@ -15,7 +15,7 @@ Requires format version `1.21.50` or higher. Additionally, aim assist doesn't su
 
 The categories file defines the priority weights for blocks and entities. A higher weight means higher priority for the aim assist.
 
-<CodeHeader>BP/aim_assist/categories/camera_category.json</CodeHeader>
+<CodeHeader path="BP/aim_assist/categories/wiki_categories.json" />
 
 ```json
 {
@@ -54,6 +54,11 @@ Specific entries inside `blocks` or `entities` override their respective default
 
 To make the aim assist heavily favor entities over blocks (useful for combat):
 
+<CodeHeader
+    path="BP/aim_assist/categories/wiki_categories.json"
+    breadcrumbs="minecraft:aim_assist_categories/categories/0"
+/>
+
 ```json
 "priorities": {
     "block_default": 1, // only choose blocks when an entity can't be found
@@ -70,7 +75,7 @@ To make the aim assist heavily favor entities over blocks (useful for combat):
 
 The preset file ties everything together — it controls which category is used by default, per item, and when the hand is empty.
 
-<CodeHeader>BP/aim_assist/presets/camera_preset.json</CodeHeader>
+<CodeHeader path="BP/aim_assist/presets/wiki_preset.json" />
 
 ```json
 {
@@ -114,6 +119,9 @@ This lets you use script logic to control **when** and **on whom** the aim assis
 
 You can directly activate your aim assist using your camera preset:
 
+<CodeHeader path="BP/cameras/presets/wiki_preset.json" />
+
+```json
 {
     "format_version": "1.20.10",
     "minecraft:camera_preset": {
@@ -125,3 +133,4 @@ You can directly activate your aim assist using your camera preset:
         }
     }
 }
+```
