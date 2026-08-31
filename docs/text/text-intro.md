@@ -16,6 +16,7 @@ mentions:
     - SmokeyStack
     - Sprunkles
     - QuazChick
+    - Cra-ZGuy
 ---
 
 Minecraft is a game with fully localized text in languages all over the world. To achieve this, Minecraft employs a system where internal **translation keys** are assigned values on a per-language basis. Minecraft will generate translation keys for custom entities, items, and blocks, and it is up to us to assign them a localized name in our resource pack.
@@ -37,11 +38,17 @@ Minecraft supports 29 languages currently, as described in [§ Vanilla Languag
 
 ### Format
 
-The format for a language file is rather straightforward. Translations are supplied as key-value pairs separated by an equals sign (`=`), the key being a translation key and the value being a string. Values cannot contain newline characters.
+The format for a language file is rather straightforward. Translations are supplied as key-value pairs separated by an equals sign (`=`), the key being a translation key and the value being a string.
 
 ```lang
 wiki.example_translation.line_1=The first line!
 wiki.example_translation.line_2=Some more information following the first line.
+```
+
+Line breaks may be added to a value with the special sequence `~LINEBREAK~`. Literal newline characters cannot be used.
+
+```lang
+wiki.example_translation.multiline=The first line!~LINEBREAK~The second line!
 ```
 
 Comments may be added with two pound signs (`##`), either as line comments or in-line comments. All text after the pound signs are a comment until the next line.
