@@ -6,6 +6,7 @@ mentions:
     - KalmeMarq
     - SirLich
     - solvedDev
+    - PandaMine5       
     - Joelant05
     - GTB3NW
     - stirante
@@ -516,7 +517,7 @@ For example,in setting that is accessibility and in inventory,the construction,e
 | `progress_bar_renderer`       | Draws a progress bar. It has more than one type                                                                 |
 | `3d_structure_renderer`       | Renders the structure block structure                                                                           |
 | `splash_text_renderer`        | Gets and renders a random splash text from the `splashes.json` file                                             |
-| `hover_text_renderer`         | Draws a tooltip                                                                                                 |
+| `hover_text_renderer`         | Draws a tooltip when hovering over item                                                                                                |
 | `ui_holo_cursor`              |                                                                                                                 |
 | `panorama_renderer`           | It's not the panoramas that appear behind the menus. It's the panorama of the worlds on the store.              |
 
@@ -550,20 +551,20 @@ For example,in setting that is accessibility and in inventory,the construction,e
 | ----------------------------------- | :-----: | ------------------------------------------------------------------------- |
 | render_only_when_topmost            | boolean | Only render the screen if it's the most top screen in the screen stack    |
 | screen_not_flushable                | boolean |                                                                           |
-| always_accepts_input                | boolean |                                                                           |
+| always_accepts_input                | boolean | Makes UI screen always accept any kind of input                                                                         |
 | render_game_behind                  | boolean | Doesn't prevent screen below of being able to receive input from the user |
 | absorbs_input                       | boolean |                                                                           |
 | is_showing_menu                     | boolean |                                                                           |
 | is_modal                            | boolean | It's a screen modal                                                       |
-| should_steal_mouse                  | boolean | Captures the cursor and hides it                                          |
-| low_frequency_rendering             | boolean | Uses less memory to render the screen                                     |
-| screen_draws_last                   | boolean | It's the last screen to be drawn/rendered                                 |
-| vr_mode                             | boolean |                                                                           |
+| should_steal_mouse                  | boolean | Whether to hide mouse cursor on this UI screen                                          |
+| low_frequency_rendering             | boolean | Whether to force game to use less `RAM Memory` to render the screen                                     |
+| screen_draws_last                   | boolean | If it's the last screen to be drawn/rendered                                 |
+| vr_mode                             | boolean | ???                                                                       |
 | force_render_below                  | boolean | Renders bottom screens below current screen in the screen stack           |
-| send_telemetry                      | boolean |                                                                           |
-| close_on_player_hurt                | boolean | Close the screen is the player takes damage                               |
-| cache_screen                        | boolean |                                                                           |
-| load_screen_immediately             | boolean |                                                                           |
+| send_telemetry                      | boolean | ???                                                                     |
+| close_on_player_hurt                | boolean | Whether to close UI screen when player takes damage                               |
+| cache_screen                        | boolean | Whether to cache UI screen's elements or not. Causes `CPU` overhead when misused on small UI screens.                                                                    |
+| load_screen_immediately             | boolean | Forces game to load screen immediately if `true`                                                                   |
 | gamepad_cursor                      | boolean |                                                                           |
 | gamepad_cursor_deflection_mode      | boolean |                                                                           |
 | should_be_skipped_during_automation | boolean |                                                                           |
