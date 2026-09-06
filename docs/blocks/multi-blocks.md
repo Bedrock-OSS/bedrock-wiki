@@ -129,18 +129,20 @@ We can do this using the [`permutations`](/blocks/block-permutations) array, wit
                 }
             }
         },
-        "permutations": {
-            "condition": "q.block_state('minecraft:multi_block_part') == 1", // Checks for part 1
-            "components": {
-                // Visuals for part 1
-                "minecraft:geometry": "geometry.example_top",
-                "minecraft:material_instances": {
-                    "*": {
-                        "texture": "wiki:example_top"
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:multi_block_part') == 1", // Checks for part 1
+                "components": {
+                    // Visuals for part 1
+                    "minecraft:geometry": "geometry.example_top",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "wiki:example_top"
+                        }
                     }
                 }
             }
-        }
+        ]
     }
 }
 ```
