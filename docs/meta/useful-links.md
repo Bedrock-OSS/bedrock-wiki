@@ -46,6 +46,7 @@ Important links have a ⭐.
 -   [Minecraft Realm Hub](https://discord.gg/realmhub)
 -   [Minecraft RTX](http://discord.gg/vNWc3Hh)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
+-   [Molang Animations](https://discord.gg/B9w6JJ3We)
 
 ## Software (installed)
 
