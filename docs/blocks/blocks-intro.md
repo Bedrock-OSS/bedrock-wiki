@@ -250,18 +250,15 @@ With the following `terrain_texture.json` data:
 
 ## Applying Sounds
 
-The mining sound, step on sound, breaking sound, and placement sound of custom blocks can be determined by the `sound` parameter in `RP/blocks.json`.
+The mining sound, step on sound, breaking sound, and placement sound of custom blocks can be determined by using the [`minecraft:sound`](/blocks/block-components#sound) component.
 
 Learn more about block sounds [here](/blocks/block-sounds)!
 
-<CodeHeader path="RP/blocks.json" />
+<CodeHeader path="BP/blocks/custom_block.json" breadcrumbs="minecraft:block/components" />
 
 ```json
-{
-    "format_version": "1.21.40",
-    "wiki:custom_block": {
-        "sound": "grass"
-    }
+"minecraft:sound": {
+    "sound": "grass"
 }
 ```
 

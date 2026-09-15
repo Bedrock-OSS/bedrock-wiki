@@ -1095,6 +1095,26 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 }
 ```
 
+### Sound
+
+Determines the sounds that the block makes, such as the mining sound, step on sound, breaking sound, and placement sound. Learn more about block sounds [here](/blocks/block-sounds).
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
+#### Object Format {#sound-object}
+
+-   `sound` — String
+    -   The ID of the sound type to use from `RP/sounds.json`.
+    -   This parameter is equivalent to the `sound` parameter in `RP/blocks.json`.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:sound": {
+    "sound": "wood"
+}
+```
+
 ### Support
 
 Defines the block's ability to support other blocks that are attached to it.
