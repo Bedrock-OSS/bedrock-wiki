@@ -64,7 +64,7 @@ However, given that mining progress is stored for each part individually, progre
 To register a block type as a multi-block, it must have the [`minecraft:multi_block`](/blocks/block-traits#multi-block) trait.
 This block trait allows you to define how many parts your multi-block has and the direction in which it extends.
 
-**Custom multi-blocks can have 2-4 parts and are currently only able to extend upwards or downwards, not horizontally.**
+**Custom multi-blocks can have 2-4 parts.**
 
 <CodeHeader path="BP/blocks/multi_block_example.json" />
 
@@ -147,6 +147,28 @@ We can do this using the [`permutations`](/blocks/block-permutations) array, wit
 }
 ```
 
+### Horizontal Multi-Blocks
+
+You may instead want your multi-block to extend horizontally in the cardinal direction the player is facing.
+This can be achieved by setting the `direction` parameter to any horizontal direction (the exact value is ignored as long as it isn't `"up"`{lang=json} or `"down"`{lang=json}) and enabling the `minecraft:cardinal_direction` state.
+
+<CodeHeader path="BP/blocks/multi_block_example.json" breadcrumbs="minecraft:block/description" />
+
+```json
+"traits": {
+    // This trait causes the block to be treated as a multi-block
+    "minecraft:multi_block": {
+        "enabled_states": ["minecraft:multi_block_part"],
+        "direction": "north", // Makes this multi-block horizontal
+        "parts": 2
+    },
+    // This trait enables cardinal direction
+    "minecraft:placement_direction": {
+        "enabled_states": ["minecraft:cardinal_direction"]
+    }
+}
+```
+
 ### Block Item
 
 By default, the block will only display its first part (with index 0) when represented as an item, leading to the block looking cut-off in the inventory.
@@ -161,7 +183,6 @@ This issue can be overcome in two ways:
 
 ### Components
 
--   The `minecraft:block_entity` component is not supported by multi-blocks.
 -   For the [`minecraft:geometry`](/blocks/block-components#geometry) component, the `n_way_visual_rotation` parameter is not supported.
 
 The following components may not be specified in the [`permutations`](/blocks/block-permutations) array of a multi-block definition so can only be applied in the root `components` object.

@@ -59,7 +59,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:multi_block`
     -   Updated `direction` parameter to support horizontal directions (`"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} and `"east"`{lang=json}).
-    -   If the `direction` parameter is omitted and the block has the `minecraft:cardinal_direction` state enabled, the parts of the multi-block will be placed in the direction of that state.
+    -   If the `direction` parameter is set to a horizontal direction and the block has the `minecraft:cardinal_direction` state enabled, the parts of the multi-block will be placed in the direction of that state.
 
 ### Components
 

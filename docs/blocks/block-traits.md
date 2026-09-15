@@ -85,7 +85,7 @@ Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up 
     -   Must contain `"minecraft:multi_block_part"`{lang=json} which is described in the table below.
 -   `direction` — String
     -   Determines the direction in which parts of the multi-block are placed.
-    -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
+    -   May be set to `"down"`{lang=json}, `"up"`{lang=json}, `"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} or `"east"`{lang=json}.
 -   `parts` — Integer (`2-4`{lang=js})
     -   Determines the number of blocks that make up the multi-block.
     -   This controls how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
