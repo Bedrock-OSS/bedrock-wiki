@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-::: tip FORMAT VERSION 1.26.40
+::: tip FORMAT VERSION 1.26.50
 This tutorial assumes a good understanding of blocks and basic knowledge of scripting.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -32,7 +32,7 @@ It includes the rotation for each permutation of your trapdoor, meaning it can b
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_trapdoor",
@@ -102,6 +102,9 @@ It includes the rotation for each permutation of your trapdoor, meaning it can b
             // Prevent adjacent blocks from connecting when the trapdoor is closed
             "minecraft:connection_rule": {
                 "accepts_connections_from": "none"
+            },
+            "minecraft:sound": {
+                "sound": "wood"
             },
             "minecraft:instrument_sound": {
                 "up": "note.bassattack"
@@ -277,7 +280,7 @@ This will be the geometry used for your custom trapdoors.
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:geometry": [
         {
             "description": {
