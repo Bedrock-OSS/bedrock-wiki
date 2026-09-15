@@ -71,6 +71,25 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ## List of Vanilla Components
 
+### Block Entity
+
+Associates a block entity with the block which is used to store additional data beyond the block's [permutation](/blocks/block-permutations) and [queued ticks](#tick).
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
+#### Object Format {#block-entity-object}
+
+-   `dynamic_properties` — Boolean (optional)
+    -   Whether dynamic properties may be added to the block using scripts.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:block_entity": {
+    "dynamic_properties": true
+}
+```
+
 ### Chest Obstruction
 
 Determines when the opening of chests placed below the block should be obstructed.
