@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 This tutorial assumes a good understanding of block visuals and block permutations.
 Check out the [block visuals guide](/blocks/block-visuals-intro) before starting.
 :::
@@ -39,7 +39,7 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_fence",
@@ -90,6 +90,12 @@ _Note that the block description does not have the `menu_category` parameter as 
             // Allows leads to be attached to the fence
             "minecraft:leashable": {
                 "offset": [0, 12, 0]
+            },
+            "minecraft:sound": {
+                "sound": "wood"
+            },
+            "minecraft:instrument_sound": {
+                "up": "note.bassattack"
             },
             "minecraft:selection_box": {
                 "origin": [-2, 0, -2],

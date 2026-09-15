@@ -14,7 +14,7 @@ mentions:
 N-way rotation is only visible to the player hosting the world, not remote players joining.
 For servers, this means it is not visible to any players.
 :::
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 This tutorial assumes an advanced understanding of blocks and items.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -60,7 +60,7 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_head"
@@ -110,6 +110,9 @@ _Note that the block description does not have the `menu_category` parameter as 
                         "on_liquid_touches": "popped" // Break and drop as an item when water flows into the block
                     }
                 ]
+            },
+            "minecraft:sound": {
+                "sound": "stone"
             },
             // Visuals
             "minecraft:material_instances": {

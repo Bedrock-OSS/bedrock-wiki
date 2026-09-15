@@ -13,17 +13,24 @@ mentions:
 
 ## Applying Sounds
 
-The `sound` parameter in `RP/blocks.json` is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound.
+The [`minecraft:sound`](/blocks/block-components#sound) component is used to determine general block sounds, such as the mining sound, step on sound, breaking sound, and placement sound.
 
-You can apply a set of sounds to your block using this parameter:
+You can apply a set of sounds to your block using this component:
 
-<CodeHeader path="RP/blocks.json" />
+<CodeHeader path="BP/blocks/chestnut_wood.json" />
 
 ```json
 {
-    "format_version": "1.21.40",
-    "wiki:chestnut_log": {
-        "sound": "wood" // Define sound here
+    "format_version": "1.21.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "wiki:chestnut_log"
+        },
+        "components": {
+            "minecraft:sound": {
+                "sound": "wood" // Define sound here
+            }
+        }
     }
 }
 ```
@@ -38,16 +45,13 @@ First, let's choose a name for the custom block sounds.
 We **strongly** recommend giving this identifier a namespace to avoid incompatibilities with other add-ons.
 
 For example, let's imagine we were creating a custom chestnut woodset; we would name the custom block sound `wiki:chestnut_wood`.
-This is the `sound` value that should be used in `RP/blocks.json`.
+This is the `sound` value that should be used in the sound component.
 
-<CodeHeader path="RP/blocks.json" />
+<CodeHeader path="BP/blocks/chestnut_wood.json" breadcrumbs="minecraft:block/components" />
 
 ```json
-{
-    "format_version": "1.21.40",
-    "wiki:chestnut_log": {
-        "sound": "wiki:chestnut_wood"
-    }
+"minecraft:sound": {
+    "sound": "wiki:chestnut_wood"
 }
 ```
 

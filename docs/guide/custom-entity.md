@@ -51,7 +51,7 @@ This is a basic overview of the file:
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:entity": {
         "description": { ... },
         "components": { ... }

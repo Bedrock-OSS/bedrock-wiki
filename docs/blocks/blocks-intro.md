@@ -26,7 +26,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 This page discusses basic block features. You can learn more about other block components [here](/blocks/block-components).
 :::
 :::danger NOTE
@@ -41,7 +41,7 @@ This tutorial will cover how to create basic blocks for the stable version of Mi
 
 Block definitions are structured similarly to entities: they contain a description and a list of components that defines the block's behavior.
 
-Unlike entities, blocks do not have a resource definition other than in `RP/blocks.json`.
+Unlike entities, blocks do not have a resource pack definition.
 
 Below is the **minimum** behavior-side code to get a custom block into the creative inventory.
 
@@ -49,7 +49,7 @@ Below is the **minimum** behavior-side code to get a custom block into the creat
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -82,7 +82,7 @@ Let's configure our own functionality!
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_block",
@@ -250,18 +250,15 @@ With the following `terrain_texture.json` data:
 
 ## Applying Sounds
 
-The mining sound, step on sound, breaking sound, and placement sound of custom blocks can be determined by the `sound` parameter in `RP/blocks.json`.
+The mining sound, step on sound, breaking sound, and placement sound of custom blocks can be determined by using the [`minecraft:sound`](/blocks/block-components#sound) component.
 
 Learn more about block sounds [here](/blocks/block-sounds)!
 
-<CodeHeader path="RP/blocks.json" />
+<CodeHeader path="BP/blocks/custom_block.json" breadcrumbs="minecraft:block/components" />
 
 ```json
-{
-    "format_version": "1.21.40",
-    "wiki:custom_block": {
-        "sound": "grass"
-    }
+"minecraft:sound": {
+    "sound": "grass"
 }
 ```
 

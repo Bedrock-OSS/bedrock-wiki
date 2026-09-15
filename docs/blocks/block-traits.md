@@ -12,7 +12,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 Before you learn about block traits, you should be confident with [block states](/blocks/block-states).
 
 When working with block states, ensure that the `min_engine_version` in your pack manifest is 1.20.20 or higher.
@@ -26,7 +26,7 @@ Block traits can be used to apply vanilla block states (such as direction) to yo
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_slab",
@@ -85,7 +85,7 @@ Causes the block to be treated as a [multi-block](/blocks/multi-blocks) made up 
     -   Must contain `"minecraft:multi_block_part"`{lang=json} which is described in the table below.
 -   `direction` — String
     -   Determines the direction in which parts of the multi-block are placed.
-    -   May be set to `"up"`{lang=json} or `"down"`{lang=json}.
+    -   May be set to `"down"`{lang=json}, `"up"`{lang=json}, `"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} or `"east"`{lang=json}.
 -   `parts` — Integer (`2-4`{lang=js})
     -   Determines the number of blocks that make up the multi-block.
     -   This controls how many blocks are placed as well as the range of valid values for the `minecraft:multi_block_part` state.
