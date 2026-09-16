@@ -26,7 +26,6 @@ Note for this list that a namespace of `minecraft:` is assumed for all items & b
 
 | Name                                   |  ID   |
 | -------------------------------------- | :---: |
-| straw_bed (bottom)                     | -1198 |
 | pink_concrete_double_slab              | -1246 |
 | magenta_concrete_double_slab           | -1245 |
 | purple_concrete_double_slab            | -1244 |
