@@ -450,6 +450,8 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 - [Intro to World Generation](/world-generation/world-generation-intro)
 - [Biomes](/world-generation/biomes)
+- [Client Biomes](/world-generation/client-biomes)
+- [Dimensions](/world-generation/dimensions)
 - [Feature Types](/world-generation/feature-types)
 - [Jigsaw Structures](/world-generation/jigsaw-structures)
 
