@@ -51,6 +51,7 @@ _Note that the block description does not have the `menu_category` parameter as 
         },
         "components": {
             "minecraft:tags": [
+                "one_way_collidable",
                 "minecraft:has_fence_connections",
                 "minecraft:is_axe_item_destructible"
             ],
