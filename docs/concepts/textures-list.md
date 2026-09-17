@@ -1,5 +1,6 @@
 ---
 title: textures_list.json
+category: Pack Files
 mentions:
     - SirLich
     - solvedDev
