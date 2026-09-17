@@ -22,6 +22,7 @@ mentions:
     'BP/blocks/example.block.json',
     'BP/cameras/presets/example.json',
     'BP/dialogue/example.dialogue.json',
+    'BP/dimensions/example.dimension.json',
     'BP/entities/example.se.json',
     'BP/feature_rules/example.json',
     'BP/features/example.json',

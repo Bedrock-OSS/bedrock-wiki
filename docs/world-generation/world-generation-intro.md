@@ -21,22 +21,19 @@ mentions:
 This page is somewhat out-dated, and contains limited information. For the most up-to-date and comprehensive information, view the other pages in this section.
 :::
 
-You can change the world's generation via Add-ons. The needed folders in the Behavior pack for these are:
+You can change the world's generation via Add-ons. The behavior pack folders involved are:
 
-`structures`, `features`, `feature_rules`, `biomes`, and `worldgen`. It's quite self-explanatory: you can store your .mcstructure files from (or for) structure blocks in `structures`, biome files in `biomes`, jigsaw structure files in `worldgen` and its subfolders, terrain features, like ores, in `features` and the rules for their generation in `feature_rules`. Let's go over adding a custom biome first.
+`biomes`, `dimensions`, `features`, `feature_rules`, `structures` and `worldgen`. Biome files go in `biomes`, custom dimension files in `dimensions`, terrain features such as ores in `features` and the rules for placing them in `feature_rules`, `.mcstructure` files from structure blocks in `structures`, and jigsaw structure files in `worldgen` and its subfolders. Biome visuals such as fog and colours live separately in the resource pack's `biomes` folder as [client biomes](/world-generation/client-biomes).
 
-_Note: it might be easier to create biomes using bridge., a Visual software for Add-on creation (also linked in Links and Contact), since the official Documentation is rather incomplete. You can also generate all example files of vanilla biomes, features and feature rules for reference, like shown here:_
-
-![](gen_coal_ore.png)
-_Generating a coal_ore feature using bridge._
-
-However, bridge. is not required.
+_Note: the vanilla behavior and resource packs are the best reference for every file type on this page. They are published in the [bedrock-samples](https://github.com/Mojang/bedrock-samples) repository, and editors such as [bridge.](https://bridge-core.app/) can generate them for you._
 
 ---
 
 ## Custom Biomes
 
-<CodeHeader path="BP/biomes/cold_biome.json" />
+A biome decides which blocks make up the surface, its climate, and which tags it carries. Custom biomes generate by replacing a share of an existing vanilla biome's area.
+
+<CodeHeader path="BP/biomes/cold_biome.biome.json" />
 
 ```json
 {
@@ -48,80 +45,85 @@ However, bridge. is not required.
         "components": {
             "minecraft:climate": {
                 "downfall": 0.7,
-                "snow_accumulation": [0.6, 0.9],
-                "temperature": 15.0
+                "snow_accumulation": [0.125, 0.5],
+                "temperature": -0.3
             },
-            "minecraft:surface_parameters": {
-                "sea_floor_depth": 7,
-                "sea_floor_material": "minecraft:blue_ice",
-                "foundation_material": "minecraft:cobblestone",
-                "mid_material": "minecraft:minecraft:concrete",
-                "top_material": "minecraft:glass",
-                "sea_material": "minecraft:water"
+            "minecraft:surface_builder": {
+                "builder": {
+                    "type": "minecraft:overworld",
+                    "sea_floor_depth": 7,
+                    "sea_floor_material": "minecraft:blue_ice",
+                    "foundation_material": "minecraft:cobblestone",
+                    "mid_material": "minecraft:packed_ice",
+                    "top_material": "minecraft:snow",
+                    "sea_material": "minecraft:water"
+                }
             },
             "minecraft:replace_biomes": {
                 "replacements": [
                     {
-                        "amount": 0.5,
-                        "noise_frequency_scale": 50,
                         "dimension": "minecraft:overworld",
-                        "targets": ["minecraft:plains"]
+                        "targets": ["plains"],
+                        "amount": 0.5,
+                        "noise_frequency_scale": 50
                     }
                 ]
             },
             "minecraft:tags": {
-                "tags": ["cold_biome"]
+                "tags": ["overworld", "monster", "wiki:cold_biome"]
             }
         }
     }
 }
 ```
 
--   Set `format_version` to 1.26.50: it's the latest biome file version as of the current release.
--   `description` takes only one value: `identifier`.
--   `components` is just what you'd expect: something applied to the biome at default. let's look through them:
--   `minecraft:climate` controls everything climate-wise.
--   `downfall` is how often it'll be raining or snowing. 0.0 is for absolutely no rain (like a desert) and 1.0 should mean constant rain.
--   `temperature` is used to define things like water freezing and rain turning into snow.
+-   `format_version` is `1.26.50`, the version the current vanilla biome files use.
+-   `description` takes only one value: `identifier`, which must be namespaced.
+-   `minecraft:climate` controls the weather. `temperature` decides whether rain falls as snow and whether water freezes, `downfall` is how much it rains, and `snow_accumulation` is how many snow layers can pile up in steps of `0.125`.
+-   `minecraft:surface_builder` chooses the blocks the terrain is made of. `top_material` is the topmost block, `mid_material` sits between the top and the `foundation_material` that fills the rest, and the `sea_*` fields cover anything below sea level.
+-   `minecraft:replace_biomes` is what makes the biome generate. Each rule takes a share (`amount`) of the listed vanilla `targets` in a `dimension` and hands it to your biome. Without this component the biome never appears on its own.
+-   `minecraft:tags` are how everything else finds your biome. You can test for a tag in spawn rules, feature rules, loot tables, entity filters and Molang queries.
 
-**You can generate default biome files for reference using bridge.**
+Custom biomes cannot change the shape of the terrain, only what it is made of and what lives in it. The full list of components, all surface builder types and the rules for Nether replacement are on the [Biomes](/world-generation/biomes) page. Fog, sky and water colours, music and ambient sounds are set in a matching [client biome](/world-generation/client-biomes) in the resource pack.
 
--   `overworld_surface` controls blocks generated.
--   `floor_depth` is how deep down lakes and rivers go in blocks.
--   `sea_floor_material` defines the material to be used when generating the river and lake's floor.
--   `foundation_material` is the material to be used approximately between y=5 and y=50. For a desert, for example, it's stone.
--   `sea_material` is the material used as show liquid in lakes, rivers, oceans, etc. For example, in all Overworld biomes, this is set to "minecraft:water".
--   `top_material` defines the material for the highest level. E.g for Plains it's grass.
--   `mid_material` is the layer between 'top' and 'foundation'. For Plains it's dirt.
--   `overworld_height` defines how the Biome will look terrain-wise.
+Your custom biome is now complete!
 
-DO NOT use both `noise_type` and `noise_params` at the same time. `noise_params` is an array of the top level of noise and the lowest level of noise allowed in the biome.
+---
 
-![](non_smooth_noise_transition.jpg)
-_A non-smooth transition between the same biome, generated with noise_params as [0.1, 0,1] and then [1.0, 1.0]._
+## Custom Dimensions
 
--   If you want to use `noise_type`, however, you will be presented with a few pre-generated types of noise. You will probably know how some of them look from the Vanilla game. Here's the list:
+A dimension file defines a new space outside the Overworld, Nether and End. Custom dimensions currently only support void generation, so they are empty until you fill them, and players are moved in and out with the Script API.
 
-`beach, default, extreme, taiga, ocean, mountains, default_mutated, deep_ocean, lowlands, less_extreme, stone_beach, swamp, river, mushroom`.
-
--   `minecraft:replace_biomes` is the most important component of all. It tells the game where to place custom biomes in replacement of vanilla biomes at a percentage rate.
-
--   And, last but not least, BIOME TAGS! They're very simple, but useful. You can set however many of the vanilla or custom tags you want by adding them in this format in the `minecraft:tags` component:
-
-<CodeHeader breadcrumbs="minecraft:biome/components" />
+<CodeHeader path="BP/dimensions/void_arena.json" />
 
 ```json
-"minecraft:tags": {
-    "tags": [
-        "overworld",
-        "wiki:custom_tag"
-    ]
+{
+    "format_version": "1.26.50",
+    "minecraft:dimension": {
+        "description": {
+            "identifier": "wiki:void_arena"
+        },
+        "components": {
+            "minecraft:generation": {
+                "generator_type": "void"
+            },
+            "minecraft:dimension_height": {
+                "min_y": -64,
+                "height_range": 384
+            },
+            "minecraft:default_biome": {
+                "biome": "wiki:cold_biome"
+            }
+        }
+    }
 }
 ```
 
-Then, you can test for your tag in _environment_sensors_, _filters_, _has_biome_ tests, _spawn rules_, and more.
+-   `minecraft:generation` is required and `void` is the only generator type.
+-   `minecraft:dimension_height` sets the bottom of the dimension and how tall it is, within the world limits of -512 to 512.
+-   `minecraft:default_biome` fills the dimension with one biome, which can be a custom biome such as the one above.
 
-Your custom biome is now complete!
+See the [Dimensions](/world-generation/dimensions) page for the full format and a script example that builds a platform and teleports players in.
 
 ---
 
@@ -138,7 +140,7 @@ Let's make our `wiki:blocky` custom block generate as an ore for the tutorial's 
 1. _Add new file>features>diamond_ore and Add new file>feature_rules>diamond_ore_.
 1. Now I'll save the files and open them in my Code Editor and make the necessary modifications.
 
-_You could've easily just written the files from scratch or copied them from somewhere without using bridge. in case you are having trouble installing it. **One place to find the Vanilla Files are the [Example Packs](https://www.minecraft.net/en-us/addons), another, a more complete one is [bridge.'s repository](https://github.com/bridge.-core/bridge../tree/master/static/vanilla)**._
+_You can also write the files from scratch or copy them from the vanilla behavior pack in the [bedrock-samples](https://github.com/Mojang/bedrock-samples) repository, which is the complete and current reference._
 
 ## Features
 
@@ -335,8 +337,9 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 
 **What you've done:**
 
--   [x] Created you very first biome.
+-   [x] Created your very first biome.
+-   [x] Defined a custom dimension.
 -   [x] Made your very first ore generate naturally.
--   [x] Learned to use bridge. for vanilla files generation and referencing.
+-   [x] Learned where to find the vanilla files for reference.
 -   [x] Learned about other Custom Generation methods.
 -   [x] Created custom structures.
