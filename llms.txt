@@ -184,6 +184,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Overwriting Assets](/concepts/overwriting-assets)
 - [Shaders](/concepts/shaders)
 - [Sounds](/concepts/sounds)
+- [Sounds (Server)](/concepts/server-sounds)
 - [Subpacks](/concepts/subpacks)
 - [Texture Atlases](/concepts/texture-atlases)
 - [textures_list.json](/concepts/textures-list)
