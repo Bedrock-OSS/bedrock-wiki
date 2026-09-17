@@ -1,5 +1,6 @@
 ---
 title: contents.json
+category: Pack Files
 description: A file that lists every file in your pack.
 mentions:
     - MedicalJewel105

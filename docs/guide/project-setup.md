@@ -142,6 +142,10 @@ Call the file `manifest.json` and paste the following code into the file to begi
 
 ### Manifest Explained
 
+:::tip
+Only the fields used in this guide are explained here. For every field the manifest supports, including dependencies, capabilities, subpacks and pack settings, see the [manifest.json](/concepts/manifest) reference.
+:::
+
 -   `format_version` defines what version of manifest JSON format you are using. Version 3 is the most recent stable version; use it.
 
 -   `name` is the name of your behavior pack. `description` will show up under it in-game.

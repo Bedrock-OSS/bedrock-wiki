@@ -28,6 +28,7 @@
 /concepts/mcfunction: /commands/mcfunction
 /concepts/rawtext: /text/rawtext
 /concepts/render-controller: /visuals/render-controller
+/concepts/subpacks: /concepts/manifest#subpacks
 /concepts/text-and-translations: /text/text-intro
 /concepts/texture-list: /concepts/textures-list
 
@@ -43,7 +44,7 @@
 /documentation/menu-categories: /items/item-catalog
 /documentation/projectiles: /entities/projectiles
 /documentation/runtime-identifier: /entities/runtime-identifier
-/documentation/subpacks: /concepts/subpacks
+/documentation/subpacks: /concepts/manifest#subpacks
 /documentation/tellraw: /text/rawtext
 
 /entities/entities-intro: /entities/entity-intro-bp
@@ -51,6 +52,8 @@
 /entities/entity-transforms: /entities/coordinate-space-conversion
 /entities/introduction-to-aec: /entities/area-effect-clouds
 /entities/npc-dialogs: /entities/npc-dialogue
+
+/guide/advancedmanifest: /concepts/manifest
 
 /items/3d-items: /items/attachables
 /items/custom-pottery-sherd: /items/custom-pottery-sherds
