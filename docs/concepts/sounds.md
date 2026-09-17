@@ -57,6 +57,10 @@ Sound files themselves are added inside of the `sounds` folder, and can be any o
 
 Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing.
 
+:::tip
+Behavior packs can also contain a `BP/sounds/sound_definitions.json` file. Despite the shared name, that file has a different format and purpose: it attaches metadata such as duration and music info to sounds played from script. See [Sounds (Server)](/concepts/server-sounds).
+:::
+
 :::warning
 New files referenced by file path, such as sounds, DO need a complete client restart to load. This means that if sounds don't work, you should restart your entire MC client rather than just reloading the world.
 :::

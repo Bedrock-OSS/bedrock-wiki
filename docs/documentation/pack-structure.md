@@ -33,6 +33,7 @@ mentions:
     'BP/recipes/example.recipe.json',
     'BP/scripts/example.js',
     'BP/shapes/example.json',
+    'BP/sounds/sound_definitions.json',
     'BP/spawn_rules/example.spawn.json',
     'BP/structures/<namespace>/example.mcstructure',
     'BP/texts/languages.json',

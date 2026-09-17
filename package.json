@@ -48,5 +48,9 @@
     "vitepress": "^1.6.4",
     "vue": "^3.5.32",
     "vue-eslint-parser": "^10.4.0"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.1": true,
+    "esbuild@0.21.5": true
   }
 }
