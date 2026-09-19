@@ -188,14 +188,14 @@ Any behavior pack with a `script` module must declare the API modules it imports
 
 ## Metadata
 
-`metadata` holds information about who made the pack and how. None of it changes how the pack behaves in-game, with the exception of `product_type`.
+`metadata` holds information about who made the pack and how. None of it changes how the pack behaves in-game.
 
 | Field            | Type     | Description                                                                                                                                                                                                                          |
 | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `authors`        | Array    | Names of the pack's authors. **Required in format version 3** (see [Format Versions](#format-versions)).                                                                                                                             |
 | `license`        | String   | The license the pack is distributed under, for example `"MIT"` or `"All Rights Reserved"`.                                                                                                                                           |
 | `url`            | String   | The pack's website.                                                                                                                                                                                                                  |
-| `product_type`   | String   | The only supported value is `"addon"`. It tells the game the pack is an add-on rather than a full world or game. Worlds with `"addon"` packs keep achievements enabled. It does not otherwise change how the pack behaves.           |
+| `product_type`   | String   | The only supported value is `"addon"`. It tells the game the pack is an add-on rather than a full world or game. Before version 26.50, worlds with `"addon"` packs kept achievements enabled; this was removed in 26.50 as it was considered an exploit ([MCPE-242529](https://mojira.dev/MCPE-242529)). It does not otherwise change how the pack behaves. |
 | `generated_with` | Object   | Records the tools that generated or edited the manifest. Keys are tool names matching `[a-zA-Z0-9_-]` with at most 32 characters. Values are arrays of SemVer strings, one for each tool version that touched the file.              |
 
 <CodeHeader path="BP/manifest.json" />
