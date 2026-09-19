@@ -165,7 +165,7 @@ Only the fields used in this guide are explained here. For every field the manif
 
 -   In `modules`, a module with the `type` of `"data"`{lang=json} is added. This makes your pack a _behavior pack_.
 
--   In `metadata`, the `product_type` allows your add-on to enable achievements on your world. It must be a product type of `"addon"`{lang=json}.
+-   In `metadata`, the `product_type` of `"addon"`{lang=json} marks your pack as an add-on. Before version 26.50, this kept achievements enabled on worlds using the pack; as of 26.50 this no longer applies ([MCPE-242529](https://mojira.dev/MCPE-242529)).
 
 ### UUID Explained
 
