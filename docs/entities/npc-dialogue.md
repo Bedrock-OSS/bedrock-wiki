@@ -338,6 +338,104 @@ When you are done, package these files along with the manifest, and import it in
 
 Once you are in the world, use `/function setup` to create the ticking area and NPC entity. Then use `/give @s wiki:teleport_menu` to give yourself the teleportation item. Switch to survival mode (NPC dialogues do not work in Creative), hold the item, and right-click. You should see your dialogue appear.
 
+## Script API Integration
+
+NPC dialogues work well alongside the Script API. A button can fire a `/scriptevent` command, which is caught by a `scriptEventReceive` subscriber in JavaScript. This lets you open rich `ActionFormData` UIs from an NPC interaction, bypassing the practical limit of buttons that fit cleanly in the NPC dialogue window.
+
+### NPC Button to Script Form
+
+<CodeHeader>BP/dialogue/shop.json</CodeHeader>
+
+```json
+{
+    "scene_tag": "wiki:shop_main",
+    "npc_name": "Merchant",
+    "text": "What can I do for you?",
+    "buttons": [
+        {
+            "name": "Browse Wares",
+            "commands": ["/scriptevent wiki:shop open"]
+        }
+    ]
+}
+```
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+import { system, world } from "@minecraft/server";
+import { ActionFormData } from "@minecraft/server-ui";
+
+system.afterEvents.scriptEventReceive.subscribe(
+    (ev) => {
+        const player = ev.initiator; // the player who clicked the NPC button
+        if (!player) return;
+
+        if (ev.id === "wiki:shop" && ev.message === "open") {
+            // wrap in runTimeout so the form opens after the NPC dialogue closes
+            system.runTimeout(() => openShop(player), 1);
+        }
+    },
+    { namespaces: ["wiki"] }
+);
+
+function openShop(player) {
+    new ActionFormData()
+        .title("Merchant")
+        .button("Iron Sword — 5 gems")
+        .button("Bow — 8 gems")
+        .button("Close")
+        .show(player)
+        .then((r) => {
+            if (r.canceled || r.selection === 2) return;
+            // handle purchase...
+        })
+        .catch(() => {});
+}
+```
+
+:::tip
+Two things to keep in mind when handling NPC-triggered scriptevents:
+
+- **`ev.initiator`** is the player who clicked. `ev.sourceEntity` is the NPC — do not use it to get the player.
+- **Wrap `form.show(player)` in `system.runTimeout(() => ..., 1)`**. Calling it directly inside the handler may cause the form to not appear.
+:::
+
+### Dynamic Language Switching
+
+You can detect a player tag inside `on_open_commands` by firing a `/scriptevent` and checking the tag in JavaScript, then redirecting to a different scene. This lets you serve multiple languages from one NPC without resource pack translation files.
+
+<CodeHeader>BP/dialogue/guide.json</CodeHeader>
+
+```json
+{
+    "scene_tag": "wiki:guide_intro",
+    "npc_name": "Guide",
+    "text": "...",
+    "on_open_commands": ["/scriptevent wiki:guide lang_check"]
+}
+```
+
+<CodeHeader>BP/scripts/main.js</CodeHeader>
+
+```js
+system.afterEvents.scriptEventReceive.subscribe(
+    (ev) => {
+        const player = ev.initiator;
+        if (!player) return;
+
+        if (ev.id === "wiki:guide" && ev.message === "lang_check") {
+            if (player.hasTag("lang_en")) {
+                player.runCommand("dialogue open @e[tag=guide,r=5] @s wiki:guide_intro_en");
+            }
+        }
+    },
+    { namespaces: ["wiki"] }
+);
+```
+
+The scene `wiki:guide_intro_en` contains the English text. The redirect is instant and the player only sees the correct language scene.
+
 ## Credits
 
 This tutorial is based off of [this page](https://learn.microsoft.com/minecraft/creator/documents/npcdialogue) in the Minecraft Creator documentation.
