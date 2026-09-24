@@ -90,6 +90,12 @@
       "type": "Java Edition cross-play"
     },
     {
+      "name": "[Amber](https://github.com/Amber-PM/Amber)",
+      "description": "A feature-rich Minecraft: Bedrock Edition server software based on PocketMine-MP, focused on custom servers and extended APIs.",
+      "languages": "PHP",
+      "type": "Custom"
+    },
+    {
       "name": "[Serenity](https://github.com/SerenityJS/serenity)",
       "description": "A Minecraft Bedrock Edition Server Software in TypeScript.",
       "languages": "TypeScript, Rust",
