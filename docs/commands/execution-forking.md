@@ -14,7 +14,7 @@ description: Learn how to utilize Multiplicative Execution Forking (MEF) to inst
 
 [Sourced by the Bedrock Commands Community (BCC) Discord](https://bedrockcommands.org/)
 
-**Execution Forking** (also known as *Instancing* or *Nesting*) is a technique used to trigger a single command multiple times within the same tick. This is achieved by leveraging selectors that target multiple entities, effectively "forking" the execution path for each target found.
+**Execution Forking** (also known as *Instancing* *Nesting* or *NX Tree*) is a technique used to trigger a single command multiple times within the same tick. This is achieved by leveraging selectors that target multiple entities, effectively "forking" the execution path for each target found.
 
 ### The Problem: Speed vs. Efficiency
 Imagine you are creating a bullet system. To ensure the bullet doesn't pass through walls, you need to check for collisions every 1 block. If you move the bullet 1 block per tick, it will appear slow and laggy. 
