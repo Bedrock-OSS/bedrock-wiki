@@ -145,6 +145,10 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
 
 ### Named Block Ticks
 
+:::warning EXPERIMENTAL 1.26.60
+Named scheduled ticks are experimental and require the Beta APIs experiment to be enabled.
+:::
+
 Named scheduled ticks are similar to unnamed ticks with two main differences:
 
 -   Named ticks are manually scheduled using scripts, there is no vanilla component that schedules them.
