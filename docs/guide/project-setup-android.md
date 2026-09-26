@@ -51,7 +51,7 @@ Acode is the only powerful code editor actively being developed on Android at th
 :::tip
 In this version of the guide, "BP" refers to your behavior pack folder and "RP" refers to your resource pack folder in your workspace. For locations in files or directories, `../<current location>` indicates "From last location" followed by the added space (e.g.: `/one/two/three/file.txt` would be shortened to `../three/file.txt`)
 
-If your device is rooted or you have setup Shizuku, you can follow the main project setup using the `/Android/data/com.mojang.minecraftpe/files/games/com.mojang` [here](https://wiki.bedrock.dev/guide/project-setup) development behavior and resource pack folders directly. Otherwise, follow the steps below or Setup Shizuku.
+If your device is rooted or you have setup Shizuku, you can follow the main project setup using the `/Android/data/com.mojang.minecraftpe/files/games/com.mojang` [here](/guide/project-setup) development behavior and resource pack folders directly. Otherwise, follow the steps below or Setup Shizuku.
 :::
 
 Before we begin, you need a workspace. Using your file manager, navigate to your Internal Storage (In most cases, it's `/`. In others, the full path (e.g.: `/storage/emulated/0/`) is displayed. Both are acceptable.) and create a folder that will contain your packs. For this example, our full directory is `/Minecraft Packs/MyFirstAddon`. From there, you'll need one folder for both your behavior and resource packs (e.g.: `../MyFirstAddon/addonBP` and `../MyFirstAddon/addonRP`).
