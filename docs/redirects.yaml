@@ -118,5 +118,6 @@
 /visuals/render-controllers: /entities/render-controllers
 /visuals/custom-skin-packs: /visuals/skin-packs
 
-/world-generation/custom-ores: /loot/generating-custom-ores
+/world-generation/custom-ores: /world-generation/generating-custom-ores
+/world-generation/generate-custom-jigsaw-structures: /world-generation/generating-custom-jigsaw-structures
 /world-generation/randomized-structure-loot: /loot/randomized-structure-loot
