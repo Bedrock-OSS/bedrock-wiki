@@ -154,7 +154,7 @@ Named scheduled ticks are similar to unnamed ticks with two main differences:
 -   Named ticks are manually scheduled using scripts, there is no vanilla component that schedules them.
 -   Named ticks (as the name implies) have a name attached which makes it easier to differentiate between ticks when multiple are scheduled.
 
-To schedule a named tick on a block, you'll need to use the [`Block.scheduleNamedTick()`{lang=js}]() method.
+To schedule a named tick on a block, you'll need to use the [`Block.scheduleNamedTick()`{lang=js}](https://learn.microsoft.com/minecraft/creator/scriptapi/minecraft/server/block?view=minecraft-bedrock-experimental#schedulenamedtick) method.
 
 -   The first parameter of this method is the name of the tick (max 31 characters).
     This name should not have a namespace given that the pack UUID is internally used to namespace the tick.
