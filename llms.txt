@@ -73,6 +73,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Block Permutations](/blocks/block-permutations)
 - [Block Events](/blocks/block-events)
 - [Block Event Migration](/blocks/block-event-migration)
+- [Block Ticking](/blocks/block-ticking)
 - [Blocks as Items](/blocks/blocks-as-items)
 - [Multi-Blocks](/blocks/multi-blocks)
 - [Troubleshooting Blocks](/blocks/troubleshooting-blocks)
