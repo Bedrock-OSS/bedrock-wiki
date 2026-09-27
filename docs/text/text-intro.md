@@ -45,9 +45,10 @@ wiki.example_translation.line_1=The first line!
 wiki.example_translation.line_2=Some more information following the first line.
 ```
 
-Line breaks may be added to a value with the special sequence `~LINEBREAK~`. Literal newline characters cannot be used.
+Line breaks may be added to a value with one of the following special sequences: `\n` or `~LINEBREAK~`.
 
 ```lang
+wiki.example_translation.multiline=The first line!\nThe second line!
 wiki.example_translation.multiline=The first line!~LINEBREAK~The second line!
 ```
 
