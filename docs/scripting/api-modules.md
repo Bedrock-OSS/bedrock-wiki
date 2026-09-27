@@ -5,6 +5,7 @@ nav_order: 3
 mentions:
     - cda94581
     - conmaster2112
+    - Cavell1234
 ---
 
 ## Overview
@@ -25,31 +26,31 @@ Script API has modules for developers to interact with Minecraft. Additionally, 
 
 ## Module Descriptions
 
-### `@minecraft/common`
+### [`@minecraft/common`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/common/minecraft-common?view=minecraft-bedrock-stable)
 
 Has few stable releases, this module can be imported without being mentioned in dependencies. It is a module with basic sources such as error classes or interfaces.
 
-### `@minecraft/debug-utilities`
+### [`@minecraft/debug-utilities`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/debug-utilities/minecraft-debug-utilities?view=minecraft-bedrock-experimental)
 
 An experimental module. This module provides debugging tools but should not be used in the public release of the addon.
 
-### `@minecraft/server`
+### [`@minecraft/server`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server?view=minecraft-bedrock-stable)
 
 Has a lot of stable releases, but is still being actively developed. The cornerstone for addons scripting on the server side, it is intended for interaction between the script engine and your world, such as blocks, entities, items, players, and other world resources.
 
-### `@minecraft/server-ui`
+### [`@minecraft/server-ui`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-ui/minecraft-server-ui?view=minecraft-bedrock-stable)
 
 A somewhat smaller module, but very useful for the interaction between the server and the end user of your package. This is a module that provides the possibility of sending data to the player through customizable forms.
 
-### `@minecraft/server-gametest`
+### [`@minecraft/server-gametest`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-gametest/minecraft-server-gametest?view=minecraft-bedrock-experimental)
 
 This is the oldest module that currently exists, yet there is not a single stable version of this module. This module is used to test vanilla experiments, for compatibility with other custom content, catching edge cases, or making sure repeatability is possible. This module is not intended for content creators and there is no need to guarantee backward compatibility with stable versions.
 
-### `@minecraft/server-net`
+### [`@minecraft/server-net`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-net/minecraft-server-net?view=minecraft-bedrock-experimental)
 
 This is a module that is only allowed on [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock) because it could threaten the safety of the user of common addon packages. This is a module has access to the internet through web requests such as GET, SET, POST and others. This module exists only in experimental form.
 
-### `@minecraft/server-admin`
+### [`@minecraft/server-admin`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-admin/minecraft-server-admin?view=minecraft-bedrock-experimental)
 
 This module is also only allowed on [Bedrock Dedicated Servers](https://www.minecraft.net/en-us/download/server/bedrock). this module is responsible for processing basic data stored in JSON admin files, which is intended for setting the behavior of a pack without interfering with the original pack. This module exists only in experimental form.
 
@@ -57,7 +58,7 @@ This module is also only allowed on [Bedrock Dedicated Servers](https://www.mine
 
 This is a special set of native functions for the editor module, this module is undocumented and should not be used by creators, however this module can be imported if you reference it in dependencies but it can only be used in worlds that are created as editor projects.
 
-### `@minecraft/server-editor`
+### [`@minecraft/server-editor`](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server-editor/minecraft-server-editor?view=minecraft-bedrock-experimental)
 
 This module is exceptional because its implementation is not native but it is a JS module, although it is implemented in JS so its existence is hardcoded, it can be referenced in dependencies but it can only be used in worlds that are created as editor projects.
 

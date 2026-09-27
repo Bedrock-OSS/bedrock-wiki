@@ -17,6 +17,7 @@ mentions:
     - zheaEvyline
     - phoenixr-codes
     - Aevarkan
+    - xspring1982
 description: Useful links for developing add-ons.
 ---
 
@@ -45,6 +46,7 @@ Important links have a ⭐.
 -   [Minecraft Realm Hub](https://discord.gg/realmhub)
 -   [Minecraft RTX](http://discord.gg/vNWc3Hh)
 -   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
+-   [Molang Animations](https://discord.gg/B9w6JJ3We)
 
 ## Software (installed)
 
@@ -87,6 +89,7 @@ Important links have a ⭐.
 -   [Textures to Glyph Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
 -   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [MapMC (Real-World Map to Bedrock .mcworld Generator, Paid)](https://mapmc.app/)
 -   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
 -   [MCBE Essentials](https://mcbe-essentials.github.io/)
 -   [.mcpack Generator](https://mcbe-essentials.github.io/instant-pack/)
@@ -153,6 +156,7 @@ These packs are published by the open-source community.
 -   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
 -   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
+-   [RFB Store](https://store.rarefrostbites.com)
 -   [CubitosMC](https://www.cubitosmc.com/)
 -   [MCDLHub](https://mcdlhub.com/)
 -   [Minecraft Marketplace Partners](https://bedrockexplorer.com/partners)

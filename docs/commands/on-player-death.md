@@ -54,19 +54,19 @@ Just make sure to follow the given order and properly apply the `scores={wiki:q.
 
 ## Explanation
 
--   **`wiki:q.is_alive=0`** player is _not_ alive (dead).
 -   **`wiki:q.is_alive=1`** player is alive.
--   **`wiki:q.is_alive=2`** player is dead and we have executed our desired commands on/from them.
+-   **`wiki:q.is_alive=0`** player is _not_ alive (dead).
+-   **`wiki:q.is_alive=-1`** player is dead and we have executed our desired commands on/from them.
 
 **Purpose of Each Command:**
 
 1. **Command 1:** All players will be marked as _not_ alive (0) by default.
-    - We will ignore score `2`, else the commands that we want to run when the player dies will trigger more than once.
+    - We will ignore score `-1`, else the commands that we want to run when the player dies will trigger more than once.
 2. **Command 2:** All alive players will be marked as 'alive' (1).
     - `@e` selector allows us to exclusively target players who are alive.
     - `@a` selector will target all players, whether they are alive or not.
 3. **Command 3:** Now that alive players have a score of 1 and non-alive players have a score of 0, we will use this knowledge to run our desired commands when the player becomes dead (0).
-4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to `2`. As not doing this will cause the commands to repeat till they respawn.
+4. **Command 4:** Since we want to execute our desired commands only once when the player dies, we will set their score to `-1`. As not doing this will cause the commands to repeat till they respawn.
 
 ## Alternative Method
 

@@ -411,7 +411,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
 
 -   `max_distance_from_center`: (optional) How many blocks out in a radius that the structure can extend before terminating. Uses Chebyshev distance and can be 1-128 inclusive for horizontal. Can be any interger greater then 1 for vertical. Defaults to 128. Vertical and horizontal can be set separately. Can be set as just a number in which it is 1-128 inclusive.
 
-    <CodeHeader>minecraft:jigsaw</CodeHeader>
+    <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
     ```json
     "max_distance_from_center": {
@@ -604,7 +604,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:jigsaw": {
         "description": {
             "identifier": "wiki:fortress"
@@ -659,7 +659,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:template_pool": {
         "description": {
             "identifier": "wiki:lone_fortress_courtyard"
@@ -685,7 +685,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:processor_list": {
         "description": {
             "identifier": "wiki:fortress_decay"
@@ -740,7 +740,7 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:structure_set": {
         "description": {
             "identifier": "wiki:fortress"

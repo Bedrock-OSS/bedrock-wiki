@@ -51,11 +51,37 @@ Here is the state-machine, visualized as a flow-chart:
 
 ![](two_state_FSM.png)
 
+```mermaid
+flowchart LR
+    Ground["`**Ground:**
+    Play no animation`"]
+    Air["`**Air:**
+    Play flying animation`"]
+
+    Ground -- When in the air --> Air
+    Air -- When on ground --> Ground
+```
+
 In this flowchart, states are represented by rectangles, and arrows represent _transitions_ from one state to another.
 
 Flowcharts are a nice way to visualize multi-state finite-state-machines, is it allows you to follow the logical _flow_ of the animation. Let us look at a more detailed example, which adds a third `explode` state:
 
 ![](three_state_FSM.png)
+
+```mermaid
+flowchart LR
+    Ground["`**Ground:**
+    Play no animation`"]
+    Air["`**Air:**
+    Play flying animation`"]
+    Explode["`**Explode:**
+    Play explode animation`"]
+
+    Ground -- When in the air --> Air
+    Air -- When on ground --> Ground
+    Ground -- When dead --> Explode
+    Air -- When dead --> Explode
+```
 
 As you can see, states can go to more than one state at once. States can also be dead-ends (since the helicopter is dead, and doesn't need further animation). The branching flow of animation-controllers is a large part of what makes them powerful.
 

@@ -266,7 +266,7 @@ Sometimes, functionality that is not purely related to visuals can affect the wa
 If you've been looking at existing resource packs, such as those built into vanilla, you might have seen block texture configuration inside the `RP/blocks.json` file.
 This system is based on hardcoded [block shapes](/blocks/block-shapes) rather than data-driven geometry and has extremely limited support for custom blocks.
 
-Unless you're modifying vanilla blocks, you should only ever be using `blocks.json` to define [block sounds](/blocks/block-sounds) via the `sound` parameter.
+Unless you're modifying vanilla blocks, the `blocks.json` file should not exist in your resource pack.
 
 <style>
 @media (min-width: 1200px) {

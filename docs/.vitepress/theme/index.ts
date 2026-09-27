@@ -11,6 +11,7 @@ import CardGrid from "./client/components/content/CardGrid.vue";
 import CodeHeader from "./client/components/content/CodeHeader.vue";
 import FolderView from "./client/components/content/FolderView.vue";
 import Label from "./client/components/content/Label.vue";
+import Mermaid from "./client/components/content/Mermaid.vue";
 import MolangGraph from "./client/components/content/MolangGraph.vue";
 import Spoiler from "./client/components/content/Spoiler.vue";
 import Table from "./client/components/content/Table.vue";
@@ -26,6 +27,7 @@ const contentComponents: Record<string, Component> = {
   CodeHeader,
   FolderView,
   Label,
+  Mermaid,
   MolangGraph,
   Spoiler,
   Table,

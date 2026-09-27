@@ -9,10 +9,12 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 This tutorial assumes a basic understanding of blocks and [block tags](/blocks/block-tags).
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
+
+On this page you will learn how to specify which types of tool should be used to mine your block faster, as well as how to prevent drops when the wrong tool is used.
 
 ## Before You Start
 
@@ -80,7 +82,7 @@ These tags can be applied to your block in its `minecraft:tags` component:
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:limestone",

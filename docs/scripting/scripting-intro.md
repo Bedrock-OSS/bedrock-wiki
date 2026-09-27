@@ -12,6 +12,7 @@ mentions:
     - QuazChick
     - jeanmajid
     - AndroAGENT
+    - Cavell1234
 description: Learn how to modify your world through the use of JavaScript files.
 ---
 
@@ -88,8 +89,9 @@ If your project needs other module to run your code, add the other dependencies 
 **Stable API modules**, these do not require the Beta APIs experiment to be turned on. Most features are included in stable APIs, and will not break or be changed when Minecraft is updated.
 
 -   `@minecraft/server`:
-
-    -   [`2.7.0`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0) (Latest Version)
+    -   [`2.9.0`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0) (Latest Version)
+    -   [`2.8.0`](https://www.npmjs.com/package/@minecraft/server/v/2.8.0)
+    -   [`2.7.0`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0)
     -   [`2.6.0`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0)
     -   [`2.5.0`](https://www.npmjs.com/package/@minecraft/server/v/2.5.0)
     -   [`2.4.0`](https://www.npmjs.com/package/@minecraft/server/v/2.4.0)
@@ -119,7 +121,7 @@ If your project needs other module to run your code, add the other dependencies 
     -   [`1.0.0`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0)
 
 -   `@minecraft/server-ui`:
-
+    -   [`2.1.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0) (Latest version, requires `@minecraft/server@2.0.0` or above)
     -   [`2.0.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0) (Latest version, requires `@minecraft/server@2.0.0` or above)
     -   [`1.3.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.3.0) (Requires `@minecraft/server@1.3.0` or above)
     -   [`1.2.0`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.2.0) (Requires `@minecraft/server@1.2.0` or above)
@@ -133,6 +135,8 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
 :::
 
 -   `@minecraft/server`:
+    -   [`2.10.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.10.0-beta.1.26.43-stable) (1.26.43)
+    -   [`2.9.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.9.0-beta.1.26.36-stable) (1.26.36)
     -   [`2.8.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.8.0-beta.1.26.21-stable) (1.26.21)
     -   [`2.7.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.7.0-beta.1.26.14-stable) (1.26.14)
     -   [`2.6.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/2.6.0-beta.1.26.0-stable) (1.26.0)
@@ -161,7 +165,7 @@ As of v1.21.120, you are now able to set the dependency `version` property to `"
     -   [`1.0.0-beta`](https://www.npmjs.com/package/@minecraft/server/v/1.0.0-beta.1.19.40-stable) (1.19.40)
 
 -   `@minecraft/server-ui`:
-    -   [`2.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0-beta.1.26.21-stable) (1.26.21)
+    -   [`2.2.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0-beta.1.26.34-stable) (1.26.34)
     -   [`2.1.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.1.0-beta.1.21.114-stable) (1.21.114)
     -   [`2.0.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/2.0.0-beta.1.21.84-stable) (1.21.84)
     -   [`1.4.0-beta`](https://www.npmjs.com/package/@minecraft/server-ui/v/1.4.0-beta.1.21.62-stable) (1.21.62)

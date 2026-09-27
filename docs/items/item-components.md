@@ -9,9 +9,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 Using the latest format version when creating custom items provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.40.
+The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.50.
 :::
 
 ## Applying Components
@@ -22,7 +22,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -1225,8 +1225,8 @@ _Requires format version [1.26.30](/items/item-format-history#_1-26-30) or later
     -   Determines the _vanilla_ sound event that is triggered when the item starts to be used.
 -   `start_using` — String (optional)
     -   Determines when use modifiers should be applied.
-    -   `"always"` — Use modifiers will always be applied when the player is holding the use input (assuming another component is applied which allows the item to be used).
-    -   `"if_first"` (default) — Use modifiers are only applied if the item does not have other built-in use functionality (such as a charged [shooter](#shooter) shooting its stored ammunition).
+    -   `"always"`{lang=json} — Use modifiers will always be applied when the player is holding the use input (assuming another component is applied which allows the item to be used).
+    -   `"if_first"`{lang=json} (default) — Use modifiers are only applied if the item does not have other built-in use functionality (such as a charged [shooter](#shooter) shooting its stored ammunition).
 -   `use_duration` — Float
     -   The time duration (in seconds) that the item must be used for to complete a single use.
 

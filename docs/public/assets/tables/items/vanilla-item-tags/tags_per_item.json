@@ -246,6 +246,14 @@
       ]
     },
     {
+      "item": "`minecraft:black_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:black_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
       "item": "`minecraft:blackstone`",
       "tags": [
         "`minecraft:stone_crafting_materials`",
@@ -300,6 +308,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:blue_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:blue_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:bogged_spawn_egg`",
@@ -366,6 +382,10 @@
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:brown_mushroom`",
+      "tags": ["`minecraft:mushrooms_for_stew`"]
+    },
+    {
       "item": "`minecraft:brown_mushroom_block`",
       "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
     },
@@ -380,6 +400,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:brown_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:brown_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:bubble_coral_block`",
@@ -856,6 +884,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:cyan_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:cyan_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:danger_pottery_sherd`",
@@ -1392,6 +1428,14 @@
       ]
     },
     {
+      "item": "`minecraft:gray_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:gray_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
       "item": "`minecraft:green_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
@@ -1422,6 +1466,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:green_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:green_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:guardian_spawn_egg`",
@@ -1688,6 +1740,14 @@
       ]
     },
     {
+      "item": "`minecraft:light_blue_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:light_blue_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
       "item": "`minecraft:light_gray_carpet`",
       "tags": ["`minecraft:vibration_damper`"]
     },
@@ -1714,6 +1774,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:light_gray_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:light_gray_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:lime_carpet`",
@@ -1746,6 +1814,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:lime_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:lime_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:lit_pumpkin`",
@@ -1790,6 +1866,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:magenta_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:magenta_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:magma`",
@@ -2142,10 +2226,6 @@
       ]
     },
     {
-      "item": "`minecraft:observer`",
-      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
-    },
-    {
       "item": "`minecraft:obsidian`",
       "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
     },
@@ -2188,6 +2268,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:orange_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:orange_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:oxidized_chiseled_copper`",
@@ -2338,6 +2426,14 @@
       ]
     },
     {
+      "item": "`minecraft:pink_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:pink_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
       "item": "`minecraft:plenty_pottery_sherd`",
       "tags": ["`minecraft:decorated_pot_sherds`"]
     },
@@ -2392,6 +2488,50 @@
     {
       "item": "`minecraft:polished_tuff`",
       "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
+    },
+    {
+      "item": "`minecraft:poplar_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:poplar_chest_boat`",
+      "tags": ["`minecraft:boat`", "`minecraft:boats`"]
+    },
+    {
+      "item": "`minecraft:poplar_door`",
+      "tags": ["`minecraft:door`"]
+    },
+    {
+      "item": "`minecraft:poplar_hanging_sign`",
+      "tags": ["`minecraft:hanging_sign`", "`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:poplar_log`",
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:poplar_planks`",
+      "tags": ["`minecraft:planks`", "`minecraft:sulfur_cube_archetype_bouncy`"]
+    },
+    {
+      "item": "`minecraft:poplar_sign`",
+      "tags": ["`minecraft:sign`"]
+    },
+    {
+      "item": "`minecraft:poplar_slab`",
+      "tags": ["`minecraft:wooden_slabs`"]
+    },
+    {
+      "item": "`minecraft:poplar_wood`",
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
     },
     {
       "item": "`minecraft:porkchop`",
@@ -2460,6 +2600,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:purple_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:purple_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:purpur_block`",
@@ -2542,6 +2690,10 @@
       "tags": ["`minecraft:harness`"]
     },
     {
+      "item": "`minecraft:red_mushroom`",
+      "tags": ["`minecraft:mushrooms_for_stew`"]
+    },
+    {
       "item": "`minecraft:red_mushroom_block`",
       "tags": ["`minecraft:sulfur_cube_archetype_slow_sliding`"]
     },
@@ -2570,12 +2722,16 @@
       ]
     },
     {
-      "item": "`minecraft:redstone`",
-      "tags": ["`minecraft:trim_materials`"]
+      "item": "`minecraft:red_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
-      "item": "`minecraft:redstone_lamp`",
-      "tags": ["`minecraft:sulfur_cube_archetype_slow_bouncy`"]
+      "item": "`minecraft:red_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:redstone`",
+      "tags": ["`minecraft:trim_materials`"]
     },
     {
       "item": "`minecraft:redstone_ore`",
@@ -2644,6 +2800,10 @@
     {
       "item": "`minecraft:sheep_spawn_egg`",
       "tags": ["`minecraft:spawn_egg`"]
+    },
+    {
+      "item": "`minecraft:shelf_mushroom`",
+      "tags": ["`minecraft:mushrooms_for_stew`"]
     },
     {
       "item": "`minecraft:shelter_pottery_sherd`",
@@ -3014,6 +3174,22 @@
       ]
     },
     {
+      "item": "`minecraft:stripped_poplar_log`",
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
+      "item": "`minecraft:stripped_poplar_wood`",
+      "tags": [
+        "`minecraft:logs`",
+        "`minecraft:logs_that_burn`",
+        "`minecraft:sulfur_cube_archetype_bouncy`"
+      ]
+    },
+    {
       "item": "`minecraft:stripped_spruce_log`",
       "tags": [
         "`minecraft:logs`",
@@ -3334,6 +3510,14 @@
       ]
     },
     {
+      "item": "`minecraft:white_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:white_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
       "item": "`minecraft:wild_armor_trim_smithing_template`",
       "tags": ["`minecraft:trim_templates`"]
     },
@@ -3436,6 +3620,14 @@
         "`minecraft:vibration_damper`",
         "`minecraft:wool`"
       ]
+    },
+    {
+      "item": "`minecraft:yellow_wool_slab`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
+    },
+    {
+      "item": "`minecraft:yellow_wool_stairs`",
+      "tags": ["`minecraft:vibration_damper`", "`minecraft:wool`"]
     },
     {
       "item": "`minecraft:zoglin_spawn_egg`",

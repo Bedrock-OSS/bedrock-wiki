@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.40
+:::tip FORMAT VERSION 1.26.50
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.40.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.50.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.26.40",
+    "format_version": "1.26.50",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -70,6 +70,25 @@ Block components can be directly applied in the `components` child of `minecraft
 ```
 
 ## List of Vanilla Components
+
+### Block Entity
+
+Associates a block entity with the block which is used to store additional data beyond the block's [permutation](/blocks/block-permutations) and [queued ticks](#tick).
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
+#### Object Format {#block-entity-object}
+
+-   `dynamic_properties` — Boolean (optional)
+    -   Whether dynamic properties may be added to the block using scripts.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:block_entity": {
+    "dynamic_properties": true
+}
+```
 
 ### Chest Obstruction
 
@@ -1092,6 +1111,26 @@ _Requires format version [1.19.60](/blocks/block-format-history#_1-19-60) or lat
 "minecraft:selection_box": {
     "origin": [-8, 0, -8],
     "size": [16, 16, 16]
+}
+```
+
+### Sound
+
+Determines the sounds that the block makes, such as the mining sound, step on sound, breaking sound, and placement sound. Learn more about block sounds [here](/blocks/block-sounds).
+
+_Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or later._
+
+#### Object Format {#sound-object}
+
+-   `sound` — String
+    -   The ID of the sound type to use from `RP/sounds.json`.
+    -   This parameter is equivalent to the `sound` parameter in `RP/blocks.json`.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+"minecraft:sound": {
+    "sound": "wood"
 }
 ```
 

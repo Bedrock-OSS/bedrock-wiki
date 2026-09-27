@@ -30,6 +30,12 @@
       "type": "Custom"
     },
     {
+      "name": "[Chorus](http://bedrock-crustaceans.org/chorus/)",
+      "description": "Minecraft: Bedrock server software, open source and written in Rust",
+      "languages": "Rust",
+      "type": "Custom"
+    },
+    {
       "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
       "description": "Nuclear-Powered Minecraft: Bedrock Edition Server Software.",
       "languages": "Java",
@@ -82,6 +88,12 @@
       "description": "A Minecraft server built entirely in Rust, offering a fast, efficient, and customizable experience.",
       "languages": "Rust",
       "type": "Java Edition cross-play"
+    },
+    {
+      "name": "[Amber](https://github.com/Amber-PM/Amber)",
+      "description": "A feature-rich Minecraft: Bedrock Edition server software based on PocketMine-MP, focused on custom servers and extended APIs.",
+      "languages": "PHP",
+      "type": "Custom"
     },
     {
       "name": "[Serenity](https://github.com/SerenityJS/serenity)",
