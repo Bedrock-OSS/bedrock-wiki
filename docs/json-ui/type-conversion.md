@@ -59,6 +59,7 @@ By doing arithmetic operation on strings (except addition), you convert a string
 -   Instances of strings that is alphanumeric (like `a123`) will not return `123`.
 -   Adding a string and float (like `'abc' + 1.2`) will not produce anything.
 -   It is not possible to directly display floats—refer to [this](#float-to-string) part of the documentation.
+-   Starting from some version of minecraft the `#str * 1` and `#str * #float` conversions no longer work, however you can still use `0 + #str` method.
 
 ## Number to String
 
