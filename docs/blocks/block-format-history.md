@@ -16,6 +16,41 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.60
+
+### Components
+
+<Label color="green">Versioned</Label>
+
+-   Updated `minecraft:collision_box`
+    -   Now only accepts an array and no longer accepts a single box object.
+    -   Box objects may now also be defined using the `min`/`max` vector range format used by voxel shapes.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Added `minecraft:enchantment_power_transmitter`
+    -   Determines whether Enchanting Tables separated from a Bookshelf by this block are still able to receive enchantment power.
+    -   By default, blocks do not transmit enchantment power.
+-   Added `minecraft:neighbor_change`
+    -   Triggers the `onNeighborChanged()`{lang=js} custom component event hook after adjacent blocks change permutation.
+    -   Contains `neighbor_directions` which determines the directions in which changes are observed.
+        -   Defined as an array of directions which may include `"all"`{lang=json}, `"down"`{lang=json}, `"up"`{lang=json}, `"north"`{lang=json}, `"south"`{lang=json}, `"west"`{lang=json} and `"east"`{lang=json}.
+        -   By default, changes in all directions are observed.
+-   Added `minecraft:vibration_properties`
+    -   Contains `dampen_vibrations` which determines whether the block prevents vibrations caused by contact with the block.
+    -   Contains `occlude_vibrations` which determines whether the block prevents vibrations from passing through it.
+
+<Tag name="experimental" />
+<Label color="blue">Upcoming Creator Features</Label>
+
+-   Updated `minecraft:block_entity`
+    -   Added `entity_storage` parameter which determines whether the block can store entities as data contained in the block via scripts.
+    -   Updated `container` parameter
+        -   Added `title` parameter which determines the localization key used for the heading of the container UI.
+        -   When this parameter is omitted, no text is displayed.
+
 ## 1.26.50
 
 ### Traits
