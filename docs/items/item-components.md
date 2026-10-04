@@ -922,21 +922,6 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 }
 ```
 
-<CodeHeader breadcrumbs="minecraft:item/components" />
-
-```json
-"minecraft:repairable": {
-    "repair_items": [
-        {
-            "items": [
-                "minecraft:diamond"
-            ],
-            "repair_amount": "math.min(q.remaining_durability + c.other->q.remaining_durability + math.floor(q.max_durability / 20), c.other->q.max_durability)" // Vanilla formula
-        }
-    ]
-}
-```
-
 ### Shooter
 
 Allows projectile ammunition items to be shot by using the item. Must have the [`minecraft:use_modifiers`](#use-modifiers) component in order to function properly.

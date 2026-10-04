@@ -40,7 +40,7 @@ const language: LanguageRegistration = {
     linebreak: {
       patterns: [
         { match: "~LINEBREAK~", name: "constant.character.escape.lang" },
-        { match: "\\n", name: "constant.character.escape.lang" },
+        { match: "\\\\n", name: "constant.character.escape.lang" },
       ],
     },
     variable: {
