@@ -8,6 +8,7 @@ mentions:
     - cda94581
     - zheaEvyline
     - jordanparki7
+    - xyztoast
 nav_order: 3
 description: Learn about functions in MCBE.
 ---
@@ -267,7 +268,17 @@ Think of **VS Code** as your command center. It is a powerful, free code editor 
     ![Editing a .mcfunction file in VSCode](/public/assets/images/commands/mcfunctions/mcfunction-file-vscode.png)
 - **Bonus Extension:** Install the **[Minecraft Bedrock Glyph Viewer](https://marketplace.visualstudio.com/items?itemName=Nicita3.minecraft-bedrock-glyph-viewer)** if you frequently work with custom UI icons and emojis.
 
-### 2. Version Control with GitHub
+### 2. mcbCode
+
+**mcbCode** is a browser-based workspace. It is a free online editor designed for Minecraft Bedrock Edition, allowing you to write and manage .mcfunction files without installing any software.
+
+- **How to access:** Just visit the site [here](https://mcbcode.com) and create an [account](https://mcbcode.com/account)
+- **Why use it?**
+    - **Syntax Highlighting:** Different sections of commands change color based on the type , making them more understandable.
+    - **Invalid Syntax:** mcbCode highlights typos or incorrect syntax.
+    - **Customizable:** There is a variety of different editor themes that you can use when editing files.
+
+### 3. Version Control with GitHub
 
 **GitHub** is a cloud-based service that acts as a "save point" for your projects.
 
@@ -278,14 +289,14 @@ Think of **VS Code** as your command center. It is a powerful, free code editor 
     -   **History:** You can see exactly what changes you made today versus a week ago.
     -   **Releases:** Once your pack is ready for the public, you can create a "Release." This allows you to host specific versions (like v1.0 or v2.1) as downloadable `.mcpack` files, making it easy for players to find the most stable version of your work.
 
-### 3. GitHub Desktop
+### 4. GitHub Desktop
 
 While GitHub lives in the cloud, **GitHub Desktop** is the app on your computer that talks to it. It’s the easiest way for beginners to manage their files without learning complex "Git" commands.
 
 -   **Download:** Get it at [desktop.github.com](https://desktop.github.com).
 -   **The Workflow:** After you finish writing code in VS Code, you use GitHub Desktop to "Commit" (save) and "Push" (upload) your changes to the cloud.
 
-### 4. Linking Your Folders
+### 5. Linking Your Folders
 
 The biggest hurdle in Bedrock development is moving files from your "Work" folder to the Minecraft "Behavior Pack" folder. You can skip this manual step by creating a **Directory Junction** (a shortcut that acts like a real folder).
 
@@ -318,6 +329,5 @@ By linking your `\GitHub\ProjectName` folder to Minecraft's `\development_behavi
 
 :::tip
 Once these folders are linked, you don’t need to restart Minecraft or even re-enter the world to test your work. Simply save your file in VS Code and run the `/reload` command in-game to apply your changes immediately.
-
 **Bonus Tip:** Enable **Auto Save** in VS Code (**File > Auto Save**) to make this process even faster—just tab back into Minecraft and run `/reload`!
 :::
