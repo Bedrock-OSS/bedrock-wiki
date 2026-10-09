@@ -24,6 +24,12 @@
       "type": "Custom"
     },
     {
+      "name": "[Bedriox](https://github.com/Bedriox/Bedriox)",
+      "description": "An open source Minecraft Bedrock server built from scratch in PHP with performance and all vanilla features in mind, including mob AI, crafting, enchanting, combat, and a flexible plugin API.",
+      "languages": "PHP",
+      "type": "Custom"
+    },
+    {
       "name": "[BetterAltay](https://github.com/Benedikt05/BetterAltay)",
       "description": "A server software for Minecraft: Bedrock Edition in PHP.",
       "languages": "PHP",
