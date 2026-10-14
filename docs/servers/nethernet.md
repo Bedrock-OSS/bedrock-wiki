@@ -27,5 +27,6 @@ Here is list of NetherNet implementations
 | [bedrock-crustaceans/nethernet](https://github.com/bedrock-crustaceans/nethernet) | NetherNet implementation in Rust                                  | Rust                   |
 | [node-nethernet](https://github.com/PrismarineJS/node-nethernet)                  | NetherNet implementation in NodeJS                                | JavaScript, TypeScript |
 | [zig-nethernet](https://github.com/Bedrock-Phanatics/nethernet-zig)               | NetherNet implementation in Zig                                   | Zig                    |
+| [php-nethernet](https://github.com/Amber-PM/NetherNet)                            | NetherNet implementation in PHP                                   | PHP                    |
 
 This page is a WIP, feel free to contribute as it is still being worked on.
