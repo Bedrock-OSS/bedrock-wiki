@@ -59,9 +59,9 @@ $$
 If `facing ~a ~b ~c`, the trigonometric values of $ry$ and $rx$ after the transformation are as follows:
 $$
 \begin{aligned}
-\sin ry \leftarrow \frac{a}{\sqrt{a^2 + c^2}} \\
+\sin ry \leftarrow \frac{-a}{\sqrt{a^2 + c^2}} \\
 \cos ry \leftarrow \frac{c}{\sqrt{a^2 + c^2}} \\
-\sin rx \leftarrow \frac{b}{\sqrt{a^2 + b^2 + c^2}} \\
+\sin rx \leftarrow \frac{-b}{\sqrt{a^2 + b^2 + c^2}} \\
 \cos rx \leftarrow \frac{\sqrt{a^2 + c^2}}{\sqrt{a^2 + b^2 + c^2}}
 \end{aligned}
 $$
@@ -191,9 +191,8 @@ $$
 If `rotated ~a ~b`, perform the following transformations:
 $$
 \begin{aligned}
-\Delta\boldsymbol{R} &= \boldsymbol{M}(ry+a,rx+
-b) \\
-\boldsymbol{R} &\rightarrow \boldsymbol{R} \cdot \Delta\boldsymbol{R}
+\boldsymbol{R} &\rightarrow \boldsymbol(ry+a,rx+
+b)
 \end{aligned}
 $$
 

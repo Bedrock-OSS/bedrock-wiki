@@ -16,13 +16,13 @@ description: The community formula series of CCT
 
 ### Numbers
 
-| Symbol | Meaning                                           | Notes                                                                                      |
-| ------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `a`    | a very large positive number ($\approx +\infty$)  | in practice: `512` / `1024` / `2048`                                                       |
-| `b`    | a tiny positive number ($\approx 0$)              | in practice: `0.01` / `0.001`                                                              |
-| `n`    | a normal-scale tuning variable                    | usually `1` / `2` / `3`; tunes the floating-point adaptation interval; it is a real number |
-| `k`    | scale factor                                      | used in the translation & scaling formulas                                                 |
-| `?`    | not computed / deliberately omitted by the author | kept as-is                                                                                 |
+| Symbol | Meaning                                              | Notes                                                                                      |
+| ------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `a`    | a very large positive number ($\rightarrow +\infty$) | in practice: `512` / `1024` / `2048`                                                       |
+| `b`    | a tiny positive number ($\rightarrow 0$)             | in practice: `0.01` / `0.001`                                                              |
+| `n`    | a normal-scale tuning variable                       | usually `1` / `2` / `3`; tunes the floating-point adaptation interval; it is a real number |
+| `k`    | scale factor                                         | used in the translation & scaling formulas                                                 |
+| `?`    | not computed / deliberately omitted by the author    | kept as-is                                                                                 |
 
 ### Coordinates
 
@@ -31,12 +31,12 @@ description: The community formula series of CCT
 
 ### Entities
 
-| Notation         | Meaning                                                                  |
-| ---------------- | ------------------------------------------------------------------------ |
-| `@A`, `@B`       | an entity (any selector-style name)                                      |
-| `@s`             | the currently executing entity                                           |
-| `{@A}`, `{@B}`   | entity placeholder — replace with a concrete selector, e.g. `@e[name=a]` |
-| `\text{dir}(@A)` | the look / direction vector of entity `@A` (a unit vector)               |
+| Notation       | Meaning                                                                  |
+| -------------- | ------------------------------------------------------------------------ |
+| `@A`, `@B`     | an entity (any selector-style name)                                      |
+| `@s`           | the currently executing entity                                           |
+| `{@A}`, `{@B}` | entity placeholder — replace with a concrete selector, e.g. `@e[name=a]` |
+| `dir(@A)`      | the look / direction vector of entity `@A` (a unit vector)               |
 
 ### Rotation
 
@@ -49,7 +49,7 @@ Angles in the formulas below are in radians unless stated otherwise.
 
 `<>` — placeholder for a coordinate, e.g. `facing <>` → `facing 0 0 0`.
 `[ ]` — subcommands that can often be omitted / merged with the surrounding context.
-`{@A + y}` — the direction of $\text{dir}(@A) + (0, 1, 0)$: the look vector of `@A` plus the +y unit vector.
+`{@A + y}` — the direction of $\text{dir}(@A) + (0, 1, 0)$: the look vector of $@A$ plus $\frac{\boldsymbol{y}}{|\boldsymbol{y}|}$ (the +y unit vector).
 $\varepsilon$ — minimum precision when an angle approaches 0° (baseline of the "uncertainty" figures)
 
 ---
@@ -113,7 +113,7 @@ facing 0~a 0 positioned ^^^a²/2 rotated ~180~ positioned ^^^a²/2 facing 0~a~ r
 
 ### 6. Division Formula
 
-**Function**: $(x, y, z) \to (x, ?, x/z)$ — sets $x$ to $x/z$ (z unchanged as ?)
+**Function**: $(x, y, z) \to (x, ?, x/z)$ — sets $z$ to $x/z$
 **Performance**: `8` subcommands ｜ **Uncertainty**: $\sqrt{1/b^2 + a^2/z^2} \cdot \varepsilon$ ｜ **Remarks**: Basically useless
 
 **Command**:
@@ -179,7 +179,7 @@ facing 0 ~b 0 positioned 0~-a/b 0 positioned ^^a/b^ facing 0 a/b 0 positioned 0~
 
 ### 12. Cubic Formula (Short)
 
-**Function**: $(x, y, z) \to (x^3+bx, ?, z)$ — adds $x^3+bx$ to y
+**Function**: $(x, y, z) \to (x^3+bx, ?, z)$ — change $x$ to $x^3+bx$
 **Performance**: `4` subcommands ｜ **Remarks**: Short, but doesn't seem to have much use
 
 **Command**:
