@@ -453,8 +453,8 @@ _Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or lat
 Determines how slippery the block is for entities moving on top (`0.0-0.9`{lang=js}).
 Lower values mean the block is more slippery.
 
-:::warning MOVEMENT SPEED
-This component is somewhat broken. While it works correctly on boats, higher friction values cause other entities to speed up rather than slow down.
+:::danger MOVEMENT SPEED
+This component cannot be used to slow entities down when moving on top of the block, it is only used to define how slippery the block is.
 :::
 
 _Requires format version [1.19.20](/blocks/block-format-history#_1-19-20) or later._
