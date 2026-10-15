@@ -39,8 +39,7 @@ In addition, through use of scripts and custom components, we can create the exp
 
 ## Loot Table
 
-In the example below, you can see how the `match_tool` condition is used to test for a pickaxe item that is iron tier or higher:
-:
+In the example below, you can see how the `match_tool` condition is used to test for a pickaxe item that is iron tier or higher, or that has a custom `wiki:silver_tier` tag. The tier tags are just [item tags](/items/item-tags), so a custom pickaxe can opt in by listing `wiki:silver_tier` in its `minecraft:tags` component:
 
 <CodeHeader path="BP/loot_tables/blocks/silver_ore.json" />
 
@@ -59,7 +58,8 @@ In the example below, you can see how the `match_tool` condition is used to test
                     "minecraft:match_tool_filter_any": [
                         "minecraft:iron_tier",
                         "minecraft:diamond_tier",
-                        "minecraft:netherite_tier"
+                        "minecraft:netherite_tier",
+                        "wiki:silver_tier"
                     ],
                     "count": 1
                 }
@@ -72,6 +72,14 @@ In the example below, you can see how the `match_tool` condition is used to test
             ]
         }
     ]
+}
+```
+
+<CodeHeader path="BP/items/silver_pickaxe.json" breadcrumbs="minecraft:item/components" />
+
+```json
+"minecraft:tags": {
+    "tags": ["minecraft:is_tool", "minecraft:is_pickaxe", "wiki:silver_tier"]
 }
 ```
 
@@ -101,12 +109,12 @@ Also note that it can correctly detect only 1st and 2nd enchantment level.
 
 To spawn experience orbs when your ore block is destroyed, custom components can be used. Here, we use the [onPlayerBreak](/blocks/block-events#player-break) event hook. If you don't want your block to spawn XP, this step can be ignored.
 
-Similarly to the loot table, we check the item in the player's hand and then spawn a random number of XP orbs at the block's location.
+Rather than duplicating the tool requirements in script, we read them straight from the loot table. The `LootTableManager` can load any loot table in the pack, and each of its pools exposes its `LootItemCondition`s. We look for a `MatchToolCondition` and check the item in the player's hand against it, so the script stays in sync with `silver_ore.json` even if you change the required tool tier later.
 
 <CodeHeader path="BP/scripts/silver_ore.js" />
 
 ```js
-import { system, EquipmentSlot } from "@minecraft/server";
+import { system, world, EquipmentSlot, MatchToolCondition } from "@minecraft/server";
 
 /**
  * @param {number} min The minimum integer
@@ -115,6 +123,65 @@ import { system, EquipmentSlot } from "@minecraft/server";
  * */
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+/**
+ * @param {number} value The value to test
+ * @param {import("@minecraft/common").NumberRange} range The range read from the loot table
+ * @returns {boolean} Whether the value is within the range (inclusive)
+ * */
+const inRange = (value, range) => value >= range.min && value <= range.max;
+
+/**
+ * @param {import("@minecraft/server").ItemStack} itemStack The tool to test
+ * @param {MatchToolCondition} condition The `match_tool` condition read from the loot table
+ * @returns {boolean} Whether the tool satisfies the condition
+ * */
+const matchesTool = (itemStack, condition) => {
+    // Item type and tags
+    if (condition.itemName && !itemStack.matches(condition.itemName)) return false;
+    if (!condition.itemTagsAll.every((tag) => itemStack.hasTag(tag))) return false;
+    if (
+        condition.itemTagsAny.length > 0 &&
+        !condition.itemTagsAny.some((tag) => itemStack.hasTag(tag))
+    )
+        return false;
+    if (condition.itemTagsNone.some((tag) => itemStack.hasTag(tag))) return false;
+
+    // Stack size
+    if (!inRange(itemStack.amount, condition.count)) return false;
+
+    // Remaining durability
+    const durable = itemStack.getComponent("minecraft:durability");
+    if (durable && !inRange(durable.maxDurability - durable.damage, condition.durability))
+        return false;
+
+    // Enchantments
+    const enchantable = itemStack.getComponent("minecraft:enchantable");
+    for (const { enchantment, range } of condition.enchantments) {
+        const level = enchantable?.getEnchantment(enchantment)?.level ?? 0;
+        if (!inRange(level, range)) return false;
+    }
+
+    return true;
+};
+
+/**
+ * @param {import("@minecraft/server").ItemStack} itemStack The tool to test
+ * @param {string} lootTablePath Path of the loot table, without the `loot_tables/` prefix or file extension
+ * @returns {boolean} Whether every `match_tool` condition in the loot table passes for this tool
+ * */
+const canDropLoot = (itemStack, lootTablePath) => {
+    const lootTable = world.getLootTableManager().getLootTable(lootTablePath);
+    if (!lootTable) return false; // Exit if the loot table doesn't exist
+
+    return lootTable.pools.every((pool) =>
+        pool.conditions.every((condition) => {
+            if (!(condition instanceof MatchToolCondition)) return true; // Only `match_tool` conditions are checked
+
+            return matchesTool(itemStack, condition);
+        })
+    );
+};
+
 const BlockExperienceRewardComponent = {
     onPlayerBreak({ block, dimension, player }, { params }) {
         // Check the tool in the player's hand
@@ -122,20 +189,12 @@ const BlockExperienceRewardComponent = {
         if (!equippable) return; // Exit if the player or its equipment are undefined
 
         const itemStack = equippable.getEquipment(EquipmentSlot.Mainhand);
-        if (
-            !itemStack ||
-            !itemStack.hasTag("minecraft:is_tool") ||
-            !itemStack.hasTag("minecraft:is_pickaxe") ||
-            (!itemStack.hasTag("minecraft:iron_tier") &&
-                !itemStack.hasTag("minecraft:diamond_tier") &&
-                !itemStack.hasTag("minecraft:netherite_tier"))
-        )
-            return; // Exit if the player isn't holding a suitable pickaxe
+        if (!itemStack || !canDropLoot(itemStack, params.loot_table)) return; // Exit if the tool wouldn't drop the block's loot
 
         // Specify enchantments
         const enchantable = itemStack.getComponent("minecraft:enchantable");
         const silkTouch = enchantable?.getEnchantment("silk_touch");
-        if (silkTouch) return; // Exit if the iron pickaxe has the Silk Touch enchantment
+        if (silkTouch) return; // Exit if the pickaxe has the Silk Touch enchantment
 
         // Spawn the XP orbs
         const xpAmount = randomInt(params.min, params.max); // Number of XP orbs to spawn
