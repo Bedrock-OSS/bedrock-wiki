@@ -3,180 +3,169 @@ title: Useful Links
 mentions:
     - SirLich
     - MedicalJewel105
-    - MetalManeMc
-    - rebrainertv
-    - jasonjgardner
-    - MADLAD3718
-    - cda94581
-    - Lufurrius
-    - NhanAZ
-    - AndreasHGK
-    - mark-wiemer
-    - Noruaric
-    - JaylyDev
     - zheaEvyline
-    - phoenixr-codes
-    - Aevarkan
-    - xspring1982
-    - MRUIAW
+    - mark-wiemer
+    - QuazChick
+    - SmokeyStack
+    - jasonjgardner
+    - theaddonn
 description: Useful links for developing add-ons.
 ---
 
-There is loads of helpful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
+A curated list of communities, tools and documentation for Bedrock development. The most important links are marked with a ⭐.
 
-Important links have a ⭐.
+This page is meant for free, actively maintained resources that are actually useful when making add-ons. Paid tools, download mirrors and abandoned projects don't belong here.
 
-## Discord Links
+## Discord Servers
 
--   ⭐ [Bedrock Add-Ons](https://discord.gg/46JUdQb)
--   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
--   ⭐ [Minecraft](https://discord.gg/minecraft)
--   ⭐ [Blockbench](http://discord.gg/fZQbxbg)
--   ⭐ [bridge.](https://discord.gg/NxKuWuA)
--   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
--   ⭐️ [Snowstorm](https://discord.gg/W9d78Z8AvM)
--   [LeviLamina](https://discord.gg/3WGgqGvEqz)
--   [Amethyst](https://discord.gg/Cxrj9UXnDB)
--   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
--   [BDSX](https://discord.gg/8UhbaDwFMh)
--   [Bedrock APIs](https://discord.gg/vVm7tqh5HT)
--   [Bedrock Commands](https://discord.gg/vV29d6rJcj)
--   [Bedrock Protocol](https://discord.gg/G5sBv3TTCE)
--   [Dragonfly Server Software](https://discord.gg/U4kFWHhTNR)
--   [MCBE Utilities](https://discord.gg/9S4aKh684W)
+### General
+
+-   ⭐ [Bedrock Add-Ons](https://discord.gg/46JUdQb): The largest community for add-on development help.
+-   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN): Home of this wiki, Regolith and other open-source Bedrock projects.
+-   [Minecraft](https://discord.gg/minecraft): The official Minecraft server.
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
--   [Minecraft Realm Hub](https://discord.gg/realmhub)
--   [Minecraft RTX](http://discord.gg/vNWc3Hh)
--   [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
--   [Molang Animations](https://discord.gg/B9w6JJ3We)
+-   [Mojira](https://discord.gg/rpCyfKV): Community around the Minecraft bug tracker.
 
-## Software (installed)
+### Creators & Marketplace
 
--   ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
--   ⭐ [bridge. Add-on Editor](https://bridge-core.app/)
--   ⭐ [VSCode Editor](https://code.visualstudio.com/)
--   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith)
--   [Add-on JSON Generator (Paid)](https://kaifireborn.itch.io/add-on-json-generator)
--   [BedrockConnect (App)](https://bedrockconnect.bedrockhub.io)
--   [BedrockMap(Free Open-Source Bedrock NBT/World Editor](https://github.com/bedrock-dev/BedrockMap)
--   [LeviLauncher](https://levilauncher.levimc.org/)(for Windows)  &  [LeviLaunchroid](https://levilaunchroid.levimc.org/)(for Android)    (Bedrock Version Switcher with profile manager and mod browser)
--   [BedrockLauncher (Bedrock Version Switcher)](https://bedrocklauncher.github.io/)
--   [Bedrock World Editor (Free Open-Source Bedrock NBT/World Editor)](https://github.com/8Crafter-Studios/Bedrock-World-Editor)
--   [Chunker (World Converter)](https://chunker.app/)
--   [CoreCoder (Code Editor)](https://hanprog.itch.io/core-coder)
--   [Dialogue Node Editor (VSCode Extension)](https://marketplace.visualstudio.com/items?itemName=aevarkan.bedrock-dialogue-node-editor)
--   [Feature Rule Generator v2 (Free Version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
--   [Feature Rule Generator v2 (Paid Version)](https://machine-builder.itch.io/frg-v2)
--   [Mcblend (Blender Plugin)](https://github.com/Nusiq/mcblend)
--   [NBT Studio](https://github.com/tryashtar/nbt-studio)
--   [NBT Workbench](https://github.com/RealRTTV/nbtworkbench)
--   [Ore UI Customizer App (Allows you to modify Ore UI)](https://github.com/8Crafter-Studios/Ore-UI-Customizer-App)
--   [TesserPack (Pack Optimizer)](https://github.com/TBroz15/TesserPack)
--   [Universal Minecraft Tool (Paid)](https://www.universalminecrafttool.com/)
+-   [Skill Share for Minecraft Creators](https://discord.gg/BfR7Z3T)
+-   [UGC Creators](https://discord.gg/XA99e2Yp77): For people making content on UGC platforms, including the Marketplace.
 
-## Bedrock Tools Websites
+### Tools
 
--   ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
--   ⭐ [mctools.dev](https://mctools.dev/)
--   ⭐ [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
--   [Add-on Obfuscator](https://tools.pixelpoly.co/obfuscator)
--   [Apply Loot Tables to Structures](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
--   [behavior-builder (beta)](https://stirante.com/behavior)
--   [controller-builder (beta)](https://stirante.com/controller)
--   [Convert .mcstructure to .mcfunction](https://mcbe-essentials.github.io/structure-to-function/)
--   [Convert .mcstructure to .mcpack](https://www.8crafter.com/utilities/mcstructure-loader)
--   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
--   [Dialogue Generator](https://mcbe-essentials.github.io/dialogue-editor/)
--   [Foxynotail Tools](https://foxynotail.com/software)
--   [Glyph Drawer](https://nhanaz.github.io/glyph-drawer/)
--   [Glyph Tools](https://nhanaz.github.io/glyph/)
--   [Textures to Glyph Tool](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
--   [.lang File Generator](https://solveddev.github.io/AnyLanguage/)
--   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
--   [MapMC (Real-World Map to Bedrock .mcworld Generator, Paid)](https://mapmc.app/)
--   [MCB/EDU .mcworld Builder](https://nchiari.github.io/Minecraft-Bedrock-Edu-World-Builder/)
--   [MCBE Essentials](https://mcbe-essentials.github.io/)
--   [.mcpack Generator](https://mcbe-essentials.github.io/instant-pack/)
--   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
--   [Molang Playground](https://bridge-core.github.io/molang-playground/)
--   [NBT Explorer](https://phoenixr-codes.github.io/mcnbt/)
--   [Nine Slice Visualiser (UI)](https://minato.beyondbedrock.org/web-apps/9slice/)
--   [Ore UI Customizer (Allows you to modify Ore UI)](https://www.8crafter.com/utilities/ore-ui-customizer)
--   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
--   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/)
--   [Trade Table Generator](https://mcbe-essentials.github.io/trade-table-editor/)
--   [World Packager](https://mcbe-essentials.github.io/world-packager/)
+-   ⭐ [Blockbench](https://discord.gg/blockbench)
+-   ⭐ [bridge.](https://discord.gg/NxKuWuA)
+-   [Snowstorm](https://discord.gg/W9d78Z8AvM)
+-   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
+
+### Commands
+
+-   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
+-   [Bedrock Commands Community](https://discord.gg/RHU3rjp9He)
+
+### Ray Tracing
+
+-   [Minecraft RTX](https://discord.gg/vNWc3Hh)
+
+### Servers, Protocol & Modding
+
+-   [Amethyst](https://discord.gg/Cxrj9UXnDB): Client-side modding framework.
+-   [AllayMC](https://discord.gg/ngkkE4hPTU)
+-   [Cloudburst (Nukkit)](https://discord.gg/seCw62a)
+-   [Dragonfly (Bedrock Gophers)](https://discord.gg/U4kFWHhTNR)
+-   [Endstone](https://discord.gg/xxgPuc2XN9)
+-   [GeyserMC](https://discord.gg/geysermc)
+-   [LeviMC (LeviLamina & LeviLauncher)](https://discord.gg/3WGgqGvEqz)
+-   [PowerNukkitX](https://discord.gg/apwd7uauZg)
+-   [PrismarineJS (bedrock-protocol)](https://discord.gg/GsEFRM8)
+-   [SerenityJS](https://discord.gg/9S4aKh684W)
 
 ## Documentation
 
--   ⭐ [bedrock.dev](https://bedrock.dev/)
--   ⭐ [Minecraft Creator Portal](https://docs.microsoft.com/en-us/minecraft/creator/)
--   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
--   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
--   [Bedrock Network Protocol (Mojang)](https://mojang.github.io/bedrock-protocol-docs/) => [GitHub](https://github.com/Mojang/bedrock-protocol-docs)
--   [LeviLamina Documentation](https://lamina.levimc.org/)
+-   ⭐ [Minecraft Creator Documentation](https://learn.microsoft.com/en-us/minecraft/creator/): Official documentation by Mojang and Microsoft.
+-   ⭐ [bedrock.dev](https://bedrock.dev/): Auto-generated docs for every version, including betas.
+-   ⭐ [Minecraft Wiki](https://minecraft.wiki/): Community wiki, mostly useful for vanilla behavior and commands.
+-   [Script API Docs (JaylyDev)](https://jaylydev.github.io/scriptapi-docs/): Script API reference with examples and version history.
+-   [Bedrock Protocol Docs](https://mojang.github.io/bedrock-protocol-docs/) ([GitHub](https://github.com/Mojang/bedrock-protocol-docs)): Official network protocol documentation.
+-   [Documentation Graveyard](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3): Components that have been removed from the game.
 
-### Getting Started with Your First Add-On
+### Getting Started
 
--   [Getting Started with Add-On Development for Bedrock Edition](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted): These guides show you exactly how to build your first resource pack and your first behavior pack from start to finish.
--   [Molang: a Beginner's Guide](https://learn.microsoft.com/en-us/minecraft/creator/documents/molangbeginnersguide): Molang is a Minecraft programming language that can be useful for writing some advanced add-ons.
--   [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted): This is the best way to test games, and it uses JavaScript, the most popular programming language in the world!
--   [Build a gameplay experience with TypeScript](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted): TypeScript is Microsoft's copy of JavaScript. Writing add-ons in TypeScript allows you to add any functionality you can imagine!
--   [@minecraft/server Module](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/mojang-minecraft/mojang-minecraft): This module and the others near it are how we can access Minecraft values with our TypeScript code. It's technical, but a great resource.
--   [List and summary of commands (Unofficial Minecraft wiki)](https://minecraft.wiki/w/Commands#List_and_summary_of_commands): Most add-ons will run some commands. This community-supported wiki is the best resource for learning each and every command.
+-   [Getting Started with Add-On Development](https://learn.microsoft.com/en-us/minecraft/creator/documents/gettingstarted): Walks you through making your first resource and behavior pack.
+-   [An Introduction to Molang](https://learn.microsoft.com/en-us/minecraft/creator/documents/molang/introduction)
+-   [Getting Started with Scripting](https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted)
+-   [Introduction to the GameTest Framework](https://learn.microsoft.com/en-us/minecraft/creator/documents/gametestgettingstarted)
+-   [`@minecraft/server` Reference](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server)
+-   [List of Commands (Minecraft Wiki)](https://minecraft.wiki/w/Commands#List_and_summary_of_commands)
 
-## Sample Behavior & Resource Packs
+## Vanilla & Example Packs
 
-These packs are maintained and published by Mojang.
+Published by Mojang:
 
--   ⭐ [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
--   ⭐ [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
--   [Vanilla Resource Pack (BETA)](https://aka.ms/MinecraftBetaResources)
--   [Vanilla Behavior Pack (BETA)](https://aka.ms/MinecraftBetaBehaviors)
--   [Pack Archive (old versions)](https://bedrock.dev/packs)
+-   ⭐ [bedrock-samples](https://github.com/Mojang/bedrock-samples): Vanilla resource and behavior packs, including previews, with full history.
+-   [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) / [Behavior Pack](https://aka.ms/behaviorpacktemplate)
+-   [Vanilla Resource Pack (Beta)](https://aka.ms/MinecraftBetaResources) / [Behavior Pack (Beta)](https://aka.ms/MinecraftBetaBehaviors)
+-   [Script API Samples](https://github.com/microsoft/minecraft-scripting-samples)
+-   [Pack Archive (older versions)](https://bedrock.dev/packs)
 
-These packs are published by the open-source community.
+Published by the community:
 
--   [bedrock-examples](https://github.com/Bedrock-OSS/bedrock-examples)
--   [Enchantment Details](https://github.com/supercam19/EnchantmentDetails)
+-   [bedrock-examples](https://github.com/Bedrock-OSS/bedrock-examples): Example packs for the pages on this wiki.
 -   [Function Pack Templates](https://bedrockcommands.org/resources/)
 
-## Scripting Resources
+## Editors & Desktop Tools
 
--   [GameTests API Wrapper](https://github.com/notbeer/Framework-Wrapper)
--   [GameTests Plugin-API-Starter-Pack](https://github.com/MajestikButter/Plugin-API-Starter-Pack)
--   [Useful for Block Tags](https://mcpedl.com/debug-stick/)
+-   ⭐ [Visual Studio Code](https://code.visualstudio.com/)
+    -   [Blockception's Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension): Validation and completions for add-on files.
+    -   [Minecraft Bedrock Debugger](https://marketplace.visualstudio.com/items?itemName=mojang-studios.minecraft-debugger): Official debugger for the Script API.
+-   ⭐ [bridge.](https://bridge-core.app/): Add-on editor that runs in the browser or as an app.
+-   ⭐ [Blockbench](https://blockbench.net/): Modeling, texturing and animation.
+-   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith): Build tool for add-ons with a filter system.
+-   [Mcblend](https://github.com/Nusiq/mcblend): Blender add-on for Bedrock models and animations.
 
-## Raytracing Resources
+### Worlds & NBT
 
--   ⭐ [Ray Tracing and PBR Texturing guide](https://docs.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)
--   ⭐ [Minecraft with Ray Tracing and Advanced Graphics FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
--   [`.texture_set.json` Adobe Substance 3D Painter plugin](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
--   [r/minecraftRTX Getting Started Guide](https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/)
--   [RenderBender](https://github.com/SpeedyCodes/RenderBender)
+-   [Amulet](https://www.amuletmc.com/): World editor.
+-   [Chunker](https://chunker.app/): Converts worlds between Java and Bedrock, and between versions.
+-   [BedrockMap](https://github.com/bedrock-dev/BedrockMap): World viewer and NBT editor.
+-   [Bedrock World Editor](https://github.com/8Crafter-Studios/Bedrock-World-Editor): NBT and LevelDB editor.
+-   [NBT Studio](https://github.com/tryashtar/nbt-studio): NBT editor with support for Bedrock files.
 
-## Add-On Marketplaces & Links
+### Launchers & Version Switchers
+
+-   [BedrockLauncher](https://bedrocklauncher.github.io/) (Windows)
+-   [LeviLauncher](https://levilauncher.levimc.org/) (Windows) / [LeviLaunchroid](https://levilaunchroid.levimc.org/) (Android)
+-   [mcpelauncher](https://minecraft-linux.github.io/) (Linux & macOS)
+
+## Web Tools
+
+-   ⭐ [Minecraft Creator Tools (mctools.dev)](https://mctools.dev/): Official tool for creating, validating and inspecting projects.
+-   ⭐ [Snowstorm](https://jannisx11.github.io/snowstorm/): Particle editor.
+-   ⭐ [MCBE Essentials](https://mcbe-essentials.github.io/): Collection of editors, including:
+    -   [Structure Editor](https://mcbe-essentials.github.io/structure-editor/) and [Loot Tabler](https://mcbe-essentials.github.io/structure-editor/loot-tabler)
+    -   [Structure to Function](https://mcbe-essentials.github.io/structure-to-function/)
+    -   [Dialogue Editor](https://mcbe-essentials.github.io/dialogue-editor/)
+    -   [Trade Table Editor](https://mcbe-essentials.github.io/trade-table-editor/)
+    -   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
+    -   [Instant Pack](https://mcbe-essentials.github.io/instant-pack/) and [World Packager](https://mcbe-essentials.github.io/world-packager/)
+-   [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
+-   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
+-   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [behavior-builder](https://stirante.com/behavior) / [controller-builder](https://stirante.com/controller): Visual editors for behaviors and animation controllers.
+-   [Molang Playground](https://bridge-core.github.io/molang-playground/)
+-   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
+-   [Glyph Tools](https://nhanaz.github.io/glyph/)
+-   [Textures to Glyph](https://minato.beyondbedrock.org/web-apps/textures-to-glyph/)
+-   [Nine Slice Visualiser](https://minato.beyondbedrock.org/web-apps/9slice/): Preview nine-slice textures for JSON UI.
+-   [UUID v4 Generator](https://www.uuidgenerator.net/version4)
+
+## Ray Tracing & Vibrant Visuals
+
+-   ⭐ [Vibrant Visuals Documentation](https://learn.microsoft.com/en-us/minecraft/creator/documents/vibrantvisuals/)
+-   ⭐ [Getting Started with Ray Tracing](https://learn.microsoft.com/en-us/minecraft/creator/documents/rtxgettingstarted)
+-   [Ray Tracing FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
+-   [`.texture_set.json` plugin for Substance 3D Painter](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
+
+## Server Software
+
+-   [Bedrock Dedicated Server](https://www.minecraft.net/en-us/download/server/bedrock): The official server software.
+-   [LeviLamina](https://lamina.levimc.org/): Mod loader for BDS.
+-   [Endstone](https://endstone.dev/): Plugin API for BDS, in C++ and Python.
+-   [Dragonfly](https://github.com/df-mc/dragonfly): Server software written in Go.
+-   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX): Server software written in Java.
+-   [Geyser](https://geysermc.org/): Lets Bedrock players join Java servers.
+-   [BedrockConnect](https://github.com/Pugmatt/BedrockConnect): Join custom servers from consoles.
+
+## Publishing
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/marketplace)
--   ⭐ [MCPEDL](http://mcpedl.com/?cookie_check=1)
 -   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
--   ⭐ [Bucket of Crabs (Marketplace Joblist)](https://www.bucketofcrabs.net/)
--   [RFB Store](https://store.rarefrostbites.com)
--   [CubitosMC](https://www.cubitosmc.com/)
--   [MCDLHub](https://mcdlhub.com/)
--   [Minecraft Marketplace Partners](https://bedrockexplorer.com/partners)
--   [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
--   [Modbay](https://modbay.org/)
+-   ⭐ [MCPEDL](https://mcpedl.com/)
+-   [Bucket of Crabs](https://www.bucketofcrabs.net/): Job board for Marketplace work.
+-   [Marketplace Partners](https://bedrockexplorer.com/partners)
+-   [Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 
-## Other useful Links
+## Other
 
--   [Bedrock Add-Ons Reddit](https://www.reddit.com/r/BedrockAddons/)
--   [Bedrock Edition Realm Protocol](https://github.com/NobUwU/BeRP)
--   [Block Models](https://blockmodels.com/)
--   [Java & Bedrock Client](https://github.com/kennyvv/Alex)
--   [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
--   [Minecraft.net Official Add-ons Page](https://www.minecraft.net/en-us/addons)
--   [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
--   [Skin Pack Generator](https://github.com/MedicalJewel105/bedrock-skin-pack-generator)
--   [UUID v4 Generator (Online)](https://www.uuidgenerator.net/version4)
--   [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
+-   [r/BedrockAddons](https://www.reddit.com/r/BedrockAddons/)
+-   [Minecraft.net Add-Ons Page](https://www.minecraft.net/en-us/addons)
