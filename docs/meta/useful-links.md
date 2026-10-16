@@ -53,6 +53,7 @@ This page is meant for free resources that still work and are actually useful wh
 -   [Amethyst](https://discord.gg/Cxrj9UXnDB): Client-side modding framework.
 -   [Bedrock Crustaceans](https://discord.gg/VCVcrvt3JC): Rust projects for Bedrock, including bedrock-rs.
 -   [GeyserMC](https://discord.gg/geysermc)
+-   [LeviMC](https://discord.gg/v5R5P4vRZk): LeviLamina mod loader for servers and clients, and LeviLauncher.
 -   [PrismarineJS (bedrock-protocol)](https://discord.gg/GsEFRM8)
 
 Discord servers for server software are listed on the [Bedrock Server Software](/servers/server-software) page.
