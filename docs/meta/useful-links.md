@@ -51,6 +51,7 @@ This page is meant for free resources that still work and are actually useful wh
 ### Protocol & Modding
 
 -   [Amethyst](https://discord.gg/Cxrj9UXnDB): Client-side modding framework.
+-   [Bedrock Crustaceans](https://discord.gg/VCVcrvt3JC): Rust projects for Bedrock, including bedrock-rs.
 -   [GeyserMC](https://discord.gg/geysermc)
 -   [PrismarineJS (bedrock-protocol)](https://discord.gg/GsEFRM8)
 
@@ -142,14 +143,6 @@ Published by the community:
 -   [Ray Tracing FAQ](https://help.minecraft.net/hc/en-us/articles/4408865164173-Minecraft-with-Ray-Tracing-and-Advanced-Graphics-FAQ)
 -   [`.texture_set.json` plugin for Substance 3D Painter](https://github.com/jasonjgardner/painter-plugin-texture-set-json)
 
-## Server Software
-
-See the [Bedrock Server Software](/servers/server-software) page for a full list of server software, including their Discord servers.
-
--   [Bedrock Dedicated Server](https://www.minecraft.net/en-us/download/server/bedrock): The official server software.
--   [Geyser](https://geysermc.org/): Lets Bedrock players join Java servers.
--   [BedrockConnect](https://github.com/Pugmatt/BedrockConnect): Join custom servers from consoles.
-
 ## Publishing
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/marketplace)
@@ -162,4 +155,6 @@ See the [Bedrock Server Software](/servers/server-software) page for a full list
 ## Other
 
 -   [r/BedrockAddons](https://www.reddit.com/r/BedrockAddons/)
+-   [BedrockConnect](https://github.com/Pugmatt/BedrockConnect): Join custom servers from consoles.
+-   [Geyser](https://geysermc.org/): Lets Bedrock players join Java servers.
 -   [Minecraft.net Add-Ons Page](https://www.minecraft.net/en-us/addons)
