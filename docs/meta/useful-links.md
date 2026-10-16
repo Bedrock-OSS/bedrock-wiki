@@ -14,7 +14,7 @@ description: Useful links for developing add-ons.
 
 A curated list of communities, tools and documentation for Bedrock development. The most important links are marked with a ⭐.
 
-This page is meant for free, actively maintained resources that are actually useful when making add-ons. Paid tools, download mirrors and abandoned projects don't belong here.
+This page is meant for free resources that still work and are actually useful when making add-ons. Paid tools, download mirrors and abandoned projects don't belong here.
 
 ## Discord Servers
 
@@ -29,7 +29,7 @@ This page is meant for free, actively maintained resources that are actually use
 
 ### Creators & Marketplace
 
--   [Skill Share for Minecraft Creators](https://discord.gg/BfR7Z3T)
+-   [Skill Share for Minecraft Creators](https://discord.gg/BfR7Z3T): For creators to share skills and knowledge.
 -   [UGC Creators](https://discord.gg/XA99e2Yp77): For people making content on UGC platforms, including the Marketplace.
 
 ### Tools
@@ -59,7 +59,7 @@ Discord servers for server software are listed on the [Bedrock Server Software](
 ## Documentation
 
 -   ⭐ [Minecraft Creator Documentation](https://learn.microsoft.com/en-us/minecraft/creator/): Official documentation by Mojang and Microsoft.
--   ⭐ [bedrock.dev](https://bedrock.dev/): Auto-generated docs for every version, including betas.
+-   ⭐ [bedrock.dev](https://bedrock.dev/): Vanilla documentation for every version, including betas.
 -   ⭐ [Minecraft Wiki](https://minecraft.wiki/): Community wiki, mostly useful for vanilla behavior and commands.
 -   [Script API Docs (JaylyDev)](https://jaylydev.github.io/scriptapi-docs/): Script API reference with examples and version history.
 -   [Bedrock Protocol Docs](https://mojang.github.io/bedrock-protocol-docs/) ([GitHub](https://github.com/Mojang/bedrock-protocol-docs)): Official network protocol documentation.
@@ -156,8 +156,8 @@ See the [Bedrock Server Software](/servers/server-software) page for a full list
 -   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
 -   ⭐ [MCPEDL](https://mcpedl.com/)
 -   ⭐ [Bucket of Crabs](https://www.bucketofcrabs.net/): Job board for Marketplace work.
--   [Marketplace Partners](https://bedrockexplorer.com/partners)
--   [Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
+-   [Marketplace Creators (Bedrock Explorer)](https://bedrockexplorer.com/partners): Unofficial list of Marketplace partners.
+-   [Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/): Unofficial Marketplace statistics.
 
 ## Other
 
