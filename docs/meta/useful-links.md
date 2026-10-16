@@ -155,7 +155,7 @@ See the [Bedrock Server Software](/servers/server-software) page for a full list
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/marketplace)
 -   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
 -   ⭐ [MCPEDL](https://mcpedl.com/)
--   [Bucket of Crabs](https://www.bucketofcrabs.net/): Job board for Marketplace work.
+-   ⭐ [Bucket of Crabs](https://www.bucketofcrabs.net/): Job board for Marketplace work.
 -   [Marketplace Partners](https://bedrockexplorer.com/partners)
 -   [Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
 
