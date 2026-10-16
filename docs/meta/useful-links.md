@@ -58,6 +58,8 @@ Important links have a ⭐.
 -   ⭐ [Regolith](https://github.com/Bedrock-OSS/regolith)
 -   [Add-on JSON Generator (Paid)](https://kaifireborn.itch.io/add-on-json-generator)
 -   [BedrockConnect (App)](https://bedrockconnect.bedrockhub.io)
+-   [BedrockMap(Free Open-Source Bedrock NBT/World Editor](https://github.com/bedrock-dev/BedrockMap)
+-   [LeviLauncher](https://levilauncher.levimc.org/)(for Windows)  &  [LeviLaunchroid](https://levilaunchroid.levimc.org/)(for Android)    (Bedrock Version Switcher with profile manager and mod browser)
 -   [BedrockLauncher (Bedrock Version Switcher)](https://bedrocklauncher.github.io/)
 -   [Bedrock World Editor (Free Open-Source Bedrock NBT/World Editor)](https://github.com/8Crafter-Studios/Bedrock-World-Editor)
 -   [Chunker (World Converter)](https://chunker.app/)
@@ -112,6 +114,7 @@ Important links have a ⭐.
 -   ⭐ [Minecraft Community Wiki](https://minecraft.wiki)
 -   [Documentation Graveyard (Removed Components)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 -   [Bedrock Network Protocol (Mojang)](https://mojang.github.io/bedrock-protocol-docs/) => [GitHub](https://github.com/Mojang/bedrock-protocol-docs)
+-   [LeviLamina Documentation](https://lamina.levimc.org/)
 
 ### Getting Started with Your First Add-On
 
