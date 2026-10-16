@@ -48,18 +48,13 @@ This page is meant for free, actively maintained resources that are actually use
 
 -   [Minecraft RTX](https://discord.gg/vNWc3Hh)
 
-### Servers, Protocol & Modding
+### Protocol & Modding
 
 -   [Amethyst](https://discord.gg/Cxrj9UXnDB): Client-side modding framework.
--   [AllayMC](https://discord.gg/ngkkE4hPTU)
--   [Cloudburst (Nukkit)](https://discord.gg/seCw62a)
--   [Dragonfly (Bedrock Gophers)](https://discord.gg/U4kFWHhTNR)
--   [Endstone](https://discord.gg/xxgPuc2XN9)
 -   [GeyserMC](https://discord.gg/geysermc)
--   [LeviMC (LeviLamina & LeviLauncher)](https://discord.gg/3WGgqGvEqz)
--   [PowerNukkitX](https://discord.gg/apwd7uauZg)
 -   [PrismarineJS (bedrock-protocol)](https://discord.gg/GsEFRM8)
--   [SerenityJS](https://discord.gg/9S4aKh684W)
+
+Discord servers for server software are listed on the [Bedrock Server Software](/servers/server-software) page.
 
 ## Documentation
 
@@ -149,11 +144,9 @@ Published by the community:
 
 ## Server Software
 
+See the [Bedrock Server Software](/servers/server-software) page for a full list of server software, including their Discord servers.
+
 -   [Bedrock Dedicated Server](https://www.minecraft.net/en-us/download/server/bedrock): The official server software.
--   [LeviLamina](https://lamina.levimc.org/): Mod loader for BDS.
--   [Endstone](https://endstone.dev/): Plugin API for BDS, in C++ and Python.
--   [Dragonfly](https://github.com/df-mc/dragonfly): Server software written in Go.
--   [PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX): Server software written in Java.
 -   [Geyser](https://geysermc.org/): Lets Bedrock players join Java servers.
 -   [BedrockConnect](https://github.com/Pugmatt/BedrockConnect): Join custom servers from consoles.
 
