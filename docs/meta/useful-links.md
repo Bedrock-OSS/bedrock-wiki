@@ -1,4 +1,4 @@
----
+<img width="2155" height="1204" alt="image" src="https://github.com/user-attachments/assets/7faafe48-3a84-4d1e-82a5-ea86a094774b" />---
 title: Useful Links
 mentions:
     - SirLich
@@ -18,6 +18,7 @@ mentions:
     - phoenixr-codes
     - Aevarkan
     - xspring1982
+    - MRUIAW
 description: Useful links for developing add-ons.
 ---
 
@@ -34,6 +35,7 @@ Important links have a ⭐.
 -   ⭐ [bridge.](https://discord.gg/NxKuWuA)
 -   ⭐ [Minecraft Commands](https://discord.gg/QAFXFtZ)
 -   ⭐️ [Snowstorm](https://discord.gg/W9d78Z8AvM)
+-   [LeviLamina](https://discord.gg/3WGgqGvEqz)
 -   [Amethyst](https://discord.gg/Cxrj9UXnDB)
 -   [Amulet & MCEdit](https://discord.gg/dSnwqQf)
 -   [BDSX](https://discord.gg/8UhbaDwFMh)
