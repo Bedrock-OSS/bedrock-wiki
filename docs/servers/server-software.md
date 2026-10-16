@@ -2,6 +2,7 @@
 title: Bedrock Server Software
 category: Software
 mentions:
+    - Dr1xyDev
     - SirLich
     - DevGod6969
     - NhanAZ
