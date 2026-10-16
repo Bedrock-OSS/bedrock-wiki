@@ -24,6 +24,7 @@ This page is meant for free, actively maintained resources that are actually use
 -   ⭐ [Bedrock OSS](https://discord.gg/XjV87YN): Home of this wiki, Regolith and other open-source Bedrock projects.
 -   [Minecraft](https://discord.gg/minecraft): The official Minecraft server.
 -   [Minecraft Education](https://discord.gg/7fSQBdx)
+-   [Minecraft Feedback](https://discord.gg/minecraftfeedback): The official server for feedback and discussion about upcoming changes.
 -   [Mojira](https://discord.gg/rpCyfKV): Community around the Minecraft bug tracker.
 
 ### Creators & Marketplace
