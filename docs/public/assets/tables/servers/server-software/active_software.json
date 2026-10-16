@@ -97,8 +97,8 @@
     },
     {
       "name": "[CurseStone](https://github.com/CurseStoneTeam/CurseStone)",
-      "description": "A Open Source Minecraft server software for old versions of Minecraft PE written in C and C++",
-      "languajes": "C, C++",
+      "description": "A Open Source Minecraft server software for old versions of Minecraft PE written in C and C++ with Lua plugin support",
+      "languajes": "C, C++, Lua",
       "type": "Custom"
     },
     {
