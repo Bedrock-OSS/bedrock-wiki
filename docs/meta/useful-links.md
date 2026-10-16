@@ -1,4 +1,4 @@
-<img width="2155" height="1204" alt="image" src="https://github.com/user-attachments/assets/7faafe48-3a84-4d1e-82a5-ea86a094774b" />---
+---
 title: Useful Links
 mentions:
     - SirLich
