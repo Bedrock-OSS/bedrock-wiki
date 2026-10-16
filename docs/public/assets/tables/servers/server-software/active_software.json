@@ -96,6 +96,12 @@
       "type": "Custom"
     },
     {
+      "name": "[CurseStone](https://github.com/CurseStoneTeam/CurseStone)",
+      "description": "A Open Source Minecraft server software for old versions of Minecraft PE written in C and C++",
+      "languajes": "C, C++",
+      "type": "Custom"
+    },
+    {
       "name": "[Serenity](https://github.com/SerenityJS/serenity)",
       "description": "A Minecraft Bedrock Edition Server Software in TypeScript.",
       "languages": "TypeScript, Rust",
