@@ -9,6 +9,7 @@ mentions:
     - SmokeyStack
     - jasonjgardner
     - theaddonn
+    - bullishlucas
 description: Useful links for developing add-ons.
 ---
 
@@ -126,6 +127,7 @@ Published by the community:
     -   [Trade Table Editor](https://mcbe-essentials.github.io/trade-table-editor/)
     -   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
     -   [Instant Pack](https://mcbe-essentials.github.io/instant-pack/) and [World Packager](https://mcbe-essentials.github.io/world-packager/)
+-   [ServerBuddy Tellraw Generator](https://serverbuddy.net/tools/minecraft-tellraw-generator): Builds simple colored `rawtext` messages and `/tellraw` commands in Bedrock mode.
 -   [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
