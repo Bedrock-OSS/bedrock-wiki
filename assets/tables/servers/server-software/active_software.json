@@ -14,6 +14,10 @@
     "type": {
       "name": "Type",
       "sortable": true
+    },
+    "community": {
+      "name": "Community",
+      "default": "—"
     }
   },
   "rows": [
@@ -21,49 +25,57 @@
       "name": "[Allay](https://github.com/AllayMC/Allay)",
       "description": "The next-generation Minecraft: Bedrock Edition server software.",
       "languages": "Java, JavaScript",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/ngkkE4hPTU)"
     },
     {
       "name": "[BetterAltay](https://github.com/Benedikt05/BetterAltay)",
       "description": "A server software for Minecraft: Bedrock Edition in PHP.",
       "languages": "PHP",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/spquK3Q66W)"
     },
     {
       "name": "[Chorus](http://bedrock-crustaceans.org/chorus/)",
       "description": "Minecraft: Bedrock server software, open source and written in Rust",
       "languages": "Rust",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/VCVcrvt3JC)"
     },
     {
       "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
       "description": "Nuclear-Powered Minecraft: Bedrock Edition Server Software.",
       "languages": "Java",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/5PzMkyK)"
     },
     {
       "name": "[Dragonfly](https://github.com/df-mc/dragonfly)",
       "description": "A heavily asynchronous server software for Minecraft: Bedrock Edition written in Go.",
       "languages": "Go",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/U4kFWHhTNR)"
     },
     {
       "name": "[Endstone](https://github.com/EndstoneMC/endstone)",
       "description": "A BDS-based Bedrock server software with full vanilla features and a Paper-like plugin API.",
       "languages": "C++, Python",
-      "type": "BDS-based"
+      "type": "BDS-based",
+      "community": "[Discord](https://discord.gg/xxgPuc2XN9)"
     },
     {
       "name": "[LeviLamina](https://github.com/LiteLDev/LeviLamina)",
       "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
       "languages": "C++",
-      "type": "BDS-based"
+      "type": "BDS-based",
+      "community": "[Discord](https://discord.gg/v5R5P4vRZk)"
     },
     {
       "name": "[Lumi](https://github.com/KoshakMineDev/Lumi)",
       "description": "A Minecraft Bedrock server software with multiversion, custom (items, blocks, enchantments), and better API.",
       "languages": "Java",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/HkTnrkUySJ)"
     },
     {
       "name": "[Nukkit PetteriM1 Edition](https://github.com/PetteriM1/NukkitPetteriM1Edition)",
@@ -75,31 +87,36 @@
       "name": "[Nukkit-MOT](https://github.com/MemoriesOfTime/Nukkit-MOT)",
       "description": "Support for multiple versions of Nukkit Minecraft Bedrock Edition Server Software.",
       "languages": "Java",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/pJjQDQC)"
     },
     {
       "name": "[PowerNukkitX](https://github.com/PowerNukkitX/PowerNukkitX)",
       "description": "Open-source, feature-rich Minecraft: Bedrock Edition server written in Java. Supports custom items, blocks, entities, full vanilla commands, advanced mob AI, and world generation. Highly customizable for server owners and developers.",
       "languages": "Java",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/apwd7uauZg)"
     },
     {
       "name": "[PumpkinMC](https://github.com/Pumpkin-MC/Pumpkin)",
       "description": "A Minecraft server built entirely in Rust, offering a fast, efficient, and customizable experience.",
       "languages": "Rust",
-      "type": "Java Edition cross-play"
+      "type": "Java Edition cross-play",
+      "community": "[Discord](https://discord.gg/wT8XjrjKkf)"
     },
     {
       "name": "[Amber](https://github.com/Amber-PM/Amber)",
       "description": "A feature-rich Minecraft: Bedrock Edition server software based on PocketMine-MP, focused on custom servers and extended APIs.",
       "languages": "PHP",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/k55gScjTs3)"
     },
     {
       "name": "[Serenity](https://github.com/SerenityJS/serenity)",
       "description": "A Minecraft Bedrock Edition Server Software in TypeScript.",
       "languages": "TypeScript, Rust",
-      "type": "Custom"
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/jUcC3q59zg)"
     }
   ]
 }
