@@ -29,6 +29,13 @@
       "community": "[Discord](https://discord.gg/ngkkE4hPTU)"
     },
     {
+      "name": "[Altay](https://github.com/altayofficial/Altay)",
+      "description": "Lightweight, OOP based Minecraft: Bedrock Edition server software written in PHP. Fork of PocketMine-MP.",
+      "languages": "PHP",
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/KMBEyFz2SP)"
+    },
+    {
       "name": "[Amber](https://github.com/Amber-PM/Amber)",
       "description": "A feature-rich Minecraft: Bedrock Edition server software based on PocketMine-MP, focused on custom servers and extended APIs.",
       "languages": "PHP",
@@ -48,6 +55,13 @@
       "languages": "Rust",
       "type": "Custom",
       "community": "[Discord](https://discord.gg/VCVcrvt3JC)"
+    },
+    {
+      "name": "[Cloudburst](https://github.com/CloudburstMC/Cloudburst)",
+      "description": "Bedrock-first server software, originally forked from Cloudburst Nukkit.",
+      "languages": "Java",
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/5PzMkyK)"
     },
     {
       "name": "[Cloudburst Nukkit](https://github.com/CloudburstMC/Nukkit)",
@@ -124,6 +138,13 @@
       "languages": "TypeScript, Rust",
       "type": "Custom",
       "community": "[Discord](https://discord.gg/jUcC3q59zg)"
+    },
+    {
+      "name": "[Vedrock](https://github.com/bedrock-v/Vedrock)",
+      "description": "A lightweight Minecraft: Bedrock Edition server software written in V.",
+      "languages": "V",
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/cM9BQsAk9D)"
     }
   ]
 }
