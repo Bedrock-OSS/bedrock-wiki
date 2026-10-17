@@ -64,7 +64,7 @@ To keep this list useful, server software has to meet all of the following befor
 
 -   **Public source code.** The repository has to be public, and there has to be something people can actually run, like a release, a nightly build or build instructions.
 -   **At least 3 months old.** Counted from the first public commit.
--   **Actively developed.** It either supports the protocol version of the latest stable Bedrock Edition release, or has had at least one commit in the last month. Automated commits (Dependabot, Renovate, etc.) don't count.
+-   **Actively developed.** It either supports one of the 3 latest protocol versions used by stable Bedrock Edition releases, or has had at least one commit in the last month. Automated commits (Dependabot, Renovate, etc.) don't count.
 -   **At least 15 stars** on GitHub, or similar interest if it's hosted somewhere else.
 -   **Its own README.** It should explain what the software is and how to use it. Forks that still have the upstream name or README won't be added.
 
