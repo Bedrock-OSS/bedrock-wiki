@@ -30,11 +30,6 @@
       "type": "Custom"
     },
     {
-      "name": "[AllayBE](https://github.com/AllayBE/AllayBE)",
-      "languages": "C++",
-      "type": "Custom"
-    },
-    {
       "name": "[AlphaMC](https://github.com/Suppert/AlphaMC)",
       "description": "Official- A powerful, in development Mcpe server software witten in python!",
       "languages": "Python",
@@ -65,7 +60,7 @@
       "type": "Custom"
     },
     {
-      "name": "[BlueBird](https://github.com/BlueBirdMC/Server)",
+      "name": "[BlueBird](https://github.com/old-BlueBirdMC/Server)",
       "description": "BlackBirdMC server",
       "languages": "JavaScript",
       "type": "Custom"
@@ -143,12 +138,6 @@
       "type": "Custom"
     },
     {
-      "name": "[Dragonet](https://github.com/DragonetMC/Dragonet)",
-      "description": "Old version of the Dragonet Server Software.",
-      "languages": "Java",
-      "type": "Custom"
-    },
-    {
       "name": "[Dragonet-Legacy](https://github.com/DragonetMC/Dragonet-Legacy)",
       "description": "Old version of the Dragonet Server Software.",
       "languages": "Java",
@@ -157,11 +146,6 @@
     {
       "name": "[DualNova](https://github.com/DualNova-Team/DualNova)",
       "description": "A stable 1.0.0 fork of PocketMine-MP (pmmp).",
-      "languages": "PHP",
-      "type": "Custom"
-    },
-    {
-      "name": "[Elco-MP](https://github.com/elco-mp/Elco-MP)",
       "languages": "PHP",
       "type": "Custom"
     },
@@ -178,13 +162,13 @@
       "type": "Custom"
     },
     {
-      "name": "[Endako](https://github.com/LeronDoesGM/Endako)",
+      "name": "[Endako](https://github.com/KurojakiKaoru/Endako)",
       "description": "A Minecraft Pocket Edition server software based off of PocketMine-MP",
       "languages": "PHP",
       "type": "Custom"
     },
     {
-      "name": "[EskoBE](https://github.com/MCPE357/EskoBE)",
+      "name": "[EskoBE](https://github.com/MCPE357/NoNameBE)",
       "description": "A server software for Minecraft: Bedrock Edition in PHP",
       "languages": "PHP",
       "type": "Custom"
@@ -261,13 +245,7 @@
       "type": "Custom"
     },
     {
-      "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
-      "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
-      "languages": "TypeScript",
-      "type": "Custom"
-    },
-    {
-      "name": "[JukeBoxMC](https://github.com/LucGamesYT/JukeboxMC)",
+      "name": "[JukeBoxMC](https://github.com/JukeboxMC/JukeboxMC)",
       "description": "A Minecraft Bedrock Edition Server Software.",
       "languages": "Java",
       "type": "Custom"
@@ -297,14 +275,9 @@
       "type": "Custom"
     },
     {
-      "name": "[LiteCore](https://github.com/LiteCoreTeam/LiteCore-public)",
+      "name": "[LiteCore](https://github.com/LiteCoreTeam/LiteCore)",
       "description": "Feature-rich server software for Minecraft PE and Windows 10 Edition - v1.1.x",
       "languages": "PHP",
-      "type": "Custom"
-    },
-    {
-      "name": "[Magic-Alpaca](https://github.com/PocketMiner92/Magic-Alpaca)",
-      "languages": "Go",
       "type": "Custom"
     },
     {
@@ -356,15 +329,15 @@
       "type": "Custom"
     },
     {
-      "name": "[NetherServ](https://github.com/protosleep/NetherServ)",
-      "description": ".NET MCPE Server",
-      "languages": "C#",
-      "type": "Custom"
-    },
-    {
       "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
       "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
       "languages": "C++",
+      "type": "Custom"
+    },
+    {
+      "name": "[NetherServ](https://github.com/protosleep/NetherServ)",
+      "description": ".NET MCPE Server",
+      "languages": "C#",
       "type": "Custom"
     },
     {
@@ -386,13 +359,13 @@
       "type": "Custom"
     },
     {
-      "name": "[Numerous-alpaca](https://github.com/numerous-alpaca/numerous-alpaca)",
+      "name": "[Numerous-alpaca](https://github.com/PrismarineJS/numerous-alpaca)",
       "description": "A Minecraft Bedrock Edition server in JavaScript",
       "languages": "JavaScript",
       "type": "Custom"
     },
     {
-      "name": "[OpenTouch](https://github.com/pooooooon/OpenTouch)",
+      "name": "[OpenTouch](https://github.com/encyptAES/OpenTouch)",
       "description": "A support-rich server software for Minecraft Bedrock Edition based on PocketMine-MP.",
       "languages": "PHP",
       "type": "Custom"
@@ -451,12 +424,6 @@
       "type": "Custom"
     },
     {
-      "name": "[RAstra](https://github.com/bedrock-crustaceans/RAstra)",
-      "description": "Modern Minecraft Bedrock Server Software written in Rust.",
-      "languages": "Rust, JavaScript, TypeScript",
-      "type": "Custom"
-    },
-    {
       "name": "[Rockit-LMS](https://github.com/cr0sh/Rockit-LMS)",
       "description": "Lightweight MC:PE server.",
       "languages": "Go",
@@ -466,12 +433,6 @@
       "name": "[Saddle](https://github.com/saddlemc/saddle)",
       "description": "Modular server software for Minecraft Bedrock Edition written in Go",
       "languages": "Go",
-      "type": "Custom"
-    },
-    {
-      "name": "[Sculk](https://github.com/sculkmp/Sculk)",
-      "description": "Sculk-Powered Minecraft: Bedrock Edition Server Software.",
-      "languages": "Java",
       "type": "Custom"
     },
     {
@@ -505,7 +466,7 @@
       "type": "Custom"
     },
     {
-      "name": "[StarrySky](https://github.com/StarrySky-PE/StarrySky)",
+      "name": "[StarrySky](https://github.com/towa0131/StarrySky)",
       "description": "This project has been dead.",
       "languages": "PHP",
       "type": "Custom"
@@ -547,12 +508,7 @@
       "type": "Custom"
     },
     {
-      "name": "[Terracotta](https://github.com/TerracottaMC/Terracotta)",
-      "languages": "Java",
-      "type": "Custom"
-    },
-    {
-      "name": "[Turanic](https://github.com/TuranicTeam/Turanic)",
+      "name": "[Turanic](https://github.com/unresolved3169/Turanic)",
       "description": "A Fast and clean server software for Minecraft: Bedrock Engine/Edition and W10 Edition - v1.2.x",
       "languages": "PHP",
       "type": "Custom"
@@ -561,11 +517,6 @@
       "name": "[voxelwind](https://github.com/voxelwind/voxelwind)",
       "description": "High-performance Minecraft: Pocket Edition server (in development)",
       "languages": "Java",
-      "type": "Custom"
-    },
-    {
-      "name": "[WolfMC](https://github.com/Wolf-MC/WolfMC)",
-      "languages": "PHP",
       "type": "Custom"
     }
   ]
