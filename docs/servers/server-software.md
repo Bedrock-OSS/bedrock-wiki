@@ -67,7 +67,6 @@ To keep this list useful, server software has to meet all of the following befor
 -   **Actively developed.** At least one commit in the last month. Automated commits (Dependabot, Renovate, etc.) don't count.
 -   **At least 15 stars** on GitHub, or similar interest if it's hosted somewhere else.
 -   **Its own README.** It should explain what the software is and how to use it. Forks that still have the upstream name or README won't be added.
--   **Supports a current version of Bedrock Edition.** Software that only supports old Pocket Edition versions isn't listed.
 
 If your software meets these, add it to [`active_software.json`](https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/tables/servers/server-software/active_software.json) in alphabetical order and open a PR. Include a Discord or other community link if there is one.
 
