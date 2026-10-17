@@ -62,15 +62,15 @@ You may observe a significant prevalence of Custom Server Software in comparison
 
 To keep this list useful, server software has to meet all of the following before it can be added to the active list:
 
--   **Public source code.** The repository has to be public, and there has to be something people can actually run, like a release, a nightly build or build instructions.
--   **At least 3 months old.** Counted from the first public commit.
--   **Actively developed.** It either supports one of the 3 latest protocol versions of stable or preview Bedrock Edition releases, or has had at least one commit in the last month. Automated commits (Dependabot, Renovate, etc.) don't count.
--   **At least 15 stars** on GitHub, or similar interest if it's hosted somewhere else.
--   **Its own README.** It should explain what the software is and how to use it. Forks that still have the upstream name or README won't be added.
+-   **Publicly available.** There has to be something people can actually download and run, like a release, a nightly build or build instructions. The source code doesn't have to be public.
+-   **At least 3 months old.** Counted from the first public commit or release.
+-   **Actively developed.** It either supports one of the 3 latest protocol versions of stable or preview Bedrock Edition releases, or has had at least one commit or release in the last month. Automated commits (Dependabot, Renovate, etc.) don't count.
+-   **At least 15 stars** on GitHub, or similar interest if it's hosted somewhere else or closed source.
+-   **Its own README or website.** It should explain what the software is and how to use it. Forks that still have the upstream name or README won't be added.
 
 If your software meets these, add it to [`active_software.json`](https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/tables/servers/server-software/active_software.json) in alphabetical order and open a PR. Include a Discord or other community link if there is one.
 
-Software is moved to the discontinued list once its repository is archived, or once it hasn't had any commits for 6 months. If a discontinued project picks development back up and meets the requirements again, it can be moved back to the active list.
+Software is moved to the discontinued list once its repository is archived, or once it hasn't had any commits or releases for 6 months. If a discontinued project picks development back up and meets the requirements again, it can be moved back to the active list.
 
 ## Further Information
 
