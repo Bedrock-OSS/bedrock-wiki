@@ -67,7 +67,7 @@ To keep this list useful, server software has to meet all of the following befor
 -   **Actively developed.** It either supports one of the 3 latest protocol versions of stable or preview Bedrock Edition releases, or has had at least one commit or release in the last month. Automated commits (Dependabot, Renovate, etc.) don't count.
 -   **At least 15 stars** on GitHub, or similar interest if it's hosted somewhere else or closed source.
 -   **Its own README or website.** It should explain what the software is and how to use it.
--   **Forks have to be rebranded.** If the source code is public, the repository has to use the fork's own name, and its README has to describe the fork rather than the upstream project. Having a separate website doesn't change this. The same goes for the website or docs: they have to describe the fork as a fork, not reuse the upstream project's description.
+-   **Clearly distinct from the original project.** Forks have to stand on their own: their own name and branding, a repository, README and docs that describe the fork rather than the original project, and meaningful changes to the code itself, like new features or support the original doesn't have. A renamed copy of another project isn't new server software.
 
 If your software meets these, add it to [`active_software.json`](https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/tables/servers/server-software/active_software.json) in alphabetical order and open a PR. Include a Discord or other community link if there is one.
 
