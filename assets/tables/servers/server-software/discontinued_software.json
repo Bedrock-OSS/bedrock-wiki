@@ -36,12 +36,6 @@
       "type": "Custom"
     },
     {
-      "name": "[Altay](https://github.com/TuranicTeam/Altay)",
-      "description": "Continuation version of altay server software for pm5",
-      "languages": "PHP",
-      "type": "Custom"
-    },
-    {
       "name": "[AtmosPE](https://github.com/AtmosPE/AtmosPE)",
       "description": "AtmosPE The Newest MC:BE Server Software With Fast And LaggFree Gameplay",
       "languages": "PHP",
