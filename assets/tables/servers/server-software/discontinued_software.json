@@ -325,7 +325,7 @@
     {
       "name": "[NetherGamesMC/PocketMine-MP](https://github.com/NetherGamesMC/PocketMine-MP)",
       "description": "A multi protocol server software for Minecraft: Bedrock Edition in PHP.",
-      "languages": "C++",
+      "languages": "PHP",
       "type": "Custom"
     },
     {
