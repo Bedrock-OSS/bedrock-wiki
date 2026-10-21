@@ -45,7 +45,7 @@
       "name": "[BDSX](https://github.com/bdsx/bdsx)",
       "description": "Minecraft, Bedrock Dedicated Server mod with node.js",
       "languages": "JavaScript",
-      "type": "BDS-based"
+      "type": "BDS-Based"
     },
     {
       "name": "[BedrockPowder](https://github.com/BedrockPowder/BedrockPowder)",
@@ -147,7 +147,7 @@
       "name": "[Element Zero](https://github.com/Element-0/ElementZero)",
       "description": "Run windows version of BDS in linux with Mod support",
       "languages": "C++",
-      "type": "BDS-based"
+      "type": "BDS-Based"
     },
     {
       "name": "[Elywing](https://github.com/H4PM/Elywing)",
