@@ -71,7 +71,7 @@ To keep this list useful, server software has to meet all of the following befor
 
 If your software meets these, add it to [`active_software.json`](https://github.com/Bedrock-OSS/bedrock-wiki/blob/wiki/docs/public/assets/tables/servers/server-software/active_software.json) in alphabetical order and open a PR. Include a Discord or other community link if there is one.
 
-Software is moved to the discontinued list once its repository is archived, or once it hasn't had any commits or releases for 6 months. If a discontinued project picks development back up and meets the requirements again, it can be moved back to the active list.
+Software is moved to the discontinued list once its repository is archived, or once it hasn't had any commits or releases for 6 months. If a discontinued project picks development back up and meets the requirements again, it can be moved back to the active list. Software can't be added to the discontinued list directly, it only ends up there by being moved from the active list. Entries from before these requirements existed are kept as a historical record.
 
 ## Further Information
 
