@@ -81,7 +81,7 @@
       "name": "[Endstone](https://github.com/EndstoneMC/endstone)",
       "description": "A BDS-based Bedrock server software with full vanilla features and a Paper-like plugin API.",
       "languages": "C++, Python",
-      "type": "BDS-based",
+      "type": "BDS-Based",
       "community": "[Discord](https://discord.gg/xxgPuc2XN9)"
     },
     {
@@ -95,7 +95,7 @@
       "name": "[LeviLamina](https://github.com/LiteLDev/LeviLamina)",
       "description": "A lightweight, modular and versatile mod loader for Minecraft Bedrock Edition.",
       "languages": "C++",
-      "type": "BDS-based",
+      "type": "BDS-Based",
       "community": "[Discord](https://discord.gg/v5R5P4vRZk)"
     },
     {
