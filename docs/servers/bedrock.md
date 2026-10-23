@@ -334,5 +334,6 @@ Here is list of Bedrock Protocol implementations
 | [PMMP/BedrockProtocol](https://github.com/pmmp/BedrockProtocol)   | An implementation of the Minecraft: Bedrock Edition protocol in PHP          | PHP      |
 | [gophertunnel](https://github.com/Sandertv/gophertunnel)          | General purpose library for Minecraft Bedrock Edition software written in Go | Go       |
 | [bedrockrs](https://github.com/bedrock-crustaceans/bedrockrs)     | Universal library for MCBE in Rust                                           | Rust     |
+| [bedrock-v/protocol](https://github.com/bedrock-v/protocol)       | Minecraft Bedrock Edition network protocol implementation in V               | V        |
 
 This page is a WIP, feel free to contribute as it is still being worked on.
