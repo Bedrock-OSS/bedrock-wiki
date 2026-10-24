@@ -328,12 +328,14 @@ To be documented...
 Not everything can be explained in great detail via documentation, that's why looking at existing implementations is very helpful.
 Here is list of Bedrock Protocol implementations
 
-| Name                                                              | Description                                                                  | Language |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------- |
-| [CloudburstMC/Protocol](https://github.com/CloudburstMC/Protocol) | A protocol library for Minecraft Bedrock Edition                             | Java     |
-| [PMMP/BedrockProtocol](https://github.com/pmmp/BedrockProtocol)   | An implementation of the Minecraft: Bedrock Edition protocol in PHP          | PHP      |
-| [gophertunnel](https://github.com/Sandertv/gophertunnel)          | General purpose library for Minecraft Bedrock Edition software written in Go | Go       |
-| [bedrockrs](https://github.com/bedrock-crustaceans/bedrockrs)     | Universal library for MCBE in Rust                                           | Rust     |
-| [bedrock-v/protocol](https://github.com/bedrock-v/protocol)       | Minecraft Bedrock Edition network protocol implementation in V               | V        |
+<!-- Sorted roughly by how complete and actively maintained each project is. Please name entries as user/repo. -->
+
+| Name                                                                              | Description                                                                  | Language |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------- |
+| [bedrock-crustaceans/bedrockrs](https://github.com/bedrock-crustaceans/bedrockrs) | Universal library for MCBE in Rust                                           | Rust     |
+| [Sandertv/gophertunnel](https://github.com/Sandertv/gophertunnel)                 | General purpose library for Minecraft Bedrock Edition software written in Go | Go       |
+| [CloudburstMC/Protocol](https://github.com/CloudburstMC/Protocol)                 | A protocol library for Minecraft Bedrock Edition                             | Java     |
+| [pmmp/BedrockProtocol](https://github.com/pmmp/BedrockProtocol)                   | An implementation of the Minecraft: Bedrock Edition protocol in PHP          | PHP      |
+| [bedrock-v/protocol](https://github.com/bedrock-v/protocol)                       | Minecraft Bedrock Edition network protocol implementation in V               | V        |
 
 This page is a WIP, feel free to contribute as it is still being worked on.
