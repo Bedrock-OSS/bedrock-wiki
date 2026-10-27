@@ -16,6 +16,12 @@ The file's `format_version` field must be updated for versioned changes to take 
 An experiment must be enabled in your world for experimental changes to take effect.
 :::
 
+## 1.26.60
+
+### Components
+
+-   Sound names from `RP/sounds/sound_definitions.json` can now be used in all components that previously only accepted vanilla sound event names in format versions `1.26.50` and later.
+
 ## 1.26.30
 
 ### Components
@@ -23,7 +29,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:use_modifiers`
     -   Added `start_using` parameter which determines when use modifiers should be always be applied when the item is used, or whether they should only be applied if the item does not have other built-in use functionality (such as a charged shooter shooting its stored ammunition).
         -   In format versions prior to `1.26.30`, the default value is `"always"`{lang=json}.
-        -   In format versions of `1.26.30` and higher, the default value is `"if_first"`{lang=json}.
+        -   In format versions of `1.26.30` and later, the default value is `"if_first"`{lang=json}.
 
 <Tag name="experimental" />
 <Label color="yellow">Beta APIs</Label>
@@ -40,7 +46,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:block_placer`
     -   Added `aligned_placement` parameter which determines whether the block should be placed on the block that was previously placed, on the face in the direction that the player started moving.
         -   By default, this parameter is set to `false`{lang=json}.
-        -   Despite being introduced in version 1.26.10, this parameter is available in format versions 1.26.0 and higher.
+        -   Despite being introduced in version 1.26.10, this parameter is available in format versions 1.26.0 and later.
 
 ## 1.26.0
 
