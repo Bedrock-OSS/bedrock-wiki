@@ -170,6 +170,10 @@ Setting this to an empty array results in a full block collision.
 
 #### Min/Max Collision Box
 
+:::warning EXPERIMENTAL
+Defining boxes as `min`/`max` objects requires the "Upcoming Creator Features" toggle to be enabled.
+:::
+
 -   `min` — Vector `[X, Y, Z]`{lang=js}
     -   Minimum corner position of the collision box.
     -   Measured in pixels from the bottom northwest corner of the block unit.
