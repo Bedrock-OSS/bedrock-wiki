@@ -21,9 +21,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.50
+:::tip FORMAT VERSION 1.26.60
 Using the latest format version when creating custom blocks provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.50.
+The wiki aims to share up-to-date information about custom blocks, and currently targets format version 1.26.60.
 :::
 :::danger OVERRIDING COMPONENTS
 Only **one** instance of each component can be active at once.
@@ -40,7 +40,7 @@ Block components can be directly applied in the `components` child of `minecraft
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:lamp",
@@ -115,7 +115,7 @@ _Requires format version [1.26.20](/blocks/block-format-history#_1-26-20) or lat
 
 Defines the area of the block that entities and particles collide with.
 
-_Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or later._
+_Requires format version [1.26.60](/blocks/block-format-history#_1-26-60) or later._
 
 #### Boolean Format {#collision-box-boolean}
 
@@ -128,29 +128,9 @@ _Requires format version [1.19.50](/blocks/block-format-history#_1-19-50) or lat
 "minecraft:collision_box": true
 ```
 
-#### Object Format {#collision-box-object}
-
--   `origin` — Vector `[X, Y, Z]`{lang=js}
-    -   Bottom north-western corner of the collision box.
-    -   Measured in pixels from the bottom center of the block unit.
-    -   Must be in the range `[-8, 0, -8]`{lang=json} to `[8, 16, 8]`{lang=json}.
--   `size` — Vector `[X, Y, Z]`{lang=js}
-    -   Size of each side of the collision box.
-    -   Measured in pixels from the `origin` of the collision box.
-    -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 24, 8]`{lang=json}.
-
-<CodeHeader breadcrumbs="minecraft:block/components" />
-
-```json
-"minecraft:collision_box": {
-    "origin": [-8, 0, -8],
-    "size": [16, 16, 16]
-}
-```
-
 #### Array Format {#collision-box-array}
 
-An array of up to 16 object collision box definitions.
+An array of up to 16 object collision box definitions (either a [min/max object](#min-max-collision-box) or [origin/size object](#origin-size-collision-box)).
 Setting this to an empty array results in a full block collision.
 
 <CodeHeader breadcrumbs="minecraft:block/components" />
@@ -166,6 +146,50 @@ Setting this to an empty array results in a full block collision.
         "size": [16, 8, 16]
     }
 ]
+```
+
+#### Origin/Size Collision Box
+
+-   `origin` — Vector `[X, Y, Z]`{lang=js}
+    -   Bottom north-western corner of the collision box.
+    -   Measured in pixels from the bottom center of the block unit.
+    -   Must be in the range `[-8, 0, -8]`{lang=json} to `[8, 16, 8]`{lang=json}.
+-   `size` — Vector `[X, Y, Z]`{lang=js}
+    -   Size of each side of the collision box.
+    -   Measured in pixels from the `origin` of the collision box.
+    -   The sum of `origin` and `size` must be in the range `[-8, 0, -8]`{lang=json} to `[8, 24, 8]`{lang=json}.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+{
+    "origin": [-8, 0, -8],
+    "size": [16, 16, 16]
+}
+```
+
+#### Min/Max Collision Box
+
+:::warning EXPERIMENTAL
+Defining boxes as `min`/`max` objects requires the "Upcoming Creator Features" toggle to be enabled.
+:::
+
+-   `min` — Vector `[X, Y, Z]`{lang=js}
+    -   Minimum corner position of the collision box.
+    -   Measured in pixels from the bottom northwest corner of the block unit.
+    -   Must be in the range `[0, 0, 0]`{lang=json} to `[16, 16, 16]`{lang=json}.
+-   `max` — Vector `[X, Y, Z]`{lang=js}
+    -   Maximum corner position of the collision box.
+    -   Measured in pixels from the bottom northwest corner of the block unit.
+    -   Must be in the range `[0, 0, 0]`{lang=json} to `[16, 16, 16]`{lang=json} and be more than `min`.
+
+<CodeHeader breadcrumbs="minecraft:block/components" />
+
+```json
+{
+    "min": [0, 0, 0],
+    "max": [16, 16, 16]
+}
 ```
 
 ### Connection Rule

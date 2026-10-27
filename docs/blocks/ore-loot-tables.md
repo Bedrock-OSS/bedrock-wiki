@@ -17,7 +17,7 @@ mentions:
     - Keyyard
 ---
 
-:::tip FORMAT VERSION 1.26.50
+:::tip FORMAT VERSION 1.26.60
 This tutorial assumes a basic understanding of blocks.
 Check out the [blocks guide](/blocks/blocks-intro) before starting.
 :::
@@ -227,7 +227,7 @@ Here you need to do two things:
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:silver_ore",

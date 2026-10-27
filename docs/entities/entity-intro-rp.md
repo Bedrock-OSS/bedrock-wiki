@@ -360,7 +360,7 @@ Ensure that you include the following parameter in the player client entity file
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:client_entity": {
         "description": {
             "identifier": "minecraft:player",

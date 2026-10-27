@@ -12,7 +12,7 @@ mentions:
 hidden: true
 ---
 
-::: tip FORMAT VERSION 1.26.50
+::: tip FORMAT VERSION 1.26.60
 This tutorial assumes an advanced understanding of blocks and scripting.
 Check out the [blocks](/blocks/blocks-intro) and [scripting](/scripting/scripting-intro) guides before starting.
 :::
@@ -415,7 +415,7 @@ Interacting with paper will fill the selected slot. Destroying the block release
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:pigeonholes",
@@ -627,7 +627,7 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:double_flower_pot",
@@ -646,10 +646,12 @@ Using our [SelectionBoxes](#selectionboxes-class) class, the player can interact
         },
         "components": {
             "wiki:double_flower_pot": {},
-            "minecraft:collision_box": {
-                "origin": [-7, 0, -3],
-                "size": [14, 6, 6]
-            },
+            "minecraft:collision_box": [
+                {
+                    "origin": [-7, 0, -3],
+                    "size": [14, 6, 6]
+                }
+            ],
             // This must cover all boxes in the precise interaction script
             "minecraft:selection_box": {
                 "origin": [-7, 0, -3],

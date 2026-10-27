@@ -15,7 +15,7 @@ mentions:
     - SmokeyStack
 ---
 
-:::tip FORMAT VERSION 1.26.50
+:::tip FORMAT VERSION 1.26.60
 This tutorial assumes a good understanding of blocks and scripting.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -62,7 +62,7 @@ This code example also includes the base components of our crop which will be ac
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_crop",
