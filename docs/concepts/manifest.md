@@ -27,25 +27,25 @@ The `manifest.json` file is what identifies a pack to Minecraft. It lives in the
 
 A manifest is a single JSON object with the following top-level keys.
 
-| Key                             | Required | Description                                                                                   |
-| ------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
-| [`format_version`](#format-versions) | Yes      | The version of the manifest syntax itself. Use `3`.                                           |
-| [`header`](#header)             | Yes      | Public-facing information about the pack: name, description, UUID, version.                   |
-| [`modules`](#modules)           | Yes      | What kind of content the pack contains. Determines whether it is a BP, RP, skin pack or world template. |
-| [`dependencies`](#dependencies) | No       | Other packs or script modules this pack requires.                                              |
-| [`capabilities`](#capabilities) | No       | Optional engine features the pack opts into.                                                  |
-| [`metadata`](#metadata)         | No       | Authors, license, website, generating tool and product type.                                  |
-| [`subpacks`](#subpacks)         | No       | Selectable variations of the pack, typically used for texture resolutions.                    |
-| [`settings`](#pack-settings)    | No       | Player-configurable toggles, sliders and dropdowns shown in the pack settings screen.         |
+| Key                                  | Required | Description                                                                                             |
+| ------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------- |
+| [`format_version`](#format-versions) | Yes      | The version of the manifest syntax itself. Use `3`.                                                     |
+| [`header`](#header)                  | Yes      | Public-facing information about the pack: name, description, UUID, version.                             |
+| [`modules`](#modules)                | Yes      | What kind of content the pack contains. Determines whether it is a BP, RP, skin pack or world template. |
+| [`dependencies`](#dependencies)      | No       | Other packs or script modules this pack requires.                                                       |
+| [`capabilities`](#capabilities)      | No       | Optional engine features the pack opts into.                                                            |
+| [`metadata`](#metadata)              | No       | Authors, license, website, generating tool and product type.                                            |
+| [`subpacks`](#subpacks)              | No       | Selectable variations of the pack, typically used for texture resolutions.                              |
+| [`settings`](#pack-settings)         | No       | Player-configurable toggles, sliders and dropdowns shown in the pack settings screen.                   |
 
 ## Format Versions
 
 The manifest has its own `format_version`, separate from the format versions used by other pack files (see [Format Versions](/guide/format-version)).
 
-| Version | Status          | Notes                                                                                                                                              |
-| ------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `1`     | Legacy          | Only still seen in skin packs. Do not use for new behavior or resource packs.                                                                      |
-| `2`     | Supported       | The long-standing format. Versions are written as arrays such as `[1, 0, 0]`. Does not support pack settings or `memory_performance_tier`.        |
+| Version | Status          | Notes                                                                                                                                                                                                                                                 |
+| ------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `1`     | Legacy          | Only still seen in skin packs. Do not use for new behavior or resource packs.                                                                                                                                                                         |
+| `2`     | Supported       | The long-standing format. Versions are written as arrays such as `[1, 0, 0]`. Does not support pack settings or `memory_performance_tier`.                                                                                                            |
 | `3`     | **Recommended** | Current format. All `version` fields, `min_engine_version` and `base_game_version` **must** be [SemVer](https://semver.org/) strings such as `"1.0.0"`. Adds [pack settings](#pack-settings) and `memory_performance_tier` for [subpacks](#subpacks). |
 
 :::warning
@@ -85,41 +85,41 @@ Minecraft expects **version 4** UUIDs, which are randomly generated. You can cre
 
 The `header` object describes the pack to the player and to the game.
 
-| Field                   | Type                          | Required               | Description                                                                                                                                                                                                                                                       |
-| ----------------------- | ----------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`                  | String                        | Yes                    | The name shown in-game. Can be a [localization key](/text/text-intro) such as `pack.name`, translated in the pack's own `texts/` folder.                                                                                                                          |
-| `description`           | String                        | No                     | Shown below the name in-game. Keep it to one or two lines. Can also be a localization key.                                                                                                                                                                        |
-| `uuid`                  | String                        | Yes                    | The pack's unique identity. See [UUIDs](#uuids).                                                                                                                                                                                                                  |
-| `version`               | Version                       | Yes                    | The pack's version. When a pack with the same UUID is imported again, the new copy replaces the old one only if this version is higher. Equal or lower versions are ignored.                                                                                       |
-| `min_engine_version`    | Version                       | BP and RP              | The lowest game version the pack supports. Also controls which legacy behaviors the game keeps enabled for the pack, so set it to the version you are developing against. Not used in skin packs or world templates.                                              |
-| `pack_scope`            | String                        | No (RP only)           | Where the pack can be applied. `"world"` means only inside a world, `"global"` means only from the global resource pack list, and `"any"` (the default) allows both.                                                                                              |
-| `base_game_version`     | Version                       | World templates        | The version of the vanilla behavior and resource packs the template was built against. The game applies the matching vanilla content when the template is used.                                                                                                   |
-| `lock_template_options` | Boolean                       | World templates        | Prevents the player from changing world options when creating a world from the template.                                                                                                                                                                          |
-| `allow_random_seed`     | Boolean                       | No (world templates)   | Generates a new seed every time the template is used and lets the player change it.                                                                                                                                                                              |
+| Field                   | Type    | Required             | Description                                                                                                                                                                                                          |
+| ----------------------- | ------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`                  | String  | Yes                  | The name shown in-game. Can be a [localization key](/text/text-intro) such as `pack.name`, translated in the pack's own `texts/` folder.                                                                             |
+| `description`           | String  | No                   | Shown below the name in-game. Keep it to one or two lines. Can also be a localization key.                                                                                                                           |
+| `uuid`                  | String  | Yes                  | The pack's unique identity. See [UUIDs](#uuids).                                                                                                                                                                     |
+| `version`               | Version | Yes                  | The pack's version. When a pack with the same UUID is imported again, the new copy replaces the old one only if this version is higher. Equal or lower versions are ignored.                                         |
+| `min_engine_version`    | Version | BP and RP            | The lowest game version the pack supports. Also controls which legacy behaviors the game keeps enabled for the pack, so set it to the version you are developing against. Not used in skin packs or world templates. |
+| `pack_scope`            | String  | No (RP only)         | Where the pack can be applied. `"world"` means only inside a world, `"global"` means only from the global resource pack list, and `"any"` (the default) allows both.                                                 |
+| `base_game_version`     | Version | World templates      | The version of the vanilla behavior and resource packs the template was built against. The game applies the matching vanilla content when the template is used.                                                      |
+| `lock_template_options` | Boolean | World templates      | Prevents the player from changing world options when creating a world from the template.                                                                                                                             |
+| `allow_random_seed`     | Boolean | No (world templates) | Generates a new seed every time the template is used and lets the player change it.                                                                                                                                  |
 
 ## Modules
 
 `modules` is an array. Each entry declares one kind of content the pack contains. The module `type` is what makes a pack a behavior pack, resource pack, skin pack or world template.
 
-| Field         | Type    | Required     | Description                                                                                                |
-| ------------- | ------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
-| `type`        | String  | Yes          | One of the module types below.                                                                             |
-| `uuid`        | String  | Yes          | A UUID for this module. Must differ from the header UUID and from every other module.                      |
-| `version`     | Version | Yes          | The module's version. Usually kept in step with `header.version`.                                          |
-| `description` | String  | No           | A note to yourself about what the module is for. Not shown in-game.                                        |
-| `language`    | String  | `script` only | The scripting language. The only supported value is `"javascript"`.                                       |
+| Field         | Type    | Required      | Description                                                                                              |
+| ------------- | ------- | ------------- | -------------------------------------------------------------------------------------------------------- |
+| `type`        | String  | Yes           | One of the module types below.                                                                           |
+| `uuid`        | String  | Yes           | A UUID for this module. Must differ from the header UUID and from every other module.                    |
+| `version`     | Version | Yes           | The module's version. Usually kept in step with `header.version`.                                        |
+| `description` | String  | No            | A note to yourself about what the module is for. Not shown in-game.                                      |
+| `language`    | String  | `script` only | The scripting language. The only supported value is `"javascript"`.                                      |
 | `entry`       | String  | `script` only | Path to the script file the game runs first, relative to the pack root, for example `"scripts/main.js"`. |
 
 ### Module Types
 
-| Type             | Pack type      | Description                                                                                                                                      |
-| ---------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `data`           | Behavior pack  | Entities, items, blocks, loot tables, functions and every other server-side definition.                                                          |
-| `script`         | Behavior pack  | A [Script API](/scripting/scripting-intro) entry point. Requires `language` and `entry`. Usually appears alongside a `data` module.               |
-| `resources`      | Resource pack  | Textures, models, sounds, UI, animations and every other client-side asset.                                                                      |
-| `skin_pack`      | Skin pack      | See [Skin Packs](/visuals/skin-packs).                                                                                                           |
-| `world_template` | World template | A world that players can create new copies of.                                                                                                   |
-| `client_data`    | Behavior pack  | Legacy client-side scripting. Removed from the game. Only listed so you recognize it in old packs.                                              |
+| Type             | Pack type      | Description                                                                                                                         |
+| ---------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `data`           | Behavior pack  | Entities, items, blocks, loot tables, functions and every other server-side definition.                                             |
+| `script`         | Behavior pack  | A [Script API](/scripting/scripting-intro) entry point. Requires `language` and `entry`. Usually appears alongside a `data` module. |
+| `resources`      | Resource pack  | Textures, models, sounds, UI, animations and every other client-side asset.                                                         |
+| `skin_pack`      | Skin pack      | See [Skin Packs](/visuals/skin-packs).                                                                                              |
+| `world_template` | World template | A world that players can create new copies of.                                                                                      |
+| `client_data`    | Behavior pack  | Legacy client-side scripting. Removed from the game. Only listed so you recognize it in old packs.                                  |
 
 A pack may contain more than one module, for example a `data` module and a `script` module in the same behavior pack. A pack may **not** mix behavior and resource content: a `data` module and a `resources` module cannot share a manifest.
 
@@ -127,10 +127,10 @@ A pack may contain more than one module, for example a `data` module and a `scri
 
 `dependencies` is an array. Each entry is either a dependency on another **pack**, identified by UUID, or on a built-in **script module**, identified by name.
 
-| Field         | Type    | Description                                                                                                                                                   |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `uuid`        | String  | The **header** UUID of the pack this pack requires. Use this for pack dependencies.                                                                           |
-| `module_name` | String  | The name of a built-in script module, such as `@minecraft/server`. Use this for script dependencies.                                                          |
+| Field         | Type    | Description                                                                                                                                                         |
+| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `uuid`        | String  | The **header** UUID of the pack this pack requires. Use this for pack dependencies.                                                                                 |
+| `module_name` | String  | The name of a built-in script module, such as `@minecraft/server`. Use this for script dependencies.                                                                |
 | `version`     | Version | For pack dependencies, the version of the other pack's header. For script modules, the API version string, which may carry a `-beta` suffix such as `"2.4.0-beta"`. |
 
 ### Pack Dependencies
@@ -171,14 +171,14 @@ Any behavior pack with a `script` module must declare the API modules it imports
 
 `capabilities` is an array of strings. Each one opts the pack into an optional engine feature.
 
-| Capability               | Pack type | Description                                                                                                                                              |
-| ------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pbr`                    | RP        | The pack ships physically based rendering assets, and Vibrant Visuals may be enabled while it is active.                                                 |
-| `raytraced`              | RP        | The pack ships ray-tracing assets and enables ray tracing on supported devices.                                                                          |
-| `script_eval`            | BP        | Allows `eval()` and `Function()` in scripts. Not recommended; see [Script API Environment](/scripting/api-environment).                                  |
-| `chemistry`              | BP / RP   | The pack may add, remove or modify chemistry (Education Edition) behavior.                                                                               |
-| `editorExtension`        | BP / RP   | Marks the pack as an extension for the Minecraft Editor.                                                                                                 |
-| `experimental_custom_ui` | RP        | Legacy flag from the old HTML-based custom UI system. It has no effect in current versions.                                                              |
+| Capability               | Pack type | Description                                                                                                             |
+| ------------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `pbr`                    | RP        | The pack ships physically based rendering assets, and Vibrant Visuals may be enabled while it is active.                |
+| `raytraced`              | RP        | The pack ships ray-tracing assets and enables ray tracing on supported devices.                                         |
+| `script_eval`            | BP        | Allows `eval()` and `Function()` in scripts. Not recommended; see [Script API Environment](/scripting/api-environment). |
+| `chemistry`              | BP / RP   | The pack may add, remove or modify chemistry (Education Edition) behavior.                                              |
+| `editorExtension`        | BP / RP   | Marks the pack as an extension for the Minecraft Editor.                                                                |
+| `experimental_custom_ui` | RP        | Legacy flag from the old HTML-based custom UI system. It has no effect in current versions.                             |
 
 <CodeHeader path="RP/manifest.json" />
 
@@ -190,13 +190,13 @@ Any behavior pack with a `script` module must declare the API modules it imports
 
 `metadata` holds information about who made the pack and how. None of it changes how the pack behaves in-game.
 
-| Field            | Type     | Description                                                                                                                                                                                                                          |
-| ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `authors`        | Array    | Names of the pack's authors. **Required in format version 3** (see [Format Versions](#format-versions)).                                                                                                                             |
-| `license`        | String   | The license the pack is distributed under, for example `"MIT"` or `"All Rights Reserved"`.                                                                                                                                           |
-| `url`            | String   | The pack's website.                                                                                                                                                                                                                  |
-| `product_type`   | String   | The only supported value is `"addon"`. It tells the game the pack is an add-on rather than a full world or game. Before version 26.50, worlds with `"addon"` packs kept achievements enabled; this was removed in 26.50 as it was considered an exploit ([MCPE-242529](https://mojira.dev/MCPE-242529)). It does not otherwise change how the pack behaves. |
-| `generated_with` | Object   | Records the tools that generated or edited the manifest. Keys are tool names matching `[a-zA-Z0-9_-]` with at most 32 characters. Values are arrays of SemVer strings, one for each tool version that touched the file.              |
+| Field            | Type   | Description                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `authors`        | Array  | Names of the pack's authors. **Required in format version 3** (see [Format Versions](#format-versions)).                                                                                                                                                                                                                                                    |
+| `license`        | String | The license the pack is distributed under, for example `"MIT"` or `"All Rights Reserved"`.                                                                                                                                                                                                                                                                  |
+| `url`            | String | The pack's website.                                                                                                                                                                                                                                                                                                                                         |
+| `product_type`   | String | The only supported value is `"addon"`. It tells the game the pack is an add-on rather than a full world or game. Before version 26.50, worlds with `"addon"` packs kept achievements enabled; this was removed in 26.50 as it was considered an exploit ([MCPE-242529](https://mojira.dev/MCPE-242529)). It does not otherwise change how the pack behaves. |
+| `generated_with` | Object | Records the tools that generated or edited the manifest. Keys are tool names matching `[a-zA-Z0-9_-]` with at most 32 characters. Values are arrays of SemVer strings, one for each tool version that touched the file.                                                                                                                                     |
 
 <CodeHeader path="BP/manifest.json" />
 
@@ -248,12 +248,12 @@ Keep subpack folder names short. Long names can hit path length limits on some p
 
 Register each folder in the `subpacks` array of the manifest.
 
-| Field                     | Type    | Required | Description                                                                                                                                                                              |
-| ------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `folder_name`             | String  | Yes      | The folder inside `subpacks/` this entry refers to.                                                                                                                                      |
-| `name`                    | String  | Yes      | The label shown on the subpack slider. Cannot be localized.                                                                                                                              |
-| `memory_tier`             | Integer | Yes      | The minimum device memory needed to select this subpack, in units of 0.25 GB. A tier of `4` means 1 GB. Microsoft plans to replace this field with `memory_performance_tier`.             |
-| `memory_performance_tier` | Integer | No       | A platform tier from `1` to `5` (see the table below). Requires manifest `format_version` 3 and is still experimental.                                                                   |
+| Field                     | Type    | Required | Description                                                                                                                                                                   |
+| ------------------------- | ------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folder_name`             | String  | Yes      | The folder inside `subpacks/` this entry refers to.                                                                                                                           |
+| `name`                    | String  | Yes      | The label shown on the subpack slider. Cannot be localized.                                                                                                                   |
+| `memory_tier`             | Integer | Yes      | The minimum device memory needed to select this subpack, in units of 0.25 GB. A tier of `4` means 1 GB. Microsoft plans to replace this field with `memory_performance_tier`. |
+| `memory_performance_tier` | Integer | No       | A platform tier from `1` to `5` (see the table below). Requires manifest `format_version` 3 and is still experimental.                                                        |
 
 <CodeHeader path="RP/manifest.json" />
 
@@ -298,13 +298,13 @@ Register each folder in the `subpacks` array of the manifest.
 
 Microsoft publishes the following mapping between `memory_performance_tier`, `memory_tier` and typical hardware.
 
-| Performance tier | Typical platforms                                   | Equivalent `memory_tier` | Device memory |
-| ---------------- | --------------------------------------------------- | ------------------------ | ------------- |
-| 1                | Nintendo Switch                                     | ≤ 11                     | 2 to 4 GB     |
-| 2                | PS4, PS4 Pro, Xbox One, Xbox One S, most mobile     | 12 to 16                 | 4 to 5 GB     |
-| 3                | Xbox One X, Xbox Series S                           | 18 to 20                 | 6 to 8 GB     |
-| 4                | Xbox Series X, PS5                                  | 24 to 28                 | 8 to 12 GB    |
-| 5                | PS5 Pro, most PCs                                   | ≥ 32                     | over 12 GB    |
+| Performance tier | Typical platforms                               | Equivalent `memory_tier` | Device memory |
+| ---------------- | ----------------------------------------------- | ------------------------ | ------------- |
+| 1                | Nintendo Switch                                 | ≤ 11                     | 2 to 4 GB     |
+| 2                | PS4, PS4 Pro, Xbox One, Xbox One S, most mobile | 12 to 16                 | 4 to 5 GB     |
+| 3                | Xbox One X, Xbox Series S                       | 18 to 20                 | 6 to 8 GB     |
+| 4                | Xbox Series X, PS5                              | 24 to 28                 | 8 to 12 GB    |
+| 5                | PS5 Pro, most PCs                               | ≥ 32                     | over 12 GB    |
 
 ### Subpack Selection
 
@@ -323,7 +323,7 @@ Pack settings add a configurable options screen to a behavior or resource pack. 
 ### Requirements
 
 -   Manifest `format_version` **3**. Settings are ignored in format version 2.
--   A `min_engine_version` of at least `1.21.130` for the Molang queries.
+-   A `min_engine_version` of at least `1.21.130`, which is when the Molang queries were added. The examples on this page use a newer version; any version from `1.21.130` upwards works.
 -   `@minecraft/server` for the Script API method. `world.getPackSettings()` is available in the current stable API.
 
 ### Setting Types
@@ -334,35 +334,35 @@ Pack settings add a configurable options screen to a behavior or resource pack. 
 
 Read-only text. Use it for headings, descriptions or to break the screen into sections.
 
-| Field  | Type   | Description                             |
-| ------ | ------ | --------------------------------------- |
-| `type` | String | `"label"`                               |
+| Field  | Type   | Description                                         |
+| ------ | ------ | --------------------------------------------------- |
+| `type` | String | `"label"`                                           |
 | `text` | String | The text to display. Supports `§` formatting codes. |
 
 #### Toggle
 
 A true or false switch.
 
-| Field     | Type    | Description                                                 |
-| --------- | ------- | ----------------------------------------------------------- |
-| `type`    | String  | `"toggle"`                                                  |
+| Field     | Type    | Description                                                                        |
+| --------- | ------- | ---------------------------------------------------------------------------------- |
+| `type`    | String  | `"toggle"`                                                                         |
 | `name`    | String  | The identifier used to read the value. Namespace it, for example `wiki:show_text`. |
-| `text`    | String  | The label shown next to the toggle.                         |
-| `default` | Boolean | The initial value.                                          |
+| `text`    | String  | The label shown next to the toggle.                                                |
+| `default` | Boolean | The initial value.                                                                 |
 
 #### Slider
 
 A number within a range. Integers and decimals are both allowed.
 
-| Field     | Type   | Description                                      |
-| --------- | ------ | ------------------------------------------------ |
-| `type`    | String | `"slider"`                                       |
-| `name`    | String | The identifier used to read the value.           |
-| `text`    | String | The label shown above the slider.                |
-| `min`     | Number | The lowest selectable value.                     |
-| `max`     | Number | The highest selectable value.                    |
-| `step`    | Number | The distance between slider notches.             |
-| `default` | Number | The initial value.                               |
+| Field     | Type   | Description                            |
+| --------- | ------ | -------------------------------------- |
+| `type`    | String | `"slider"`                             |
+| `name`    | String | The identifier used to read the value. |
+| `text`    | String | The label shown above the slider.      |
+| `min`     | Number | The lowest selectable value.           |
+| `max`     | Number | The highest selectable value.          |
+| `step`    | Number | The distance between slider notches.   |
+| `default` | Number | The initial value.                     |
 
 #### Dropdown
 

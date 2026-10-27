@@ -28,6 +28,7 @@
 /concepts/mcfunction: /commands/mcfunction
 /concepts/rawtext: /text/rawtext
 /concepts/render-controller: /visuals/render-controller
+/concepts/pack-settings: /concepts/manifest#pack-settings
 /concepts/subpacks: /concepts/manifest#subpacks
 /concepts/text-and-translations: /text/text-intro
 /concepts/texture-list: /concepts/textures-list
