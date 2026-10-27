@@ -6,6 +6,7 @@ outline_depth: 2
 license: true
 mentions:
     - QuazChick
+    - IllagerCaptain
 ---
 
 :::info <Label color="green">Versioned</Label> CHANGES
@@ -24,12 +25,13 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 -   Updated `minecraft:collision_box`
     -   Now only accepts an array and no longer accepts a single box object.
-    -   Box objects may now also be defined using the `min`/`max` vector range format used by voxel shapes.
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
 <Label color="green">Versioned</Label>
 
+-   Updated `minecraft:collision_box`
+    -   Box objects may now also be defined using the `min`/`max` vector range format used by voxel shapes.
 -   Added `minecraft:enchantment_power_transmitter`
     -   Determines whether Enchanting Tables separated from a Bookshelf by this block are still able to receive enchantment power.
     -   By default, blocks do not transmit enchantment power.
