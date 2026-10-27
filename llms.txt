@@ -48,7 +48,6 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Understanding JSON](/guide/understanding-json)
 - [Download Example Packs](/guide/download-packs)
 - [Troubleshooting](/guide/troubleshooting)
-- [Advanced Manifest](/guide/advancedmanifest)
 - [Format Versions](/guide/format-version)
 - [Project Setup Android](/guide/project-setup-android)
 
@@ -179,15 +178,17 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 ## Concepts
 
-- [contents.json](/concepts/contents)
 - [Molang](/concepts/molang)
 - [Namespaces](/concepts/namespaces)
 - [Overwriting Assets](/concepts/overwriting-assets)
-- [Pack Settings](/concepts/pack-settings)
 - [Shaders](/concepts/shaders)
 - [Sounds](/concepts/sounds)
 - [Sounds (Server)](/concepts/server-sounds)
-- [Subpacks](/concepts/subpacks)
+
+### Pack Files
+
+- [contents.json](/concepts/contents)
+- [manifest.json](/concepts/manifest)
 - [Texture Atlases](/concepts/texture-atlases)
 - [textures_list.json](/concepts/textures-list)
 
