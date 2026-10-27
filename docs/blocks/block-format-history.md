@@ -30,8 +30,6 @@ An experiment must be enabled in your world for experimental changes to take eff
 <Label color="blue">Upcoming Creator Features</Label>
 <Label color="green">Versioned</Label>
 
--   Updated `minecraft:collision_box`
-    -   Box objects may now also be defined using the `min`/`max` vector range format used by voxel shapes.
 -   Added `minecraft:enchantment_power_transmitter`
     -   Determines whether Enchanting Tables separated from a Bookshelf by this block are still able to receive enchantment power.
     -   By default, blocks do not transmit enchantment power.
@@ -43,6 +41,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Added `minecraft:vibration_properties`
     -   Contains `dampen_vibrations` which determines whether the block prevents vibrations caused by contact with the block.
     -   Contains `occlude_vibrations` which determines whether the block prevents vibrations from passing through it.
+-   Updated `minecraft:collision_box`
+    -   Box objects may now also be defined using the `min`/`max` vector range format used by voxel shapes.
 
 <Tag name="experimental" />
 <Label color="blue">Upcoming Creator Features</Label>
