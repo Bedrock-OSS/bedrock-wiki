@@ -497,10 +497,6 @@
       "tags": ["`minecraft:is_pickaxe_item_destructible`", "`stone`"]
     },
     {
-      "block": "`minecraft:brittle_ice`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
       "block": "`minecraft:brown_concrete`",
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
@@ -1801,14 +1797,6 @@
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
-      "block": "`minecraft:ice_crystal`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:icicle`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
       "block": "`minecraft:infested_chiseled_stone_bricks`",
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
@@ -2675,30 +2663,6 @@
     },
     {
       "block": "`minecraft:packed_ice`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:packed_ice_bricks`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:packed_ice_bricks_chiseled`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:packed_ice_bricks_double_slab`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:packed_ice_bricks_slab`",
-      "tags": ["`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:packed_ice_bricks_stairs`",
-      "tags": ["`minecraft:cornerable_stairs`", "`minecraft:is_pickaxe_item_destructible`"]
-    },
-    {
-      "block": "`minecraft:packed_ice_bricks_wall`",
       "tags": ["`minecraft:is_pickaxe_item_destructible`"]
     },
     {
