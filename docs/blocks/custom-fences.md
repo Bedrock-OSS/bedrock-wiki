@@ -10,7 +10,7 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.50
+:::tip FORMAT VERSION 1.26.60
 This tutorial assumes a good understanding of block visuals and block permutations.
 Check out the [block visuals guide](/blocks/block-visuals-intro) before starting.
 :::
@@ -39,7 +39,7 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_fence",
@@ -101,10 +101,12 @@ _Note that the block description does not have the `menu_category` parameter as 
                 "origin": [-2, 0, -2],
                 "size": [4, 16, 4]
             },
-            "minecraft:collision_box": {
-                "origin": [-2, 0, -2],
-                "size": [4, 24, 4]
-            }
+            "minecraft:collision_box": [
+                {
+                    "origin": [-2, 0, -2],
+                    "size": [4, 24, 4]
+                }
+            ]
         }
     }
 }

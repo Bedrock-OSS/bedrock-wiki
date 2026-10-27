@@ -14,7 +14,7 @@ mentions:
 N-way rotation is only visible to the player hosting the world, not remote players joining.
 For servers, this means it is not visible to any players.
 :::
-:::tip FORMAT VERSION 1.26.50
+:::tip FORMAT VERSION 1.26.60
 This tutorial assumes an advanced understanding of blocks and items.
 Check out the [blocks guide](/blocks/blocks-intro), [block states](/blocks/block-states) and [block events](/blocks/block-events) before starting.
 :::
@@ -60,17 +60,19 @@ _Note that the block description does not have the `menu_category` parameter as 
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:block": {
         "description": {
             "identifier": "wiki:custom_head"
         },
         "components": {
             // Collision and selection boxes
-            "minecraft:collision_box": {
-                "origin": [-4, 0, -4],
-                "size": [8, 8, 8]
-            },
+            "minecraft:collision_box": [
+                {
+                    "origin": [-4, 0, -4],
+                    "size": [8, 8, 8]
+                }
+            ],
             "minecraft:selection_box": {
                 "origin": [-4, 0, -4],
                 "size": [8, 8, 8]
