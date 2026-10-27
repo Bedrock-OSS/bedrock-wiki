@@ -183,6 +183,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 - [Molang](/concepts/molang)
 - [Namespaces](/concepts/namespaces)
 - [Overwriting Assets](/concepts/overwriting-assets)
+- [Pack Settings](/concepts/pack-settings)
 - [Shaders](/concepts/shaders)
 - [Sounds](/concepts/sounds)
 - [Sounds (Server)](/concepts/server-sounds)
