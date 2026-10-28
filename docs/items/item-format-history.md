@@ -20,7 +20,7 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ### Components
 
--   Sound names from `RP/sounds/sound_definitions.json` can now be used in all components that previously only accepted vanilla sound event names in format versions `1.26.50` and later.
+-   Sound names from `RP/sounds/sound_definitions.json` can now be used in the `minecraft:durability_sensor`, `minecraft:swing_sounds` and `minecraft:use_modifiers` components which previously only accepted vanilla sound event names in format versions `1.26.50` and later.
 
 ## 1.26.30
 
