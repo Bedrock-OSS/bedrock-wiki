@@ -128,11 +128,34 @@ For now there are three types of element available for creators to use: `minecra
 
 This element places nothing. If the jigsaw blocks are viewed using debug generation, they will have no connection if an empty pool element was selected. A structure will fail to generate if this is the starting element.
 
+<CodeHeader breadcrumbs="minecraft:template_pool" />
+
+```json
+{
+    "weight": 1,
+    "element": {
+        "element_type": "minecraft:empty_pool_element"
+    }
+}
+```
+
 #### Feature Pool Element
 
 This element places a feature, custom, vanilla, or hardcoded. A jigsaw block placing a feature pool element must be facing upwards and doesn't need a target name, just a target pool with the feature pool element in it.
 
 -   `feature`: The feature to place. Can be any custom or vanilla feature including hardcoded ones such as `minecraft:desert_well_feature`.
+
+<CodeHeader breadcrumbs="minecraft:template_pool" />
+
+```json
+{
+    "weight": 1,
+    "element": {
+        "element_type": "minecraft:feature_pool_element",
+        "feature": "minecraft:sculk_patch_feature_ancient_city"
+    }
+}
+```
 
 #### Single Pool Element
 
@@ -145,6 +168,20 @@ This element places a structure template and then applies a processor and projec
 
 -   `location`: tells the game where the file to generate is.
 -   `processors`: (optional) the ID of a processor to apply to the piece.
+
+<CodeHeader breadcrumbs="minecraft:template_pool" />
+
+```json
+{
+    "weight": 1,
+    "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "wiki/fortress/spawner_zombie",
+        "processors": "wiki:fortress_degradation",
+        "projection": "rigid"
+    }
+}
+```
 
 ## Processors
 
@@ -248,7 +285,7 @@ A rule processor allows for 5 inputs:
             "input_predicate": {
                 "predicate_type": "minecraft:random_block_match",
                 "block": "minecraft:diamond_block",
-                "probability": 0.5
+                "probability": 0.50
             },
             "output_state": "minecraft:gold_block"
         }
@@ -377,7 +414,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     -   `beard_thin` places a platform around the base like villages.
     -   `bury` surrounds the structure starting piece in terrain (helpful if the structure is started in the ground with `start_height` but any part of the structure above the start piece will be unburied just like a trail ruin.
     -   `encapsulate` surrounds the entire structure in terrain no matter what, trial chambers do this for larger caves underground.
-    -   `none` does nothing.
+    -   `none` does not change the terrain.
 
 -   `start_pool`: The identifier of a template pool to use for when the structure is placed.
 
@@ -396,7 +433,7 @@ They are stored in the `structures` subfolder of the `BP/worldgen` folder.
     "start_jigsaw_name": "wiki:courtyard"
     ```
 
--   `biome_filters`: (optional) What biomes the structure can spawn in.
+-   `biome_filters`: (optional) What biomes the structure can spawn in. This is determined by testing for biome tags.
 
     <CodeHeader breadcrumbs="minecraft:jigsaw" />
 
@@ -721,10 +758,10 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
                         {
                             "input_predicate": {
                                 "predicate_type": "minecraft:random_block_match",
-                                "block": "diamond_block",
+                                "block": "emerald_block",
                                 "probability": 1
                             },
-                            "output_state": "gold_block"
+                            "output_state": "iron_block"
                         }
                     ]
                 }
