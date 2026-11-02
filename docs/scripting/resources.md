@@ -13,6 +13,7 @@ You are advised to learn JavaScript free from online courses available online, s
 
 -   [MDN JavaScript: JavaScript language overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Overview)
 -   [Codecademy: Introduction to JavaScript](https://www.codecademy.com/learn/introduction-to-javascript)
+-   [Coddy: Learn JavaScript](https://coddy.tech/landing/javascript)
 -   [freeCodeCamp.org: JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 
 ## Script API Resources
