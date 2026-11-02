@@ -128,7 +128,7 @@ For now there are three types of element available for creators to use: `minecra
 
 This element places nothing. If the jigsaw blocks are viewed using debug generation, they will have no connection if an empty pool element was selected. A structure will fail to generate if this is the starting element.
 
-<CodeHeader breadcrumbs="minecraft:template_pool" />
+<CodeHeader breadcrumbs="minecraft:template_pool/elements" />
 
 ```json
 {
@@ -145,7 +145,7 @@ This element places a feature, custom, vanilla, or hardcoded. A jigsaw block pla
 
 -   `feature`: The feature to place. Can be any custom or vanilla feature including hardcoded ones such as `minecraft:desert_well_feature`.
 
-<CodeHeader breadcrumbs="minecraft:template_pool" />
+<CodeHeader breadcrumbs="minecraft:template_pool/elements" />
 
 ```json
 {
@@ -169,15 +169,15 @@ This element places a structure template and then applies a processor and projec
 -   `location`: tells the game where the file to generate is.
 -   `processors`: (optional) the ID of a processor to apply to the piece.
 
-<CodeHeader breadcrumbs="minecraft:template_pool" />
+<CodeHeader breadcrumbs="minecraft:template_pool/elements" />
 
 ```json
 {
     "weight": 1,
     "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "wiki/fortress/spawner_zombie",
-        "processors": "wiki:fortress_degradation",
+        "location": "wiki/lone/fortress/courtyard_1",
+        "processors": "wiki:fortress_decay",
         "projection": "rigid"
     }
 }
@@ -253,7 +253,7 @@ It is how the vanilla trail ruins apply loot tables to sus blocks and decay the 
 
 A rule processor allows for 5 inputs:
 
--   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked. The field is specified by field `predicate_type`.
+-   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked. The field is specified by field `predicate_type`. Vanilla blocks do not require the `minecraft:` namespace when a block id is required for a predicate.
     -   `minecraft:always_true` is self explanatory.
     -   `minecraft:block_match` looks for a specific block type.
     -   `minecraft:blockstate_match` looks for a block with the specified block state values.
@@ -285,7 +285,7 @@ A rule processor allows for 5 inputs:
             "input_predicate": {
                 "predicate_type": "minecraft:random_block_match",
                 "block": "minecraft:diamond_block",
-                "probability": 0.50
+                "probability": 0.5
             },
             "output_state": "minecraft:gold_block"
         }
