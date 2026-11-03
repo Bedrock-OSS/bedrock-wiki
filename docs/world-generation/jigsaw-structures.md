@@ -249,11 +249,11 @@ A protected block processor allows for 1 field:
 ### Rule Processor
 
 Rule allows for the modification and replacement of blocks within a structure.
-It is how the vanilla trail ruins apply loot tables to sus blocks and decay the structures.
+It is how the vanilla trail ruins apply loot tables to sus blocks and decay the structures. Vanilla blocks do not require the `minecraft:` namespace when a block id is required in a processor.
 
 A rule processor allows for 5 inputs:
 
--   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked. The field is specified by field `predicate_type`. Vanilla blocks do not require the `minecraft:` namespace when a block id is required for a predicate.
+-   `input_predicate`: Allows for 6 different inputs to tell the game how to look for a block. The game will select blocks based on which one is picked. The field is specified by field `predicate_type`.
     -   `minecraft:always_true` is self explanatory.
     -   `minecraft:block_match` looks for a specific block type.
     -   `minecraft:blockstate_match` looks for a block with the specified block state values.
@@ -758,10 +758,10 @@ If the structure selected to generate rolls a `minecraft:empty_pool_element` for
                         {
                             "input_predicate": {
                                 "predicate_type": "minecraft:random_block_match",
-                                "block": "emerald_block",
+                                "block": "minecraft:emerald_block",
                                 "probability": 1
                             },
-                            "output_state": "iron_block"
+                            "output_state": "minecraft:iron_block"
                         }
                     ]
                 }
