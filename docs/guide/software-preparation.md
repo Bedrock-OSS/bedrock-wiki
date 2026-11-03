@@ -142,6 +142,15 @@ Piskel is a web-based pixel art software with a focus of making pixelated sprite
 
 [Download Piskel](https://www.piskelapp.com/)
 
+### SimplePixelArt
+
+SimplePixelArt is a free, open-source pixel art editor that runs in the browser, with no account needed. It has a grid, custom palettes and animation frames with onion skin, which suits 16x16 textures and flipbook animations.
+
+-   **+ Pros:** Easy to start, made for small pixel art. Exports PNG and sprite sheets.
+-   **- Cons:** Must have internet connection. Fewer painting tools than desktop programs.
+
+[Use SimplePixelArt](https://simplepixelart.com/editor)
+
 ### Libresprite
 
 LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of Aseprite.
