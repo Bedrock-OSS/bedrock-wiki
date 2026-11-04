@@ -149,6 +149,7 @@ To access the raw Markdown source of any page (which is easier to process), tran
 
 - [Entity Counter](/commands/entity-counter)
 - [Scoreboard Timers](/commands/scoreboard-timers)
+- [Assign Unique Scores](/commands/assign-unique-score)
 - [Comparing And Retrieving Scores](/commands/comparing-scores)
 
 ### Detection Systems
