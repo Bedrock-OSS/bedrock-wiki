@@ -124,7 +124,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": "1.26.50"
+        "min_engine_version": "1.26.60"
     },
     "modules": [
         {
@@ -141,6 +141,10 @@ Call the file `manifest.json` and paste the following code into the file to begi
 ```
 
 ### Manifest Explained
+
+:::tip
+Only the fields used in this guide are explained here. For every field the manifest supports, including dependencies, capabilities, subpacks and pack settings, see the [manifest.json](/concepts/manifest) reference.
+:::
 
 -   `format_version` defines what version of manifest JSON format you are using. Version 3 is the most recent stable version; use it.
 
@@ -161,7 +165,7 @@ Call the file `manifest.json` and paste the following code into the file to begi
 
 -   In `modules`, a module with the `type` of `"data"`{lang=json} is added. This makes your pack a _behavior pack_.
 
--   In `metadata`, the `product_type` allows your add-on to enable achievements on your world. It must be a product type of `"addon"`{lang=json}.
+-   In `metadata`, the `product_type` of `"addon"`{lang=json} marks your pack as an add-on. Before version 26.50, this kept achievements enabled on worlds using the pack; as of 26.50 this no longer applies ([MCPE-242529](https://mojira.dev/MCPE-242529)).
 
 ### UUID Explained
 
@@ -194,7 +198,7 @@ Copy the following code into your newly created `RP/manifest.json` and insert yo
         "description": "pack.description",
         "uuid": "...",
         "version": "1.0.0",
-        "min_engine_version": "1.26.50",
+        "min_engine_version": "1.26.60",
         "pack_scope": "world" // Can be "any" (default), "global" or "world"
     },
     "modules": [

@@ -165,8 +165,8 @@ block.scheduleNamedTick("my_tick", 20);
 ```
 
 In order to hook into named ticks, you'll need to use the [`onNamedTick()`{lang=js}](/blocks/block-events#named-tick) custom component event hook.
-The event object passed to this hook includes an `isName()`{lang=js} method which can be used to check the name of the tick.
-This method only returns true if both the name provided and pack UUID of the script match those of the scheduled tick.
+The event object passed to this hook includes a `name`{lang=js} property which can be used to check the name of the tick.
+There is also an `isMine()`{lang=js} method which returns whether the currently running script is part of the pack that scheduled the tick (based on header UUID).
 
 Let's create a custom component that causes the block to explode after certain events occur, giving the reason for the explosion in chat.
 
@@ -185,16 +185,14 @@ const BlockExplodeAfterEventsComponent = {
         // Schedule an explosion for 2 seconds after an entity steps onto the block
         block.scheduleNamedTick("step_on", 40);
     },
-    onNamedTick(event, { params }) {
-        const { block, dimension } = event;
-
+    onNamedTick({ block, dimension, name }, { params }) {
         // Explode the block when the named tick occurs
         dimension.createExplosion(block, params.power);
 
         // State the reason for the explosion in chat
-        if (event.isName("player_interact")) {
+        if (name === "player_interact") {
             world.sendMessage("Block exploded because a player interacted with it.");
-        } else if (event.isName("step_on")) {
+        } else if (name === "step_on") {
             world.sendMessage("Block exploded because an entity stepped onto it.");
         }
     },

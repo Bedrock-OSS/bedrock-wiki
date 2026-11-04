@@ -2,8 +2,8 @@
 title: Project Setup Android
 description: Learn how to set up your project on Android devices.
 category: Extra
-prefix: "f. "
-nav_order: 6
+prefix: "e. "
+nav_order: 5
 mentions:
     - Etanarvazac
     - MedicalJewel105

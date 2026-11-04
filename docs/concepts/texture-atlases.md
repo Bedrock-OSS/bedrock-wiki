@@ -1,5 +1,6 @@
 ---
 title: Texture Atlases
+category: Pack Files
 description: A texture atlas (also known as a spritesheet) is an image that contains many smaller textures.
 tags:
     - intermediate

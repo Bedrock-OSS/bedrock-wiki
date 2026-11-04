@@ -2,8 +2,8 @@
 title: Format Versions
 description: Learn what format versions are and how to choose the right one for each of your files.
 category: Extra
-prefix: "e. "
-nav_order: 5
+prefix: "d. "
+nav_order: 4
 mentions:
     - SirLich
     - SmokeyStack

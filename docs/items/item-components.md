@@ -9,9 +9,9 @@ mentions:
     - QuazChick
 ---
 
-:::tip FORMAT VERSION 1.26.50
+:::tip FORMAT VERSION 1.26.60
 Using the latest format version when creating custom items provides access to fresh features and improvements.
-The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.50.
+The wiki aims to share up-to-date information about custom items, and currently targets format version 1.26.60.
 :::
 
 ## Applying Components
@@ -22,7 +22,7 @@ Item components are used to change how your item appears and functions in the wo
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:item": {
         "description": {
             "identifier": "wiki:custom_item",
@@ -324,9 +324,9 @@ _Requires format version [1.20.0](/items/item-format-history#_1-20-0) or later._
 
 ### Durability Sensor
 
-Allows an item to trigger vanilla level events when it receives damage.
+Allows an item to trigger effects when it receives damage.
 
-_Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later._
+_Requires format version [1.26.50](/items/item-format-history#_1-26-50) or later._
 
 #### Object Format {#durability-sensor-object}
 
@@ -338,7 +338,7 @@ _Requires format version [1.21.20](/items/item-format-history#_1-21-20) or later
     -   `particle_type` — String (optional)
         -   Vanilla particle type to spawn when the threshold is met.
     -   `sound_event` — String (optional)
-        -   Vanilla level sound event to trigger when the threshold is met.
+        -   Vanilla level sound event or `RP/sounds/sound_definitions.json` entry to trigger when the threshold is met.
 
 <CodeHeader breadcrumbs="minecraft:item/components" />
 
@@ -856,7 +856,7 @@ _Requires format version [1.21.30](/items/item-format-history#_1-21-30) or later
 
 Allows the item to be inserted into a Jukebox.
 
-_Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later._
+_Requires format version [1.26.10](/items/item-format-history#_1-20-10) or later._
 
 #### Object Format {#record-object}
 
@@ -868,8 +868,6 @@ _Requires format version [1.20.10](/items/item-format-history#_1-20-10) or later
 -   `sound_event` — String
     -   Determines the _vanilla_ sound event triggered when the item is inserted into a Jukebox.
     -   Also used to determine the localization key of the item's description in its tooltip.
-        -   The localization key will follow the format `item.record_<id>.desc`{lang=xml}, where `<id>`{lang=xml} is the substring of the sound event following the last `.` character.
-        -   For example, if the `"bucket.empty.powder_snow"`{lang=json} sound event were used, the description would be `item.record_powder_snow.desc`.
 
 <CodeHeader breadcrumbs="minecraft:item/components" />
 
@@ -1091,16 +1089,18 @@ The actual swing duration may differ from this value due to effects such as Mini
 
 ### Swing Sounds
 
-Determines the vanilla sound events triggered when a player attacks when holding the item.
+Determines the sounds triggered when a player attacks when holding the item.
+
+_Requires format version [1.26.50](/items/item-format-history#_1-26-50) or later._
 
 #### Object Format {#swing-sounds-object}
 
 -   `attack_miss` — String (optional)
-    -   Determines the _vanilla_ sound event triggered when no entity is hit or no damage is dealt.
+    -   Determines the vanilla sound event or entry from `RP/sounds/sound_definitions.json` triggered when no entity is hit or no damage is dealt.
 -   `attack_hit` — String (optional)
-    -   Determines the _vanilla_ sound event triggered when an entity is hit and non-critical damage is dealt.
+    -   Determines the vanilla sound event or entry from `RP/sounds/sound_definitions.json` triggered when an entity is hit and non-critical damage is dealt.
 -   `attack_critical_hit` — String (optional)
-    -   Determines the _vanilla_ sound event triggered when an entity is hit and critical damage is dealt.
+    -   Determines the vanilla sound event or entry from `RP/sounds/sound_definitions.json` triggered when an entity is hit and critical damage is dealt.
 
 <CodeHeader breadcrumbs="minecraft:item/components" />
 
@@ -1198,7 +1198,7 @@ _Requires format version [1.20.20](/items/item-format-history#_1-20-20) or later
 
 General configuration for effects applied when using a chargeable item, such as when eating [food](#food).
 
-_Requires format version [1.26.30](/items/item-format-history#_1-26-30) or later._
+_Requires format version [1.26.50](/items/item-format-history#_1-26-50) or later._
 
 #### Object Format {#use-modifiers-object}
 
@@ -1207,7 +1207,7 @@ _Requires format version [1.26.30](/items/item-format-history#_1-26-30) or later
 -   `movement_modifier` — Float (`0.0-1.0`{lang=js}) (optional)
     -   Modifier value to scale the players movement speed when item is in use.
 -   `start_sound` — String (optional)
-    -   Determines the _vanilla_ sound event that is triggered when the item starts to be used.
+    -   Determines the vanilla sound event or entry from `RP/sounds/sound_definitions.json` that is triggered when the item starts to be used.
 -   `start_using` — String (optional)
     -   Determines when use modifiers should be applied.
     -   `"always"`{lang=json} — Use modifiers will always be applied when the player is holding the use input (assuming another component is applied which allows the item to be used).

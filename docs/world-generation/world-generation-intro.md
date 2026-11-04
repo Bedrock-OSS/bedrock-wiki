@@ -37,7 +37,7 @@ A biome decides which blocks make up the surface, its climate, and which tags it
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:biome": {
         "description": {
             "identifier": "wiki:cold_biome"
@@ -77,7 +77,7 @@ A biome decides which blocks make up the surface, its climate, and which tags it
 }
 ```
 
--   `format_version` is `1.26.50`, the version the current vanilla biome files use.
+-   `format_version` is `1.26.60`, the version the current vanilla biome files use.
 -   `description` takes only one value: `identifier`, which must be namespaced.
 -   `minecraft:climate` controls the weather. `temperature` decides whether rain falls as snow and whether water freezes, `downfall` is how much it rains, and `snow_accumulation` is how many snow layers can pile up in steps of `0.125`.
 -   `minecraft:surface_builder` chooses the blocks the terrain is made of. `top_material` is the topmost block, `mid_material` sits between the top and the `foundation_material` that fills the rest, and the `sea_*` fields cover anything below sea level.
@@ -98,7 +98,7 @@ A dimension file defines a new space outside the Overworld, Nether and End. Cust
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:dimension": {
         "description": {
             "identifier": "wiki:void_arena"

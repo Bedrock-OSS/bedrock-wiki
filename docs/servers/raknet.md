@@ -182,19 +182,21 @@ This packet should be sent as unreliable.
 Not everything can be explained in great detail via documentation, that's why looking at existing implementations is very helpful.
 Here is list of RakNet Protocol implementations
 
-| Name                                                                                            | Description                                                                         | Language               |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------- |
-| [RakNet (Official)](https://github.com/facebookarchive/RakNet)                                  | RakNet is a cross platform, open source, C++ networking engine for game programmers | C++                    |
-| [bedrock-crustaceans/raknet](https://github.com/bedrock-crustaceans/raknet)                     | RakNet implementation in Rust                                                       | Rust                   |
-| [NetrexMC/RakNet](https://github.com/NetrexMC/RakNet)                                           | RakNet implementation in Rust                                                       | Rust                   |
-| [rust-raknet](https://github.com/b23r0/rust-raknet)                                             | RakNet Protocol implementation by Rust                                              | Rust                   |
-| [tokio-raknet](https://github.com/iAldrich23xX/tokio-raknet)                                    | RakNet Implementation build around the tokio async ecosystem                        | Rust                   |
-| [transport-raknet](https://github.com/CloudburstMC/Network/tree/develop/transport-raknet)       | netty-transport-raknet                                                              | Java                   |
-| [RakLib](https://github.com/pmmp/RakLib)                                                        | RakNet server implementation written in PHP                                         | PHP                    |
-| [go-raknet](https://github.com/Sandertv/go-raknet)                                              | Go library implementing a basic version of the RakNet protocol                      | Go                     |
-| [raknet-python](https://github.com/raknet-python/raknet-python)                                 | Python bindings for RakNet, a cross-platform networking engine for game programmers | Python                 |
-| [PieRakNet](https://github.com/PieMC-Dev/PieRakNet)                                             | RakNet implementation, written in Python. Created for PieMC                         | Python                 |
-| [JSPrismarine/raknet](https://github.com/JSPrismarine/JSPrismarine/tree/master/packages/raknet) |                                                                                     | Javascript, Typescript |
+<!-- Sorted roughly by how complete and actively maintained each project is. Please name entries as user/repo. -->
+
+| Name                                                                                                  | Description                                                                         | Language               |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------- |
+| [bedrock-crustaceans/raknet](https://github.com/bedrock-crustaceans/raknet)                           | RakNet implementation in Rust                                                       | Rust                   |
+| [facebookarchive/RakNet](https://github.com/facebookarchive/RakNet)                                   | The original RakNet, a cross platform C++ networking engine (archived)              | C++                    |
+| [Sandertv/go-raknet](https://github.com/Sandertv/go-raknet)                                           | Go library implementing a basic version of the RakNet protocol                      | Go                     |
+| [CloudburstMC/Network](https://github.com/CloudburstMC/Network/tree/develop/transport-raknet)         | RakNet transport for Netty (see `transport-raknet`)                                 | Java                   |
+| [pmmp/RakLib](https://github.com/pmmp/RakLib)                                                         | RakNet server implementation written in PHP                                         | PHP                    |
+| [NetrexMC/RakNet](https://github.com/NetrexMC/RakNet)                                                 | RakNet implementation in Rust                                                       | Rust                   |
+| [b23r0/rust-raknet](https://github.com/b23r0/rust-raknet)                                             | RakNet Protocol implementation by Rust                                              | Rust                   |
+| [iAldrich23xX/tokio-raknet](https://github.com/iAldrich23xX/tokio-raknet)                             | RakNet Implementation build around the tokio async ecosystem                        | Rust                   |
+| [JSPrismarine/JSPrismarine](https://github.com/JSPrismarine/JSPrismarine/tree/master/packages/raknet) | RakNet implementation used by JSPrismarine (see `packages/raknet`)                  | JavaScript, TypeScript |
+| [PieMC-Dev/PieRakNet](https://github.com/PieMC-Dev/PieRakNet)                                         | RakNet implementation, written in Python. Created for PieMC                         | Python                 |
+| [raknet-python/raknet-python](https://github.com/raknet-python/raknet-python)                         | Python bindings for RakNet, a cross-platform networking engine for game programmers | Python                 |
 
 ## Sources
 

@@ -43,7 +43,7 @@ The file contains a single `minecraft:biome` object with a `description` and a `
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:biome": {
         "description": {
             "identifier": "wiki:crystal_caves"

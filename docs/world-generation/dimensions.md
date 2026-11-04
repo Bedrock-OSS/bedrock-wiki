@@ -30,7 +30,7 @@ The file contains a single `minecraft:dimension` object with a `description` and
 
 ```json
 {
-    "format_version": "1.26.50",
+    "format_version": "1.26.60",
     "minecraft:dimension": {
         "description": {
             "identifier": "wiki:void_arena"
