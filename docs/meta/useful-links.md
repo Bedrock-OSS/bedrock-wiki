@@ -129,6 +129,7 @@ Published by the community:
 -   [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [MCToolLab Resource Pack Converter](https://mctoollab.com/pack-converter): Free browser-based conversion of supported Java and Bedrock resource pack assets, with a report of converted and skipped files. Exports require in-game testing.
 -   [behavior-builder](https://stirante.com/behavior) / [controller-builder](https://stirante.com/controller): Visual editors for behaviors and animation controllers.
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
