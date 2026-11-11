@@ -21,6 +21,7 @@ mentions:
     - ThomasOrs
     - QuazChick
     - Cra-ZGuy
+    - SKYRPG8957
 description: Introduction to JSON UI.
 ---
 
@@ -418,6 +419,99 @@ We have to tell the source element where the value will come from, tell which pr
 ```
 
 When the toggle is checked, the `#toggle_state` will be checked (`1` or `true`), and it will override the `visible` property value of the element to true. When you uncheck, it will be unchecked (`0` or `false`) and once again override the `visible` value.
+
+## Property Bags
+
+A `property_bag` stores named data on an individual control. Its properties can be read and updated by bindings. Custom property names start with `#`, just like the binding properties used above.
+
+Unlike a `$variable` used to configure a control, a property in a `property_bag` provides an initial value that bindings can update while the control exists. Each instance of the control has its own property bag; it is not a global variable store.
+
+For example, this label starts with a custom `#message` property. A `view` binding reads that property and builds the label's `#text`:
+
+```json
+{
+    "message_label": {
+        "type": "label",
+        "text": "#text",
+        "localize": false,
+        "property_bag": {
+            "#message": "Hello"
+        },
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#message + ' World')",
+                "target_property_name": "#text"
+            }
+        ]
+    }
+}
+```
+
+1.  `property_bag` initializes `#message` to `Hello`.
+2.  The `view` binding reads `#message` from the same control because no `source_control_name` is specified.
+3.  The expression produces `Hello World`, which is assigned to `#text` and displayed by the label.
+
+A binding can also target a custom property, such as `#message`, instead of a built-in property such as `#visible`. To read a property from another control, use `source_control_name` as shown in the [Bindings](#bindings) section. Simply giving two controls a property with the same name does not connect their values.
+
+Defining a property does not automatically display it or change the UI. A control property or binding must use it. For example, `#message` above only affects the label because the binding reads it.
+
+For a practical example of keeping a value between binding updates, see [Preserve Title Texts](/json-ui/preserve-title-texts). See the [property bag reference](/json-ui/json-ui-documentation#property-bag) for properties used by built-in controls.
+
+## Collections
+
+A collection is a named set of entries that a UI can display. For example, a server form exposes a `form_buttons` collection, where each entry supplies data for one form element. Rather than writing a separate binding name for every button, each generated control reads the same binding name at its own collection index.
+
+Think of a collection as rows of data:
+
+-   The **collection name** selects the set of entries.
+-   The **collection index** selects an entry, starting at `0` for the first entry.
+-   The **binding name** selects a value from that entry, such as its text.
+
+These are different from the `controls` array: `controls` describes UI elements, while a collection supplies data those elements can use. Setting a collection name does not create the corresponding game data. The collection and its bindings must be available on the screen where you use them.
+
+### Reading an Entry
+
+The following label illustrates a control inside the `form_buttons` collection context on a server form. It is an item template example, not a complete screen or a replacement for the vanilla form:
+
+```json
+{
+    "form_entry_label": {
+        "type": "label",
+        "text": "#text",
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_name_override": "#text"
+            }
+        ]
+    }
+}
+```
+
+-   `binding_type: "collection"` reads data for a collection entry rather than a single screen-wide value.
+-   `binding_collection_name` selects `form_buttons`.
+-   `binding_name` reads that entry's `#form_button_text`.
+-   `binding_name_override` stores it as the label's `#text`.
+
+If the first two entries contain `Play` and `Help`, two instances of the label at indices `0` and `1` display `Play` and `Help`, respectively. The binding is identical; the entry being read is different. The [vanilla server form](https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/ui/server_form.json) uses this collection and binding for its generated form elements.
+
+### Collections and Generated Controls
+
+Collections are commonly used with grids and factories to generate repeated elements:
+
+-   `collection_name` on a collection-supporting container identifies the collection for its items.
+-   A grid's `grid_item_template`, or a factory's `control_name`/`control_ids`, specifies which control to generate.
+-   `collection_index` identifies which entry a control represents. Generated collection items receive their entry context from the container, so you normally do not hardcode the same index on every item template.
+-   `binding_collection_name` on an item's binding tells it which collection to read. It must match the intended data source.
+
+Some interactive vanilla templates also use `binding_type: "collection_details"`, for example to associate a form button with its collection entry. This is separate from the `collection` binding that reads the button's text; keep the required bindings when adapting a vanilla template.
+
+If an item is blank or repeats the wrong data, check the collection name, binding name, and collection index/context before changing the label itself. Copying a form collection binding onto an unrelated screen does not make that collection available there.
+
+For complete generation examples, continue to [Dynamic Content Generation](/json-ui/dynamic-content-generation). The [data binding reference](/json-ui/json-ui-documentation#data-binding-array-object) lists the available binding fields.
 
 ## Conditional Rendering
 
