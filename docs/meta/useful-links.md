@@ -148,7 +148,7 @@ Published by the community:
 
 -   ⭐ [Minecraft Marketplace](https://www.minecraft.net/marketplace)
 -   ⭐ [CurseForge](https://www.curseforge.com/minecraft-bedrock)
--   ⭐ [MCPEDL](https://mcpedl.com/)
+-   ⭐ [MCPEDL](https://mcpedl.com/): Browse community content; uploads and updates are handled through [CurseForge](https://blog.curseforge.com/how-to-host-mcpedl-projects-on-curseforge/).
 -   ⭐ [Bucket of Crabs](https://www.bucketofcrabs.net/): Job board for Marketplace work.
 -   [Marketplace Creators (Bedrock Explorer)](https://bedrockexplorer.com/partners): Unofficial list of Marketplace partners.
 -   [Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/): Unofficial Marketplace statistics.
