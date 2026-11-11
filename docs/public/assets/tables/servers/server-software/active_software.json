@@ -43,6 +43,13 @@
       "community": "[Discord](https://discord.gg/k55gScjTs3)"
     },
     {
+      "name": "[BasaltBE](https://github.com/BasaltBE/Basalt)",
+      "description": "Bedrock Server Software fully in C#",
+      "languages": "C#",
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/saVhhPZQm3)"
+    },
+    {
       "name": "[BetterAltay](https://github.com/BetterAltayBedrock/BetterAltay)",
       "description": "A server software for Minecraft: Bedrock Edition in PHP.",
       "languages": "PHP",
