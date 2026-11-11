@@ -40,13 +40,29 @@ If a structure with the same file name exists in both the `BP/structures` folder
 
 In this case, the file in the `mystructure` folder overrides the file directly in the `structures` folder.
 
+## Format Versions
+
+There are two versions of the file format, stored in the `format_version`{lang=js} tag:
+
+-   **Version 1** is the original format.
+-   **Version 2** was added in 1.26.50. It stores [block indices](#block-indices) as int arrays, which reduces the time and memory needed to save and load structures.
+    It also leaves out the secondary layer when it is empty, which makes those files about half the size.
+    In 1.26.60, version 2 files gained [compression](#compression), which the game now uses when exporting.
+
+The game can load both versions. Version 1 structures are saved as version 2 the next time the game saves them.
+
 ## File Format
 
 <Spoiler title="NBT Format" open>
 
 ![Compound][compound] — Root tag of the structure template.
 
-> ![Integer][int] `format_version`{lang=js} — Currently always set to `1`{lang=json}.
+> ![Integer][int] `format_version`{lang=js} — `1`{lang=json} or `2`{lang=json}, see [Format Versions](#format-versions).
+>
+> ![Integer][int] `compression`{lang=js} — Optional, version 2 only. Added in 1.26.60. See [Compression](#compression).
+>
+> -   `0`{lang=json} or missing: the `structure`{lang=js} tag is not compressed.
+> -   `1`{lang=json}: the `structure`{lang=js} tag is compressed with zlib.
 >
 > ![List][list] `size`{lang=js} — List of three integers describing the size of the structure's bounds.
 >
@@ -57,6 +73,7 @@ In this case, the file in the `mystructure` folder overrides the file directly i
 > > ![Integer][int] — Size of the structure in the Z direction.
 >
 > ![Compound][compound] `structure`{lang=js} — Contains the blocks and entities in the structure.
+> If `compression`{lang=js} is `1`{lang=json}, this is instead a byte array holding the zlib-compressed NBT of this compound.
 >
 > > ![List][list] `block_indices`{lang=js} — Associates block permutations from the block palette with positions in the structure.
 > > See more details [here](#block-indices).
@@ -87,24 +104,49 @@ In this case, the file in the `mystructure` folder overrides the file directly i
 
 </Spoiler>
 
+### Compression
+
+Since 1.26.60, the game compresses the `structure`{lang=js} tag when it exports a version 2 structure.
+Only the `structure`{lang=js} tag is compressed.
+Tools must still accept uncompressed files, which have `compression`{lang=js} set to `0`{lang=json} or missing.
+The rest of the root compound, including `format_version`{lang=js}, `size`{lang=js} and `structure_world_origin`{lang=js}, stays readable as plain NBT.
+
+To read a compressed structure:
+
+1.  Check that `compression`{lang=js} is `1`{lang=json}.
+2.  Decompress the `structure`{lang=js} byte array with zlib.
+3.  Read the result as little-endian NBT. It is the same compound an uncompressed file would contain.
+
+To write one, serialize the structure compound as little-endian NBT, compress it with zlib, store it as a byte array in `structure`{lang=js} and set `compression`{lang=js} to `1`{lang=json}.
+
 ### Block Indices
 
-Each structure contains two lists of block indices, which are integers that correspond to a block permutation from the [block palette](#block-palette) for a given block position.
-Having two lists of block indices creates a primary and secondary block layer, allowing for [co-located blocks](/blocks/block-colocation) (such as those that are waterlogged) to be stored.
+Each structure contains one or two arrays of block indices, which are integers that correspond to a block permutation from the [block palette](#block-palette) for a given block position.
+A structure has a primary layer and, optionally, a secondary layer, allowing for [co-located blocks](/blocks/block-colocation) (such as those that are waterlogged) to be stored.
+Version 1 files always have both layers.
+Version 2 files leave out the secondary layer when nothing is stored in it.
 
 -   Each sublist proceeds in ZYX order from the bottom north-west corner of the structure to the top south-east corner.
-    For example, if the structure is 2×3×4 blocks in size, then the 24 (product of the dimensions) values in each layer list represent the blocks located at `0 0 0`, `0 0 1`, `0 0 2`, `0 0 3`, `0 1 0`, `0 1 1`, `0 1 2`, `0 1 3`, `0 2 0`, `0 2 1`, `0 2 2`, `0 2 3`, `1 0 0`, `1 0 1`, `1 0 2`, `1 0 3`, `1 1 0`, `1 1 1`, `1 1 2`, `1 1 3`, `1 2 0`, `1 2 1`, `1 2 2`, `1 2 3` relative to the origin.
+    For example, if the structure is 2×3×4 blocks in size, then the 24 (product of the dimensions) values in each layer represent the blocks located at `0 0 0`, `0 0 1`, `0 0 2`, `0 0 3`, `0 1 0`, `0 1 1`, `0 1 2`, `0 1 3`, `0 2 0`, `0 2 1`, `0 2 2`, `0 2 3`, `1 0 0`, `1 0 1`, `1 0 2`, `1 0 3`, `1 1 0`, `1 1 1`, `1 1 2`, `1 1 3`, `1 2 0`, `1 2 1`, `1 2 2`, `1 2 3` relative to the origin.
 
 -   An index of `-1`{lang=json} indicates a void in the structure where no block exists, causing any existing block to remain upon loading.
     This occurs when structure voids are saved, and is the case for most blocks in the secondary layer.
 
 <Spoiler title="NBT Format" open>
 
-![List][list] `block_indices`{lang=js} — List containing two sublists, one for each block layer. Both layers share the same palette.
+![List][list] `block_indices`{lang=js} — List containing one or two entries, one for each block layer. Both layers share the same palette.
 
-> ![List][list] — List of block palette indices in the primary layer.
+> **Version 1:** two lists of int tags.
 >
-> ![List][list] — List of block palette indices in the secondary layer.
+> > ![List][list] — List of block palette indices in the primary layer.
+> >
+> > ![List][list] — List of block palette indices in the secondary layer.
+>
+> **Version 2:** one int array for the primary layer, plus an optional one for the secondary layer.
+>
+> > Int array — Block palette indices in the primary layer.
+> >
+> > Int array — Block palette indices in the secondary layer. Optional.
 
 </Spoiler>
 
@@ -156,7 +198,8 @@ The block palette is a list of all [block permutations](/blocks/block-permutatio
 
 ## What Happens If…
 
-Results from testing to see what happens when modified structure files are loaded:
+Results from testing to see what happens when modified structure files are loaded.
+These results are for version 1 and have not been retested on version 2.
 
 -   If the dimensions in `size`{lang=js} exceed the vanilla save the limit of 64×256×64, the structure can still be loaded just as expected.
 -   If the values in the block layer lists are not int tags, all values are treated as `0`{lang=json}.
@@ -168,25 +211,25 @@ Results from testing to see what happens when modified structure files are loade
     [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | "<tag>" field, a required field, is missing from the structure.
     ```
 
--   If `block_indices`{lang=js} does not contain exactly two values, the structure fails to load with the following content log error:
+-   **Version 1:** if `block_indices`{lang=js} does not contain exactly two values, the structure fails to load with the following content log error:
 
     ```
     [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field should be an array with 2 arrays and instead we have <count> arrays.
     ```
 
--   If the values inside of `block_indices`{lang=js} do not list tags, the structure fails to load with the following content log error:
+-   **Version 1:** if the values inside of `block_indices`{lang=js} do not list tags, the structure fails to load with the following content log error:
 
     ```
     [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field's first array is either missing or not a list.
     ```
 
--   If the length of the two lists in `block_indices`{lang=js} are not equal, the structure fails to load with the following content log error:
+-   **Version 1:** if the length of the two lists in `block_indices`{lang=js} are not equal, the structure fails to load with the following content log error:
 
     ```
     [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field's arrays need to both be the same size.
     ```
 
--   If the length of the two lists in `block_indices`{lang=js} does not equal the product of the structure's dimensions, the structure fails to load with the following content log error:
+-   **Version 1:** if the length of the two lists in `block_indices`{lang=js} does not equal the product of the structure's dimensions, the structure fails to load with the following content log error:
 
     ```
     [Structure][error]-Loading structure '<identifier>` from behavior pack: '<path>' | The "block_indices" field should have as many elements as defined by the "size" field.
@@ -199,13 +242,19 @@ However, they do have some things in common: they're stored in NBT format and us
 
 Here are a few main differences:
 
-| Feature                | Bedrock Edition                                                      | Java Edition                                                                               |
-| ---------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| File extension         | `.mcstructure`                                                       | `.nbt`                                                                                     |
-| Compression            | None                                                                 | Gzip                                                                                       |
-| Endianness             | Little-endian                                                        | Big-endian                                                                                 |
-| Uncompressed file size | Smaller as the order of blocks hardcoded, only palette indexes saved | Larger as each block is stored as (location, palette index, optional NBT)                  |
-| Compressed file size   | Larger as no compression is used                                     | Smaller as the use of Gzip compression outperforms the more compact `.mcstructure` format. |
+| Feature                | Bedrock Edition                                                      | Java Edition                                                                     |
+| ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| File extension         | `.mcstructure`                                                       | `.nbt`                                                                           |
+| Compression            | Optional zlib since 1.26.60, none before                             | Gzip                                                                             |
+| Endianness             | Little-endian                                                        | Big-endian                                                                       |
+| Uncompressed file size | Smaller as the order of blocks hardcoded, only palette indexes saved | Larger as each block is stored as (location, palette index, optional NBT)        |
+| Compressed file size   | Larger if the file is not compressed                                 | Smaller as Gzip outperforms the more compact uncompressed `.mcstructure` format. |
+
+## Tool Support
+
+Tools written before 1.26.50 may not support version 2 or compressed files.
+[Amulet Core](https://github.com/Amulet-Team/Amulet-Core) reads and writes both.
+For writing your own tools, see the [NBT libraries](/nbt/libraries).
 
 ## NBT Editors
 
