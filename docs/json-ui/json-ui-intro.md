@@ -422,9 +422,9 @@ When the toggle is checked, the `#toggle_state` will be checked (`1` or `true`),
 
 ## Property Bags
 
-A `property_bag` stores named data on an individual control. Its properties can be read and updated by bindings. Custom property names start with `#`, just like the binding properties used above.
+A `property_bag` stores data on a control so bindings can read and update it. Custom property names start with `#`, like the binding properties above.
 
-Unlike a `$variable` used to configure a control, a property in a `property_bag` provides an initial value that bindings can update while the control exists. Each instance of the control has its own property bag; it is not a global variable store.
+Use `$variables` to configure a control and a `property_bag` to give its binding properties initial values. Bindings can update these values while the control exists. Each instance of a control has its own property bag.
 
 For example, this label starts with a custom `#message` property. A `view` binding reads that property and builds the label's `#text`:
 
@@ -454,13 +454,13 @@ For example, this label starts with a custom `#message` property. A `view` bindi
 
 A binding can also target a custom property, such as `#message`, instead of a built-in property such as `#visible`. To read a property from another control, use `source_control_name` as shown in the [Bindings](#bindings) section. Simply giving two controls a property with the same name does not connect their values.
 
-Defining a property does not automatically display it or change the UI. A control property or binding must use it. For example, `#message` above only affects the label because the binding reads it.
+For a property to affect the UI, a control property or binding must use it. Here, the label displays `#message` through the binding that builds `#text`.
 
 For a practical example of keeping a value between binding updates, see [Preserve Title Texts](/json-ui/preserve-title-texts). See the [property bag reference](/json-ui/json-ui-documentation#property-bag) for properties used by built-in controls.
 
 ## Collections
 
-A collection is a named set of entries that a UI can display. For example, a server form exposes a `form_buttons` collection, where each entry supplies data for one form element. Rather than writing a separate binding name for every button, each generated control reads the same binding name at its own collection index.
+A collection is a named set of entries that a UI can display. A server form, for example, exposes the `form_buttons` collection with data for each form element. The controls use the same binding names but read different entries according to their collection index.
 
 Think of a collection as rows of data:
 
@@ -472,7 +472,7 @@ These are different from the `controls` array: `controls` describes UI elements,
 
 ### Reading an Entry
 
-The following label illustrates a control inside the `form_buttons` collection context on a server form. It is an item template example, not a complete screen or a replacement for the vanilla form:
+Here is a label for an item in the server form's `form_buttons` collection. This example needs the collection context provided by the form; it cannot be used as a standalone screen:
 
 ```json
 {
@@ -509,7 +509,7 @@ Collections are commonly used with grids and factories to generate repeated elem
 
 Some interactive vanilla templates also use `binding_type: "collection_details"`, for example to associate a form button with its collection entry. This is separate from the `collection` binding that reads the button's text; keep the required bindings when adapting a vanilla template.
 
-If an item is blank or repeats the wrong data, check the collection name, binding name, and collection index/context before changing the label itself. Copying a form collection binding onto an unrelated screen does not make that collection available there.
+If an item is blank or repeats the wrong data, check the collection name, binding name, and the item's index and collection context. Also check that the screen provides the collection you are trying to read.
 
 For complete generation examples, continue to [Dynamic Content Generation](/json-ui/dynamic-content-generation). The [data binding reference](/json-ui/json-ui-documentation#data-binding-array-object) lists the available binding fields.
 
