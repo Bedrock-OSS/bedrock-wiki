@@ -13,6 +13,10 @@ mentions:
 description: RakNet protocol for Bedrock.
 ---
 
+::: warning
+RakNet is being removed from Bedrock Edition. [NetherNet](/servers/nethernet) became the default transport for dedicated servers in 26.50, and 26.60 deprecated RakNet. The 26.60 client, released on October 27, 2026, no longer connects over RakNet, so servers must support NetherNet to accept players.
+:::
+
 Minecraft Bedrock uses multiple different protocols under the hood, one of them is [RakNet](http://www.jenkinssoftware.com/).
 RakNet is the main protocol used for external servers, aka the server you are likely playing on... maybe it is a featured server or the server run by your friend.
 
