@@ -92,6 +92,13 @@
       "community": "[Discord](https://discord.gg/xxgPuc2XN9)"
     },
     {
+      "name": "[Falcon](https://github.com/Falcon-MC/Falcon)",
+      "description": "Minecraft: Bedrock Edition server software written from scratch in C++.",
+      "languages": "C++",
+      "type": "Custom",
+      "community": "[Discord](https://discord.gg/KZb6YxSHkb)"
+    },
+    {
       "name": "[JSPrismarine](https://github.com/JSPrismarine/JSPrismarine)",
       "description": "Dedicated Minecraft Bedrock Edition server written in TypeScript.",
       "languages": "TypeScript",
