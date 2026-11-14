@@ -134,9 +134,9 @@
     },
     {
       "name": "[PumpkinMC](https://github.com/Pumpkin-MC/Pumpkin)",
-      "description": "A Minecraft server built entirely in Rust, offering a fast, efficient, and customizable experience.",
+      "description": "A Minecraft server written in Rust with native Java and Bedrock Edition support. Bedrock support is a work in progress.",
       "languages": "Rust",
-      "type": "Java Edition cross-play",
+      "type": "Custom",
       "community": "[Discord](https://discord.gg/wT8XjrjKkf)"
     },
     {
