@@ -7,12 +7,13 @@ mentions:
     - MedicalJewel105
     - StealthyExpertX
     - TheItsNameless
+    - SKYRPG8957
 description: Dummy components are "useless" components that are only used for data storage.
 ---
 
 :::warning Deprecation Warning
 
-'Dummy Components' is an older concept, which has been primarily replaced by [actor properties](https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoentityproperties). You should consider using actor properties when possible.
+'Dummy Components' is an older concept, which has been primarily replaced by [entity properties](/entities/entity-properties). You should consider using entity properties when possible.
 :::
 
 Dummy components are "useless" components that are only used for data storage. Dummy components **don't** do anything on their own. They need to be paired with secondary mechanics to have any function. Dummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
