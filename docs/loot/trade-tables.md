@@ -359,7 +359,7 @@ Traders may receive experience when the player finalizes a trade. This property 
 "trader_exp": 8
 ```
 
-The amount of experience to reward the _trader_ is given the the optional numeric property `"trader_exp"`. By default, the trader will receive 1 XP.
+The amount of experience to reward the _trader_ is given the optional numeric property `"trader_exp"`. By default, the trader will receive 1 XP.
 
 ::: tip
 For non-linearly spaced tiers, it's typical for the trader experience to increase in higher tiers. This way, lower-tier trades will have less leveling impact than higher-tier trades.
