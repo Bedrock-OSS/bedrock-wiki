@@ -277,7 +277,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
     -   The next four components show in which directions the ore will be 'dragged' towards.
         _Needs more clarification_
 
-The easiest way to test wether your ores generated is /fill ~15 ~5 ~15 ~-15 ~-15 ~-15 air 0 replace stone using this command at a low y level. it'll keep everything BUT stone in the selected area, like this:
+The easiest way to test whether your ores generated is /fill ~15 ~5 ~15 ~-15 ~-15 ~-15 air 0 replace stone using this command at a low y level. it'll keep everything BUT stone in the selected area, like this:
 
 ![](ore_gen_sans_stone.jpg)
 
