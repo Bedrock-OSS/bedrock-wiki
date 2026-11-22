@@ -210,7 +210,7 @@ A block ignore processor allows for 1 field:
 
 Capped allows for the restriction of how many blocks a rule can apply to a structure.
 
-For example, if you want to limit a rule processor from making half your blackstone structure into gilded blackstone you can apply a capped processor to the give the the rule processor a set number of the gilded blackstone blocks it can place before being forced to use other rules.
+For example, if you want to limit a rule processor from making half your blackstone structure into gilded blackstone you can apply a capped processor to give the rule processor a set number of the gilded blackstone blocks it can place before being forced to use other rules.
 
 A capped processor allows for 2 fields:
 
