@@ -142,7 +142,7 @@ The server sends this packet in response to the incoming connection request.
 
 Our RakNet connection is now fully successful.
 
-`0x13 | server Address | internal Adress ([20(maybe 10)]Address) (i use 255.255.255.255:0) | Ping time (Long) | Pong Time (Long)`
+`0x13 | server Address | internal Address ([20(maybe 10)]Address) (i use 255.255.255.255:0) | Ping time (Long) | Pong Time (Long)`
 
 ::: tip
 
