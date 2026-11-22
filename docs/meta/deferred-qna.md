@@ -152,7 +152,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 
 ## Enable/disable Deferred Graphics Options For Each Packs?
 
--   **Q**: I would like to ask wether there is any plan to add support for the toggle that is enabling and disabling deferred-graphics for each packs.
+-   **Q**: I would like to ask whether there is any plan to add support for the toggle that is enabling and disabling deferred-graphics for each packs.
     Since shader packs are too heavy for some devices, I thought it would be wonderful if there were such option for each packs.
 -   **A**: Deferred graphics resource packs will stack like any other resource pack with the pack being higher on the stack overriding the properties of the pack below it. Your description of pack overriding behavior sounds right!
 
