@@ -106,7 +106,7 @@ Deals damage on hit.
 | filter                         | String                           | Entity to affect. Much more primitive than filters used elsewhere, as it cannot "test" for anything other than an identifier |
 | destroy_on_hit                 | Boolean                          |                                                                                                                              |
 | knockback                      | Boolean                          |                                                                                                                              |
-| catch_fire                     | Boolean                          | Dictates wether or not targets will be engulfed in flames                                                                    |
+| catch_fire                     | Boolean                          | Dictates whether or not targets will be engulfed in flames                                                                    |
 
 ### definition_event
 
