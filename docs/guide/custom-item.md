@@ -81,7 +81,7 @@ Together our custom identifier becomes `wiki:ectoplasm`. Note that we use a colo
 Now that we have our components and identifier, we can now start defining our item. We define an item by creating an item definition file in our behavior pack. This is where all our information will go.
 
 All item definitions go in `BP/items/`. The name of your file doesn't affect anything, but for ease of navigation it's recommend to name it after your id.
-We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of the file:
+We will create a file `BP/items/ectoplasm.json`. Here is the basic layout of the file:
 
 <CodeHeader path="BP/items/ectoplasm.json" />
 
