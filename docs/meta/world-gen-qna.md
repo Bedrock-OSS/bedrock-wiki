@@ -237,7 +237,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 ## Roadmap For worldgen
 
 -   **Q**: For a while the players got to know what Mojang is working and what is in the vault or what it is considering
-    But creators that aren't marketplace affiliated don't know what will be happing untill either someone asks for a timeline or it gets released I'm hoping we get a 1 year timeline so that we can start to learn stuff or prepare around it.
+    But creators that aren't marketplace affiliated don't know what will be happening until either someone asks for a timeline or it gets released I'm hoping we get a 1 year timeline so that we can start to learn stuff or prepare around it.
 
     I don’t mind if things get delayed; I’d just like to have a sense of what you’re considering or actively working on
 
