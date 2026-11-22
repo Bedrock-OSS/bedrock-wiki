@@ -278,7 +278,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 ## More custom feature types
 
 -   **Q**: Will mojang expand the actual customizable features? Like creating a Custom bone meal patch and using a /place feature to use It, or create a custom dripstone collumn feature instead of using structures
--   **A**: We aren't currently planning anymore feature types, but alot of what you are suggesting can be accomplished with combinations of existing features. Like a dripstone column could be a sequential_feature or single_block features instead. Or a combination of weighted_random features of sequential_features (if you wanted different heights)
+-   **A**: We aren't currently planning anymore feature types, but a lot of what you are suggesting can be accomplished with combinations of existing features. Like a dripstone column could be a sequential_feature or single_block features instead. Or a combination of weighted_random features of sequential_features (if you wanted different heights)
 
     And /place feature is on our short-term roadmap!
 
