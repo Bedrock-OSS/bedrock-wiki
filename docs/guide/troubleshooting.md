@@ -50,7 +50,7 @@ It can catch issues such as:
 -   Misspelled component
 -   Incorrect JSON format
 
-Content log can be turned on in in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
+Content log can be turned on in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
 
 ![](/assets/images/guide/content_log.png)
 

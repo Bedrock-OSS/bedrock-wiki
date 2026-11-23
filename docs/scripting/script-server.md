@@ -220,7 +220,7 @@ system.runInterval(() => {
 import { system, world } from "@minecraft/server";
 
 system.runTimeout(() => {
-    world.sendMessage("This message runs once once 20 ticks has passed.");
+    world.sendMessage("This message runs once 20 ticks have passed.");
 }, 20);
 ```
 

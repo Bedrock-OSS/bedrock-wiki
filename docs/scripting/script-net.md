@@ -228,7 +228,7 @@ http.request(request).then((response) => {
 
 **Example**:
 
-A simple script to post sent chat messages messages to a discord webhook.
+A simple script to post sent chat messages to a discord webhook.
 
 ```js
 import { world } from "@minecraft/server";

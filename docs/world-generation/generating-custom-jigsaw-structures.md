@@ -175,7 +175,7 @@ A structure set tells the game where to place a structure and how far apart one 
 
 ### Structure Set format
 
-This structure set will place a giant grid of 50 chunk by 50 chunk squares where the structure can spawn in the world seperated by 10 chunk boundries between the grid squares.
+This structure set will place a giant grid of 50 chunk by 50 chunk squares where the structure can spawn in the world separated by 10 chunk boundaries between the grid squares.
 The `salt` and `spread_types` are used to randomize the placement of the structures in the set within a grid square.
 
 <CodeHeader path="BP/worldgen/structure_sets/dungeon_set.json" />

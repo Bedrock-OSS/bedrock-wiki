@@ -176,7 +176,7 @@ Your local clone is now up-to-date!
 
 ### Troubleshooting
 
-This process has to be done every time someone else updates our wiki. If you forget to to that, you might get some problems, like we can't automatically merge your PR. (You see this, when you try to open a PR)
+This process has to be done every time someone else updates our wiki. If you forget to do that, you might get some problems, like we can't automatically merge your PR. (You see this, when you try to open a PR)
 
 ![](/assets/images/contribute/troubleshooting/merge/merge_merge.png)
 

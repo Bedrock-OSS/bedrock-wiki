@@ -277,7 +277,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
     -   The next four components show in which directions the ore will be 'dragged' towards.
         _Needs more clarification_
 
-The easiest way to test wether your ores generated is /fill ~15 ~5 ~15 ~-15 ~-15 ~-15 air 0 replace stone using this command at a low y level. it'll keep everything BUT stone in the selected area, like this:
+The easiest way to test whether your ores generated is /fill ~15 ~5 ~15 ~-15 ~-15 ~-15 air 0 replace stone using this command at a low y level. it'll keep everything BUT stone in the selected area, like this:
 
 ![](ore_gen_sans_stone.jpg)
 
@@ -298,7 +298,7 @@ A simple way to generate Structures is [this](https://machine-builder.itch.io/fr
 
 Now that you have your `.mcstructure`, time to write your `feature` and `feature rule`. The last is the same as with ores (see the beginning of this article). Let's continue to the **Feature**.
 
--   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `wiki:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
+-   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `wiki:myfeaturerule` or simply `myfeaturerule`, the file name can be `myfeaturerule.json` in both cases.
 
 Here's an code example from the [Features Documentation](https://bedrock.dev/r/Features#minecraft:structure_template_feature):
 

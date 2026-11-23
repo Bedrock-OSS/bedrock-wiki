@@ -84,7 +84,7 @@ To setup it app first enable developer mode this process differs from phone to a
 open dev options and enable USB debug and wireless debugging
 open Shizuku Click Pairing
 Developer options
-scroll down untill you see wireless debugging enable it and then click on it
+scroll down until you see wireless debugging enable it and then click on it
 click pair with code and enter the code in the notification.
 
 Now start Shizuku.
