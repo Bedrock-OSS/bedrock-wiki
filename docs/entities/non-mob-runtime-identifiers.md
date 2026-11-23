@@ -181,7 +181,7 @@ Effects — such as levitation and night vision — can be applied to entities w
 **Selectable**
 In general, entities are “selectable”. For such entities, all of the following are true:
 
--   They can be be selected using the crosshair, preventing selection of occluded blocks.
+-   They can be selected using the crosshair, preventing selection of occluded blocks.
 -   Their selection box can be interacted with by a player or other entity.
     -   They can take gameplay entity attack damage.
     -   They can respond to general interactions, via `minecraft:interact`.

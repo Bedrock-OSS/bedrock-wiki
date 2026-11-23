@@ -298,7 +298,7 @@ A simple way to generate Structures is [this](https://machine-builder.itch.io/fr
 
 Now that you have your `.mcstructure`, time to write your `feature` and `feature rule`. The last is the same as with ores (see the beginning of this article). Let's continue to the **Feature**.
 
--   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `wiki:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
+-   Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `wiki:myfeaturerule` or simply `myfeaturerule`, the file name can be `myfeaturerule.json` in both cases.
 
 Here's an code example from the [Features Documentation](https://bedrock.dev/r/Features#minecraft:structure_template_feature):
 
