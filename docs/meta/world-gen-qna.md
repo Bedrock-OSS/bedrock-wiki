@@ -237,7 +237,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 ## Roadmap For worldgen
 
 -   **Q**: For a while the players got to know what Mojang is working and what is in the vault or what it is considering
-    But creators that aren't marketplace affiliated don't know what will be happening until either someone asks for a timeline or it gets released I'm hoping we get a 1 year timeline so that we can start to learn stuff or prepare around it.
+    But creators that aren't marketplace affiliated don't know what will be happing untill either someone asks for a timeline or it gets released I'm hoping we get a 1 year timeline so that we can start to learn stuff or prepare around it.
 
     I don’t mind if things get delayed; I’d just like to have a sense of what you’re considering or actively working on
 
@@ -278,7 +278,7 @@ Not all messages were copied over, and some were copy-edited. If you want to see
 ## More custom feature types
 
 -   **Q**: Will mojang expand the actual customizable features? Like creating a Custom bone meal patch and using a /place feature to use It, or create a custom dripstone collumn feature instead of using structures
--   **A**: We aren't currently planning anymore feature types, but a lot of what you are suggesting can be accomplished with combinations of existing features. Like a dripstone column could be a sequential_feature or single_block features instead. Or a combination of weighted_random features of sequential_features (if you wanted different heights)
+-   **A**: We aren't currently planning anymore feature types, but alot of what you are suggesting can be accomplished with combinations of existing features. Like a dripstone column could be a sequential_feature or single_block features instead. Or a combination of weighted_random features of sequential_features (if you wanted different heights)
 
     And /place feature is on our short-term roadmap!
 
