@@ -130,6 +130,7 @@ Published by the community:
 -   [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
+-   [BuildAMod](https://buildamod.com/): Browser-based editor for making simple Bedrock items, blocks, mobs and textures and exporting an add-on pack.
 -   [behavior-builder](https://stirante.com/behavior) / [controller-builder](https://stirante.com/controller): Visual editors for behaviors and animation controllers.
 -   [Molang Playground](https://bridge-core.github.io/molang-playground/)
 -   [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
