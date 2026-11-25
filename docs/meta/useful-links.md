@@ -126,6 +126,7 @@ Published by the community:
     -   [Trade Table Editor](https://mcbe-essentials.github.io/trade-table-editor/)
     -   [Selector Generator](https://mcbe-essentials.github.io/selector-generator/)
     -   [Instant Pack](https://mcbe-essentials.github.io/instant-pack/) and [World Packager](https://mcbe-essentials.github.io/world-packager/)
+-   [Oxygen](https://oxygen.hydrogen.exposed/): Particle IDE for power users. Also available as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=hydrogen.oxygen-particle-editor) and [desktop app](https://github.com/dev-hydrogen/oxygen).
 -   [Loot Table Generator](https://bedrock-oss.github.io/bedrock-loot-gen/)
 -   [Crafting Recipe Generator](https://crafting.thedestruc7i0n.ca/)
 -   [Manifest Generator](https://tools.pixelpoly.co/manifest-generator)
