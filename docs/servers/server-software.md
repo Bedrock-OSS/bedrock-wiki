@@ -31,6 +31,7 @@ mentions:
     - KoshakMineDEV
     - MEFRREEX
     - Snowiiii
+    - SKYRPG8957
 description: Software for Bedrock servers.
 ---
 
@@ -38,7 +39,7 @@ Minecraft servers allow players to play online or via a local area network with 
 [You can download the official Mojang BDS software here](https://www.minecraft.net/en-us/download/server/bedrock).
 
 Alongside the Vanilla BDS offering, many community projects exist, in a variety of languages.
-These other projects get separated into Custom Server Software (Custom) and BDS-Based.
+The tables below group server implementations into Custom Server Software (Custom) and BDS-Based.
 
 Types of Server Software:
 
@@ -50,6 +51,12 @@ You may observe a significant prevalence of Custom Server Software in comparison
 -   The lack of an official server software for an extended period, with the first release of BDS occurring on August 28, 2018, approximately seven years after the initial release of Bedrock Edition in 2011.
 -   The removal of Symbols (also known as Mappings) in version 1.21.10, initially stripped to reduce the amount of information, which led to the decline of many BDS-Based software solutions.
 
+## Cross-Play with Java Edition
+
+Some custom servers accept both Java Edition and Bedrock Edition clients. [PumpkinMC](https://github.com/Pumpkin-MC/Pumpkin), for example, implements both protocols in its own server. It is listed as Custom below, and its Bedrock support is still a work in progress.
+
+[Geyser](https://github.com/GeyserMC/Geyser) takes a different approach: it translates between the Bedrock and Java protocols so Bedrock players can join an existing Java Edition server. It needs that Java server to provide the world and gameplay, so it is described here separately from the server implementations in the tables. See [Geyser's setup guide](https://geysermc.org/wiki/geyser/setup/) and [current limitations](https://geysermc.org/wiki/geyser/current-limitations/) before choosing it for a server.
+
 ## Active Software
 
 <Table data="active_software.json" />
@@ -59,6 +66,8 @@ You may observe a significant prevalence of Custom Server Software in comparison
 <Table data="discontinued_software.json" />
 
 ## Adding Software
+
+The tables list server implementations, including those with native support for both editions. For proxies that translate Bedrock connections to an existing Java Edition server, see [Cross-Play with Java Edition](#cross-play-with-java-edition).
 
 To keep this list useful, server software has to meet all of the following before it can be added to the active list:
 
