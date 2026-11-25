@@ -6,6 +6,7 @@ outline_depth: 2
 license: true
 mentions:
     - QuazChick
+    - TrueTemm
 ---
 
 :::info <Label color="green">Versioned</Label> CHANGES
@@ -438,6 +439,8 @@ An experiment must be enabled in your world for experimental changes to take eff
 
 ## 1.20.0
 
+-   Custom items using format versions `1.16.100` or versions newer than `1.17.0` can load without the Holiday Creator Features experiment, provided they do not use components that still require it.
+
 ### Components
 
 <Label color="green">Versioned</Label>
@@ -456,8 +459,85 @@ An experiment must be enabled in your world for experimental changes to take eff
 -   Updated `minecraft:repairable`
     -   Removed `on_repaired` trigger parameter
 
+## 1.16.100
+
+<Tag name="experimental" />
+<Label color="red">Holiday Creator Features</Label>
+<Label color="green">Versioned</Label>
+
+-   Introduced a new item format in which both behavior and visual components are defined in `BP/items/`.
+    -   Separate item definitions in `RP/items/` are no longer used for items in this format.
+    -   Textures are still registered in `RP/textures/item_texture.json`.
+
+### Description
+
+-   Moved the creative inventory `category` field to the behavior pack item definition.
+
+### Components
+
+-   Added `minecraft:display_name` to specify a display name or translation key.
+-   Added `minecraft:repairable` to define repair ingredients and the amount of durability restored.
+-   Added `minecraft:record` to allow items to play music in jukeboxes, with configurable sound, duration and comparator output.
+-   Updated `minecraft:icon`
+    -   The icon is now specified in the behavior pack item definition as an object containing a `texture` field.
+-   Added support for item tags using `tag:<namespace>:<name>` components.
+-   Added event triggers such as `on_consume` in `minecraft:food`.
+
+### Events
+
+-   Added the `events` object to item definitions.
+    -   Item events could perform actions such as applying effects, executing commands and transforming the item.
+
+See the [1.16.100 release notes](https://feedback.minecraft.net/hc/en-us/articles/360052592091-Minecraft-1-16-100-Bedrock) and the [archived item documentation](https://old-wiki.bedrock.dev/concepts/items) for details on the experimental format.
+
+## 1.10
+
+### Item Definitions
+
+The legacy item format used two files with matching identifiers:
+
+-   `BP/items/` defined item behavior, such as stack size, durability (`minecraft:max_damage`), and enchantment glint (`minecraft:foil`).
+-   `RP/items/` defined the creative inventory category and visual components, such as `minecraft:icon` (a texture short-name) and `minecraft:render_offsets`.
+
+For example, a simple legacy item used the following files:
+
+<CodeHeader path="BP/items/legacy_item.json" />
+
+```json
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:legacy_item"
+        },
+        "components": {
+            "minecraft:max_stack_size": 16
+        }
+    }
+}
+```
+
+<CodeHeader path="RP/items/legacy_item.json" />
+
+```json
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:legacy_item",
+            "category": "Items"
+        },
+        "components": {
+            "minecraft:icon": "wiki_legacy_item"
+        }
+    }
+}
+```
+
+The icon short-name refers to an entry in `RP/textures/item_texture.json`. See the [archived custom item guide](https://old-wiki.bedrock.dev/guide/custom-items) for more examples of the legacy format.
+
 ---
 
 :::danger UNDOCUMENTED
-Format changes in versions prior to `1.20.0` haven't been listed yet.
+The history of item format changes prior to `1.20.0` is incomplete.
 :::
