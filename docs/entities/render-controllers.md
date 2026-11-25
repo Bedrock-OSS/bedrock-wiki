@@ -8,6 +8,7 @@ mentions:
     - MedicalJewel105
     - Overload1252
     - ChibiMango
+    - TrueTemm
 description: Learn about render controllers.
 ---
 
@@ -98,6 +99,111 @@ Render controllers work based on short-names. If you want to use the cow render 
 ## Creating custom render controllers
 
 Often we want more power over the rendering of our entities, such as rendering layered textures, multiple geometries, or applying different materials to different bones. To create a custom render controller, simply copy and paste the vanilla render controller into the `render_controllers` folder, and edit to your liking!
+
+## Part Visibility
+
+The `part_visibility` array controls which bones of the selected geometry are rendered. Each entry maps a bone name or wildcard pattern to a Molang expression. A non-zero result shows the bone, while zero hides it. Entries are applied in order, so a later entry can override an earlier wildcard.
+
+For example, a model can have a `helmet` bone that should only be visible when a [client-synced entity property](/entities/entity-properties#client-sync) is true. Define the property in the behavior pack:
+
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/description/properties" />
+
+```json
+"wiki:has_helmet": {
+    "type": "bool",
+    "default": false,
+    "client_sync": true
+}
+```
+
+Then add `part_visibility` to the render controller:
+
+<CodeHeader path="RP/render_controllers/my_entity.render_controllers.json" breadcrumbs="render_controllers/controller.render.my_entity" />
+
+```json
+"part_visibility": [
+    { "*": "true" },
+    { "helmet": "q.property('wiki:has_helmet')" }
+]
+```
+
+The first entry makes all bones visible. The second overrides the visibility of the `helmet` bone based on the property. Use the bone name from your geometry, not the geometry identifier.
+
+To change the visibility in-game, define entity events that set the property:
+
+<CodeHeader path="BP/entities/my_entity.json" breadcrumbs="minecraft:entity/events" />
+
+```json
+"wiki:show_helmet": {
+    "set_property": {
+        "wiki:has_helmet": true
+    }
+},
+"wiki:hide_helmet": {
+    "set_property": {
+        "wiki:has_helmet": false
+    }
+}
+```
+
+Triggering these events shows or hides the helmet after the property is synchronized to the client. This affects rendering only, not the entity's collision box or equipment.
+
+The vanilla [copper golem render controllers](https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/render_controllers/copper_golem.render_controllers.json) use a similar pattern to show a flower based on the `minecraft:has_flower` property.
+
+## Multiple Render Controllers
+
+Each render controller selects one geometry, but an entity can use multiple render controllers at the same time. For example, instead of including a helmet bone in the body geometry as above, you can render a separate helmet geometry with its own material and texture.
+
+Register both controllers in the client entity. The second entry is conditional and only renders the helmet when the property from the previous example is true:
+
+<CodeHeader path="RP/entity/my_entity.json" breadcrumbs="minecraft:client_entity/description" />
+
+```json
+"render_controllers": [
+    "controller.render.my_entity",
+    { "controller.render.my_entity.helmet": "q.property('wiki:has_helmet')" }
+]
+```
+
+Define the helmet short-names alongside the existing short-names:
+
+<CodeHeader path="RP/entity/my_entity.json" breadcrumbs="minecraft:client_entity/description" />
+
+```json
+"geometry": {
+    "default": "geometry.my_entity",
+    "helmet": "geometry.my_entity.helmet"
+},
+"materials": {
+    "default": "entity_alphatest",
+    "helmet": "entity_alphatest"
+},
+"textures": {
+    "default": "textures/entity/my_entity",
+    "helmet": "textures/entity/my_entity_helmet"
+}
+```
+
+The helmet controller can then reference these short-names:
+
+<CodeHeader path="RP/render_controllers/my_entity_helmet.render_controllers.json" />
+
+```json
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.my_entity.helmet": {
+            "geometry": "Geometry.helmet",
+            "materials": [{ "*": "Material.helmet" }],
+            "textures": ["Texture.helmet"]
+        }
+    }
+}
+```
+
+Keep the body controller separate and remove the helmet from its geometry. If the separate geometry needs to follow existing animations, use matching bone names, pivots and hierarchy where appropriate. Avoid overlapping identical surfaces, which can cause z-fighting.
+
+The vanilla [creeper client entity](https://github.com/Mojang/bedrock-samples/blob/main/resource_pack/entity/creeper.entity.json) uses an unconditional controller for its body and a conditional controller for its charged overlay.
 
 ## Texture layering
 
@@ -227,7 +333,7 @@ If you want to change the texture of an entity during gameplay dynamically, you 
 
 #### Dynamic Layered Textures
 
-Dynamic layered textures can be achieved by adding more lists of textures and other dummy components as indexes. You can read about dummy components [here](/entities/dummy-components).
+Use additional texture arrays and [entity properties](/entities/entity-properties) to select layers independently. For example, define an integer property named `wiki:top_layer` with `range` set to `[0, 2]`, a default of `0`, and `client_sync` set to `true`. You can then replace `Array.top[q.variant]` with `Array.top[q.property('wiki:top_layer')]`.
 
 ### Dynamic Alternate Geometries
 
@@ -237,7 +343,7 @@ In the following example you can see a render controller set up to change the en
 Just the same way as in textures, the order in which you write down your geometries is what determines their numbering order. Top being 0.
 As we change the variant it will use a different geometry.
 
-Note that unlike textures you can not layer geometries, and such you should not include a "base bottom layer" geometry.
+Unlike textures, a single render controller cannot select multiple geometries. Use [multiple render controllers](#multiple-render-controllers) if you want to render a base model and an additional geometry together.
 This still requires the use of `villager_v2_masked` material.
 
 <CodeHeader path="RP/render_controllers/controller.render.player.third_person.json" />
@@ -281,7 +387,7 @@ Remember to include the geometry variants in your entity's file
 
 ## Common Mistakes
 
-In render controllers, you can have multiple references to textures but only 1 reference to a geometry. This applies to arrays too.
+A render controller can select multiple textures but only one geometry at a time. Geometry arrays provide alternatives to select from, not additional layers.
 
 ```json
 "arrays": {
