@@ -253,7 +253,7 @@ Here are a few main differences:
 ## Tool Support
 
 Tools written before 1.26.50 may not support version 2 or compressed files.
-[Amulet Core](https://github.com/Amulet-Team/Amulet-Core) reads and writes both.
+[Bedrock World Editor](https://github.com/8Crafter-Studios/Bedrock-World-Editor) and the library it uses ([MCBE LevelDB](https://www.npmjs.com/package/mcbe-leveldb) read and write both.
 For writing your own tools, see the [NBT libraries](/nbt/libraries).
 
 ## NBT Editors
