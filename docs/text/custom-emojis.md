@@ -103,7 +103,7 @@ Copy this code into the following field, and press **Convert**. The symbol on th
     </form>
 </div>
 
-Alternatively, you can obtain the letter/symbol at this website **[here](https://everythingfonts.com/unicode/0xE300)** or with the help of this **[Glyph Web Tool](https://nhanaz.github.io/glyph/)** made by @NhanAZ.
+Alternatively, you can obtain the letter/symbol using **[Unicode Lookup](https://nhanaz.github.io/glyph-lookup/)** or with the help of this **[Glyph Web Tool](https://nhanaz.github.io/glyph/)** made by @NhanAZ.
 
 ## Positioning the Emoji
 
